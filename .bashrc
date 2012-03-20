@@ -42,7 +42,8 @@ alias e=exit
 alias p=pacman
 alias sp="sudo pacman"
 alias y=yaourt
-alias u="yaourt -Syua"
+alias u="sudo pacman-color -Syu"
+alias uy="yaourt -Sya"
 alias c="clear"
 
 
