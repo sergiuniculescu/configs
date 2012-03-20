@@ -1,0 +1,107 @@
+#
+#! /usr/bin/env python
+#
+#   rebuildorder - find the order to build a list of packages
+#
+#   Copyright (c) 2009 by Allan McRae <allan@archlinux.org>
+#
+#   This program is free software; you can redistribute it and/or modify
+#   it under the terms of the GNU General Public License as published by
+#   the Free Software Foundation; either version 2 of the License, or
+#   (at your option) any later version.
+#
+#   This program is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#   GNU General Public License for more details.
+#
+#   You should have received a copy of the GNU General Public License
+#   along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+
+import os, sys
+
+def get_deps( package ):
+	deps = []
+
+	pkginfo = os.popen("pacman -Si " + package + " 2> /dev/null").read().split("\n")
+	if pkginfo != ['']:
+		found = False
+		for i in pkginfo:
+			if not found:
+				if i[0:10] == "Depends On":
+					deplist = i.split()[3:]
+					found = True
+			else:
+				if i[0] != " ":
+					break
+				deplist += i.split()
+
+		for i in deplist:
+			pkg = i.split(">")[0].split("<")[0].split("=")[0]
+			if os.popen("pacman -Si " + pkg + " 2> /dev/null").read().split("\n") != ['']:
+				deps.append(pkg)
+	
+	return deps
+		
+
+
+rebuild_file = open(sys.argv[1], "r")
+rebuild_list = rebuild_file.read().split()
+
+rebuild_deps = {}
+package_deps = {}
+
+
+for i in rebuild_list:
+	package_deps[i] = get_deps(i)
+
+for package in rebuild_list:
+	rebuild_deps[package] = package_deps[package][:]
+
+	pos = 0
+	while pos < len(rebuild_deps[package]):
+		dep = rebuild_deps[package][pos]
+		
+		if not package_deps.has_key(dep):
+			package_deps[dep] = get_deps(dep)
+		
+		for i in package_deps[dep]:
+			if not i in rebuild_deps[package]:
+				rebuild_deps[package].append(i)
+		pos += 1
+
+
+for package in rebuild_list:
+	pos = 0
+	while pos < len(rebuild_deps[package]): 
+		if rebuild_deps[package][pos] in rebuild_list:
+			pos += 1
+		else:
+			rebuild_deps[package].pop(pos)
+
+
+filtered_deps = {}
+for package in rebuild_list:
+	filtered_deps[package] = rebuild_deps[package][:]
+	if len(filtered_deps[package]) > 1:
+		pos=0
+		while pos < len(filtered_deps[package]) and len(filtered_deps[package]) > 1: 
+			removed = False
+			for i in filtered_deps[package]:
+				if filtered_deps[package][pos] in rebuild_deps[i]:
+					filtered_deps[package].pop(pos)
+					removed = True
+					break
+			
+			if not removed:
+				pos += 1
+
+
+for package in rebuild_list:
+	if len(rebuild_deps[package]) == 0:
+		print package
+	else:
+		rebuild_deps[package].sort()
+		print package + " (Requires " + ", ".join(["%s" % pkg for pkg in filtered_deps[package]]) +")"
+

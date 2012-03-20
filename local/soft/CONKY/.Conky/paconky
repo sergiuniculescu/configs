@@ -1,0 +1,66 @@
+#  Display information about upgradable packages in Conky.
+
+#This script is meant to be customized. The default is just an example.
+
+#USAGE
+  paconky.py /temporary/database/path
+
+#EXAMPLES
+  A static path:
+
+      paconky.py ~/.cache/pacman
+
+#  Using tmpfs:
+
+      paconky.py /dev/shm/pacman
+
+#  If the XDG_CACHE_HOME variable is set with 1 path:
+
+      paconky.py "$XDG_CACHE_HOME"/pacman
+
+#  ... or with multiple paths:
+
+      paconky.py "$(echo $XDG_CACHE_HOME | cut -d':' -f1)"/pacman
+
+
+#DEPENDENCIES
+  * pyalpm
+  * python3-aur
+
+
+#EXAMPLE CONKY CONFIGURATION FILE
+  
+  alignment tr
+  gap_x 5
+  gap_y 0
+  maximum_width 200
+  minimum_size 200,1
+  own_window yes
+  own_window_transparent yes
+  own_window_type override
+  own_window_hints below
+
+  update_interval 3600
+  total_run_times 0
+  double_buffer yes
+
+  use_xft yes
+  xftfont lime:pixelsize=10
+  xftalpha 0.9
+
+  default_color ff0000
+  default_outline_color black
+  default_shade_color black
+
+  uppercase no
+  override_utf8_locale no
+
+  text_buffer_size 4096
+
+  color1 444444
+  color2 cccccc
+  color3 777777
+
+
+  TEXT
+  ${execp ~/.bin/conky/paconky.py /tmp/paconky}

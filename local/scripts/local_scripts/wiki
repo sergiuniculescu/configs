@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+#varianta în engleză:
+#wget -qO - http://en.wikipedia.org/wiki/`date +"%B_%-d"` | sed -n '/"Events"/,/"Births"/ p' | sed -e :a -e 's/<[^>]*>/ /g;/</N;//ba' | sed '$d' | sed '1d'
+#Varianta în română:
+luna=`date +"%B"`
+if test "$luna" = "January" ; then a="ianuarie"
+elif test "$luana" = "February" ; then a="februarie"
+elif test "$luna" = "March" ; then a="martie"
+elif test "$luna" = "April" ; then a="aprilie"
+elif test "$luna" = "May" ; then a="mai"
+elif test "$luna" = "June" ; then a="iunie"
+elif test "$luna" = "July" ; then a="iulie"
+elif test "$luna" = "August" ; then a="august"
+elif test "$luna" = "September" ; then a="septembrie"
+elif test "$luna" = "October" ; then a="octombrie"
+elif test "$luna" = "November" ; then a="noiembrie"
+elif test "$luna" = "December" ; then a="decembrie"
+fi;
+wget -qO - http://ro.wikipedia.org/wiki/`date +"%-d_"`$a | sed -n '/section=1/,/section=2/ p' | sed -e :a -e 's/<[^>]*>/ /g;/</N;//ba' | sed '$d' | sed '1d'

@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+setxkbmap ro
+clear
+echo
+echo ' ____  ____  _  _ '
+echo '(  _ \( ___)( \/ )'
+echo ' )(_) ))__)  )  ( ''Dicționar explicativ al limbii Române'
+echo '(____/(____)(_/\_)'
+echo
+while :
+do 
+setxkbmap ro
+echo 'Introduceți cuvântul căutat:'
+read expresie
+echo 'Caut în toate dicționarele'
+wget -qO - http://dexonline.ro/definitie/$expresie | sed -n '/"resultsWrapper"/,/"typoDiv"/ p' | grep -Ev 'typoLink' | sed -e :a -e 's/<[^>]*>/ /g;/</N;//ba;' | sed ':a;N;$!ba;s/\n/ /g' | sed 's/Permalink /\n /g' | sed 's/^[ \t]*//' 
+done

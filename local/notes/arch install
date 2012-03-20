@@ -1,0 +1,1901 @@
+### INSTALL ARCH ###
+/arch/setup
+
+### CONFIGURE NETWORK ###
+
+# DSL #
+<Alt+F2> - login as root
+pppoe-setup   #  completezi user name-ul, parola, la DNS server scrii "server" (fara ghilimele) restul setarilor le lasi default, confirmi setarile tastand y. La FIREWALLING eu aleg 0 (NONE, fara firewall), cred ca ultima data cand am ales 1 (STANDALONE, cu firewall) am avut ceva probleme, poti incerca si 1.
+pppoe-start   #  pornesti conexiunea
+pppoe-status  #  verifici daca merge
+Ca sa nu faci pasii astia la fiecare bootare editezi "/etc/rc.conf" si adaugi la sectiunea DAEMONS "adsl"
+<Alt+F1> - return to install menu
+
+
+# WIRELESS #  (exemplu cu wlan0 si ESSID "linksys")
+<Alt+F3> - login as root
+lspci | grep -i net  # identify the wireless interface
+iwconfig     # pentru a vedea daca s-a incarcat driverul
+ip link set wlan0 up   # bring the interface up
+iwlist wlan0 scan   # scan for networks
+iwlist wlan0 scan | grep ESSID | cut -d : -f 2    #pentru cautarea unui ESSID
+iwlist wlan0 scan | grep Address | cut -d ' ' -f 15  #pentru determinarea tuturor MAC-urilor din zona
+iwlist wlan0 scan | egrep "Address|ESSID" | cut -d: -f2-  #pentru Listarea tuturor ESSID-urilor si MAC-urilor din zona
+
+# if you using WPA encryption #
+cp /etc/wpa_supplicant.conf /etc/wpa_supplicant.conf.bkp
+wpa_passphrase linksys "my_secret_passkey" > /etc/wpa_supplicant.conf
+
+Encryption		 Command
+No Encryption		iwconfig wlan0 essid "linksys"
+WEP w/ Hex Key		iwconfig wlan0 essid "linksys" key "0241baf34c"
+WEP w/ ASCII passphrase	iwconfig wlan0 essid "linksys" key "s:pass1"
+WPA			wpa_supplicant -B -Dwext -i wlan0 -c /etc/wpa_supplicant.conf
+After utilizing the appropriate association method outlined above, wait a few moments and confirm you have successfully associated to the access point before continuing
+
+iwconfig wlan0   # Output should indicate the wireless network is associated with the interface
+
+dhcpcd wlan0    # Request an IP address
+
+# pentru static IP #
+ifconfig wlan0 192.168.0.2
+route add default gw 192.168.0.1
+
+iwconfig wlan0 channel auto  # If you get an timeout error due to a waiting for carrier problem 
+
+ping -c 3 www.google.com  # pentru a verifica
+<Alt+F1> - return
+
+
+# /etc/locale.gen #
+en_US ISO-8859-1
+en_US.UTF-8
+
+_______________________
+
+### useradd ###
+useradd -m -g users -G audio,lp,optical,storage,video,wheel,games,power,scanner -s /bin/bash sergiu
+
+passwd sergiu  #seteaza parola
+
+userdel -r sergiu  #sterge userul
+
+#To add a user as a sudo user (a "sudoer")
+EDITOR=nano visudo
+%wheel	ALL=(ALL) ALL  #uncomment linia asta
+
+
+### Graphical User Interface ###
+pacman -S xorg-server xorg-xinit xorg-utils xorg-server-utils
+pacman -S mesa mesa-demos
+
+# Drivere placa video #
+ATI
+pacman -S xf86-video-ati
+
+NVIDIA
+pacman -S nvidia nvidia-utils  # drivere dedicate
+pacman -S xf86-video-nouveau nouveau-dri  # drivere opensource
+
+INTEL
+pacman -S xf86-video-intel
+
+lspci  #pentru a lista toate componentele hardware
+
+
+### INPUT DRIVERS ###
+pacman -S xf86-input-evdev xf86-input-synaptics
+
+### DBUS ###
+pacman -S dbus
+nano /etc/rc.conf  # DAEMONS=(syslog-ng dbus network crond)
+/etc/rc.d/dbus start  #start dbus fara reboot
+
+### Mounting of virtual file systems (e.g. file systems over FTP or SMB) ###
+pacman -S fuse
+Add the module to the MODULES array in /etc/rc.conf so they will load at boot up:
+MODULES=(fuse usblp)
+
+### INSTALL FONTS ###
+pacman -S ttf-dejavu ttf-liberation
+
+# Alternative FONTS for LCD #
+yaourt -S freetype2-ubuntu fontconfig-ubuntu libxft-ubuntu cairo-ubuntu
+______________________________________________________________________
+
+### INSTALL GNOME 3 ###
+pacman -S gnome gnome-extra 
+
+
+# Start gnome #
+nano /etc/inittab 
+linia id:3:initdefault: a fost comentata, iar id:5:initdefault: a fost decomentata ca sa porneasca direct in GUI. O alta diferenta este comentarea liniei x:5:respawn:/usr/bin/xdm -nodaemon si decomentarea liniei x:5:respawn:/usr/sbin/gdm -nodaemon. Asta ca sa porneasca gnome-display-manager, sa te poti loga, sa poti alege sesiunea etc. Asta este metoda standard pentru orice distributie.
+
+sau
+
+nano /etc/rc.conf
+(Adauga linia de jos):
+DAEMONS=(syslog-ng dbus network netfs crond gdm)
+
+# Start gnome with startx #
+sudo nano ~/.xinitrc
+si adagam:
+-----------------------------------------
+#!/bin/sh
+#
+# ~/.xinitrc
+#
+# Executed by startx (run your window manager from here)
+#
+
+exec ck-launch-session gnome-session
+------------------------------------------
+
+# Gnome-tweak-tool #
+pacman -S gnome-tweak-tool
+
+
+# Terminal in click dreapta pe desktop #
+pacman -S nautilus-open-terminal 
+
+# PRINTING #
+pacman -S cups ghostscript gsfonts
+pacman -S samba
+pacman -S gutenprint foomatic-db foomatic-db-engine foomatic-db-nonfree foomatic-filters hplip splix cups-pdf #printer drivers
+pacman -S system-config-printer-common system-config-printer-gnome
+
+
+# BLUETOOTH #
+pacman -S bluez gnome-bluetooth gnome-user-share
+
+To start bluetooth automatically on boot, add bluetooth to your daemons array in rc.conf (after dbus):
+DAEMONS=(... @bluetooth)
+
+sudo /etc/rc.d/bluetooth restart
+
+# GNOME CALENDAR pentru a incepe saptamana cu LUNI #
+sudo nano /usr/share/i18n/locales/en_US  # aici inlocuim first_weekday cu cifra 2
+
+# Startup Applications #
+gnome-session-properties
+
+# gnome-shell extensions #
+
+gnome-shell-theme-gnomarch
+
+gnome-shell-extension-user-theme
+gnome-shell-extension-drive-menu
+gnome-shell-extension-places-menu
+gnome-shell-extension-presentation-mode-git
+gnome-shell-mgse-git
+gnome-shell-frippery
+pidgin-gnome-shell-extension-git
+
+# weather #
+gnome-shell-extension-weather-git
+
+gsettings set org.gnome.shell.extensions.weather woeid ROXX0004
+gsettings set org.gnome.shell.extensions.weather unit celsius
+gsettings set org.gnome.shell.extensions.weather use-symbolic-icons true
+gsettings set org.gnome.shell.extensions.weather show-comment-in-panel true
+gsettings set org.gnome.shell.extensions.weather position-in-panel center left right
+gsettings set org.gnome.shell.extensions.weather refresh-interval 240
+
+Restart GNOME Shell ([Alt]+[F2], r)
+
+# Sites #
+https://github.com/simon04/gnome-shell-extension-weather/
+https://extensions.gnome.org/
+___________________________________________
+
+### INSTALL KDE ###
+
+pacman -S kde
+
+# NetworkManager #
+pacman -S networkmanager
+pacman -S kdeplasma-applets-networkmanagement
+
+# Printing #
+pacman -S kdeadmin-system-config-printer-kde cups
+pacman -S samba
+pacman -S gutenprint foomatic-db foomatic-db-engine foomatic-db-nonfree foomatic-filters hplip splix cups-pdf #printer drivers
+
+# Integrate gtk #
+pacman -S oxygen-gtk gtk-kde4
+
+# Arch personalize #
+pacman -S archlinux-artwork archlinux-themes-kdm archlinux-wallpaper arch-wiki-docs
+
+# Bluetooth #
+pacman -S bluez bluedevil
+
+# Daisy #
+yaourt -S kdeplasma-addons-applets-daisy
+
+# Import evolution mail to KMail #
+Make a folder called evolution (not that the name is important) say on the desktop
+Unpacked the tar.gz into the folder. It looks as if nothing has happend but the files are hidden, so unhide the folders (Alt+.)
+Now remove the "." infront of the folder name (.evolution). 
+Now go back to Kontact and get to the import window "file-Import messages" (I used the 2.x version to import), navigate to the the "local" folder inside the "evolution" folder you have just made. And import.
+If I have remembered correctly you should have all you mail in an Evolution -import folder. There will be a few folders with nothing in them which I have deleted.
+______________________________________________________________________
+
+### INSTALL XFCE ###
+
+pacman -S xfce4
+pacman -S xfce4-goodies
+
+pacman -S gstreamer0.10-plugins
+pacman -S dbus
+pacman -S gamin
+
+# Running Xfce #
+cp /etc/skel/.xinitrc ~/.xinitrc
+nano ~/.xinitrc  # and add the following line:
+exec ck-launch-session dbus-launch --exit-with-session startxfce4
+pacman -S slim   # configuration in: /etc/slim.conf
+pacman -S slim-themes archlinux-themes-slim  
+slim -p /usr/share/slim/themes/<theme name>  # preview a theme while an instance of the Xorg server is running
+To close, type "exit" in the Login line and press Enter.
+
+To share a wallpaper between SLiM and your desktop, rename the used theme background, then create a link from your desktop wallpaper file to the default SLiM theme:
+mv /usr/share/slim/themes/default/background.jpg{,.bck}
+ln -s /path/to/mywallpaper.jpg /usr/share/slim/themes/default/background.jpg
+
+#Running XFCE in text mode #
+
+vim ~/.bash_profile
+__________________
+#
+# ~/.bash_profile
+#
+
+[[ -f ~/.bashrc ]] && . ~/.bashrc
+
+
+if [[ -z $DISPLAY && ! -e /tmp/.X11-unix/X0 ]] && (( EUID )); then
+	while true; do
+		read -p 'Start X? (y/n): '
+		case $REPLY in
+			[Yy]) xinit /usr/bin/ck-launch-session dbus-launch --exit-with-session startxfce4 ;;
+			[nn]) break ;;
+			*) printf '%s\n' 'Answer y or n. ' ;;
+		esac
+	done
+fi
+__________________
+
+
+sau:
+__________________
+#
+# ~/.bash_profile
+#
+
+# [[ -f ~/.bashrc ]] && . ~/.bashrc
+
+. $HOME/.bashrc
+__________________
+
+si adaugam bucla 'if....fi' de mai sus in ~/.bashrc
+
+
+
+# NetworkManager #
+pacman -S networkmanager
+pacman -S network-manager-applet
+
+# Network programs collection (ftp,..) #
+pacman -S inetutils
+
+# Thunar automount volume #
+pacman -S gvfs gvfs-smb
+
+# Bluetooth #
+pacman -S bluez
+pacman -S blueman
+pacman -S obexfs
+Add DAEMONS=(... @bluetooth)
+
+nano /usr/bin/obex_thunar.sh
+_____
+#!/bin/bash
+fusermount -u ~/bluetooth
+obexfs -b $1 ~/bluetooth
+thunar ~/bluetooth
+______
+
+chmod +x /usr/bin/obex_thunar.sh
+mkdir ~/bluetooth
+
+Change the line in Local Services > Transfer > Advanced to obex_thunar.sh %d
+
+
+# Change volume with keyboard volume buttons #
+Settings --> Keyboard --> Application Shortcuts
+amixer set Master 5%+     # volume up
+amixer set Master 5%-	  # volume down
+amixer set Master toggle  # mute
+
+# Printscreen #
+Settings --> Keyboard --> Application Shortcuts
+xfce4-screenshooter -f 
+
+# Desktop slideshow #
+nano /etc/cron.hourly/desktop_slideshow
+________
+#!/bin/sh
+
+killall -HUP xfdesktop
+________
+
+# Text editor #
+pacman -S medit
+
+# Archive manager #
+pacman -S file-roller
+
+
+# Calculator #
+pacman -S gcalctool
+
+# Scanner #
+pacman -S xsane
+Don't forget to enable 'hpaio' in /etc/sane.d/dll.conf
+
+# File searching tool #
+pacman -S catfish
+
+# MODULES si DAEMONS la final #
+MODULES=(fuse usblp)
+DAEMONS=(hwclock syslog-ng dbus networkmanager samba netfs crond cupsd @bluetooth)
+
+# Themes #
+pacman -S gnome-themes-standard  #Adwaita
+yaourt -S zukitwo-themes
+yaourt -S xfce-theme-bluebird
+yaourt -S atlom-gtk-theme
+yaourt -S xfce4-axiom-theme
+
+Daca sunt probleme cu QT in a recunoaste tema GTK: 'QGtkStyle was unable to detect the current GTK+ theme'
+pacman -S libgnomeui
+
+
+# Use a transparent background for desktop icon titles #
+nano ~/.gtkrc-2.0
+_____________
+style "xfdesktop-icon-view" {
+XfdesktopIconView::label-alpha = 10
+base[NORMAL] = "#000000"
+base[SELECTED] = "#71B9FF"
+base[ACTIVE] = "#71FFAD"
+fg[NORMAL] = "#ffffff"
+fg[SELECTED] = "#71B9FF"
+fg[ACTIVE] = "#71FFAD" }
+widget_class "*XfdesktopIconView*" style "xfdesktop-icon-view"
+
+
+
+# Customize terminal #
+yaourt -S archey3
+vim ~/.bashrc # add archey
+
+vim ~/.config/archey3
+______________
+[core]
+color = blue
+align = top
+display_modules = distro(), uname(n), uname(r), uname(p), uptime(), wm(), de(), packages(), fs(/boot), fs(/), fs(/home), ram(), env(editor), mpd(albums)
+______________
+
+# Set shortcut launch terminal to 
+Terminal --geometry 90x30
+
+
+
+# Probleme rezolutie monitoare CRT #
+nano /etc/X11/xorg.conf.d/10-monitor.conf
+_____
+
+Section "Screen"
+        Identifier "Screen0"
+        Device     "Card0"
+        Monitor    "Monitor0"
+        SubSection "Display"
+                Viewport   0 0
+                Depth     1
+        EndSubSection
+        SubSection "Display"
+                Viewport   0 0
+                Depth     4
+        EndSubSection
+        SubSection "Display"
+                Viewport   0 0
+                Depth     8
+        EndSubSection
+        SubSection "Display"
+                Viewport   0 0
+                Depth     15
+        EndSubSection
+        SubSection "Display"
+                Viewport   0 0
+                Depth     16
+        EndSubSection
+        SubSection "Display"
+                Viewport   0 0
+                Depth     24
+                Modes     "1024x768"
+        EndSubSection
+EndSection
+_____
+
+__________________________________________________________________________________
+
+
+### INSTALL OPENBOX ###
+
+pacman -S openbox
+
+$ mkdir -p ~/.config/openbox
+$ cp /etc/xdg/openbox/{rc.xml,menu.xml,autostart,environment} ~/.config/openbox
+
+# start openbox #
+pacman -S consolekit 
+pacman -S pyxdg
+
+nano ~/.bash_profile
+___________________
+
+if [[ -z $DISPLAY && ! -e /tmp/.X11-unix/X0 ]] && (( EUID )); then
+  while true; do
+    read -p 'Start X? (y/n): '
+    case $REPLY in
+      [Yy]) xinit /usr/bin/ck-launch-session dbus-launch openbox-session ;;
+      [Nn]) break ;;
+      *) printf '%s\n' 'Answer y or n.' ;;
+    esac
+  done
+fi
+__________________
+# sau direct
+if [[ -z $DISPLAY && ! -e /tmp/.X11-unix/X0 ]] && (( EUID )); then
+  xinit /usr/bin/ck-launch-session startlxde
+fi
+__________________
+
+pacman -S xterm
+pacman -S tilda
+
+# config openbox #
+pacman -S openbox-themes
+pacman -S obconf
+pacman -S obmenu
+yaourt -S openbox-menu
+
+
+__________________________________________________________________________________
+
+### INSTALL LXDE ###
+
+pacman -S lxde
+pacman -S gamin
+$ mkdir -p ~/.config/openbox
+$ cp /etc/xdg/openbox/{rc.xml,menu.xml,autostart} ~/.config/openbox
+pacman -S leafpad xarchiver obconf epdfview
+
+# Login without DM #
+
+nano ~/.bash_profile
+___________________
+
+if [[ -z $DISPLAY && ! -e /tmp/.X11-unix/X0 ]] && (( EUID )); then
+  while true; do
+    read -p 'Do you want to start X? (y/n): '
+    case $REPLY in
+      [Yy]) xinit /usr/bin/ck-launch-session dbus-launch startlxde ;;
+      [Nn]) break ;;
+      *) printf '%s\n' 'Please answer y or n.' ;;
+    esac
+  done
+fi
+__________________
+# sau direct
+if [[ -z $DISPLAY && ! -e /tmp/.X11-unix/X0 ]] && (( EUID )); then
+  xinit /usr/bin/ck-launch-session startlxde
+fi
+__________________
+
+# mount volumes #
+pacman -S gvfs consolekit
+pacman -S ntfs-3g
+
+# Shutdown, Reboot, Suspend and Hibernate Options working #
+pacman -S pm-utils upower
+
+
+
+### INSTALL E17 ###
+
+pacman -S e-svn e17-extra-svn
+
+yaourt -S elsa-svn-arch
+To start Elsa add the following line to your /etc/inittab
+x:5:respawn:/usr/sbin/elsa
+
+pacman -S networkmanager nerwork-manager-applet
+You may want to add it to the start up programs so every time your E17 starts it appears on systray.
+Settings -> Settings Panel -> Apps -> Startup Applications -> System -> Network
+sau
+yaout -S connman
+
+yaourt -S e17-themes
+
+
+### INSTALL X Window System (x11) ###
+
+pacman -S xorg-server xorg-xinit xorg-utils xorg-server-utils
+pacman -S mesa mesa-demos
+pacman -S xf86-video-ati
+pacman -S xf86-input-evdev
+pacman -S xf86-input-synaptics
+pacman -S xorg-twm xorg-xclock xterm
+pacman -S dbus
+nano /etc/rc.conf  #  DAEMONS=(... dbus ...)
+pacman -S ttf-dejavu
+
+startx
+sau
+xinit -- /usr/bin/X -nolisten tcp
+
+# Romanian keyboard #
+nano /etc/X11/xorg.conf.d/10-evdev.conf
+_____________________
+Section "InputClass"
+    Identifier "evdev keyboard catchall"
+    MatchIsKeyboard "on"
+    MatchDevicePath "/dev/input/event*"
+    Driver "evdev"
+    Option "XkbLayout" "ro"
+EndSection
+_____________________
+
+# Kill X with ctrl+alt+backspace #
+
+nano /etc/X11/xorg.conf.d/10-evdev.conf
+_____________________
+Section "InputClass"
+    Identifier          "Keyboard Defaults"
+    MatchIsKeyboard	"yes"
+    Option              "XkbOptions" "terminate:ctrl_alt_bksp"
+EndSection
+_____________________
+
+
+___________________________________________________
+
+
+### Modificare default swappiness 60% ###
+vim /etc/sysctl.conf
+_______
+# Swappiness
+vm.swappiness=20
+vm.vfs_cache_pressure=50
+_______
+
+cat /proc/sys/vm/swappiness  # pentru a verifica valoarea swappiness-ului
+
+
+
+### Recunoastere partitii NTFS ###
+pacman -S ntfs-3g
+
+
+### SAMBA ###
+pacman -S samba
+pacman -S gamin
+cp /etc/samba/smb.conf.default /etc/samba/smb.conf
+add 'samba' in DAEMONS
+
+# Add users #
+pdbedit -a -u <user>
+
+# Accessing a Samba share from thunar/nautilus #
+pacman -S gvfs gvfs-smb
+
+
+### Configure Printer ###
+http://localhost:631/
+smbtree -U windowsusername  # discover printer in samba network
+smb://username:password@CRENGUTA/Samsung SCX-4x21 Series  # printer URI
+
+
+### Wireless & Wired ###
+
+# Set the hostname #
+Edit /etc/rc.conf and set HOSTNAME (archlinux in this example):
+HOSTNAME="sergiu-laptop"
+After setting a hostname, it is also a good idea to include the same name in /etc/hosts. This will help processes that refer to the computer by its hostname to find its IP.
+Edit /etc/hosts and add the same HOSTNAME you entered in /etc/rc.conf:
+127.0.0.1      archlinux.domain.org   localhost.localdomain      localhost    sergiu-laptop
+
+# NetworkManager #
+1.Install
+2.Configuration
+NetworkManager will require some additional steps to be able run properly.
+Verify that your /etc/hosts is correct before continuing. If you previously tried to connect before doing this step, NetworkManager may have altered it. An example hostname line in /etc/hosts:
+#<ip-address> <hostname.domain.org>           <hostname>                        
+127.0.0.1     localhost.localdomain localhost sergiu-laptop
+
+si in /etc/rc.conf 
+HOSTNAME="sergiu-laptop"
+
+3.Edit DAEMONS
+DAEMONS=( ...dbus networkmanager... )
+
+________________________________
+
+### PACMAN ###
+
+# INSTALL a package #
+makepkg -s
+sudo pacman -U *.xz
+______
+pacman -S package_name
+yaourt -S package_name
+
+pacman -Ss package_name  # pentru cautarea unui pachet
+
+pacman -S $(pacman -Sqs package_name)  # pentru a instala mai multe pachete ce incep cu un nume
+
+# REMOVE #
+pacman -R package_name  #remove a package
+pacman -Rs package_name  #remove a package and it's dependencies which are not required by any other installed package
+pacman -Rns package_name  #remove package,dependencies and backup files
+pacman -Rdd package_name  # remove without checking the dependence package
+
+pacman -Rs $(pacman -Qqs package_name)  # pentru a instala mai multe pachete ce incep cu un nume
+
+
+# archlinuxfr #
+nano /etc/pacman.conf
+____
+
+[archlinuxfr] 
+Server = http://repo.archlinux.fr/$arch
+____
+
+# yaourt #
+wget http://aur.archlinux.org/packages/package-query/package-query.tar.gz
+tar zxvf package-query.tar.gz
+cd package-query
+makepkg -si
+cd ..
+wget http://aur.archlinux.org/packages/yaourt/yaourt.tar.gz
+tar zxvf yaourt.tar.gz
+cd yaourt
+makepkg -si
+cd ..
+
+sau
+pacman -Sy yaourt  # dupa ce a fost adaugat [archlinuxfr]
+
+
+# repo-ck #
+vim /etc/pacman.conf
+_________
+
+[repo-ck]
+Server = http://repo-ck.com/$arch
+_________
+
+
+# get a sorted list of local packages and their size #
+
+LC_ALL=C pacman -Qi | sed -n '/^Name[^:]*: \(.*\)/{s//\1 /;x};/^Installed[^:]*: \(.*\)/{s//\1/;H;x;s/\n//;p}' | sort -nk2 | column -t
+
+
+# Orphan Packages #
+pacman -Qdt
+pacman -Qqdt
+yaourt -Qdt   # to remove them
+
+# UPDATE & UPGRADE #
+pacman -Syu
+yaourt -Syua  #updates din AUR
+
+# Update mirrorlist #
+pacman -Syy
+
+# DOWNGRADE #
+pacman -Suu
+sau download ‘downgrade’ din AUR
+
+# Pachete instalate din AUR #
+pacman -Qm
+
+# Cauta un pachet #
+pacman -Ss nume_pachet
+
+# Afiseaza ce pachete apartine unui grup #
+pacman -Sg nume_grup
+
+# Cauta un pachet instalat #
+pacman -Qqs nume_pachet
+pacman -Q | grep nume_pachet
+
+# Afisa informatii despre un pachet #
+pacman -Si nume_pachet
+
+# Afisa informatii despre un pachet instalat #
+pacman -Qi nume_pachet
+pacman -Qii nume_pachet  # informatii detaliate
+
+# Afisa lista fisierelor instalate de un pachet #
+pacman -Ql nume_pachet
+
+# Pentru a afla carui pachet ii apartine o anumita cale din sistem #
+pacman -Qo /path/to/a/file
+
+# Pentru a lista toate pachetele care depind de un anumit pachet #
+whoneeds nume_pachet  # whoneeds se afla in pkgtools
+
+# Pentru a downloada un pachet fara sa fie instalat #
+pacman -Sw nume_pachet
+
+# Cautare fisiere .pacnew #
+pacman -S vim
+yaourt -C
+
+# Curatarea pachetelor vechi #
+pacman -Sc && pacman-optimize
+
+sau install 'cacheclean' din AUR
+
+
+# PACMAN MIRRORLIST #
+nano /etc/pacman.d/mirrorlist
+
+# REFLECTOR pentru mirrorlist #
+pacman -S reflector
+cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bkp
+reflector -l 5 --sort rate --save /etc/pacman.d/mirrorlist  #sortare din toate mirror-urile dupa rating
+reflector -c %own% -f 6 --save /etc/pacman.d/mirrorlist  #sortare dupa tara si viteza
+
+# Speed up pacman updates #
+pacman -S aria2
+nano /usr/bin/pacget  # adauga acest script
+____________________
+#
+#!/bin/bash
+#
+
+msg() {
+  echo ""
+  echo -e "   \033[1;34m->\033[1;0m \033[1;1m${1}\033[1;0m" >&2
+}
+
+error() {
+  echo -e "\033[1;31m==> ERROR:\033[1;0m \033[1;1m$1\033[1;0m" >&2
+}
+
+CONF=/etc/pacget.conf
+STATS=/etc/pacget.stats
+ARIA2=$(which aria2c 2> /dev/null)
+
+# ----- do some checks first -----
+if [ ! -x "$ARIA2" ]; then
+  error "aria2c was not found or isn't executable."
+  exit 1
+fi
+
+if [ $# -ne 2 ]; then
+  error "Incorrect number of arguments"
+  exit 1
+fi
+
+filename=$(basename $1)
+server=${1%/$filename}
+arch=$(grep ^Architecture /etc/pacman.conf | cut -d '=' -f2 | sed 's/ //g')
+if [[ $arch = "auto" ]]; then
+  arch=$(uname -m)
+fi
+# Determine which repo is being used
+repo=$(awk -F'/' '$(NF-2)~/^(community|core|extra|testing|comunity-testing|multilib)$/{print $(NF-2)}' <<< $server)
+[ -z $repo ] && repo="custom"
+
+# For db files, or when using a custom repo (which most likely doesn't have any mirror),
+# use only the URL passed by pacman; Otherwise, extract the list of servers (from the include file of the repo) to download from
+url=$1
+if ! [[ $filename = *.db || $repo = "custom" ]]; then
+  mirrorlist=$(awk -F' *= *' '$0~"^\\["r"\\]",/Include *= */{l=$2} END{print l}' r=$repo /etc/pacman.conf)
+  if [ -n mirrorlist ]; then
+    num_conn=$(grep ^split $CONF | cut -d'=' -f2)
+    url=$(sed -r '/^Server *= */!d; s/Server *= *//; s/\$repo'"/$repo/"'; s/\$arch'"/$arch/; s/$/\/$filename/" $mirrorlist | head -n $(($num_conn *2)) )
+  fi
+fi
+
+msg "Downloading $filename"
+cd /var/cache/pacman/pkg/
+
+touch $STATS
+
+$ARIA2 --conf-path=$CONF --max-tries=1 --max-file-not-found=5 \
+  --uri-selector=adaptive --server-stat-if=$STATS --server-stat-of=$STATS \
+  --allow-overwrite=true --remote-time=true --log-level=error --summary-interval=0 \
+  $url --out=${filename}.pacget && [ ! -f ${filename}.pacget.aria2 ] && mv ${filename}.pacget $2 && chmod 644 $2
+
+exit $?
+_____________
+
+chmod 755 /usr/bin/pacget
+nano /etc/pacget.conf  # add this script
+__________
+
+# The log file
+log=/var/log/pacget.log
+# Number of servers to download from
+split=5
+# Maximum download speed (0 = unrestricted)
+max-download-limit=0
+# Minimum download speed (0 = don't care)
+lowest-speed-limit=0
+# Server timeout period
+timeout=5
+# 'none' or 'falloc'
+file-allocation=none
+_____________
+
+nano /etc/pacman.conf   #in the [options] section, the following needs to be added:
+
+XferCommand = exec /usr/bin/pacget %u %o
+
+__________________________________________________
+
+
+
+### Set time ###
+date mmddHHMMYYyy # luna, zi, ora, minute, an
+
+
+### Wine & Wine Bottles ###
+
+pacman -S wine
+WINEARCH=win32 winecfg
+
+# Wine Bottles #
+mkdir ~/.wineprefix
+WINEARCH=win32 WINEPREFIX=~/.wineprefix/FISIER winecfg
+
+WINEPREFIX=~/.wineprefix/YOURGAME wine setup.exe
+
+# Remove menu shortcuts from wine #
+~/.local/share/applications/wine/Programs/
+
+
+### VirtualBox ###
+pacman -S virtualbox
+pacman -S qt
+yaourt -S virtualbox-ext-oracle #virtualbox extension pack
+gpasswd -a USERNAME vboxusers
+sudo vboxbuild
+
+To load the VirtualBox driver at startup, edit /etc/rc.conf and add vboxdrv to the MODULES array: MODULES=(... vboxdrv)
+To load manually # modprobe vboxdrv
+pacman -S virtualbox-additions
+
+# Pentru Arch rulat in VBox #
+pacman -Syu virtualbox-archlinux-additions
+
+To autostart these modules each time you boot, you can either
+    1) Add the three modules above to the MODULES array in /etc/rc.conf. 
+MODULES(... vboxguest vboxsf vboxvideo)
+OR
+    2) Add rc.vboxadd to the DAEMONS array. This daemon probes the above listed modules. 
+DAEMONS(... rc.vboxadd)
+
+To load manually
+modprobe -a vboxguest vboxsf vboxvideo
+
+
+### Change resolution in VBox ###
+nano /etc/X11/xorg.conf
+------------
+Selection "Screen"
+SubSelection "Display"
+Depth 24
+Modes "1280x800"
+EndSubSelection
+----------------
+
+
+
+### Anti-virus ###
+pacman -S clamav
+
+You need to comment out the line that contains the word 'Example'at the beginning of /etc/clamav/freshclam.conf and /etc/clamav/clamd.conf files.
+
+Manual start
+/etc/rc.d/clamav start
+
+To start it automatically at boot you should edit the daemons array in /etc/rc.conf:
+DAEMONS=(... clamav ...)
+Also in /etc/conf.d/clamav change the start options from "no" to "yes".
+
+
+freshclam   # update anti-virus
+
+# Scan
+$ clamscan myfile
+$ clamscan -r -i /home
+$ clamscan -r -i --exclude-dir=^/sys\|^/proc\|^/dev /
+pentru a sterge direct virusii gasiti --remove
+
+If you get the following messages after running freshclam:
+WARNING: Clamd was NOT notified: Can't connect to clamd through 
+/var/lib/clamav/clamd.sock connect(): No such file or directory
+Add a sock file for clamav:
+# touch /var/lib/clamav/clamd.sock
+# chown clamav:clamav /var/lib/clamav/clamd.sock
+Then, edit /etc/clamav/clamd.conf
+Uncomment this line: #LocalSocket /var/lib/clamav/clamd.sock
+Save the file and restart the daemon (/etc/rc.d/clamav stop; /etc/rc.d/clamav start)
+
+
+___________________________________________________________________________
+
+### SCHIMBARE CULORI TERMINAL ###
+
+# /etc/bash.bashrc
+#
+# This file is sourced by all *interactive* bash shells on startup,
+# including some apparently interactive shells such as scp and rcp
+# that can't tolerate any output.  So make sure this doesn't display
+# anything or bad things will happen !
+
+
+# Test for an interactive shell.  There is no need to set anything
+# past this point for scp and rcp, and it's important to refrain from
+# outputting anything in those cases.
+
+if [[ $- != *i* ]] ; then
+	# Shell is non-interactive.  Be done now!
+	return
+fi
+
+# Bash won't get SIGWINCH if another process is in the foreground.
+# Enable checkwinsize so that bash will check the terminal size when
+# it regains control.  #65623
+# http://cnswww.cns.cwru.edu/~chet/bash/FAQ (E11)
+shopt -s checkwinsize
+
+# Enable history appending instead of overwriting.  #139609
+shopt -s histappend
+
+# Change the window title of X terminals 
+case ${TERM} in
+	xterm*|rxvt*|Eterm|aterm|kterm|gnome*|interix)
+		PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/$HOME/~}\007"'
+		;;
+	screen)
+		PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/$HOME/~}\033\\"'
+		;;
+esac
+
+use_color=false
+
+# Set colorful PS1 only on colorful terminals.
+# dircolors --print-database uses its own built-in database
+# instead of using /etc/DIR_COLORS.  Try to use the external file
+# first to take advantage of user additions.  Use internal bash
+# globbing instead of external grep binary.
+safe_term=${TERM//[^[:alnum:]]/?}   # sanitize TERM
+match_lhs=""
+[[ -f ~/.dir_colors   ]] && match_lhs="${match_lhs}$(<~/.dir_colors)"
+[[ -f /etc/DIR_COLORS ]] && match_lhs="${match_lhs}$(</etc/DIR_COLORS)"
+[[ -z ${match_lhs}    ]] \
+	&& type -P dircolors >/dev/null \
+	&& match_lhs=$(dircolors --print-database)
+[[ $'\n'${match_lhs} == *$'\n'"TERM "${safe_term}* ]] && use_color=true
+
+if ${use_color} ; then
+	# Enable colors for ls, etc.  Prefer ~/.dir_colors #64489
+	if type -P dircolors >/dev/null ; then
+		if [[ -f ~/.dir_colors ]] ; then
+			eval $(dircolors -b ~/.dir_colors)
+		elif [[ -f /etc/DIR_COLORS ]] ; then
+			eval $(dircolors -b /etc/DIR_COLORS)
+		fi
+	fi
+
+	if [[ ${EUID} == 0 ]] ; then
+#PS1='\[\033[01;31m\]\h\[\033[01;34m\] \W \$\[\033[00m\] '
+		PS1='\[\033[0;37m\]┌─[ \[\033[0m\033[01;31m\]\u\[\033[0m\] \[\033[0m\033[0;36m\]\[@\]\[\033[0m\] \[\033[01;31m\]\h\[\033[0m\033[0;37m\] ] - [ \[\033[0m\033[01;34m\]\w\[\033[0;37m\] ]\n\[\033[0;37m\]└─[\[\033[0m\033[01;31m\]\$\[\033[0m\033[0;37m\]]>\[\033[0m\] '
+	else
+#PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\] '
+		PS1='\[\033[0;37m\]┌─[ \[\033[0m\033[01;32m\]\u\[\033[0m\] \[\033[0m\033[0;36m\]\[@\]\[\033[0m\] \[\033[01;32m\]\h\[\033[0m\033[0;37m\] ] - [ \[\033[0m\033[01;34m\]\w\[\033[0;37m\] ]\n\[\033[0;37m\]└─[\[\033[0m\033[01;33m\]\$\[\033[0m\033[0;37m\]]>\[\033[0m\] '
+	fi
+
+	alias ls='ls --color=auto'
+	alias grep='grep --colour=auto'
+else
+	if [[ ${EUID} == 0 ]] ; then
+		# show root@ when we don't have colors
+		PS1='\u@\h \W \$ '
+	else
+		PS1='\u@\h \w \$ '
+	fi
+fi
+
+# Try to keep environment pollution down, EPA loves us.
+unset use_color safe_term match_lhs
+
+
+________________________________________________________
+
+### MODIFICARE TAB TERMINAL SI ALIAS-URI ###
+
+#
+# ~/.bashrc
+#
+
+
+# default editor:
+export EDITOR=vim
+export VISUAL=vim
+
+
+# completion:
+set show-all-if-ambiguous on
+complete -cf sudo
+complete -cf man
+
+# find packages commands:
+#################
+#!/bin/bash
+command_not_found_handle () {
+        local command="$1"
+        local pkgs="$(pkgfile -b -v -- "$command")"
+        if [ ! -z "$pkgs" ]; then
+                echo -e "\n$command may be found in the following packages:\n$pkgs"
+                return 0
+        fi
+        printf "bash: $(gettext bash "%s: command not found")\n" $command >&2
+        return 127
+}
+#################
+
+
+# make multiple shells share the same history file:
+shopt -s histappend
+export PROMPT_COMMAND="history -a ; ${PROMPT_COMMAND:-:}"
+export HISTCONTROL=erasedups
+export HISTSIZE=10000
+
+
+# alias essentials:
+alias e=exit
+alias p=pacman-color
+alias sp="sudo pacman-color"
+alias y=yaourt
+alias u-"sudo pacman-color -Syu"
+alias uy="yaourt -Sa"
+alias c="clear"
+alias mc="mc -S dark.ini"
+alias gitc="git commit -av ; git push -u origin master"
+
+
+# alias system clean:
+alias clean="yaourt -Qdt && pacman -Sc && sudo pacman-optimize"
+alias bb="sudo bleachbit --clean system.cache system.localizations system.trash system.tmp"
+alias cc="sudo cacheclean 2"
+
+
+# colorize commands:
+alias ls="ls --color=auto"
+alias ll="ls -lh --color=auto"
+alias la="ls -la --color=auto"
+alias grep="grep --color=auto"
+alias zgrep="zgrep --color=auto"
+
+
+# others alias:
+alias tree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/ /' -e 's/-/|/'"
+alias today='date "+%A, %B %d, %Y [%T]"'
+alias du="du -c -h"
+
+# network alias:
+alias openports='netstat --all --numeric --programs --inet --inet6'
+alias nets="sudo netstat -nlpt"
+alias nets2="sudo lsof -i"
+
+# safety features:
+alias cp='cp -i'
+alias mv='mv -i'
+alias rm='rm -I'                    # 'rm -i' prompts for every file
+alias ln='ln -i'
+alias chown='chown --preserve-root'
+alias chmod='chmod --preserve-root'
+alias chgrp='chgrp --preserve-root'
+
+
+# Add archey:
+archey3
+
+
+# Start X:
+#####################
+if [[ -z $DISPLAY && ! -e /tmp/.X11-unix/X0 ]] && (( EUID )); then
+	while true; do
+		read -p 'Start X? (y/n): '
+		case $REPLY in
+			[Yy]) xinit /usr/bin/ck-launch-session dbus-launch --exit-with-session startxfce4 ;;
+			[nn]) break ;;
+			*) printf '%s\n' 'Answer y or n. ' ;;
+		esac
+	done
+fi
+#####################
+
+
+# Scripturi locale:
+PATH=$PATH:$HOME/.bin
+
+
+# ps1:
+# default is: PS1='[\u@\h \W]\$ '
+
+
+# If not running interactively, don't do anything
+#[[ $- != *i* ]] && return
+
+___________________________________________________________________________
+
+source ~/.bashrc  # pentru a nu mai restarta terminalul
+
+
+
+### Emulate CD/DVD ###
+pacman -S cdemu-client
+/etc/rc.d/cdemud start
+Loading a single image to first device:
+cdemu -b system load 0 ~/image.mds
+
+
+### COPY & REMOVE ###
+cp -r orginal_file new_file
+rm -fc original_file
+rm -r nume_director
+rm -ir nume_director  # te intreaba la fiecare director din interior
+
+
+### Diferente dintre doua fisiere de configurare ###
+diff -ybwB /etc/rc.conf /etc/rc.conf.pacnew
+
+
+### CREATE ARHIVE & EXTRACT ARCHIVE ###
+# tar.gz #
+tar cCzvf /locatie/director/de_arhivat/ nume_arhiva.tar.gz director_de_arhivat   #CREATE
+tar -xzvf nume_arhiva.tar.gz   #EXTRACT
+tar -C /locul/de/dezarhivat/ -xzvf nume_arhiva.tar.gz  #EXTRACT intr-o anumita locatie 
+
+
+# rar #
+unrar e nume_arhiva.rar #EXTRACT
+unrar l nume_arhiva.rar #Listeaza fisierele din interiorul arhivei
+unrar t nume_arhiva.rar #Testeaza integritatea arhivei
+
+
+# Pentru a dezarhiva orice format #
+yaourt -S unp 
+
+
+____________________________________________________________________________
+
+### Install Arch from USB stick ###
+dd if=~/Downloads/archlinux-2011.08.19-netinstall-i686.iso of=/dev/sdb
+
+# Make an ISO image from a CD/DVD#
+dd if=/dev/disk/by-label/nume_CD of=~/nume_CD.iso
+
+
+### Mount images ###
+
+mount -o loop /path/to/image.iso /path/to/mount/place
+
+If it complains that you must specify a filesystem type:
+mount -t <filesystem> -o loop <filename> <dir>
+
+
+### Create Partitions ###
+pacman -S gparted gksu
+pacman -S dosfstools mtools # pentru FAT16/32
+pacman -S ntfsprogs  #pentru NTFS
+
+
+### Create, Find and Delete symlinks ###
+
+# Create #
+ln -s /path/ linkname
+# Find #
+find / -type l -exec ls -l {} \;
+find / -type l -exec ls -l {} \; > ~/symlinks.txt  # in cazul in care sunt multe, sa fie scrise intr-un fisier txt
+# Delete #
+rm /path/to/symlink
+
+
+### Add new fonts ###
+To install fonts system-wide (available for all users), move the folder to the /usr/share/fonts/ directory. 
+To install fonts for only a single user, use ~/.fonts/ instead.
+
+fc-cache -vf  # update the fontconfig font cache
+
+
+### Convert jpg (png) / pdf ###
+convert -density 300 file.pdf file.png # (sau jpg)
+convert *.png file.pdf 
+
+
+
+### Reduce size of a PDF file ###
+Type "gs -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=setting -sOutputFile=output.pdf input.pdf" into the Terminal window, replacing "input.pdf" with the name of your PDF file and "setting" with a desired quality level, and then press "Enter."
+
+Quality level settings are "/screen" the lowest resolution and lowest file size, but fine for viewing on a screen; "/ebook" a mid-point in resolution and file size; "/printer" and "/prepress" high-quality settings used for printing PDFs.
+
+
+### configurare SUDO sa ruleze fara parola doar o anumita comanda ###
+visudo
+userultau ALL=(ALL) NOPASSWD: /cale/comanda
+
+
+### Afisarea topicurilor noi de pe Ubuntu Forum ###
+_________
+curl -s http://forum.ubuntu.ro/rss.php | xmlstarlet sel -t -m "//item" -s D:N:- "count(preceding-sibling::node())+1" -n -v "pubDate" -n -v "description" -o "(" -v "link" -o ")" -n -o "--------------------------------------------------------"
+_________
+
+
+### Pentru a pune tasta Shift in locul lui Caps lock ###
+xmodmap -e "remove Lock = Caps_Lock"
+xmodmap -e "add Shift = Caps_Lock"
+
+
+### Firefox tweaks ###
+about:config
+
+*browser.cache.disk.parent_directory;string;/dev/shm/firefox-cache
+*browser.cache.memory.enable;boolean;true
+*browser.cache.memory.capacity;integer;18432   # pentru 1GB ram. Pentru 2GB=24576, 4GB=30720, 8GB=32768
+*network.http.pipelining;boolean;true
+*network.http.proxy.pipelining;boolean;true
+*network.http.pipelining.maxrequests;integer;8
+network.http.max-connections;integer;48
+network.http.max-connections-per-server;integer;24
+network.http.max-persistent-connections-per-proxy;integer;16
+network.http.max-persistent-connections-per-server;integer;8
+network.dns.disableIPv6;boolean;true
+
+
+# Reduce load time by compressing the Firefox binary with upx #
+pacman -S upx
+cp /usr/lib/firefox-8.0/firefox-bin /usr/lib/firefox-8.0/firefox-bin.bkp
+upx -9 /usr/lib/firefox-8.0/firefox-bin
+
+# Firefox addons #
+AdblockPlus
+Download Statusbar
+Easy YouTube Video Downloader
+FastestFox
+Gmail Manager
+Thumbanil Zoom Plus
+CutyFox
+Hide Caption Titlebar Plus
+SGPlus
+Xmarks
+
+
+### 'Find' command ###
+find $HOME -depth -type d -empty	# Find empty directories
+find $HOME -depth -type f -empty	# Find empty files
+find $HOME -name name_of_file		# Find a file with a specific name
+find -name 'given_name.*'		# Find files with a give name and any extension
+find -name 'file*'			# Find a file beginning with a word
+find $HOME -name '*.jpg'		# Find a file with a specific extension
+find $HOME -name '*.txt' -perm 644 -exec ls -l {} \;	# Find files with specific permissions
+find $HOME -name '*.txt' -perm -644 -exec ls -l {} \;	# Find the files with 644 but also some with 664 or 777 or anything "greater" than 644
+find $HOME -name '*.txt' -size 4k -exec ls -l {} \;	# Find files of given sizes
+find -mtime n # n is: 0 for the last 24 hours, 1 for 48 hours, 2 for 72 hours and so on # Find files modified in the latest blocks of 24 hours
+find -atime n # Find files that was accessed in the latests blocks of 24 hours
+
+find / -type f -size +500M -size -1G  # Find all files larger than 500M and less than 1GB
+
+
+### Space on the disk ###
+df -h
+free
+
+
+### WI-FI CRACK ###
+
+# pentru WPA/WPA2 #
+pacman -S aircrack-ng aircrack-ng-scripts
+yaourt -S reaver
+
+iwconfig
+airmon-ng start wlan0  # (monitor mode enabled on mon0)
+airodump-ng mon0  #afiseaza BSSID-urile retelelor wireless
+reaver -i mon0 -b [BSSID] -vv
+
+# pentru WEP #
+airmon-ng
+airmon-ng stop wlan0
+airmon-ng start wlan0  # (monitor mode enabled on mon0)
+
+
+airodump-ng mon0  #afiseaza BSSID-urile retelelor wireless
+airodump-ng -w wep -c [channel number] --bbsid [BBSID number] wlan0
+
+se deschide  o consola noua:
+aireplay-ng -1 0 -a [BSSID] wlan0
+
+se deschide  o consola noua:
+airplay-ng -3 -b [BSSID] wlan0
+
+se lasa aprox. 1 ora pana ajunge traficul in prima consola data > 30.000
+ctrl+c la consola cu sending and reciveing data 
+se cauta ~/[filename].cap
+aircrack-ng [filename].cap
+
+
+### Pixart Imaging, Inc. Q-TEC WEBCAM 100 ###
+nano /etc/rc.conf # MODULES=(...uvcvideo)
+
+# Pentru a merge pe Skype #
+LD_PRELOAD=/usr/lib/libv4l/v4l1compat.so skype
+sau
+LD_PRELOAD=/usr/lib/libv4l/v4l2convert.so skype
+
+
+### Blowfish encryption ###
+yaourt -S bcrypt
+
+
+### Draw kernel module dependancy graph ###
+lsmod | perl -e 'print "digraph \"lsmod\" {";<>;while(<>){@_=split/\s+/; print "\"$_[0]\" -> \"$_\"\n" for split/,/,$_[3]}print "}"' | dot -Tsvg | display -
+
+
+### fb-client ###
+pacman -S fb-client
+fb /etc/rc.conf  # genreaza un link cu ceea ce contine rc.conf
+
+# Pentru a sterge link-urile generate #
+nano ~/.netrc
+machine paste.xinu.at password <parola>
+
+
+### Navigare anonima firefox ###
+
+# Tor #
+pacman -S tor
+
+/etc/rc.d/tor start
+or add tor to your DAEMONS array in /etc/rc.conf  # DAEMONS=(... tor ...)
+To check if Tor is functioning properly visit:
+https://check.torproject.org/
+https://torcheck.xenobite.eu/
+http://www.ip-adress.com/
+
+In Preferences > Advanced > Network tab > Settings manually set Firefox to use the SOCKS proxy 'localhost' with port 9050
+
+# Privoxy #
+pacman -S privoxy
+
+vim /etc/privoxy/config
+forward-socks5 / localhost:9050 .  # add this line at the end 
+
+/etc/rc.d/privoxy start
+Add privoxy to your DAEMONS array in /etc/rc.conf  # DAEMONS=(... privoxy ...)
+
+
+In Preferences > Advanced > Network tab > Settings manually set Firefox to use the HTTP proxy 'localhost' with port 8118
+
+
+
+### GIT HUB ###
+pacman -S openssh
+ssh-keygen -t rsa -C "contact.sergiuniculescu@gmail.com"
+vim ~/.ssh/id_rsa.pub  # copy key and paste it to github.com
+
+pacman -S git
+git config --global user.name "Sergiu Niculescu"
+git config --global user.email contact.sergiuniculescu@gmail.com
+mkdir .dotfiles
+cd .dotfiles/
+git init
+touch README
+git add README
+git commit -m 'first commit'
+git remote add origin git@github.com:sergiuniculescu/dotfiles.git
+git push -u origin master
+
+# Exemplu #
+cd .dotfiles/
+git init
+git add .bashrc
+gitc  # Alias from ~/.bashrc
+
+# Manual
+git commit -m 'my ~/.bashrc'
+git push
+
+
+__________________________________________________________________________________________________
+
+### CONSOLE MODE ###
+
+# mc #
+pacman -S mc
+Skin-urile pentru mc se găsesc în /usr/share/mc/skins
+Automat mc pornește cu skin-ul implicit, cel definit in “default.ini”
+mc -S nume_tema  #Pentru a incerca alt skin
+Pentru a seta mc să pornească automat cu tema preferată:
+cp -rf /usr/share/mc/skins ~/.mc/skins  # acesta va fi răsfoit inainte sa caute in /usr/share/mc/skins. 
+cp -rf /usr/share/mc/skins /root/.mc/skins  #pentru a schimba si tema de root	
+
+sau
+nano ~/.bashrc   # si adaugat urmatorul alias: mc='mc -S nume_tema'
+
+
+# ranger #
+pacman -S ranger
+
+ranger --copy-config=all  # pentru a copia toate fisierele de config in ~/.config/ranger/
+
+options.py  # controls general options
+rc.conf	    # controls startup commands and key bindings
+commands.py # controls the commands which are launched with the ":" key
+apps.py     # controls the applications used when a given type of file is launched
+
+"?"  # Ranger's man page
+"1?" # for a list of key bindings
+"2?" # for a list of commands
+"3?" # for a list of settings. 
+
+
+# Desktop in tty #
+yaourt -S fbterm fbv
+
+nano ~/.fbterm-bi
+___________
+
+#!/bin/bash 
+# fbterm-bi: a wrapper  script  to  enable  background  image  with fbterm 
+# usage: fbterm-bi /path/to/image fbterm-options 
+echo -ne "\[?25l" # hide cursor 
+fbv -ciuker "$1" << EOF 
+q 
+EOF 
+shift 
+export FBTERM_BACKGROUND_IMAGE=1 
+exec fbterm "$@"
+_____________
+
+chmod a+x ~/.fbterm-bi 
+
+alias fbterm='./fbterm-bi /home/user/Pictures/Space.jpg' # add in ~/.bashrc
+
+
+# dvtm #
+pacman -S dvtm
+
+ Keyboard commands
+       Mod    Each keybinding begins with Mod which defaults to ^g but can be changed in config.h or with the -m command line option.
+
+       Mod-c  Create a new shell window.
+       Mod-x  Close focused window.
+       Mod-l  Increases the master area width about 5% (all except grid and fullscreen layout).
+       Mod-h  Decreases the master area width about 5% (all except grid and fullscreen layout).
+       Mod-j  Focus next window.
+       Mod-k  Focus previous window.
+       Mod-[1..n] Focus the nth window.
+       Mod-.  Toggle minimization of current window.
+       Mod-u  Focus next non minimized window.
+       Mod-i  Focus prev non minimized window.
+       Mod-m  Maximize current window (change to fullscreen layout).
+       Mod-PageUp  Scroll up.
+       Mod-PageDown  Scroll down.
+       Mod-Space  Toggle between defined layouts (affects all windows).
+       Mod-Enter  Zooms/cycles current window to/from master area.
+       Mod-t  Change to vertical stack tiling layout.
+       Mod-b  Change to bottom stack tiling layout.
+       Mod-g  Change to grid layout.
+       Mod-s  Shows/hides the status bar.
+       Mod-r  Redraw whole screen.
+       Mod-G  Escape the next typed key.
+       Mod-a  Toggle keyboard multiplexing mode, if activated keypresses are sent to all non minimized windows.
+       Mod-X  Lock screen.
+       Mod-B  Toggle bell (off by default).
+       Mod-M  Toggle dvtm mouse grabbing.
+       Mod-q  Quit dvtm.
+
+ Mouse commands
+    Use Mod-M to toggle mouse support dynamically.
+       Copy and Paste  hold down SHIFT while selecting or pasting text. Alternatively you can disable mouse support at compile time, or use 
+       Button1 click   Select window.
+       Button1 double  click  Select window and toggle maximization.
+       Button2 click   Zooms/cycles current window to/from master area.
+       Button3 click   Toggle minimization of current window.
+
+
+terminal --geometry 158x53 --hide-menubar --command dvtm  # shortcut
+
+
+# Vizualizare imagini in TTY #
+pacman -S fbida
+fbi ~/Pictures/*.jpg
+
+# Vizualizare PDF in TTY #
+pacman -S fbida
+fbgs -c -a fisier.pdf   # -c afiseaza documentul in culori, -a autozoom
+
+Toate opțiunile fbi sunt valabile și pentru fbgs. 
+Cu +/- mărim/micșorăm dimensiunea paginii, cu săgețile sus/jos derulăm pagina curentă, 
+Page Up/Page Down derulează paginile documentului pdf, 
+q închidem.
+
+# Screenshot in TTY #
+pacman -S fbgrab
+
+fbgrab screenshot.png
+
+# E-mail in TTY #
+pacman -S re-alpine
+
+# Music player in TTY #
+pacman -S moc
+
+mocp	  # pornire moc;
+p / Space # pauză/repornire;
+q         # trimite playerul în background(fundal) lăsând consola liberă pentru comenzi;
+o         # redă URL (de exemplu un post de radio online);
+Q         # închide moc;
+s         # stop/oprește redarea;
+l (L mic) # schimbă aspectul pe una sau două coloane (layout);
+Shift+t   # schimbare temă;
+<         # micșorare volum;
+>         # creștere volum;
+l         # schimbă între fereastră cu unu sau două panouri;
+mocp -p   # pornește redarea unui playlist.
+
+# theme pentru moc #
+cp /usr/share/doc/moc/config.example  ~/.moc/config
+#XTermTheme	= transparent-background  # decomentam aceasta linie și înlocuim tema transparent-background, sau ce temă e trecută, cu tema dorită.
+# Layout1 = "playlist:50%,50%,50%,50%"    # decomentam aceasta linie pentru a avea o singura coloana in moc
+
+mocp http://stream.profm.ro:8012/profm.mp3  # pentru a asculta un post radio
+
+
+# Video player in TTY #
+mplayer -playlist ~/Video/fisierul_dorit
+mplayer -zoom -x 800 -y 600 video.avi  # pentru a viziona la o anumita dimensiune
+
+# vizionare clipuri Youtube #
+pacman -S vlc
+
+cvlc http://link.com/
+cvlc  home/user/Music/Videoclipuri/fișierul_dorit
+
+
+# Scris CD/DVD-uri #
+pacman -S bashburn
+
+
+# Finch Messenger #
+pacman -S finch
+
+GNT Shortcuts:
+
+Alt + a	 # Bring up a list of available actions. You can use this list to access the accounts window, plugins window, preference window etc.
+Alt + n  # Go to the next window.        
+Alt + p  # Go to the previous window.
+Alt + w  # Show the list of windows. You can select and jump to any window from the list.     
+Alt + c  # Close the current window.            
+Alt + q  # Quit.
+Alt + m  # Start moving a window. Press the cursor keys to move the window. When you are done, press Enter or Escape.
+Alt + r  # Start resizing a window. Press the cursor keys to resize the window. When you are done, press Enter or Escape.       
+Alt + D  # Dump the contents of the screen in HTML format.           
+Alt + .  # Move the position of the current window in the window list one place to the right.
+Alt + ,  # Move the position of the current window in the window list one place to the left.
+Alt + l  # Refresh the windows. This is useful after resizing the terminal window.
+Alt + 1 2 ... 0  # Jump to the 1st, 2nd ... 10th window.     
+Alt + Tab  # Jump to the next URGENT (highlighted) window.
+Alt + Shift + Tab  # Jump to the previous URGENT (highlighted) window.  
+Ctrl + o  or  F10  # Bring up the menu (if there is one) for a window.             
+F11  or  Ctrl + x  # Popup the context menu (if there is one) for the selected widget.
+Alt + /  # Show a list of available key-bindings for the current widget in focus.
+Alt + >  # Switch to the next workspace
+Alt + <  # Switch to the previous workspace
+Alt + t  # Tag (or untag) the current window
+Alt + T  # Attached all the tagged windows to the current workspace
+Alt + s  # Show the workspace list
+F9  # Create a new workspace and switch to it
+
+# Torrent #
+pacman -S transmission-cli
+
+
+# Vim #
+Shortcuts:
+
+i	→ Insert mode. Type ESC to return to Normal mode.
+v	→ Visual mode
+/	→ Search forward. n - repeat forward, N - repeat backward
+?	→ Search backward. n - repeat forward, N - repeat backward
+:set ignorecase → case insensitive
+:set smartcase  → use case if any caps used
+x	→ Delete the char under the cursor
+dd	→ Delete (and copy) current line
+yy	→ copy current line, easier but equivalent to ddP
+p	→ Paste
+P	→ paste before, remember p is paste after current position.
+u	→ undo
+<C-r>	→ redo
+:wq	→ Save and Quit (:w save, :q quit)
+:q!	→ quit without saving, also :qa! to even if there are some modified hidden buffers.
+
+
+:e <path/to/file> → open
+:w	→ save
+:saveas <path/to/file> → save to <path/to/file>
+:x, ZZ or :wq → save and quit (:x only save if necessary)
+.	→ (dot) will repeat the last command 
+2dd	→ will delete 2 lines
+3p	→ will paste the text 3 times
+gg	→ shortcut for 1G, go to the start of the file
+G	→ Go to last line
+w	→ go to the start of the following word,
+e	→ go to the end of this word.
+
+For example : 0y$
+0	→ go to the beginning of this line
+y	→ yank from here
+$	→ up to the end of this line
+
+ye	→ yank from here to the end of the word
+t,	→ go just before the character ,
+dt"	→ remove everything until the "
+
+
+____________________________________________________________              
+
+### Comenzi utile in SHELL ###
+
+# Wildcard #
+*		# All filenames
+
+g*		# All filenames that begin with the character "g"
+
+b*.txt		# All filenames that begin with the character "b" and end with the characters ".txt"
+
+Data???		# Any filename that begins with the characters "Data" followed by exactly 3 more characters
+
+[abc]*		# Any filename that begins with "a" or "b" or "c" followed by any other characters
+
+[[:upper:]]*	# Any filename that begins with an uppercase letter. This is an example of a character class.
+
+BACKUP.[[:digit:]][[:digit:]]	# Another example of character classes. This pattern matches any filename that begins with the characters "BACKUP." followed by exactly two numerals.
+
+*[![:lower:]]	# Any filename that does not end with a lowercase letter.
+
+       
+# Copy #
+cp file1 file2		# Copies the contents of file1 into file2. If file2 does not exist, it is created; otherwise, file2 is overwritten with the contents of file1.
+
+cp -i file1 file2	# Like above however, since the "-i" (interactive) option is specified, if file2 exists, the user is prompted before it is overwritten with the contents of file1.
+
+cp file1 dir1		# Copy the contents of file1 (into a file named file1) inside of directory dir1.
+
+cp -R dir1 dir2		# Copy the contents of the directory dir1. If directory dir2 does not exist, it is created. Otherwise, it creates a directory named dir1 within directory dir2.              
+
+       
+# Move #
+mv file1 file2		# If file2 does not exist, then file1 is renamed file2. If file2 exists, its contents are replaced with the contents of file1.
+
+mv -i file1 file2	# Like above however, since the "-i" (interactive) option is specified, if file2 exists, the user is prompted before it is overwritten with the contents of file1.
+
+mv file1 file2 file3 dir1  # The files file1, file2, file3 are moved to directory dir1. dir1 must exist or mv will exit with an error.
+
+mv dir1 dir2		# If dir2 does not exist, then dir1 is renamed dir2. If dir2 exists, the directory dir1 is created within directory dir2.              
+
+
+# Remove #
+rm file1 file2		# Delete file1 and file2.
+
+rm -i file1 file2	# Like above however, since the "-i" (interactive) option is specified, the user is prompted before each file is deleted.
+
+rm -r dir1 dir2		# Directories dir1 and dir2 are deleted along with all of their contents.       
+              
+
+# Make directories #
+mkdir directory
+
+
+# Input/Output redirection #
+
+# Standard Output #
+ls > file_list.txt   # outputul comenzii ls va fi scris in file_list.txt. Daca se va rula a doua ora, tot continutul din file_list.txt va fi rescris
+ls >> file_list.txt  # outputul comenzii ls va fi scris in file_list.txt. Daca se va rula a doua ora, noul output va fi scris la sfarsitul continutului din file_list.txt
+
+# Standard Input #
+sort < file_list.txt  # fisierului file_list.txt i se va aplica comanda sort
+sort < file_list.txt > sorted_file_list.txt  # fisierului file_list.txt i se va aplica comanda sort si outputul va fi scris in sorted_file_list.txt
+
+# Pipes #
+<comanda> | less  # foarte folositoare in cazul comenzilor cu un output mare, pentru a fi vizualizata usor
+<comanda> | less > output.txt 
+ls -lt | head  # afiseaza cele mai noi 10 fisiere din directoriul curent
+du | sort -nr  # afiseaza o lista a directoarelor si cat spatiu consuma fiecare, sortate de la mare la mic
+find . -type f -print | wc -l  # afiseaza numarul total de fisiere aflate in directoriul curent si in toate subdirectoarele din acesta
+tar -xzvf nume_arhiva.tar.gz | less  # afiseaza continutul unei arhive
+
+
+# file command #
+file name_of_file  # examine a file and tell you what kind of file it is
+
+
+
+_________________________________________________
+
+
+
+### PID ###
+pidof firefox # afiseaza pid-ul procesului firefox, ex.: 905
+kill 905
+
+### ping ###
+ping -i 10 -c 5 -a 192.168.1.1  # -i = delay, -c = cate pachete sa se trimita, -a = pentru a primi un beep la fiecare pachet trimis
+
+### history ###
+history | awk '{print $2}' | sort | uniq -c | sort -rn | head -10  # printeaza cele mai folosite 10 comenzi
+
+### list tree ###
+ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/ /' -e 's/-/|/'
+
+
+### Permissions ###
+ls -l some_file  # to see the permission settings for a file
+
+Exemple:
+drwxr-xr-x 
+-rwxrw-r-- 
+# d = director
+# - = fisier, 
+# rwx = read, write, execute permissions for the owner of the file, 
+# rw- = for the members of the group owning file
+# r-- = for all other users
+
+# chmod #
+rwx rwx rwx = 111 111 111
+rw- rw- rw- = 110 110 110
+rwx --- --- = 111 000 000
+
+rwx = 111 in binary = 7
+rw- = 110 in binary = 6
+r-x = 101 in binary = 5
+r-- = 100 in binary = 4
+
+777 (rwxrwxrwx) # No restrictions on permissions. Anybody may do anything. Generally not a desirable setting.
+
+755 (rwxr-xr-x) # The file's owner may read, write, and execute the file. All others may read and execute the file. This setting is common for programs that are used by all users.
+
+700 (rwx------) # The file's owner may read, write, and execute the file. Nobody else has any rights. This setting is useful for programs that only the owner may use and must be kept private from others.
+
+666 (rw-rw-rw-) # All users may read and write the file.
+
+644 (rw-r--r--) #The owner may read and write a file, while all others may only read the file. A common setting for data files that everybody may read, but only the owner may change.
+
+600 (rw-------) # The owner may read and write a file. All others have no rights. A common setting for data files that the owner wants to keep private.
+
+Directory permissions
+
+777 (rwxrwxrwx) # No restrictions on permissions. Anybody may list files, create new files in the directory and delete files in the directory. Generally not a good setting.
+
+755 (rwxr-xr-x) # The directory owner has full access. All others may list the directory, but cannot create files nor delete them. This setting is common for directories that you wish to share with other users.
+
+700 (rwx------) # The directory owner has full access. Nobody else has any rights. This setting is useful for directories that only the owner may use and must be kept private from others.
+
+# chown #
+chown nume_nou_owner some_file
+
+# chgrp #
+chgrp nume_nou_grup some_file
+
+
+### Job Control ###
+ps	# list the processes running on the system
+kill	# send a signal to one or more processes (usually to "kill" a process)
+jobs	# an alternate way of listing your own processes
+bg	# put a process in the background
+fg	# put a process in the forground
+
+aplicatie &  # put it in the background so that the prompt will return
+
+# putting in background o aplicatie rulata in tty #
+$ aplicatie
+
+ctrl+z  # process will be suspended. The process still exists, but is idle
+^Z
+[1]+  Stopped                 aplicate
+
+$ bg  # resume the process in the background (short for background)
+[1]+ aplicatie &
+
+# processes listing #
+jobs 
+ps  # este mai complex
+
+# kill #
+kill -l  # pentru a afisa lista cu signals 
+kill pid_number
+
+
+### Help on a command ###
+
+Daca nu ajuta command --help putem incerca astfel:
+
+which command  # will tell you the path and file name of the executable program
+strings /cale/catre/command  # will display any human readable content buried inside the program
+
+
+
+### Single and bouble quotes ###
+
+Single quotes limit substitution.
+
+[me@linuxbox me]$ echo "My host name is $HOSTNAME."
+My host name is linuxbox.
+
+[me@linuxbox me]$ echo 'My host name is $HOSTNAME.'
+My host name is $HOSTNAME.
+
+
+# Quoting a single character #
+
+The backslash va ignora caracterul imediat dupa el.
+
+[me@linuxbox me]$ echo "My host name is \$HOSTNAME."
+My host name is $HOSTNAME.
+
+De exemplu pentru a putea introduce "" in alte "" folosim sintaxa \"text\"
+
+[me@linuxbox me]$ echo "My host name is \"$HOSTNAME\"."
+My host name is "linuxbox".
+
+
+# Escape Character #
+	
+\n  # newline - Adding blank lines to text
+
+\t  # tab - Inserting horizontal tabs to text
+
+\a  # alert - Makes your terminal beep
+
+\\  # backslash - Inserts a backslash
+
+\f  # formfeed - Sending this to your printer ejects the page
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

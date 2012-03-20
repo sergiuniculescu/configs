@@ -1,0 +1,331 @@
+#########
+
+To successfully write a shell script, you have to do three things:
+
+1.    Write a script
+2.    Give the shell permission to execute it
+3.    Put it somewhere the shell can find it
+
+#########
+
+
+### Setting permissions ###
+
+chmod 755 my_script  # will give you read, write, and execute permission. Everybody else will get only read and execute permission
+
+chmod 700 my_script  # your script will be private (only you can read and execute)
+
+
+### Path ###
+
+echo $PATH  # pentru a vedea lista directoarelor din care se vor executa automat scripturile, fara a mai preciza calea lor
+
+export PATH=$PATH:directory  # pentru a adauga temporar o cale in lista de mai sus
+
+nano ~/.bash_profile   #  se introduce comanda de mai sus. In acest fel va ramane calea de fiecare data cand ne logam.
+
+
+### Alias ###
+alias today='date +"%A, %B %-d, %Y"'
+alias l='ls -l'  # pentru a crea alias-uri temporare, valabile cat shell-ul curent ramane deschis
+
+Pentru a avea caracter permanent se vor adauga in ~/.bashrc, sau in ~/.bash_profile
+
+
+### Functions ###
+
+function today {
+    echo "Today's date is:"
+    date +"%A, %B %-d, %Y"
+}
+
+Pentru a avea caracter permanent se vor adauga in ~/.bashrc, sau in ~/.bash_profile
+
+Pentru a crea o functie temporara se poate scrie direct din shell:
+
+[me@linuxbox me]$ function today {
+> echo "Today's date is:"
+> date +"%A, %B %-d, %Y"
+> }
+[me@linuxbox me]$
+
+sau
+
+[me@linuxbox me]$ function l {
+> echo "continutul directoriului este: "
+> ls -la
+> }
+[me@linuxbox me]$
+
+
+### Type ###
+type command  # pentru a vedea ce tip de comanda este: alias, a shell function or an executable file
+
+
+### Script pentru a scrie o pagina HTML ###
+
+A well formed HTML file contains the following content:
+
+<HTML>
+<HEAD>
+    <TITLE>
+    The title of your page
+    </TITLE>
+</HEAD>
+
+<BODY>
+    Your page content goes here.
+</BODY>
+</HTML>
+
+# html_script_v0.1 #
+
+______________
+#!/bin/bash
+
+# make_page - A script to produce an HTML file
+
+echo "<HTML>"
+echo "<HEAD>"
+echo "  <TITLE>"
+echo "  The title of your page"
+echo "  </TITLE>"
+echo "</HEAD>"
+echo ""
+echo "<BODY>"
+echo "  Your page content goes here."
+echo "</BODY>"
+echo "</HTML>"
+______________
+
+html_script_v0.1 > page.html       
+
+
+# html_script_v0.2 #
+
+Inlocuim comanda repetitiva 'echo' cu urmatoarea forma de script (here script):
+
+command << orice_nume
+content to be used as command's standard input
+orice_nume
+
+____________
+#!/bin/bash
+
+# make_page - A script to produce an HTML file
+
+cat << _EOF_
+<HTML>
+<HEAD>
+    <TITLE>
+    The title of your page
+    </TITLE>
+</HEAD>
+
+<BODY>
+    Your page content goes here.
+</BODY>
+</HTML>
+_EOF_
+______________
+
+
+
+# html_script_v0.2.1 #
+
+Pentru ca scriptul sa ignore taburile din fata (dar nu si spatiile) care se afla pe fiecare rand, in loc de '<<' se foloseste '<<-'
+
+_______________
+#!/bin/bash
+
+# make_page - A script to produce an HTML file
+
+cat <<- _EOF_
+    <HTML>
+    <HEAD>
+        <TITLE>
+        My System Information
+        </TITLE>
+    </HEAD>
+
+    <BODY>
+    <H1>My System Information</H1>
+    </BODY>
+    </HTML>
+_EOF_
+_____________
+
+
+# html_script_v0.3 #
+
+Observam ca se repeta 'My System Information' in script. Vom substitui acea fraza cu un singur cuvant. 
+Acest lucru se numeste variables si are forma:
+
+nume="Fraza_proces_comanda_orice"
+
+apoi folosit sub forma $nume
+
+Variabila (in cazul de sus 'nume') trebuie sa respecte urmatoarele:
+- It must start with a letter.
+- It must not contain embedded spaces. Use underscores instead.
+- Don't use punctuation marks.
+- Don't use a name that is already a word understood by bash. These are called reserved words and should not be used as variable names. If you use one of these words, bash will get confused. To see a list of reserved words, use the help command.
+
+_____________
+#!/bin/bash
+
+# make_page - A script to produce an HTML file
+
+title="My System Information"
+
+cat <<- _EOF_
+    <HTML>
+    <HEAD>
+        <TITLE>
+        $title
+        </TITLE>
+    </HEAD>
+
+    <BODY>
+    <H1>$title</H1>
+    </BODY>
+    </HTML>
+_EOF_
+___________
+
+
+# html_script_v0.3.1 #
+
+Pentru a vedea variabilele deja existente in sistem (environment) se foloseste comanda
+printenv
+
+Exemplu:
+TERM=xterm
+SHELL=/bin/bash
+USER=sergiu
+
+_____________
+#!/bin/bash
+
+# make_page - A script to produce an HTML file
+
+title="System Information for"
+
+cat <<- _EOF_
+    <HTML>
+    <HEAD>
+        <TITLE>
+        $title $HOSTNAME
+        </TITLE>
+    </HEAD>
+
+    <BODY>
+    <H1>$title $HOSTNAME</H1>
+    </BODY>
+    </HTML>
+_EOF_
+____________
+
+
+
+# html_script_v0.4 #
+
+Vom actualiza scriptul sa afiseze data si ora modificarii lui cat si numele user-ului care a facut modificarea
+
+The characters "$( )" tell the shell, "substitute the results of the enclosed command."
+_____________
+#!/bin/bash
+
+# make_page - A script to produce an HTML file
+
+title="System Information for"
+
+cat <<- _EOF_
+    <HTML>
+    <HEAD>
+        <TITLE>
+        $title $HOSTNAME
+        </TITLE>
+    </HEAD>
+
+    <BODY>
+    <H1>$title $HOSTNAME</H1>
+    <P>Updated on $(date +"%x %r %Z") by $USER
+    </BODY>
+    </HTML>
+_EOF_
+____________
+
+
+# html_script_v0.4.1 #
+
+You can also assign the results of a command to a variable:
+right_now=$(date +"%x %r %Z")
+
+You can even nest the variables (place one inside another), like this:
+right_now=$(date +"%x %r %Z")
+time_stamp="Updated on $right_now by $USER"
+
+______________
+#!/bin/bash
+
+# make_page - A script to produce an HTML file
+
+TITLE="System Information for $HOSTNAME"
+RIGHT_NOW=$(date +"%x %r %Z")
+TIME_STAMP="Updated on $RIGHT_NOW by $USER"
+
+cat <<- _EOF_
+    <HTML>
+    <HEAD>
+        <TITLE>
+        $TITLE
+        </TITLE>
+    </HEAD>
+
+    <BODY>
+    <H1>$TITLE</H1>
+    <P>$TIME_STAMP
+    </BODY>
+    </HTML>
+_EOF_
+_____________
+
+
+### Single and bouble quotes ###
+
+Single quotes limit substitution.
+
+[me@linuxbox me]$ echo "My host name is $HOSTNAME."
+My host name is linuxbox.
+
+[me@linuxbox me]$ echo 'My host name is $HOSTNAME.'
+My host name is $HOSTNAME.
+
+
+# Quoting a single character #
+
+The backslash va ignora caracterul imediat dupa el.
+
+[me@linuxbox me]$ echo "My host name is \$HOSTNAME."
+My host name is $HOSTNAME.
+
+De exemplu pentru a putea introduce "" in alte "" folosim sintaxa \"text\"
+
+[me@linuxbox me]$ echo "My host name is \"$HOSTNAME\"."
+My host name is "linuxbox".
+
+# Escape Character #
+	
+\n  # newline - Adding blank lines to text
+
+\t  # tab - Inserting horizontal tabs to text
+
+\a  # alert - Makes your terminal beep
+
+\\  # backslash - Inserts a backslash
+
+\f  # formfeed - Sending this to your printer ejects the page
+
+
+

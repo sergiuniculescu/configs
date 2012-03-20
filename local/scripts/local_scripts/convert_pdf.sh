@@ -1,0 +1,1 @@
+for i in `ls *.pdf`; do convert -density 300 "$i" "$i".jpg; done
