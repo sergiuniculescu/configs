@@ -39,12 +39,13 @@ export HISTSIZE=10000
 
 # alias essentials:
 alias e=exit
-alias p=pacman
-alias sp="sudo pacman"
+alias p=pacman-color
+alias sp="sudo pacman-color"
 alias y=yaourt
 alias u="sudo pacman-color -Syu"
 alias uy="yaourt -Sya"
 alias c="clear"
+alias mc="mc -S dark.ini"
 
 
 # alias system clean:
@@ -58,6 +59,7 @@ alias ls='ls --color=auto'
 alias ll="ls -lh --color=auto"
 alias la="ls -la --color=auto"
 alias grep="grep --color=auto"
+alias zgrep="zgrep --color=auto"
 
 
 # others alias:
@@ -72,7 +74,7 @@ alias nets="sudo netstat -nlpt"
 alias nets2="sudo lsof -i"
 
 
-# safety features
+# safety features:
 alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -I'                    # 'rm -i' prompts for every file
@@ -83,15 +85,15 @@ alias ln='ln -i'
 
 
 
-# Calea catre scripturile locale
+# Scripturi locale:
 export PATH=$PATH:~/.bin/
 
 
-#Add archey
+#Add archey:
 archey3
 
 
-# Start X
+# Start X:
 #####################
 if [[ -z $DISPLAY && ! -e /tmp/.X11-unix/X0 ]] && (( EUID )); then
 	while true; do
