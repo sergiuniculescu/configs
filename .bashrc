@@ -4,8 +4,8 @@
 
 
 # default editor
-export EDITOR="vim"
-#export EDITOR="nano"
+export EDITOR=vim
+export VISUAL=vim
 
 
 # completion:
