@@ -46,6 +46,7 @@ alias u="sudo pacman-color -Syu"
 alias uy="yaourt -Sya"
 alias c="clear"
 alias mc="mc -S dark.ini"
+alias gitc="git commit -av ; git push -u origin master"
 
 
 # alias system clean:
