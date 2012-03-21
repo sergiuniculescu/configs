@@ -14,7 +14,6 @@ complete -cf sudo
 complete -cf man
 
 
-
 # find packages commands:
 ##################
 #!/bin/bash
@@ -28,7 +27,7 @@ command_not_found_handle () {
         printf "bash: $(gettext bash "%s: command not found")\n" $command >&2
         return 127
 }
-##################
+#################
 
 
 # make multiple shells share the same history file:
@@ -50,7 +49,7 @@ alias mc="mc -S dark.ini"
 alias gitc="git commit -av ; git push -u origin master"
 
 
-# alias clean:
+# alias system clean:
 alias clean="yaourt -Qdt && sudo pacman -Sc && sudo pacman-optimize"
 alias bb="sudo bleachbit --clean system.cache system.localizations system.trash system.tmp"
 alias cc="sudo cacheclean 2"
@@ -77,9 +76,11 @@ alias nets2="sudo lsof -i"
 
 
 # safety features:
-alias cp='cp -i'
-alias mv='mv -i'
-alias rm='rm -I'                    # 'rm -i' prompts for every file
+#alias cp='cp -i'
+#alias mv='mv -i'
+alias cp='acp -g -i'   # need 'advcp' package
+alias mv='amv -g -i'   # need 'advcp' package
+alias rm='rm -I'       # 'rm -i' prompts for every file
 alias ln='ln -i'
 alias chown='chown --preserve-root'
 alias chmod='chmod --preserve-root'
@@ -105,8 +106,8 @@ fi
 #################
 
 
-# Scripturi locale:
-PATH=$PATH:$HOME/.bin
+# scripturi locale:
+PATH=$PATH:$HOME/.bin/
 
 
 # ps1:
