@@ -1,17 +1,218 @@
 #!/usr/bin/env bash
-setxkbmap ro
 clear
 echo
 echo ' ____  ____  _  _ '
-echo '(  _ \( ___)( \/ )'
-echo ' )(_) ))__)  )  ( ''Dicționar explicativ al limbii Române'
-echo '(____/(____)(_/\_)'
+echo '(  _ \( ___)( \/ )''Dicționar explicativ al limbii Române'
+echo ' )(_) ))__)  )  ( ''Informațiile sunt preluate de pe:    '
+echo '(____/(____)(_/\_)''     http://dexonline.ro/            '
 echo
-while :
-do 
-setxkbmap ro
-echo 'Introduceți cuvântul căutat:'
-read expresie
-echo 'Caut în toate dicționarele'
-wget -qO - http://dexonline.ro/definitie/$expresie | sed -n '/"resultsWrapper"/,/"typoDiv"/ p' | grep -Ev 'typoLink' | sed -e :a -e 's/<[^>]*>/ /g;/</N;//ba;' | sed ':a;N;$!ba;s/\n/ /g' | sed 's/Permalink /\n /g' | sed 's/^[ \t]*//' 
-done
+testconnection=`wget --tries=3 --timeout=15 www.google.com -O /tmp/testinternet &>/dev/null 2>&1`
+if [ $? != 0 ];
+then
+echo  "Nu sunteti conectat la internet"$esc
+echo  "Pentru a putea folosi Dicționarele aveți nevoie de internet."$esc
+else
+rm /tmp/testinternet
+echo "
+################################################
+00. Toate Dicționarele
+01. Dicționarul explicativ al limbii române (ediția a II-a revăzută și adăugită) DEX '09   
+02. Dicționarul explicativ al limbii române, ediția a II-a Dicționarul explicativ al limbii DEX'98   
+03. Dicționarul explicativ al limbii române, ediţia a II-a DEX '96   
+04. Dicționarul explicativ al limbii române DEX '84   
+05. Dicționarul explicativ al limbii române DEX '75   
+06. Supliment la Dicționarul explicativ al limbii române DEX-S   
+07. Micul dicționar academic MDA   
+08. Noul dicționar explicativ al limbii române NODEX   
+09. Dicționar de neologisme Dicționar de neologisme DN   
+10. Marele dicționar de neologisme MDN   
+11. Dicționar enciclopedic ilustrat DEI   
+12. Dicționarul limbii române moderne DLRM   
+13. Dicționarul limbii române contemporane DLRC   
+14. Dicționar al limbii române actuale (ediția a II-a revăzută și adăugită)DLRA   
+15. Dicționarul limbii române literare contemporane DLRLC   
+16. Dicționarul limbii române literare vechi (1640-1780) - Termeni regionali DLRLV   
+17. Dicționar ortografic, ortoepic și morfologic al limbii române, ediția a II-a revăzută şi adăugită DOOM 2   
+18. Dicționar ortografic, ortoepic și morfologic al limbii române DOOM   
+19. Dicționar de sinonime Sinonime   
+20. Dicționar de antonime Antonime   
+21. Dicționar de arhaisme și regionalisme DAR   
+22. Dicționarul etimologic român DER   
+23. Dicționar ortografic al limbii române Ortografic   
+24. Dictionnaire morphologique de la langue roumaine DMLR   
+25. Dicţionar General de Ştiinţe. Ştiinţe ale limbii DSL   
+26. Dicționar de cuvinte recente, ediția a II-a DCR2   
+27. Dicționar intern dexonline Dexonline   
+28. Dicționar enciclopedic DE   
+29. Dicționar de termeni – Sedimentologie - Petrologie sedimentară - Sisteme depoziționale Petro-Sedim   
+30. Glosar de termeni aviatici GTA   
+31. Dicționar gastronomic explicativ DGE   
+32. Dicționar de termeni muzicali DTM   
+33. Mic dicționar mitologic greco-roman Mitologic   
+34. Dicționar religios D.Religios   
+35. Dicționaru limbii românești Scriban   
+36. Definiții ale unor cuvinte care nu există în alte dicționare Neoficial   
+37. Dicționar de argou al limbii române Argou
+38. DOR - Dicționarul ortografic român
+################################################"
+################################################
+ter="Introduceți termenul căutat:"
+echo "Introduceți numărul din dreptul dicționarului pe care doririți să îl folosiți"
+read dictionar
+if test "$dictionar" = "00" ; then echo "Introduceți termenul căutat:" ; read expresie
+echo "caut în toate dictionarele"
+wget -qO - http://dexonline.ro/definitie/$expresie | sed -n '/"resultsWrapper"/,/"typoDiv"/ p' | grep -Ev 'typoLink' | sed -e :a -e 's/<[^>]*>/ /g;/</N;//ba;' | sed ':a;N;$!ba;s/\n/ /g' | sed 's/Permalink /\n /g' | sed 's/^[ \t]*//'
+#################################################
+elif test "$dictionar" = "01" ; then echo $ter ; read expresie
+echo "DEX'09 Dicționarul explicativ al limbii române (ediția a II-a revăzută și adăugită)"
+wget -qO - http://dexonline.ro/definitie-dex09/$expresie | sed -n '/"resultsWrapper"/,/"typoDiv"/ p' | grep -Ev 'typoLink' | sed -e :a -e 's/<[^>]*>/ /g;/</N;//ba;' | sed ':a;N;$!ba;s/\n/ /g' | sed 's/Permalink /\n /g' | sed 's/^[ \t]*//'
+#################################################
+elif test "$dictionar" = "02" ; then echo $ter ; read expresie
+echo "DEX'98 Dicționarul explicativ al limbii române, ediția a II-a"
+wget -qO - http://dexonline.ro/definitie-dex/$expresie | sed -n '/"resultsWrapper"/,/"typoDiv"/ p' | grep -Ev 'typoLink' | sed -e :a -e 's/<[^>]*>/ /g;/</N;//ba;' | sed ':a;N;$!ba;s/\n/ /g' | sed 's/Permalink /\n /g' | sed 's/^[ \t]*//'
+#################################################
+elif test "$dictionar" = "03" ; then echo $ter ; read expresie
+echo "caut în DEX'96 Dicționarul explicativ al limbii române, ediţia a II-a"
+wget -qO - http://dexonline.ro/definitie-dex96/$expresie | sed -n '/"resultsWrapper"/,/"typoDiv"/ p' | grep -Ev 'typoLink' | sed -e :a -e 's/<[^>]*>/ /g;/</N;//ba;' | sed ':a;N;$!ba;s/\n/ /g' | sed 's/Permalink /\n /g' | sed 's/^[ \t]*//'
+#################################################
+elif test "$dictionar" = "04" ; then echo $ter ; read expresie
+echo " caut în DEX'84 Dicționarul explicativ al limbii române"
+wget -qO - http://dexonline.ro/definitie-dex84/$expresie | sed -n '/"resultsWrapper"/,/"typoDiv"/ p' | grep -Ev 'typoLink' | sed -e :a -e 's/<[^>]*>/ /g;/</N;//ba;' | sed ':a;N;$!ba;s/\n/ /g' | sed 's/Permalink /\n /g' | sed 's/^[ \t]*//'
+#################################################
+elif test "$dictionar" = "05" ; then echo $ter ; read expresie
+echo "caut în DEX'75 Dicționarul explicativ al limbii române"
+wget -qO - http://dexonline.ro/definitie-dex75/$expresie | sed -n '/"resultsWrapper"/,/"typoDiv"/ p' | grep -Ev 'typoLink' | sed -e :a -e 's/<[^>]*>/ /g;/</N;//ba;' | sed ':a;N;$!ba;s/\n/ /g' | sed 's/Permalink /\n /g' | sed 's/^[ \t]*//'
+#################################################
+elif test "$dictionar" = "06" ; then echo $ter ; read expresie
+echo "caut în DEX-S 88 Supliment la Dicționarul explicativ al limbii române"
+wget -qO - http://dexonline.ro/definitie-dexs88/$expresie | sed -n '/"resultsWrapper"/,/"typoDiv"/ p' | grep -Ev 'typoLink' | sed -e :a -e 's/<[^>]*>/ /g;/</N;//ba;' | sed ':a;N;$!ba;s/\n/ /g' | sed 's/Permalink /\n /g' | sed 's/^[ \t]*//'
+#################################################
+elif test "$dictionar" = "07" ; then echo $ter ; read expresie
+echo "caut în MDA Micul dicționar academic"
+wget -qO - http://dexonline.ro/definitie-mda/$expresie | sed -n '/"resultsWrapper"/,/"typoDiv"/ p' | grep -Ev 'typoLink' | sed -e :a -e 's/<[^>]*>/ /g;/</N;//ba;' | sed ':a;N;$!ba;s/\n/ /g' | sed 's/Permalink /\n /g' | sed 's/^[ \t]*//'
+#################################################
+elif test "$dictionar" = "08" ; then echo $ter ; read expresie
+echo "caut în NODEX Noul dicționar explicativ al limbii române"
+wget -qO - http://dexonline.ro/definitie-nodex/$expresie | sed -n '/"resultsWrapper"/,/"typoDiv"/ p' | grep -Ev 'typoLink' | sed -e :a -e 's/<[^>]*>/ /g;/</N;//ba;' | sed ':a;N;$!ba;s/\n/ /g' | sed 's/Permalink /\n /g' | sed 's/^[ \t]*//'
+#################################################
+elif test "$dictionar" = "09" ; then echo $ter ; read expresie
+echo " caut în DN Dicționar de neologisme"
+wget -qO - http://dexonline.ro/definitie-dn/$expresie | sed -n '/"resultsWrapper"/,/"typoDiv"/ p' | grep -Ev 'typoLink' | sed -e :a -e 's/<[^>]*>/ /g;/</N;//ba;' | sed ':a;N;$!ba;s/\n/ /g' | sed 's/Permalink /\n /g' | sed 's/^[ \t]*//'
+#################################################
+elif test "$dictionar" = "10" ; then echo $ter ; read expresie
+echo "caut în MDN Marele dicționar de neologisme"
+wget -qO - http://dexonline.ro/definitie-mdn/$expresie | sed -n '/"resultsWrapper"/,/"typoDiv"/ p' | grep -Ev 'typoLink' | sed -e :a -e 's/<[^>]*>/ /g;/</N;//ba;' | sed ':a;N;$!ba;s/\n/ /g' | sed 's/Permalink /\n /g' | sed 's/^[ \t]*//'
+#################################################
+elif test "$dictionar" = "11" ; then echo $ter ; read expresie
+echo "caut în DEI Dicționar enciclopedic ilustrat"
+wget -qO - http://dexonline.ro/definitie-dei/$expresie | sed -n '/"resultsWrapper"/,/"typoDiv"/ p' | grep -Ev 'typoLink' | sed -e :a -e 's/<[^>]*>/ /g;/</N;//ba;' | sed ':a;N;$!ba;s/\n/ /g' | sed 's/Permalink /\n /g' | sed 's/^[ \t]*//'
+#################################################
+elif test "$dictionar" = "12" ; then echo $ter ; read expresie
+echo "caut în DLRM Dicționarul limbii române moderne"
+wget -qO - http://dexonline.ro/definitie-dlrm/$expresie | sed -n '/"resultsWrapper"/,/"typoDiv"/ p' | grep -Ev 'typoLink' | sed -e :a -e 's/<[^>]*>/ /g;/</N;//ba;' | sed ':a;N;$!ba;s/\n/ /g' | sed 's/Permalink /\n /g' | sed 's/^[ \t]*//'
+#################################################
+elif test "$dictionar" = "13" ; then echo $ter ; read expresie
+echo "caut în DLRC Dicționarul limbii române contemporane"
+wget -qO - http://dexonline.ro/definitie-dlrc/$expresie | sed -n '/"resultsWrapper"/,/"typoDiv"/ p' | grep -Ev 'typoLink' | sed -e :a -e 's/<[^>]*>/ /g;/</N;//ba;' | sed ':a;N;$!ba;s/\n/ /g' | sed 's/Permalink /\n /g' | sed 's/^[ \t]*//'
+#################################################
+elif test "$dictionar" = "14" ; then echo $ter ; read expresie
+echo "caut în DLRA Dicționar al limbii române actuale (ediția a II-a revăzută și adăugită)"
+wget -qO - http://dexonline.ro/definitie-dlra/$expresie | sed -n '/"resultsWrapper"/,/"typoDiv"/ p' | grep -Ev 'typoLink' | sed -e :a -e 's/<[^>]*>/ /g;/</N;//ba;' | sed ':a;N;$!ba;s/\n/ /g' | sed 's/Permalink /\n /g' | sed 's/^[ \t]*//'
+#################################################
+elif test "$dictionar" = "15" ; then echo $ter ; read expresie
+echo "caut în DLRLC Dicționarul limbii române literare contemporane"
+wget -qO - http://dexonline.ro/definitie-dlrlc/$expresie | sed -n '/"resultsWrapper"/,/"typoDiv"/ p' | grep -Ev 'typoLink' | sed -e :a -e 's/<[^>]*>/ /g;/</N;//ba;' | sed ':a;N;$!ba;s/\n/ /g' | sed 's/Permalink /\n /g' | sed 's/^[ \t]*//'
+#################################################
+elif test "$dictionar" = "16" ; then echo $ter ; read expresie
+echo "caut în DLRLV Dicționarul limbii române literare vechi (1640-1780) - Termeni regionali"
+wget -qO - http://dexonline.ro/definitie-dlrlv/$expresie | sed -n '/"resultsWrapper"/,/"typoDiv"/ p' | grep -Ev 'typoLink' | sed -e :a -e 's/<[^>]*>/ /g;/</N;//ba;' | sed ':a;N;$!ba;s/\n/ /g' | sed 's/Permalink /\n /g' | sed 's/^[ \t]*//'
+#################################################
+elif test "$dictionar" = "17" ; then echo $ter ; read expresie
+echo "caut în DOOM 2 Dicționar ortografic, ortoepic și morfologic al limbii române, ediția a II-a revăzută şi adăugită"
+wget -qO - http://dexonline.ro/definitie-doom2/$expresie | sed -n '/"resultsWrapper"/,/"typoDiv"/ p' | grep -Ev 'typoLink' | sed -e :a -e 's/<[^>]*>/ /g;/</N;//ba;' | sed ':a;N;$!ba;s/\n/ /g' | sed 's/Permalink /\n /g' | sed 's/^[ \t]*//'
+#################################################
+elif test "$dictionar" = "18" ; then echo $ter ; read expresie
+echo "caut în DOOM Dicționar ortografic, ortoepic și morfologic al limbii române"
+wget -qO - http://dexonline.ro/definitie-doom/$expresie | sed -n '/"resultsWrapper"/,/"typoDiv"/ p' | grep -Ev 'typoLink' | sed -e :a -e 's/<[^>]*>/ /g;/</N;//ba;' | sed ':a;N;$!ba;s/\n/ /g' | sed 's/Permalink /\n /g' | sed 's/^[ \t]*//'
+#################################################
+elif test "$dictionar" = "19" ; then echo $ter ; read expresie
+echo "caut în Sinonime Dicționar de sinonime"
+wget -qO - http://dexonline.ro/definitie-sinonime/$expresie | sed -n '/"resultsWrapper"/,/"typoDiv"/ p' | grep -Ev 'typoLink' | sed -e :a -e 's/<[^>]*>/ /g;/</N;//ba;' | sed ':a;N;$!ba;s/\n/ /g' | sed 's/Permalink /\n /g' | sed 's/^[ \t]*//'
+#################################################
+elif test "$dictionar" = "20" ; then echo $ter ; read expresie
+echo "caut în Antonime Dicționar de antonime"
+wget -qO - http://dexonline.ro/definitie-antonime/$expresie | sed -n '/"resultsWrapper"/,/"typoDiv"/ p' | grep -Ev 'typoLink' | sed -e :a -e 's/<[^>]*>/ /g;/</N;//ba;' | sed ':a;N;$!ba;s/\n/ /g' | sed 's/Permalink /\n /g' | sed 's/^[ \t]*//'
+#################################################
+elif test "$dictionar" = "21" ; then echo $ter ; read expresie
+echo "caut în DAR Dicționar de arhaisme și regionalisme"
+wget -qO - http://dexonline.ro/definitie-dar/$expresie | sed -n '/"resultsWrapper"/,/"typoDiv"/ p' | grep -Ev 'typoLink' | sed -e :a -e 's/<[^>]*>/ /g;/</N;//ba;' | sed ':a;N;$!ba;s/\n/ /g' | sed 's/Permalink /\n /g' | sed 's/^[ \t]*//'
+#################################################
+elif test "$dictionar" = "22" ; then echo $ter ; read expresie
+echo "caut în DER Dicționarul etimologic român"
+wget -qO - http://dexonline.ro/definitie-der/$expresie | sed -n '/"resultsWrapper"/,/"typoDiv"/ p' | grep -Ev 'typoLink' | sed -e :a -e 's/<[^>]*>/ /g;/</N;//ba;' | sed ':a;N;$!ba;s/\n/ /g' | sed 's/Permalink /\n /g' | sed 's/^[ \t]*//'
+#################################################
+elif test "$dictionar" = "23" ; then echo $ter ; read expresie
+echo "caut în Ortografic Dicționar ortografic al limbii române"
+wget -qO - http://dexonline.ro/definitie-do/$expresie | sed -n '/"resultsWrapper"/,/"typoDiv"/ p' | grep -Ev 'typoLink' | sed -e :a -e 's/<[^>]*>/ /g;/</N;//ba;' | sed ':a;N;$!ba;s/\n/ /g' | sed 's/Permalink /\n /g' | sed 's/^[ \t]*//'
+#################################################
+elif test "$dictionar" = "24" ; then echo $ter ; read expresie
+echo "caut în DMLR Dictionnaire morphologique de la langue roumaine"
+wget -qO - http://dexonline.ro/definitie-dmlr/$expresie | sed -n '/"resultsWrapper"/,/"typoDiv"/ p' | grep -Ev 'typoLink' | sed -e :a -e 's/<[^>]*>/ /g;/</N;//ba;' | sed ':a;N;$!ba;s/\n/ /g' | sed 's/Permalink /\n /g' | sed 's/^[ \t]*//'
+#################################################
+elif test "$dictionar" = "25" ; then echo $ter ; read expresie
+echo "caut în DSL Dicţionar General de Ştiinţe. Ştiinţe ale limbii"
+wget -qO - http://dexonline.ro/definitie-dsl/$expresie | sed -n '/"resultsWrapper"/,/"typoDiv"/ p' | grep -Ev 'typoLink' | sed -e :a -e 's/<[^>]*>/ /g;/</N;//ba;' | sed ':a;N;$!ba;s/\n/ /g' | sed 's/Permalink /\n /g' | sed 's/^[ \t]*//'
+#################################################
+elif test "$dictionar" = "26" ; then echo $ter ; read expresie
+echo "caut în DCR2 Dicționar de cuvinte recente, ediția a II-a"
+wget -qO - http://dexonline.ro/definitie-dcr2/$expresie | sed -n '/"resultsWrapper"/,/"typoDiv"/ p' | grep -Ev 'typoLink' | sed -e :a -e 's/<[^>]*>/ /g;/</N;//ba;' | sed ':a;N;$!ba;s/\n/ /g' | sed 's/Permalink /\n /g' | sed 's/^[ \t]*//'
+#################################################
+elif test "$dictionar" = "27" ; then echo $ter ; read expresie
+echo "caut în Dexonline Dicționar intern dexonline"
+wget -qO - http://dexonline.ro/definitie-intern/$expresie | sed -n '/"resultsWrapper"/,/"typoDiv"/ p' | grep -Ev 'typoLink' | sed -e :a -e 's/<[^>]*>/ /g;/</N;//ba;' | sed ':a;N;$!ba;s/\n/ /g' | sed 's/Permalink /\n /g' | sed 's/^[ \t]*//'
+#################################################
+elif test "$dictionar" = "28" ; then echo $ter ; read expresie
+echo "caut în DE Dicționar enciclopedic"
+wget -qO - http://dexonline.ro/definitie-de/$expresie | sed -n '/"resultsWrapper"/,/"typoDiv"/ p' | grep -Ev 'typoLink' | sed -e :a -e 's/<[^>]*>/ /g;/</N;//ba;' | sed ':a;N;$!ba;s/\n/ /g' | sed 's/Permalink /\n /g' | sed 's/^[ \t]*//'
+#################################################
+elif test "$dictionar" = "29" ; then echo $ter ; read expresie
+echo "caut în Petro-Sedim Dicționar de termeni – Sedimentologie - Petrologie sedimentară - Sisteme depoziționale"
+wget -qO - http://dexonline.ro/definitie-dps/$expresie | sed -n '/"resultsWrapper"/,/"typoDiv"/ p' | grep -Ev 'typoLink' | sed -e :a -e 's/<[^>]*>/ /g;/</N;//ba;' | sed ':a;N;$!ba;s/\n/ /g' | sed 's/Permalink /\n /g' | sed 's/^[ \t]*//'
+#################################################
+elif test "$dictionar" = "30" ; then echo $ter ; read expresie
+echo "caut în GTA Glosar de termeni aviatici"
+wget -qO - http://dexonline.ro/definitie-gta/$expresie | sed -n '/"resultsWrapper"/,/"typoDiv"/ p' | grep -Ev 'typoLink' | sed -e :a -e 's/<[^>]*>/ /g;/</N;//ba;' | sed ':a;N;$!ba;s/\n/ /g' | sed 's/Permalink /\n /g' | sed 's/^[ \t]*//'
+#################################################
+elif test "$dictionar" = "31" ; then echo $ter ; read expresie
+echo "caut în DGE Dicționar gastronomic explicativ"
+wget -qO - http://dexonline.ro/definitie-dge/$expresie | sed -n '/"resultsWrapper"/,/"typoDiv"/ p' | grep -Ev 'typoLink' | sed -e :a -e 's/<[^>]*>/ /g;/</N;//ba;' | sed ':a;N;$!ba;s/\n/ /g' | sed 's/Permalink /\n /g' | sed 's/^[ \t]*//'
+#################################################
+elif test "$dictionar" = "32" ; then echo $ter ; read expresie
+echo "caut în DTM Dicționar de termeni muzicali"
+wget -qO - http://dexonline.ro/definitie-dtm/$expresie | sed -n '/"resultsWrapper"/,/"typoDiv"/ p' | grep -Ev 'typoLink' | sed -e :a -e 's/<[^>]*>/ /g;/</N;//ba;' | sed ':a;N;$!ba;s/\n/ /g' | sed 's/Permalink /\n /g' | sed 's/^[ \t]*//'
+#################################################
+elif test "$dictionar" = "33" ; then echo $ter ; read expresie
+echo "caut în Mic dicționar mitologic greco-roman"
+wget -qO - http://dexonline.ro/definitie-mitologică/$expresie | sed -n '/"resultsWrapper"/,/"typoDiv"/ p' | grep -Ev 'typoLink' | sed -e :a -e 's/<[^>]*>/ /g;/</N;//ba;' | sed ':a;N;$!ba;s/\n/ /g' | sed 's/Permalink /\n /g' | sed 's/^[ \t]*//'
+#################################################
+elif test "$dictionar" = "34" ; then echo $ter ; read expresie
+echo "caut în Dicționarul religios"
+#wget -qO - http://dexonline.ro/definitie-religios/$expresie | sed -n '/"resultsWrapper"/,/"typoDiv"/ p' | grep -Ev 'typoLink' | sed -e :a -e 's/<[^>]*>/ /g;/</N;//ba;' | sed ':a;N;$!ba;s/\n/ /g' | sed 's/Permalink /\n /g' | sed 's/^[ \t]*//'
+#################################################
+elif test "$dictionar" = "35" ; then echo $ter ; read expresie
+echo "caut în SCRIBAN Dicționaru limbii românești"
+#wget -qO - http://dexonline.ro/definitie-scriban/$expresie | sed -n '/"resultsWrapper"/,/"typoDiv"/ p' | grep -Ev 'typoLink' | sed -e :a -e 's/<[^>]*>/ /g;/</N;//ba;' | sed ':a;N;$!ba;s/\n/ /g' | sed 's/Permalink /\n /g' | sed 's/^[ \t]*//'
+#################################################
+elif test "$dictionar" = "36" ; then echo $ter ; read expresie
+echo "caut în Definiții ale unor cuvinte care nu există în alte dicționare - Neoficial"
+wget -qO - http://dexonline.ro/definitie-neoficial/$expresie | sed -n '/"resultsWrapper"/,/"typoDiv"/ p' | grep -Ev 'typoLink' | sed -e :a -e 's/<[^>]*>/ /g;/</N;//ba;' | sed ':a;N;$!ba;s/\n/ /g' | sed 's/Permalink /\n /g' | sed 's/^[ \t]*//'
+#################################################
+elif test "$dictionar" = "37" ; then echo $ter ; read expresie
+echo "caut în Dicționarul de argou al limbii române"
+#wget -qO - http://dexonline.ro/definitie-argou/$expresie | sed -n '/"resultsWrapper"/,/"typoDiv"/ p' | grep -Ev 'typoLink' | sed -e :a -e 's/<[^>]*>/ /g;/</N;//ba;' | sed ':a;N;$!ba;s/\n/ /g' | sed 's/Permalink /\n /g' | sed 's/^[ \t]*//'
+#################################################
+elif test "$dictionar" = "38" ; then echo $ter ; read expresie
+echo "caut în DOR - Dicționarul ortografic român"
+wget -qO - http://dexonline.ro/definitie-dor/$expresie | sed -n '/"resultsWrapper"/,/"typoDiv"/ p' | grep -Ev 'typoLink' | sed -e :a -e 's/<[^>]*>/ /g;/</N;//ba;' | sed ':a;N;$!ba;s/\n/ /g' | sed 's/Permalink /\n /g' | sed 's/^[ \t]*//'
+fi
+fi
