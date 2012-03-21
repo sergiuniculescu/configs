@@ -1876,6 +1876,10 @@ De exemplu pentru a putea introduce "" in alte "" folosim sintaxa \"text\"
 My host name is "linuxbox".
 
 
+# printenv #
+printenv  # print env.
+
+
 # Escape Character #
 	
 \n  # newline - Adding blank lines to text
