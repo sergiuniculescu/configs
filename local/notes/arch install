@@ -1040,7 +1040,7 @@ ________________________________________________________
 #
 
 
-# default editor:
+# default editor
 export EDITOR=vim
 export VISUAL=vim
 
@@ -1050,17 +1050,18 @@ set show-all-if-ambiguous on
 complete -cf sudo
 complete -cf man
 
+
 # find packages commands:
-#################
+##################
 #!/bin/bash
 command_not_found_handle () {
         local command="$1"
         local pkgs="$(pkgfile -b -v -- "$command")"
         if [ ! -z "$pkgs" ]; then
-                echo -e "\n$command may be found in the following packages:\n$pkgs"
+echo -e "\n$command may be found in the following packages:\n$pkgs"
                 return 0
         fi
-        printf "bash: $(gettext bash "%s: command not found")\n" $command >&2
+printf "bash: $(gettext bash "%s: command not found")\n" $command >&2
         return 127
 }
 #################
@@ -1078,15 +1079,15 @@ alias e=exit
 alias p=pacman-color
 alias sp="sudo pacman-color"
 alias y=yaourt
-alias u-"sudo pacman-color -Syu"
-alias uy="yaourt -Sa"
+alias u="sudo pacman-color -Syu"
+alias uy="yaourt -Sya"
 alias c="clear"
 alias mc="mc -S dark.ini"
 alias gitc="git commit -av ; git push -u origin master"
 
 
 # alias system clean:
-alias clean="yaourt -Qdt && pacman -Sc && sudo pacman-optimize"
+alias clean="yaourt -Qdt && sudo pacman -Sc && sudo pacman-optimize"
 alias bb="sudo bleachbit --clean system.cache system.localizations system.trash system.tmp"
 alias cc="sudo cacheclean 2"
 
@@ -1109,10 +1110,14 @@ alias openports='netstat --all --numeric --programs --inet --inet6'
 alias nets="sudo netstat -nlpt"
 alias nets2="sudo lsof -i"
 
+
+
 # safety features:
-alias cp='cp -i'
-alias mv='mv -i'
-alias rm='rm -I'                    # 'rm -i' prompts for every file
+#alias cp='cp -i'
+#alias mv='mv -i'
+alias cp='acp -g -i' # need 'advcp' package
+alias mv='amv -g -i' # need 'advcp' package
+alias rm='rm -I' # 'rm -i' prompts for every file
 alias ln='ln -i'
 alias chown='chown --preserve-root'
 alias chmod='chmod --preserve-root'
@@ -1123,23 +1128,23 @@ alias chgrp='chgrp --preserve-root'
 archey3
 
 
-# Start X:
-#####################
+# start X:
+##################
 if [[ -z $DISPLAY && ! -e /tmp/.X11-unix/X0 ]] && (( EUID )); then
-	while true; do
-		read -p 'Start X? (y/n): '
-		case $REPLY in
-			[Yy]) xinit /usr/bin/ck-launch-session dbus-launch --exit-with-session startxfce4 ;;
-			[nn]) break ;;
-			*) printf '%s\n' 'Answer y or n. ' ;;
-		esac
-	done
+while true; do
+read -p 'Start X? (y/n): '
+    case $REPLY in
+      [Yy]) xinit /usr/bin/ck-launch-session dbus-launch --exit-with-session startxfce4 ;;
+      [Nn]) break ;;
+      *) printf '%s\n' 'Answer y or n.' ;;
+    esac
+done
 fi
-#####################
+#################
 
 
-# Scripturi locale:
-PATH=$PATH:$HOME/.bin
+# scripturi locale:
+PATH=$PATH:$HOME/.bin/
 
 
 # ps1:
@@ -1147,7 +1152,7 @@ PATH=$PATH:$HOME/.bin
 
 
 # If not running interactively, don't do anything
-#[[ $- != *i* ]] && return
+# [[ $- != *i* ]] && return
 
 ___________________________________________________________________________
 
