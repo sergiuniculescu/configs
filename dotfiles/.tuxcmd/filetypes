@@ -1,20 +1,20 @@
 [<file>]
 FileTypeName=<file>
-FileTypeIcon=
+FileTypeIcon=/usr/share/icons/Faenza/mimetypes/scalable/application-octet-stream.svg
 DefaultAction=0
 NumActions=0
 ColorString=
 
 [<directory>]
 FileTypeName=<directory>
-FileTypeIcon=
+FileTypeIcon=/usr/share/icons/Faenza/places/scalable/gtk-directory.svg
 DefaultAction=0
 NumActions=0
 ColorString=
 
 [jpg;jpeg;png;bmp]
 FileTypeName=Image
-FileTypeIcon=
+FileTypeIcon=/usr/share/icons/Faenza/mimetypes/scalable/jpg.svg
 DefaultAction=0
 NumActions=1
 ColorString=
@@ -25,18 +25,22 @@ Action0AutodetectGUI=0
 
 [mpg;avi;mkv;mp4]
 FileTypeName=Video
-FileTypeIcon=
-DefaultAction=0
-NumActions=1
+FileTypeIcon=/usr/share/icons/Faenza/mimetypes/scalable/video-x-generic.svg
+DefaultAction=1
+NumActions=2
 ColorString=
 Action0Name=Video
 Action0Command=vlc
 Action0RunInTerminal=0
 Action0AutodetectGUI=0
+Action1Name=Video
+Action1Command=smplayer
+Action1RunInTerminal=0
+Action1AutodetectGUI=0
 
 [pdf]
 FileTypeName=PDF
-FileTypeIcon=
+FileTypeIcon=/usr/share/icons/Faenza/mimetypes/scalable/pdf.svg
 DefaultAction=0
 NumActions=1
 ColorString=
@@ -47,7 +51,7 @@ Action0AutodetectGUI=0
 
 [doc;docx;odt]
 FileTypeName=DOC
-FileTypeIcon=
+FileTypeIcon=/usr/share/icons/Faenza/mimetypes/scalable/application-msword.svg
 DefaultAction=0
 NumActions=1
 ColorString=
@@ -58,7 +62,7 @@ Action0AutodetectGUI=0
 
 [xls;xlsx]
 FileTypeName=XLS
-FileTypeIcon=
+FileTypeIcon=/usr/share/icons/Faenza/mimetypes/scalable/application-vnd.ms-excel.svg
 DefaultAction=0
 NumActions=1
 ColorString=
@@ -69,7 +73,7 @@ Action0AutodetectGUI=0
 
 [rar]
 FileTypeName=RAR
-FileTypeIcon=
+FileTypeIcon=/usr/share/icons/Faenza/mimetypes/scalable/application-x-rar.svg
 DefaultAction=0
 NumActions=1
 ColorString=
@@ -80,7 +84,7 @@ Action0AutodetectGUI=0
 
 [txt]
 FileTypeName=TXT
-FileTypeIcon=
+FileTypeIcon=/usr/share/icons/Faenza/mimetypes/scalable/text-plain.svg
 DefaultAction=0
 NumActions=1
 ColorString=
@@ -91,7 +95,7 @@ Action0AutodetectGUI=0
 
 [mp3;wav;flac;ogg]
 FileTypeName=Audio
-FileTypeIcon=
+FileTypeIcon=/usr/share/icons/Faenza/mimetypes/scalable/audio-x-generic.svg
 DefaultAction=0
 NumActions=1
 ColorString=
