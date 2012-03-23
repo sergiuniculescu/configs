@@ -1,25 +1,25 @@
 [Profile_Default]
-LeftPath=/home/sergiu/
+LeftPath=/home/sergiu/Dropbox/configs/dotfiles/
 RightPath=/home/sergiu/
-ShowDotFiles=0
+ShowDotFiles=1
 PanelSep=50
 MainWindowState=4
 ColumnSize[1]=322
 ColumnIDs[1]=1
 ColumnVisible[1]=0
-ColumnSize[2]=331
+ColumnSize[2]=402
 ColumnIDs[2]=2
 ColumnVisible[2]=1
 ColumnSize[3]=59
 ColumnIDs[3]=3
 ColumnVisible[3]=1
-ColumnSize[4]=77
+ColumnSize[4]=79
 ColumnIDs[4]=4
 ColumnVisible[4]=1
 ColumnSize[5]=175
 ColumnIDs[5]=5
 ColumnVisible[5]=0
-ColumnSize[6]=82
+ColumnSize[6]=81
 ColumnIDs[6]=6
 ColumnVisible[6]=1
 ColumnSize[7]=40
@@ -31,12 +31,12 @@ ColumnVisible[8]=0
 ColumnSize[9]=40
 ColumnIDs[9]=9
 ColumnVisible[9]=0
-ColumnSize[10]=76
+ColumnSize[10]=97
 ColumnIDs[10]=10
 ColumnVisible[10]=1
 MainWindowLeftSortColumn=0
 MainWindowLeftSortType=0
-MainWindowRightSortColumn=2
+MainWindowRightSortColumn=0
 MainWindowRightSortType=0
 ShowMounterBar=0
 SearchFilterCaseSensitive=0
@@ -46,7 +46,8 @@ SearchTextCaseSensitive=0
 MakeSymlinkRelative=0
 
 [CommandLineHistory]
-NumItems=0
+NumItems=1
+Item0=cd configs
 
 [SelectHistory]
 NumItems=0
