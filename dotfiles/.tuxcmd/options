@@ -1,7 +1,7 @@
 [Profile_Default]
-LeftPath=/home/sergiu/
+LeftPath=/home/sergiu/Dropbox/
 RightPath=/home/sergiu/
-ShowDotFiles=0
+ShowDotFiles=1
 PanelSep=50
 MainWindowState=4
 ColumnSize[1]=322
@@ -46,8 +46,9 @@ SearchTextCaseSensitive=0
 MakeSymlinkRelative=0
 
 [CommandLineHistory]
-NumItems=1
-Item0=cd configs
+NumItems=2
+Item0=o
+Item1=cd configs
 
 [SelectHistory]
 NumItems=0
