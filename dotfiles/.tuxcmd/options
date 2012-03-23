@@ -1,7 +1,7 @@
 [Profile_Default]
-LeftPath=/home/sergiu/Dropbox/configs/dotfiles/
+LeftPath=/home/sergiu/
 RightPath=/home/sergiu/
-ShowDotFiles=1
+ShowDotFiles=0
 PanelSep=50
 MainWindowState=4
 ColumnSize[1]=322
