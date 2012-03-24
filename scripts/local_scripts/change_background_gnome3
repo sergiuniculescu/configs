@@ -1,0 +1,17 @@
+#!/usr/bin/perl -w
+use strict;
+use warnings;
+
+my $searchPath = '~/Pictures/180\ Stunning\ National\ Geographic\ Wallpapers\ \[2010-2011\]\ 1600\ X\ 1200/';	# Set to the directory you want to have searched for photos
+my $switchTime = 300;     # Edit to the number of seconds between photo switches
+
+my @photos = `find $searchPath -type f | grep [jJ][pP][eE]*[gG]`;             
+chomp(@photos);
+my $photo;
+
+while(1)
+{
+    $photo = $photos[rand($#photos)];
+     `gsettings set org.gnome.desktop.background picture-uri "file:///$photo"`;
+    sleep($switchTime);
+}
