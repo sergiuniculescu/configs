@@ -572,6 +572,13 @@ EndSection
 _____________________
 
 
+### INSTALL XBMC ###
+
+pacman -S xbmc
+
+xinit /usr/bin/ck-launch-session dbus-launch xbmc-standalone
+
+
 ___________________________________________________
 
 
@@ -1432,6 +1439,11 @@ gitc  # Alias from ~/.bashrc
 git commit -m 'my ~/.bashrc'
 git push
 
+
+# OPENSSH #
+pacman -S openssh
+
+vim /etc/ssh/ssh_config
 
 __________________________________________________________________________________________________
 
