@@ -1,0 +1,10 @@
+# crontab format
+# +---------minute 00-59
+# | +-------hour 00-23
+# | | +-----day of month 00-31
+# | | | +---month 00-12
+# | | | | +-day of week 1-7 (7 is Sun)
+# | | | | |
+# * * * * * command
+
+00 05 * * * root /sbin/reboot

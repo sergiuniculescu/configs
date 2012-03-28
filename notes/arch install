@@ -572,6 +572,19 @@ EndSection
 _____________________
 
 
+### INSTALL Awesome ###
+pacman -S awesome   # from archlinuxfr repo
+
+mkdir -p ~/.config/awesome/
+cp -R /etc/xdg/awesome/ ~/.config/awesome/
+
+
+pacman -S xorg-server-xephyr  # for testing
+sau
+y -S awmtt    # include xephyr and more
+
+
+
 ### INSTALL XBMC ###
 
 pacman -S xbmc
