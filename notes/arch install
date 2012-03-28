@@ -575,14 +575,15 @@ _____________________
 ### INSTALL Awesome ###
 pacman -S awesome   # from archlinuxfr repo
 
-mkdir -p ~/.config/awesome/
 cp -R /etc/xdg/awesome/ ~/.config/awesome/
-
+cp -R /usr/share/awesome/ ~/.config/awesome/
 
 pacman -S xorg-server-xephyr  # for testing
 sau
 y -S awmtt    # include xephyr and more
 
+awmtt start -D 1 -C $HOME/.config/awesome/rc.lua.test -S 1024x640  # default start
+awmtt -t change zenburn  # change theme
 
 
 ### INSTALL XBMC ###
