@@ -87,9 +87,9 @@ alias chmod='chmod --preserve-root'
 alias chgrp='chgrp --preserve-root'
 
 
+
 # Add archey:
 archey3
-
 
 # start X:
 ##################
@@ -97,7 +97,7 @@ if [[ -z $DISPLAY && ! -e /tmp/.X11-unix/X0 ]] && (( EUID )); then
   while true; do
     read -p 'Start X? (y/n): '
     case $REPLY in
-      [Yy]) xinit /usr/bin/ck-launch-session dbus-launch --exit-with-session startxfce4 ;;
+      [Yy]) exec startx ;;
       [Nn]) break ;;
       *) printf '%s\n' 'Answer y or n.' ;;
     esac

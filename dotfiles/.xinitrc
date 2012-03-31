@@ -10,6 +10,9 @@
 # exec startkde
 # exec startxfce4
 # ...or the Window Manager of your choice
-exec ck-launch-session dbus-launch --exit-with-session startxfce4
 
-VBoxClient-all &
+xrdb -merge ~/.Xresources 
+setxkbmap ro
+exec ck-launch-session dbus-launch awesome 
+
+#VBoxClient-all &
