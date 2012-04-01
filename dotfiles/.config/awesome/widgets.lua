@@ -12,6 +12,7 @@ require("calendar2")
 beautiful.init("/home/sergiu/.config/awesome/theme2.lua")
 
 -- Icon dir
+--icon_dir = awful.util.getdir("config") .. "/icons/"
 icon_dir = awful.util.getdir("config") .. "/icons2/"
 
 -- MainMenu
@@ -177,25 +178,25 @@ function widget_mpd(widget, icon)
 	end
 
 	-- Get title and artist	
---	if running then
+	if running then
 		
 		-- get artist
---		artist = escape_xml(current.artist)
---		if artist == nil then artist = "[n/a]" end
+		artist = escape_xml(current.artist)
+		if artist == nil then artist = "[n/a]" end
 		
 		-- get title
---		title = escape_xml(current.title)
---		if title == nil then 
---			title = string.gsub(escape_xml(current.file), ".*/", "")
---			if title == nil then title = "[n/a]" end
---		end
+		title = escape_xml(current.title)
+		if title == nil then 
+			title = string.gsub(escape_xml(current.file), ".*/", "")
+			if title == nil then title = "[n/a]" end
+		end
 	
 		-- Put the text in the widget
---		widget.text = string.format("%s%s%s - %s", red0_col, title, null_col, artist)
+		widget.text = string.format("%s%s%s - %s", red0_col, title, null_col, artist)
 	
---	else
---		widget.text = ' MPD is closed '
---	end
+	else
+		widget.text = ' MPD is closed '
+	end
 
 end
 -- Start mpd widget

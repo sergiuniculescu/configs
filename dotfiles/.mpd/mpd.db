@@ -1,0 +1,591 @@
+info_begin
+format: 1
+mpd_version: 0.16.7
+fs_charset: UTF-8
+tag: Artist
+tag: ArtistSort
+tag: Album
+tag: AlbumArtist
+tag: AlbumArtistSort
+tag: Title
+tag: Track
+tag: Name
+tag: Genre
+tag: Date
+tag: Composer
+tag: Performer
+tag: Disc
+tag: MUSICBRAINZ_ARTISTID
+tag: MUSICBRAINZ_ALBUMID
+tag: MUSICBRAINZ_ALBUMARTISTID
+tag: MUSICBRAINZ_TRACKID
+info_end
+directory: Best
+mtime: 1309714849
+begin: Best
+song_begin: Ambient Lounge - Cold Water Music.mp3
+Time: 341
+mtime: 1118299995
+song_end
+song_begin: Ambient Lounge - Eastend.mp3
+Time: 268
+mtime: 1118299999
+song_end
+song_begin: Ambient Lounge - If Only.mp3
+Time: 177
+mtime: 1118300013
+song_end
+song_begin: Ambient Lounge - Indica.mp3
+Time: 309
+mtime: 1118300018
+song_end
+song_begin: Ambient Lounge - L'Autre Jour (Rue Cyborg Mix).mp3
+Time: 331
+mtime: 1118300024
+song_end
+song_begin: Ambient Lounge - Rhythmbreeze.mp3
+Time: 381
+mtime: 1118300041
+song_end
+song_begin: Ambient Lounge - Since Then.mp3
+Time: 318
+mtime: 1118300048
+song_end
+song_begin: Ambient Lounge - Sofa Rockers (Richard Dorfmeister Remix).mp3
+Time: 276
+mtime: 1118300053
+song_end
+song_begin: Ambient Lounge - TimeBomb.mp3
+Time: 274
+mtime: 1118300058
+song_end
+song_begin: Ambient Lounge 2 (CD 1) - 06 - Superworld.mp3
+Time: 381
+mtime: 1118299926
+song_end
+song_begin: Ambient Lounge 2 (CD 1) - 07 - Ocean Drive 707.mp3
+Time: 270
+mtime: 1118299931
+song_end
+song_begin: Ambient Lounge 2 (CD 1) - 08 - Lately (Parachute).mp3
+Time: 331
+mtime: 1118299937
+song_end
+song_begin: Ambient Lounge 2 (CD 1) - 09 - Lemon Jelly - In The Bath.mp3
+Time: 390
+mtime: 1118299944
+song_end
+song_begin: Ambient Lounge 2 (CD 1) - 13 - Jaffa - Elevator (MAW Mix).mp3
+Time: 522
+mtime: 1118299969
+song_end
+song_begin: Ambient Lounge 2 (CD 1) - 14 - Terrence Parker - Detroit After Dark.mp3
+Time: 360
+mtime: 1118299974
+song_end
+song_begin: David Sanborn - This Masquerade.mP3
+Time: 346
+mtime: 1192389787
+song_end
+song_begin: Dennis Marcellino - Summertime.mP3
+Time: 274
+mtime: 1192389771
+song_end
+song_begin: Michael Lington - Harlem Nocturne.mP3
+Time: 288
+mtime: 1192389569
+song_end
+song_begin: 02-ten_madison_-_get_a_smile-upe.mp3
+Time: 468
+Artist: Ten Madison
+Title: Get A Smile
+Album: Dreams
+Track: 2
+Date: 2007
+Genre: Ambient
+mtime: 1194031059
+song_end
+song_begin: 01 Bloomfield - Mon Coeur.mp3
+Time: 356
+Artist: Bloomfield
+AlbumArtist: Various
+Title: Mon Coeur
+Album: Erotic Lounge - Secret Affairs (CD 2)
+Track: 01
+Date: 2006
+Genre: Lounge
+mtime: 1224696398
+song_end
+song_begin: 02 DJ Monique vs. Stephane Le Coque - You're Like An Angel.mp3
+Time: 1027
+Artist: DJ Monique vs. Stephane Le Coque
+AlbumArtist: Various
+Title: You're Like An Angel
+Album: Erotic Lounge - Secret Affairs (CD 2)
+Track: 02
+Date: 2006
+Genre: Lounge
+mtime: 1224696399
+song_end
+song_begin: 15 Hacienda - Data Love.mp3
+Time: 305
+Artist: Hacienda
+AlbumArtist: Various
+Title: Data Love
+Album: Erotic Lounge - Secret Affairs (CD 2)
+Track: 15
+Date: 2006
+Genre: Lounge
+mtime: 1224696383
+song_end
+song_begin: 01. Tosca - Honey [Spatone 1 Dub].mp3
+Time: 306
+Artist: Tosca
+AlbumArtist: Various Artists
+Title: Honey [Spatone 1 Dub]
+Album: Erotic Lounge Disc 1
+Track: 1
+Date: 2003
+Genre: Electronica & Dance
+Composer: R. Huber/Richard Dorfmeister
+mtime: 1224696308
+song_end
+song_begin: 02. Jaffa - Be Nude, Baby.mp3
+Time: 296
+Artist: Jaffa
+Title: Be Nude, Baby
+Album: Erotic Lounge Disc 1
+Track: 2
+Date: 2003
+Genre: Lounge
+mtime: 1224696321
+song_end
+playlist_begin: best.m3u
+mtime: 1284663904
+playlist_end
+end: Best
+directory: Dance
+mtime: 1321883095
+begin: Dance
+song_begin: Amloop - Caminhando E Cantando (Club Mix).mp3
+Time: 383
+Artist: Amloop
+Title: Caminhando E Cantando (Club Mix) [4clubbers.com.pl]
+mtime: 1321608554
+song_end
+song_begin: Chocolate Puma feat. Colonel Red - For Your Love 2011 (Original Mix).mp3
+Time: 376
+mtime: 1321603298
+song_end
+song_begin: Gigi De Martino feat Marisol - Siente la musa (dj superpippo remix).mp3
+Time: 465
+Title: YouTube        - Gigi De Martino feat Marisol - Siente la musa (dj superpippo remix)
+Track: ㄀
+Date: 2010
+mtime: 1321863250
+song_end
+song_begin: Luperz feat. BeeAnn - Shadows (Original Radio Edit).mp3
+Time: 193
+mtime: 1321606669
+song_end
+song_begin: Mark Fanciulli - The Tide (Joris Voorn Edit).mp3
+Time: 446
+mtime: 1321603052
+song_end
+song_begin: Ricky L ft. Mck - Born Again (Balearic Soul Party Mix).mp3
+Time: 509
+mtime: 1321600993
+song_end
+song_begin: Riva Starr - Ciao Manu Be Quick (Original Mix).mp3
+Time: 418
+Artist: Riva Starr
+Title: Ciao Manu Be Quick (Original Mix)
+Genre: House
+mtime: 1321882950
+song_end
+song_begin: Shana - Out (Vocal Mix).mp3
+Time: 391
+Title: Shana - Out (Vocal Mix)
+Genre: Other
+mtime: 1321601372
+song_end
+song_begin: Snatt & Vix feat - Alexandra Badoi - In My Eyes.mp3
+Time: 481
+mtime: 1321603199
+song_end
+song_begin: Splashfunk-Shake Da Booty Felipe-C Remix.mp3
+Time: 352
+Title: Splashfunk---Shake-Da-Booty-Felipe-C-Remix-Rupere-2010
+mtime: 1321606582
+song_end
+song_begin: TyDi Feat. Sarah Howells - Acting Crazy (Original Mix).mp3
+Time: 230
+mtime: 1321603105
+song_end
+song_begin: Tom Novy feat. Lima - Now Or Never (Lissat & Voltaxx Remix).mp3
+Time: 443
+Track: 01
+Genre: Electronic
+mtime: 1321600927
+song_end
+song_begin: Sander van Doorn - Koko.mp3
+Time: 190
+Artist: www.manomuzika.nkk.lt
+Track: 03/25
+Disc: 1/2
+mtime: 1321602993
+song_end
+song_begin: Emil Lassaria & F.Charm - Guantanamera (Extended Version).mp3
+Time: 364
+Artist: Emil Lassaria & F.Charm
+Title: Guantanamera (Extended Version) by dJ kTa
+Album: 9mm
+Track: 01/01
+Date: 2011
+Genre: House
+mtime: 1321616599
+song_end
+song_begin: Nicolas Jaar - Mi Mujer.mp3
+Time: 393
+Artist: By Zeno @ www.muzica123.net
+AlbumArtist: By Zeno @ www.muzica123.net
+Album: By Zeno @ www.muzica123.net
+Track: By Zeno
+Date: By Z
+Genre: By Zeno @ www.muzica123.net
+Composer: By Zeno @ www.muzica123.net
+Disc: By Zeno @ www.muzica123.net
+mtime: 1321601064
+song_end
+song_begin: dop - horny.mp3
+Time: 539
+Artist: Dop
+AlbumArtist: www.house-language.blogspot.com
+Title: Horny
+Album: Dein Verlangen
+Track: 3
+Date: 2009
+Genre: Techno
+Composer: www.house-language.blogspot.com
+mtime: 1321616859
+song_end
+song_begin: phunk-a-delic-rockin.mp3
+Time: 192
+Artist: Phunk
+Title: A-Delic-Rockin
+Album: Now Dance Autumn 06
+Date: 2006
+Genre: Dance
+mtime: 1321600778
+song_end
+song_begin: 04 Rabiosa (feat. El Cata) [Club Junkies Radio Remix].mp3
+Time: 208
+Artist: Shakira
+AlbumArtist: Shakira
+Title: Rabiosa (feat. El Cata) [Club Junkies Radio Remix]
+Album: Rabiosa (feat. El Cata)
+Track: 4/7
+Date: 2011
+Genre: Latin Pop
+Composer: Shakiloud
+Disc: 2/2
+mtime: 1321609260
+song_end
+song_begin: Intensa Music feat. 50 Cent - Get Right In Da Club ( Quino Garcia Mix ).mp3
+Time: 381
+Artist: Intensa Music feat. 50 Cent
+Title: Get Right In Da Club ( Quino Garcia Mix ) by Viber from WwW.Mp3Vip.Ro
+Album: by Viber from WwW.Mp3Vip.Ro
+Date: 2010
+Genre: Dance
+mtime: 1321603392
+song_end
+song_begin: Tom Novy - Now Or Never ( Lissat & Voltaxx Remix DRM ).mp3
+Time: 443
+Artist: www.djrobsonmichel.com
+AlbumArtist: www.djrobsonmichel.com
+Title: Tom Novy - Now Or Never ( Lissat & Voltaxx Remix DRM )
+Album: twitter.com/djrobsonmichel
+Genre: www.djrobsonmichel.com
+Disc: www.djrobsonmichel.com
+mtime: 1321616614
+song_end
+song_begin: Quick Jaxx - Hey Bill (Bang Bang) (Club Mix).mp3
+Time: 281
+AlbumArtist: 4clubbers.pl
+Album: www.Club-mp3.pl
+Date: 2011
+Composer: 4clubbers.pl
+mtime: 1321608616
+song_end
+song_begin: Michael Jackson - Hollywood Tonight (DJ Chuckie Remix Radio Edit).mp3
+Time: 234
+Artist: www.KlubowaMuza.net
+Title: www.KlubowaMuza.net
+Album: www.KlubowaMuza.net
+Date: www.
+Genre: www.KlubowaMuza.net
+mtime: 1321602749
+song_end
+song_begin: Tosch feat. Christina - Somewhere Over The Rainbow (Sean Finn Remix).mp3
+Time: 368
+Artist: Tosch feat. Christina
+AlbumArtist: www.clubkings.eu
+Title: Somewhere Over The Rainbow (Sean Finn Remix) www.clubkings.eu
+Album: www.clubkings.eu
+Date: 2011
+Genre: House
+Composer: www.clubkings.eu
+mtime: 1321602612
+song_end
+song_begin: JAMIE WOON - SHOULDA (SAMY CHELLY REMIX).mp3
+Time: 320
+Album: www.muzicanouablue.net
+Genre: Other
+mtime: 1321606170
+song_end
+song_begin: Shakedown & John Dahlback - Autumn At Night (Andrey Zenkoff Mash-Up).mp3
+Time: 276
+AlbumArtist: www.recordmix.ru
+Album: www.recordmix.ru
+Track: www.recordmix.ru/www.recordmix.ru
+Date: www.
+Genre: www.recordmix.ru
+Composer: www.recordmix.ru
+Disc: www.recordmix.ru/www.recordmix.ru
+mtime: 1321600774
+song_end
+end: Dance
+directory: new
+mtime: 1309714746
+begin: new
+song_begin: Justin Michael - Letting Go.Mp3
+Time: 237
+mtime: 1298222906
+song_end
+song_begin: Sak Noel - Loca People (La Gente Esta Muy Loca 2010).mp3
+Time: 288
+Artist: Sak Noel
+AlbumArtist: www.clubkings.eu
+Title: Loca People (La Gente Esta Muy Loca 2010)
+Date: 2010
+Genre: House
+Composer: www.clubkings.eu
+mtime: 1298224289
+song_end
+song_begin: The Shapeshifters - She Freaks (Original Mix) .mp3
+Time: 442
+mtime: 1298223767
+song_end
+song_begin: Tom Boxer feat. Catherine Cassidy - You (Extended).mp3
+Time: 284
+Genre: Blues
+mtime: 1298223400
+song_end
+end: new
+song_begin: Adrian Sina feat Beverlei Brown     I Can   t Live Without You  Original Version .mp3
+Time: 200
+mtime: 1299443597
+song_end
+song_begin: Angie B - Soundwaves.mp3
+Time: 425
+Date: 2010
+Genre: Dance
+mtime: 1295376406
+song_end
+song_begin: Chris Willis & David Guetta - My Freedom.mp3
+Time: 427
+mtime: 1295372127
+song_end
+song_begin: Coqui Selection - I Love Jimmy Somersby Original Mix.mp3
+Time: 435
+Title: Coqui Selection - I Love Jimmy Somersby Original Mix
+Genre: Blues
+mtime: 1299444152
+song_end
+song_begin: Coqui Selection - I Love Jimmy Somersby Original Mix2.mp3
+Time: 435
+Title: Coqui Selection - I Love Jimmy Somersby Original Mix
+Genre: Blues
+mtime: 1298499133
+song_end
+song_begin: Darius & Finlay feat. Nicco - Destination.mp3
+Time: 223
+mtime: 1295378924
+song_end
+song_begin: Dj Nil & Miss`N & Turbo B - The Power ( Club Mix ).mp3
+Time: 357
+mtime: 1295372308
+song_end
+song_begin: Dj.Dex ft.Kathy - It Just Wont Do (Extended Version).mp3
+Time: 432
+Artist: Dj.Dex ft.Kathy
+Title: It Just Wont Do (Extended Version)
+Date: 2009
+Genre: House
+mtime: 1295375504
+song_end
+song_begin: Emmie Rush - Beautiful Voices Mix.mp3
+Time: 3350
+mtime: 1297590140
+song_end
+song_begin: Enigma - Principles of Lust BFInd Love C Sadeness Reprise.mp3
+Time: 461
+mtime: 1298491809
+song_end
+song_begin: Faithless - Insomnia 2010 (Unreleased Original Mix).Mp3
+Time: 461
+mtime: 1295371810
+song_end
+song_begin: Little Bit.mp3
+Time: 232
+mtime: 1299443834
+song_end
+song_begin: Loko - I'm Ready.mp3
+Time: 401
+Artist: Loko
+Title: I'm Ready (Original Mix)
+Date: 2010
+Genre: House
+mtime: 1294331394
+song_end
+song_begin: Radio 538: Gotye - Somebody That I Used To Know (Jeroen Nieuwenhuize remix).mp3
+Time: 250
+mtime: 1331926842
+song_end
+song_begin: Stjepan Hauser and Luka Sulic - Smooth Criminal.mp3
+Time: 245
+mtime: 1300641494
+song_end
+song_begin: Tudor Gheorghe - Au Innebunit Salcamii.mp3
+Time: 166
+mtime: 1300279279
+song_end
+song_begin: Vali Barbulescu - Addicted 2010 (David Deejay Remix).mp3
+Time: 277
+mtime: 1295373757
+song_end
+song_begin: [www.fisierulmeu.ro] Mario da Ragnio and Sin Plomo - It`s you (vocal club mix).mp3
+Time: 471
+Artist: Mario Da Ragnio and Sin Plomo
+Title: Its You (Vocal Club Mix)
+Album: 15 Years 15 Tracks WEB
+Track: 4
+Date: 2010
+Genre: House
+mtime: 1301917527
+song_end
+song_begin: First State Feat Relyk - Cross The Line (Extended Mix).mp3
+Time: 545
+Artist: First State Feat Relyk
+AlbumArtist: Album Of LâmTungTăng
+Title: Cross The Line - Extended Mix
+Album: Album Of LâmTungTăng
+Track: Album Of LâmTungTăng
+Date: 2010
+Genre: Album Of LâmTungTăng
+Composer: Album Of LâmTungTăng
+Performer: Album Of LâmTungTăng
+Performer: Album Of LâmTungTăng
+Disc: Album Of LâmTungTăng
+mtime: 1295373021
+song_end
+song_begin: Dada feat. Obernik & Harris - Stereo Flo.mp3
+Time: 380
+Album: Club Top
+Track: 35
+Genre: Other
+mtime: 1294331567
+song_end
+song_begin: 18 - Usher - My Boo feat. Alicia Keys.flac
+Time: 224
+Artist: Usher
+Title: My Boo feat. Alicia Keys
+Album: Confessions (Special Edition)
+Date: 2004
+Track: 18
+Genre: R&B
+mtime: 1296935052
+song_end
+song_begin: Peter Luts - The Rain.mp3
+Time: 198
+Album: Dance Beach Party
+Date: 2010
+Date: 2010
+mtime: 1295374357
+song_end
+song_begin: The Chemical Brothers - Dissolve (Bloody Beetroots Remix).mp3
+Time: 200
+AlbumArtist: Welcome To DJ_Kenny Tí (0975625070)
+Title: The Chemical Brothers - Dissolve (Bloody Beetroots Remix)
+Album: Electro
+Date: 2010
+Composer: Welcome To DJ_Kenny Tí (0975625070)
+Disc: Welcome To DJ_Kenny Tí (0975625070)
+mtime: 1295373901
+song_end
+song_begin: Yiruma - River Flows In You.mp3
+Time: 189
+Artist: Yiruma
+AlbumArtist: Yiruma
+Title: River Flows In You
+Album: First Love (Repackage) [RERLS]
+Track: 4
+Date: 2005
+Genre: Instrumental
+Composer: Yiruma
+mtime: 1299443958
+song_end
+song_begin: 01 - Fuori dal mondo.mp3
+Time: 323
+Artist: Ludovico Einaudi
+Title: Fuori dal mondo
+Album: Fuori dal mondo
+Track: 01
+Date: 2001
+Genre: Soundtrack
+mtime: 1206361356
+song_end
+song_begin: Antoine Clamaran feat. Soraya Arnelas - Live your dreams (Radio mix).mp3
+Time: 198
+Artist: Antoine Clamaran feat. Soraya Arnelas
+AlbumArtist: Antoine Clamaran feat. Soraya Arnelas
+Title: Live your dreams (Radio mix)
+Album: Skladaneczka vol 190 (dance) [mp3@192]
+Date: 2010
+Genre: Dance
+mtime: 1295372530
+song_end
+song_begin: Martin Solveig - Hello.mp3
+Time: 286
+AlbumArtist: by www.ALLMuzica.COM
+Album: by www.ALLMuzica.COM
+Composer: by www.ALLMuzica.COM
+mtime: 1295374651
+song_end
+song_begin: Andre Crom, Martin Dawson - In The City (Original Mix) by www.RadioFLy.ws.mp3
+Time: 377
+Album: www.RadioFLy.ws
+Date: 2011
+mtime: 1297844001
+song_end
+song_begin: Chris Lattner - 93 Feet East (Original Mix) by www.RadioFLy.ws.mp3
+Time: 346
+Album: www.RadioFLy.ws
+mtime: 1297843992
+song_end
+song_begin: jerryco-un milion de zambete.mp3
+Time: 239
+Album: www.RadioFLy.ws
+mtime: 1299444141
+song_end
+song_begin: Arty - Zara 2011 (Original Mix) by www.RadioFLy.ws.mp3
+Time: 445
+Artist: Arty
+Title: Zara (Original Mix) by www.RadioFLy.ws
+Album: www.RadioFLy.ws
+Track: 1
+Date: 2011
+Genre: Trance
+mtime: 1297844015
+song_end

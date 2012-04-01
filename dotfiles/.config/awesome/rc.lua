@@ -12,8 +12,8 @@ require("mpd")
 require("lfs")
 
 -- Themes
-beautiful.init("/home/sergiu/.config/awesome/theme.lua")
---beautiful.init("/home/sergiu/.config/awesome/theme2.lua")
+--beautiful.init("/home/sergiu/.config/awesome/theme.lua")
+beautiful.init("/home/sergiu/.config/awesome/theme2.lua")
 
 -- Default apps
 exec = awful.util.spawn
@@ -89,25 +89,29 @@ globalkeys = awful.util.table.join(
 	-- Layout manipulation
     awful.key({ modkey, "Shift" }, "Left",  function () awful.client.swap.byidx( -1) end),
     awful.key({ modkey, "Shift" }, "Right", function () awful.client.swap.byidx( 1)  end),
-    awful.key({ modkey,         }, "u",     awful.client.urgent.jumpto),
+    awful.key({ modkey,         }, "o",     awful.client.urgent.jumpto),
    
 	-- Program shortcuts
-    awful.key({ modkey, }, "t", function () exec(terminal, false) end),
+    awful.key({ modkey, }, "t", function () exec("radiotray", false) end),
+    awful.key({ modkey, }, "x", function () exec(terminal) end),
     awful.key({ modkey  }, "r", function () awful.util.spawn("dmenu_run") end),
     awful.key({ modkey, }, "w", function () exec(browser) end),
     awful.key({ modkey, }, "f", function () exec(cli_fm) end),
     awful.key({ modkey, }, "v", function () exec(media_player) end),
+    awful.key({ modkey, }, "p", function () exec("pidgin", false) end),
 
-	--    awful.key({ modkey, }, "n", function () exec(music_player) end),
-    awful.key({ modkey, }, "h", function () exec(system_monitor, false) end),
+	--awful.key({ modkey, }, "n", function () exec(music_player) end),
+		awful.key({ modkey, }, "u", function () exec("urxvtc -e bash -c 'sudo pacman-color -Syu'") end),
+		awful.key({ modkey, }, "y", function () exec("urxvtc -e bash -c 'sudo yaourt -Syua'") end),
+    awful.key({ modkey, }, "h", function () exec(system_monitor) end),
     awful.key({ modkey, }, "e", function () exec(gui_editor) end),
-    awful.key({ modkey, }, "x", function () exec(terminal) end),
     awful.key({ modkey, }, "n", function () exec(music_player, false) end),
     awful.key({ modkey, }, "Return", function () exec(smallterminal, false) end),
     awful.key({ modkey, altkey }, "f", function () exec(gui_fm) end),
     awful.key({ modkey, altkey }, "n", function () exec("nitrogen --sort=alpha") end),
     awful.key({ modkey, altkey }, "a", function () exec(terminal .. " -e alsamixer", false) end),
-    awful.key({ }, "XF86PowerOff", function () exec("sudo pm-hibernate", false) end),
+    awful.key({ }, "XF86PowerOff", function () exec("sudo poweroff", false) end),
+    -- awful.key({ }, "XF86PowerOff", function () exec("sudo pm-hibernate", false) end),
 
 	-- Volume Control
     awful.key({ }, "XF86AudioRaiseVolume", function () volumecfg.up() end),
@@ -233,14 +237,17 @@ awful.rules.rules = {
                      keys = clientkeys,
                      buttons = clientbuttons,
 	     	         size_hints_honor = true, },},
-	{ rule = { class = 'URxvt' }, properties = { size_hints_honor = false } },
-    { rule_any = { class = { "MPlayer", "vlc", "sxiv", "Viewnior" }, },         
+	{ rule = { class = 'URxvt' }, 
+			properties = { size_hints_honor = false }, {tag = tags [1][1] } },
+  { rule = { class = 'URxvt' }, 
+			properties = { tag = tags [1][1] } },
+	{ rule_any = { class = { "MPlayer", "vlc", "sxiv", "Viewnior" }, },         
 	    properties = { floating = true },},
 	{ rule = { class = "Firefox" },
 	    properties = { tag = tags[1][2] } },
 	{ rule = { class = "Pidgin" },
 	    properties = { tag = tags[1][3] } },
-	{ rule = { class = "gui_editor" },
+	{ rule = { class = "Medit" },
 	    properties = { tag = tags[1][4] } },
   { rule = { class = "Thunar" },
 	    properties = { tag = tags[1][4] } },
