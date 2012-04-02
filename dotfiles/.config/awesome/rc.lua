@@ -1,3 +1,4 @@
+-- {{{ Load libraries
 require("awful")
 require("awful.rules")
 require("awful.autofocus")
@@ -10,12 +11,14 @@ require("widgets")
 require("volume")
 require("mpd")
 require("lfs")
+-- }}}
 
--- Themes
+-- {{{ Themes
 --beautiful.init("/home/sergiu/.config/awesome/theme.lua")
 beautiful.init("/home/sergiu/.config/awesome/theme2.lua")
+-- }}}
 
--- Default apps
+-- {{{ Default apps
 exec = awful.util.spawn
 sexec = awful.util.spawn_with_shell
 terminal = "urxvtc"
@@ -29,38 +32,46 @@ media_player = "vlc"
 music_player = terminal .. " -e ncmpcpp"
 smallterminal = terminal .. ' -title "SmallTerm"  -geometry 90x7-200-100'
 gtk_settings = "lxappearance"
+-- }}}
 
--- Default modkey.
+-- {{{ Default modkey.
 modkey = "Mod4"
 altkey = "Mod1"
+-- }}}
 
--- Table of layouts to cover with awful.layout.inc, order matters.
+-- {{{ Table of layouts to cover with awful.layout.inc, order matters.
 layouts =
 {
-    awful.layout.suit.tile,					--1
-    awful.layout.suit.tile.bottom,	--2
-    awful.layout.suit.fair,					--3
-    awful.layout.suit.tile.top,			--4
-    awful.layout.suit.spiral,				--5
-    awful.layout.suit.magnifier,		--6
-    awful.layout.suit.max,					--7
-    awful.layout.suit.floating			--8
+    awful.layout.suit.tile,							--1
+    awful.layout.suit.tile.bottom,			--2
+    awful.layout.suit.fair,							--3
+    awful.layout.suit.tile.top,					--4
+    awful.layout.suit.spiral,						--5
+    awful.layout.suit.magnifier,				--6
+    awful.layout.suit.max,							--7
+    awful.layout.suit.floating,					--8
+		awful.layout.suit.tile.left,				--9
+		awful.layout.suit.fair.horizontal, 	--10
+		awful.layout.suit.spiral.dwindle  	--12	
 }
+-- }}}
 
--- Define a tag table which hold all screen tags.
+-- {{{ Define a tag table which hold all screen tags.
 tags = {}
 for s = 1, screen.count() do
     tags[s] = awful.tag({ "term", "web", "chat", "misc" }, s, 
-		{layouts[1], layouts[7], layouts[6], layouts[1]})
+		{layouts[1], layouts[7], layouts[3], layouts[2]})
 end
+-- }}}
 
--- Mouse bindings
+-- {{{ Mouse bindings
 root.buttons(awful.util.table.join(
     awful.button({ }, 3, function () mymainmenu:toggle(desktopmenu_args) end),
     awful.button({ }, 5, awful.tag.viewnext),
     awful.button({ }, 4, awful.tag.viewprev)))
-
---/// GLOBAL KEYS BINDINGS
+-- }}}
+		
+-- {{{ GLOBAL KEYS BINDINGS
 globalkeys = awful.util.table.join(
 	-- Focus
     awful.key({ modkey }, "Left",
@@ -179,16 +190,17 @@ clientkeys = awful.util.table.join(
     awful.key({ altkey, }, "#83", function (c) awful.client.moveresize( 0, 0,-30, 0 ) end), 
     awful.key({ altkey, }, "#85", function (c) awful.client.moveresize( 0, 0, 30, 0 ) end) 
 )
---///
+-- }}}
 
--- Compute the maximum number of digit we need, limited to 9
+-- {{{ Compute the maximum number of digit we need, limited to 9
 keynumber = 5
 --[[keynumber = 0
 for s = 1, screen.count() do
    keynumber = math.min(9, math.max(#tags[s], keynumber));
 end]]
+-- }}}
 
--- Bind all key numbers to tags.
+-- {{{ Bind all key numbers to tags.
 for i = 1, keynumber do
     globalkeys = awful.util.table.join(globalkeys,
         awful.key({ modkey }, "#" .. i + 9,
@@ -223,11 +235,13 @@ clientbuttons = awful.util.table.join(
     awful.button({ }, 1, function (c) client.focus = c; c:raise() end),
     awful.button({ modkey }, 1, awful.mouse.client.move),
     awful.button({ modkey }, 3, awful.mouse.client.resize))
+-- }}}
 
--- Set keys
+-- {{{ Set keys
 root.keys(globalkeys)
+-- }}}
 
--- Rules
+-- {{{ Rules
 awful.rules.rules = {
     -- All clients will match this rule.
     { rule = { },
@@ -238,7 +252,7 @@ awful.rules.rules = {
                      buttons = clientbuttons,
 	     	         size_hints_honor = true, },},
 	{ rule = { class = 'URxvt' }, 
-			properties = { size_hints_honor = false }, {tag = tags [1][1] } },
+			properties = { size_hints_honor = false }, },
   { rule = { class = 'URxvt' }, 
 			properties = { tag = tags [1][1] } },
 	{ rule_any = { class = { "MPlayer", "vlc", "sxiv", "Viewnior" }, },         
@@ -254,8 +268,9 @@ awful.rules.rules = {
 	{ rule = { name = "SmallTerm" }, 
 		  properties = { floating = true, ontop = true, },},
 }
+-- }}}
 
--- Signals
+-- {{{ Signals
 -- Signal function to execute when a new client appears.
 client.add_signal("manage", function (c, startup)
     -- Add a titlebar
@@ -283,9 +298,11 @@ client.add_signal("manage", function (c, startup)
 end)
 client.add_signal("focus",   function(c) c.border_color = beautiful.border_focus end)
 client.add_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
+-- }}}
 
---// Set cursor theme //--
+-- {{{ Set cursor theme
 exec("xsetroot -cursor_name left_ptr", true)
+-- }}}
 
 -- {{{ Run programm once
 local function processwalker()
@@ -320,8 +337,6 @@ local function run_once(process, cmd)
    end
    return awful.util.spawn(cmd or process)
 end
--- }}}
-
 -- Usage Example
 ---run_once("firefox")
 ---run_once("dropboxd")
@@ -330,3 +345,4 @@ end
 run_once("redshiftgui")
 run_once("urxvtd")
 run_once("dropboxd")
+-- }}}

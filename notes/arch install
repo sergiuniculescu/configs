@@ -589,12 +589,13 @@ awmtt start -D 1 -C $HOME/.config/awesome/rc.lua.test -S 1024x640  # default sta
 awmtt -t change zenburn  # change theme
 
 # Package needed #
-pacman -s urxvt urxvt-url-select
+pacman -s urxvt urxvt-url-select urxvt-vtwheel
 pacman -S luafilesystem
 pacman -S lxappearance
 pacman -S dmenu
 pacman -S mpd ncmpcpp mpc
 pacman -S nitrogen
+pacman -S sxiv
 
 
 ### INSTALL XBMC ###
