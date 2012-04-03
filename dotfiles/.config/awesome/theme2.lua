@@ -1,6 +1,6 @@
 --///  Main
 theme = {"winter"}
-theme.wallpaper_cmd = { "awsetbg -a /home/sergiu/.config/awesome/wallpapers/combat-map-wallpaper.jpg" }
+theme.wallpaper_cmd = { "awsetbg -a /home/sergiu/.config/awesome/wallpapers/black-cat-wallpaper-2.jpg" }
 --//
 
 --/// Styles

@@ -22,6 +22,7 @@ beautiful.init("/home/sergiu/.config/awesome/theme2.lua")
 exec = awful.util.spawn
 sexec = awful.util.spawn_with_shell
 terminal = "urxvtc"
+terminal2 = "xterm"
 cli_editor = "vim"
 gui_editor = "medit"
 browser = "firefox"
@@ -30,7 +31,8 @@ cli_fm = terminal .. " -g 100x50 -e ranger"
 system_monitor = terminal .. " -e htop"
 media_player = "vlc"
 music_player = terminal .. " -e ncmpcpp"
-smallterminal = terminal .. ' -title "SmallTerm"  -geometry 90x7-200-100'
+smallterminal = terminal2 .. ' -title "SmallTerm"  -geometry 90x7-200-100'
+--smallterminal = "xterm -geometry 90x7-200-100"
 gtk_settings = "lxappearance"
 -- }}}
 

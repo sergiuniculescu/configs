@@ -6,6 +6,52 @@ Xft.rgba:       rgb
 Xft.hinting:    true
 Xft.hintstyle:  hintslight
 
+
+! xterm ---------------------------------------------------------------------
+
+xterm*geometry: 80x25
+xterm*faceName: xft:Dejavu Sans Mono:pixelsize=12:antialias=true
+xterm*dynamicColors: true
+xterm*utf8: 2
+xterm*eightBitInput: true
+xterm*saveLines: 512
+xterm*scrollTtyKeypress: true
+xterm*scrollTtyOutput: false
+xterm*scrollBar: true
+xterm*rightScrollBar: true
+xterm*loginShell: true
+xterm*jumpScroll: true
+xterm*multiScroll: true
+xterm*toolBar: false
+
+xterm*background: #000000
+xterm*foreground: #AAAAAA
+!black
+XTerm*color0: #000000
+XTerm*color8: #555555
+!red
+XTerm*color1: #AA0000
+XTerm*color9: #FF5555
+!green
+XTerm*color2: #00AA00
+XTerm*color10: #55FF55
+!brown/yellow
+XTerm*color3: #AA5500
+XTerm*color11: #FFFF55
+!blue
+XTerm*color4: #0000AA
+XTerm*color12: #5555FF
+!magenta
+XTerm*color5: #AA00AA
+XTerm*color13: #FF55FF
+!cyan
+XTerm*color6: #00AAAA
+XTerm*color14: #55FFFF
+!white
+XTerm*color7: #AAAAAA
+XTerm*color15: #FFFFFF
+
+
 ! urxvt ---------------------------------------------------------------------
 
 
@@ -16,7 +62,7 @@ Xft.hintstyle:  hintslight
 
 
 ! Fonts:
-URxvt*font:xft:monospace:pixelsize=12
+URxvt*font:xft:Dejavu Sans Mono:pixelsize=12
 !URxvt*font:xft:monospace:size=10
 
 

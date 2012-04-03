@@ -1932,6 +1932,12 @@ printenv  # print env.
 
 
 
+### Hardware information ###
+
+cat /proc/meminfo   # RAM
+cat /proc/meminfo | head -n 1   # only RAM
+cat /proc/cpuinfo   # CPU
+
 
 
 
