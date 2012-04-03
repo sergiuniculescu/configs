@@ -38,7 +38,7 @@ export HISTSIZE=10000
 
 
 # alias essentials:
-alias e=exit
+alias q=exit
 alias p=pacman-color
 alias sp="sudo pacman-color"
 alias y=yaourt
