@@ -597,6 +597,17 @@ pacman -S mpd ncmpcpp mpc
 pacman -S nitrogen
 pacman -S sxiv
 
+# Wallpapers #
+To rotate the wallpapers randomly, just comment the 'wallpaper_cmd' line from rc.lua, and add a script into your .xinitrc with the codes below:
+________________
+while true;
+do
+  awsetbg -r <path/to/the/directory/of/your/wallpapers>
+  sleep 15m
+done &
+________________
+
+
 
 ### INSTALL XBMC ###
 

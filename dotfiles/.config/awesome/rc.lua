@@ -29,7 +29,7 @@ browser = "firefox"
 gui_fm = "Thunar"
 cli_fm = terminal .. " -g 100x50 -e ranger"
 system_monitor = terminal .. " -e htop"
-media_player = "vlc"
+media_player = "smplayer"
 music_player = terminal .. " -e ncmpcpp"
 smallterminal = terminal2 .. ' -title "SmallTerm"  -geometry 90x7-200-100'
 --smallterminal = "xterm -geometry 90x7-200-100"
@@ -105,7 +105,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,         }, "o",     awful.client.urgent.jumpto),
    
 	-- Program shortcuts
-    awful.key({ modkey, }, "t", function () exec("radiotray", false) end),
+    awful.key({ modkey, }, "t", function () exec("tv-maxe", false) end),
     awful.key({ modkey, }, "x", function () exec(terminal) end),
     awful.key({ modkey  }, "r", function () awful.util.spawn("dmenu_run") end),
     awful.key({ modkey, }, "w", function () exec(browser) end),
@@ -125,7 +125,8 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, altkey }, "a", function () exec(terminal .. " -e alsamixer", false) end),
     awful.key({ }, "XF86PowerOff", function () exec("sudo poweroff", false) end),
     -- awful.key({ }, "XF86PowerOff", function () exec("sudo pm-hibernate", false) end),
-
+		awful.key({ }, "Print", function () awful.util.spawn("scrot -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'") end),
+		
 	-- Volume Control
     awful.key({ }, "XF86AudioRaiseVolume", function () volumecfg.up() end),
     awful.key({ }, "XF86AudioLowerVolume", function () volumecfg.down() end),
@@ -252,23 +253,22 @@ awful.rules.rules = {
                      focus = true,
                      keys = clientkeys,
                      buttons = clientbuttons,
-	     	         size_hints_honor = true, },},
+	     	         size_hints_honor = true }, },
 	{ rule = { class = 'URxvt' }, 
-			properties = { size_hints_honor = false }, },
-  { rule = { class = 'URxvt' }, 
-			properties = { tag = tags [1][1] } },
-	{ rule_any = { class = { "MPlayer", "vlc", "sxiv", "Viewnior" }, },         
-	    properties = { floating = true },},
+			properties = { size_hints_honor = false, tag = tags [1][1] }, },
 	{ rule = { class = "Firefox" },
-	    properties = { tag = tags[1][2] } },
+	    properties = { tag = tags[1][2] }, },
 	{ rule = { class = "Pidgin" },
-	    properties = { tag = tags[1][3] } },
-	{ rule = { class = "Medit" },
-	    properties = { tag = tags[1][4] } },
-  { rule = { class = "Thunar" },
-	    properties = { tag = tags[1][4] } },
+	    properties = { tag = tags[1][3] }, },
+	{ rule = { class = "vlc" },
+	    properties = { tag = tags[1][4] }, },
+	{ rule_any = { class = { "Thunar", "Tv-maxe" }, },
+	    properties = { tag = tags[1][4] }, },
 	{ rule = { name = "SmallTerm" }, 
-		  properties = { floating = true, ontop = true, },},
+		  properties = { floating = true, ontop = true }, },
+	{ rule_any = { class = { "MPlayer", "Smplayer", "sxiv", "feh", "Viewnior" }, },         
+	    properties = { floating = true }, },
+
 }
 -- }}}
 
