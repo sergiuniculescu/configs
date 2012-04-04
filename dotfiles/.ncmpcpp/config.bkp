@@ -1,112 +1,96 @@
-mpd_music_dir = "/home/sergiu/Music"
-user_interface = "alternative" (classic/alternative)
-song_columns_list_format = "(22)[blue]{a} (7)[green]{n} (30)[white]{t} (29)[cyan]{b} (5)[blue]{y} (7)[white]{l}"
-playlist_disable_highlight_delay = "0"
-song_list_format = "{$8(%l)$9 }{%a - }{%t}|{$8%f$9}"
-song_library_format = "{%n_}{%t}|{%f}"
-media_library_album_format = "{(%y) }%b"
-tag_editor_album_format = "{(%y) }%b"
-browser_playlist_prefix = "$7playlist$9 "
-selected_item_prefix = "$8"
-selected_item_suffix = "$9"
-
-#visualizer_fifo_path = "/tmp/mpd.fifo"
-#visualizer_output_name = "fifo"
-#visualizer_sync_interval = "1"
-##visualizer_type = "wave" (spectrum/wave)
-#visualizer_type = "spectrum" (spectrum/wave)
-
-#song_status_format = "{(%l) }{%a - }{%t}|{%f}"
-#song_window_title_format = "{%a - }{%t}|{%f}"
-
-playlist_display_mode = "columns"
-browser_display_mode = "columns"
-#search_engine_display_mode = "classic" (classic/columns)
-incremental_seeking = "yes"
-#seek_time = "1"
-autocenter_mode = "yes"
-#repeat_one_mode = "no"
-#default_place_to_search_in = "database" (database/playlist)
-#media_library_left_column = "a" (possible values: a,y,g,c,p, legend above)
-#default_find_mode = "wrapped" (wrapped/normal)
-#default_space_mode = "add" (add/select)
-#default_tag_editor_left_col = "albums" (albums/dirs)
-#default_tag_editor_pattern = "%n - %t"
-header_visibility = "yes"
-statusbar_visibility = "yes"
-fancy_scrolling = "yes"
-follow_now_playing_lyrics = "yes"
-#ncmpc_like_songs_adding = "no" (enabled - add/remove, disabled - always add)
-display_screens_numbers_on_start = "yes"
-#clock_display_seconds = "no"
-ignore_leading_the = "yes"
-#enable_window_title = "yes"
-
-## %l - length
-## %f - short filename
-## %F - full filename
-## %a - artist
-## %t - title
-## %b - album
-## %y - year
-## %n - track number
-## %g - genre
-## %c - composer
-## %p - performer
-## %d - disc
-## %C - comment
-## %r - begin right align
+####################################################
+## this is example configuration file, copy it to ##
+## ~/.ncmpcpp/config and set up your preferences  ##
+####################################################
+#
+##### directories ######
 ##
-## you can also put them in { } and then it will be displayed
-## only if all requested values are available and/or define alternate
-## value with { }|{ } eg. {%a - %t}|{%f}
-##
-## text can also have different color than the main window has,
-## eg. if you want length to be green, write $3%l$9
-##
-## available values:
-##
-## - 0 - default window color
-## - 1 - black
-## - 2 - red
-## - 4 - green
-## - 4 - yellow
-## - 5 - blue
-## - 6 - magenta
-## - 7 - cyan
-## - 8 - white
-## - 9 - end of current color
-##
-## Note: colors can be nested.
-##
-
-
-##### lyrics support #####
-##
-## supported lyrics databases:
-##
-## - 1 - lyricwiki.org
-## - 2 - lyricsplugin.com
+## Directory for storing ncmpcpp related files.
+## Changing it is useful if you want to store
+## everything somewhere else and provide command
+## line setting for alternative location to config
+## file which defines that while launching ncmpcpp.
 ##
 #
-lyrics_database = "1"
-
-colors_enabled = "yes"
-empty_tag_color = "white"
-header_window_color = "white"
-volume_color = "white"
-state_line_color = "blue"
-state_flags_color = "blue"
-main_window_color = "blue"
-color1 = "blue"
-color2 = "cyan"
-active_column_color = "white"
-main_window_highlight_color = "blue"
-progressbar_color = "white"
-statusbar_color = "white"
-window_border_color = "white"
-active_window_border = "magenta"
-
+ncmpcpp_directory = "~/.ncmpcpp"
+#
+##
+## Directory for storing downloaded lyrics. It
+## defaults to ~/.lyrics since other MPD clients
+## (eg. ncmpc) also use that location.
+##
+#
+#lyrics_directory = "~/.lyrics"
+#
+##### connection settings #####
+#
+## set it in order to make tag editor and renaming files work properly
+#
+mpd_host = "127.0.0.1"
+#
+mpd_port = "6600"
+#
+mpd_music_dir = "/home/sergiu/Music/"
+#
+mpd_connection_timeout = "5"
+#
+mpd_crossfade_time = "10"
+#
+mpd_communication_mode = "notifications" (polling/notifications)
+#
+##### music visualizer #####
+##
+## Note: In order to make music visualizer work you'll
+## need to use mpd fifo output, whose format parameter
+## has to be set to 44100:16:1 for mono visualization
+## or 44100:16:2 for stereo visualization. Example
+## configuration (it has to be put into mpd.conf):
+##
+## audio_output {
+##        type            "fifo"
+##        name            "My FIFO"
+##        path            "/tmp/mpd.fifo"
+##        format          "44100:16:2"
+## }
+##
+#
+##
+## If you set format to 44100:16:2, make it 'yes'.
+##
+#
+#visualizer_in_stereo = "no"
+#
+#visualizer_fifo_path = ""
+#
+##
+## Note: Below parameter is needed for ncmpcpp
+## to determine which output provides data for
+## visualizer and thus allow syncing between
+## visualization and sound as currently there
+## are some problems with it.
+##
+#
+#visualizer_output_name = ""
+#
+##
+## Note: Below parameter defines how often ncmpcpp
+## has to "synchronize" visualizer and audio outputs.
+## 30 seconds is optimal value, but if you experience
+## synchronization problems, set it to lower value.
+## Keep in mind that sane values start with >=10.
+##
+#
+#visualizer_sync_interval = "30"
+#
+##
+## Note: To enable spectrum frequency visualization
+## you need to compile ncmpcpp with fftw3 support.
+##
+#
+#visualizer_type = "wave" (spectrum/wave)
+#
+#visualizer_look = "◆│"
+#
 ##### system encoding #####
 ##
 ## ncmpcpp should detect your charset encoding
@@ -187,8 +171,11 @@ active_window_border = "magenta"
 ##
 #
 #song_list_format = "{%a - }{%t}|{$8%f$9}$R{$3(%l)$9}"
+#
 #song_status_format = "{{%a{ \"%b\"{ (%y)}} - }{%t}}|{%f}"
+#
 #song_library_format = "{%n - }{%t}|{%f}"
+#
 #tag_editor_album_format = "{(%y) }%b"
 #
 ##
@@ -256,15 +243,15 @@ active_window_border = "magenta"
 ## You can also:
 ##
 ## - give a column custom name by putting it after attributes,
-## separated with character ':', e.g. {lr:Length} gives you
-## right aligned column of lengths named "Length".
+##   separated with character ':', e.g. {lr:Length} gives you
+##   right aligned column of lengths named "Length".
 ##
 ## - define sequence of tags, that have to be displayed in case
-## predecessor is empty in a way similar to the one in classic
-## song format, i.e. using '|' character, e.g. {a|c|p:Owner}
-## creates column named "Owner" that tries to display artist
-## tag and then composer and performer if previous ones are
-## not available.
+##   predecessor is empty in a way similar to the one in classic
+##   song format, i.e. using '|' character, e.g. {a|c|p:Owner}
+##   creates column named "Owner" that tries to display artist
+##   tag and then composer and performer if previous ones are
+##   not available.
 ##
 #
 #song_columns_list_format = "(7f)[green]{l} (25)[cyan]{a} (40)[]{t|f} (30)[red]{b}"
@@ -292,6 +279,8 @@ active_window_border = "magenta"
 #
 #search_engine_display_mode = "classic" (classic/columns)
 #
+#playlist_editor_display_mode = "classic" (classic/columns)
+#
 #discard_colors_if_item_is_selected = "yes"
 #
 #incremental_seeking = "yes"
@@ -310,6 +299,7 @@ active_window_border = "magenta"
 #
 #default_place_to_search_in = "database" (database/playlist)
 #
+#user_interface = "classic" (classic/alternative)
 #
 #media_library_left_column = "a" (possible values: a,y,g,c,p, legend above)
 #
@@ -336,6 +326,8 @@ active_window_border = "magenta"
 #lines_scrolled = "2"
 #
 #follow_now_playing_lyrics = "no"
+#
+#fetch_lyrics_for_current_song_in_background = "no"
 #
 #store_lyrics_in_song_dir = "no"
 #
@@ -380,6 +372,15 @@ active_window_border = "magenta"
 #screen_switcher_mode = "sequence: 2 -> 3"
 #
 ##
+## Default width of locked screen (in %).
+## Acceptable values are from 20 to 80.
+##
+#
+#locked_screen_width_part = "50"
+#
+#ask_for_locked_screen_width_part = "yes"
+#
+##
 ## Note: You can define startup screen for ncmpcpp
 ## by choosing screen number from the list above.
 ##
@@ -393,7 +394,7 @@ active_window_border = "magenta"
 #
 #display_volume_level = "yes"
 #
-display_bitrate = "yes"
+#display_bitrate = "no"
 #
 #display_remaining_time = "no"
 #
@@ -408,7 +409,7 @@ display_bitrate = "yes"
 #
 #block_search_constraints_change_if_items_found = "yes"
 #
-mouse_support = "no"
+#mouse_support = "yes"
 #
 #mouse_list_scroll_whole_page = "yes"
 #
@@ -417,6 +418,8 @@ mouse_support = "no"
 #tag_editor_extended_numeration = "no"
 #
 #media_library_display_date = "yes"
+#
+#media_library_display_empty_tag = "yes"
 #
 #media_library_disable_two_column_mode = "no"
 #
@@ -428,10 +431,10 @@ mouse_support = "no"
 ##
 ## - 1 - use mpd built-in searching (no regexes, pattern matching)
 ## - 2 - use ncmpcpp searching (pattern matching with support for regexes,
-## but if your mpd is on a remote machine, downloading big database
-## to process it can take a while
+##       but if your mpd is on a remote machine, downloading big database
+##       to process it can take a while
 ## - 3 - match only exact values (this mode uses mpd function for searching
-## in database and local one for searching in current playlist)
+##       in database and local one for searching in current playlist)
 ##
 #
 #search_engine_default_search_mode = "1"
