@@ -29,7 +29,7 @@ browser = "firefox"
 gui_fm = "Thunar"
 cli_fm = terminal .. " -g 100x50 -e ranger"
 system_monitor = terminal .. " -e htop"
-media_player = "smplayer"
+media_player = "gnome-mplayer"
 music_player = terminal .. " -e ncmpcpp"
 smallterminal = terminal2 .. ' -title "SmallTerm"  -geometry 90x7-200-100'
 --smallterminal = "xterm -geometry 90x7-200-100"
@@ -260,13 +260,11 @@ awful.rules.rules = {
 	    properties = { tag = tags[1][2] }, },
 	{ rule = { class = "Pidgin" },
 	    properties = { tag = tags[1][3] }, },
-	{ rule = { class = "vlc" },
-	    properties = { tag = tags[1][4] }, },
 	{ rule_any = { class = { "Thunar", "Tv-maxe" }, },
 	    properties = { tag = tags[1][4] }, },
 	{ rule = { name = "SmallTerm" }, 
 		  properties = { floating = true, ontop = true }, },
-	{ rule_any = { class = { "MPlayer", "Smplayer", "sxiv", "feh", "Viewnior" }, },         
+	{ rule_any = { class = { "MPlayer", "Gnome-mplayer", "sxiv", "feh", "Viewnior" }, },         
 	    properties = { floating = true }, },
 
 }
