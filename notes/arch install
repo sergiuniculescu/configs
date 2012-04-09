@@ -607,6 +607,11 @@ do
 done &
 ________________
 
+# Restore ALSA Mixer settings at startup #
+alsactl -f /var/lib/alsa/asound.state store
+
+add 'alsa' in rc.conf DAEMONS
+
 
 
 ### INSTALL XBMC ###

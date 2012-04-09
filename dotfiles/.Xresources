@@ -1,10 +1,10 @@
 ! Xft settings ---------------------------------------------------------------
 
-Xft.dpi:        96
-Xft.antialias:  true
-Xft.rgba:       rgb
-Xft.hinting:    true
-Xft.hintstyle:  hintslight
+!Xft.dpi:        96
+!Xft.antialias:  true
+!Xft.rgba:       rgb
+!Xft.hinting:    true
+!Xft.hintstyle:  hintslight
 
 
 ! xterm ---------------------------------------------------------------------
@@ -62,7 +62,7 @@ xterm*foreground: #AAAAAA
 
 
 ! Fonts:
-URxvt*font:xft:Monospace:pixelsize=12
+URxvt*font:xft:Dejavu Sans Mono:pixelsize=14
 !URxvt*font:xft:monospace:size=10
 
 

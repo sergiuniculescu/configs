@@ -115,10 +115,10 @@ netwidget.width = "80"
 netwidget.align = "right"
 vicious.register(netwidget, vicious.widgets.net, 
     function (widget, args)
-        if args["{ppp0 carrier}"] == 1 
+        if args["{eth0 carrier}"] == 1 
 			then 
 ----				neticon.image = image("/home/sergiu/.config/awesome/icons/usb.png")
-				return ' D '..focus_col..args["{ppp0 down_kb}"]..null_col..' U '..focus_col..args["{ppp0 up_kb}"]..null_col..''
+				return ' D '..focus_col..args["{eth0 down_kb}"]..null_col..' U '..focus_col..args["{eth0 up_kb}"]..null_col..''
 		elseif args["{wlan0 carrier}"] == 1 
 			then 
 ----				neticon.image = image("/home/sergiu/.config/awesome/icons/wifi_01.png")

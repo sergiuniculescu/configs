@@ -7,7 +7,7 @@ beautiful.init("/home/sergiu/.config/awesome/theme2.lua")
 --/// Volume Config and widget
 volumecfg = {}
 volumecfg.cardid  = 0
-volumecfg.channel = "Master"
+volumecfg.channel = "PCM"
 volumetext = widget({ type = "textbox", name = "volumetext" })
 volumetext.align = "right"
 -- command must start with a space!

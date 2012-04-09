@@ -26,10 +26,10 @@ terminal2 = "xterm"
 cli_editor = "vim"
 gui_editor = "medit"
 browser = "firefox"
-gui_fm = "Thunar"
+gui_fm = "pcmanfm"
 cli_fm = terminal .. " -g 100x50 -e ranger"
 system_monitor = terminal .. " -e htop"
-media_player = "gnome-mplayer"
+media_player = "smplayer"
 music_player = terminal .. " -e ncmpcpp"
 smallterminal = terminal2 .. ' -title "SmallTerm"  -geometry 90x7-200-100'
 --smallterminal = "xterm -geometry 90x7-200-100"
@@ -260,7 +260,7 @@ awful.rules.rules = {
 	    properties = { tag = tags[1][2] }, },
 	{ rule = { class = "Pidgin" },
 	    properties = { tag = tags[1][3] }, },
-	{ rule_any = { class = { "Thunar", "Tv-maxe" }, },
+	{ rule_any = { class = { "Pcmanfm", "Tv-maxe" }, },
 	    properties = { tag = tags[1][4] }, },
 	{ rule = { name = "SmallTerm" }, 
 		  properties = { floating = true, ontop = true }, },
