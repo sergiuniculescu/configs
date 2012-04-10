@@ -120,12 +120,12 @@ class CustomApplications(Applications):
 				return self.either(c, 'edit_or_run')
 
 		if f.container:
-			return self.either(c, 'aunpack', 'file_roller')
+			return self.either(c, 'aunpack' )
 
 		if f.video:
 			if f.video:
 				c.flags += 'd'
-			return self.either(c, 'vlc', 'mplayer2', 'mplayer', 'smplayer', 'totem')
+			return self.either(c, 'smplayer', 'vlc', 'mplayer2', 'mplayer', 'totem')
 
 		if f.audio:
 			if f.audio:
@@ -227,7 +227,7 @@ class CustomApplications(Applications):
 	def app_aunpack(self, c):
 		if c.mode is 0:
 			c.flags += 'p'
-			return 'aunpack', '-l', c.file.path
+			return 'aunpack', '-x', c.file.path
 		return 'aunpack', c.file.path
 
 	@depends_on('file-roller', 'X')

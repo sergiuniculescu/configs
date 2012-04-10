@@ -11,9 +11,9 @@ Xft.hintstyle:  hintslight
 
 
 ! Transparent background:
-!URxvt.transparent: true
+URxvt.transparent: true
 ! URxvt.shading: 0 to 99 darkens, 101 to 200 lightens
-!URxvt.shading: 10
+URxvt.shading: 99
 
 
 ! Fonts:
@@ -22,9 +22,9 @@ Xft.hintstyle:  hintslight
 !URxvt.font: xft:Terminus:size=12
 !URxvt.font: -misc-fixed-medium-r-normal--15-140-75-75-c-90-iso8859-1
 !URxvt*font:xft:Terminus
-URxvt.font: xft:Monospace:bold:pixelsize=12
+!URxvt.font: xft:Fixed:pixelsize=14
 !URxvt.font: xft:dejavu sans mono:pixelsize=14
-!URxvt.font: xft:Terminus:pixelsize=14
+URxvt.font: xft:Terminus:bold:pixelsize=14
 
 
 !Clickable URLs:
