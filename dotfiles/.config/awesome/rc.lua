@@ -28,6 +28,7 @@ gui_editor = "medit"
 browser = "firefox"
 gui_fm = "pcmanfm"
 cli_fm = terminal .. " -g 100x50 -e ranger"
+instant_messenger = terminal2 .. ' -title "Finch" -e finch'
 system_monitor = terminal .. " -e htop"
 media_player = "smplayer"
 music_player = terminal .. " -e ncmpcpp"
@@ -111,7 +112,8 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, }, "w", function () exec(browser) end),
     awful.key({ modkey, }, "f", function () exec(cli_fm) end),
     awful.key({ modkey, }, "v", function () exec(media_player) end),
-    awful.key({ modkey, }, "p", function () exec("pidgin", false) end),
+--    awful.key({ modkey, }, "p", function () exec("pidgin", false) end),
+    awful.key({ modkey, }, "p", function () exec(instant_messenger, false) end),
 
 	--awful.key({ modkey, }, "n", function () exec(music_player) end),
 		awful.key({ modkey, }, "u", function () exec("urxvtc -e bash -c 'sudo pacman-color -Syu'") end),
@@ -262,6 +264,8 @@ awful.rules.rules = {
 	    properties = { tag = tags[1][3] }, },
 	{ rule_any = { class = { "Pcmanfm", "Tv-maxe" }, },
 	    properties = { tag = tags[1][4] }, },
+	{ rule = { name = "Finch" }, 
+		  properties = { tag = tags[1][3] }, },
 	{ rule = { name = "SmallTerm" }, 
 		  properties = { floating = true, ontop = true }, },
 	{ rule_any = { class = { "MPlayer", "Gnome-mplayer", "sxiv", "feh", "Viewnior" }, },         
