@@ -22,17 +22,18 @@ beautiful.init("/home/sergiu/.config/awesome/theme2.lua")
 exec = awful.util.spawn
 sexec = awful.util.spawn_with_shell
 terminal = "urxvtc"
-terminal2 = "xterm"
+-- terminal2 = "xterm"
 cli_editor = "vim"
 gui_editor = "medit"
 browser = "firefox"
 gui_fm = "pcmanfm"
 cli_fm = terminal .. " -g 100x50 -e ranger"
-instant_messenger = terminal2 .. ' -title "Finch" -e finch'
+instant_messenger = terminal .. ' -title "Finch" -e finch'
+irc = terminal .. ' -title "Weechat" -e weechat-curses'
 system_monitor = terminal .. " -e htop"
 media_player = "smplayer"
 music_player = terminal .. " -e ncmpcpp"
-smallterminal = terminal2 .. ' -title "SmallTerm"  -geometry 90x7-200-100'
+smallterminal = terminal .. ' -title "SmallTerm"  -geometry 90x7-200-100'
 --smallterminal = "xterm -geometry 90x7-200-100"
 gtk_settings = "lxappearance"
 -- }}}
@@ -62,8 +63,8 @@ layouts =
 -- {{{ Define a tag table which hold all screen tags.
 tags = {}
 for s = 1, screen.count() do
-    tags[s] = awful.tag({ "term", "web", "chat", "misc" }, s, 
-		{layouts[1], layouts[7], layouts[3], layouts[2]})
+    tags[s] = awful.tag({ "term", "web", "chat", "irc", "misc" }, s, 
+		{layouts[1], layouts[7], layouts[7], layouts[7], layouts[2]})
 end
 -- }}}
 
@@ -114,6 +115,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, }, "v", function () exec(media_player) end),
 --    awful.key({ modkey, }, "p", function () exec("pidgin", false) end),
     awful.key({ modkey, }, "p", function () exec(instant_messenger, false) end),
+    awful.key({ modkey, }, "i", function () exec(irc, false) end),
 
 	--awful.key({ modkey, }, "n", function () exec(music_player) end),
 		awful.key({ modkey, }, "u", function () exec("urxvtc -e bash -c 'sudo pacman-color -Syu'") end),
@@ -256,16 +258,18 @@ awful.rules.rules = {
                      keys = clientkeys,
                      buttons = clientbuttons,
 	     	         size_hints_honor = true }, },
-	{ rule = { class = 'URxvt' }, 
-			properties = { size_hints_honor = false, tag = tags [1][1] }, },
+--	{ rule = { class = 'URxvt' }, 
+--			properties = { size_hints_honor = false, tag = tags [1][1] }, },
 	{ rule = { class = "Firefox" },
 	    properties = { tag = tags[1][2] }, },
 	{ rule = { class = "Pidgin" },
 	    properties = { tag = tags[1][3] }, },
 	{ rule_any = { class = { "Pcmanfm", "Tv-maxe" }, },
-	    properties = { tag = tags[1][4] }, },
+	    properties = { tag = tags[1][5] }, },
 	{ rule = { name = "Finch" }, 
 		  properties = { tag = tags[1][3] }, },
+	{ rule = { name = "Weechat" }, 
+		  properties = { tag = tags[1][4] }, },
 	{ rule = { name = "SmallTerm" }, 
 		  properties = { floating = true, ontop = true }, },
 	{ rule_any = { class = { "MPlayer", "Gnome-mplayer", "sxiv", "feh", "Viewnior" }, },         

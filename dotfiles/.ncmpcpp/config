@@ -1,7 +1,8 @@
 mpd_music_dir = "/home/sergiu/Music"
 mpd_crossfade_time = "20"
 user_interface = "alternative" (classic/alternative)
-song_columns_list_format = "(22)[blue]{a} (7)[green]{n} (30)[white]{t} (29)[cyan]{b} (5)[blue]{y} (7)[white]{l}"
+#song_columns_list_format = "(22)[blue]{a} (7)[green]{n} (30)[white]{t} (29)[cyan]{b} (5)[blue]{y} (7)[white]{l}"
+song_columns_list_format = "(42)[white]{f} (20)[blue]{a} (27)[cyan]{t} (7)[green]{y} (8)[white]{l}"
 playlist_disable_highlight_delay = "0"
 song_list_format = "{$8(%l)$9 }{%a - }{%t}|{$8%f$9}"
 song_library_format = "{%n_}{%t}|{%f}"
