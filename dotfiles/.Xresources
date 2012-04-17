@@ -1,4 +1,6 @@
-! Xft settings ---------------------------------------------------------------
+!-----------------------------------------------------------------------------
+! Xft settings
+!-----------------------------------------------------------------------------
 
 Xft.dpi:        96
 Xft.antialias:  true
@@ -6,9 +8,9 @@ Xft.rgba:       rgb
 Xft.hinting:    true
 Xft.hintstyle:  hintslight
 
-
-! urxvt ---------------------------------------------------------------------
-
+!----------------------------------------------------------------------------
+! urxvt
+!----------------------------------------------------------------------------
 
 ! Transparent background:
 URxvt.transparent: true
@@ -44,89 +46,88 @@ URxvt.underlineURLs: true
 
 
 ! scrollbar style - rxvt (default), plain (most compact), next, or xterm
-URxvt*scrollstyle:plain
-URxvt*scrollBar:            true
-URxvt*scrollBar_right:      true
-URxvt*transpscrollbar:      true
-URxvt*scrollBar_floating:   true
-URxvt*saveLines:            1000000
-URxvt*scrollTtyOutput:      false
-URxvt*scrollWithBuffer:     true
-URxvt*scrollTtyKeypress:    true
-URxvt*geometry: 84x24
+URxvt*scrollstyle:				plain
+URxvt*scrollBar:          true
+URxvt*scrollBar_right:    true
+URxvt*transpscrollbar:    true
+URxvt*scrollBar_floating: true
+URxvt*saveLines:          1000000
+URxvt*scrollTtyOutput:    false
+URxvt*scrollWithBuffer:   true
+URxvt*scrollTtyKeypress:  true
+URxvt*geometry: 					84x24
 
 
-! Colour Scheme {{{
+! Default Colour Scheme:
 URxvt.background: #000000
 URxvt.foreground: #AAAAAA
 ! Black
-!URxvt.color0: 	#000000
-!URxvt.color8: 	#555555
+URxvt.color0: 	#000000
+URxvt.color8: 	#555555
 ! Red
-!URxvt.color1: 	#AA0000
-!URxvt.color9: 	#FF5555
+URxvt.color1: 	#AA0000
+URxvt.color9: 	#FF5555
 ! Green
-!URxvt.color2: 	#00AA00
-!URxvt.color10: 	#55FF55
+URxvt.color2: 	#00AA00
+URxvt.color10: 	#55FF55
 ! Yellow
-!URxvt.color3: 	#AA5500
-!URxvt.color11: 	#FFFF55
+URxvt.color3: 	#AA5500
+URxvt.color11: 	#FFFF55
 ! Blue
-!URxvt.color4: 	#0000AA
-!URxvt.color12: 	#5555FF
+URxvt.color4: 	#0000AA
+URxvt.color12: 	#5555FF
 ! Magenta
-!URxvt.color5: 	#AA00AA
-!URxvt.color13: 	#FF55FF
+URxvt.color5: 	#AA00AA
+URxvt.color13: 	#FF55FF
 ! Cyan
-!URxvt.color6: 	#00AAAA
-!URxvt.color14: 	#55FFFF
+URxvt.color6: 	#00AAAA
+URxvt.color14: 	#55FFFF
 ! White
-!URxvt.color7: 	#AAAAAA
-!URxvt.color15: 	#FFFFFF
-! }}}
+URxvt.color7: 	#AAAAAA
+URxvt.color15: 	#FFFFFF
+
 
 !------------------------------------------------------------------------
-!colors
+!colors from https://bbs.archlinux.org/viewtopic.php?id=51818
 !------------------------------------------------------------------------
 
-!colors from https://bbs.archlinux.org/viewtopic.php?pid=939312#p939312
-!xURxvt*foreground:    #53A6A6
-!URxvt*background:    #000000
+!xURxvt*foreground: #53A6A6
+!URxvt*background:  #000000
 
 !!black
-!URxvt*color0:#060606
-!URxvt*color8:#191919
+!URxvt*color0:	#060606
+!URxvt*color8:	#191919
 !!red
-!URxvt*color1:#8A2F58
-!URxvt*color9:#CF4F88
+!URxvt*color1:	#8A2F58
+!URxvt*color9:	#CF4F88
 !!green
-!URxvt*color2:#287373
-!URxvt*color10:#53A6A6
+!URxvt*color2:	#287373
+!URxvt*color10:	#53A6A6
 !!yellow
-!URxvt*color3:#914E89
-!URxvt*color11:#BF85CC
+!URxvt*color3:	#914E89
+!URxvt*color11:	#BF85CC
 !!blue
-!URxvt*color4:#18618f
-!URxvt*color12:#1C86C5
+!URxvt*color4:	#18618f
+!URxvt*color12:	#1C86C5
 !!magenta
-!URxvt*color5:#5E468C
-!URxvt*color13:#7F62B3
+!URxvt*color5:	#5E468C
+!URxvt*color13:	#7F62B3
 !!cyan
-!URxvt*color6:#8CAFF0
-!URxvt*color14:#9BBAF1
+!URxvt*color6:	#8CAFF0
+!URxvt*color14:	#9BBAF1
 !!white
-!URxvt*color7:#EDD8D1
-!URxvt*color15:#FCEDE3
+!URxvt*color7:	#EDD8D1
+!URxvt*color15:	#FCEDE3
 
 
 !------------------------------
 
-!URxvt*foreground:    #9da560
-!URxvt*background:    #101309
+!URxvt*foreground:  #9da560
+!URxvt*background:  #101309
 
 !!Black
-!URxvt*color0:    #101309
-!URxvt*color8:    #222815
+!URxvt*color0:   #101309
+!URxvt*color8:   #222815
 !!Red
 !URxvt*color1:   #C8611F
 !URxvt*color9:   #ffb73e
@@ -150,49 +151,50 @@ URxvt.foreground: #AAAAAA
 !URxvt*color15:  #ffffd8
 
 
-! xterm ---------------------------------------------------------------------
+!----------------------------------------------------------------------------
+! xterm
+!----------------------------------------------------------------------------
 
-xterm*geometry: 80x25
+xterm*geometry: 					80x25
 xterm*faceName: xft:Terminus:bold:pixelsize=14:antialias=true
-xterm*dynamicColors: true
-xterm*utf8: 2
-xterm*eightBitInput: false
-xterm*saveLines: 512
-xterm*scrollTtyKeypress: true
-xterm*scrollTtyOutput: false
-xterm*scrollBar: true
-xterm*rightScrollBar: true
-xterm*loginShell: true
-xterm*jumpScroll: true
-xterm*multiScroll: true
-xterm*toolBar: false
+xterm*dynamicColors: 			true
+xterm*utf8: 							2
+xterm*eightBitInput: 			false
+xterm*saveLines: 					512
+xterm*scrollTtyKeypress: 	true
+xterm*scrollTtyOutput: 		false
+xterm*scrollBar: 					true
+xterm*rightScrollBar: 		true
+xterm*loginShell: 				true
+xterm*jumpScroll: 				true
+xterm*multiScroll: 				true
+xterm*toolBar: 						false
 
 
+! Default Colour Scheme:
 xterm*background: #000000
 xterm*foreground: #AAAAAA
 !black
-!XTerm*color0: #000000
-!XTerm*color8: #555555
+XTerm*color0:		#000000
+XTerm*color8: 	#555555
 !red
-!XTerm*color1: #AA0000
-!XTerm*color9: #FF5555
+XTerm*color1: 	#AA0000
+XTerm*color9: 	#FF5555
 !green
-!XTerm*color2: #00AA00
-!XTerm*color10: #55FF55
+XTerm*color2: 	#00AA00
+XTerm*color10: 	#55FF55
 !brown/yellow
-!XTerm*color3: #AA5500
-!XTerm*color11: #FFFF55
+XTerm*color3: 	#AA5500
+XTerm*color11: 	#FFFF55
 !blue
-!XTerm*color4: #0000AA
-!XTerm*color12: #5555FF
+XTerm*color4: 	#0000AA
+XTerm*color12: 	#5555FF
 !magenta
-!XTerm*color5: #AA00AA
-!XTerm*color13: #FF55FF
+XTerm*color5: 	#AA00AA
+XTerm*color13: 	#FF55FF
 !cyan
-!XTerm*color6: #00AAAA
-!XTerm*color14: #55FFFF
+XTerm*color6: 	#00AAAA
+XTerm*color14: 	#55FFFF
 !white
-!XTerm*color7: #AAAAAA
-!XTerm*color15: #FFFFFF
-
-
+XTerm*color7: 	#AAAAAA
+XTerm*color15: 	#FFFFFF
