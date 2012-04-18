@@ -36,7 +36,7 @@ URxvt.underlineURLs: true
 
 ! scrollbar style - rxvt (default), plain (most compact), next, or xterm
 URxvt*scrollstyle:				plain
-URxvt*scrollBar:          true
+URxvt*scrollBar:          false
 URxvt*scrollBar_right:    true
 URxvt*transpscrollbar:    true
 URxvt*scrollBar_floating: true
@@ -54,30 +54,30 @@ URxvt*cursorUnderline: false
 
 ! Default Colour Scheme:
 URxvt.background: #000000
-URxvt.foreground: #AAAAAA
+URxvt.foreground: #C0C0C0
 ! Black
 URxvt.color0: 	#000000
-URxvt.color8: 	#555555
+URxvt.color8: 	#736F6E
 ! Red
-URxvt.color1: 	#AA0000
-URxvt.color9: 	#FF5555
+URxvt.color1: 	#C85A17
+URxvt.color9: 	#F75D59
 ! Green
-URxvt.color2: 	#00AA00
-URxvt.color10: 	#55FF55
+URxvt.color2: 	#41A317
+URxvt.color10: 	#00FF00
 ! Yellow
-URxvt.color3: 	#AA5500
-URxvt.color11: 	#FFFF55
+URxvt.color3: 	#E9AB17
+URxvt.color11: 	#FFFF00
 ! Blue
-URxvt.color4: 	#0000AA
-URxvt.color12: 	#5555FF
+URxvt.color4: 	#333972
+URxvt.color12: 	#1793D1
 ! Magenta
-URxvt.color5: 	#AA00AA
-URxvt.color13: 	#FF55FF
+URxvt.color5: 	#6A287E
+URxvt.color13: 	#B93B8F
 ! Cyan
-URxvt.color6: 	#00AAAA
-URxvt.color14: 	#55FFFF
+URxvt.color6: 	#43C6DB
+URxvt.color14: 	#00FFFF
 ! White
-URxvt.color7: 	#AAAAAA
+URxvt.color7: 	#C0C0C0
 URxvt.color15: 	#FFFFFF
 
 
