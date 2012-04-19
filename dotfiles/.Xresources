@@ -22,19 +22,47 @@ URxvt.shading: 99
 URxvt.font: xft:Terminus:bold:pixelsize=14
 
 
-!Clickable URLs:
-URxvt.perl-ext-common:  default,matcher,url-select,vtwheel
+! Perl extensions:
+URxvt.perl-ext-common:  default,matcher,url-select,vtwheel,keyboard-select,clipboard
+
+
+! Clickable URLs:
+URxvt.keysym.M-u:    perl:url-select:select_next
+URxvt.urlLauncher:   /usr/bin/firefox
+URxvt.underlineURLs: true
+URxvt.matcher.button:   1
+URxvt.keysym.C-Delete:  perl:matcher:last
+URxvt.keysym.M-Delete:  perl:matcher:list
+!Alt+U - Enter selection mode. The last URL on your screen will be selected. You can repeat Alt+U to select the next upward URL.
+!K - Select next upward URL
+!J - Select next downward URL
+!Return - Open selected URL in browser and quit selection mode
+!O - Open selected URL in browser without quitting selection mode
+!Y - Copy (yank) selected URL and quit selection mode
+!Esc - Cancel URL selection mode 
+
+
+! Keyboard select (Alt+Escape):
+URxvt.keysym.M-Escape:  perl:keyboard-select:activate
+URxvt.keysym.M-s:       perl:keyboard-select:search
+
+
+! Copy - Paste
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
+URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+
+
+! Tabs
+!Uxvt.perl-ext-common:  default,tabbed
 !URxvt.tabbed.tabbar-fg: 2
 !URxvt.tabbed.tabbar-bg: 0
 !URxvt.tabbed.tab-fg:    3
 !URxvt.tabbed.tab-bg:    0
 !URxvt.matcher.button:   1
-URxvt.keysym.M-u:    perl:url-select:select_next
-URxvt.urlLauncher:   /usr/bin/firefox
-URxvt.underlineURLs: true
 
 
-! scrollbar style - rxvt (default), plain (most compact), next, or xterm
+! Scrollbar style - rxvt (default), plain (most compact), next, or xterm:
 URxvt*scrollstyle:				plain
 URxvt*scrollBar:          false
 URxvt*scrollBar_right:    true
@@ -46,10 +74,10 @@ URxvt*scrollWithBuffer:   true
 URxvt*scrollTtyKeypress:  true
 URxvt*geometry: 					84x24
 
+
 ! Cursor:
 URxvt*cursorBlink: false
 URxvt*cursorUnderline: false
-
 
 
 ! Default Colour Scheme:
