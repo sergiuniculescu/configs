@@ -87,7 +87,7 @@ URxvt.foreground: #CCCCCC
 URxvt.color0: 	#000000
 URxvt.color8: 	#555555
 ! Red
-URxvt.color1: 	#AA0000
+URxvt.color1: 	#BB0000
 URxvt.color9: 	#FF0F0F
 ! Green
 URxvt.color2: 	#00AA00
