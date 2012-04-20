@@ -109,7 +109,7 @@ globalkeys = awful.util.table.join(
 	-- Program shortcuts
     awful.key({ modkey, }, "t", function () exec("tv-maxe", false) end),
     awful.key({ modkey, }, "x", function () exec(terminal) end),
-    awful.key({ modkey  }, "r", function () awful.util.spawn("dmenu_run") end),
+    awful.key({ modkey  }, "z", function () awful.util.spawn("dmenu_run") end),
     awful.key({ modkey, }, "w", function () exec(browser) end),
     awful.key({ modkey, }, "f", function () exec(cli_fm) end),
     awful.key({ modkey, }, "v", function () exec(media_player) end),
