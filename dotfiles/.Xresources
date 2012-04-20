@@ -23,7 +23,7 @@ URxvt.font: xft:Terminus:bold:pixelsize=14
 
 
 ! Perl extensions:
-URxvt.perl-ext-common:  default,matcher,url-select,vtwheel,keyboard-select,clipboard
+URxvt.perl-ext-common:  default,matcher,url-select,vtwheel,keyboard-select
 
 
 ! Clickable URLs:
@@ -48,9 +48,10 @@ URxvt.keysym.M-s:       perl:keyboard-select:search
 
 
 ! Copy - Paste
-URxvt.keysym.M-c: perl:clipboard:copy
-URxvt.keysym.M-v: perl:clipboard:paste
-URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+!Uxvt.perl-ext-common:  default,clipboard
+!URxvt.keysym.M-c: perl:clipboard:copy
+!URxvt.keysym.M-v: perl:clipboard:paste
+!URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
 
 
 ! Tabs
