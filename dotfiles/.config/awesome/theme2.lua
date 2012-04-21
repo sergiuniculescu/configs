@@ -1,52 +1,52 @@
 --///  Main
-theme = {"winter"}
+theme = {"arch"}
 theme.wallpaper_cmd = { "awsetbg -a /home/sergiu/.config/awesome/wallpapers/black-cat-wallpaper-2.jpg" }
 --//
 
 --/// Styles
-theme.font      = "clear 7"
+theme.font      = "clear bold 7"
 themedir	= awful.util.getdir("config") .. "/themes2/"
 icon_dir 	= awful.util.getdir("config") .. "/icons2/"
 --//
 
 --/// Colors
-theme.fg_normal = "#53A6A6"
-theme.fg_focus  = "#8A2F58"
+theme.fg_normal = "#CCCCCC"
+theme.fg_focus  = "#C0C0C0"
 theme.fg_urgent = "#000000"
 theme.bg_normal = "#000000"
 theme.bg_focus  = "#222815"
 theme.bg_urgent = "#ffc0c0"
 theme.color_black_dark = "#060606"
-theme.color_black_light = "#191919"
-theme.color_red_dark = "#8A2F58"
-theme.color_red_light = "#CF4F88"
-theme.color_green_dark = "#287373"
-theme.color_green_light = "#53A6A6"
-theme.color_yellow_dark = "#914E89"
-theme.color_yellow_light = "#BF85CC"
-theme.color_blue_dark = "#18618f"
-theme.color_blue_light = "#1C86C5"
-theme.color_magenta_dark = "#5E468C"
-theme.color_magenta_light = "#7F62B3"
-theme.color_cyan_dark = "#8CAFF0"
-theme.color_cyan_light = "#9BBAF1"
-theme.color_white_dark = "#EDD8D1"
-theme.color_white_light = "#FCEDE3"
+theme.color_black_light = "#242424"
+theme.color_red_dark = "#BB0000"
+theme.color_red_light = "#FF0F0F"
+theme.color_green_dark = "#00AA00"
+theme.color_green_light = "#00FF00"
+theme.color_yellow_dark = "#FF8000"
+theme.color_yellow_light = "#FFFF00"
+theme.color_blue_dark = "#3333FF"
+theme.color_blue_light = "#1793D1"
+theme.color_magenta_dark = "#AA00AA"
+theme.color_magenta_light = "#CC00CC"
+theme.color_cyan_dark = "#00AAAA"
+theme.color_cyan_light = "#0FFFFF"
+theme.color_white_dark = "#CCCCCC"
+theme.color_white_light = "#FFFFFF"
 --//
 
 --/// Borders
 theme.border_width  = "1"
-theme.border_normal = "#060606"
-theme.border_focus  = theme.fg_normal
-theme.border_marked = "#000000"
+theme.border_normal = theme.fg_normal
+theme.border_focus  = theme.color_blue_light
+theme.border_marked = theme.bg_normal
 --//
 
 --/// Titlebars
-theme.titlebar_fg_normal	= "#9da560"
-theme.titlebar_fg_focus		= "#c8611f"
-theme.titlebar_bg_normal	= "#363636ff"
-theme.titlebar_bg_focus		= "#000000ff"
-theme.titlebar_font			= theme.font or "cure 8"
+theme.titlebar_fg_normal	= theme.fg_normal
+theme.titlebar_fg_focus		= theme.fg_focus
+theme.titlebar_bg_normal	= theme.bg_normal
+theme.titlebar_bg_focus		= theme.bg_focus
+theme.titlebar_font				= "clear bold 7" or "cure 8"
 --//
 
 --///
@@ -68,12 +68,12 @@ theme.taglist_fg_not_empty = "#808080"
 -- Variables set for theming the menu:
 -- menu_[bg|fg]_[normal|focus]
 -- menu_[border_color|border_width]
-theme.menu_bg_normal = "#000000ff"
-theme.menu_bg_focus  = "#53A6A6ff"
+theme.menu_bg_normal = theme.bg_normal
+theme.menu_bg_focus  = theme.color_blue_light
 theme.menu_fg_normal = theme.fg_normal
-theme.menu_fg_focus  = theme.fg_focus
+theme.menu_fg_focus  = theme.color_white_light
 theme.menu_border_width = "0"
-theme.menu_height = "18"
+theme.menu_height = "20"
 theme.menu_width  = "150"
 --//
 

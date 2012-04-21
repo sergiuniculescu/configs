@@ -30,24 +30,25 @@ desktopmenu_args = { keygrabber = true }
 keymenu_args = { coords={ x=200, y=100 }, keygrabber = true }
 
 -- text color
-focus_col = '<span color="'..beautiful.fg_focus..'">'
-black0_col = '<span color="' ..beautiful.color_black_dark..'">'
-black1_col = '<span color="' ..beautiful.color_black_light..'">'
-red0_col = '<span color="' ..beautiful.color_red_dark..'">'
-red1_col = '<span color="' ..beautiful.color_red_light..'">'
-green0_col = '<span color="' ..beautiful.color_green_dark..'">'
-green1_col = '<span color="' ..beautiful.color_green_light..'">'
-yellow0_col = '<span color="' ..beautiful.color_yellow_dark..'">'
-yellow1_col = '<span color="' ..beautiful.color_yellow_light..'">'
-blue0_col = '<span color="' ..beautiful.color_blue_dark..'">'
-blue1_col = '<span color="' ..beautiful.color_blue_light..'">'
-magenta0_col = '<span color="' ..beautiful.color_magenta_dark..'">'
-magenta1_col = '<span color="' ..beautiful.color_magenta_light..'">'
-cyan0_col = '<span color="' ..beautiful.color_cyan_dark..'">'
-cyan1_col = '<span color="' ..beautiful.color_cyan_light..'">'
-white0_col = '<span color="' ..beautiful.color_white_dark..'">'
-white1_col = '<span color="' ..beautiful.color_white_light..'">'
-null_col = '</span>'
+normal_col = 		'<span color="'	..beautiful.fg_normal..'">'
+focus_col = 		'<span color="'	..beautiful.fg_focus..'">'
+black0_col = 		'<span color="' ..beautiful.color_black_dark..'">'
+black1_col = 		'<span color="' ..beautiful.color_black_light..'">'
+red0_col = 			'<span color="' ..beautiful.color_red_dark..'">'
+red1_col = 			'<span color="' ..beautiful.color_red_light..'">'
+green0_col = 		'<span color="' ..beautiful.color_green_dark..'">'
+green1_col = 		'<span color="' ..beautiful.color_green_light..'">'
+yellow0_col = 	'<span color="' ..beautiful.color_yellow_dark..'">'
+yellow1_col = 	'<span color="' ..beautiful.color_yellow_light..'">'
+blue0_col = 		'<span color="' ..beautiful.color_blue_dark..'">'
+blue1_col = 		'<span color="' ..beautiful.color_blue_light..'">'
+magenta0_col =	'<span color="' ..beautiful.color_magenta_dark..'">'
+magenta1_col = 	'<span color="' ..beautiful.color_magenta_light..'">'
+cyan0_col = 		'<span color="' ..beautiful.color_cyan_dark..'">'
+cyan1_col = 		'<span color="' ..beautiful.color_cyan_light..'">'
+white0_col = 		'<span color="' ..beautiful.color_white_dark..'">'
+white1_col = 		'<span color="' ..beautiful.color_white_light..'">'
+null_col = 			'</span>'
 
 --/// Start a layoutbox ///
 mylayoutbox = {}
@@ -69,11 +70,13 @@ mytaglist.buttons = awful.util.table.join(
 ----datewidget = widget({ type = "textbox" })
 ----vicious.register(datewidget, vicious.widgets.date, ''..focus_col..'%H:%M %a %d-%m-%Y'..null_col..'',  10)
 
+
 --/// Date/Clock widget ///
 -- Create a textclock widget
 mytextclock = awful.widget.textclock({ align = "right" })
 -- Calendar widget to attach to the textclock
 calendar2.addCalendarToWidget(mytextclock)
+
 
 --/// CPU widget ///
 -- Icon
@@ -81,9 +84,10 @@ cpuicon = widget({ type = "imagebox" })
 cpuicon.image = image(icon_dir .. "cpu.png")
 -- Text
 cpuperc = widget({ type = "textbox" })
-cpuperc.width = "55"
+cpuperc.width = "50"
 cpuperc.align = "right"
-vicious.register(cpuperc, vicious.widgets.cpu, '$2%'..focus_col..' '..null_col..'$3%', 2)
+vicious.register(cpuperc, vicious.widgets.cpu, '$2%'..normal_col..' '..null_col..'$3%', 2)
+
 
 --/// Mem Widget ///
 -- Icon
@@ -92,37 +96,40 @@ memicon.image = image(icon_dir .. "mem.png")
 -- Text
 memwidget = widget({ type = "textbox" })
 memwidget.align = "right"
-vicious.register(memwidget, vicious.widgets.mem, ' '..focus_col..'$1%'..null_col..' $6MB', 2)
+vicious.register(memwidget, vicious.widgets.mem, ' '..normal_col..'$2MB'..null_col..' / $6MB', 2)
+
 
 --/// Battery widget ///
 -- Icon
-baticon = widget({ type = "imagebox" })
-baticon.image = image(icon_dir .. "bat_full_01.png")
+		--baticon = widget({ type = "imagebox" })
+		--baticon.image = image(icon_dir .. "bat_full_01.png")
 -- Text
-batwidget = widget({ type = "textbox" })
-batwidget.align = "right"
-vicious.register(batwidget, vicious.widgets.bat, ' '..focus_col..'$2%'..null_col..'', 20, "BAT0")
+		--batwidget = widget({ type = "textbox" })
+		--batwidget.align = "right"
+		--vicious.register(batwidget, vicious.widgets.bat, ' '..normal_col..'$2%'..null_col..'', 20, "BAT0")
+
 
 --/// Systray ///
 systray = widget({ type = "systray"})
 systray.align = "right"
 
+
 --/// Net Widget
 ----neticon = widget({ type = "imagebox" })
 ----neticon.align = "right"
 netwidget = widget({ type = "textbox" })
-netwidget.width = "80"
+netwidget.width = "140"
 netwidget.align = "right"
 vicious.register(netwidget, vicious.widgets.net, 
     function (widget, args)
         if args["{eth0 carrier}"] == 1 
 			then 
 ----				neticon.image = image("/home/sergiu/.config/awesome/icons/usb.png")
-				return ' D '..focus_col..args["{eth0 down_kb}"]..null_col..' U '..focus_col..args["{eth0 up_kb}"]..null_col..''
+				return ' Dn '..normal_col..args["{eth0 down_kb}"]..null_col..'Kb/s / Up '..normal_col..args["{eth0 up_kb}"]..null_col..'Kb/s'
 		elseif args["{wlan0 carrier}"] == 1 
 			then 
 ----				neticon.image = image("/home/sergiu/.config/awesome/icons/wifi_01.png")
-				return ' D '..focus_col..args["{wlan0 down_kb}"]..null_col..' U '..focus_col..args["{wlan0 up_kb}"]..null_col..''
+				return ' D '..normal_col..args["{wlan0 down_kb}"]..null_col..' U '..normal_col..args["{wlan0 up_kb}"]..null_col..''
 	    else 
 ----			neticon.image = image("/home/sergiu/.config/awesome/icons/empty.png")
 			return  'Netwok Disabled '
@@ -130,6 +137,7 @@ vicious.register(netwidget, vicious.widgets.net,
 		end
     end, 1)
 --///
+
 
 function escape_xml(text)
 	xml_entities = {
@@ -142,6 +150,7 @@ function escape_xml(text)
 
 	return text and text:gsub("[\"&'<>]", xml_entities)
 end
+
 
 --/// MPD widget ///
 -- Inizialize widgets
@@ -192,7 +201,7 @@ function widget_mpd(widget, icon)
 		end
 	
 		-- Put the text in the widget
-		widget.text = string.format("%s%s%s - %s", red0_col, title, null_col, artist)
+		widget.text = string.format("%s%s%s - %s", blue1_col, title, null_col, artist)
 	
 	else
 		widget.text = ' MPD is closed '
@@ -211,9 +220,11 @@ mpdtimer:start()
 volicon = widget({ type = "imagebox" })
 volicon.image = image(icon_dir .. "spkr_01.png")
 
+
 --/// Separator ///
 sep = widget({ type = "textbox", align = "center" })
 sep.text = '<span color="#151515" > | </span>'
+
 
 --/// DRAW WIDGETS
 for s = 1, screen.count() do
@@ -237,10 +248,10 @@ for s = 1, screen.count() do
         },
         mylayoutbox[s], sep,
 	mytextclock, sep,
-----        datewidget, sep,
+--        datewidget, sep,
 	systray, sep,
         volumetext, volicon, sep,   
-        batwidget, baticon, sep,
+--        batwidget, baticon, sep,
 	memwidget, memicon, sep,
         cpuperc, cpuicon, sep, 
         netwidget, ----neticon,

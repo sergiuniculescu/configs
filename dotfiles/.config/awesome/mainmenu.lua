@@ -19,9 +19,9 @@ function build()
     local man = "urxvtc -e man "
     local editor = "urxvtc -e vim "
     local browser = "firefox "
-    local run = "dmenu_run"
+    local run = "dmenu_run "
     local fileman = terminal .. " -e ranger "
-    local chat = "pidgin"
+    local chat = terminal .. " -e finch "
     local myawesomemenu = { 
         { "Edit config", editor .. awful.util.getdir("config") .. "/rc.lua"},
         { "Edit theme", editor .. awful.util.getdir("config") .. "/theme.lua" },

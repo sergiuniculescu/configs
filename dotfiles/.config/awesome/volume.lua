@@ -23,7 +23,7 @@ volumecfg.mixercommand = function (command)
     else 
         volume = "MUTE"
     end
-    volumetext.text = '<span color="'..beautiful.fg_focus..'">'..volume..'</span>'
+    volumetext.text = '<span color="'..beautiful.fg_normal..'">'..volume..'</span>'
 end
 volumecfg.update = function () volumecfg.mixercommand(" sget " .. volumecfg.channel) end
 volumecfg.up 	 = function () volumecfg.mixercommand(" sset " .. volumecfg.channel .. " 1+") end
