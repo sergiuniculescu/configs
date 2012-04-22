@@ -4,5 +4,17 @@ mkdir Downloads
 mkdir Pictures
 mkdir Screenshots
 mkdir 
-delete seriously? y
 find inch
+
+rename .Xresources
+mkdir .fonts
+open_with 
+mkdir .vim
+mkdir syntax
+mkdir y
+mkdir bkp
+delete seriously? 
+mkdir tmp
+rename backup
+rename .vimrc2
+delete seriously? y

@@ -63,7 +63,7 @@ URxvt.keysym.C-v: perl:clipboard:paste
 
 
 ! Scrollbar style - rxvt (default), plain (most compact), next, or xterm:
-URxvt*scrollstyle:				plain
+URxvt*scrollstyle:        plain
 URxvt*scrollBar:          false
 URxvt*scrollBar_right:    true
 URxvt*transpscrollbar:    true
@@ -72,7 +72,7 @@ URxvt*saveLines:          1000000
 URxvt*scrollTtyOutput:    false
 URxvt*scrollWithBuffer:   true
 URxvt*scrollTtyKeypress:  true
-URxvt*geometry: 					84x24
+URxvt*geometry:           84x24
 
 
 ! Cursor:
@@ -80,106 +80,153 @@ URxvt*cursorBlink: false
 URxvt*cursorUnderline: false
 
 
-!------------------------
-! Colour Scheme
-!------------------------
+!-------------------------------
+! Colour Scheme Zenburn (custom)
+!-------------------------------
 
+!BLK Cursor
+URxvt.color0      : #1E2320
+URxvt.color8      : #709080
+!
+!!RED Tag
+URxvt.color1      : #705050
+URxvt.color9      : #dca3a3
+!
+!!GRN SpecialKey
+URxvt.color2      : #60b48a
+URxvt.color10     : #c3bf9f
+!
+!!YEL Keyword
+URxvt.color3      : #dfaf8f
+URxvt.color11     : #f0dfaf
+!
+!!BLU Number
+URxvt.color4      : #506070
+URxvt.color12     : #94bff3
+!
+!!MAG Precondit
+URxvt.color5      : #dc8cc3
+URxvt.color13     : #ec93d3
+!
+!!CYN Float
+URxvt.color6      : #8cd0d3
+URxvt.color14     : #93e0e3
+!
+!!WHT Search
+URxvt.color7      : #dcdccc
+URxvt.color15     : #ffffff
+!
+!!TXT Normal, Normal, Cursor
+URxvt.background  : #1f1f1f
+URxvt.foreground  : #dcdccc
+URxvt.cursorColor : #8faf9f
+!
+!!HLT Include, StatusLine, ErrorMsg
+URxvt.colorBD     : #ffcfaf
+URxvt.colorUL     : #ccdc90
+URxvt.colorIT     : #80d4aa
+
+
+!--------------------------
+! Custom:
+!--------------------------
 ! Background
-URxvt.background: #000000
-URxvt.foreground: #CCCCCC
+!URxvt.background: #000000
+!URxvt.foreground: #CCCCCC
 ! Cursor
-URxvt.cursorColor:  #736F6E
-URxvt.pointerColor: #1793D1
+!URxvt.cursorColor:  #736F6E
+!URxvt.pointerColor: #1793D1
 ! Black
-URxvt.color0: 	#000000
-URxvt.color8: 	#555555
+!URxvt.color0: 	#000000
+!URxvt.color8: 	#555555
 ! Red
-URxvt.color1: 	#BB0000
-URxvt.color9: 	#FF0F0F
+!URxvt.color1: 	#BB0000
+!URxvt.color9: 	#FF0F0F
 ! Green
-URxvt.color2: 	#00AA00
-URxvt.color10: 	#00FF00
+!URxvt.color2: 	#00AA00
+!URxvt.color10:	#00FF00
 ! Yellow
-URxvt.color3: 	#FF8000
-URxvt.color11: 	#FFFF00
+!URxvt.color3: 	#FF8000
+!URxvt.color11:	#FFFF00
 ! Blue
-URxvt.color4: 	#3333FF
-URxvt.color12: 	#1793D1
+!URxvt.color4: 	#3333FF
+!URxvt.color12:	#1793D1
 ! Magenta
-URxvt.color5: 	#AA00AA
-URxvt.color13: 	#CC00CC
+!URxvt.color5: 	#AA00AA
+!URxvt.color13:	#CC00CC
 ! Cyan
-URxvt.color6: 	#00AAAA
-URxvt.color14: 	#0FFFFF
+!URxvt.color6: 	#00AAAA
+!URxvt.color14:	#0FFFFF
 ! White
-URxvt.color7: 	#CCCCCC
-URxvt.color15: 	#FFFFFF
+!URxvt.color7: 	#CCCCCC
+!URxvt.color15:	#FFFFFF
 
-
-
-!URxvt.color0:   #000000
-!URxvt.color1:   #A80000
-!URxvt.color2:   #00A800
-!URxvt.color3:   #A8A800
-!URxvt.color4:   #0000A8
-!URxvt.color5:   #A800A8
-!URxvt.color6:   #00A8A8
-!URxvt.color7:   #A8A8A8
-
-!URxvt.color8:   #000054
-!URxvt.color9:   #FF0054
-!URxvt.color10:  #00FF54
-!URxvt.color11:  #FFFF54
-!URxvt.color12:  #0000FF
-!URxvt.color13:  #FF00FF
-!URxvt.color14:  #00FFFF
-!URxvt.color15:  #FFFFFF
 
 
 !----------------------------------------------------------------------------
 ! xterm
 !----------------------------------------------------------------------------
 
-xterm*geometry: 					80x25
+xterm*geometry:          80x25
 xterm*faceName: xft:Terminus:bold:pixelsize=14:antialias=true
-xterm*dynamicColors: 			true
-xterm*utf8: 							2
-xterm*eightBitInput: 			false
-xterm*saveLines: 					512
-xterm*scrollTtyKeypress: 	true
-xterm*scrollTtyOutput: 		false
-xterm*scrollBar: 					true
-xterm*rightScrollBar: 		true
-xterm*loginShell: 				true
-xterm*jumpScroll: 				true
-xterm*multiScroll: 				true
-xterm*toolBar: 						false
+xterm*dynamicColors:     true
+xterm*utf8:              2
+xterm*eightBitInput:     false
+xterm*saveLines:         512
+xterm*scrollTtyKeypress: true
+xterm*scrollTtyOutput:   false
+xterm*scrollBar:         true
+xterm*rightScrollBar:    true
+xterm*loginShell:        true
+xterm*jumpScroll:        true
+xterm*multiScroll:       true
+xterm*toolBar:           false
+
+! Zenburn colors:
+xterm*background:  #1f1f1f
+xterm*foreground:  #dcdccc
+xterm*color0:      #1E2320
+xterm*color1:      #705050
+xterm*color2:      #60b48a
+xterm*color3:      #dfaf8f
+xterm*color4:      #506070
+xterm*color5:      #dc8cc3
+xterm*color6:      #8cd0d3
+xterm*color7:      #dcdccc
+xterm*color8:      #709080
+xterm*color9:      #dca3a3
+xterm*color10:     #c3bf9f
+xterm*color11:     #f0dfaf
+xterm*color12:     #94bff3
+xterm*color13:     #ec93d3
+xterm*color14:     #93e0e3
+xterm*color15:     #ffffff
 
 
 ! Default Colour Scheme:
-xterm*background: #000000
-xterm*foreground: #AAAAAA
+!xterm*background: #000000
+!xterm*foreground: #AAAAAA
 !black
-XTerm*color0:		#000000
-XTerm*color8: 	#555555
+!XTerm*color0:   #000000
+!XTerm*color8: 	#555555
 !red
-XTerm*color1: 	#AA0000
-XTerm*color9: 	#FF5555
+!XTerm*color1: 	#AA0000
+!XTerm*color9: 	#FF5555
 !green
-XTerm*color2: 	#00AA00
-XTerm*color10: 	#55FF55
+!XTerm*color2: 	#00AA00
+!XTerm*color10: 	#55FF55
 !brown/yellow
-XTerm*color3: 	#AA5500
-XTerm*color11: 	#FFFF55
+!XTerm*color3: 	#AA5500
+!XTerm*color11: 	#FFFF55
 !blue
-XTerm*color4: 	#0000AA
-XTerm*color12: 	#5555FF
+!XTerm*color4: 	#0000AA
+!XTerm*color12: 	#5555FF
 !magenta
-XTerm*color5: 	#AA00AA
-XTerm*color13: 	#FF55FF
+!XTerm*color5: 	#AA00AA
+!XTerm*color13: 	#FF55FF
 !cyan
-XTerm*color6: 	#00AAAA
-XTerm*color14: 	#55FFFF
+!XTerm*color6: 	#00AAAA
+!XTerm*color14: 	#55FFFF
 !white
-XTerm*color7: 	#AAAAAA
-XTerm*color15: 	#FFFFFF
+!XTerm*color7: 	#AAAAAA
+!XTerm*color15: 	#FFFFFF
