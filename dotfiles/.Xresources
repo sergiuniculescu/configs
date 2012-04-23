@@ -101,7 +101,8 @@ URxvt.color3      : #dfaf8f
 URxvt.color11     : #f0dfaf
 !
 !!BLU Number
-URxvt.color4      : #506070
+!URxvt.color4      : #506070
+URxvt.color4      : #1793D1
 URxvt.color12     : #94bff3
 !
 !!MAG Precondit
