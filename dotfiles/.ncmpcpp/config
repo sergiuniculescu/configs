@@ -1,5 +1,5 @@
 mpd_music_dir = "/home/sergiu/Music"
-mpd_crossfade_time = "20"
+mpd_crossfade_time = "10"
 user_interface = "alternative" (classic/alternative)
 #song_columns_list_format = "(22)[blue]{a} (7)[green]{n} (30)[white]{t} (29)[cyan]{b} (5)[blue]{y} (7)[white]{l}"
 song_columns_list_format = "(42)[white]{f} (20)[blue]{a} (27)[cyan]{t} (7)[green]{y} (8)[white]{l}"
