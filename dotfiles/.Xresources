@@ -48,8 +48,8 @@ URxvt.keysym.M-s:       perl:keyboard-select:search
 
 
 ! Copy - Paste
-URxvt.keysym.C-c: perl:clipboard:copy
-URxvt.keysym.C-v: perl:clipboard:paste
+!URxvt.keysym.C-c: perl:clipboard:copy
+!URxvt.keysym.C-v: perl:clipboard:paste
 !URxvt.keysym.C-C-v: perl:clipboard:paste_escaped
 
 
