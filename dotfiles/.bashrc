@@ -67,6 +67,8 @@ alias zgrep="zgrep --color=auto"
 alias tree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/ /' -e 's/-/|/'"
 alias today='date "+%A, %B %d, %Y [%T]"'
 alias du="du -c -h"
+alias n='stat -c "%A (%a) %8s %.19y %n" '
+
 
 # network alias:
 alias openports='netstat --all --numeric --programs --inet --inet6'
@@ -109,6 +111,7 @@ fi
 # scripturi locale:
 PATH=$PATH:$HOME/.bin/
 
+umask 077
 
 # ps1:
 # default is: PS1='[\u@\h \W]\$ '

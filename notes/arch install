@@ -1977,8 +1977,8 @@ cat /proc/meminfo | head -n 1   # only RAM
 cat /proc/cpuinfo   # CPU
 
 
-
-
+# UDEV rules #
+udevadm monitor  #pentru a vedea procesul montarii automate
 
 
 
