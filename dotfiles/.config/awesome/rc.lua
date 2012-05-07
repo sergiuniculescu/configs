@@ -30,6 +30,7 @@ gui_fm = "pcmanfm"
 cli_fm = terminal .. " -g 100x50 -e ranger"
 instant_messenger = terminal .. ' -title "Finch" -e finch'
 irc = terminal .. ' -title "Weechat" -e weechat-curses'
+tvmaxe = terminal .. ' -title "Tvmaxe" -e tvmaxe-cli'
 system_monitor = terminal .. ' -e bash -c "htop -u sergiu -s res"'
 media_player = "smplayer"
 music_player = terminal .. " -e ncmpcpp"
@@ -108,7 +109,7 @@ globalkeys = awful.util.table.join(
 
     -- Program shortcuts
     awful.key({ modkey, altkey }, "t", function () exec("tv-maxe", false) end),
-    awful.key({ modkey, }, "t", function () exec(terminal .. " -e tvmaxe-cli", false) end),
+    awful.key({ modkey, }, "t", function () exec(tvmaxe, false) end),
     awful.key({ modkey, }, "x", function () exec(terminal) end),
     awful.key({ modkey  }, "z", function () awful.util.spawn("dmenu_run") end),
     awful.key({ modkey, }, "w", function () exec(browser) end),
@@ -271,6 +272,8 @@ awful.rules.rules = {
         properties = { tag = tags[1][3] }, },
     { rule = { name = "Weechat" },
         properties = { tag = tags[1][4] }, },
+    { rule = { name = "Tvmaxe" },
+        properties = { tag = tags[1][5] }, },
     { rule = { name = "SmallTerm" },
         properties = { floating = true, ontop = true }, },
     { rule_any = { class = { "MPlayer", "Gnome-mplayer", "sxiv", "feh", "Viewnior" }, },
