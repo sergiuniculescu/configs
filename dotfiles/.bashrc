@@ -74,7 +74,7 @@ alias n='stat -c "%A (%a) %8s %.19y %n" '
 alias openports='netstat --all --numeric --programs --inet --inet6'
 alias nets="sudo netstat -nlpt"
 alias nets2="sudo lsof -i"
-
+alias mac="ifconfig -a| grep -o -E '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'"
 
 
 # safety features:
@@ -88,6 +88,16 @@ alias chown='chown --preserve-root'
 alias chmod='chmod --preserve-root'
 alias chgrp='chgrp --preserve-root'
 
+
+# Directory size function:
+dirsize ()
+{
+    du -shx * .[a-zA-Z0-9_]* 2> /dev/null | \
+    egrep '^ *[0-9.]*[MG]' | sort -n > /tmp/list
+    egrep '^ *[0-9.]*M' /tmp/list
+    egrep '^ *[0-9.]*G' /tmp/list
+    rm -rf /tmp/list
+}
 
 
 # Add archey:
