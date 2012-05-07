@@ -125,7 +125,7 @@ class CustomApplications(Applications):
 		if f.video:
 			if f.video:
 				c.flags += 'd'
-			return self.either(c, 'smplayer', 'vlc', 'mplayer2', 'mplayer', 'totem')
+			return self.either(c, 'smplayer', 'mplayer', 'vlc', 'totem')
 
 		if f.audio:
 			if f.audio:
@@ -136,7 +136,7 @@ class CustomApplications(Applications):
 			if c.mode in (11, 12, 13, 14):
 				return self.either(c, 'set_bg_with_feh')
 			else:
-				return self.either(c, 'feh', 'sxiv', 'eog', 'mirage')
+				return self.either(c, 'feh', 'fbi', 'sxiv', 'eog', 'mirage')
 
 		if f.document or f.filetype.startswith('text') or f.size == 0:
 			return self.either(c, 'editor')

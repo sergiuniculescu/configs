@@ -211,9 +211,9 @@
  " Settings {
 
      " Basics {
-        "set t_Co=256
-        "let g:zenburn_high_Contrast=1
-        "colorscheme zenburn " my color scheme (only works in GUI)
+        set t_Co=256
+        let g:zenburn_high_Contrast=1
+        colorscheme zenburn " my color scheme (only works in GUI)
         "set columns=180 " perfect size for me
         "set guifont=Terminus:h10 " My favorite font
         "set guioptions=ce 

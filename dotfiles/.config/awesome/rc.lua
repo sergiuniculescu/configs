@@ -107,7 +107,8 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,         }, "o",     awful.client.urgent.jumpto),
 
     -- Program shortcuts
-    awful.key({ modkey, }, "t", function () exec("tv-maxe", false) end),
+    awful.key({ modkey, altkey }, "t", function () exec("tv-maxe", false) end),
+    awful.key({ modkey, }, "t", function () exec(terminal .. " -e tvmaxe-cli", false) end),
     awful.key({ modkey, }, "x", function () exec(terminal) end),
     awful.key({ modkey  }, "z", function () awful.util.spawn("dmenu_run") end),
     awful.key({ modkey, }, "w", function () exec(browser) end),

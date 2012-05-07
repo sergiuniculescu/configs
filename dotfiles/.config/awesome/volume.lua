@@ -4,6 +4,7 @@ require("beautiful")
 --beautiful.init("/home/sergiu/.config/awesome/theme.lua")
 beautiful.init("/home/sergiu/.config/awesome/theme2.lua")
 
+
 --/// Volume Config and widget
 volumecfg = {}
 volumecfg.cardid  = 0

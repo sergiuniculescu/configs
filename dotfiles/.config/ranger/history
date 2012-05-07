@@ -8,13 +8,23 @@ find inch
 
 rename .Xresources
 mkdir .fonts
-open_with 
 mkdir .vim
 mkdir syntax
 mkdir y
 mkdir bkp
-delete seriously? 
 mkdir tmp
 rename backup
 rename .vimrc2
+open_with zathura
+open_with feh
+rename Box
+open_with vlc
+open_with mplayer
+delete seriously?  
+rename msvcr80.dll.bkp
+rename msvcr80.dll
+search mscms
+open_with 
+delete seriously? 
 delete seriously? y
+rename Marco Bayley - Caliente (Original Mix).mp3

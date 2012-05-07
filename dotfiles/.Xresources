@@ -118,7 +118,8 @@ URxvt.color7      : #dcdccc
 URxvt.color15     : #ffffff
 !
 !!TXT Normal, Normal, Cursor
-URxvt.background  : #1f1f1f
+!URxvt.background  : #1f1f1f
+URxvt.background  : #000000
 URxvt.foreground  : #dcdccc
 URxvt.cursorColor : #8faf9f
 !

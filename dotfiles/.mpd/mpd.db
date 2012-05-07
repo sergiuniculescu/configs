@@ -1,6 +1,6 @@
 info_begin
 format: 1
-mpd_version: 0.16.7
+mpd_version: 0.16.8
 fs_charset: UTF-8
 tag: Artist
 tag: ArtistSort
@@ -2514,7 +2514,7 @@ mtime: 1334068043
 song_end
 end: Classical Music Top 100
 directory: Club
-mtime: 1334072090
+mtime: 1336314103
 begin: Club
 directory: !!!!!!!!!!!!!
 mtime: 1334068563
@@ -3178,6 +3178,18 @@ Genre: Electronic
 mtime: 1334068599
 song_end
 end: Club/2005 - Forever Faithless The Greatest Hits
+directory: 2012
+mtime: 1336314435
+begin: Club/2012
+song_begin: Casablanca By Low Deep T.MP3
+Time: 267
+mtime: 1334507165
+song_end
+song_begin: Marco Bayley - Caliente (Original Mix).mp3
+Time: 488
+mtime: 1336314192
+song_end
+end: Club/2012
 directory: Dj_Adrian_Eftimie-Live_at_Pasha_(Galati)-LINE-14-10-2006-ADiE
 mtime: 1334068639
 begin: Club/Dj_Adrian_Eftimie-Live_at_Pasha_(Galati)-LINE-14-10-2006-ADiE
@@ -47196,8 +47208,6536 @@ mtime: 1334068847
 song_end
 end: Rock/Jimi Hendrix - 1994 - Blues (FLAC)
 directory: Metal
-mtime: 1334072184
+mtime: 1335287775
 begin: Rock/Metal
+directory: Iron.Maiden-Discography
+mtime: 1335278970
+begin: Rock/Metal/Iron.Maiden-Discography
+directory: Iron_Maiden-17_Numbers_By_The_Beast-2002-rns
+mtime: 1335278970
+begin: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-17_Numbers_By_The_Beast-2002-rns
+song_begin: 01-iron_maiden-iron_maiden_(demo)-rns.mp3
+Time: 244
+Artist: Iron Maiden
+Title: Iron Maiden (demo)
+Album: 17 Numbers By The Beast
+Track: 1
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335281634
+song_end
+song_begin: 02-iron_maiden-phantom_of_the_opera-rns.mp3
+Time: 431
+Artist: Iron Maiden
+Title: Phantom Of The Opera
+Album: 17 Numbers By The Beast
+Track: 2
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335280949
+song_end
+song_begin: 03-iron_maiden-wrathchild-rns.mp3
+Time: 177
+Artist: Iron Maiden
+Title: Wrathchild
+Album: 17 Numbers By The Beast
+Track: 3
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335281671
+song_end
+song_begin: 04-iron_maiden-run_to_the_hills-rns.mp3
+Time: 234
+Artist: Iron Maiden
+Title: Run To The Hills
+Album: 17 Numbers By The Beast
+Track: 4
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335281726
+song_end
+song_begin: 05-iron_maiden-the_trooper-rns.mp3
+Time: 254
+Artist: Iron Maiden
+Title: The Trooper
+Album: 17 Numbers By The Beast
+Track: 5
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335281783
+song_end
+song_begin: 06-iron_maiden-2_minutes_to_midnight-rns.mp3
+Time: 365
+Artist: Iron Maiden
+Title: 2 Minutes To Midnight
+Album: 17 Numbers By The Beast
+Track: 6
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335281866
+song_end
+song_begin: 07-iron_maiden-flight_of_icarus_(live)-rns.mp3
+Time: 224
+Artist: Iron Maiden
+Title: Flight Of Icarus (live)
+Album: 17 Numbers By The Beast
+Track: 7
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335281916
+song_end
+song_begin: 08-iron_maiden-wasted_years-rns.mp3
+Time: 308
+Artist: Iron Maiden
+Title: Wasted Years
+Album: 17 Numbers By The Beast
+Track: 8
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335281987
+song_end
+song_begin: 09-iron_maiden-the_evil_that_men_do-rns.mp3
+Time: 276
+Artist: Iron Maiden
+Title: The Evil That Men Do
+Album: 17 Numbers By The Beast
+Track: 9
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282050
+song_end
+song_begin: 10-iron_maiden-tailgunner-rns.mp3
+Time: 255
+Artist: Iron Maiden
+Title: Tailgunner
+Album: 17 Numbers By The Beast
+Track: 10
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282107
+song_end
+song_begin: 11-iron_maiden-be_quick_or_be_dead-rns.mp3
+Time: 203
+Artist: Iron Maiden
+Title: Be Quick Or Be Dead
+Album: 17 Numbers By The Beast
+Track: 11
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282154
+song_end
+song_begin: 12-iron_maiden-fear_of_the_dark_(live)-rns.mp3
+Time: 411
+Artist: Iron Maiden
+Title: Fear Of The Dark (live)
+Album: 17 Numbers By The Beast
+Track: 12
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282247
+song_end
+song_begin: 13-iron_maiden-afraid_to_shoot_strangers-rns.mp3
+Time: 395
+Artist: Iron Maiden
+Title: Afraid To Shoot Strangers
+Album: 17 Numbers By The Beast
+Track: 13
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282337
+song_end
+song_begin: 14-iron_maiden-man_on_the_edge-rns.mp3
+Time: 253
+Artist: Iron Maiden
+Title: Man On The Edge
+Album: 17 Numbers By The Beast
+Track: 14
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282572
+song_end
+song_begin: 15-iron_maiden-futureal-rns.mp3
+Time: 177
+Artist: Iron Maiden
+Title: Futureal
+Album: 17 Numbers By The Beast
+Track: 15
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282576
+song_end
+song_begin: 16-iron_maiden-the_wicked_man-rns.mp3
+Time: 276
+Artist: Iron Maiden
+Title: The Wicked Man
+Album: 17 Numbers By The Beast
+Track: 16
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282581
+song_end
+song_begin: 17-iron_maiden-the_number_of_the_beast_(live)-rns.mp3
+Time: 303
+Artist: Iron Maiden
+Title: The Number Of the Beast (live)
+Album: 17 Numbers By The Beast
+Track: 17
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282585
+song_end
+playlist_begin: 00-iron_maiden-17_numbers_by_the_beast-2002-rns.m3u
+mtime: 1335281592
+playlist_end
+end: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-17_Numbers_By_The_Beast-2002-rns
+directory: Iron_Maiden-A_Matter_Of_Life_And_Death-2006-FTS
+mtime: 1335278970
+begin: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-A_Matter_Of_Life_And_Death-2006-FTS
+song_begin: 01-iron_maiden-different_world-fts.mp3
+Time: 259
+Artist: Iron Maiden
+Title: Different World
+Album: A Matter Of Life And Death
+Track: 1
+Date: 2006
+Genre: Metal
+mtime: 1335282661
+song_end
+song_begin: 02-iron_maiden-these_colours_dont_run-fts.mp3
+Time: 412
+Artist: Iron Maiden
+Title: These Colours Don't Run
+Album: A Matter Of Life And Death
+Track: 2
+Date: 2006
+Genre: Metal
+mtime: 1335280961
+song_end
+song_begin: 03-iron_maiden-brighter_than_a_thousand_suns-fts.mp3
+Time: 526
+Artist: Iron Maiden
+Title: Brighter Than A Thousand Suns
+Album: A Matter Of Life And Death
+Track: 3
+Date: 2006
+Genre: Metal
+mtime: 1335280976
+song_end
+song_begin: 04-iron_maiden-the_pilgrim-fts.mp3
+Time: 308
+Artist: Iron Maiden
+Title: The Pilgrim
+Album: A Matter Of Life And Death
+Track: 4
+Date: 2006
+Genre: Metal
+mtime: 1335282643
+song_end
+song_begin: 05-iron_maiden-the_longest_day-fts.mp3
+Time: 468
+Artist: Iron Maiden
+Title: The Longest Day
+Album: A Matter Of Life And Death
+Track: 5
+Date: 2006
+Genre: Metal
+mtime: 1335282651
+song_end
+song_begin: 06-iron_maiden-out_of_the_shadows-fts.mp3
+Time: 337
+Artist: Iron Maiden
+Title: Out Of The Shadows
+Album: A Matter Of Life And Death
+Track: 6
+Date: 2006
+Genre: Metal
+mtime: 1335282664
+song_end
+song_begin: 07-iron_maiden-the_reincarnation_of_benjamin_breeg-fts.mp3
+Time: 442
+Artist: Iron Maiden
+Title: The Reincarnation Of Benjamin Breeg
+Album: A Matter Of Life And Death
+Track: 7
+Date: 2006
+Genre: Metal
+mtime: 1335280993
+song_end
+song_begin: 08-iron_maiden-for_the_greater_good_of_god-fts.mp3
+Time: 565
+Artist: Iron Maiden
+Title: For The Greater Good Of God
+Album: A Matter Of Life And Death
+Track: 8
+Date: 2006
+Genre: Metal
+mtime: 1335282660
+song_end
+song_begin: 09-iron_maiden-lord_of_light-fts.mp3
+Time: 445
+Artist: Iron Maiden
+Title: Lord Of Light
+Album: A Matter Of Life And Death
+Track: 9
+Date: 2006
+Genre: Metal
+mtime: 1335282668
+song_end
+song_begin: 10-iron_maiden-the_legacy-fts.mp3
+Time: 563
+Artist: Iron Maiden
+Title: The Legacy
+Album: A Matter Of Life And Death
+Track: 10
+Date: 2006
+Genre: Metal
+mtime: 1335282677
+song_end
+playlist_begin: 00-iron_maiden-a_matter_of_life_and_death-2006-fts.m3u
+mtime: 1335282659
+playlist_end
+end: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-A_Matter_Of_Life_And_Death-2006-FTS
+directory: Iron_Maiden-A_Real_Dead_One-1993-PtE_INT
+mtime: 1335278970
+begin: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-A_Real_Dead_One-1993-PtE_INT
+song_begin: 01-iron_maiden-the_number_of_the_beast-pte.mp3
+Time: 295
+Artist: Iron Maiden
+Title: The Number of the Beast
+Album: A Real Dead One
+Track: 1
+Date: 1993
+Genre: Metal
+mtime: 1335282683
+song_end
+song_begin: 02-iron_maiden-the_trooper-pte.mp3
+Time: 235
+Artist: Iron Maiden
+Title: The Trooper
+Album: A Real Dead One
+Track: 2
+Date: 1993
+Genre: Metal
+mtime: 1335282685
+song_end
+song_begin: 03-iron_maiden-prowler-pte.mp3
+Time: 256
+Artist: Iron Maiden
+Title: Prowler
+Album: A Real Dead One
+Track: 3
+Date: 1993
+Genre: Metal
+mtime: 1335282691
+song_end
+song_begin: 04-iron_maiden-transylvania-pte.mp3
+Time: 266
+Artist: Iron Maiden
+Title: Transylvania
+Album: A Real Dead One
+Track: 4
+Date: 1993
+Genre: Metal
+mtime: 1335282699
+song_end
+song_begin: 05-iron_maiden-remember_tomorrow-pte.mp3
+Time: 353
+Artist: Iron Maiden
+Title: Remember Tomorrow
+Album: A Real Dead One
+Track: 5
+Date: 1993
+Genre: Metal
+mtime: 1335282703
+song_end
+song_begin: 06-iron_maiden-where_eagles_dare-pte.mp3
+Time: 289
+Artist: Iron Maiden
+Title: Where Eagles Dare
+Album: A Real Dead One
+Track: 6
+Date: 1993
+Genre: Metal
+mtime: 1335282707
+song_end
+song_begin: 07-iron_maiden-sanctuary-pte.mp3
+Time: 293
+Artist: Iron Maiden
+Title: Sanctuary
+Album: A Real Dead One
+Track: 7
+Date: 1993
+Genre: Metal
+mtime: 1335282712
+song_end
+song_begin: 08-iron_maiden-running_free-pte.mp3
+Time: 229
+Artist: Iron Maiden
+Title: Running Free
+Album: A Real Dead One
+Track: 8
+Date: 1993
+Genre: Metal
+mtime: 1335282720
+song_end
+song_begin: 09-iron_maiden-run_to_the_hills-pte.mp3
+Time: 238
+Artist: Iron Maiden
+Title: Run to the Hills
+Album: A Real Dead One
+Track: 9
+Date: 1993
+Genre: Metal
+mtime: 1335282725
+song_end
+song_begin: 10-iron_maiden-2_minutes_to_midnight-pte.mp3
+Time: 338
+Artist: Iron Maiden
+Title: 2 Minutes to Midnight
+Album: A Real Dead One
+Track: 10
+Date: 1993
+Genre: Metal
+mtime: 1335282728
+song_end
+song_begin: 11-iron_maiden-iron_maiden-pte.mp3
+Time: 325
+Artist: Iron Maiden
+Title: Iron Maiden
+Album: A Real Dead One
+Track: 11
+Date: 1993
+Genre: Metal
+mtime: 1335282733
+song_end
+song_begin: 12-iron_maiden-hallowed_be_thy_name-pte.mp3
+Time: 472
+Artist: Iron Maiden
+Title: Hallowed Be Thy Name
+Album: A Real Dead One
+Track: 12
+Date: 1993
+Genre: Metal
+mtime: 1335282776
+song_end
+playlist_begin: 00-iron_maiden-a_real_dead_one-1993-pte_int.m3u
+mtime: 1335282674
+playlist_end
+end: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-A_Real_Dead_One-1993-PtE_INT
+directory: Iron_Maiden-A_Real_Live_One-1993-PtE_INT
+mtime: 1335278970
+begin: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-A_Real_Live_One-1993-PtE_INT
+song_begin: 01-iron_maiden-be_quick_or_be_dead-pte.mp3
+Time: 197
+Artist: Iron Maiden
+Title: Be Quick or Be Dead
+Album: A Real Live One
+Track: 1
+Date: 1993
+Genre: Metal
+mtime: 1335282855
+song_end
+song_begin: 02-iron_maiden-form_here_to_eterrnity-pte.mp3
+Time: 260
+Artist: Iron Maiden
+Title: Form Here to Eterrnity
+Album: A Real Live One
+Track: 2
+Date: 1993
+Genre: Metal
+mtime: 1335282862
+song_end
+song_begin: 03-iron_maiden-can_i_play_with_madness-pte.mp3
+Time: 283
+Artist: Iron Maiden
+Title: Can I Play with Madness
+Album: A Real Live One
+Track: 3
+Date: 1993
+Genre: Metal
+mtime: 1335282900
+song_end
+song_begin: 04-iron_maiden-wasting_love-pte.mp3
+Time: 348
+Artist: Iron Maiden
+Title: Wasting Love
+Album: A Real Live One
+Track: 4
+Date: 1993
+Genre: Metal
+mtime: 1335282867
+song_end
+song_begin: 05-iron_maiden-tail_gunner-pte.mp3
+Time: 250
+Artist: Iron Maiden
+Title: Tail Gunner
+Album: A Real Live One
+Track: 5
+Date: 1993
+Genre: Metal
+mtime: 1335282871
+song_end
+song_begin: 06-iron_maiden-the_evil_that_men_do-pte.mp3
+Time: 326
+Artist: Iron Maiden
+Title: The Evil that Men Do
+Album: A Real Live One
+Track: 6
+Date: 1993
+Genre: Metal
+mtime: 1335282877
+song_end
+song_begin: 07-iron_maiden-afraid_to_shoot_strangers-pte.mp3
+Time: 408
+Artist: Iron Maiden
+Title: Afraid to Shoot Strangers
+Album: A Real Live One
+Track: 7
+Date: 1993
+Genre: Metal
+mtime: 1335282885
+song_end
+song_begin: 08-iron_maiden-bring_your_daughter____to_the_slaughter-pte.mp3
+Time: 318
+Artist: Iron Maiden
+Title: Bring Your Daughter... to the
+Album: A Real Live One
+Track: 8
+Date: 1993
+Genre: Metal
+mtime: 1335282889
+song_end
+song_begin: 09-iron_maiden-heaven_can_wait-pte.mp3
+Time: 449
+Artist: Iron Maiden
+Title: Heaven Can Wait
+Album: A Real Live One
+Track: 9
+Date: 1993
+Genre: Metal
+mtime: 1335282896
+song_end
+song_begin: 10-iron_maiden-the_clairvoyant-pte.mp3
+Time: 270
+Artist: Iron Maiden
+Title: The Clairvoyant
+Album: A Real Live One
+Track: 10
+Date: 1993
+Genre: Metal
+mtime: 1335282899
+song_end
+song_begin: 11-iron_maiden-fear_of_the_dark-pte.mp3
+Time: 431
+Artist: Iron Maiden
+Title: Fear of the Dark
+Album: A Real Live One
+Track: 11
+Date: 1993
+Genre: Metal
+mtime: 1335282906
+song_end
+playlist_begin: 00-iron_maiden-a_real_live_one-1993-pte_int.m3u
+mtime: 1335282774
+playlist_end
+end: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-A_Real_Live_One-1993-PtE_INT
+directory: Iron_Maiden-Anatomy_of_Evil-2003-ATX
+mtime: 1335278970
+begin: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Anatomy_of_Evil-2003-ATX
+song_begin: 01-iron_maiden-run_to_the_hils-atx.mp3
+Time: 232
+Artist: Iron Maiden
+Title: run to the hils
+Album: Anatomy of Evil
+Track: 1
+Date: 2003
+Genre: Other
+mtime: 1335282589
+song_end
+song_begin: 02-iron_maiden-the_number_of_the_beast-atx.mp3
+Time: 268
+Artist: Iron Maiden
+Title: the number of the beast
+Album: Anatomy of Evil
+Track: 2
+Date: 2003
+Genre: Other
+mtime: 1335282593
+song_end
+song_begin: 03-iron_maiden-two_minutes_to_midnight-atx.mp3
+Time: 393
+Artist: Iron Maiden
+Title: two minutes to midnight
+Album: Anatomy of Evil
+Track: 3
+Date: 2003
+Genre: Other
+mtime: 1335282602
+song_end
+song_begin: 04-iron_maiden-wasted_years-atx.mp3
+Time: 300
+Artist: Iron Maiden
+Title: wasted years
+Album: Anatomy of Evil
+Track: 4
+Date: 2003
+Genre: Other
+mtime: 1335282606
+song_end
+song_begin: 05-iron_maiden-hallowed_be_thy_name-atx.mp3
+Time: 414
+Artist: Iron Maiden
+Title: hallowed be thy name
+Album: Anatomy of Evil
+Track: 5
+Date: 2003
+Genre: Other
+mtime: 1335282612
+song_end
+song_begin: 06-iron_maiden-powerslave-atx.mp3
+Time: 406
+Artist: Iron Maiden
+Title: powerslave
+Album: Anatomy of Evil
+Track: 6
+Date: 2003
+Genre: Other
+mtime: 1335282618
+song_end
+song_begin: 07-iron_maiden-aces_high-atx.mp3
+Time: 287
+Artist: Iron Maiden
+Title: aces high
+Album: Anatomy of Evil
+Track: 7
+Date: 2003
+Genre: Other
+mtime: 1335282631
+song_end
+song_begin: 08-iron_maiden-the_trooper-atx.mp3
+Time: 270
+Artist: Iron Maiden
+Title: the trooper
+Album: Anatomy of Evil
+Track: 8
+Date: 2003
+Genre: Other
+mtime: 1335282627
+song_end
+song_begin: 09-iron_maiden-iron_maiden-atx.mp3
+Time: 242
+Artist: Iron Maiden
+Title: iron maiden
+Album: Anatomy of Evil
+Track: 9
+Date: 2003
+Genre: Other
+mtime: 1335282632
+song_end
+song_begin: 10-iron_maiden-anatomy_of_evil-atx.mp3
+Time: 212
+Artist: Iron Maiden
+Title: anatomy of evil
+Album: Anatomy of Evil
+Track: 10
+Date: 2003
+Genre: Other
+mtime: 1335282659
+song_end
+playlist_begin: 00-iron_maiden-anatomy_of_evil-2003-atx.m3u
+mtime: 1335282584
+playlist_end
+end: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Anatomy_of_Evil-2003-ATX
+directory: Iron_Maiden-B-Sides_Of_The_Beast_Part_1-Bootleg-2001-BiC
+mtime: 1335278970
+begin: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-B-Sides_Of_The_Beast_Part_1-Bootleg-2001-BiC
+song_begin: 01_-_iron_maiden-sanctuary_(from_7)-bic.mp3
+Time: 194
+Artist: Iron Maiden
+Title: Sanctuary (from 7")
+Album: B-Sides Of The Beast Part 1
+Track: 1
+Date: 2001
+Genre: Metal
+mtime: 1335282910
+song_end
+song_begin: 02_-_iron_maiden-burning_ambition_(from_7)-bic.mp3
+Time: 161
+Artist: Iron Maiden
+Title: Burning Ambition (from 7")
+Album: B-Sides Of The Beast Part 1
+Track: 2
+Date: 2001
+Genre: Metal
+mtime: 1335282911
+song_end
+song_begin: 03_-_iron_maiden-twilight_zone_(from_7)-bic.mp3
+Time: 155
+Artist: Iron Maiden
+Title: Twilight Zone (from 7")
+Album: B-Sides Of The Beast Part 1
+Track: 3
+Date: 2001
+Genre: Metal
+mtime: 1335282913
+song_end
+song_begin: 04_-_iron_maiden-woman_in_uniform_(from_7)-bic.mp3
+Time: 190
+Artist: Iron Maiden
+Title: Woman In Uniform (from 7")
+Album: B-Sides Of The Beast Part 1
+Track: 4
+Date: 2001
+Genre: Metal
+mtime: 1335282916
+song_end
+song_begin: 05_-_iron_maiden-invasion_(from_7)-bic.mp3
+Time: 158
+Artist: Iron Maiden
+Title: Invasion (from 7")
+Album: B-Sides Of The Beast Part 1
+Track: 5
+Date: 2001
+Genre: Metal
+mtime: 1335282918
+song_end
+song_begin: 06_-_iron_maiden-total_eclipse_(from_7)-bic.mp3
+Time: 267
+Artist: Iron Maiden
+Title: Total Eclipse (from 7")
+Album: B-Sides Of The Beast Part 1
+Track: 6
+Date: 2001
+Genre: Metal
+mtime: 1335282926
+song_end
+song_begin: 07_-_iron_maiden-ive_got_the_fire_(from_7)-bic.mp3
+Time: 159
+Artist: Iron Maiden
+Title: I've Got The Fire (from 7")
+Album: B-Sides Of The Beast Part 1
+Track: 7
+Date: 2001
+Genre: Metal
+mtime: 1335282960
+song_end
+song_begin: 08_-_iron_maiden-cross_eyed_mary_(from_7)-bic.mp3
+Time: 233
+Artist: Iron Maiden
+Title: Cross Eyed Mary (from 7")
+Album: B-Sides Of The Beast Part 1
+Track: 8
+Date: 2001
+Genre: Metal
+mtime: 1335282924
+song_end
+song_begin: 09_-_iron_maiden-rainbows_gold_(from_7)-bic.mp3
+Time: 295
+Artist: Iron Maiden
+Title: Rainbow's Gold (from 7")
+Album: B-Sides Of The Beast Part 1
+Track: 9
+Date: 2001
+Genre: Metal
+mtime: 1335282929
+song_end
+song_begin: 10_-_iron_maiden-king_of_twilight_(from_7)-bic.mp3
+Time: 291
+Artist: Iron Maiden
+Title: King Of Twilight (from 7")
+Album: B-Sides Of The Beast Part 1
+Track: 10
+Date: 2001
+Genre: Metal
+mtime: 1335282933
+song_end
+song_begin: 11_-_iron_maiden-reach_out_(from_7)-bic.mp3
+Time: 210
+Artist: Iron Maiden
+Title: Reach Out (from 7")
+Album: B-Sides Of The Beast Part 1
+Track: 11
+Date: 2001
+Genre: Metal
+mtime: 1335282936
+song_end
+song_begin: 12_-_iron_maiden-juanita_(from_7)-bic.mp3
+Time: 226
+Artist: Iron Maiden
+Title: Juanita (from 7")
+Album: B-Sides Of The Beast Part 1
+Track: 12
+Date: 2001
+Genre: Metal
+mtime: 1335282940
+song_end
+song_begin: 13_-_iron_maiden-sherriff_of_huddersfield_(from_12)-bic.mp3
+Time: 214
+Artist: Iron Maiden
+Title: Sherriff Of Huddersfield (from
+Album: B-Sides Of The Beast Part 1
+Track: 13
+Date: 2001
+Genre: Metal
+mtime: 1335282944
+song_end
+song_begin: 14_-_iron_maiden-that_girl_(from_7)-bic.mp3
+Time: 303
+Artist: Iron Maiden
+Title: That Girl (from 7")
+Album: B-Sides Of The Beast Part 1
+Track: 14
+Date: 2001
+Genre: Metal
+mtime: 1335282951
+song_end
+song_begin: 15_-_iron_maiden-black_bart_blues_(from_7)-bic.mp3
+Time: 246
+Artist: Iron Maiden
+Title: Black Bart Blues (from 7")
+Album: B-Sides Of The Beast Part 1
+Track: 15
+Date: 2001
+Genre: Metal
+mtime: 1335282953
+song_end
+song_begin: 16_-_iron_maiden-massacre_(from_12)-bic.mp3
+Time: 173
+Artist: Iron Maiden
+Title: Massacre (from 12")
+Album: B-Sides Of The Beast Part 1
+Track: 16
+Date: 2001
+Genre: Metal
+mtime: 1335282957
+song_end
+song_begin: 17_-_iron_maiden-all_in_your_mind_(from_7)-bic.mp3
+Time: 271
+Artist: Iron Maiden
+Title: All In Your Mind (from 7")
+Album: B-Sides Of The Beast Part 1
+Track: 17
+Date: 2001
+Genre: Metal
+mtime: 1335282960
+song_end
+song_begin: 18_-_iron_maiden-kill_me_ce_soir_(from_12)-bic.mp3
+Time: 377
+Artist: Iron Maiden
+Title: Kill Me Ce Soir (from 12")
+Album: B-Sides Of The Beast Part 1
+Track: 18
+Date: 2001
+Genre: Metal
+mtime: 1335282964
+song_end
+song_begin: 19_-_iron_maiden-im_a_mover_(from_7)-bic.mp3
+Time: 209
+Artist: Iron Maiden
+Title: I'm A Mover (from 7")
+Album: B-Sides Of The Beast Part 1
+Track: 19
+Date: 2001
+Genre: Metal
+mtime: 1335282968
+song_end
+song_begin: 20_-_iron_maiden-communication_breakdown__(from_12)-bic.mp3
+Time: 161
+Artist: Iron Maiden
+Title: Communication Breakdown  (from
+Album: B-Sides Of The Beast Part 1
+Track: 20
+Date: 2001
+Genre: Metal
+mtime: 1335282969
+song_end
+playlist_begin: 00_-_iron_maiden-b-sides_of_the_beast_part_1-bootleg-2001-bic.m3u
+mtime: 1335282903
+playlist_end
+end: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-B-Sides_Of_The_Beast_Part_1-Bootleg-2001-BiC
+directory: Iron_Maiden-B-Sides_Of_The_Beast_Part_2-Bootleg-2001-BiC
+mtime: 1335278970
+begin: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-B-Sides_Of_The_Beast_Part_2-Bootleg-2001-BiC
+song_begin: 01_-_iron_maiden-prowler_88_(from_7)-bic.mp3
+Time: 247
+Artist: Iron Maiden
+Title: Prowler '88 (from 7")
+Album: B-Sides Of The Beast Part 2
+Track: 1
+Date: 2001
+Genre: Metal
+mtime: 1335281028
+song_end
+song_begin: 02_-_iron_maiden-charlotte_the_harlot_88_(from_12)-bic.mp3
+Time: 250
+Artist: Iron Maiden
+Title: Charlotte The Harlot '88 (from
+Album: B-Sides Of The Beast Part 2
+Track: 2
+Date: 2001
+Genre: Metal
+mtime: 1335281086
+song_end
+song_begin: 03_-_iron_maiden-nodding_donkey_blues_(from_7)-bic.mp3
+Time: 198
+Artist: Iron Maiden
+Title: Nodding Donkey Blues (from 7")
+Album: B-Sides Of The Beast Part 2
+Track: 3
+Date: 2001
+Genre: Metal
+mtime: 1335281132
+song_end
+song_begin: 04_-_iron_maiden-space_station_no._5_(from_12)-bic.mp3
+Time: 227
+Artist: Iron Maiden
+Title: Space Station No. 5 (from 12")
+Album: B-Sides Of The Beast Part 2
+Track: 4
+Date: 2001
+Genre: Metal
+mtime: 1335281183
+song_end
+song_begin: 05_-_iron_maiden-i_cant_see_my_feeling_(from_7)-bic.mp3
+Time: 229
+Artist: Iron Maiden
+Title: I Can't See My Feeling (from 7
+Album: B-Sides Of The Beast Part 2
+Track: 5
+Date: 2001
+Genre: Metal
+mtime: 1335281236
+song_end
+song_begin: 06_-_iron_maiden-roll_over_vic_vella_(from_12)-bic.mp3
+Time: 287
+Artist: Iron Maiden
+Title: Roll Over Vic Vella (from 12")
+Album: B-Sides Of The Beast Part 2
+Track: 6
+Date: 2001
+Genre: Metal
+mtime: 1335282967
+song_end
+song_begin: 07_-_iron_maiden-sanctuary_(metal_for_muthas_version)-bic.mp3
+Time: 213
+Artist: Iron Maiden
+Title: Sanctuary (Metal For Muthas Ve
+Album: B-Sides Of The Beast Part 2
+Track: 7
+Date: 2001
+Genre: Metal
+mtime: 1335282974
+song_end
+song_begin: 08_-_iron_maiden-wrathchild_(metal_for_muthas_version)-bic.mp3
+Time: 186
+Artist: Iron Maiden
+Title: Wrathchild (Metal For Muthas V
+Album: B-Sides Of The Beast Part 2
+Track: 8
+Date: 2001
+Genre: Metal
+mtime: 1335282974
+song_end
+song_begin: 09_-_iron_maiden-justice_of_the_peace-bic.mp3
+Time: 204
+Artist: Iron Maiden
+Title: Justice Of The Peace
+Album: B-Sides Of The Beast Part 2
+Track: 9
+Date: 2001
+Genre: Metal
+mtime: 1335282977
+song_end
+song_begin: 10_-_iron_maiden-i_live_my_way_(from_12)-bic.mp3
+Time: 228
+Artist: Iron Maiden
+Title: I Live My Way (from 12")
+Album: B-Sides Of The Beast Part 2
+Track: 10
+Date: 2001
+Genre: Metal
+mtime: 1335282982
+song_end
+song_begin: 11_-_iron_maiden-judgement_day-bic.mp3
+Time: 239
+Artist: Iron Maiden
+Title: Judgement Day
+Album: B-Sides Of The Beast Part 2
+Track: 11
+Date: 2001
+Genre: Metal
+mtime: 1335282986
+song_end
+song_begin: 12_-_iron_maiden-my_generation-bic.mp3
+Time: 207
+Artist: Iron Maiden
+Title: My Generation
+Album: B-Sides Of The Beast Part 2
+Track: 12
+Date: 2001
+Genre: Metal
+mtime: 1335282988
+song_end
+song_begin: 13_-_iron_maiden-doctor_doctor-bic.mp3
+Time: 290
+Artist: Iron Maiden
+Title: Doctor, Doctor
+Album: B-Sides Of The Beast Part 2
+Track: 13
+Date: 2001
+Genre: Metal
+mtime: 1335282991
+song_end
+song_begin: 14_-_iron_maiden-the_bleeding_house-bic.mp3
+Time: 318
+Artist: Iron Maiden
+Title: The Bleeding House
+Album: B-Sides Of The Beast Part 2
+Track: 14
+Date: 2001
+Genre: Metal
+mtime: 1335282995
+song_end
+song_begin: 15_-_iron_maiden-no_way_out._to_be_continued-bic.mp3
+Time: 450
+Artist: Iron Maiden
+Title: No Way Out.. To Be Continued
+Album: B-Sides Of The Beast Part 2
+Track: 15
+Date: 2001
+Genre: Metal
+mtime: 1335283001
+song_end
+song_begin: 16_-_iron_maiden-winds_of_change-bic.mp3
+Time: 253
+Artist: Iron Maiden
+Title: Winds Of Change
+Album: B-Sides Of The Beast Part 2
+Track: 16
+Date: 2001
+Genre: Metal
+mtime: 1335283005
+song_end
+song_begin: 17_-_iron_maiden-spirit_of_joy-bic.mp3
+Time: 193
+Artist: Iron Maiden
+Title: Spirit Of Joy
+Album: B-Sides Of The Beast Part 2
+Track: 17
+Date: 2001
+Genre: Metal
+mtime: 1335283008
+song_end
+song_begin: 18_-_iron_maiden-ghost_of_cain-bic.mp3
+Time: 252
+Artist: Iron Maiden
+Title: Ghost Of Cain
+Album: B-Sides Of The Beast Part 2
+Track: 18
+Date: 2001
+Genre: Metal
+mtime: 1335283013
+song_end
+playlist_begin: 00_-_iron_maiden-b-sides_of_the_beast_part_2-bootleg-2001-bic.m3u
+mtime: 1335280910
+playlist_end
+end: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-B-Sides_Of_The_Beast_Part_2-Bootleg-2001-BiC
+directory: Iron_Maiden-Be_Quick_or_Be_Dead-(Live_DVDA)-2005-GTi
+mtime: 1335278970
+begin: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Be_Quick_or_Be_Dead-(Live_DVDA)-2005-GTi
+song_begin: 01-iron_maiden-be_quick_or_be_dead_(live)-gti.mp3
+Time: 118
+Artist: Iron Maiden
+Title: Be Quick or Be Dead (Live)
+Album: Be Quick or Be Dead  (Live_DVD
+Date: 2005
+Genre: Metal
+mtime: 1335283140
+song_end
+song_begin: 02-iron_maiden-the_tropper_(live)-gti.mp3
+Time: 205
+Artist: Iron Maiden
+Title: The Tropper (Live)
+Album: Be Quick or Be Dead  (Live_DVD
+Date: 2005
+Genre: Metal
+mtime: 1335280601
+song_end
+song_begin: 03-iron_maiden-the_evil_that_man_does_(live)-gti.mp3
+Time: 421
+Artist: Iron Maiden
+Title: The Evil that Man Does (Live)
+Album: Be Quick or Be Dead  (Live_DVD
+Date: 2005
+Genre: Metal
+mtime: 1335280613
+song_end
+song_begin: 04-iron_maiden-the_clairvoyant_(live)-gti.mp3
+Time: 268
+Artist: Iron Maiden
+Title: The Clairvoyant (Live)
+Album: Be Quick or Be Dead  (Live_DVD
+Date: 2005
+Genre: Metal
+mtime: 1335280621
+song_end
+song_begin: 05-iron_maiden-hallowed_by_thy_name_(live)-gti.mp3
+Time: 261
+Artist: Iron Maiden
+Title: Hallowed by Thy Name (Live)
+Album: Be Quick or Be Dead  (Live_DVD
+Date: 2005
+Genre: Metal
+mtime: 1335280629
+song_end
+song_begin: 06-iron_maiden-wrathchild_(live)-gti.mp3
+Time: 738
+Artist: Iron Maiden
+Title: Wrathchild (Live)
+Album: Be Quick or Be Dead  (Live_DVD
+Date: 2005
+Genre: Metal
+mtime: 1335280798
+song_end
+song_begin: 07-iron_maiden-transylvania_(live)-gti.mp3
+Time: 172
+Artist: Iron Maiden
+Title: Transylvania (Live)
+Album: Be Quick or Be Dead  (Live_DVD
+Date: 2005
+Genre: Metal
+mtime: 1335280803
+song_end
+song_begin: 08-iron_maiden-from_here_to_eternity_(live)-gti.mp3
+Time: 226
+Artist: Iron Maiden
+Title: From Here to Eternity (Live)
+Album: Be Quick or Be Dead  (Live_DVD
+Date: 2005
+Genre: Metal
+mtime: 1335280810
+song_end
+song_begin: 09-iron_maiden-fear_of_the_dark_(live)-gti.mp3
+Time: 236
+Artist: Iron Maiden
+Title: Fear of the Dark (Live)
+Album: Be Quick or Be Dead  (Live_DVD
+Date: 2005
+Genre: Metal
+mtime: 1335280816
+song_end
+song_begin: 10-iron_maiden-the_number_of_the_beast_(live)-gti.mp3
+Time: 782
+Artist: Iron Maiden
+Title: The Number of the Beast (Live)
+Album: Be Quick or Be Dead  (Live_DVD
+Date: 2005
+Genre: Metal
+mtime: 1335280839
+song_end
+song_begin: 11-iron_maiden-bring_your_daughter_to_the_slaughter_(live)-gti.mp3
+Time: 292
+Artist: Iron Maiden
+Title: Bring Your Daughter to the Sla
+Album: Be Quick or Be Dead  (Live_DVD
+Date: 2005
+Genre: Metal
+mtime: 1335280845
+song_end
+song_begin: 12-iron_maiden-two_minutes_to_midnight_(live)-gti.mp3
+Time: 746
+Artist: Iron Maiden
+Title: Two Minutes to Midnight (Live)
+Album: Be Quick or Be Dead  (Live_DVD
+Date: 2005
+Genre: Metal
+mtime: 1335280865
+song_end
+song_begin: 13-iron_maiden-afraid_to_shoot_strangers_(live)-gti.mp3
+Time: 340
+Artist: Iron Maiden
+Title: Afraid to Shoot Strangers (Liv
+Album: Be Quick or Be Dead  (Live_DVD
+Date: 2005
+Genre: Metal
+mtime: 1335280873
+song_end
+song_begin: 14-iron_maiden-heaven_can_wait_(live)-gti.mp3
+Time: 392
+Artist: Iron Maiden
+Title: Heaven Can Wait (Live)
+Album: Be Quick or Be Dead  (Live_DVD
+Date: 2005
+Genre: Metal
+mtime: 1335280883
+song_end
+song_begin: 15-iron_maiden-sanctuary_(live)-gti.mp3
+Time: 435
+Artist: Iron Maiden
+Title: Sanctuary (Live)
+Album: Be Quick or Be Dead  (Live_DVD
+Date: 2005
+Genre: Metal
+mtime: 1335280894
+song_end
+song_begin: 16-iron_maiden-run_to_the_hills_(live)-gti.mp3
+Time: 261
+Artist: Iron Maiden
+Title: Run to the Hills (Live)
+Album: Be Quick or Be Dead  (Live_DVD
+Date: 2005
+Genre: Metal
+mtime: 1335280901
+song_end
+song_begin: 17-iron_maiden-iron_maiden_(live)-gti.mp3
+Time: 237
+Artist: Iron Maiden
+Title: Iron Maiden (Live)
+Album: Be Quick or Be Dead  (Live_DVD
+Date: 2005
+Genre: Metal
+mtime: 1335280907
+song_end
+playlist_begin: 00-iron_maiden-be_quick_or_be_dead-(live_dvda)-2005-gti.m3u
+mtime: 1335283135
+playlist_end
+end: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Be_Quick_or_Be_Dead-(Live_DVDA)-2005-GTi
+directory: Iron_Maiden-Best_Of_The_Beast_(2CD-Version)-1996-FLF
+mtime: 1335278970
+begin: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Best_Of_The_Beast_(2CD-Version)-1996-FLF
+directory: Cd1
+mtime: 1335278970
+begin: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Best_Of_The_Beast_(2CD-Version)-1996-FLF/Cd1
+song_begin: Cd1-01-iron_maiden--virus-flf.mp3
+Time: 373
+Artist: Iron Maiden
+Title: Virus
+Album: Best Of The Beast (2CD-Version
+Date: 1996
+Genre: Metal
+mtime: 1335283021
+song_end
+song_begin: Cd1-02-iron_maiden--sign_of_the_cross-flf.mp3
+Time: 676
+Artist: Iron Maiden
+Title: Sign Of The Cross
+Album: Best Of The Beast (2CD-Version
+Date: 1996
+Genre: Metal
+mtime: 1335283029
+song_end
+song_begin: Cd1-03-iron_maiden--men_on_the_edge-flf.mp3
+Time: 253
+Artist: Iron Maiden
+Title: Men On The Edge
+Album: Best Of The Beast (2CD-Version
+Date: 1996
+Genre: Metal
+mtime: 1335283032
+song_end
+song_begin: Cd1-04-iron_maiden--afraid_to_shoot_strangers_(live)-flf.mp3
+Time: 409
+Artist: Iron Maiden
+Title: Afraid To Shoot Strangers (Liv
+Album: Best Of The Beast (2CD-Version
+Date: 1996
+Genre: Metal
+mtime: 1335283038
+song_end
+song_begin: Cd1-05-iron_maiden--be_quick_or_be_dead-flf.mp3
+Time: 203
+Artist: Iron Maiden
+Title: Be Quick Or Be Dead
+Album: Best Of The Beast (2CD-Version
+Date: 1996
+Genre: Metal
+mtime: 1335283042
+song_end
+song_begin: Cd1-06-iron_maiden--fear_of_the_dark-flf.mp3
+Time: 443
+Artist: Iron Maiden
+Title: Fear Of The Dark
+Album: Best Of The Beast (2CD-Version
+Date: 1996
+Genre: Metal
+mtime: 1335283049
+song_end
+song_begin: Cd1-07-iron_maiden--bring_your_daughter_to_the_slaughter-flf.mp3
+Time: 285
+Artist: Iron Maiden
+Title: Bring Your Daughter To The Sla
+Album: Best Of The Beast (2CD-Version
+Date: 1996
+Genre: Metal
+mtime: 1335283054
+song_end
+song_begin: Cd1-08-iron_maiden--holy_smoke-flf.mp3
+Time: 229
+Artist: Iron Maiden
+Title: Holy Smoke
+Album: Best Of The Beast (2CD-Version
+Date: 1996
+Genre: Metal
+mtime: 1335283056
+song_end
+song_begin: Cd1-09-iron_maiden--the_clairvoyant-flf.mp3
+Time: 267
+Artist: Iron Maiden
+Title: The Clairvoyant
+Album: Best Of The Beast (2CD-Version
+Date: 1996
+Genre: Metal
+mtime: 1335283059
+song_end
+song_begin: Cd1-10-iron_maiden--can_i_play_with_madness-flf.mp3
+Time: 212
+Artist: Iron Maiden
+Title: Can I Play With Madness
+Album: Best Of The Beast (2CD-Version
+Date: 1996
+Genre: Metal
+mtime: 1335283062
+song_end
+song_begin: Cd1-11-iron_maiden--the_evil_that_men_do-flf.mp3
+Time: 275
+Artist: Iron Maiden
+Title: The Evil That Men Do
+Album: Best Of The Beast (2CD-Version
+Date: 1996
+Genre: Metal
+mtime: 1335283092
+song_end
+song_begin: Cd1-12-iron_maiden--heaven_can_wait-flf.mp3
+Time: 442
+Artist: Iron Maiden
+Title: Heaven Can Wait
+Album: Best Of The Beast (2CD-Version
+Date: 1996
+Genre: Metal
+mtime: 1335283102
+song_end
+song_begin: Cd1-13-iron_maiden--wasted_years-flf.mp3
+Time: 307
+Artist: Iron Maiden
+Title: Wasted Years
+Album: Best Of The Beast (2CD-Version
+Date: 1996
+Genre: Metal
+mtime: 1335283070
+song_end
+playlist_begin: Cd1-00-iron_maiden--best_of_the_beast_(2cd-version)-flf.m3u
+mtime: 1335283012
+playlist_end
+end: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Best_Of_The_Beast_(2CD-Version)-1996-FLF/Cd1
+directory: Cd2
+mtime: 1335278970
+begin: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Best_Of_The_Beast_(2CD-Version)-1996-FLF/Cd2
+song_begin: Cd2-01-iron_maiden--rime_of_the_ancient_mariner_(live)-flf.mp3
+Time: 806
+Artist: Iron Maiden
+Title: Rime Of The Ancient Mariner (L
+Album: Best Of The Beast (2CD-Version
+Date: 1996
+Genre: Metal
+mtime: 1335283082
+song_end
+song_begin: Cd2-02-iron_maiden--running_free_(live)-flf.mp3
+Time: 209
+Artist: Iron Maiden
+Title: Running Free (live)
+Album: Best Of The Beast (2CD-Version
+Date: 1996
+Genre: Metal
+mtime: 1335283084
+song_end
+song_begin: Cd2-03-iron_maiden--2_minutes_to_midnight-flf.mp3
+Time: 364
+Artist: Iron Maiden
+Title: 2 Minutes To Midnight
+Album: Best Of The Beast (2CD-Version
+Date: 1996
+Genre: Metal
+mtime: 1335283089
+song_end
+song_begin: Cd2-04-iron_maiden--aces_high-flf.mp3
+Time: 272
+Artist: Iron Maiden
+Title: Aces High
+Album: Best Of The Beast (2CD-Version
+Date: 1996
+Genre: Metal
+mtime: 1335283092
+song_end
+song_begin: Cd2-05-iron_maiden--where_eagles_dare-flf.mp3
+Time: 373
+Artist: Iron Maiden
+Title: Where Eagles Dare
+Album: Best Of The Beast (2CD-Version
+Date: 1996
+Genre: Metal
+mtime: 1335283098
+song_end
+song_begin: Cd2-06-iron_maiden--the_trooper-flf.mp3
+Time: 255
+Artist: Iron Maiden
+Title: The Trooper
+Album: Best Of The Beast (2CD-Version
+Date: 1996
+Genre: Metal
+mtime: 1335283105
+song_end
+song_begin: Cd2-07-iron_maiden--the_number_of_the_beast-flf.mp3
+Time: 294
+Artist: Iron Maiden
+Title: The Number Of The Beast
+Album: Best Of The Beast (2CD-Version
+Date: 1996
+Genre: Metal
+mtime: 1335283110
+song_end
+song_begin: Cd2-08-iron_maiden--run_to_the_hills-flf.mp3
+Time: 236
+Artist: Iron Maiden
+Title: Run To The Hills
+Album: Best Of The Beast (2CD-Version
+Date: 1996
+Genre: Metal
+mtime: 1335283111
+song_end
+song_begin: Cd2-09-iron_maiden--hallowed_be_thy_name-flf.mp3
+Time: 435
+Artist: Iron Maiden
+Title: Hallowed Be Thy Name
+Album: Best Of The Beast (2CD-Version
+Date: 1996
+Genre: Metal
+mtime: 1335283150
+song_end
+song_begin: Cd2-10-iron_maiden--wrathchild-flf.mp3
+Time: 177
+Artist: Iron Maiden
+Title: Wrathchild
+Album: Best Of The Beast (2CD-Version
+Date: 1996
+Genre: Metal
+mtime: 1335283123
+song_end
+song_begin: Cd2-11-iron_maiden--phantom_of_the_opera-flf.mp3
+Time: 431
+Artist: Iron Maiden
+Title: Phantom Of The Opera
+Album: Best Of The Beast (2CD-Version
+Date: 1996
+Genre: Metal
+mtime: 1335283125
+song_end
+song_begin: Cd2-12-iron_maiden--sanctuary-flf.mp3
+Time: 196
+Artist: Iron Maiden
+Title: Sanctuary
+Album: Best Of The Beast (2CD-Version
+Date: 1996
+Genre: Metal
+mtime: 1335283128
+song_end
+song_begin: Cd2-13-iron_maiden--strange_world-flf.mp3
+Time: 324
+Artist: Iron Maiden
+Title: Strange World
+Album: Best Of The Beast (2CD-Version
+Date: 1996
+Genre: Metal
+mtime: 1335283133
+song_end
+song_begin: Cd2-14-iron_maiden--iron_maiden-flf.mp3
+Time: 242
+Artist: Iron Maiden
+Title: Iron Maiden
+Album: Best Of The Beast (2CD-Version
+Date: 1996
+Genre: Metal
+mtime: 1335283137
+song_end
+playlist_begin: Cd2-00-iron_maiden--best_of_the_beast_(2cd-version)-flf.m3u
+mtime: 1335283068
+playlist_end
+end: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Best_Of_The_Beast_(2CD-Version)-1996-FLF/Cd2
+end: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Best_Of_The_Beast_(2CD-Version)-1996-FLF
+directory: Iron_Maiden-Brave_New_World-2000-FTS
+mtime: 1335278970
+begin: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Brave_New_World-2000-FTS
+song_begin: 01-iron_maiden-the_wicker_man_(album_version)-fts.mp3
+Time: 276
+Artist: iron maiden
+Title: the wicker man (album version)
+Album: brave new world
+Date: 2000
+Genre: Metal
+mtime: 1335280914
+song_end
+song_begin: 02-iron_maiden-ghost_of_the_navigator-fts.mp3
+Time: 410
+Artist: iron maiden
+Title: ghost of the navigator
+Album: brave new world
+Date: 2000
+Genre: Metal
+mtime: 1335280850
+song_end
+song_begin: 03-iron_maiden-brave_new_world-fts.mp3
+Time: 379
+Artist: iron maiden
+Title: brave new world
+Album: brave new world
+Date: 2000
+Genre: Metal
+mtime: 1335280861
+song_end
+song_begin: 04-iron_maiden-blood_brothers-fts.mp3
+Time: 434
+Artist: iron maiden
+Title: blood brothers
+Album: brave new world
+Date: 2000
+Genre: Metal
+mtime: 1335280875
+song_end
+song_begin: 05-iron_maiden-the_mercenary-fts.mp3
+Time: 283
+Artist: iron maiden
+Title: the mercenary
+Album: brave new world
+Date: 2000
+Genre: Metal
+mtime: 1335280921
+song_end
+song_begin: 06-iron_maiden-dream_of_mirrors-fts.mp3
+Time: 561
+Artist: iron maiden
+Title: dream of mirrors
+Album: brave new world
+Date: 2000
+Genre: Metal
+mtime: 1335281193
+song_end
+song_begin: 07-iron_maiden-the_fallen_angel-fts.mp3
+Time: 241
+Artist: iron maiden
+Title: the fallen angel
+Album: brave new world
+Date: 2000
+Genre: Metal
+mtime: 1335280940
+song_end
+song_begin: 08-iron_maiden-the_nomad-fts.mp3
+Time: 546
+Artist: iron maiden
+Title: the nomad
+Album: brave new world
+Date: 2000
+Genre: Metal
+mtime: 1335280970
+song_end
+song_begin: 09-iron_maiden-out_of_the_silent_planet-fts.mp3
+Time: 386
+Artist: iron maiden
+Title: out of the silent planet
+Album: brave new world
+Date: 2000
+Genre: Metal
+mtime: 1335280979
+song_end
+song_begin: 10-iron_maiden-the_thin_line_between_love_and_hate-fts.mp3
+Time: 507
+Artist: iron maiden
+Title: the thin line between love & h
+Album: brave new world
+Date: 2000
+Genre: Metal
+mtime: 1335283137
+song_end
+playlist_begin: 00-iron_maiden-brave_new_world-2000-fts.m3u
+mtime: 1335280907
+playlist_end
+end: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Brave_New_World-2000-FTS
+directory: Iron_Maiden-Can_I_Play_with_Madness-the_Evil_-that_Men_Do_(EP)-1988-eNT_iNT
+mtime: 1335278970
+begin: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Can_I_Play_with_Madness-the_Evil_-that_Men_Do_(EP)-1988-eNT_iNT
+song_begin: 01-iron_maiden-can_i_play_with_madness-ent.mp3
+Time: 213
+Artist: Iron Maiden
+Title: Can I Play with Madness
+Album: Can I Play with Madness/the Ev
+Date: 1988
+Genre: Metal
+mtime: 1335283141
+song_end
+song_begin: 02-iron_maiden-black_bart_blues-ent.mp3
+Time: 401
+Artist: Iron Maiden
+Title: Black Bart Blues
+Album: Can I Play with Madness/the Ev
+Date: 1988
+Genre: Metal
+mtime: 1335283147
+song_end
+song_begin: 03-iron_maiden-massacre-ent.mp3
+Time: 174
+Artist: Iron Maiden
+Title: Massacre
+Album: Can I Play with Madness/the Ev
+Date: 1988
+Genre: Metal
+mtime: 1335283149
+song_end
+song_begin: 04-iron_maiden-the_evil_that_men_do-ent.mp3
+Time: 275
+Artist: Iron Maiden
+Title: The Evil that Men Do
+Album: Can I Play with Madness/the Ev
+Date: 1988
+Genre: Metal
+mtime: 1335283152
+song_end
+song_begin: 05-iron_maiden-prowler_88-ent.mp3
+Time: 247
+Artist: Iron Maiden
+Title: Prowler '88
+Album: Can I Play with Madness/the Ev
+Date: 1988
+Genre: Metal
+mtime: 1335279679
+song_end
+song_begin: 06-iron_maiden-charlotte_the_harlot_88-ent.mp3
+Time: 251
+Artist: Iron Maiden
+Title: Charlotte the Harlot '88
+Album: Can I Play with Madness/the Ev
+Date: 1988
+Genre: Metal
+mtime: 1335279738
+song_end
+song_begin: 07-iron_maiden-listen_with_nicko_part_ix-ent.mp3
+Time: 647
+Artist: Iron Maiden
+Title: Listen with Nicko! Part Ix
+Album: Can I Play with Madness/the Ev
+Date: 1988
+Genre: Metal
+mtime: 1335279885
+song_end
+playlist_begin: 00-iron_maiden-can_i_play_with_madness-the_evil_-that_men_do_(ep)-1988-ent_int.m3u
+mtime: 1335283137
+playlist_end
+end: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Can_I_Play_with_Madness-the_Evil_-that_Men_Do_(EP)-1988-eNT_iNT
+directory: Iron_Maiden-Dance_Of_Death-2003-rns
+mtime: 1335278970
+begin: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Dance_Of_Death-2003-rns
+song_begin: 01-iron_maiden-wildest_dreams-rns.mp3
+Time: 233
+Artist: Iron Maiden
+Title: Wildest Dreams
+Album: Dance Of Death
+Track: 1
+Date: 2003
+Genre: Metal
+mtime: 1335280843
+song_end
+song_begin: 02-iron_maiden-rainmaker-rns.mp3
+Time: 229
+Artist: Iron Maiden
+Title: Rainmaker
+Album: Dance Of Death
+Track: 2
+Date: 2003
+Genre: Metal
+mtime: 1335280856
+song_end
+song_begin: 03-iron_maiden-no_more_lies-rns.mp3
+Time: 442
+Artist: Iron Maiden
+Title: No More Lies
+Album: Dance Of Death
+Track: 3
+Date: 2003
+Genre: Metal
+mtime: 1335280834
+song_end
+song_begin: 04-iron_maiden-montsegur-rns.mp3
+Time: 350
+Artist: Iron Maiden
+Title: Montsegur
+Album: Dance Of Death
+Track: 4
+Date: 2003
+Genre: Metal
+mtime: 1335279586
+song_end
+song_begin: 05-iron_maiden-dance_of_death-rns.mp3
+Time: 517
+Artist: Iron Maiden
+Title: Dance Of Death
+Album: Dance Of Death
+Track: 5
+Date: 2003
+Genre: Metal
+mtime: 1335279601
+song_end
+song_begin: 06-iron_maiden-gates_of_tomorrow-rns.mp3
+Time: 312
+Artist: Iron Maiden
+Title: Gates Of Tomorrow
+Album: Dance Of Death
+Track: 6
+Date: 2003
+Genre: Metal
+mtime: 1335279610
+song_end
+song_begin: 07-iron_maiden-new_frontier-rns.mp3
+Time: 305
+Artist: Iron Maiden
+Title: New Frontier
+Album: Dance Of Death
+Track: 7
+Date: 2003
+Genre: Metal
+mtime: 1335279618
+song_end
+song_begin: 08-iron_maiden-paschendale-rns.mp3
+Time: 508
+Artist: Iron Maiden
+Title: Paschendale
+Album: Dance Of Death
+Track: 8
+Date: 2003
+Genre: Metal
+mtime: 1335279632
+song_end
+song_begin: 09-iron_maiden-face_in_the_sand-rns.mp3
+Time: 391
+Artist: Iron Maiden
+Title: Face In The Sand
+Album: Dance Of Death
+Track: 9
+Date: 2003
+Genre: Metal
+mtime: 1335279643
+song_end
+song_begin: 10-iron_maiden-age_of_innocence-rns.mp3
+Time: 370
+Artist: Iron Maiden
+Title: Age Of Innocence
+Album: Dance Of Death
+Track: 10
+Date: 2003
+Genre: Metal
+mtime: 1335279653
+song_end
+song_begin: 11-iron_maiden-journeyman-rns.mp3
+Time: 427
+Artist: Iron Maiden
+Title: Journeyman
+Album: Dance Of Death
+Track: 11
+Date: 2003
+Genre: Metal
+mtime: 1335279665
+song_end
+playlist_begin: 00-iron_maiden-dance_of_death-2003-rns.m3u
+mtime: 1335279885
+playlist_end
+end: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Dance_Of_Death-2003-rns
+directory: Iron_Maiden-Death_On_The_Road-2CD-2005-RNS
+mtime: 1335278970
+begin: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Death_On_The_Road-2CD-2005-RNS
+song_begin: 101-iron_maiden-wildest_dreams.mp3
+Time: 292
+Artist: Iron Maiden
+Title: Wildest Dreams
+Album: Death On The Road
+Track: 1/9
+Date: 2005-08-26
+Genre: Heavy Metal
+Genre: Heavy Metal
+Disc: 1/2
+mtime: 1335279674
+song_end
+song_begin: 102-iron_maiden-wrathchild.mp3
+Time: 169
+Artist: Iron Maiden
+Title: Wrathchild
+Album: Death On The Road
+Track: 2/9
+Date: 2005-08-26
+Genre: Heavy Metal
+Genre: Heavy Metal
+Disc: 1/2
+mtime: 1335279679
+song_end
+song_begin: 103-iron_maiden-can_i_play_with_madness.mp3
+Time: 210
+Artist: Iron Maiden
+Title: Can I Play With Madness
+Album: Death On The Road
+Track: 3/9
+Date: 2005-08-26
+Genre: Heavy Metal
+Genre: Heavy Metal
+Disc: 1/2
+mtime: 1335279686
+song_end
+song_begin: 104-iron_maiden-the_trooper.mp3
+Time: 252
+Artist: Iron Maiden
+Title: The Trooper
+Album: Death On The Road
+Track: 4/9
+Date: 2005-08-26
+Genre: Heavy Metal
+Genre: Heavy Metal
+Disc: 1/2
+mtime: 1335279694
+song_end
+song_begin: 105-iron_maiden-dance_of_death.mp3
+Time: 563
+Artist: Iron Maiden
+Title: Dance Of Death
+Album: Death On The Road
+Track: 5/9
+Date: 2005-08-26
+Genre: Heavy Metal
+Genre: Heavy Metal
+Disc: 1/2
+mtime: 1335279712
+song_end
+song_begin: 106-iron_maiden-rainmaker.mp3
+Time: 242
+Artist: Iron Maiden
+Title: Rainmaker
+Album: Death On The Road
+Track: 6/9
+Date: 2005-08-26
+Genre: Heavy Metal
+Genre: Heavy Metal
+Disc: 1/2
+mtime: 1335279720
+song_end
+song_begin: 107-iron_maiden-brave_new_world.mp3
+Time: 370
+Artist: Iron Maiden
+Title: Brave New World
+Album: Death On The Road
+Track: 7/9
+Date: 2005-08-26
+Genre: Heavy Metal
+Genre: Heavy Metal
+Disc: 1/2
+mtime: 1335279732
+song_end
+song_begin: 108-iron_maiden-paschendale.mp3
+Time: 618
+Artist: Iron Maiden
+Title: Paschendale
+Album: Death On The Road
+Track: 8/9
+Date: 2005-08-26
+Genre: Heavy Metal
+Genre: Heavy Metal
+Disc: 1/2
+mtime: 1335279752
+song_end
+song_begin: 109-iron_maiden-lord_of_the_flies.mp3
+Time: 304
+Artist: Iron Maiden
+Title: Lord Of The Flies
+Album: Death On The Road
+Track: 9/9
+Date: 2005-08-26
+Genre: Heavy Metal
+Genre: Heavy Metal
+Disc: 1/2
+mtime: 1335279762
+song_end
+song_begin: 201-iron_maiden-no_more_lies.mp3
+Time: 470
+Artist: Iron Maiden
+Title: No More Lies
+Album: Death On The Road
+Track: 1/7
+Date: 2005-08-26
+Genre: Heavy Metal
+Genre: Heavy Metal
+Disc: 2/2
+mtime: 1335279776
+song_end
+song_begin: 202-iron_maiden-hallowed_be_thy_name.mp3
+Time: 452
+Artist: Iron Maiden
+Title: Hallowed Be Thy Name
+Album: Death On The Road
+Track: 2/7
+Date: 2005-08-26
+Genre: Heavy Metal
+Genre: Heavy Metal
+Disc: 2/2
+mtime: 1335279791
+song_end
+song_begin: 203-iron_maiden-fear_of_the_dark.mp3
+Time: 448
+Artist: Iron Maiden
+Title: Fear Of The Dark
+Album: Death On The Road
+Track: 3/7
+Date: 2005-08-26
+Genre: Heavy Metal
+Genre: Heavy Metal
+Disc: 2/2
+mtime: 1335279804
+song_end
+song_begin: 204-iron_maiden-iron_maiden.mp3
+Time: 290
+Artist: Iron Maiden
+Title: Iron Maiden
+Album: Death On The Road
+Track: 4/7
+Date: 2005-08-26
+Genre: Heavy Metal
+Genre: Heavy Metal
+Disc: 2/2
+mtime: 1335279813
+song_end
+song_begin: 205-iron_maiden-journeyman.mp3
+Time: 423
+Artist: Iron Maiden
+Title: Journeyman
+Album: Death On The Road
+Track: 5/7
+Date: 2005-08-26
+Genre: Heavy Metal
+Genre: Heavy Metal
+Disc: 2/2
+mtime: 1335279827
+song_end
+song_begin: 206-iron_maiden-the_number_of_the_beast.mp3
+Time: 298
+Artist: Iron Maiden
+Title: The Number Of The Beast
+Album: Death On The Road
+Track: 6/7
+Date: 2005-08-26
+Genre: Heavy Metal
+Genre: Heavy Metal
+Disc: 2/2
+mtime: 1335279836
+song_end
+song_begin: 207-iron_maiden-run_to_the_hills.mp3
+Time: 264
+Artist: Iron Maiden
+Title: Run To The Hills
+Album: Death On The Road
+Track: 7/7
+Date: 2005-08-26
+Genre: Heavy Metal
+Genre: Heavy Metal
+Disc: 2/2
+mtime: 1335279844
+song_end
+playlist_begin: 000-iron_maiden-death_on_the_road-2cd-2005.m3u
+mtime: 1335279665
+playlist_end
+end: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Death_On_The_Road-2CD-2005-RNS
+directory: Iron_Maiden-Death_on_the_Road-DVD-2006-AMRC
+mtime: 1335278970
+begin: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Death_on_the_Road-DVD-2006-AMRC
+song_begin: 01_iron_maiden-live_at_westfalenhalle_arena_2003-amrc.mp3
+Time: 6123
+Artist: Iron Maiden
+Title: Live at Westfalenhalle Arena 2003
+Album: Death on the Road-DVD
+Track: 1
+Date: 2006
+Genre: Heavy Metal
+mtime: 1335280020
+song_end
+playlist_begin: 00_iron_maiden-death_on_the_road-dvd-2006-amrc.m3u
+mtime: 1335279844
+playlist_end
+end: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Death_on_the_Road-DVD-2006-AMRC
+directory: Iron_Maiden-Edward_The_Great-2004-MTO
+mtime: 1335278970
+begin: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Edward_The_Great-2004-MTO
+song_begin: 01-iron_maiden-run_to_the_hills-mto.mp3
+Time: 234
+Artist: Iron Maiden
+Title: run to the hills
+Album: Edward The Great
+Track: 1
+Date: 2002
+Genre: Rock
+mtime: 1335280028
+song_end
+song_begin: 02-iron_maiden-the_number_of_the_beast-mto.mp3
+Time: 291
+Artist: Iron Maiden
+Title: the number of the beast
+Album: Edward The Great
+Track: 2
+Date: 2002
+Genre: Rock
+mtime: 1335280037
+song_end
+song_begin: 03-iron_maiden-flight_of_icarus-mto.mp3
+Time: 231
+Artist: Iron Maiden
+Title: flight of icarus
+Album: Edward The Great
+Track: 3
+Date: 2002
+Genre: Rock
+mtime: 1335280043
+song_end
+song_begin: 04-iron_maiden-the_trooper-mto.mp3
+Time: 251
+Artist: Iron Maiden
+Title: the trooper
+Album: Edward The Great
+Track: 4
+Date: 2002
+Genre: Rock
+mtime: 1335280050
+song_end
+song_begin: 05-iron_maiden-2_minutes_to_midnight-mto.mp3
+Time: 360
+Artist: Iron Maiden
+Title: 2 minutes to midnight
+Album: Edward The Great
+Track: 5
+Date: 2002
+Genre: Rock
+mtime: 1335280062
+song_end
+song_begin: 06-iron_maiden-wasted_years-mto.mp3
+Time: 306
+Artist: Iron Maiden
+Title: wasted years
+Album: Edward The Great
+Track: 6
+Date: 2002
+Genre: Rock
+mtime: 1335280071
+song_end
+song_begin: 07-iron_maiden-can_i_play_with_madness-mto.mp3
+Time: 211
+Artist: Iron Maiden
+Title: can i play with madness
+Album: Edward The Great
+Track: 7
+Date: 2002
+Genre: Rock
+mtime: 1335280078
+song_end
+song_begin: 08-iron_maiden-the_evil_that_men_do-mto.mp3
+Time: 273
+Artist: Iron Maiden
+Title: the evil that men do
+Album: Edward The Great
+Track: 8
+Date: 2002
+Genre: Rock
+mtime: 1335280086
+song_end
+song_begin: 09-iron_maiden-the_clairvoyant-mto.mp3
+Time: 267
+Artist: Iron Maiden
+Title: the clairvoyant
+Album: Edward The Great
+Track: 9
+Date: 2002
+Genre: Rock
+mtime: 1335280094
+song_end
+song_begin: 10-iron_maiden-infinite_dreams-mto.mp3
+Time: 369
+Artist: Iron Maiden
+Title: infinite dreams
+Album: Edward The Great
+Track: 10
+Date: 2002
+Genre: Rock
+mtime: 1335280106
+song_end
+song_begin: 11-iron_maiden-holy_smoke-mto.mp3
+Time: 228
+Artist: Iron Maiden
+Title: holy smoke
+Album: Edward The Great
+Track: 11
+Date: 2002
+Genre: Rock
+mtime: 1335280115
+song_end
+song_begin: 12-iron_maiden-bring_your_daughter_to_the_slaughter-mto.mp3
+Time: 283
+Artist: Iron Maiden
+Title: bring your daughter to the s..
+Album: Edward The Great
+Track: 12
+Date: 2002
+Genre: Rock
+mtime: 1335280125
+song_end
+song_begin: 13-iron_maiden-man_on_the_edge-mto.mp3
+Time: 252
+Artist: Iron Maiden
+Title: man on the edge
+Album: Edward The Great
+Track: 13
+Date: 2002
+Genre: Rock
+mtime: 1335280133
+song_end
+song_begin: 14-iron_maiden-futureal-mto.mp3
+Time: 175
+Artist: Iron Maiden
+Title: futureal
+Album: Edward The Great
+Track: 14
+Date: 2002
+Genre: Rock
+mtime: 1335280139
+song_end
+song_begin: 15-iron_maiden-the_wicker_man-mto.mp3
+Time: 275
+Artist: Iron Maiden
+Title: the wicker man
+Album: Edward The Great
+Track: 15
+Date: 2002
+Genre: Rock
+mtime: 1335280147
+song_end
+song_begin: 16-iron_maiden-fear_of_the_dark_(live_at_rock_in_rio)-mto.mp3
+Time: 482
+Artist: Iron Maiden
+Title: fear of the dark (live at ro..
+Album: Edward The Great
+Track: 16
+Date: 2002
+Genre: Rock
+mtime: 1335280159
+song_end
+playlist_begin: 00-iron_maiden-edward_the_great-2004-mto.m3u
+mtime: 1335280020
+playlist_end
+end: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Edward_The_Great-2004-MTO
+directory: Iron_Maiden-Edward_The_Great_The_Greatest_Hits-READ_NFO-2005-pyt
+mtime: 1335278970
+begin: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Edward_The_Great_The_Greatest_Hits-READ_NFO-2005-pyt
+song_begin: 01-iron_maiden-run_to_the_hills-pyt.mp3
+Time: 237
+Artist: Iron Maiden
+Title: run to the hills
+Album: Edward The Great: The Greatest Hits
+Track: 1
+Date: 2005
+Genre: Metal
+mtime: 1335279983
+song_end
+song_begin: 02-iron_maiden-the_number_of_the_beast-pyt.mp3
+Time: 293
+Artist: Iron Maiden
+Title: the number of the beast
+Album: Edward The Great: The Greatest Hits
+Track: 2
+Date: 2005
+Genre: Metal
+mtime: 1335280065
+song_end
+song_begin: 03-iron_maiden-the_trooper-pyt.mp3
+Time: 253
+Artist: Iron Maiden
+Title: the trooper
+Album: Edward The Great: The Greatest Hits
+Track: 3
+Date: 2005
+Genre: Metal
+mtime: 1335280131
+song_end
+song_begin: 04-iron_maiden-flight_of_icarus-pyt.mp3
+Time: 232
+Artist: Iron Maiden
+Title: flight of icarus
+Album: Edward The Great: The Greatest Hits
+Track: 4
+Date: 2005
+Genre: Metal
+mtime: 1335280193
+song_end
+song_begin: 05-iron_maiden-2_minutes_to_midnight-pyt.mp3
+Time: 362
+Artist: Iron Maiden
+Title: 2 minutes to midnight
+Album: Edward The Great: The Greatest Hits
+Track: 5
+Date: 2005
+Genre: Metal
+mtime: 1335280297
+song_end
+song_begin: 06-iron_maiden-wasted_years-pyt.mp3
+Time: 308
+Artist: Iron Maiden
+Title: wasted years
+Album: Edward The Great: The Greatest Hits
+Track: 6
+Date: 2005
+Genre: Metal
+mtime: 1335280385
+song_end
+song_begin: 07-iron_maiden-can_i_play_with_madness-pyt.mp3
+Time: 212
+Artist: Iron Maiden
+Title: can i play with madness
+Album: Edward The Great: The Greatest Hits
+Track: 7
+Date: 2005
+Genre: Metal
+mtime: 1335280439
+song_end
+song_begin: 08-iron_maiden-the_evil_that_men_do-pyt.mp3
+Time: 274
+Artist: Iron Maiden
+Title: the evil that men do
+Album: Edward The Great: The Greatest Hits
+Track: 8
+Date: 2005
+Genre: Metal
+mtime: 1335280515
+song_end
+song_begin: 09-iron_maiden-bring_your_daughter_to_the_slaughter-pyt.mp3
+Time: 285
+Artist: Iron Maiden
+Title: bring your daughter to the slaughter
+Album: Edward The Great: The Greatest Hits
+Track: 9
+Date: 2005
+Genre: Metal
+mtime: 1335281290
+song_end
+song_begin: 10-iron_maiden-man_on_the_edge-pyt.mp3
+Time: 254
+Artist: Iron Maiden
+Title: man on the edge
+Album: Edward The Great: The Greatest Hits
+Track: 10
+Date: 2005
+Genre: Metal
+mtime: 1335281358
+song_end
+song_begin: 11-iron_maiden-futureal-pyt.mp3
+Time: 177
+Artist: Iron Maiden
+Title: futureal
+Album: Edward The Great: The Greatest Hits
+Track: 11
+Date: 2005
+Genre: Metal
+mtime: 1335281403
+song_end
+song_begin: 12-iron_maiden-the_wicker_man-pyt.mp3
+Time: 276
+Artist: Iron Maiden
+Title: the wicker man
+Album: Edward The Great: The Greatest Hits
+Track: 12
+Date: 2005
+Genre: Metal
+mtime: 1335281475
+song_end
+song_begin: 13-iron_maiden-brave_new_world-pyt.mp3
+Time: 379
+Artist: Iron Maiden
+Title: brave new world
+Album: Edward The Great: The Greatest Hits
+Track: 13
+Date: 2005
+Genre: Metal
+mtime: 1335281553
+song_end
+song_begin: 14-iron_maiden-wildest_dreams-pyt.mp3
+Time: 233
+Artist: Iron Maiden
+Title: wildest dreams
+Album: Edward The Great: The Greatest Hits
+Track: 14
+Date: 2005
+Genre: Metal
+mtime: 1335279042
+song_end
+song_begin: 15-iron_maiden-rainmaker-pyt.mp3
+Time: 231
+Artist: Iron Maiden
+Title: rainmaker
+Album: Edward The Great: The Greatest Hits
+Track: 15
+Date: 2005
+Genre: Metal
+mtime: 1335279098
+song_end
+song_begin: 16-iron_maiden-fear_of_the_dark_live_from_death_on_the_road-pyt.mp3
+Time: 463
+Artist: Iron Maiden
+Title: fear of the dark (live from death on the road)
+Album: Edward The Great: The Greatest Hits
+Track: 16
+Date: 2005
+Genre: Metal
+mtime: 1335279216
+song_end
+playlist_begin: 00-iron_maiden-edward_the_great_the_greatest_hits-read_nfo-2005-pyt.m3u
+mtime: 1335279918
+playlist_end
+end: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Edward_The_Great_The_Greatest_Hits-READ_NFO-2005-pyt
+directory: Iron_Maiden-Fear_Of_The_Dark-1992-iRO
+mtime: 1335278970
+begin: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Fear_Of_The_Dark-1992-iRO
+song_begin: 01-iron_maiden-be_quick_or_be_dead-iro.mp3
+Time: 203
+Artist: Iron Maiden
+AlbumArtist: Iron Maiden
+Title: Be Quick Or Be Dead
+Album: Fear Of The Dark
+Track: 1
+Date: 1992
+Genre: Metal
+Composer: Bruce Dickinson/Janick Gers
+mtime: 1335279252
+song_end
+song_begin: 02-iron_maiden-from_here_to_eternity-iro.mp3
+Time: 216
+Artist: Iron Maiden
+AlbumArtist: Iron Maiden
+Title: From Here To Eternity
+Album: Fear Of The Dark
+Track: 2
+Date: 1992
+Genre: Metal
+Composer: Steve Harris
+mtime: 1335278992
+song_end
+song_begin: 03-iron_maiden-afraid_to_shoot_strangers-iro.mp3
+Time: 414
+Artist: Iron Maiden
+AlbumArtist: Iron Maiden
+Title: Afraid To Shoot Strangers
+Album: Fear Of The Dark
+Track: 3
+Date: 1992
+Genre: Metal
+Composer: Steve Harris
+mtime: 1335279005
+song_end
+song_begin: 04-iron_maiden-fear_is_the_key-iro.mp3
+Time: 332
+Artist: Iron Maiden
+AlbumArtist: Iron Maiden
+Title: Fear Is The Key
+Album: Fear Of The Dark
+Track: 4
+Date: 1992
+Genre: Metal
+Composer: Bruce Dickinson/Janick Gers
+mtime: 1335279013
+song_end
+song_begin: 05-iron_maiden-childhoods_end-iro.mp3
+Time: 279
+Artist: Iron Maiden
+AlbumArtist: Iron Maiden
+Title: Childhood's End
+Album: Fear Of The Dark
+Track: 5
+Date: 1992
+Genre: Metal
+Composer: Steve Harris
+mtime: 1335279024
+song_end
+song_begin: 06-iron_maiden-wasting_love-iro.mp3
+Time: 347
+Artist: Iron Maiden
+AlbumArtist: Iron Maiden
+Title: Wasting Love
+Album: Fear Of The Dark
+Track: 6
+Date: 1992
+Genre: Metal
+Composer: Bruce Dickinson/Janick Gers
+mtime: 1335279033
+song_end
+song_begin: 07-iron_maiden-the_fugitive-iro.mp3
+Time: 293
+Artist: Iron Maiden
+AlbumArtist: Iron Maiden
+Title: The Fugitive
+Album: Fear Of The Dark
+Track: 7
+Date: 1992
+Genre: Metal
+Composer: Steve Harris
+mtime: 1335279044
+song_end
+song_begin: 08-iron_maiden-chains_of_misery-iro.mp3
+Time: 215
+Artist: Iron Maiden
+AlbumArtist: Iron Maiden
+Title: Chains Of Misery
+Album: Fear Of The Dark
+Track: 8
+Date: 1992
+Genre: Metal
+Composer: Bruce Dickinson/David Murray
+mtime: 1335279048
+song_end
+song_begin: 09-iron_maiden-the_apparition-iro.mp3
+Time: 233
+Artist: Iron Maiden
+AlbumArtist: Iron Maiden
+Title: The Apparition
+Album: Fear Of The Dark
+Track: 9
+Date: 1992
+Genre: Metal
+Composer: Janick Gers/Steve Harris
+mtime: 1335279051
+song_end
+song_begin: 10-iron_maiden-judas_be_my_guide-iro.mp3
+Time: 186
+Artist: Iron Maiden
+AlbumArtist: Iron Maiden
+Title: Judas Be My Guide
+Album: Fear Of The Dark
+Track: 10
+Date: 1992
+Genre: Metal
+Composer: Bruce Dickinson/David Murray
+mtime: 1335279055
+song_end
+song_begin: 11-iron_maiden-weekend_warrior-iro.mp3
+Time: 337
+Artist: Iron Maiden
+AlbumArtist: Iron Maiden
+Title: Weekend Warrior
+Album: Fear Of The Dark
+Track: 11
+Date: 1992
+Genre: Metal
+Composer: Janick Gers/Steve Harris
+mtime: 1335279065
+song_end
+song_begin: 12-iron_maiden-fear_of_the_dark-iro.mp3
+Time: 438
+Artist: Iron Maiden
+AlbumArtist: Iron Maiden
+Title: Fear Of The Dark
+Album: Fear Of The Dark
+Track: 12
+Date: 1992
+Genre: Metal
+Composer: Steve Harris
+mtime: 1335279257
+song_end
+playlist_begin: 00-iron_maiden-fear_of_the_dark-1992-iro.m3u
+mtime: 1335279216
+playlist_end
+end: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Fear_Of_The_Dark-1992-iRO
+directory: Iron_Maiden-Iron_Maiden-1980-FTS
+mtime: 1335278970
+begin: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Iron_Maiden-1980-FTS
+song_begin: 01-iron_maiden-prowler-fts.mp3
+Time: 236
+Artist: iron maiden
+Title: prowler
+Album: iron maiden
+Date: 1980
+Genre: Heavy Metal
+mtime: 1335279314
+song_end
+song_begin: 02-iron_maiden-remember_tomorrow-fts.mp3
+Time: 330
+Artist: iron maiden
+Title: remember tomorrow
+Album: iron maiden
+Date: 1980
+Genre: Heavy Metal
+mtime: 1335279395
+song_end
+song_begin: 03-iron_maiden-running_free-fts.mp3
+Time: 198
+Artist: iron maiden
+Title: running free
+Album: iron maiden
+Date: 1980
+Genre: Heavy Metal
+mtime: 1335279442
+song_end
+song_begin: 04-iron_maiden-phantom_of_the_opera-fts.mp3
+Time: 429
+Artist: iron maiden
+Title: phantom of the opera
+Album: iron maiden
+Date: 1980
+Genre: Heavy Metal
+mtime: 1335279540
+song_end
+song_begin: 05-iron_maiden-transylvania-fts.mp3
+Time: 247
+Artist: iron maiden
+Title: transylvania
+Album: iron maiden
+Date: 1980
+Genre: Heavy Metal
+mtime: 1335279600
+song_end
+song_begin: 06-iron_maiden-strange_world-fts.mp3
+Time: 345
+Artist: iron maiden
+Title: strange world
+Album: iron maiden
+Date: 1980
+Genre: Heavy Metal
+mtime: 1335282420
+song_end
+song_begin: 07-iron_maiden-sanctuary-fts.mp3
+Time: 195
+Artist: iron maiden
+Title: sanctuary
+Album: iron maiden
+Date: 1980
+Genre: Heavy Metal
+mtime: 1335282466
+song_end
+song_begin: 08-iron_maiden-charlotte_the_harlot-fts.mp3
+Time: 253
+Artist: iron maiden
+Title: charlotte the harlot
+Album: iron maiden
+Date: 1980
+Genre: Heavy Metal
+mtime: 1335282531
+song_end
+song_begin: 09-iron_maiden-iron_maiden-fts.mp3
+Time: 215
+Artist: iron maiden
+Title: iron maiden
+Album: iron maiden
+Date: 1980
+Genre: Heavy Metal
+mtime: 1335282618
+song_end
+playlist_begin: 00-iron_maiden-iron_maiden-1980-fts.m3u
+mtime: 1335279257
+playlist_end
+end: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Iron_Maiden-1980-FTS
+directory: Iron_Maiden-Killers_2CD-1981-eNT_iNT
+mtime: 1335278970
+begin: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Killers_2CD-1981-eNT_iNT
+song_begin: 101-iron_maiden-the_ides_of_march-ent.mp3
+Time: 106
+Artist: Iron Maiden
+Title: The Ides of March
+Album: Killers
+Date: 1981
+Genre: Metal
+mtime: 1335282630
+song_end
+song_begin: 102-iron_maiden-wrathchild-ent.mp3
+Time: 174
+Artist: Iron Maiden
+Title: Wrathchild
+Album: Killers
+Date: 1981
+Genre: Metal
+mtime: 1335279085
+song_end
+song_begin: 103-iron_maiden-murders_in_the_rue_morgue-ent.mp3
+Time: 258
+Artist: Iron Maiden
+Title: Murders in the Rue Morgue
+Album: Killers
+Date: 1981
+Genre: Metal
+mtime: 1335279090
+song_end
+song_begin: 104-iron_maiden-another_life-ent.mp3
+Time: 203
+Artist: Iron Maiden
+Title: Another Life
+Album: Killers
+Date: 1981
+Genre: Metal
+mtime: 1335279094
+song_end
+song_begin: 105-iron_maiden-genghis_khan-ent.mp3
+Time: 187
+Artist: Iron Maiden
+Title: Genghis Khan
+Album: Killers
+Date: 1981
+Genre: Metal
+mtime: 1335279099
+song_end
+song_begin: 106-iron_maiden-innocent_exile-ent.mp3
+Time: 232
+Artist: Iron Maiden
+Title: Innocent Exile
+Album: Killers
+Date: 1981
+Genre: Metal
+mtime: 1335279107
+song_end
+song_begin: 107-iron_maiden-killers-ent.mp3
+Time: 301
+Artist: Iron Maiden
+Title: Killers
+Album: Killers
+Date: 1981
+Genre: Metal
+mtime: 1335279112
+song_end
+song_begin: 108-iron_maiden-prodigal_son-ent.mp3
+Time: 372
+Artist: Iron Maiden
+Title: Prodigal Son
+Album: Killers
+Date: 1981
+Genre: Metal
+mtime: 1335279122
+song_end
+song_begin: 109-iron_maiden-purgatory-ent.mp3
+Time: 200
+Artist: Iron Maiden
+Title: Purgatory
+Album: Killers
+Date: 1981
+Genre: Metal
+mtime: 1335279132
+song_end
+song_begin: 110-iron_maiden-drifter-ent.mp3
+Time: 289
+Artist: Iron Maiden
+Title: Drifter
+Album: Killers
+Date: 1981
+Genre: Metal
+mtime: 1335279135
+song_end
+song_begin: 201-iron_maiden-twilight_zone-ent.mp3
+Time: 156
+Artist: Iron Maiden
+Title: Twilight Zone
+Album: Killers
+Date: 1981
+Genre: Metal
+mtime: 1335279139
+song_end
+song_begin: 202-iron_maiden-women_in_uniform-ent.mp3
+Time: 190
+Artist: Iron Maiden
+Title: Women in Uniform
+Album: Killers
+Date: 1981
+Genre: Metal
+mtime: 1335279148
+song_end
+song_begin: 203-iron_maiden-invasion-ent.mp3
+Time: 159
+Artist: Iron Maiden
+Title: Invasion
+Album: Killers
+Date: 1981
+Genre: Metal
+mtime: 1335279152
+song_end
+song_begin: 204-iron_maiden-phantom_of_the_opera_(live)-ent.mp3
+Time: 431
+Artist: Iron Maiden
+Title: Phantom of the Opera (Live)
+Album: Killers
+Date: 1981
+Genre: Metal
+mtime: 1335279160
+song_end
+end: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Killers_2CD-1981-eNT_iNT
+directory: Iron_Maiden-Live_After_Death-2CD-1998-iRO
+mtime: 1335278970
+begin: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Live_After_Death-2CD-1998-iRO
+song_begin: Cd1-01-iron_maiden-aces_high_(live)-iro.mp3
+Time: 329
+Artist: Iron Maiden
+Title: Aces High (live)
+Album: Live After Death
+Track: 1
+Date: 1998
+Genre: Heavy Metal
+mtime: 1335279173
+song_end
+song_begin: Cd2-01-iron_maiden-losfer_words_(live)-iro.mp3
+Time: 255
+Artist: Iron Maiden
+Title: Losfer Words (live)
+Album: Live After Death
+Track: 1
+Date: 1998
+Genre: Heavy Metal
+mtime: 1335279280
+song_end
+song_begin: Cd1-02-iron_maiden-2_minutes_to_midnight_(live)-iro.mp3
+Time: 362
+Artist: Iron Maiden
+Title: 2 Minutes to Midnight (live)
+Album: Live After Death
+Track: 2
+Date: 1998
+Genre: Heavy Metal
+mtime: 1335279177
+song_end
+song_begin: Cd2-02-iron_maiden-sanctuary_(live)-iro.mp3
+Time: 279
+Artist: Iron Maiden
+Title: Sanctuary (live)
+Album: Live After Death
+Track: 2
+Date: 1998
+Genre: Heavy Metal
+mtime: 1335279290
+song_end
+song_begin: Cd1-03-iron_maiden-the_trooper_(live)-iro.mp3
+Time: 271
+Artist: Iron Maiden
+Title: The Trooper (live)
+Album: Live After Death
+Track: 3
+Date: 1998
+Genre: Heavy Metal
+mtime: 1335279185
+song_end
+song_begin: Cd2-03-iron_maiden-murders_in_the_rue_morgue_(live)-iro.mp3
+Time: 271
+Artist: Iron Maiden
+Title: Murders In the Rue Morgue (liv
+Album: Live After Death
+Track: 3
+Date: 1998
+Genre: Heavy Metal
+mtime: 1335279298
+song_end
+song_begin: Cd1-04-iron_maiden-revelations_(live)-iro.mp3
+Time: 371
+Artist: Iron Maiden
+Title: Revelations (live)
+Album: Live After Death
+Track: 4
+Date: 1998
+Genre: Heavy Metal
+mtime: 1335279198
+song_end
+song_begin: Cd1-05-iron_maiden-flight_of_icarus_(live)-iro.mp3
+Time: 219
+Artist: Iron Maiden
+Title: Flight of Icarus (live)
+Album: Live After Death
+Track: 5
+Date: 1998
+Genre: Heavy Metal
+mtime: 1335279202
+song_end
+song_begin: Cd1-06-iron_maiden-rime_of_the_ancient_mariner_(live)-iro.mp3
+Time: 802
+Artist: Iron Maiden
+Title: Rime of the Ancient mariner (l
+Album: Live After Death
+Track: 6
+Date: 1998
+Genre: Heavy Metal
+mtime: 1335279221
+song_end
+song_begin: Cd1-07-iron_maiden-powerslave_(live)-iro.mp3
+Time: 455
+Artist: Iron Maiden
+Title: powerslave (live)
+Album: Live After Death
+Track: 7
+Date: 1998
+Genre: Heavy Metal
+mtime: 1335279235
+song_end
+song_begin: Cd1-08-iron_maiden-the_number_of_the_beast_(live)-iro.mp3
+Time: 275
+Artist: Iron Maiden
+Title: the number of the beast (live)
+Album: Live After Death
+Track: 8
+Date: 1998
+Genre: Heavy Metal
+mtime: 1335279242
+song_end
+song_begin: Cd1-09-iron_maiden-hallowed_be_thy_name_(live)-iro.mp3
+Time: 450
+Artist: Iron Maiden
+Title: hallowed be thy name (live)
+Album: Live After Death
+Track: 9
+Date: 1998
+Genre: Heavy Metal
+mtime: 1335279256
+song_end
+song_begin: Cd1-10-iron_maiden-iron_maiden_(live)-iro.mp3
+Time: 261
+Artist: Iron Maiden
+Title: iron maiden (live)
+Album: Live After Death
+Track: 10
+Date: 1998
+Genre: Heavy Metal
+mtime: 1335279265
+song_end
+song_begin: Cd1-11-iron_maiden-run_to_the_hills_(live)-iro.mp3
+Time: 234
+Artist: Iron Maiden
+Title: run to the hills (live)
+Album: Live After Death
+Track: 11
+Date: 1998
+Genre: Heavy Metal
+mtime: 1335279268
+song_end
+song_begin: Cd1-12-iron_maiden-running_free_(live)-iro.mp3
+Time: 204
+Artist: Iron Maiden
+Title: running free (live)
+Album: Live After Death
+Track: 12
+Date: 1998
+Genre: Heavy Metal
+mtime: 1335279274
+song_end
+playlist_begin: Cd1-00-iron_maiden-live_after_death-1998-iro.m3u
+mtime: 1335279154
+playlist_end
+end: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Live_After_Death-2CD-1998-iRO
+directory: Iron_Maiden-Live_Stockholms_Stadion-P3Live-2003-TcM
+mtime: 1335278970
+begin: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Live_Stockholms_Stadion-P3Live-2003-TcM
+song_begin: 01-iron_maiden-the_number_of_the_beast-tcm.mp3
+Time: 304
+Artist: Iron Maiden
+Title: The Number Of The Beast-TcM
+Date: 2003
+Genre: Heavy Metal
+mtime: 1335280394
+song_end
+song_begin: 02-iron_maiden-the_trooper-tcm.mp3
+Time: 254
+Artist: Iron Maiden
+Title: The Trooper-TcM
+Date: 2003
+Genre: Heavy Metal
+mtime: 1335280404
+song_end
+song_begin: 03-iron_maiden-die_with_your_boots_on-tcm.mp3
+Time: 381
+Artist: Iron Maiden
+Title: Die With Your Boots On-TcM
+Date: 2003
+Genre: Heavy Metal
+mtime: 1335280413
+song_end
+song_begin: 04-iron_maiden-revelations-tcm.mp3
+Time: 378
+Artist: Iron Maiden
+Title: Revelations-TcM
+Date: 2003
+Genre: Heavy Metal
+mtime: 1335280421
+song_end
+song_begin: 05-iron_maiden-hallowed_be_thy_name-tcm.mp3
+Time: 518
+Artist: Iron Maiden
+Title: Hallowed Be Thy Name-TcM
+Date: 2003
+Genre: Heavy Metal
+mtime: 1335280438
+song_end
+song_begin: 06-iron_maiden-22_acacia_avenue-tcm.mp3
+Time: 393
+Artist: Iron Maiden
+Title: 22 Acacia Avenue-TcM
+Date: 2003
+Genre: Heavy Metal
+mtime: 1335280449
+song_end
+song_begin: 07-iron_maiden-talking-tcm.mp3
+Time: 224
+Artist: Iron Maiden
+Title: Talking-TcM
+Date: 2003
+Genre: Heavy Metal
+mtime: 1335280456
+song_end
+song_begin: 08-iron_maiden-wildest_dreams-tcm.mp3
+Time: 233
+Artist: Iron Maiden
+Title: Wildest Dreams-TcM
+Date: 2003
+Genre: Heavy Metal
+mtime: 1335280462
+song_end
+song_begin: 09-iron_maiden-the_wicker_man-tcm.mp3
+Time: 277
+Artist: Iron Maiden
+Title: The Wicker Man-TcM
+Date: 2003
+Genre: Heavy Metal
+mtime: 1335280473
+song_end
+song_begin: 10-iron_maiden-brave_new_world-tcm.mp3
+Time: 388
+Artist: Iron Maiden
+Title: Brave New World-TcM
+Date: 2003
+Genre: Heavy Metal
+mtime: 1335280483
+song_end
+song_begin: 11-iron_maiden-talking-tcm.mp3
+Time: 283
+Artist: Iron Maiden
+Title: Talking-TcM
+Date: 2003
+Genre: Heavy Metal
+mtime: 1335280487
+song_end
+song_begin: 12-iron_maiden-the_clansman-tcm.mp3
+Time: 571
+Artist: Iron Maiden
+Title: The Clansman-TcM
+Date: 2003
+Genre: Heavy Metal
+mtime: 1335280504
+song_end
+song_begin: 13-iron_maiden-the_clairvoyant-tcm.mp3
+Time: 281
+Artist: Iron Maiden
+Title: The Clairvoyant-TcM
+Date: 2003
+Genre: Heavy Metal
+mtime: 1335280511
+song_end
+song_begin: 14-iron_maiden-heaven_can_wait-tcm.mp3
+Time: 489
+Artist: Iron Maiden
+Title: Heaven Can Wait-TcM
+Date: 2003
+Genre: Heavy Metal
+mtime: 1335280526
+song_end
+song_begin: 15-iron_maiden-fear_of_the_dark-tcm.mp3
+Time: 458
+Artist: Iron Maiden
+Title: Fear Of The Dark-TcM
+Date: 2003
+Genre: Heavy Metal
+mtime: 1335280536
+song_end
+song_begin: 16-iron_maiden-iron_maiden-tcm.mp3
+Time: 336
+Artist: Iron Maiden
+Title: Iron Maiden-TcM
+Date: 2003
+Genre: Heavy Metal
+mtime: 1335280544
+song_end
+song_begin: 17-iron_maiden-talking-tcm.mp3
+Time: 134
+Artist: Iron Maiden
+Title: Talking-TcM
+Date: 2003
+Genre: Heavy Metal
+mtime: 1335280550
+song_end
+song_begin: 18-iron_maiden-bring_your_daughter_to_the_slaughter-tcm.mp3
+Time: 381
+Artist: Iron Maiden
+Title: Bring Your Daughter To The Slaughter-TcM
+Date: 2003
+Genre: Heavy Metal
+mtime: 1335280559
+song_end
+song_begin: 19-iron_maiden-2_minutes_to_midnight-tcm.mp3
+Time: 348
+Artist: Iron Maiden
+Title: 2 Minutes To Midnight-TcM
+Date: 2003
+Genre: Heavy Metal
+mtime: 1335280571
+song_end
+song_begin: 20-iron_maiden-run_to_the_hills-tcm.mp3
+Time: 266
+Artist: Iron Maiden
+Title: Run To The Hills-TcM
+Date: 2003
+Genre: Heavy Metal
+mtime: 1335280881
+song_end
+playlist_begin: 00-iron_maiden-live_stockholms_stadion-p3live-2003-tcm.m3u
+mtime: 1335280378
+playlist_end
+end: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Live_Stockholms_Stadion-P3Live-2003-TcM
+directory: Iron_Maiden-Live_at_Waldrock-2CD-2003-PoS
+mtime: 1335278970
+begin: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Live_at_Waldrock-2CD-2003-PoS
+song_begin: 101-iron_maiden-the_trooper-pos.mp3
+Time: 246
+Artist: iron maiden
+Title: the trooper
+Album: live at waldrock
+Date: 2003
+Genre: Metal
+mtime: 1335279304
+song_end
+song_begin: 102-iron_maiden-die_with_your_boots_on-pos.mp3
+Time: 373
+Artist: iron maiden
+Title: die with your boots on
+Album: live at waldrock
+Date: 2003
+Genre: Metal
+mtime: 1335279312
+song_end
+song_begin: 103-iron_maiden-revelations-pos.mp3
+Time: 409
+Artist: iron maiden
+Title: revelations
+Album: live at waldrock
+Date: 2003
+Genre: Metal
+mtime: 1335279323
+song_end
+song_begin: 104-iron_maiden-hallowed_be_thy_name-pos.mp3
+Time: 479
+Artist: iron maiden
+Title: hallowed be thy name
+Album: live at waldrock
+Date: 2003
+Genre: Metal
+mtime: 1335279336
+song_end
+song_begin: 105-iron_maiden-22_acacia_avenue-pos.mp3
+Time: 432
+Artist: iron maiden
+Title: 22 acacia avenue
+Album: live at waldrock
+Date: 2003
+Genre: Metal
+mtime: 1335279346
+song_end
+song_begin: 106-iron_maiden-wildest_dreams-pos.mp3
+Time: 325
+Artist: iron maiden
+Title: wildest dreams
+Album: live at waldrock
+Date: 2003
+Genre: Metal
+mtime: 1335279353
+song_end
+song_begin: 107-iron_maiden-the_wicker_man-pos.mp3
+Time: 277
+Artist: iron maiden
+Title: the wicker man
+Album: live at waldrock
+Date: 2003
+Genre: Metal
+mtime: 1335279361
+song_end
+song_begin: 108-iron_maiden-brave_new_world-pos.mp3
+Time: 373
+Artist: iron maiden
+Title: brave new world
+Album: live at waldrock
+Date: 2003
+Genre: Metal
+mtime: 1335279374
+song_end
+song_begin: 201-iron_maiden-the_clansman-pos.mp3
+Time: 767
+Artist: iron maiden
+Title: the clansman
+Album: live at waldrock
+Date: 2003
+Genre: Metal
+mtime: 1335279391
+song_end
+song_begin: 202-iron_maiden-the_clairvoyant-pos.mp3
+Time: 282
+Artist: iron maiden
+Title: the clairvoyant
+Album: live at waldrock
+Date: 2003
+Genre: Metal
+mtime: 1335279404
+song_end
+song_begin: 203-iron_maiden-heaven_can_wait-pos.mp3
+Time: 481
+Artist: iron maiden
+Title: heaven can wait
+Album: live at waldrock
+Date: 2003
+Genre: Metal
+mtime: 1335279418
+song_end
+song_begin: 204-iron_maiden-fear_of_the_dark-pos.mp3
+Time: 457
+Artist: iron maiden
+Title: fear of the dark
+Album: live at waldrock
+Date: 2003
+Genre: Metal
+mtime: 1335279428
+song_end
+song_begin: 205-iron_maiden-iron_maiden-pos.mp3
+Time: 431
+Artist: iron maiden
+Title: iron maiden
+Album: live at waldrock
+Date: 2003
+Genre: Metal
+mtime: 1335279437
+song_end
+song_begin: 206-iron_maiden-bring_your_daughter-pos.mp3
+Time: 536
+Artist: iron maiden
+Title: bring your daughter
+Album: live at waldrock
+Date: 2003
+Genre: Metal
+mtime: 1335279455
+song_end
+song_begin: 207-iron_maiden-two_minues_to_midnight-pos.mp3
+Time: 346
+Artist: iron maiden
+Title: two minues to midnight
+Album: live at waldrock
+Date: 2003
+Genre: Metal
+mtime: 1335279463
+song_end
+song_begin: 208-iron_maiden-run_to_the_hills-pos.mp3
+Time: 252
+Artist: iron maiden
+Title: run to the hills
+Album: live at waldrock
+Date: 2003
+Genre: Metal
+mtime: 1335279467
+song_end
+end: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Live_at_Waldrock-2CD-2003-PoS
+directory: Iron_Maiden-Live_in_France-2CD-1983-FTS_INT
+mtime: 1335278970
+begin: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Live_in_France-2CD-1983-FTS_INT
+song_begin: 101-iron_maiden-intro-fts.mp3
+Time: 146
+Artist: iron maiden
+Title: intro
+Album: live in france
+Date: 1983
+Genre: Heavy Metal
+mtime: 1335279470
+song_end
+song_begin: 102-iron_maiden-where_eagles_dare-fts.mp3
+Time: 378
+Artist: iron maiden
+Title: where eagles dare
+Album: live in france
+Date: 1983
+Genre: Heavy Metal
+mtime: 1335279481
+song_end
+song_begin: 103-iron_maiden-sanctuary-fts.mp3
+Time: 292
+Artist: iron maiden
+Title: sanctuary
+Album: live in france
+Date: 1983
+Genre: Heavy Metal
+mtime: 1335279493
+song_end
+song_begin: 104-iron_maiden-wratchild-fts.mp3
+Time: 222
+Artist: iron maiden
+Title: wratchild
+Album: live in france
+Date: 1983
+Genre: Heavy Metal
+mtime: 1335279501
+song_end
+song_begin: 105-iron_maiden-the_trooper-fts.mp3
+Time: 329
+Artist: iron maiden
+Title: the trooper
+Album: live in france
+Date: 1983
+Genre: Heavy Metal
+mtime: 1335279518
+song_end
+song_begin: 106-iron_maiden-revelations-fts.mp3
+Time: 405
+Artist: iron maiden
+Title: revelations
+Album: live in france
+Date: 1983
+Genre: Heavy Metal
+mtime: 1335279526
+song_end
+song_begin: 107-iron_maiden-flight_of_icarus-fts.mp3
+Time: 224
+Artist: iron maiden
+Title: flight of icarus
+Album: live in france
+Date: 1983
+Genre: Heavy Metal
+mtime: 1335279531
+song_end
+song_begin: 108-iron_maiden-die_with_your_boots_on-fts.mp3
+Time: 360
+Artist: iron maiden
+Title: die with your boots on
+Album: live in france
+Date: 1983
+Genre: Heavy Metal
+mtime: 1335279546
+song_end
+song_begin: 109-iron_maiden-22_acacia_avenue-fts.mp3
+Time: 468
+Artist: iron maiden
+Title: 22 acacia avenue
+Album: live in france
+Date: 1983
+Genre: Heavy Metal
+mtime: 1335279558
+song_end
+song_begin: 201-iron_maiden-the_number_of_the_beast-fts.mp3
+Time: 316
+Artist: iron maiden
+Title: the number of the beast
+Album: live in france
+Date: 1983
+Genre: Heavy Metal
+mtime: 1335280169
+song_end
+song_begin: 202-iron_maiden-to_tame_a_land-fts.mp3
+Time: 536
+Artist: iron maiden
+Title: to tame a land
+Album: live in france
+Date: 1983
+Genre: Heavy Metal
+mtime: 1335280189
+song_end
+song_begin: 203-iron_maiden-guitar_and_drum_solo-fts.mp3
+Time: 425
+Artist: iron maiden
+Title: guitar & drum solo
+Album: live in france
+Date: 1983
+Genre: Heavy Metal
+mtime: 1335280219
+song_end
+song_begin: 204-iron_maiden-hallowed_be_thy_name-fts.mp3
+Time: 330
+Artist: iron maiden
+Title: hallowed be thy name
+Album: live in france
+Date: 1983
+Genre: Heavy Metal
+mtime: 1335280231
+song_end
+song_begin: 205-iron_maiden-iron_maiden-fts.mp3
+Time: 506
+Artist: iron maiden
+Title: iron maiden
+Album: live in france
+Date: 1983
+Genre: Heavy Metal
+mtime: 1335280247
+song_end
+song_begin: 206-iron_maiden-run_to_the_hills-fts.mp3
+Time: 257
+Artist: iron maiden
+Title: run to the hills
+Album: live in france
+Date: 1983
+Genre: Heavy Metal
+mtime: 1335280252
+song_end
+song_begin: 207-iron_maiden-drifter-fts.mp3
+Time: 754
+Artist: iron maiden
+Title: drifter
+Album: live in france
+Date: 1983
+Genre: Heavy Metal
+mtime: 1335280278
+song_end
+playlist_begin: 000-iron_maiden-live_in_france-2cd-1983-fts_int.m3u
+mtime: 1335279460
+playlist_end
+end: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Live_in_France-2CD-1983-FTS_INT
+directory: Iron_Maiden-Live_in_New_York_04-16-1982-INT_INT
+mtime: 1335278970
+begin: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Live_in_New_York_04-16-1982-INT_INT
+song_begin: 01-iron_maiden-murders_in_the_rue_morgue-int.mp3
+Time: 249
+Artist: iron maiden
+Title: murders in the rue morgue
+Album: live in new york 04-16-
+Date: 1982
+Genre: Heavy Metal
+mtime: 1335280289
+song_end
+song_begin: 02-iron_maiden-wrathchild-int.mp3
+Time: 188
+Artist: iron maiden
+Title: wrathchild
+Album: live in new york 04-16-
+Date: 1982
+Genre: Heavy Metal
+mtime: 1335280293
+song_end
+song_begin: 03-iron_maiden-run_to_the_hills-int.mp3
+Time: 319
+Artist: iron maiden
+Title: run to the hills
+Album: live in new york 04-16-
+Date: 1982
+Genre: Heavy Metal
+mtime: 1335280306
+song_end
+song_begin: 04-iron_maiden-children_of_the_damned-int.mp3
+Time: 322
+Artist: iron maiden
+Title: children of the damned
+Album: live in new york 04-16-
+Date: 1982
+Genre: Heavy Metal
+mtime: 1335280311
+song_end
+song_begin: 05-iron_maiden-the_number_of_the_beast-int.mp3
+Time: 293
+Artist: iron maiden
+Title: the number of the beast
+Album: live in new york 04-16-
+Date: 1982
+Genre: Heavy Metal
+mtime: 1335280322
+song_end
+song_begin: 06-iron_maiden-prisoner-int.mp3
+Time: 345
+Artist: iron maiden
+Title: prisoner
+Album: live in new york 04-16-
+Date: 1982
+Genre: Heavy Metal
+mtime: 1335280330
+song_end
+song_begin: 07-iron_maiden-hallowed_be_thy_name-int.mp3
+Time: 444
+Artist: iron maiden
+Title: hallowed be thy name
+Album: live in new york 04-16-
+Date: 1982
+Genre: Heavy Metal
+mtime: 1335280346
+song_end
+song_begin: 08-iron_maiden-phantom_of_the_opera-int.mp3
+Time: 445
+Artist: iron maiden
+Title: phantom of the opera
+Album: live in new york 04-16-
+Date: 1982
+Genre: Heavy Metal
+mtime: 1335280358
+song_end
+song_begin: 09-iron_maiden-iron_maiden-int.mp3
+Time: 248
+Artist: iron maiden
+Title: iron maiden
+Album: live in new york 04-16-
+Date: 1982
+Genre: Heavy Metal
+mtime: 1335280365
+song_end
+song_begin: 10-iron_maiden-sanctuary-int.mp3
+Time: 224
+Artist: iron maiden
+Title: sanctuary
+Album: live in new york 04-16-
+Date: 1982
+Genre: Heavy Metal
+mtime: 1335280371
+song_end
+song_begin: 11-iron_maiden-drifter-int.mp3
+Time: 696
+Artist: iron maiden
+Title: drifter
+Album: live in new york 04-16-
+Date: 1982
+Genre: Heavy Metal
+mtime: 1335280387
+song_end
+playlist_begin: 00-iron_maiden-live_in_new_york_04-16-1982-int_int.m3u
+mtime: 1335280269
+playlist_end
+end: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Live_in_New_York_04-16-1982-INT_INT
+directory: Iron_Maiden-Maiden_England-1994-INT-GORE
+mtime: 1335278970
+begin: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Maiden_England-1994-INT-GORE
+song_begin: 01-moonchild-gore.mp3
+Time: 345
+Artist: Iron Maiden
+Title: Moonchild
+Album: Maiden England
+Track: 1
+Date: 1994
+Genre: Heavy Metal
+mtime: 1335280971
+song_end
+song_begin: 02-the_evil_that_men_do-gore.mp3
+Time: 256
+Artist: Iron Maiden
+Title: The Evil That Men Do
+Album: Maiden England
+Track: 2
+Date: 1994
+Genre: Heavy Metal
+mtime: 1335280950
+song_end
+song_begin: 03-prisoner-gore.mp3
+Time: 357
+Artist: Iron Maiden
+Title: Prisoner
+Album: Maiden England
+Track: 3
+Date: 1994
+Genre: Heavy Metal
+mtime: 1335280988
+song_end
+song_begin: 04-still_life-gore.mp3
+Time: 272
+Artist: Iron Maiden
+Title: Still Life
+Album: Maiden England
+Track: 4
+Date: 1994
+Genre: Heavy Metal
+mtime: 1335281000
+song_end
+song_begin: 05-die_with_your_boots_on-gore.mp3
+Time: 310
+Artist: Iron Maiden
+Title: Die With Your Boots On
+Album: Maiden England
+Track: 5
+Date: 1994
+Genre: Heavy Metal
+mtime: 1335281003
+song_end
+song_begin: 06-infinite_dreams-gore.mp3
+Time: 353
+Artist: Iron Maiden
+Title: Infinite Dreams
+Album: Maiden England
+Track: 6
+Date: 1994
+Genre: Heavy Metal
+mtime: 1335281009
+song_end
+song_begin: 07-killers-gore.mp3
+Time: 294
+Artist: Iron Maiden
+Title: Killers
+Album: Maiden England
+Track: 7
+Date: 1994
+Genre: Heavy Metal
+mtime: 1335281015
+song_end
+song_begin: 08-heaven_can_wait-gore.mp3
+Time: 452
+Artist: Iron Maiden
+Title: Heaven Can Wait
+Album: Maiden England
+Track: 8
+Date: 1994
+Genre: Heavy Metal
+mtime: 1335281021
+song_end
+song_begin: 09-wasted_years-gore.mp3
+Time: 294
+Artist: Iron Maiden
+Title: Wasted Years
+Album: Maiden England
+Track: 9
+Date: 1994
+Genre: Heavy Metal
+mtime: 1335281027
+song_end
+song_begin: 10-the_clairvoyant-gore.mp3
+Time: 342
+Artist: Iron Maiden
+Title: The Clairvoyant
+Album: Maiden England
+Track: 10
+Date: 1994
+Genre: Heavy Metal
+mtime: 1335281034
+song_end
+song_begin: 11-seventh_son_of_a_seventh_son-gore.mp3
+Time: 611
+Artist: Iron Maiden
+Title: Seventh Son of A Seventh Son
+Album: Maiden England
+Track: 11
+Date: 1994
+Genre: Heavy Metal
+mtime: 1335281043
+song_end
+song_begin: 12-the_number_of_the_beast-gore.mp3
+Time: 286
+Artist: Iron Maiden
+Title: The Number of the Beast
+Album: Maiden England
+Track: 12
+Date: 1994
+Genre: Heavy Metal
+mtime: 1335281048
+song_end
+song_begin: 13-iron_maiden-gore.mp3
+Time: 301
+Artist: Iron Maiden
+Title: Iron Maiden
+Album: Maiden England
+Track: 13
+Date: 1994
+Genre: Heavy Metal
+mtime: 1335281195
+song_end
+playlist_begin: 00-iron_maiden-maiden_england-1994-int-gore.m3u
+mtime: 1335280879
+playlist_end
+end: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Maiden_England-1994-INT-GORE
+directory: Iron_Maiden-No_More_Lies-EP-2004-iONx
+mtime: 1335278970
+begin: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-No_More_Lies-EP-2004-iONx
+song_begin: 01-iron_maiden-no_more_lies-ionx.mp3
+Time: 444
+Artist: Iron Maiden
+Title: No More Lies
+Album: No More Lies
+Track: 1
+Date: 2004
+Genre: Heavy Metal
+mtime: 1335281205
+song_end
+song_begin: 02-iron_maiden-paschendale-ionx.mp3
+Time: 508
+Artist: Iron Maiden
+Title: Paschendale
+Album: No More Lies
+Track: 2
+Date: 2004
+Genre: Heavy Metal
+mtime: 1335281216
+song_end
+song_begin: 03-iron_maiden-journeyman-ionx.mp3
+Time: 1192
+Artist: Iron Maiden
+Title: Journeyman
+Album: No More Lies
+Track: 3
+Date: 2004
+Genre: Heavy Metal
+mtime: 1335281236
+song_end
+playlist_begin: 00-iron_maiden-no_more_lies-ep-2004-ionx.m3u
+mtime: 1335281193
+playlist_end
+end: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-No_More_Lies-EP-2004-iONx
+directory: Iron_Maiden-No_Prayer_for_the_Dying-2CD-1990-LiT_iNT
+mtime: 1335278970
+begin: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-No_Prayer_for_the_Dying-2CD-1990-LiT_iNT
+song_begin: 101-iron_maiden-tailgunner-lit.mp3
+Time: 255
+Artist: Iron Maiden
+Title: Tailgunner
+Album: No Prayer for the Dying
+Track: 1
+Date: 1990
+Genre: Heavy Metal
+mtime: 1335281242
+song_end
+song_begin: 102-iron_maiden-holy_smoke-lit.mp3
+Time: 229
+Artist: Iron Maiden
+Title: Holy Smoke
+Album: No Prayer for the Dying
+Track: 2
+Date: 1990
+Genre: Heavy Metal
+mtime: 1335281248
+song_end
+song_begin: 103-iron_maiden-no_prayer_for_the_dying-lit.mp3
+Time: 264
+Artist: Iron Maiden
+Title: No Prayer for the Dying
+Album: No Prayer for the Dying
+Track: 3
+Date: 1990
+Genre: Heavy Metal
+mtime: 1335281254
+song_end
+song_begin: 104-iron_maiden-public_enema_number_one-lit.mp3
+Time: 254
+Artist: Iron Maiden
+Title: Public Enema Number One
+Album: No Prayer for the Dying
+Track: 4
+Date: 1990
+Genre: Heavy Metal
+mtime: 1335281260
+song_end
+song_begin: 105-iron_maiden-fates_warning-lit.mp3
+Time: 250
+Artist: Iron Maiden
+Title: Fates Warning
+Album: No Prayer for the Dying
+Track: 5
+Date: 1990
+Genre: Heavy Metal
+mtime: 1335281266
+song_end
+song_begin: 106-iron_maiden-the_assassin-lit.mp3
+Time: 258
+Artist: Iron Maiden
+Title: The Assassin
+Album: No Prayer for the Dying
+Track: 6
+Date: 1990
+Genre: Heavy Metal
+mtime: 1335281270
+song_end
+song_begin: 107-iron_maiden-run_silent_run_deep-lit.mp3
+Time: 275
+Artist: Iron Maiden
+Title: Run Silent Run Deep
+Album: No Prayer for the Dying
+Track: 7
+Date: 1990
+Genre: Heavy Metal
+mtime: 1335281277
+song_end
+song_begin: 108-iron_maiden-hooks_in_you-lit.mp3
+Time: 247
+Artist: Iron Maiden
+Title: Hooks in You
+Album: No Prayer for the Dying
+Track: 8
+Date: 1990
+Genre: Heavy Metal
+mtime: 1335281282
+song_end
+song_begin: 109-iron_maiden-bring_your_daughter____to_the_slaughter-lit.mp3
+Time: 284
+Artist: Iron Maiden
+Title: Bring Your Daughter... to the
+Album: No Prayer for the Dying
+Track: 9
+Date: 1990
+Genre: Heavy Metal
+mtime: 1335281290
+song_end
+song_begin: 110-iron_maiden-mother_russia-lit.mp3
+Time: 332
+Artist: Iron Maiden
+Title: Mother Russia
+Album: No Prayer for the Dying
+Track: 10
+Date: 1990
+Genre: Heavy Metal
+mtime: 1335281296
+song_end
+song_begin: 201-iron_maiden-all_in_your_mind-lit.mp3
+Time: 272
+Artist: Iron Maiden
+Title: All in Your Mind
+Album: No Prayer for the Dying
+Track: 11
+Date: 1990
+Genre: Heavy Metal
+mtime: 1335281302
+song_end
+song_begin: 202-iron_maiden-kill_me_ce_soir-lit.mp3
+Time: 378
+Artist: Iron Maiden
+Title: Kill Me Ce Soir
+Album: No Prayer for the Dying
+Track: 12
+Date: 1990
+Genre: Heavy Metal
+mtime: 1335281318
+song_end
+song_begin: 203-iron_maiden-im_a_mover-lit.mp3
+Time: 209
+Artist: Iron Maiden
+Title: I'm A Mover
+Album: No Prayer for the Dying
+Track: 13
+Date: 1990
+Genre: Heavy Metal
+mtime: 1335281323
+song_end
+song_begin: 204-iron_maiden-communication_breakdown-lit.mp3
+Time: 161
+Artist: Iron Maiden
+Title: Communication Breakdown
+Album: No Prayer for the Dying
+Track: 14
+Date: 1990
+Genre: Heavy Metal
+mtime: 1335281318
+song_end
+playlist_begin: 000-iron_maiden-no_prayer_for_the_dying-2cd-1990-lit_int.m3u
+mtime: 1335281233
+playlist_end
+end: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-No_Prayer_for_the_Dying-2CD-1990-LiT_iNT
+directory: Iron_Maiden-Out_of_the_Silent_Planet-2000-eNT_iNT
+mtime: 1335278970
+begin: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Out_of_the_Silent_Planet-2000-eNT_iNT
+song_begin: 01-iron_maiden-out_of_the_silent_planet-ent.mp3
+Time: 251
+Artist: Iron Maiden
+Title: Out of the Silent Planet
+Album: Out of the Silent Planet
+Date: 2000
+Genre: Metal
+mtime: 1335281327
+song_end
+song_begin: 02-iron_maiden-wasted_years_(live)-ent.mp3
+Time: 307
+Artist: Iron Maiden
+Title: Wasted Years (Live)
+Album: Out of the Silent Planet
+Date: 2000
+Genre: Metal
+mtime: 1335281331
+song_end
+song_begin: 03-iron_maiden-aces_high_(live)-ent.mp3
+Time: 324
+Artist: Iron Maiden
+Title: Aces High (Live)
+Album: Out of the Silent Planet
+Date: 2000
+Genre: Metal
+mtime: 1335281337
+song_end
+end: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Out_of_the_Silent_Planet-2000-eNT_iNT
+directory: Iron_Maiden-Piece_of_Mind-1983-iRO
+mtime: 1335278970
+begin: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Piece_of_Mind-1983-iRO
+song_begin: 01-iron_maiden-where_eagles_dare-iro.mp3
+Time: 370
+Artist: Iron Maiden
+AlbumArtist: Iron Maiden
+Title: Where Eagles Dare
+Album: Piece of Mind
+Track: 1
+Date: 1983
+Genre: Metal
+Composer: Steve Harris
+mtime: 1335281343
+song_end
+song_begin: 02-iron_maiden-revelations-iro.mp3
+Time: 408
+Artist: Iron Maiden
+AlbumArtist: Iron Maiden
+Title: Revelations
+Album: Piece of Mind
+Track: 2
+Date: 1983
+Genre: Metal
+Composer: Bruce Dickinson
+mtime: 1335281352
+song_end
+song_begin: 03-iron_maiden-flight_of_icarus-iro.mp3
+Time: 231
+Artist: Iron Maiden
+AlbumArtist: Iron Maiden
+Title: Flight Of Icarus
+Album: Piece of Mind
+Track: 3
+Date: 1983
+Genre: Metal
+Composer: Adrian Smith/Bruce Dickinson
+mtime: 1335281360
+song_end
+song_begin: 04-iron_maiden-die_with_your_boots_on-iro.mp3
+Time: 329
+Artist: Iron Maiden
+AlbumArtist: Iron Maiden
+Title: Die With Your Boots On
+Album: Piece of Mind
+Track: 4
+Date: 1983
+Genre: Metal
+Composer: Adrian Smith/Bruce Dickinson/Steve Harris
+mtime: 1335281365
+song_end
+song_begin: 05-iron_maiden-the_trooper-iro.mp3
+Time: 241
+Artist: Iron Maiden
+AlbumArtist: Iron Maiden
+Title: The Trooper
+Album: Piece of Mind
+Track: 5
+Date: 1983
+Genre: Metal
+Composer: Steve Harris
+mtime: 1335281370
+song_end
+song_begin: 06-iron_maiden-still_life-iro.mp3
+Time: 304
+Artist: Iron Maiden
+AlbumArtist: Iron Maiden
+Title: Still Life
+Album: Piece of Mind
+Track: 6
+Date: 1983
+Genre: Metal
+Composer: David Murray/Steve Harris
+mtime: 1335281377
+song_end
+song_begin: 07-iron_maiden-quest_for_fire-iro.mp3
+Time: 222
+Artist: Iron Maiden
+AlbumArtist: Iron Maiden
+Title: Quest For Fire
+Album: Piece of Mind
+Track: 7
+Date: 1983
+Genre: Metal
+Composer: Steve Harris
+mtime: 1335281383
+song_end
+song_begin: 08-iron_maiden-sun_and_steel-iro.mp3
+Time: 207
+Artist: Iron Maiden
+AlbumArtist: Iron Maiden
+Title: Sun And Steel
+Album: Piece of Mind
+Track: 8
+Date: 1983
+Genre: Metal
+Composer: Adrian Smith/Bruce Dickinson
+mtime: 1335281388
+song_end
+song_begin: 09-iron_maiden-to_tame_a_land-iro.mp3
+Time: 445
+Artist: Iron Maiden
+AlbumArtist: Iron Maiden
+Title: To Tame A Land
+Album: Piece of Mind
+Track: 9
+Date: 1983
+Genre: Metal
+Composer: Steve Harris
+mtime: 1335281395
+song_end
+playlist_begin: 00-iron_maiden-piece_of_mind-1983-iro.m3u
+mtime: 1335281334
+playlist_end
+end: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Piece_of_Mind-1983-iRO
+directory: Iron_Maiden-Powerslave-1984-FTS
+mtime: 1335278970
+begin: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Powerslave-1984-FTS
+song_begin: 01-iron_maiden-aces_high-fts.mp3
+Time: 270
+Artist: iron maiden
+Title: aces high
+Album: powerslave
+Date: 1984
+Genre: Heavy Metal
+mtime: 1335281400
+song_end
+song_begin: 02-iron_maiden-2_minutes_to_midnight-fts.mp3
+Time: 360
+Artist: iron maiden
+Title: 2 minutes to midnight
+Album: powerslave
+Date: 1984
+Genre: Heavy Metal
+mtime: 1335281407
+song_end
+song_begin: 03-iron_maiden-losfer_words_(big_orra)-fts.mp3
+Time: 253
+Artist: iron maiden
+Title: losfer words (big 'orra)
+Album: powerslave
+Date: 1984
+Genre: Heavy Metal
+mtime: 1335281413
+song_end
+song_begin: 04-iron_maiden-flash_of_the_blade-fts.mp3
+Time: 243
+Artist: iron maiden
+Title: flash of the blade
+Album: powerslave
+Date: 1984
+Genre: Heavy Metal
+mtime: 1335281420
+song_end
+song_begin: 05-iron_maiden-the_duellists-fts.mp3
+Time: 366
+Artist: iron maiden
+Title: the duellists
+Album: powerslave
+Date: 1984
+Genre: Heavy Metal
+mtime: 1335281428
+song_end
+song_begin: 06-iron_maiden-back_in_the_village-fts.mp3
+Time: 321
+Artist: iron maiden
+Title: back in the village
+Album: powerslave
+Date: 1984
+Genre: Heavy Metal
+mtime: 1335281539
+song_end
+song_begin: 07-iron_maiden-powerslave-fts.mp3
+Time: 408
+Artist: iron maiden
+Title: powerslave
+Album: powerslave
+Date: 1984
+Genre: Heavy Metal
+mtime: 1335281549
+song_end
+song_begin: 08-iron_maiden-rime_of_the_ancient_mariner-fts.mp3
+Time: 815
+Artist: iron maiden
+Title: rime of the ancient mariner
+Album: powerslave
+Date: 1984
+Genre: Heavy Metal
+mtime: 1335281564
+song_end
+playlist_begin: 00-iron_maiden-powerslave-1984-fts.m3u
+mtime: 1335280622
+playlist_end
+end: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Powerslave-1984-FTS
+directory: Iron_Maiden-Seventh_Son_Of_A_Seventh_Son-(Remastered)-1998-FTS
+mtime: 1335278970
+begin: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Seventh_Son_Of_A_Seventh_Son-(Remastered)-1998-FTS
+song_begin: 01-iron_maiden-moonchild-fts.mp3
+Time: 340
+Artist: Iron Maiden
+Title: Moonchild
+Album: Seventh Son Of A Seventh Son
+Track: 1
+Date: 1998
+Genre: Heavy Metal
+mtime: 1335280769
+song_end
+song_begin: 02-iron_maiden-infinite_dreams-fts.mp3
+Time: 369
+Artist: Iron Maiden
+Title: Infinite Dreams
+Album: Seventh Son Of A Seventh Son
+Track: 2
+Date: 1998
+Genre: Heavy Metal
+mtime: 1335280863
+song_end
+song_begin: 03-iron_maiden-can_i_play_with_madness-fts.mp3
+Time: 211
+Artist: Iron Maiden
+Title: Can I Play With Madness
+Album: Seventh Son Of A Seventh Son
+Track: 3
+Date: 1998
+Genre: Heavy Metal
+mtime: 1335282729
+song_end
+song_begin: 04-iron_maiden-the_evil_that_men_do-fts.mp3
+Time: 274
+Artist: Iron Maiden
+Title: The Evil That Men Do
+Album: Seventh Son Of A Seventh Son
+Track: 4
+Date: 1998
+Genre: Heavy Metal
+mtime: 1335282747
+song_end
+song_begin: 05-iron_maiden-seventh_son_of_a_seventh_son-fts.mp3
+Time: 594
+Artist: Iron Maiden
+Title: Seventh Son Of A Seventh Son
+Album: Seventh Son Of A Seventh Son
+Track: 5
+Date: 1998
+Genre: Heavy Metal
+mtime: 1335282751
+song_end
+song_begin: 06-iron_maiden-the_prophecy-fts.mp3
+Time: 306
+Artist: Iron Maiden
+Title: The Prophecy
+Album: Seventh Son Of A Seventh Son
+Track: 6
+Date: 1998
+Genre: Heavy Metal
+mtime: 1335282757
+song_end
+song_begin: 07-iron_maiden-the_clairvoyant-fts.mp3
+Time: 267
+Artist: Iron Maiden
+Title: The Clairvoyant
+Album: Seventh Son Of A Seventh Son
+Track: 7
+Date: 1998
+Genre: Heavy Metal
+mtime: 1335282761
+song_end
+song_begin: 08-iron_maiden-only_the_good_die_young-fts.mp3
+Time: 281
+Artist: Iron Maiden
+Title: Only The Good Die Young
+Album: Seventh Son Of A Seventh Son
+Track: 8
+Date: 1998
+Genre: Heavy Metal
+mtime: 1335282764
+song_end
+playlist_begin: 00-iron_maiden-seventh_son_of_a_seventh_son-(remastered)-1998-fts.m3u
+mtime: 1335280692
+playlist_end
+end: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Seventh_Son_Of_A_Seventh_Son-(Remastered)-1998-FTS
+directory: Iron_Maiden-Seventh_Son_of_A_Seventh_Son-2CD-1988-LiT_iNT
+mtime: 1335278970
+begin: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Seventh_Son_of_A_Seventh_Son-2CD-1988-LiT_iNT
+song_begin: 101-iron_maiden-moonchild-lit.mp3
+Time: 342
+Artist: Iron Maiden
+Title: Moonchild
+Album: Seventh Son of A Seventh Son
+Track: 1
+Date: 1988
+Genre: Heavy Metal
+mtime: 1335282771
+song_end
+song_begin: 102-iron_maiden-infinite_dreams-lit.mp3
+Time: 369
+Artist: Iron Maiden
+Title: Infinite Dreams
+Album: Seventh Son of A Seventh Son
+Track: 2
+Date: 1988
+Genre: Heavy Metal
+mtime: 1335282808
+song_end
+song_begin: 103-iron_maiden-can_i_play_with_madness-lit.mp3
+Time: 211
+Artist: Iron Maiden
+Title: Can I Play with Madness
+Album: Seventh Son of A Seventh Son
+Track: 3
+Date: 1988
+Genre: Heavy Metal
+mtime: 1335282786
+song_end
+song_begin: 104-iron_maiden-the_evil_that_men_do-lit.mp3
+Time: 276
+Artist: Iron Maiden
+Title: The Evil that Men Do
+Album: Seventh Son of A Seventh Son
+Track: 4
+Date: 1988
+Genre: Heavy Metal
+mtime: 1335282790
+song_end
+song_begin: 105-iron_maiden-seventh_son_of_a_seventh_son-lit.mp3
+Time: 594
+Artist: Iron Maiden
+Title: Seventh Son of A Seventh Son
+Album: Seventh Son of A Seventh Son
+Track: 5
+Date: 1988
+Genre: Heavy Metal
+mtime: 1335282800
+song_end
+song_begin: 106-iron_maiden-the_prophecy-lit.mp3
+Time: 306
+Artist: Iron Maiden
+Title: The Prophecy
+Album: Seventh Son of A Seventh Son
+Track: 6
+Date: 1988
+Genre: Heavy Metal
+mtime: 1335282805
+song_end
+song_begin: 107-iron_maiden-the_clairvoyant-lit.mp3
+Time: 267
+Artist: Iron Maiden
+Title: The Clairvoyant
+Album: Seventh Son of A Seventh Son
+Track: 7
+Date: 1988
+Genre: Heavy Metal
+mtime: 1335282811
+song_end
+song_begin: 108-iron_maiden-only_the_good_die_young-lit.mp3
+Time: 283
+Artist: Iron Maiden
+Title: Only the Good Die Young
+Album: Seventh Son of A Seventh Son
+Track: 8
+Date: 1988
+Genre: Heavy Metal
+mtime: 1335282814
+song_end
+song_begin: 201-iron_maiden-black_bart_blues-lit.mp3
+Time: 402
+Artist: Iron Maiden
+Title: Black Bart Blues
+Album: Seventh Son of A Seventh Son
+Track: 9
+Date: 1988
+Genre: Heavy Metal
+mtime: 1335282819
+song_end
+song_begin: 202-iron_maiden-massacre-lit.mp3
+Time: 174
+Artist: Iron Maiden
+Title: Massacre
+Album: Seventh Son of A Seventh Son
+Track: 10
+Date: 1988
+Genre: Heavy Metal
+mtime: 1335282821
+song_end
+song_begin: 203-iron_maiden-prowler_88-lit.mp3
+Time: 248
+Artist: Iron Maiden
+Title: Prowler '88
+Album: Seventh Son of A Seventh Son
+Track: 11
+Date: 1988
+Genre: Heavy Metal
+mtime: 1335282823
+song_end
+song_begin: 204-iron_maiden-charlotte_the_harlot_88-lit.mp3
+Time: 251
+Artist: Iron Maiden
+Title: Charlotte the Harlot '88
+Album: Seventh Son of A Seventh Son
+Track: 12
+Date: 1988
+Genre: Heavy Metal
+mtime: 1335282828
+song_end
+song_begin: 205-iron_maiden-infinite_dreams_(live)-lit.mp3
+Time: 364
+Artist: Iron Maiden
+Title: Infinite Dreams (Live)
+Album: Seventh Son of A Seventh Son
+Track: 13
+Date: 1988
+Genre: Heavy Metal
+mtime: 1335282833
+song_end
+song_begin: 206-iron_maiden-the_clairvoyant_(live)-lit.mp3
+Time: 267
+Artist: Iron Maiden
+Title: The Clairvoyant (Live)
+Album: Seventh Son of A Seventh Son
+Track: 14
+Date: 1988
+Genre: Heavy Metal
+mtime: 1335282838
+song_end
+song_begin: 207-iron_maiden-the_prisioner_(live)-lit.mp3
+Time: 369
+Artist: Iron Maiden
+Title: The Prisioner (Live)
+Album: Seventh Son of A Seventh Son
+Track: 15
+Date: 1988
+Genre: Heavy Metal
+mtime: 1335282843
+song_end
+song_begin: 208-iron_maiden-killers_(live)-lit.mp3
+Time: 303
+Artist: Iron Maiden
+Title: Killers (Live)
+Album: Seventh Son of A Seventh Son
+Track: 16
+Date: 1988
+Genre: Heavy Metal
+mtime: 1335282848
+song_end
+song_begin: 209-iron_maiden-still_life_(live)-lit.mp3
+Time: 279
+Artist: Iron Maiden
+Title: Still Life (Live)
+Album: Seventh Son of A Seventh Son
+Track: 17
+Date: 1988
+Genre: Heavy Metal
+mtime: 1335282852
+song_end
+playlist_begin: 000-iron_maiden-seventh_son_of_a_seventh_son-2cd-1988-lit_int.m3u
+mtime: 1335282764
+playlist_end
+end: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Seventh_Son_of_A_Seventh_Son-2CD-1988-LiT_iNT
+directory: Iron_Maiden-Somewhere_In_Time-(Remastered)-1998-FTS
+mtime: 1335278970
+begin: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Somewhere_In_Time-(Remastered)-1998-FTS
+song_begin: 01-iron_maiden-caught_somewhere_in_time-fts.mp3
+Time: 446
+Artist: Iron Maiden
+Title: Caught Somewhere In Time
+Album: Somewhere In Time
+Track: 1
+Date: 1998
+Genre: Heavy Metal
+mtime: 1335282853
+song_end
+song_begin: 02-iron_maiden-wasted_years-fts.mp3
+Time: 308
+Artist: Iron Maiden
+Title: Wasted Years
+Album: Somewhere In Time
+Track: 2
+Date: 1998
+Genre: Heavy Metal
+mtime: 1335281582
+song_end
+song_begin: 03-iron_maiden-sea_of_madness-fts.mp3
+Time: 342
+Artist: Iron Maiden
+Title: Sea Of Madness
+Album: Somewhere In Time
+Track: 3
+Date: 1998
+Genre: Heavy Metal
+mtime: 1335281591
+song_end
+song_begin: 04-iron_maiden-heaven_can_wait-fts.mp3
+Time: 441
+Artist: Iron Maiden
+Title: Heaven Can Wait
+Album: Somewhere In Time
+Track: 4
+Date: 1998
+Genre: Heavy Metal
+mtime: 1335281605
+song_end
+song_begin: 05-iron_maiden-the_loneliness_of_the_long_distance_runner-fts.mp3
+Time: 391
+Artist: Iron Maiden
+Title: The Loneliness Of The Long Distance Runner
+Album: Somewhere In Time
+Track: 5
+Date: 1998
+Genre: Heavy Metal
+mtime: 1335281615
+song_end
+song_begin: 06-iron_maiden-stranger_in_a_strange_land-fts.mp3
+Time: 345
+Artist: Iron Maiden
+Title: Stranger In A Strange Land
+Album: Somewhere In Time
+Track: 6
+Date: 1998
+Genre: Heavy Metal
+mtime: 1335281622
+song_end
+song_begin: 07-iron_maiden-de_ja_vu-fts.mp3
+Time: 296
+Artist: Iron Maiden
+Title: De Ja Vu
+Album: Somewhere In Time
+Track: 7
+Date: 1998
+Genre: Heavy Metal
+mtime: 1335281631
+song_end
+song_begin: 08-iron_maiden-alexander_the_great-fts.mp3
+Time: 516
+Artist: Iron Maiden
+Title: Alexander The Great
+Album: Somewhere In Time
+Track: 8
+Date: 1998
+Genre: Heavy Metal
+mtime: 1335281643
+song_end
+playlist_begin: 00-iron_maiden-somewhere_in_time-(remastered)-1998-fts.m3u
+mtime: 1335282849
+playlist_end
+end: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Somewhere_In_Time-(Remastered)-1998-FTS
+directory: Iron_Maiden-Somewhere_In_Time-1986-osi
+mtime: 1335278970
+begin: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Somewhere_In_Time-1986-osi
+song_begin: 02-iron_maiden-wasted_years-osi.mp3
+Time: 308
+Artist: Iron Maiden
+Title: Wasted Years
+mtime: 1335281653
+song_end
+song_begin: 01-iron_maiden-caught_somewhere_in_time-osi.mp3
+Time: 442
+Artist: Iron Maiden
+Title: Caught Somewhere in Time
+Album: Alexander the Great
+Date: 1984
+Genre: Heavy Metal
+mtime: 1335281649
+song_end
+song_begin: 04-iron_maiden-heaven_can_wait-osi.mp3
+Time: 443
+Artist: Iron Maiden
+Title: Heaven Can Wait
+Album: Best Of The Beast
+mtime: 1335281665
+song_end
+song_begin: 03-iron_maiden-sea_of-madness-osi.mp3
+Time: 342
+Artist: Iron Maiden
+Title: Sea Of Madness
+Album: Somewhere In Time
+Date: 1986
+Genre: Metal
+mtime: 1335281659
+song_end
+song_begin: 07-iron_maiden-deja_vu-osi.mp3
+Time: 296
+Artist: Iron Maiden
+Title: Deja Vu
+Album: Somewhere In Time
+Date: 1986
+Genre: Metal
+mtime: 1335281680
+song_end
+song_begin: 08-iron_maiden-alexander_the_great-osi.mp3
+Time: 516
+Artist: Iron Maiden
+Title: Alexander The Great
+Album: Somewhere In Time
+Genre: Other
+mtime: 1335281686
+song_end
+song_begin: 05-iron_maiden-the_loneliness_of_the_long_distance_runner-osi.mp3
+Time: 391
+Artist: Iron Maiden
+Title: The Loneliness Of The Long Distance Runner
+Album: Somewhere In Time
+Track: 5
+Genre: Rock
+mtime: 1335281670
+song_end
+song_begin: 06-iron_maiden-stranger_in_a_strange_land-osi.mp3
+Time: 344
+Artist: Iron Maiden
+Title: Stranger In A Strange Land
+Album: Somewhere In Time
+Track: 6
+Genre: Rock
+mtime: 1335281674
+song_end
+playlist_begin: 00-iron_maiden-somewhere_in_time-1986-osi.m3u
+mtime: 1335281637
+playlist_end
+end: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Somewhere_In_Time-1986-osi
+directory: Iron_Maiden-The_Early_Days-DVDA-2004-QTXMp3
+mtime: 1335278970
+begin: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-The_Early_Days-DVDA-2004-QTXMp3
+song_begin: 201-iron_maiden_-_run_to_the_hills_(live_at_top_of_the_pops)-qtxmp3.mp3
+Time: 123
+Artist: Iron Maiden
+Title: Run To The Hills (live at Top
+Album: The Early Days
+Track: 4294967241
+Date: 2004
+Genre: Heavy Metal
+mtime: 1335282276
+song_end
+song_begin: 202-iron_maiden_-_women_in_uniform_(live_at_top_of_the_pops)-qtxmp3.mp3
+Time: 186
+Artist: Iron Maiden
+Title: Women In Uniform (live at Top
+Album: The Early Days
+Track: 4294967242
+Date: 2004
+Genre: Heavy Metal
+mtime: 1335282279
+song_end
+song_begin: 203-iron_maiden_-_running_free_(live_at_rock_pop_tv)-qtxmp3.mp3
+Time: 197
+Artist: Iron Maiden
+Title: Running Free (live at Rock Pop
+Album: The Early Days
+Track: 4294967243
+Date: 2004
+Genre: Heavy Metal
+mtime: 1335282281
+song_end
+song_begin: 204-iron_maiden_-_sanctuary-qtxmp3.mp3
+Time: 285
+Artist: Iron Maiden
+Title: Sanctuary
+Album: The Early Days
+Track: 4294967244
+Date: 2004
+Genre: Heavy Metal
+mtime: 1335282284
+song_end
+song_begin: 205-iron_maiden_-_wrathchild-qtxmp3.mp3
+Time: 198
+Artist: Iron Maiden
+Title: Wrathchild
+Album: The Early Days
+Track: 4294967245
+Date: 2004
+Genre: Heavy Metal
+mtime: 1335282287
+song_end
+song_begin: 206-iron_maiden_-_prowler-qtxmp3.mp3
+Time: 245
+Artist: Iron Maiden
+Title: Prowler
+Album: The Early Days
+Track: 4294967246
+Date: 2004
+Genre: Heavy Metal
+mtime: 1335282291
+song_end
+song_begin: 207-iron_maiden_-_remember_tomorrow-qtxmp3.mp3
+Time: 335
+Artist: Iron Maiden
+Title: Remember Tomorrow
+Album: The Early Days
+Track: 4294967247
+Date: 2004
+Genre: Heavy Metal
+mtime: 1335282295
+song_end
+song_begin: 208-iron_maiden_-_running_free-qtxmp3.mp3
+Time: 216
+Artist: Iron Maiden
+Title: Running Free
+Album: The Early Days
+Track: 4294967248
+Date: 2004
+Genre: Heavy Metal
+mtime: 1335282297
+song_end
+song_begin: 209-iron_maiden_-_transylvania-qtxmp3.mp3
+Time: 346
+Artist: Iron Maiden
+Title: Transylvania
+Album: The Early Days
+Track: 4294967249
+Date: 2004
+Genre: Heavy Metal
+mtime: 1335282301
+song_end
+song_begin: 210-iron_maiden_-_another_life-qtxmp3.mp3
+Time: 331
+Artist: Iron Maiden
+Title: Another Life
+Album: The Early Days
+Track: 4294967250
+Date: 2004
+Genre: Heavy Metal
+mtime: 1335282304
+song_end
+song_begin: 211-iron_maiden_-_phantom_of_the_opera-qtxmp3.mp3
+Time: 521
+Artist: Iron Maiden
+Title: Phantom Of The Opera
+Album: The Early Days
+Track: 4294967251
+Date: 2004
+Genre: Heavy Metal
+mtime: 1335282312
+song_end
+song_begin: 212-iron_maiden_-_charlotte_the_harlot-qtxmp3.mp3
+Time: 262
+Artist: Iron Maiden
+Title: Charlotte The Harlot
+Album: The Early Days
+Track: 4294967252
+Date: 2004
+Genre: Heavy Metal
+mtime: 1335282315
+song_end
+song_begin: 213-iron_maiden_-_women_in_uniform-qtxmp3.mp3
+Time: 194
+Artist: Iron Maiden
+Title: Women In Uniform
+Album: The Early Days
+Track: 4294967253
+Date: 2004
+Genre: Heavy Metal
+mtime: 1335282319
+song_end
+song_begin: 214-iron_maiden_-_run_to_the_hills-qtxmp3.mp3
+Time: 240
+Artist: Iron Maiden
+Title: Run To The Hills
+Album: The Early Days
+Track: 4294967254
+Date: 2004
+Genre: Heavy Metal
+mtime: 1335282323
+song_end
+song_begin: 215-iron_maiden_-_the_number_of_the_beast-qtxmp3.mp3
+Time: 305
+Artist: Iron Maiden
+Title: The Number Of The Beast
+Album: The Early Days
+Track: 4294967255
+Date: 2004
+Genre: Heavy Metal
+mtime: 1335282328
+song_end
+song_begin: 216-iron_maiden_-_flight_of_icarus-qtxmp3.mp3
+Time: 241
+Artist: Iron Maiden
+Title: Flight Of Icarus
+Album: The Early Days
+Track: 4294967256
+Date: 2004
+Genre: Heavy Metal
+mtime: 1335282332
+song_end
+song_begin: 217-iron_maiden_-_the_trooper-qtxmp3.mp3
+Time: 260
+Artist: Iron Maiden
+Title: The Trooper
+Album: The Early Days
+Track: 4294967257
+Date: 2004
+Genre: Heavy Metal
+mtime: 1335282335
+song_end
+song_begin: 101-iron_maiden_-_ides_of_march-qtxmp3.mp3
+Time: 38
+Artist: Iron Maiden
+Title: Ides Of March
+Album: The Early Days
+Track: 101
+Date: 2004
+Genre: Heavy Metal
+mtime: 1335281689
+song_end
+song_begin: 102-iron_maiden_-_wrathchild-qtxmp3.mp3
+Time: 178
+Artist: Iron Maiden
+Title: Wrathchild
+Album: The Early Days
+Track: 102
+Date: 2004
+Genre: Heavy Metal
+mtime: 1335281692
+song_end
+song_begin: 103-iron_maiden_-_killers-qtxmp3.mp3
+Time: 312
+Artist: Iron Maiden
+Title: Killers
+Album: The Early Days
+Track: 103
+Date: 2004
+Genre: Heavy Metal
+mtime: 1335281697
+song_end
+song_begin: 104-iron_maiden_-_remember_tomorrow-qtxmp3.mp3
+Time: 325
+Artist: Iron Maiden
+Title: Remember Tomorrow
+Album: The Early Days
+Track: 104
+Date: 2004
+Genre: Heavy Metal
+mtime: 1335281701
+song_end
+song_begin: 105-iron_maiden_-_transylvania-qtxmp3.mp3
+Time: 231
+Artist: Iron Maiden
+Title: Transylvania
+Album: The Early Days
+Track: 105
+Date: 2004
+Genre: Heavy Metal
+mtime: 1335281708
+song_end
+song_begin: 106-iron_maiden_-_phantom_of_the_opera-qtxmp3.mp3
+Time: 414
+Artist: Iron Maiden
+Title: Phantom Of The Opera
+Album: The Early Days
+Track: 106
+Date: 2004
+Genre: Heavy Metal
+mtime: 1335281718
+song_end
+song_begin: 107-iron_maiden_-_iron_maiden-qtxmp3.mp3
+Time: 236
+Artist: Iron Maiden
+Title: Iron Maiden
+Album: The Early Days
+Track: 107
+Date: 2004
+Genre: Heavy Metal
+mtime: 1335281720
+song_end
+song_begin: 108-iron_maiden_-_outro-qtxmp3.mp3
+Time: 89
+Artist: Iron Maiden
+Title: Outro
+Album: The Early Days
+Track: 108
+Date: 2004
+Genre: Heavy Metal
+mtime: 1335281723
+song_end
+song_begin: 109-iron_maiden_-_murders_in_the_rue_morgue-qtxmp3.mp3
+Time: 282
+Artist: Iron Maiden
+Title: Murders In The Rue Morgue
+Album: The Early Days
+Track: 109
+Date: 2004
+Genre: Heavy Metal
+mtime: 1335281730
+song_end
+song_begin: 110-iron_maiden_-_run_to_the_hills-qtxmp3.mp3
+Time: 236
+Artist: Iron Maiden
+Title: Run To The Hills
+Album: The Early Days
+Track: 110
+Date: 2004
+Genre: Heavy Metal
+mtime: 1335281737
+song_end
+song_begin: 111-iron_maiden_-_children_of_the_damned-qtxmp3.mp3
+Time: 279
+Artist: Iron Maiden
+Title: Children Of The Damned
+Album: The Early Days
+Track: 111
+Date: 2004
+Genre: Heavy Metal
+mtime: 1335281740
+song_end
+song_begin: 112-iron_maiden_-_the_number_of_the_beast-qtxmp3.mp3
+Time: 288
+Artist: Iron Maiden
+Title: The Number Of The Beast
+Album: The Early Days
+Track: 112
+Date: 2004
+Genre: Heavy Metal
+mtime: 1335281745
+song_end
+song_begin: 113-iron_maiden_-_22_acacia_avenue-qtxmp3.mp3
+Time: 429
+Artist: Iron Maiden
+Title: 22 Acacia Avenue
+Album: The Early Days
+Track: 113
+Date: 2004
+Genre: Heavy Metal
+mtime: 1335281754
+song_end
+song_begin: 114-iron_maiden_-_total_eclipse-qtxmp3.mp3
+Time: 248
+Artist: Iron Maiden
+Title: Total Eclipse
+Album: The Early Days
+Track: 114
+Date: 2004
+Genre: Heavy Metal
+mtime: 1335281760
+song_end
+song_begin: 115-iron_maiden_-_the_prisoner-qtxmp3.mp3
+Time: 350
+Artist: Iron Maiden
+Title: The Prisoner
+Album: The Early Days
+Track: 115
+Date: 2004
+Genre: Heavy Metal
+mtime: 1335282239
+song_end
+song_begin: 116-iron_maiden_-_hallowed_be_thy_name-qtxmp3.mp3
+Time: 418
+Artist: Iron Maiden
+Title: Hallowed Be Thy Name
+Album: The Early Days
+Track: 116
+Date: 2004
+Genre: Heavy Metal
+mtime: 1335282246
+song_end
+song_begin: 117-iron_maiden_-_iron_maiden-qtxmp3.mp3
+Time: 253
+Artist: Iron Maiden
+Title: Iron Maiden
+Album: The Early Days
+Track: 117
+Date: 2004
+Genre: Heavy Metal
+mtime: 1335282251
+song_end
+song_begin: 118-iron_maiden_-_sanctuary-qtxmp3.mp3
+Time: 286
+Artist: Iron Maiden
+Title: Sanctuary
+Album: The Early Days
+Track: 118
+Date: 2004
+Genre: Heavy Metal
+mtime: 1335282255
+song_end
+song_begin: 119-iron_maiden_-_the_trooper-qtxmp3.mp3
+Time: 251
+Artist: Iron Maiden
+Title: The Trooper
+Album: The Early Days
+Track: 119
+Date: 2004
+Genre: Heavy Metal
+mtime: 1335282257
+song_end
+song_begin: 120-iron_maiden_-_revelations-qtxmp3.mp3
+Time: 384
+Artist: Iron Maiden
+Title: Revelations
+Album: The Early Days
+Track: 120
+Date: 2004
+Genre: Heavy Metal
+mtime: 1335282262
+song_end
+song_begin: 121-iron_maiden_-_flight_of_icarus-qtxmp3.mp3
+Time: 221
+Artist: Iron Maiden
+Title: Flight Of Icarus
+Album: The Early Days
+Track: 121
+Date: 2004
+Genre: Heavy Metal
+mtime: 1335282265
+song_end
+song_begin: 122-iron_maiden_-_22_acacia_avenue-qtxmp3.mp3
+Time: 389
+Artist: Iron Maiden
+Title: 22 Acacia Avenue
+Album: The Early Days
+Track: 122
+Date: 2004
+Genre: Heavy Metal
+mtime: 1335282270
+song_end
+song_begin: 123-iron_maiden_-_the_number_of_the_beast-qtxmp3.mp3
+Time: 352
+Artist: Iron Maiden
+Title: The Number Of The Beast
+Album: The Early Days
+Track: 123
+Date: 2004
+Genre: Heavy Metal
+mtime: 1335282274
+song_end
+song_begin: 124-iron_maiden_-_run_to_the_hills-qtxmp3.mp3
+Time: 262
+Artist: Iron Maiden
+Title: Run To The Hills
+Album: The Early Days
+Track: 124
+Date: 2004
+Genre: Heavy Metal
+mtime: 1335282276
+song_end
+playlist_begin: 000-iron_maiden_-_the_early_days-dvda-2004-qtxmp3.m3u
+mtime: 1335281683
+playlist_end
+end: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-The_Early_Days-DVDA-2004-QTXMp3
+directory: Iron_Maiden-The_Essential_Iron_Maiden-2CD-2005-RNS
+mtime: 1335278970
+begin: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-The_Essential_Iron_Maiden-2CD-2005-RNS
+song_begin: 101-iron_maiden-paschendale.mp3
+Time: 507
+Artist: Iron Maiden
+Title: Paschendale
+Album: The Essential Iron Maiden
+Track: 1/13
+Date: 2005-07-12
+Genre: Metal
+Genre: Metal
+Disc: 1/2
+mtime: 1335280897
+song_end
+song_begin: 102-iron_maiden-rainmaker.mp3
+Time: 228
+Artist: Iron Maiden
+Title: Rainmaker
+Album: The Essential Iron Maiden
+Track: 2/13
+Date: 2005-07-12
+Genre: Metal
+Genre: Metal
+Disc: 1/2
+mtime: 1335280904
+song_end
+song_begin: 103-iron_maiden-the_wicker_man.mp3
+Time: 275
+Artist: Iron Maiden
+Title: The Wicker Man
+Album: The Essential Iron Maiden
+Track: 3/13
+Date: 2005-07-12
+Genre: Metal
+Genre: Metal
+Disc: 1/2
+mtime: 1335280912
+song_end
+song_begin: 104-iron_maiden-brave_new_world.mp3
+Time: 378
+Artist: Iron Maiden
+Title: Brave New World
+Album: The Essential Iron Maiden
+Track: 4/13
+Date: 2005-07-12
+Genre: Metal
+Genre: Metal
+Disc: 1/2
+mtime: 1335282340
+song_end
+song_begin: 105-iron_maiden-futureal.mp3
+Time: 176
+Artist: Iron Maiden
+Title: Futureal
+Album: The Essential Iron Maiden
+Track: 5/13
+Date: 2005-07-12
+Genre: Metal
+Genre: Metal
+Disc: 1/2
+mtime: 1335282347
+song_end
+song_begin: 106-iron_maiden-the_clansman.mp3
+Time: 540
+Artist: Iron Maiden
+Title: The Clansman
+Album: The Essential Iron Maiden
+Track: 6/13
+Date: 2005-07-12
+Genre: Metal
+Genre: Metal
+Disc: 1/2
+mtime: 1335282360
+song_end
+song_begin: 107-iron_maiden-sign_of_the_cross.mp3
+Time: 676
+Artist: Iron Maiden
+Title: Sign OF The Cross
+Album: The Essential Iron Maiden
+Track: 7/13
+Date: 2005-07-12
+Genre: Metal
+Genre: Metal
+Disc: 1/2
+mtime: 1335282376
+song_end
+song_begin: 108-iron_maiden-man_on_the_edge.mp3
+Time: 252
+Artist: Iron Maiden
+Title: Man On The Edge
+Album: The Essential Iron Maiden
+Track: 8/13
+Date: 2005-07-12
+Genre: Metal
+Genre: Metal
+Disc: 1/2
+mtime: 1335282381
+song_end
+song_begin: 109-iron_maiden-be_quick_or_be_dead.mp3
+Time: 204
+Artist: Iron Maiden
+Title: Be Quick Or Be Dead
+Album: The Essential Iron Maiden
+Track: 9/13
+Date: 2005-07-12
+Genre: Metal
+Genre: Metal
+Disc: 1/2
+mtime: 1335282386
+song_end
+song_begin: 110-iron_maiden-fear_of_the_dark_(live).mp3
+Time: 473
+Artist: Iron Maiden
+Title: Fear Of The Dark (Live)
+Album: The Essential Iron Maiden
+Track: 10/13
+Date: 2005-07-12
+Genre: Metal
+Genre: Metal
+Disc: 1/2
+mtime: 1335282397
+song_end
+song_begin: 111-iron_maiden-holy_smoke.mp3
+Time: 228
+Artist: Iron Maiden
+Title: Holy Smoke
+Album: The Essential Iron Maiden
+Track: 11/13
+Date: 2005-07-12
+Genre: Metal
+Genre: Metal
+Disc: 1/2
+mtime: 1335282400
+song_end
+song_begin: 112-iron_maiden-bring_your_daughter_to_the_slaughter.mp3
+Time: 284
+Artist: Iron Maiden
+Title: Bring Your Daughter... To The Slaughter
+Album: The Essential Iron Maiden
+Track: 12/13
+Date: 2005-07-12
+Genre: Metal
+Genre: Metal
+Disc: 1/2
+mtime: 1335282409
+song_end
+song_begin: 113-iron_maiden-the_clairvoyant.mp3
+Time: 267
+Artist: Iron Maiden
+Title: The Clairvoyant
+Album: The Essential Iron Maiden
+Track: 13/13
+Date: 2005-07-12
+Genre: Metal
+Genre: Metal
+Disc: 1/2
+mtime: 1335282415
+song_end
+song_begin: 201-iron_maiden-the_evil_that_men_do.mp3
+Time: 274
+Artist: Iron Maiden
+Title: The Evil That Men Do
+Album: The Essential Iron Maiden
+Track: 1/14
+Date: 2005-07-12
+Genre: Metal
+Genre: Metal
+Disc: 2/2
+mtime: 1335282421
+song_end
+song_begin: 202-iron_maiden-wasted_years.mp3
+Time: 306
+Artist: Iron Maiden
+Title: Wasted Years
+Album: The Essential Iron Maiden
+Track: 2/14
+Date: 2005-07-12
+Genre: Metal
+Genre: Metal
+Disc: 2/2
+mtime: 1335282426
+song_end
+song_begin: 203-iron_maiden-heaven_can_wait.mp3
+Time: 441
+Artist: Iron Maiden
+Title: Heaven Can Wait
+Album: The Essential Iron Maiden
+Track: 3/14
+Date: 2005-07-12
+Genre: Metal
+Genre: Metal
+Disc: 2/2
+mtime: 1335282438
+song_end
+song_begin: 204-iron_maiden-2_minutes_to_midnight.mp3
+Time: 361
+Artist: Iron Maiden
+Title: 2 Minutes To Midnight
+Album: The Essential Iron Maiden
+Track: 4/14
+Date: 2005-07-12
+Genre: Metal
+Genre: Metal
+Disc: 2/2
+mtime: 1335282452
+song_end
+song_begin: 205-iron_maiden-aces_high.mp3
+Time: 270
+Artist: Iron Maiden
+Title: Aces High
+Album: The Essential Iron Maiden
+Track: 5/14
+Date: 2005-07-12
+Genre: Metal
+Genre: Metal
+Disc: 2/2
+mtime: 1335282459
+song_end
+song_begin: 206-iron_maiden-flight_of_icarus.mp3
+Time: 232
+Artist: Iron Maiden
+Title: Flight OF Icarus
+Album: The Essential Iron Maiden
+Track: 6/14
+Date: 2005-07-12
+Genre: Metal
+Genre: Metal
+Disc: 2/2
+mtime: 1335282464
+song_end
+song_begin: 207-iron_maiden-the_trooper.mp3
+Time: 253
+Artist: Iron Maiden
+Title: The Trooper
+Album: The Essential Iron Maiden
+Track: 7/14
+Date: 2005-07-12
+Genre: Metal
+Genre: Metal
+Disc: 2/2
+mtime: 1335282471
+song_end
+song_begin: 208-iron_maiden-the_number_of_the_beast.mp3
+Time: 292
+Artist: Iron Maiden
+Title: The Number Of The Beast
+Album: The Essential Iron Maiden
+Track: 8/14
+Date: 2005-07-12
+Genre: Metal
+Genre: Metal
+Disc: 2/2
+mtime: 1335282475
+song_end
+song_begin: 209-iron_maiden-run_to_the_hills.mp3
+Time: 235
+Artist: Iron Maiden
+Title: Run To The Hills
+Album: The Essential Iron Maiden
+Track: 9/14
+Date: 2005-07-12
+Genre: Metal
+Genre: Metal
+Disc: 2/2
+mtime: 1335282479
+song_end
+song_begin: 210-iron_maiden-wrathchild.mp3
+Time: 176
+Artist: Iron Maiden
+Title: Wrathchild
+Album: The Essential Iron Maiden
+Track: 10/14
+Date: 2005-07-12
+Genre: Metal
+Genre: Metal
+Disc: 2/2
+mtime: 1335282484
+song_end
+song_begin: 211-iron_maiden-killers.mp3
+Time: 302
+Artist: Iron Maiden
+Title: Killers
+Album: The Essential Iron Maiden
+Track: 11/14
+Date: 2005-07-12
+Genre: Metal
+Genre: Metal
+Disc: 2/2
+mtime: 1335282489
+song_end
+song_begin: 212-iron_maiden-phantom_of_the_opera.mp3
+Time: 427
+Artist: Iron Maiden
+Title: Phantom Of The Opera
+Album: The Essential Iron Maiden
+Track: 12/14
+Date: 2005-07-12
+Genre: Metal
+Genre: Metal
+Disc: 2/2
+mtime: 1335282500
+song_end
+song_begin: 213-iron_maiden-running_free_(live).mp3
+Time: 523
+Artist: Iron Maiden
+Title: Running Free (Live)
+Album: The Essential Iron Maiden
+Track: 13/14
+Date: 2005-07-12
+Genre: Metal
+Genre: Metal
+Disc: 2/2
+mtime: 1335282510
+song_end
+song_begin: 214-iron_maiden-iron_maiden_(live).mp3
+Time: 290
+Artist: Iron Maiden
+Title: Iron Maiden (Live)
+Album: The Essential Iron Maiden
+Track: 14/14
+Date: 2005-07-12
+Genre: Metal
+Genre: Metal
+Disc: 2/2
+mtime: 1335282535
+song_end
+playlist_begin: 000-iron_maiden-the_essential_iron_maiden-2cd-2005.m3u
+mtime: 1335280882
+playlist_end
+end: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-The_Essential_Iron_Maiden-2CD-2005-RNS
+directory: Iron_Maiden-The_Number_of_the_Beast-1982-FTS
+mtime: 1335278970
+begin: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-The_Number_of_the_Beast-1982-FTS
+song_begin: 01-iron_maiden-invaders-fts.mp3
+Time: 204
+Artist: iron maiden
+Title: invaders
+Album: the number of the beast
+Date: 1982
+Genre: Heavy Metal
+mtime: 1335282539
+song_end
+song_begin: 02-iron_maiden-children_of_the_damned-fts.mp3
+Time: 276
+Artist: iron maiden
+Title: children of the damned
+Album: the number of the beast
+Date: 1982
+Genre: Heavy Metal
+mtime: 1335282542
+song_end
+song_begin: 03-iron_maiden-the_prisoner-fts.mp3
+Time: 363
+Artist: iron maiden
+Title: the prisoner
+Album: the number of the beast
+Date: 1982
+Genre: Heavy Metal
+mtime: 1335282550
+song_end
+song_begin: 04-iron_maiden-22_acacia_avenue-fts.mp3
+Time: 398
+Artist: iron maiden
+Title: 22 acacia avenue
+Album: the number of the beast
+Date: 1982
+Genre: Heavy Metal
+mtime: 1335282557
+song_end
+song_begin: 05-iron_maiden-the_number_of_the_beast-fts.mp3
+Time: 291
+Artist: iron maiden
+Title: the number of the beast
+Album: the number of the beast
+Date: 1982
+Genre: Heavy Metal
+mtime: 1335282563
+song_end
+song_begin: 06-iron_maiden-run_to_the_hills-fts.mp3
+Time: 234
+Artist: iron maiden
+Title: run to the hills
+Album: the number of the beast
+Date: 1982
+Genre: Heavy Metal
+mtime: 1335282567
+song_end
+song_begin: 07-iron_maiden-gangland-fts.mp3
+Time: 229
+Artist: iron maiden
+Title: gangland
+Album: the number of the beast
+Date: 1982
+Genre: Heavy Metal
+mtime: 1335282572
+song_end
+song_begin: 08-iron_maiden-total_eclipse-fts.mp3
+Time: 265
+Artist: iron maiden
+Title: total eclipse
+Album: the number of the beast
+Date: 1982
+Genre: Heavy Metal
+mtime: 1335282574
+song_end
+song_begin: 09-iron_maiden-hallowed_be_thy_name-fts.mp3
+Time: 433
+Artist: iron maiden
+Title: hallowed be thy name
+Album: the number of the beast
+Date: 1982
+Genre: Heavy Metal
+mtime: 1335280934
+song_end
+playlist_begin: 00-iron_maiden-the_number_of_the_beast-1982-fts.m3u
+mtime: 1335282529
+playlist_end
+end: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-The_Number_of_the_Beast-1982-FTS
+directory: Iron_Maiden-The_X_Factor-1995-eNT_iNT
+mtime: 1335278970
+begin: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-The_X_Factor-1995-eNT_iNT
+song_begin: 01-iron_maiden-sign_of_the_cross-ent.mp3
+Time: 678
+Artist: Iron Maiden
+AlbumArtist: Iron Maiden
+Title: Sign of the Cross
+Album: The X Factor
+Track: 1
+Date: 1995
+Genre: Heavy Metal
+Composer: Steve Harris
+mtime: 1335282522
+song_end
+song_begin: 02-iron_maiden-lord_of_the_flies-ent.mp3
+Time: 304
+Artist: Iron Maiden
+AlbumArtist: Iron Maiden
+Title: Lord of the Flies
+Album: The X Factor
+Track: 2
+Date: 1995
+Genre: Heavy Metal
+Composer: Janick Gers/Steve Harris
+mtime: 1335282530
+song_end
+song_begin: 03-iron_maiden-man_on_the_edge-ent.mp3
+Time: 253
+Artist: Iron Maiden
+AlbumArtist: Iron Maiden
+Title: Man on the Edge
+Album: The X Factor
+Track: 3
+Date: 1995
+Genre: Heavy Metal
+Composer: Blaze Bayley/Janick Gers
+mtime: 1335281772
+song_end
+song_begin: 04-iron_maiden-fortunes_of_war-ent.mp3
+Time: 444
+Artist: Iron Maiden
+AlbumArtist: Iron Maiden
+Title: Fortunes of War
+Album: The X Factor
+Track: 4
+Date: 1995
+Genre: Heavy Metal
+Composer: Steve Harris
+mtime: 1335281780
+song_end
+song_begin: 05-iron_maiden-look_for_the_truth-ent.mp3
+Time: 310
+Artist: Iron Maiden
+AlbumArtist: Iron Maiden
+Title: Look for the Truth
+Album: The X Factor
+Track: 5
+Date: 1995
+Genre: Heavy Metal
+Composer: Blaze Bayley/Janick Gers/Steve Harris
+mtime: 1335281786
+song_end
+song_begin: 06-iron_maiden-the_aftermath-ent.mp3
+Time: 381
+Artist: Iron Maiden
+AlbumArtist: Iron Maiden
+Title: The Aftermath
+Album: The X Factor
+Track: 6
+Date: 1995
+Genre: Heavy Metal
+Composer: Blaze Bayley/Janick Gers/Steve Harris
+mtime: 1335281796
+song_end
+song_begin: 07-iron_maiden-judgement_of_heaven-ent.mp3
+Time: 313
+Artist: Iron Maiden
+AlbumArtist: Iron Maiden
+Title: Judgement of Heaven
+Album: The X Factor
+Track: 7
+Date: 1995
+Genre: Heavy Metal
+Composer: Steve Harris
+mtime: 1335281802
+song_end
+song_begin: 08-iron_maiden-blood_on_the_worlds_hands-ent.mp3
+Time: 358
+Artist: Iron Maiden
+AlbumArtist: Iron Maiden
+Title: Blood on the World's Hands
+Album: The X Factor
+Track: 8
+Date: 1995
+Genre: Heavy Metal
+Composer: Steve Harris
+mtime: 1335281807
+song_end
+song_begin: 09-iron_maiden-the_edge_of_darkness-ent.mp3
+Time: 399
+Artist: Iron Maiden
+AlbumArtist: Iron Maiden
+Title: The Edge of Darkness
+Album: The X Factor
+Track: 9
+Date: 1995
+Genre: Heavy Metal
+Composer: Blaze Bayley/Janick Gers/Steve Harris
+mtime: 1335281815
+song_end
+song_begin: 10-iron_maiden-2_a.m.-ent.mp3
+Time: 338
+Artist: Iron Maiden
+AlbumArtist: Iron Maiden
+Title: 2 A.M.
+Album: The X Factor
+Track: 10
+Date: 1995
+Genre: Heavy Metal
+Composer: Blaze Bayley/Janick Gers/Steve Harris
+mtime: 1335281820
+song_end
+song_begin: 11-iron_maiden-the_unbeliever-ent.mp3
+Time: 490
+Artist: Iron Maiden
+AlbumArtist: Iron Maiden
+Title: The Unbeliever
+Album: The X Factor
+Track: 11
+Date: 1995
+Genre: Heavy Metal
+Composer: Janick Gers/Steve Harris
+mtime: 1335281830
+song_end
+playlist_begin: 00-iron_maiden-the_x_factor-1995-ent_int.m3u
+mtime: 1335280931
+playlist_end
+end: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-The_X_Factor-1995-eNT_iNT
+directory: Iron_Maiden-Virtual_XI-1998-PtE_INT
+mtime: 1335278970
+begin: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Virtual_XI-1998-PtE_INT
+song_begin: 01-iron_maiden-futureal-pte.mp3
+Time: 176
+Artist: Iron Maiden
+Title: Futureal
+Album: Virtual XI
+Track: 1
+Date: 1998
+Genre: Metal
+mtime: 1335281834
+song_end
+song_begin: 02-iron_maiden-the_angel_and_the_gambler-pte.mp3
+Time: 593
+Artist: Iron Maiden
+Title: The Angel and the Gambler
+Album: Virtual XI
+Track: 2
+Date: 1998
+Genre: Metal
+mtime: 1335281845
+song_end
+song_begin: 03-iron_maiden-lightning_strikes_twice-pte.mp3
+Time: 290
+Artist: Iron Maiden
+Title: Lightning Strikes Twice
+Album: Virtual XI
+Track: 3
+Date: 1998
+Genre: Metal
+mtime: 1335281849
+song_end
+song_begin: 04-iron_maiden-the_clansman-pte.mp3
+Time: 540
+Artist: Iron Maiden
+Title: The Clansman
+Album: Virtual XI
+Track: 4
+Date: 1998
+Genre: Metal
+mtime: 1335281859
+song_end
+song_begin: 05-iron_maiden-when_two_worlds_collide-pte.mp3
+Time: 377
+Artist: Iron Maiden
+Title: When Two Worlds Collide
+Album: Virtual XI
+Track: 5
+Date: 1998
+Genre: Metal
+mtime: 1335281867
+song_end
+song_begin: 06-iron_maiden-the_educated_fool-pte.mp3
+Time: 405
+Artist: Iron Maiden
+Title: The Educated Fool
+Album: Virtual XI
+Track: 6
+Date: 1998
+Genre: Metal
+mtime: 1335281876
+song_end
+song_begin: 07-iron_maiden-dont_look_to_the_eyes_of_a_stranger-pte.mp3
+Time: 484
+Artist: Iron Maiden
+Title: Don't Look to the Eyes of A St
+Album: Virtual XI
+Track: 7
+Date: 1998
+Genre: Metal
+mtime: 1335281880
+song_end
+song_begin: 08-iron_maiden-como_estais_amigos-pte.mp3
+Time: 330
+Artist: Iron Maiden
+Title: Como Estais Amigos
+Album: Virtual XI
+Track: 8
+Date: 1998
+Genre: Metal
+mtime: 1335281059
+song_end
+playlist_begin: 00-iron_maiden-virtual_xi-1998-pte_int.m3u
+mtime: 1335281829
+playlist_end
+end: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Virtual_XI-1998-PtE_INT
+directory: Iron_Maiden-Visions_of_the_Beast-2CD-DVDA-2003-BVME
+mtime: 1335278970
+begin: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Visions_of_the_Beast-2CD-DVDA-2003-BVME
+song_begin: 101-iron_maiden-women_in_uniform-bvme.mp3
+Time: 196
+Artist: Iron Maiden
+Title: Women in Uniform
+Album: Visions of the Beast
+Date: 2003
+Genre: Metal
+mtime: 1335281063
+song_end
+song_begin: 102-iron_maiden-wrathchild-bvme.mp3
+Time: 182
+Artist: Iron Maiden
+Title: Wrathchild
+Album: Visions of the Beast
+Date: 2003
+Genre: Metal
+mtime: 1335281069
+song_end
+song_begin: 103-iron_maiden-run_to_the_hills-bvme.mp3
+Time: 241
+Artist: Iron Maiden
+Title: Run to the Hills
+Album: Visions of the Beast
+Date: 2003
+Genre: Metal
+mtime: 1335281074
+song_end
+song_begin: 104-iron_maiden-the_number_of_the_beast-bvme.mp3
+Time: 307
+Artist: Iron Maiden
+Title: The Number of the Beast
+Album: Visions of the Beast
+Date: 2003
+Genre: Metal
+mtime: 1335281084
+song_end
+song_begin: 105-iron_maiden-flight_of_icarus-bvme.mp3
+Time: 242
+Artist: Iron Maiden
+Title: Flight of Icarus
+Album: Visions of the Beast
+Date: 2003
+Genre: Metal
+mtime: 1335281089
+song_end
+song_begin: 106-iron_maiden-the_trooper-bvme.mp3
+Time: 271
+Artist: Iron Maiden
+Title: The Trooper
+Album: Visions of the Beast
+Date: 2003
+Genre: Metal
+mtime: 1335281099
+song_end
+song_begin: 107-iron_maiden-2_minutes_to_midnight-bvme.mp3
+Time: 381
+Artist: Iron Maiden
+Title: 2 Minutes to Midnight
+Album: Visions of the Beast
+Date: 2003
+Genre: Metal
+mtime: 1335281108
+song_end
+song_begin: 108-iron_maiden-aces_high-bvme.mp3
+Time: 311
+Artist: Iron Maiden
+Title: Aces High
+Album: Visions of the Beast
+Date: 2003
+Genre: Metal
+mtime: 1335281114
+song_end
+song_begin: 109-iron_maiden-wasted_years-bvme.mp3
+Time: 312
+Artist: Iron Maiden
+Title: Wasted Years
+Album: Visions of the Beast
+Date: 2003
+Genre: Metal
+mtime: 1335281124
+song_end
+song_begin: 110-iron_maiden-stranger_in_a_strange_land-bvme.mp3
+Time: 357
+Artist: Iron Maiden
+Title: Stranger in A Strange Land
+Album: Visions of the Beast
+Date: 2003
+Genre: Metal
+mtime: 1335281133
+song_end
+song_begin: 111-iron_maiden-can_i_play_with_madness-bvme.mp3
+Time: 227
+Artist: Iron Maiden
+Title: Can I Play with Madness
+Album: Visions of the Beast
+Date: 2003
+Genre: Metal
+mtime: 1335281140
+song_end
+song_begin: 112-iron_maiden-the_evil_that_men_do-bvme.mp3
+Time: 288
+Artist: Iron Maiden
+Title: The Evil that Men Do
+Album: Visions of the Beast
+Date: 2003
+Genre: Metal
+mtime: 1335281148
+song_end
+song_begin: 113-iron_maiden-the_clairvoyant-bvme.mp3
+Time: 304
+Artist: Iron Maiden
+Title: The Clairvoyant
+Album: Visions of the Beast
+Date: 2003
+Genre: Metal
+mtime: 1335281155
+song_end
+song_begin: 114-iron_maiden-infinite_dreams-bvme.mp3
+Time: 355
+Artist: Iron Maiden
+Title: Infinite Dreams
+Album: Visions of the Beast
+Date: 2003
+Genre: Metal
+mtime: 1335281161
+song_end
+song_begin: 115-iron_maiden-holy_smoke-bvme.mp3
+Time: 243
+Artist: Iron Maiden
+Title: Holy Smoke
+Album: Visions of the Beast
+Date: 2003
+Genre: Metal
+mtime: 1335281167
+song_end
+song_begin: 116-iron_maiden-tailgunner-bvme.mp3
+Time: 267
+Artist: Iron Maiden
+Title: Tailgunner
+Album: Visions of the Beast
+Date: 2003
+Genre: Metal
+mtime: 1335281173
+song_end
+song_begin: 201-iron_maiden-bring_your_daughter_to_the_slaughter-bvme.mp3
+Time: 293
+Artist: Iron Maiden
+Title: Bring Your Daughter to the Sla
+Album: Visions of the Beast
+Date: 2003
+Genre: Metal
+mtime: 1335281177
+song_end
+song_begin: 202-iron_maiden-be_quick_or_be_dead-bvme.mp3
+Time: 211
+Artist: Iron Maiden
+Title: Be Quick or Be Dead
+Album: Visions of the Beast
+Date: 2003
+Genre: Metal
+mtime: 1335281183
+song_end
+song_begin: 203-iron_maiden-form_here_to_eternity-bvme.mp3
+Time: 232
+Artist: Iron Maiden
+Title: Form Here to Eternity
+Album: Visions of the Beast
+Date: 2003
+Genre: Metal
+mtime: 1335281188
+song_end
+song_begin: 204-iron_maiden-wasting_love-bvme.mp3
+Time: 356
+Artist: Iron Maiden
+Title: Wasting Love
+Album: Visions of the Beast
+Date: 2003
+Genre: Metal
+mtime: 1335281884
+song_end
+song_begin: 205-iron_maiden-fear_of_the_dark-bvme.mp3
+Time: 442
+Artist: Iron Maiden
+Title: Fear of the Dark
+Album: Visions of the Beast
+Date: 2003
+Genre: Metal
+mtime: 1335281893
+song_end
+song_begin: 206-iron_maiden-hallowed_be_thy_name-bvme.mp3
+Time: 457
+Artist: Iron Maiden
+Title: Hallowed Be Thy Name
+Album: Visions of the Beast
+Date: 2003
+Genre: Metal
+mtime: 1335281901
+song_end
+song_begin: 207-iron_maiden-man_on_the_edge-bvme.mp3
+Time: 264
+Artist: Iron Maiden
+Title: Man on the Edge
+Album: Visions of the Beast
+Date: 2003
+Genre: Metal
+mtime: 1335281907
+song_end
+song_begin: 208-iron_maiden-afraid_to_shoot_strangers-bvme.mp3
+Time: 407
+Artist: Iron Maiden
+Title: Afraid to Shoot Strangers
+Album: Visions of the Beast
+Date: 2003
+Genre: Metal
+mtime: 1335281917
+song_end
+song_begin: 209-iron_maiden-lord_of_the_flies-bvme.mp3
+Time: 324
+Artist: Iron Maiden
+Title: Lord of the Flies
+Album: Visions of the Beast
+Date: 2003
+Genre: Metal
+mtime: 1335281924
+song_end
+song_begin: 210-iron_maiden-virus-bvme.mp3
+Time: 383
+Artist: Iron Maiden
+Title: Virus
+Album: Visions of the Beast
+Date: 2003
+Genre: Metal
+mtime: 1335281932
+song_end
+song_begin: 212-iron_maiden-futureal-bvme.mp3
+Time: 189
+Artist: Iron Maiden
+Title: Futureal
+Album: Visions of the Beast
+Date: 2003
+Genre: Metal
+mtime: 1335281941
+song_end
+song_begin: 213-iron_maiden-the_wicker_man-bvme.mp3
+Time: 283
+Artist: Iron Maiden
+Title: The Wicker Man
+Album: Visions of the Beast
+Date: 2003
+Genre: Metal
+mtime: 1335281948
+song_end
+song_begin: 214-iron_maiden-out_of_the_silent_planet-bvme.mp3
+Time: 260
+Artist: Iron Maiden
+Title: Out of the Silent Planet
+Album: Visions of the Beast
+Date: 2003
+Genre: Metal
+mtime: 1335281954
+song_end
+song_begin: 215-iron_maiden-brave_new_world-bvme.mp3
+Time: 376
+Artist: Iron Maiden
+Title: Brave New World
+Album: Visions of the Beast
+Date: 2003
+Genre: Metal
+mtime: 1335281962
+song_end
+song_begin: 211-iron_maiden-the_angel_and_the_gambler-bvme.mp3
+Time: 254
+Artist: Iron Maiden
+Title: The Angel & the Gambler
+Album: Visons of the Beast
+Date: 2003
+Genre: Metal
+mtime: 1335281938
+song_end
+playlist_begin: 000-iron_maiden-visions_of_the_beast-2cd-dvda-2003-bvme.m3u
+mtime: 1335281056
+playlist_end
+end: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Visions_of_the_Beast-2CD-DVDA-2003-BVME
+directory: Iron_Maiden-Wasted_Tapes-1992-FAF
+mtime: 1335278970
+begin: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Wasted_Tapes-1992-FAF
+song_begin: 01_iron_maiden_-_prowler-faf.mp3
+Time: 261
+Artist: Iron Maiden
+Title: Prowler
+Album: Wasted Tapes
+Date: 1992
+Genre: Heavy Metal
+mtime: 1335281965
+song_end
+song_begin: 02_iron_maiden_-_remember_tomorrow-faf.mp3
+Time: 339
+Artist: Iron Maiden
+Title: Remember Tomorrow
+Album: Wasted Tapes
+Date: 1992
+Genre: Heavy Metal
+mtime: 1335281970
+song_end
+song_begin: 03_iron_maiden_-_killers-faf.mp3
+Time: 274
+Artist: Iron Maiden
+Title: Killers
+Album: Wasted Tapes
+Date: 1992
+Genre: Heavy Metal
+mtime: 1335281973
+song_end
+song_begin: 04_iron_maiden_-_running_free-faf.mp3
+Time: 229
+Artist: Iron Maiden
+Title: Running Free
+Album: Wasted Tapes
+Date: 1992
+Genre: Heavy Metal
+mtime: 1335281978
+song_end
+song_begin: 05_iron_maiden_-_transylvania-faf.mp3
+Time: 278
+Artist: Iron Maiden
+Title: Transylvania
+Album: Wasted Tapes
+Date: 1992
+Genre: Heavy Metal
+mtime: 1335281982
+song_end
+song_begin: 06_iron_maiden_-_iron_maiden-faf.mp3
+Time: 241
+Artist: Iron Maiden
+Title: Iron Maiden
+Album: Wasted Tapes
+Date: 1992
+Genre: Heavy Metal
+mtime: 1335281986
+song_end
+song_begin: 07_iron_maiden_-_sanctuary-faf.mp3
+Time: 273
+Artist: Iron Maiden
+Title: Sanctuary
+Album: Wasted Tapes
+Date: 1992
+Genre: Heavy Metal
+mtime: 1335281991
+song_end
+song_begin: 08_iron_maiden_-_the_trooper-faf.mp3
+Time: 246
+Artist: Iron Maiden
+Title: The Trooper
+Album: Wasted Tapes
+Date: 1992
+Genre: Heavy Metal
+mtime: 1335281993
+song_end
+song_begin: 09_iron_maiden_-_revelations-faf.mp3
+Time: 373
+Artist: Iron Maiden
+Title: Revelations
+Album: Wasted Tapes
+Date: 1992
+Genre: Heavy Metal
+mtime: 1335282001
+song_end
+song_begin: 10_iron_maiden_-_22_acacia_avenue-faf.mp3
+Time: 401
+Artist: Iron Maiden
+Title: 22 Acacia Avenue
+Album: Wasted Tapes
+Date: 1992
+Genre: Heavy Metal
+mtime: 1335282007
+song_end
+song_begin: 11_iron_maiden_-_the_number_of_the_beast-faf.mp3
+Time: 326
+Artist: Iron Maiden
+Title: The Number of the Beast
+Album: Wasted Tapes
+Date: 1992
+Genre: Heavy Metal
+mtime: 1335282013
+song_end
+song_begin: 12_iron_maiden_-_run_to_the_hills-faf.mp3
+Time: 246
+Artist: Iron Maiden
+Title: Run to the Hills
+Album: Wasted Tapes
+Date: 1992
+Genre: Heavy Metal
+mtime: 1335282018
+song_end
+song_begin: 13_iron_maiden_-_sanctuary-faf.mp3
+Time: 333
+Artist: Iron Maiden
+Title: Sanctuary
+Album: Wasted Tapes
+Date: 1992
+Genre: Heavy Metal
+mtime: 1335282026
+song_end
+playlist_begin: 00_iron_maiden_-_wasted_tapes-1992-faf.m3u
+mtime: 1335281962
+playlist_end
+end: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Wasted_Tapes-1992-FAF
+directory: Iron_Maiden_-_Eddies_Archive-6CD-Limited_Edition_Boxset-2002-FKK
+mtime: 1335278970
+begin: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden_-_Eddies_Archive-6CD-Limited_Edition_Boxset-2002-FKK
+song_begin: 101-iron_maiden_-_murders_in_the_rue_morgue-fkk.mp3
+Time: 272
+Artist: Iron Maiden
+Title: Murders in the Rue Morgue
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282030
+song_end
+song_begin: 102-iron_maiden_-_wratchild-fkk.mp3
+Time: 211
+Artist: Iron Maiden
+Title: Wratchild
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282034
+song_end
+song_begin: 103-iron_maiden_-_run_to_the_hills-fkk.mp3
+Time: 260
+Artist: Iron Maiden
+Title: Run to the Hills
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282038
+song_end
+song_begin: 104-iron_maiden_-_children_of_the_damned-fkk.mp3
+Time: 278
+Artist: Iron Maiden
+Title: Children of the Damned
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282044
+song_end
+song_begin: 105-iron_maiden_-_the_number_of_the_beast-fkk.mp3
+Time: 308
+Artist: Iron Maiden
+Title: The Number of the Beast
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282051
+song_end
+song_begin: 106-iron_maiden_-_another_life-fkk.mp3
+Time: 225
+Artist: Iron Maiden
+Title: Another Life
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282055
+song_end
+song_begin: 107-iron_maiden_-_killers-fkk.mp3
+Time: 347
+Artist: Iron Maiden
+Title: Killers
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282059
+song_end
+song_begin: 108-iron_maiden_-_22_acacia_avenue-fkk.mp3
+Time: 416
+Artist: Iron Maiden
+Title: 22 Acacia Avenue
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282066
+song_end
+song_begin: 109-iron_maiden_-_total_eclipse-fkk.mp3
+Time: 254
+Artist: Iron Maiden
+Title: Total Eclipse
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282074
+song_end
+song_begin: 201-iron_maiden_-_transylvania-fkk.mp3
+Time: 351
+Artist: Iron Maiden
+Title: Transylvania
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282081
+song_end
+song_begin: 202-iron_maiden_-_the_prisoner-fkk.mp3
+Time: 349
+Artist: Iron Maiden
+Title: The Prisoner
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282088
+song_end
+song_begin: 203-iron_maiden_-_hallowed_be_thy_name-fkk.mp3
+Time: 451
+Artist: Iron Maiden
+Title: Hallowed Be Thy Name
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282094
+song_end
+song_begin: 204-iron_maiden_-_phantom_of_the_opera-fkk.mp3
+Time: 413
+Artist: Iron Maiden
+Title: Phantom of the Opera
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282099
+song_end
+song_begin: 205-iron_maiden_-_iron_maiden-fkk.mp3
+Time: 260
+Artist: Iron Maiden
+Title: Iron Maiden
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282102
+song_end
+song_begin: 206-iron_maiden_-_sanctuary-fkk.mp3
+Time: 253
+Artist: Iron Maiden
+Title: Sanctuary
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282106
+song_end
+song_begin: 207-iron_maiden_-_drifter-fkk.mp3
+Time: 559
+Artist: Iron Maiden
+Title: Drifter
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282112
+song_end
+song_begin: 208-iron_maiden_-_running_free-fkk.mp3
+Time: 224
+Artist: Iron Maiden
+Title: Running Free
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282115
+song_end
+song_begin: 209-iron_maiden_-_prowler-fkk.mp3
+Time: 300
+Artist: Iron Maiden
+Title: Prowler
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282121
+song_end
+song_begin: 301-iron_maiden_-_burning_ambition-fkk.mp3
+Time: 162
+Artist: Iron Maiden
+Title: Burning Ambition
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282124
+song_end
+song_begin: 302-iron_maiden_-_drifter_-_live-fkk.mp3
+Time: 364
+Artist: Iron Maiden
+Title: Drifter -  Live
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282128
+song_end
+song_begin: 303-iron_maiden_-_invasion-fkk.mp3
+Time: 158
+Artist: Iron Maiden
+Title: Invasion
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282130
+song_end
+song_begin: 304-iron_maiden_-_remember_tomorrow_-_live-fkk.mp3
+Time: 328
+Artist: Iron Maiden
+Title: Remember Tomorrow - Live
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282136
+song_end
+song_begin: 305-iron_maiden_-_ive_got_the_fire-fkk.mp3
+Time: 160
+Artist: Iron Maiden
+Title: I've Got the Fire
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282140
+song_end
+song_begin: 306-iron_maiden_-_crossed-eyed_mary-fkk.mp3
+Time: 235
+Artist: Iron Maiden
+Title: Crossed-Eyed Mary
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282143
+song_end
+song_begin: 307-iron_maiden_-_rainbows_gold-fkk.mp3
+Time: 299
+Artist: Iron Maiden
+Title: Rainbow's Gold
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282148
+song_end
+song_begin: 308-iron_maiden_-_king_of_twilight-fkk.mp3
+Time: 293
+Artist: Iron Maiden
+Title: King of Twilight
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282153
+song_end
+song_begin: 309-iron_maiden_-_reach_out-fkk.mp3
+Time: 212
+Artist: Iron Maiden
+Title: Reach Out
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282156
+song_end
+song_begin: 310-iron_maiden_-_that_girl-fkk.mp3
+Time: 305
+Artist: Iron Maiden
+Title: That Girl
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282161
+song_end
+song_begin: 311-iron_maiden_-_juanita-fkk.mp3
+Time: 227
+Artist: Iron Maiden
+Title: Juanita
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282164
+song_end
+song_begin: 312-iron_maiden_-_the_sheriff_of_huddersfield-fkk.mp3
+Time: 215
+Artist: Iron Maiden
+Title: The Sheriff of Huddersfield
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282167
+song_end
+song_begin: 313-iron_maiden_-_black_bart_blues-fkk.mp3
+Time: 401
+Artist: Iron Maiden
+Title: Black Bart Blues
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282173
+song_end
+song_begin: 314-iron_maiden_-_prowler_88-fkk.mp3
+Time: 249
+Artist: Iron Maiden
+Title: Prowler '88
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282177
+song_end
+song_begin: 315-iron_maiden_-_charlotte_the_harlot_88-fkk.mp3
+Time: 253
+Artist: Iron Maiden
+Title: Charlotte the Harlot '88
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282182
+song_end
+song_begin: 401-iron_maiden_-_all_in_your_mind-fkk.mp3
+Time: 271
+Artist: Iron Maiden
+Title: All in Your Mind
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282186
+song_end
+song_begin: 402-iron_maiden_-_kill_me_ce_soir-fkk.mp3
+Time: 377
+Artist: Iron Maiden
+Title: Kill Me Ce Soir
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282192
+song_end
+song_begin: 403-iron_maiden_-_im_a_mover-fkk.mp3
+Time: 209
+Artist: Iron Maiden
+Title: I'm A Mover
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282196
+song_end
+song_begin: 404-iron_maiden_-_communication_breakdown-fkk.mp3
+Time: 162
+Artist: Iron Maiden
+Title: Communication Breakdown
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282199
+song_end
+song_begin: 405-iron_maiden_-_nodding_donkey_rules-fkk.mp3
+Time: 197
+Artist: Iron Maiden
+Title: Nodding Donkey Rules
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282202
+song_end
+song_begin: 406-iron_maiden_-_space_station_no.5-fkk.mp3
+Time: 227
+Artist: Iron Maiden
+Title: Space Station No.5
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282205
+song_end
+song_begin: 407-iron_maiden_-_i_cant_see_my_feelings-fkk.mp3
+Time: 230
+Artist: Iron Maiden
+Title: I Can't See My Feelings
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282209
+song_end
+song_begin: 408-iron_maiden_-_roll_over_vic_vella-fkk.mp3
+Time: 288
+Artist: Iron Maiden
+Title: Roll Over Vic Vella
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282214
+song_end
+song_begin: 409-iron_maiden_-_justice_of_the_peace-fkk.mp3
+Time: 213
+Artist: Iron Maiden
+Title: Justice of the Peace
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282219
+song_end
+song_begin: 410-iron_maiden_-_judgement_day-fkk.mp3
+Time: 244
+Artist: Iron Maiden
+Title: Judgement Day
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282222
+song_end
+song_begin: 411-iron_maiden_-_my_generation-fkk.mp3
+Time: 217
+Artist: Iron Maiden
+Title: My Generation
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282226
+song_end
+song_begin: 412-iron_maiden_-_doctor_doctor-fkk.mp3
+Time: 291
+Artist: Iron Maiden
+Title: Doctor Doctor
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282232
+song_end
+song_begin: 413-iron_maiden_-_blood_on_the_worlds_hands_-__-fkk.mp3
+Time: 366
+Artist: Iron Maiden
+Title: Blood on the World's Hands -..
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282237
+song_end
+song_begin: 414-iron_maiden_-_the_aftermath_-_live-fkk.mp3
+Time: 405
+Artist: Iron Maiden
+Title: The Aftermath - Live
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335282237
+song_end
+song_begin: 415-iron_maiden_-_futureal_-_live-fkk.mp3
+Time: 181
+Artist: Iron Maiden
+Title: Futureal - Live
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335281446
+song_end
+song_begin: 416-iron_maiden_-_wasted_years_99_-_live-fkk.mp3
+Time: 307
+Artist: Iron Maiden
+Title: Wasted Years '99 - Live
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335281452
+song_end
+song_begin: 501-iron_maiden_-_friday_rock_show_session_1979_-_iron_maiden-fkk.mp3
+Time: 226
+Artist: Iron Maiden
+Title: Friday Rock Show Session 1979
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335281463
+song_end
+song_begin: 502-iron_maiden_-_friday_rock_show_session_1979_-_running_free-fkk.mp3
+Time: 190
+Artist: Iron Maiden
+Title: Friday Rock Show Session 1979
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335281471
+song_end
+song_begin: 503-iron_maiden_-_friday_rock_show_session_1979_-_transylvania-fkk.mp3
+Time: 243
+Artist: Iron Maiden
+Title: Friday Rock Show Session 1979
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335281478
+song_end
+song_begin: 504-iron_maiden_-_friday_rock_show_session_1979_-_sanctuary-fkk.mp3
+Time: 225
+Artist: Iron Maiden
+Title: Friday Rock Show Session 1979
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335281470
+song_end
+song_begin: 505-iron_maiden_-_reading_festival_1982_-_wrathchild-fkk.mp3
+Time: 212
+Artist: Iron Maiden
+Title: Reading Festival 1982 - Wrathc
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335281483
+song_end
+song_begin: 506-iron_maiden_-_reading_festival_1982_-_run_to_the_hills-fkk.mp3
+Time: 336
+Artist: Iron Maiden
+Title: Reading Festival 1982 - Run to
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335281487
+song_end
+song_begin: 507-iron_maiden_-_reading_festival_1982_-_children_of_the_damned-fkk.mp3
+Time: 288
+Artist: Iron Maiden
+Title: Reading Festival 1982 - Childr
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335281490
+song_end
+song_begin: 508-iron_maiden_-_reading_festival_1982_-_the_number_of_the_beast-fkk.mp3
+Time: 329
+Artist: Iron Maiden
+Title: Reading Festival 1982 - the Nu
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335281496
+song_end
+song_begin: 509-iron_maiden_-_reading_festival_1982_-_22_acacia_avenue-fkk.mp3
+Time: 397
+Artist: Iron Maiden
+Title: Reading Festival 1982 - 22 Aca
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335280662
+song_end
+song_begin: 510-iron_maiden_-_reading_festival_1982_-_transylvania-fkk.mp3
+Time: 380
+Artist: Iron Maiden
+Title: Reading Festival 1982 - Transy
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335280673
+song_end
+song_begin: 511-iron_maiden_-_reading_festival_1982_-_the_prisoner-fkk.mp3
+Time: 350
+Artist: Iron Maiden
+Title: Reading Festival 1982 - the Pr
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335280683
+song_end
+song_begin: 512-iron_maiden_-_reading_festival_1982_-_hallowed_be_thy_name-fkk.mp3
+Time: 457
+Artist: Iron Maiden
+Title: Reading Festival 1982 - Hallow
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335280696
+song_end
+song_begin: 513-iron_maiden_-_reading_festival_1982_-_phantom_of_the_opera-fkk.mp3
+Time: 422
+Artist: Iron Maiden
+Title: Reading Festival 1982 - Phanto
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335280710
+song_end
+song_begin: 514-iron_maiden_-_reading_festival_1982_-_iron__-fkk.mp3
+Time: 298
+Artist: Iron Maiden
+Title: Reading Festival 1982 - Iron..
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335280718
+song_end
+song_begin: 601-iron_maiden_-_reading_festival_1980_-_prowler-fkk.mp3
+Time: 267
+Artist: Iron Maiden
+Title: Reading Festival 1980 - Prowle
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335280725
+song_end
+song_begin: 602-iron_maiden_-_reading_festival_1980_-_remember_tomorrow-fkk.mp3
+Time: 359
+Artist: Iron Maiden
+Title: Reading Festival 1980 - Rememb
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335280736
+song_end
+song_begin: 603-iron_maiden_-_reading_festival_1980_-_killers-fkk.mp3
+Time: 283
+Artist: Iron Maiden
+Title: Reading Festival 1980 - Killer
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335280744
+song_end
+song_begin: 604-iron_maiden_-_reading_festival_1980_-_running_free-fkk.mp3
+Time: 233
+Artist: Iron Maiden
+Title: Reading Festival 1980 - Runnin
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335280750
+song_end
+song_begin: 605-iron_maiden_-_reading_festival_1980_-_transylvania-fkk.mp3
+Time: 289
+Artist: Iron Maiden
+Title: Reading Festival 1980 - Transy
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335280759
+song_end
+song_begin: 606-iron_maiden_-_reading_festival_1980_-_iron__-fkk.mp3
+Time: 296
+Artist: Iron Maiden
+Title: Reading Festival 1980 - Iron..
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335280767
+song_end
+song_begin: 607-iron_maiden_-_monsters_of_rock_festival_donington_1988_-_moonchild-fkk.mp3
+Time: 343
+Artist: Iron Maiden
+Title: Monsters of Rock Festival Doni
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335280777
+song_end
+song_begin: 608-iron_maiden_-_monsters_of_rock_festival_donington_1988_-_wrathchild-fkk.mp3
+Time: 180
+Artist: Iron Maiden
+Title: Monsters of Rock Festival Doni
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335280782
+song_end
+song_begin: 609-iron_maiden_-_monsters_of_rock_festival_donington_1988_-_infinite_dreams-fkk.mp3
+Time: 351
+Artist: Iron Maiden
+Title: Monsters of Rock Festival Doni
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335280792
+song_end
+song_begin: 610-iron_maiden_-_monsters_of_rock_festival_donington_1988_-_the_trooper-fkk.mp3
+Time: 245
+Artist: Iron Maiden
+Title: Monsters of Rock Festival Doni
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335281501
+song_end
+song_begin: 611-iron_maiden_-_monsters_of_rock_festival_donington_1988_-_seventh_son_of_a_seventh_son-fkk.mp3
+Time: 627
+Artist: Iron Maiden
+Title: Monsters of Rock Festival Doni
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335281515
+song_end
+song_begin: 612-iron_maiden_-_monsters_of_rock_festival_donington_1988_-_the_number_of_the_beast-fkk.mp3
+Time: 283
+Artist: Iron Maiden
+Title: Monsters of Rock Festival Doni
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335281522
+song_end
+song_begin: 613-iron_maiden_-_monsters_of_rock_festival_donington_1988_-_hallowed_be_thy_name-fkk.mp3
+Time: 430
+Artist: Iron Maiden
+Title: Monsters of Rock Festival Doni
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335281531
+song_end
+song_begin: 614-iron_maiden_-_monsters_of_rock_festival_donington_1988_-_iron_maiden-fkk.mp3
+Time: 361
+Artist: Iron Maiden
+Title: Monsters of Rock Festival Doni
+Album: Eddie's Archive
+Date: 2002
+Genre: Heavy Metal
+mtime: 1335281537
+song_end
+playlist_begin: 000-iron_maiden_-_eddies_archive-6cd-limited_edition_boxset-2002-fkk.m3u
+mtime: 1335282022
+playlist_end
+end: Rock/Metal/Iron.Maiden-Discography/Iron_Maiden_-_Eddies_Archive-6CD-Limited_Edition_Boxset-2002-FKK
+end: Rock/Metal/Iron.Maiden-Discography
 directory: Metallica.Discography-iNT
 mtime: 1334069300
 begin: Rock/Metal/Metallica.Discography-iNT
@@ -48847,387 +55387,1322 @@ playlist_end
 end: Rock/Metal/Metallica.Discography-iNT/Metallica_-_S&M_2CDS/Metallica_-_S&M_Disc_II
 end: Rock/Metal/Metallica.Discography-iNT/Metallica_-_S&M_2CDS
 end: Rock/Metal/Metallica.Discography-iNT
-directory: Rammstein,Discography.iNT
-mtime: 1334068359
-begin: Rock/Metal/Rammstein,Discography.iNT
-song_begin: 34-Rammstein- Reise, Reise.flac
-Time: 252
-mtime: 1334068315
+directory: Rammstein_Discography
+mtime: 1335005365
+begin: Rock/Metal/Rammstein_Discography
+directory: Rammstein_-_Herzeleid-DE-1996-DNR
+mtime: 1335005365
+begin: Rock/Metal/Rammstein_Discography/Rammstein_-_Herzeleid-DE-1996-DNR
+song_begin: 01-rammstein-wollt_ihr_das_bett_in_flammen_sehen-dnr.mp3
+Time: 317
+Artist: Rammstein
+Title: Wollt Ihr Das Bett In Flammen
+Album: Herzeleid
+Track: 1
+Date: 1996
+Genre: Metal
+mtime: 1335005569
 song_end
-song_begin: 35-Rammstein- Mein Teil.flac
-Time: 273
-mtime: 1334068317
+song_begin: 02-rammstein-der_meister-dnr.mp3
+Time: 251
+Artist: Rammstein
+Title: Der Meister
+Album: Herzeleid
+Track: 2
+Date: 1996
+Genre: Metal
+mtime: 1335005633
 song_end
-song_begin: 36-Rammstein- Dalai Lama.flac
-Time: 339
-mtime: 1334068319
+song_begin: 03-rammstein-weisses_fleisch-dnr.mp3
+Time: 216
+Artist: Rammstein
+Title: Weisses Fleisch
+Album: Herzeleid
+Track: 3
+Date: 1996
+Genre: Metal
+mtime: 1335005536
 song_end
-song_begin: 37-Rammstein- Keine Lust.flac
+song_begin: 04-rammstein-asche_zu_asche-dnr.mp3
+Time: 232
+Artist: Rammstein
+Title: Asche Zu Asche
+Album: Herzeleid
+Track: 4
+Date: 1996
+Genre: Metal
+mtime: 1335005685
+song_end
+song_begin: 05-rammstein-seemann-dnr.mp3
+Time: 288
+Artist: Rammstein
+Title: Seemann
+Album: Herzeleid
+Track: 5
+Date: 1996
+Genre: Metal
+mtime: 1335005583
+song_end
+song_begin: 06-rammstein-du_riechst_so_gut-dnr.mp3
+Time: 289
+Artist: Rammstein
+Title: Du Riechst So Gut
+Album: Herzeleid
+Track: 6
+Date: 1996
+Genre: Metal
+mtime: 1335005741
+song_end
+song_begin: 07-rammstein-das_alte_leid-dnr.mp3
+Time: 345
+Artist: Rammstein
+Title: Das Alte Leid
+Album: Herzeleid
+Track: 7
+Date: 1996
+Genre: Metal
+mtime: 1335005512
+song_end
+song_begin: 08-rammstein-heirate_mich-dnr.mp3
+Time: 285
+Artist: Rammstein
+Title: Heirate Mich
+Album: Herzeleid
+Track: 8
+Date: 1996
+Genre: Metal
+mtime: 1335005580
+song_end
+song_begin: 09-rammstein-herzeleid-dnr.mp3
 Time: 223
-mtime: 1334068320
+Artist: Rammstein
+Title: Herzeleid
+Album: Herzeleid
+Track: 9
+Date: 1996
+Genre: Metal
+mtime: 1335005525
 song_end
-song_begin: 38-Rammstein- Los.flac
-Time: 266
-mtime: 1334068305
+song_begin: 10-rammstein-laichzeit-dnr.mp3
+Time: 263
+Artist: Rammstein
+Title: Laichzeit
+Album: Herzeleid
+Track: 10
+Date: 1996
+Genre: Metal
+mtime: 1335005587
 song_end
-song_begin: 39-Rammstein- Amerika.flac
-Time: 227
-mtime: 1334068352
+song_begin: 11-rammstein-rammstein-dnr.mp3
+Time: 265
+Artist: Rammstein
+Title: Rammstein
+Album: Herzeleid
+Track: 11
+Date: 1996
+Genre: Metal
+mtime: 1335005604
 song_end
-song_begin: 40-Rammstein- Moskau.flac
-Time: 257
-mtime: 1334068354
-song_end
-song_begin: 41-Rammstein- Morgenstern.flac
-Time: 240
-mtime: 1334068355
-song_end
-song_begin: 42-Rammstein- Stein Um Stein.flac
-Time: 237
-mtime: 1334068356
-song_end
-song_begin: 43-Rammstein- Ohne Dich.flac
+playlist_begin: 00-rammstein-herzeleid-de-1996-dnr.m3u
+mtime: 1335005495
+playlist_end
+end: Rock/Metal/Rammstein_Discography/Rammstein_-_Herzeleid-DE-1996-DNR
+directory: Rammstein_-_Liebe_Ist_Fur_Alle_Da-(Bonus_CD)-2009-LzY
+mtime: 1335005365
+begin: Rock/Metal/Rammstein_Discography/Rammstein_-_Liebe_Ist_Fur_Alle_Da-(Bonus_CD)-2009-LzY
+song_begin: 01_fuhre_mich-lzy.mp3
 Time: 273
-mtime: 1334068358
+Artist: Rammstein
+Title: Führe Mich
+Album: Liebe Ist Für Alle Da (Cd.2)
+Track: 1
+Date: 2009
+Genre: Metal
+mtime: 1335005754
 song_end
-song_begin: 44-Rammstein- Amour.flac
-Time: 291
-mtime: 1334068359
+song_begin: 02_donaukinder-lzy.mp3
+Time: 318
+Artist: Rammstein
+Title: Donaukinder
+Album: Liebe Ist Für Alle Da (Cd.2)
+Track: 2
+Date: 2009
+Genre: Metal
+mtime: 1335005713
 song_end
-song_begin: 01-Rammstein-Mein Herz brennt.flac
+song_begin: 03_halt-lzy.mp3
+Time: 261
+Artist: Rammstein
+Title: Halt
+Album: Liebe Ist Für Alle Da (Cd.2)
+Track: 3
+Date: 2009
+Genre: Metal
+mtime: 1335005621
+song_end
+song_begin: 04_roter_sand_(orchester_version)-lzy.mp3
+Time: 248
+Artist: Rammstein
+Title: Roter Sand (Orchester Version)
+Album: Liebe Ist Für Alle Da (Cd.2)
+Track: 4
+Date: 2009
+Genre: Metal
+mtime: 1335005467
+song_end
+song_begin: 05_liese-lzy.mp3
+Time: 236
+Artist: Rammstein
+Title: Liese
+Album: Liebe Ist Für Alle Da (Cd.2)
+Track: 5
+Date: 2009
+Genre: Metal
+mtime: 1335005470
+song_end
+playlist_begin: 00_rammstein-liebe_ist_fur_alle_da-(bonus_cd)-2009-lzy.m3u
+mtime: 1335005486
+playlist_end
+end: Rock/Metal/Rammstein_Discography/Rammstein_-_Liebe_Ist_Fur_Alle_Da-(Bonus_CD)-2009-LzY
+directory: Rammstein_-_Liebe_Ist_Fur_Alle_Da-CD-DE-2009-DOH
+mtime: 1335005365
+begin: Rock/Metal/Rammstein_Discography/Rammstein_-_Liebe_Ist_Fur_Alle_Da-CD-DE-2009-DOH
+song_begin: 01-rammstein-rammlied-doh.mp3
+Time: 319
+Artist: Rammstein
+Title: Rammlied
+Album: Liebe Ist Fur Alle Da
+Track: 1/11
+Date: 2009-10-16
+Genre: Rock
+mtime: 1335005630
+song_end
+song_begin: 02-rammstein-ich_tu_dir_weh-doh.mp3
+Time: 302
+Artist: Rammstein
+Title: Ich Tu Dir Weh
+Album: Liebe Ist Fur Alle Da
+Track: 2/11
+Date: 2009-10-16
+Genre: Rock
+mtime: 1335005734
+song_end
+song_begin: 03-rammstein-waidmanns_heil-doh.mp3
+Time: 213
+Artist: Rammstein
+Title: Waidmanns Heil
+Album: Liebe Ist Fur Alle Da
+Track: 3/11
+Date: 2009-10-16
+Genre: Rock
+mtime: 1335005537
+song_end
+song_begin: 04-rammstein-haifisch-doh.mp3
+Time: 225
+Artist: Rammstein
+Title: Haifisch
+Album: Liebe Ist Fur Alle Da
+Track: 4/11
+Date: 2009-10-16
+Genre: Rock
+mtime: 1335005701
+song_end
+song_begin: 05-rammstein-b-doh.mp3
+Time: 254
+Artist: Rammstein
+Title: B********
+Album: Liebe Ist Fur Alle Da
+Track: 5/11
+Date: 2009-10-16
+Genre: Rock
+mtime: 1335005444
+song_end
+song_begin: 06-rammstein-fruhling_in_paris-doh.mp3
+Time: 285
+Artist: Rammstein
+Title: Fruhling in Paris
+Album: Liebe Ist Fur Alle Da
+Track: 6/11
+Date: 2009-10-16
+Genre: Rock
+mtime: 1335005609
+song_end
+song_begin: 07-rammstein-wiener_blut-doh.mp3
+Time: 232
+Artist: Rammstein
+Title: Wiener Blut
+Album: Liebe Ist Fur Alle Da
+Track: 7/11
+Date: 2009-10-16
+Genre: Rock
+mtime: 1335005533
+song_end
+song_begin: 08-rammstein-pussy-doh.mp3
+Time: 239
+Artist: Rammstein
+Title: Pussy
+Album: Liebe Ist Fur Alle Da
+Track: 8/11
+Date: 2009-10-16
+Genre: Rock
+mtime: 1335005655
+song_end
+song_begin: 09-rammstein-liebe_ist_fur_alle_da-doh.mp3
+Time: 208
+Artist: Rammstein
+Title: Liebe Ist Fur Alle Da
+Album: Liebe Ist Fur Alle Da
+Track: 9/11
+Date: 2009-10-16
+Genre: Rock
+mtime: 1335005538
+song_end
+song_begin: 10-rammstein-mehr-doh.mp3
+Time: 251
+Artist: Rammstein
+Title: Mehr
+Album: Liebe Ist Fur Alle Da
+Track: 10/11
+Date: 2009-10-16
+Genre: Rock
+mtime: 1335005686
+song_end
+song_begin: 11-rammstein-roter_sand-doh.mp3
+Time: 239
+Artist: Rammstein
+Title: Roter Sand
+Album: Liebe Ist Fur Alle Da
+Track: 11/11
+Date: 2009-10-16
+Genre: Rock
+mtime: 1335005466
+song_end
+playlist_begin: 00-rammstein-liebe_ist_fur_alle_da-cd-de-2009.m3u
+mtime: 1335005495
+playlist_end
+end: Rock/Metal/Rammstein_Discography/Rammstein_-_Liebe_Ist_Fur_Alle_Da-CD-DE-2009-DOH
+directory: Rammstein_-_Live_Aus_Berlin-2CD-1999-TtR
+mtime: 1335005365
+begin: Rock/Metal/Rammstein_Discography/Rammstein_-_Live_Aus_Berlin-2CD-1999-TtR
+song_begin: 101_spiel_mit_mir-ttr.mp3
+Time: 369
+Artist: Rammstein
+Title: Spiel mit mir
+Album: Live aus Berlin
+Date: 1999
+Genre: Metal
+mtime: 1335005716
+song_end
+song_begin: 102_herzeleid-ttr.mp3
+Time: 238
+Artist: Rammstein
+Title: Herzeleid
+Album: Live aus Berlin
+Date: 1999
+Genre: Metal
+mtime: 1335005705
+song_end
+song_begin: 103_bestrafe_mich-ttr.mp3
+Time: 229
+Artist: Rammstein
+Title: Bestrafe Mich
+Album: Live aus Berlin
+Date: 1999
+Genre: Metal
+mtime: 1335005704
+song_end
+song_begin: 104_weisses_fleisch-ttr.mp3
+Time: 276
+Artist: Rammstein
+Title: Weisses Fleisch
+Album: Live aus Berlin
+Date: 1999
+Genre: Metal
+mtime: 1335005667
+song_end
+song_begin: 105_sehnsucht-ttr.mp3
+Time: 265
+Artist: Rammstein
+Title: Sehnsucht
+Album: Live aus Berlin
+Date: 1999
+Genre: Metal
+mtime: 1335005520
+song_end
+song_begin: 106_asche_zu_asche-ttr.mp3
+Time: 205
+Artist: Rammstein
+Title: Asche zu Asche
+Album: Live aus Berlin
+Date: 1999
+Genre: Metal
+mtime: 1335005463
+song_end
+song_begin: 107_wilder_wein-ttr.mp3
+Time: 357
+Artist: Rammstein
+Title: Wilder Wein
+Album: Live aus Berlin
+Date: 1999
+Genre: Metal
+mtime: 1335005724
+song_end
+song_begin: 108_klavier-ttr.mp3
+Time: 290
+Artist: Rammstein
+Title: Klavier
+Album: Live aus Berlin
+Date: 1999
+Genre: Metal
+mtime: 1335005644
+song_end
+song_begin: 109_heirate_mich-ttr.mp3
+Time: 467
+Artist: Rammstein
+Title: Heirate mich
+Album: Live aus Berlin
+Date: 1999
+Genre: Metal
+mtime: 1335005507
+song_end
+song_begin: 110_du_riechst_so_gut-ttr.mp3
+Time: 326
+Artist: Rammstein
+Title: Du riechst so gut
+Album: Live aus Berlin
+Date: 1999
+Genre: Metal
+mtime: 1335005750
+song_end
+song_begin: 111_du_hast-ttr.mp3
+Time: 267
+Artist: Rammstein
+Title: Du hast
+Album: Live aus Berlin
+Date: 1999
+Genre: Metal
+mtime: 1335005687
+song_end
+song_begin: 112_bueck_dich-ttr.mp3
+Time: 360
+Artist: Rammstein
+Title: Bück dich
+Album: Live aus Berlin
+Date: 1999
+Genre: Metal
+mtime: 1335005724
+song_end
+song_begin: 201_engel-ttr.mp3
+Time: 404
+Artist: Rammstein
+Title: Engel
+Album: Live aus Berlin
+Date: 1999
+Genre: Metal
+mtime: 1335005519
+song_end
+song_begin: 202_rammstein-ttr.mp3
+Time: 343
+Artist: Rammstein
+Title: Rammstein
+Album: Live aus Berlin
+Date: 1999
+Genre: Metal
+mtime: 1335005737
+song_end
+song_begin: 203_tier-ttr.mp3
+Time: 223
+Artist: Rammstein
+Title: Tier
+Album: Live aus Berlin
+Date: 1999
+Genre: Metal
+mtime: 1335005756
+song_end
+song_begin: 204_laichzeit-ttr.mp3
+Time: 314
+Artist: Rammstein
+Title: Laichzeit
+Album: Live aus Berlin
+Date: 1999
+Genre: Metal
+mtime: 1335005592
+song_end
+song_begin: 205_wollt_ihr_das_bett_in_flammen_sehen-ttr.mp3
+Time: 375
+Artist: Rammstein
+Title: Wollt ihr das Bett in Flamme..
+Album: Live aus Berlin
+Date: 1999
+Genre: Metal
+mtime: 1335005709
+song_end
+song_begin: 206_seemann-ttr.mp3
+Time: 597
+Artist: Rammstein
+Title: Seemann
+Album: Live aus Berlin
+Date: 1999
+Genre: Metal
+mtime: 1335005500
+song_end
+playlist_begin: 000_rammstein_-_live_aus_berlin-2cd-1999-ttr.m3u
+mtime: 1335005495
+playlist_end
+end: Rock/Metal/Rammstein_Discography/Rammstein_-_Live_Aus_Berlin-2CD-1999-TtR
+directory: Rammstein_-_Mutter-DE-2001-NER_INT
+mtime: 1335005365
+begin: Rock/Metal/Rammstein_Discography/Rammstein_-_Mutter-DE-2001-NER_INT
+song_begin: 01-rammstein-mein_herz_brennt-ner.mp3
 Time: 280
 Artist: Rammstein
-Title: Mein Herz brennt
+Title: Mein Herz Brennt
 Album: Mutter
+Track: 1
 Date: 2001
-Track: 01
-Genre: Metal
-mtime: 1334068306
+Genre: Rock
+mtime: 1335005446
 song_end
-song_begin: 02-Rammstein-Links 2 3 4.flac
+song_begin: 02-rammstein-links_2_3_4-ner.mp3
 Time: 217
 Artist: Rammstein
 Title: Links 2 3 4
 Album: Mutter
+Track: 2
 Date: 2001
-Track: 02
-Genre: Metal
-mtime: 1334068308
+Genre: Rock
+mtime: 1335005756
 song_end
-song_begin: 03-Rammstein-Sonne.flac
+song_begin: 03-rammstein-sonne-ner.mp3
 Time: 273
 Artist: Rammstein
 Title: Sonne
 Album: Mutter
+Track: 3
 Date: 2001
-Track: 03
-Genre: Metal
-mtime: 1334068309
+Genre: Rock
+mtime: 1335005685
 song_end
-song_begin: 04-Rammstein-Ich will.flac
+song_begin: 04-rammstein-ich_will-ner.mp3
 Time: 218
 Artist: Rammstein
-Title: Ich will
+Title: Ich Will
 Album: Mutter
+Track: 4
 Date: 2001
-Track: 04
-Genre: Metal
-mtime: 1334068310
+Genre: Rock
+mtime: 1335005463
 song_end
-song_begin: 05-Rammstein-Feuer Frei!.flac
-Time: 192
+song_begin: 05-rammstein-feuer_frei-ner.mp3
+Time: 191
 Artist: Rammstein
 Title: Feuer Frei!
 Album: Mutter
+Track: 5
 Date: 2001
-Track: 05
-Genre: Metal
-mtime: 1334068311
+Genre: Rock
+mtime: 1335005477
 song_end
-song_begin: 06-Rammstein-Mutter.flac
+song_begin: 06-rammstein-mutter-ner.mp3
 Time: 273
 Artist: Rammstein
 Title: Mutter
 Album: Mutter
+Track: 6
 Date: 2001
-Track: 06
-Genre: Metal
-mtime: 1334068300
+Genre: Rock
+mtime: 1335005671
 song_end
-song_begin: 07-Rammstein-Spieluhr.flac
-Time: 287
+song_begin: 07-rammstein-spieluhr-ner.mp3
+Time: 286
 Artist: Rammstein
 Title: Spieluhr
 Album: Mutter
+Track: 7
 Date: 2001
-Track: 07
-Genre: Metal
-mtime: 1334068330
+Genre: Rock
+mtime: 1335005600
 song_end
-song_begin: 08-Rammstein-Zwitter.flac
+song_begin: 08-rammstein-zwitter-ner.mp3
 Time: 258
 Artist: Rammstein
 Title: Zwitter
 Album: Mutter
+Track: 8
 Date: 2001
-Track: 08
-Genre: Metal
-mtime: 1334068332
+Genre: Rock
+mtime: 1335005663
 song_end
-song_begin: 09-Rammstein-Rein raus.flac
+song_begin: 09-rammstein-rein_raus-ner.mp3
 Time: 190
 Artist: Rammstein
-Title: Rein raus
+Title: Rein Raus
 Album: Mutter
+Track: 9
 Date: 2001
-Track: 09
-Genre: Metal
-mtime: 1334068333
+Genre: Rock
+mtime: 1335005474
 song_end
-song_begin: 10-Rammstein-Adios.flac
+song_begin: 10-rammstein-adios-ner.mp3
 Time: 230
 Artist: Rammstein
 Title: Adios
 Album: Mutter
-Date: 2001
 Track: 10
-Genre: Metal
-mtime: 1334068334
+Date: 2001
+Genre: Rock
+mtime: 1335005708
 song_end
-song_begin: 11-Rammstein-Nebel.flac
+song_begin: 11-rammstein-nebel-ner.mp3
 Time: 295
 Artist: Rammstein
 Title: Nebel
 Album: Mutter
-Date: 2001
 Track: 11
-Genre: Metal
-mtime: 1334068336
+Date: 2001
+Genre: Rock
+mtime: 1335005650
 song_end
-song_begin: 12-Rammstein-Benzin.flac
+playlist_begin: 00-rammstein-mutter-de-2001-ner_int.m3u
+mtime: 1335005495
+playlist_end
+end: Rock/Metal/Rammstein_Discography/Rammstein_-_Mutter-DE-2001-NER_INT
+directory: Rammstein_-_Mutter_(Best_Buy_Bonus_CD)-2001-PMS
+mtime: 1335005365
+begin: Rock/Metal/Rammstein_Discography/Rammstein_-_Mutter_(Best_Buy_Bonus_CD)-2001-PMS
+song_begin: 01-rammstein-hallelujah-pms.mp3
+Time: 218
+Artist: Rammstein
+Title: Hallelujah
+Album: Mutter (Best Buy Bonus CD)
+Track: 1
+Date: 2001
+Genre: Metal
+mtime: 1335005462
+song_end
+playlist_begin: 00-rammstein-mutter_(best_buy_bonus_cd)-2001-pms.m3u
+mtime: 1335005486
+playlist_end
+end: Rock/Metal/Rammstein_Discography/Rammstein_-_Mutter_(Best_Buy_Bonus_CD)-2001-PMS
+directory: Rammstein_-_Reise_Reise-RETAIL-2004-ESC
+mtime: 1335005365
+begin: Rock/Metal/Rammstein_Discography/Rammstein_-_Reise_Reise-RETAIL-2004-ESC
+song_begin: 01-rammstein-reise_reise-esc.mp3
+Time: 251
+Artist: Rammstein
+Title: Reise, Reise
+Album: Reise Reise
+Track: 1
+Date: 2004
+Genre: Metal
+mtime: 1335005583
+song_end
+song_begin: 02-rammstein-mein_teil-esc.mp3
+Time: 272
+Artist: Rammstein
+Title: Mein Teil
+Album: Reise Reise
+Track: 2
+Date: 2004
+Genre: Metal
+mtime: 1335005721
+song_end
+song_begin: 03-rammstein-dalai_lama-esc.mp3
+Time: 339
+Artist: Rammstein
+Title: Dalai Lama
+Album: Reise Reise
+Track: 3
+Date: 2004
+Genre: Metal
+mtime: 1335005503
+song_end
+song_begin: 04-rammstein-keine_lust-esc.mp3
+Time: 223
+Artist: Rammstein
+Title: Keine Lust
+Album: Reise Reise
+Track: 4
+Date: 2004
+Genre: Metal
+mtime: 1335005634
+song_end
+song_begin: 05-rammstein-los-esc.mp3
+Time: 265
+Artist: Rammstein
+Title: Los
+Album: Reise Reise
+Track: 5
+Date: 2004
+Genre: Metal
+mtime: 1335005596
+song_end
+song_begin: 06-rammstein-amerika-esc.mp3
+Time: 227
+Artist: Rammstein
+Title: Amerika
+Album: Reise Reise
+Track: 6
+Date: 2004
+Genre: Metal
+mtime: 1335005642
+song_end
+song_begin: 07-rammstein-moskau-esc.mp3
+Time: 256
+Artist: Rammstein
+Title: Moskau
+Album: Reise Reise
+Track: 7
+Date: 2004
+Genre: Metal
+mtime: 1335005749
+song_end
+song_begin: 08-rammstein-morgenstern-esc.mp3
+Time: 240
+Artist: Rammstein
+Title: Morgenstern
+Album: Reise Reise
+Track: 8
+Date: 2004
+Genre: Metal
+mtime: 1335005614
+song_end
+song_begin: 09-rammstein-stein_um_stein-esc.mp3
+Time: 236
+Artist: Rammstein
+Title: Stein Um Stein
+Album: Reise Reise
+Track: 9
+Date: 2004
+Genre: Metal
+mtime: 1335005638
+song_end
+song_begin: 10-rammstein-ohne_dich-esc.mp3
+Time: 272
+Artist: Rammstein
+Title: Ohne Dich
+Album: Reise Reise
+Track: 10
+Date: 2004
+Genre: Metal
+mtime: 1335005756
+song_end
+song_begin: 11-rammstein-amour-esc.mp3
+Time: 291
+Artist: Rammstein
+Title: Amour
+Album: Reise Reise
+Track: 11
+Date: 2004
+Genre: Metal
+mtime: 1335005745
+song_end
+playlist_begin: 00-rammstein-reise_reise-retail-2004-esc.m3u
+mtime: 1335005495
+playlist_end
+end: Rock/Metal/Rammstein_Discography/Rammstein_-_Reise_Reise-RETAIL-2004-ESC
+directory: Rammstein_-_Rosenrot-DE-2005-MOD
+mtime: 1335005365
+begin: Rock/Metal/Rammstein_Discography/Rammstein_-_Rosenrot-DE-2005-MOD
+song_begin: 01_rammstein_-_benzin.mp3
 Time: 226
 Artist: Rammstein
 Title: Benzin
 Album: Rosenrot
+Track: 1
 Date: 2005
-Track: 01
-Genre: Hardcore
-mtime: 1334068337
+Genre: Rock
+mtime: 1335005448
 song_end
-song_begin: 13-Rammstein-Mann gegen Mann.flac
+song_begin: 02_rammstein_-_mann_gegen_mann.mp3
 Time: 231
 Artist: Rammstein
 Title: Mann gegen Mann
 Album: Rosenrot
+Track: 2
 Date: 2005
-Track: 02
-Genre: Hardcore
-mtime: 1334068338
+Genre: Rock
+mtime: 1335005628
 song_end
-song_begin: 14-Rammstein-Rosenrot.flac
+song_begin: 03_rammstein_-_rosenrot.mp3
 Time: 235
 Artist: Rammstein
 Title: Rosenrot
 Album: Rosenrot
+Track: 3
 Date: 2005
-Track: 03
-Genre: Hardcore
-mtime: 1334068339
+Genre: Rock
+mtime: 1335005680
 song_end
-song_begin: 15-Rammstein-Spring.flac
+song_begin: 04_rammstein_-_spring.mp3
 Time: 325
 Artist: Rammstein
 Title: Spring
 Album: Rosenrot
+Track: 4
 Date: 2005
-Track: 04
-Genre: Hardcore
-mtime: 1334068301
+Genre: Rock
+mtime: 1335005561
 song_end
-song_begin: 16-Rammstein-Wo bist Du.flac
-Time: 236
+song_begin: 05_rammstein_-_wo_bist_du.mp3
+Time: 235
 Artist: Rammstein
-Title: Wo bist Du
+Title: Wo bist du
 Album: Rosenrot
+Track: 5
 Date: 2005
-Track: 05
-Genre: Hardcore
-mtime: 1334068322
+Genre: Rock
+mtime: 1335005442
 song_end
-song_begin: 17-Rammstein-Stirb nicht vor mir (Don't die before I do).flac
-Time: 246
+song_begin: 06_rammstein_-_stirb_nicht_vor_mir_--_dont_die_before_i_do_feat._sharleen_spiteri.mp3
+Time: 245
 Artist: Rammstein
-Title: Stirb nicht vor mir (Don't die before I do)
+Title: Stirb nicht vor mir // Don't Die Before I Do Feat. Sharleen Spiteri
 Album: Rosenrot
+Track: 6
 Date: 2005
-Track: 06
-Genre: Hardcore
-mtime: 1334068323
+Genre: Rock
+mtime: 1335005650
 song_end
-song_begin: 18-Rammstein-Zerstцren.flac
+song_begin: 07_rammstein_-_zerstoeren.mp3
 Time: 329
 Artist: Rammstein
-Title: Zerstцren
+Title: Zerstören
 Album: Rosenrot
+Track: 7
 Date: 2005
-Track: 07
-Genre: Hardcore
-mtime: 1334068324
+Genre: Rock
+mtime: 1335005565
 song_end
-song_begin: 19-Rammstein-Hilf mir.flac
+song_begin: 08_rammstein_-_hilf_mir.mp3
 Time: 284
 Artist: Rammstein
 Title: Hilf mir
 Album: Rosenrot
+Track: 8
 Date: 2005
-Track: 08
-Genre: Hardcore
-mtime: 1334068326
+Genre: Rock
+mtime: 1335005728
 song_end
-song_begin: 20-Rammstein-Te Quiero Puta!.flac
+song_begin: 09_rammstein_-_te_quiero_puta.mp3
 Time: 236
 Artist: Rammstein
 Title: Te Quiero Puta!
 Album: Rosenrot
+Track: 9
 Date: 2005
-Track: 09
-Genre: Hardcore
-mtime: 1334068327
+Genre: Rock
+mtime: 1335005655
 song_end
-song_begin: 21-Rammstein-Feuer und Wasser.flac
+song_begin: 10_rammstein_-_feuer_und_wasser.mp3
 Time: 318
 Artist: Rammstein
 Title: Feuer und Wasser
 Album: Rosenrot
-Date: 2005
 Track: 10
-Genre: Hardcore
-mtime: 1334068329
+Date: 2005
+Genre: Rock
+mtime: 1335005720
 song_end
-song_begin: 22-Rammstein-Ein Lied.flac
+song_begin: 11_rammstein_-_ein_lied.mp3
 Time: 224
 Artist: Rammstein
 Title: Ein Lied
 Album: Rosenrot
-Date: 2005
 Track: 11
-Genre: Hardcore
-mtime: 1334068302
+Date: 2005
+Genre: Rock
+mtime: 1335005756
 song_end
-song_begin: 23-Rammstein-Sehnsucht.flac
+playlist_begin: 00_rammstein_-_rosenrot-de-2005-mod.m3u
+mtime: 1335005495
+playlist_end
+end: Rock/Metal/Rammstein_Discography/Rammstein_-_Rosenrot-DE-2005-MOD
+directory: Rammstein_-_Sehnsucht-1997-EMG_INT
+mtime: 1335005365
+begin: Rock/Metal/Rammstein_Discography/Rammstein_-_Sehnsucht-1997-EMG_INT
+song_begin: 01-rammstein-sehnsucht.mp3
 Time: 245
 Artist: Rammstein
 Title: Sehnsucht
 Album: Sehnsucht
+Track: 1
 Date: 1997
-Track: 01
-Genre: Industrial Rock
-mtime: 1334068341
+Genre: Industrial
+mtime: 1335005664
 song_end
-song_begin: 24-Rammstein-Engel.flac
+song_begin: 02-rammstein-engel.mp3
 Time: 265
 Artist: Rammstein
 Title: Engel
 Album: Sehnsucht
+Track: 2
 Date: 1997
-Track: 02
-Genre: Industrial Rock
-mtime: 1334068342
+Genre: Industrial
+mtime: 1335005626
 song_end
-song_begin: 25-Rammstein-Tier.flac
+song_begin: 03-rammstein-tier.mp3
 Time: 228
 Artist: Rammstein
 Title: Tier
 Album: Sehnsucht
+Track: 3
 Date: 1997
-Track: 03
-Genre: Industrial Rock
-mtime: 1334068344
+Genre: Industrial
+mtime: 1335005526
 song_end
-song_begin: 26-Rammstein-Bestrafe mich.flac
+song_begin: 04-rammstein-bestrafe_mich.mp3
 Time: 219
 Artist: Rammstein
-Title: Bestrafe mich
+Title: Bestrafe Mich
 Album: Sehnsucht
+Track: 4
 Date: 1997
-Track: 04
-Genre: Industrial Rock
-mtime: 1334068345
+Genre: Industrial
+mtime: 1335005693
 song_end
-song_begin: 27-Rammstein-Du hast.flac
+song_begin: 05-rammstein-du_hast.mp3
 Time: 236
 Artist: Rammstein
-Title: Du hast
+Title: Du Hast
 Album: Sehnsucht
+Track: 5
 Date: 1997
-Track: 05
-Genre: Industrial Rock
-mtime: 1334068347
+Genre: Industrial
+mtime: 1335005681
 song_end
-song_begin: 28-Rammstein-B k Dich.flac
+song_begin: 06-rammstein-bueck_dich.mp3
 Time: 203
 Artist: Rammstein
-Title: B?k Dich
+Title: Bück Dich
 Album: Sehnsucht
+Track: 6
 Date: 1997
-Track: 06
-Genre: Industrial Rock
-mtime: 1334068348
+Genre: Industrial
+mtime: 1335005755
 song_end
-song_begin: 29-Rammstein-Spiel mit mir.flac
+song_begin: 07-rammstein-spiel_mit_mir.mp3
 Time: 287
 Artist: Rammstein
-Title: Spiel mit mir
+Title: Spiel Mit Mir
 Album: Sehnsucht
+Track: 7
 Date: 1997
-Track: 07
-Genre: Industrial Rock
-mtime: 1334068350
+Genre: Industrial
+mtime: 1335005572
 song_end
-song_begin: 30-Rammstein-Klavier.flac
+song_begin: 08-rammstein-klavier.mp3
 Time: 265
 Artist: Rammstein
 Title: Klavier
 Album: Sehnsucht
+Track: 8
 Date: 1997
-Track: 08
-Genre: Industrial Rock
-mtime: 1334068351
+Genre: Industrial
+mtime: 1335005458
 song_end
-song_begin: 31-Rammstein-Alter Mann.flac
-Time: 265
+song_begin: 09-rammstein-alter_mann.mp3
+Time: 264
 Artist: Rammstein
 Title: Alter Mann
 Album: Sehnsucht
+Track: 9
 Date: 1997
-Track: 09
-Genre: Industrial Rock
-mtime: 1334068304
+Genre: Industrial
+mtime: 1335005610
 song_end
-song_begin: 32-Rammstein-Eifersucht.flac
-Time: 218
+song_begin: 10-rammstein-eifersucht.mp3
+Time: 217
 Artist: Rammstein
 Title: Eifersucht
 Album: Sehnsucht
-Date: 1997
 Track: 10
-Genre: Industrial Rock
-mtime: 1334068313
+Date: 1997
+Genre: Industrial
+mtime: 1335005710
 song_end
-song_begin: 33-Rammstein-Kьss mich (Fellfrosch).flac
+song_begin: 11-rammstein-kuess_mich_(fellfrosch).mp3
 Time: 211
 Artist: Rammstein
-Title: Kьss mich (Fellfrosch)
+Title: Küss Mich (Fellfrosch)
 Album: Sehnsucht
-Date: 1997
 Track: 11
-Genre: Industrial Rock
-mtime: 1334068314
+Date: 1997
+Genre: Industrial
+mtime: 1335005544
 song_end
-playlist_begin: 00.Rammstein,Discography.iNT.m3u
-mtime: 1334068305
+song_begin: 12-rammstein-engel_(english_version).mp3
+Time: 265
+Artist: Rammstein
+Title: Engel (English Version)
+Album: Sehnsucht
+Track: 12
+Date: 1997
+Genre: Industrial
+mtime: 1335005454
+song_end
+song_begin: 13-rammstein-du_hast_(english_version).mp3
+Time: 236
+Artist: Rammstein
+Title: Du Hast (English Version)
+Album: Sehnsucht
+Track: 13
+Date: 1997
+Genre: Industrial
+mtime: 1335005543
+song_end
+playlist_begin: 00-rammstein-sehnsucht-1997-emg_int.m3u
+mtime: 1335005495
 playlist_end
-end: Rock/Metal/Rammstein,Discography.iNT
+end: Rock/Metal/Rammstein_Discography/Rammstein_-_Sehnsucht-1997-EMG_INT
+directory: Rammstein_-_Sehnsucht-CD-1997-2TU_INT
+mtime: 1335005365
+begin: Rock/Metal/Rammstein_Discography/Rammstein_-_Sehnsucht-CD-1997-2TU_INT
+song_begin: 01-rammstein-sehnsucht-2tu.mp3
+Time: 245
+Artist: Rammstein
+Title: Sehnsucht
+Album: Sehnsucht
+Track: 1/12
+Date: 1997-00-00
+Genre: Metal
+mtime: 1335005663
+song_end
+song_begin: 02-rammstein-engel-2tu.mp3
+Time: 265
+Artist: Rammstein
+Title: Engel
+Album: Sehnsucht
+Track: 2/12
+Date: 1997-00-00
+Genre: Metal
+mtime: 1335005622
+song_end
+song_begin: 03-rammstein-tier-2tu.mp3
+Time: 228
+Artist: Rammstein
+Title: Tier
+Album: Sehnsucht
+Track: 3/12
+Date: 1997-00-00
+Genre: Metal
+mtime: 1335005530
+song_end
+song_begin: 04-rammstein-bestrafe_mich-2tu.mp3
+Time: 219
+Artist: Rammstein
+Title: Bestrafe Mich
+Album: Sehnsucht
+Track: 4/12
+Date: 1997-00-00
+Genre: Metal
+mtime: 1335005688
+song_end
+song_begin: 05-rammstein-du_hast-2tu.mp3
+Time: 236
+Artist: Rammstein
+Title: Du Hast
+Album: Sehnsucht
+Track: 5/12
+Date: 1997-00-00
+Genre: Metal
+mtime: 1335005689
+song_end
+song_begin: 06-rammstein-bck_dich-2tu.mp3
+Time: 203
+Artist: Rammstein
+Title: Bück Dich
+Album: Sehnsucht
+Track: 6/12
+Date: 1997-00-00
+Genre: Metal
+mtime: 1335005755
+song_end
+song_begin: 07-rammstein-spiel_mit_mir-2tu.mp3
+Time: 287
+Artist: Rammstein
+Title: Spiel Mit Mir
+Album: Sehnsucht
+Track: 7/12
+Date: 1997-00-00
+Genre: Metal
+mtime: 1335005576
+song_end
+song_begin: 08-rammstein-klavier-2tu.mp3
+Time: 265
+Artist: Rammstein
+Title: Klavier
+Album: Sehnsucht
+Track: 8/12
+Date: 1997-00-00
+Genre: Metal
+mtime: 1335005458
+song_end
+song_begin: 09-rammstein-alter_mann-2tu.mp3
+Time: 264
+Artist: Rammstein
+Title: Alter Mann
+Album: Sehnsucht
+Track: 9/12
+Date: 1997-00-00
+Genre: Metal
+mtime: 1335005605
+song_end
+song_begin: 10-rammstein-eifersucht-2tu.mp3
+Time: 217
+Artist: Rammstein
+Title: Eifersucht
+Album: Sehnsucht
+Track: 10/12
+Date: 1997-00-00
+Genre: Metal
+mtime: 1335005699
+song_end
+song_begin: 11-rammstein-kss_mich_(fellfrosch)-2tu.mp3
+Time: 211
+Artist: Rammstein
+Title: Küss mich (fellfrosch)
+Album: Sehnsucht
+Track: 11/12
+Date: 1997-00-00
+Genre: Metal
+mtime: 1335005549
+song_end
+song_begin: 12-rammstein-stripped-2tu.mp3
+Time: 266
+Artist: Rammstein
+Title: Stripped
+Album: Sehnsucht
+Track: 12/12
+Date: 1997-00-00
+Genre: Metal
+mtime: 1335005617
+song_end
+playlist_begin: 00-rammstein-sehnsucht-cd-1997-2tu.m3u
+mtime: 1335005495
+playlist_end
+end: Rock/Metal/Rammstein_Discography/Rammstein_-_Sehnsucht-CD-1997-2TU_INT
+directory: Rammstein_-_Voelkerball-Live_In_Nimes-2CD-Ltd.Ed.-2006-D2H
+mtime: 1335005365
+begin: Rock/Metal/Rammstein_Discography/Rammstein_-_Voelkerball-Live_In_Nimes-2CD-Ltd.Ed.-2006-D2H
+song_begin: 101-intro-d2h.mp3
+Time: 124
+Artist: Rammstein
+Title: Intro
+Album: Voelkerball-Live In Nimes
+Track: 1
+Date: 2006
+Genre: Industrial
+mtime: 1335005481
+song_end
+song_begin: 102-reise_reise-d2h.mp3
+Time: 331
+Artist: Rammstein
+Title: Reise, Reise
+Album: Voelkerball-Live In Nimes
+Track: 2
+Date: 2006
+Genre: Industrial
+mtime: 1335005729
+song_end
+song_begin: 103-links_2_3_4-d2h.mp3
+Time: 291
+Artist: Rammstein
+Title: Links 2 3 4
+Album: Voelkerball-Live In Nimes
+Track: 3
+Date: 2006
+Genre: Industrial
+mtime: 1335005565
+song_end
+song_begin: 104-keine_lust-d2h.mp3
+Time: 233
+Artist: Rammstein
+Title: Keine Lust
+Album: Voelkerball-Live In Nimes
+Track: 4
+Date: 2006
+Genre: Industrial
+mtime: 1335005538
+song_end
+song_begin: 105-feuer_frei-d2h.mp3
+Time: 212
+Artist: Rammstein
+Title: Feuer Frei!
+Album: Voelkerball-Live In Nimes
+Track: 5
+Date: 2006
+Genre: Industrial
+mtime: 1335005700
+song_end
+song_begin: 106-asche_zu_asche-d2h.mp3
+Time: 246
+Artist: Rammstein
+Title: Asche Zu Asche
+Album: Voelkerball-Live In Nimes
+Track: 6
+Date: 2006
+Genre: Industrial
+mtime: 1335005532
+song_end
+song_begin: 107-morgenstern-d2h.mp3
+Time: 293
+Artist: Rammstein
+Title: Morgenstern
+Album: Voelkerball-Live In Nimes
+Track: 7
+Date: 2006
+Genre: Industrial
+mtime: 1335005606
+song_end
+song_begin: 108-mein_teil-d2h.mp3
+Time: 398
+Artist: Rammstein
+Title: Mein Teil
+Album: Voelkerball-Live In Nimes
+Track: 8
+Date: 2006
+Genre: Industrial
+mtime: 1335005505
+song_end
+song_begin: 109-stein_um_stein-d2h.mp3
+Time: 327
+Artist: Rammstein
+Title: Stein Um Stein
+Album: Voelkerball-Live In Nimes
+Track: 9
+Date: 2006
+Genre: Industrial
+mtime: 1335005429
+song_end
+song_begin: 110-los-d2h.mp3
+Time: 427
+Artist: Rammstein
+Title: Los
+Album: Voelkerball-Live In Nimes
+Track: 10
+Date: 2006
+Genre: Industrial
+mtime: 1335005504
+song_end
+song_begin: 201-du_riechst_so_gut-d2h.mp3
+Time: 350
+Artist: Rammstein
+Title: Du Riechst So Gut
+Album: Voelkerball-Live In Nimes
+Track: 11
+Date: 2006
+Genre: Industrial
+mtime: 1335005709
+song_end
+song_begin: 202-benzin-d2h.mp3
+Time: 245
+Artist: Rammstein
+Title: Benzin
+Album: Voelkerball-Live In Nimes
+Track: 12
+Date: 2006
+Genre: Industrial
+mtime: 1335005542
+song_end
+song_begin: 203-du_hast-d2h.mp3
+Time: 261
+Artist: Rammstein
+Title: Du Hast
+Album: Voelkerball-Live In Nimes
+Track: 13
+Date: 2006
+Genre: Industrial
+mtime: 1335005666
+song_end
+song_begin: 204-sehnsucht-d2h.mp3
+Time: 263
+Artist: Rammstein
+Title: Sehnsucht
+Album: Voelkerball-Live In Nimes
+Track: 14
+Date: 2006
+Genre: Industrial
+mtime: 1335005648
+song_end
+song_begin: 205-amerika-d2h.mp3
+Time: 380
+Artist: Rammstein
+Title: Amerika
+Album: Voelkerball-Live In Nimes
+Track: 15
+Date: 2006
+Genre: Industrial
+mtime: 1335005552
+song_end
+song_begin: 206-rammstein-d2h.mp3
+Time: 312
+Artist: Rammstein
+Title: Rammstein
+Album: Voelkerball-Live In Nimes
+Track: 16
+Date: 2006
+Genre: Industrial
+mtime: 1335005733
+song_end
+song_begin: 207-sonne-d2h.mp3
+Time: 292
+Artist: Rammstein
+Title: Sonne
+Album: Voelkerball-Live In Nimes
+Track: 17
+Date: 2006
+Genre: Industrial
+mtime: 1335005728
+song_end
+song_begin: 208-ich_will-d2h.mp3
+Time: 261
+Artist: Rammstein
+Title: Ich Will
+Album: Voelkerball-Live In Nimes
+Track: 18
+Date: 2006
+Genre: Industrial
+mtime: 1335005642
+song_end
+song_begin: 209-ohne_dich-d2h.mp3
+Time: 308
+Artist: Rammstein
+Title: Ohne Dich
+Album: Voelkerball-Live In Nimes
+Track: 19
+Date: 2006
+Genre: Industrial
+mtime: 1335005729
+song_end
+song_begin: 210-stripped-d2h.mp3
+Time: 496
+Artist: Rammstein
+Title: Stripped
+Album: Voelkerball-Live In Nimes
+Track: 20
+Date: 2006
+Genre: Industrial
+mtime: 1335005506
+song_end
+song_begin: 211-outro_feat._kolacny_brothers_and_scala_choir-d2h.mp3
+Time: 272
+Artist: Rammstein
+Title: Outro (Feat. Kolacny Brothers & Scala Choir)
+Album: Voelkerball-Live In Nimes
+Track: 21
+Date: 2006
+Genre: Industrial
+mtime: 1335005677
+song_end
+playlist_begin: 200-rammstein-voelkerball-live_in_nimes-cd2-2006-d2h.m3u
+mtime: 1335005495
+playlist_end
+playlist_begin: 000-rammstein-voelkerball-live_in_nimes-2cd-ltd.ed.-2006-d2h.m3u
+mtime: 1335005495
+playlist_end
+end: Rock/Metal/Rammstein_Discography/Rammstein_-_Voelkerball-Live_In_Nimes-2CD-Ltd.Ed.-2006-D2H
+end: Rock/Metal/Rammstein_Discography
 end: Rock/Metal
 directory: Punk
 mtime: 1334068360
