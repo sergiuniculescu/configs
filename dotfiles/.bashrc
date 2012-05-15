@@ -50,9 +50,9 @@ alias gitc="git commit -av ; git push -u origin master"
 
 
 # alias system clean:
-alias clean="yaourt -Qdt && sudo pacman -Sc && sudo pacman-optimize"
+alias clean='yaourt -Rnc $(pacman -Qqdt) && sudo pacman -Sc && sudo pacman-optimize'
 alias bb="sudo bleachbit --clean system.cache system.localizations system.trash system.tmp"
-alias cc="sudo cacheclean 2"
+alias cc="sudo cacheclean -p 2"
 
 
 # colorize commands:
@@ -66,7 +66,7 @@ alias zgrep="zgrep --color=auto"
 # others alias:
 alias tree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/ /' -e 's/-/|/'"
 alias today='date "+%A, %B %d, %Y [%T]"'
-alias du="du -c -h"
+alias du="du -hsx * | sort -rh"
 alias n='stat -c "%A (%a) %8s %.19y %n" '
 
 

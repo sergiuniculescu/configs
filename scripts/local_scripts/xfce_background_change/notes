@@ -1,0 +1,16 @@
+redshift.sh:
+- requires redshift, obviously
+- you can change min/max_color and min/max_light to your liking.
+- the commented-out “sed” line… is because I’m using a custom applications menu to launch this script from Xfce4’s panel. I’ll explain how to do it if someone asks.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+darkpaper.sh:
+- requires imagemagick for its “identify” tool that is used to get the pictures’ brightness.
+- doesn’t work with filenames containing spaces.
+- might loop forever if there is no adequate picture in your collection.
+- you need to set “d” to your wallpapers’ directory.
+- you can set “delay” to the time in seconds before a new picture is set.
+- you can remove “-maxdepth 1” if you want to recursively scan your pictures’ directory.
+- you might want to try changing “pic_brightness=$((mean+stddev))” to simply “pic_brightness=$mean” and see if that gives better results.
+- the script also changes the brightness setting of xfce4-desktop if the picture is a bit too bright (but not if it is a bit too dark.)

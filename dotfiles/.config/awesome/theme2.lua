@@ -1,6 +1,6 @@
 --///  Main
 theme = {"arch"}
-theme.wallpaper_cmd = { "awsetbg -a /home/sergiu/.config/awesome/wallpapers/black-cat-wallpaper-2.jpg" }
+theme.wallpaper_cmd = { "awsetbg -l /home/sergiu/.config/awesome/wallpapers/black-cat-wallpaper-2.jpg" }
 --//
 
 --/// Styles
