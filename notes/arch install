@@ -101,6 +101,16 @@ pacman -S ttf-dejavu ttf-liberation
 
 # Alternative FONTS for LCD #
 yaourt -S freetype2-ubuntu fontconfig-ubuntu libxft-ubuntu cairo-ubuntu
+
+
+# Autologin in tty #
+
+vim /etc/inittab
+linia:
+c1:2345:respawn:/sbin/agetty -8 -s 38400 tty1 linux
+devine:
+c1:2345:respawn:/sbin/agetty -a USERNAME -8 -s 38400 tty1 linux
+
 ______________________________________________________________________
 
 ### INSTALL GNOME 3 ###
@@ -338,7 +348,7 @@ pacman -S file-roller
 
 
 # Calculator #
-pacman -S gcalctool
+pacman -S gcalctool (galculator)
 
 # Scanner #
 pacman -S xsane
@@ -589,7 +599,8 @@ awmtt start -D 1 -C $HOME/.config/awesome/rc.lua.test -S 1024x640  # default sta
 awmtt -t change zenburn  # change theme
 
 # Package needed #
-pacman -s urxvt urxvt-url-select urxvt-vtwheel
+pacman -S rxvt-unicode urxvt-url-select
+yaourt -S urxvt-vtwheel
 pacman -S luafilesystem
 pacman -S lxappearance
 pacman -S dmenu
@@ -1328,6 +1339,10 @@ network.http.max-persistent-connections-per-proxy;integer;16
 network.http.max-persistent-connections-per-server;integer;8
 network.dns.disableIPv6;boolean;true
 
+NEW!
+network.http.spdy.enabled;true
+toolkit.storage.synchronous;integer;0
+
 
 # Reduce load time by compressing the Firefox binary with upx #
 pacman -S upx
@@ -1485,6 +1500,14 @@ git push
 pacman -S openssh
 
 vim /etc/ssh/ssh_config
+
+
+### FACE RECOGNITION ###
+yaourt -S pam-face-authentication
+
+vim /etc/pam.d/sudo si /etc/pam.d/login
+adaugam pe a doua linie:
+auth sufficient /lib/security/pam_face_authentication.so enableX
 
 __________________________________________________________________________________________________
 
