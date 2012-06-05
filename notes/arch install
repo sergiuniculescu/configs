@@ -1509,6 +1509,36 @@ vim /etc/pam.d/sudo si /etc/pam.d/login
 adaugam pe a doua linie:
 auth sufficient /lib/security/pam_face_authentication.so enableX
 
+
+
+### System Encryption with LUKS ###
+1. Inainte de a incepe partitionarea hardului il scriem cu random data:
+badblocks -c 10240 -wsvt random /dev/sda
+
+2. Se creaza partitiile dorite: /boot, /, /home, etc..
+
+3. Umontam partitiile:
+fuser -km /mnt
+umount /mnt
+
+4. Formatam paritiile LUCKS:
+cryptsetup -c aes-xts-plain -y -s 512 luksFormat /dev/sda3
+cryptsetup -c aes-xts-plain -y -s 512 luksFormat /dev/sda4
+
+5. Unlocking/Mapping LUKS Partitions with the Device Mapper:
+cryptsetup luksOpen /dev/sda2 root
+cryptsetup luksOpen /dev/sda2 home
+
+6. Installing the system 
+/arch/setup
+Manually configure mounting points...
+Pentru root alegem /dev/mapper/root
+Pentru home alegem /dev/mapper/home
+Le formatam ext4
+
+
+
+
 __________________________________________________________________________________________________
 
 ### CONSOLE MODE ###

@@ -1,7 +1,8 @@
 --///  Main
 theme = {"arch"}
 --theme.wallpaper_cmd = { "awsetbg -a /home/sergiu/.config/awesome/wallpapers/responsibleparents.jpg" }
-theme.wallpaper_cmd = { "awsetbg -r /home/sergiu/Pictures/National_Geographic/" }
+--theme.wallpaper_cmd = { "awsetbg -r /home/sergiu/Pictures/National_Geographic/" }
+theme.wallpaper_cmd = { "xsetroot -bg black" }
 --//
 
 --/// Change the wallpaper randomly after a (relatively random) time
