@@ -12852,3 +12852,1126 @@ May 06 23:57 : avahi: Client Disconnected, will reconnect shortly
 May 06 23:57 : avahi: Could not reconnect: Daemon not running
 May 07 20:39 : avahi: Client Disconnected, will reconnect shortly
 May 07 20:39 : avahi: Could not reconnect: Daemon not running
+May 07 21:41 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 07 21:41 : player_thread: played "Club/Top100 ViBE FM [ 2008 ] - RoT/45. DJ Rivero aka Alberto Garcia - Forever (Original Mix).mp3"
+May 07 21:49 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 07 21:49 : player_thread: played "Club/Deep Dish - Say Hello Club Mix [www.mp3atomic.net].mp3"
+May 07 21:57 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 07 21:57 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/15 . Tignino & Leo Feat. Mark Kerr - How Can You Feel (D-Nox & Beckers Remix).mp3"
+May 07 22:02 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 07 22:02 : player_thread: played "Club/Tiesto-Elements_Of_Life-CD-2007-TGX/05-tiesto-driving_to_heaven-tgx.mp3"
+May 07 22:08 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 07 22:08 : player_thread: played "Club/VA_-_Vibe_FM_2009_Top_100-(Advance)-2010-KTY/027_dario_zack_feat._starchild_-_funky_world_(extended_mix)-kty.mp3"
+May 07 22:13 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 07 22:13 : player_thread: played "Club/Junior Jack - Samba (remix).mp3"
+May 07 22:20 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 07 22:20 : player_thread: played "Club/VA_-_Vibe_FM_2009_Top_100-(Advance)-2010-KTY/096_john_ocallaghan_feat_sarah_howells_-_find_yourself_(original_mix)-kty.mp3"
+May 07 22:24 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 07 22:24 : player_thread: played "Club/2005 - Forever Faithless The Greatest Hits/03 - God Is A Dj.mp3"
+May 07 22:29 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 07 22:29 : player_thread: played "Club/Vibe/08.Deea Wise - My Love (The Kid & Dony Club Mix).mp3"
+May 07 22:32 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 07 22:32 : player_thread: played "Club/Top100 ViBE FM [ 2008 ] - RoT/55. Ian Oliver feat. Shantel - Bucovina (Ian Oliver's Radio Mix).mp3"
+May 07 22:36 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 07 22:36 : player_thread: played "Club/Gorilazz - rmx.mp3"
+May 07 22:44 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 07 22:44 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/22 . Julian Jeweil - Air conditionne (Original Mix).mp3"
+May 07 22:51 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 07 22:51 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/79 . John Dahlback Feat Andy P - Late Night Worries Late Night Worries (Norm's Late Night Dub).mp3"
+May 07 22:54 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 07 22:54 : player_thread: played "Club/vinylshakerz_-_daddy_cool-ministry.mp3"
+May 07 23:01 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 07 23:01 : player_thread: played "Club/Top100 ViBE FM [ 2008 ] - RoT/42. Morgan Page & Lissie - Longest road [Deadmau5 ReMiX].mp3"
+May 07 23:09 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 07 23:09 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/16 . Sikk - The Whisper ( Edxs Ibiza Sunrise Mix).mp3"
+May 08 00:32 : avahi: Client Disconnected, will reconnect shortly
+May 08 00:32 : avahi: Could not reconnect: Daemon not running
+May 08 17:20 : avahi: Client Disconnected, will reconnect shortly
+May 08 17:20 : avahi: Could not reconnect: Daemon not running
+May 08 17:27 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 08 17:27 : player_thread: played "Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Edward_The_Great-2004-MTO/16-iron_maiden-fear_of_the_dark_(live_at_rock_in_rio)-mto.mp3"
+May 08 17:31 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 08 17:31 : player_thread: played "Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Edward_The_Great-2004-MTO/03-iron_maiden-flight_of_icarus-mto.mp3"
+May 08 17:34 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 08 17:34 : player_thread: played "Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Edward_The_Great_The_Greatest_Hits-READ_NFO-2005-pyt/07-iron_maiden-can_i_play_with_madness-pyt.mp3"
+May 08 17:42 : avahi: Client Disconnected, will reconnect shortly
+May 08 17:42 : avahi: Could not reconnect: Daemon not running
+May 08 17:47 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 08 17:47 : player_thread: played "Rock/Metal/Rammstein_Discography/Rammstein_-_Live_Aus_Berlin-2CD-1999-TtR/206_seemann-ttr.mp3"
+May 08 17:48 : avahi: Client Disconnected, will reconnect shortly
+May 08 17:48 : avahi: Could not reconnect: Daemon not running
+May 08 17:53 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 08 17:53 : player_thread: played "Rock/Metal/Metallica.Discography-iNT/Metallica_-_And_Justice_For_All/09-Dyers_Eve.mp3"
+May 08 17:57 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 08 17:57 : player_thread: played "Rock/Metal/Rammstein_Discography/Rammstein_-_Liebe_Ist_Fur_Alle_Da-(Bonus_CD)-2009-LzY/04_roter_sand_(orchester_version)-lzy.mp3"
+May 08 18:00 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 08 18:01 : player_thread: played "Rock/Metal/Rammstein_Discography/Rammstein_-_Sehnsucht-1997-EMG_INT/11-rammstein-kuess_mich_(fellfrosch).mp3"
+May 08 18:04 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 08 18:04 : player_thread: played "Rock/Metal/Rammstein_Discography/Rammstein_-_Sehnsucht-1997-EMG_INT/11-rammstein-kuess_mich_(fellfrosch).mp3"
+May 08 18:10 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 08 18:10 : player_thread: played "Rock/Metal/Rammstein_Discography/Rammstein_-_Sehnsucht-1997-EMG_INT/11-rammstein-kuess_mich_(fellfrosch).mp3"
+May 08 18:17 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 08 18:17 : player_thread: played "Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Live_at_Waldrock-2CD-2003-PoS/205-iron_maiden-iron_maiden-pos.mp3"
+May 08 18:22 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 08 18:22 : player_thread: played "Rock/Metal/Metallica.Discography-iNT/Metallica_-_Garage_Inc_2CDS/Metallica_-_Garage_Inc_Disc_I/09-Whiskey_In_The_Jar.mp3"
+May 08 18:26 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 08 18:26 : player_thread: played "Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-A_Real_Live_One-1993-PtE_INT/01-iron_maiden-be_quick_or_be_dead-pte.mp3"
+May 08 18:31 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 08 18:31 : player_thread: played "Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-The_X_Factor-1995-eNT_iNT/03-iron_maiden-man_on_the_edge-ent.mp3"
+May 08 18:37 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 08 18:37 : player_thread: played "Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Edward_The_Great_The_Greatest_Hits-READ_NFO-2005-pyt/05-iron_maiden-2_minutes_to_midnight-pyt.mp3"
+May 08 18:43 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 08 18:43 : player_thread: played "Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Edward_The_Great_The_Greatest_Hits-READ_NFO-2005-pyt/05-iron_maiden-2_minutes_to_midnight-pyt.mp3"
+May 08 18:46 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 08 18:46 : player_thread: played "Rock/Metal/Metallica.Discography-iNT/Metallica_-_BSO-Mission_Imposible_2/01-So_What.mp3"
+May 08 18:53 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 08 18:53 : player_thread: played "Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-The_Essential_Iron_Maiden-2CD-2005-RNS/203-iron_maiden-heaven_can_wait.mp3"
+May 08 18:57 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 08 18:57 : player_thread: played "Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Seventh_Son_of_A_Seventh_Son-2CD-1988-LiT_iNT/203-iron_maiden-prowler_88-lit.mp3"
+May 08 18:59 : avahi: Client Disconnected, will reconnect shortly
+May 08 18:59 : avahi: Could not reconnect: Daemon not running
+May 08 19:54 : avahi: Client Disconnected, will reconnect shortly
+May 08 19:54 : avahi: Could not reconnect: Daemon not running
+May 08 21:02 : avahi: Client Disconnected, will reconnect shortly
+May 08 21:02 : avahi: Could not reconnect: Daemon not running
+May 09 00:44 : avahi: Client Disconnected, will reconnect shortly
+May 09 00:44 : avahi: Could not reconnect: Daemon not running
+May 09 16:57 : avahi: Client Disconnected, will reconnect shortly
+May 09 16:57 : avahi: Could not reconnect: Daemon not running
+May 09 17:01 : avahi: Client Disconnected, will reconnect shortly
+May 09 17:01 : avahi: Could not reconnect: Daemon not running
+May 09 18:03 : avahi: Client Disconnected, will reconnect shortly
+May 09 18:03 : avahi: Could not reconnect: Daemon not running
+May 09 23:59 : avahi: Client Disconnected, will reconnect shortly
+May 09 23:59 : avahi: Could not reconnect: Daemon not running
+May 10 19:19 : avahi: Client Disconnected, will reconnect shortly
+May 10 19:19 : avahi: Could not reconnect: Daemon not running
+May 10 22:29 : player_thread: played "Club/2012/Marco Bayley - Caliente (Original Mix).mp3"
+May 10 22:35 : player_thread: played "Club/Vibe/VA_-_Vibe_FM_25_Iulie_Top_20-2009-KTY/06_deepcentral_-_russian_girl_(summer_mix)-kty.mp3"
+May 11 00:05 : avahi: Client Disconnected, will reconnect shortly
+May 11 00:05 : avahi: Could not reconnect: Daemon not running
+May 11 17:42 : player_thread: played "Club/03. The Chemical Brothers - Believe (ft. Kele Okereke)-mp3xplosion.ogg"
+May 11 17:50 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 11 17:50 : player_thread: played "Club/01-new_order-jetstream_(jacques_lu_continuous_dub).mp3"
+May 11 17:54 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 11 17:54 : player_thread: played "Club/2005 - Forever Faithless The Greatest Hits/14 - I Want More.mp3"
+May 11 17:59 : ffmpeg/mpeg: max_analyze_duration 5000000 reached at 5005000
+May 11 18:03 : ffmpeg/mp2: Header missing
+May 11 18:03 : ffmpeg: decoding failed
+May 11 18:03 : ffmpeg/mp2: Header missing
+May 11 18:03 : ffmpeg: decoding failed
+May 11 18:20 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 11 18:20 : player_thread: played "Rock/Metal/Metallica.Discography-iNT/Metallica_-_Metallica/04-The_Unforgiven.mp3"
+May 11 18:24 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 11 18:24 : player_thread: played "Rock/Blues rock/Joe Satriani/Joe Satriani ~ Crystal Planet (1998)/04 - Joe Satriani - Love Thing.mp3"
+May 11 18:32 : ffmpeg/mpeg: max_analyze_duration 5000000 reached at 5005000
+May 11 18:35 : ffmpeg/mp2: Header missing
+May 11 18:35 : ffmpeg: decoding failed
+May 11 18:35 : ffmpeg/mp2: Header missing
+May 11 18:35 : ffmpeg: decoding failed
+May 11 18:37 : ffmpeg/mp2: Header missing
+May 11 18:37 : ffmpeg: decoding failed
+May 11 18:37 : ffmpeg/mp2: Header missing
+May 11 18:37 : ffmpeg: decoding failed
+May 11 18:38 : player_thread: played "Rock/Metal/Metallica.Discography-iNT/Metallica_-_Nothing_Else_Matters/Metallica - Nothing else matters.mpg"
+May 11 18:43 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 11 18:43 : player_thread: played "Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-Live_After_Death-2CD-1998-iRO/Cd1-03-iron_maiden-the_trooper_(live)-iro.mp3"
+May 11 18:47 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 11 18:47 : player_thread: played "Rock/Blues rock/Jimmy G's 500 Blues Rock 02/Eddy `The Chief` Clearwater - Do Unto Others.mp3"
+May 11 18:51 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 11 18:52 : player_thread: played "Rock/Blues rock/Jimmy G's 500 Blues Rock 02/Tuff Enuff - Freedom Fighter.mp3"
+May 11 18:58 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 11 18:58 : player_thread: played "Rock/Metal/Metallica.Discography-iNT/Metallica_-_Ride_The_Lightning/04-Fade_To_Black.mp3"
+May 11 19:04 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 11 19:04 : player_thread: played "Rock/Metal/Metallica.Discography-iNT/Metallica_-_Master_Of_Puppets/08-Damage_Inc.mp3"
+May 11 19:08 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 11 19:08 : player_thread: played "Rock/Metal/Iron.Maiden-Discography/Iron_Maiden-No_Prayer_for_the_Dying-2CD-1990-LiT_iNT/106-iron_maiden-the_assassin-lit.mp3"
+May 11 19:12 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 11 19:12 : player_thread: played "Rock/Blues rock/Jimmy G's 500 Blues Rock 02/Big Sugar - Open Up Baby.mp3"
+May 11 19:15 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 11 19:15 : player_thread: played "Rock/Blues rock/Joe Satriani/Joe Satriani ~ Flying In A Blue Dream (1989)/12 - Joe Satriani - Back To Shalla-Bal.mp3"
+May 11 19:20 : avahi: Client Disconnected, will reconnect shortly
+May 11 19:20 : avahi: Could not reconnect: Daemon not running
+May 11 22:17 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 11 22:17 : player_thread: played "Club/04Sasha & Junkie Xl-Beauty Never Fades[Original Mix].mp3"
+May 11 22:23 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 11 22:23 : player_thread: played "Club/Vibe/Bob Taylor&Alessia-Deja-vu.mp3"
+May 11 22:26 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 11 22:26 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/47 . Erick E - The Beat Is Rockin' (Radio Edit).mp3"
+May 12 00:34 : avahi: Client Disconnected, will reconnect shortly
+May 12 00:34 : avahi: Could not reconnect: Daemon not running
+May 12 12:15 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 12 12:15 : player_thread: played "Club/VA_-_Vibe_FM_2009_Top_100-(Advance)-2010-KTY/044_treitl_hammond_-_give_me_the_vibes_(original_mix)-kty.mp3"
+May 12 12:22 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 12 12:22 : player_thread: played "Club/DJ Tiësto - Lethal Industry [Original Mix].mp3"
+May 12 12:26 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 12 12:26 : player_thread: played "Club/DJ Adrian Eftimie - Better days  by %5BwWw.MuzicaStar.Tk%5D.mp3"
+May 12 12:40 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 12 12:40 : player_thread: played "Club/Vibe/Studio One - El Te Iubeste (Mee Loves You) (Dj Andi Remix).mp3"
+May 12 12:43 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 12 12:43 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/26 . Paul van Dyk Feat. Rea Garvey - Let Go (UK Radio Edit).mp3"
+May 12 12:59 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 12 12:59 : player_thread: played "Club/!!!!!!!!!!!!!/Narcotic Thrust - When the dawn breaks (original dub).mp3"
+May 12 13:05 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 12 13:05 : player_thread: played "Club/Vibe/Andy Duguid featuring Leah - Wasted.mp3"
+May 12 13:12 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 12 13:12 : player_thread: played "Club/SONIQUE vs TOMCRAFT - Another world (vinyl A side vers).mp3"
+May 12 13:19 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 12 13:19 : player_thread: played "Club/Deja-Vu - I can't Stop (Main Mix).mp3"
+May 12 13:23 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 12 13:23 : player_thread: played "Club/Vibe/05.Nick Kamarera & Deepside Deejays - Secret ride (Radio Edit).mp3"
+May 12 13:26 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 12 13:26 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/19 . Ian Oliver feat. Shantel - Bucovina (Ian Oliver's Radio Mix).mp3"
+May 12 13:35 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 12 13:35 : player_thread: played "Club/Vibe/Faithless feat Cass Fox - Music Matters (Mark Knight Remix) MI51.mp3"
+May 12 13:44 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 12 13:44 : player_thread: played "Club/Chicane - Love on the run (original mix).mp3"
+May 12 13:50 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 12 13:51 : player_thread: played "Club/DJ Tiësto - Lethal Industry [Original Mix].mp3"
+May 12 13:51 : ffmpeg/mpeg: max_analyze_duration 5000000 reached at 5005000
+May 12 14:00 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 12 14:00 : player_thread: played "Rock/Metal/Metallica.Discography-iNT/Metallica_-_Metallica/08-Nothing_Else_Matters.mp3"
+May 12 14:10 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 12 14:10 : player_thread: played "Rock/Metal/Metallica.Discography-iNT/Metallica_-_Metallica/04-The_Unforgiven.mp3"
+May 12 14:17 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 12 14:17 : player_thread: played "Rock/Metal/Metallica.Discography-iNT/Metallica_-_S&M_2CDS/Metallica_-_S&M_Disc_I/09-Hero_Of_The_Day.mp3"
+May 12 14:25 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 12 14:25 : player_thread: played "Rock/Metal/Metallica.Discography-iNT/Metallica_-_Live_Shit_Binge_And_Purge_3CDS/Metallica_-_Live_Shit_Binge_And_Purge_Disc_II/03-Fade_To_Black.mp3"
+May 12 14:29 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 12 14:29 : player_thread: played "Rock/Metal/Metallica.Discography-iNT/Metallica_-_Load/04-Until_It_Sleeps.mp3"
+May 12 18:46 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 12 18:46 : player_thread: played "Rock/Metal/Metallica.Discography-iNT/Metallica_-_And_Justice_For_All/04-One.mp3"
+May 12 18:53 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 12 18:53 : player_thread: played "Rock/Metal/Metallica.Discography-iNT/Metallica_-_Ride_The_Lightning/02-Ride_The_Lightning.mp3"
+May 12 18:56 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 12 18:56 : player_thread: played "Rock/Metal/Rammstein_Discography/Rammstein_-_Mutter-DE-2001-NER_INT/04-rammstein-ich_will-ner.mp3"
+May 12 19:56 : avahi: Client Disconnected, will reconnect shortly
+May 12 19:56 : avahi: Could not reconnect: Daemon not running
+May 13 01:37 : avahi: Client Disconnected, will reconnect shortly
+May 13 01:37 : avahi: Could not reconnect: Daemon not running
+May 13 11:05 : avahi: Client Disconnected, will reconnect shortly
+May 13 11:05 : avahi: Could not reconnect: Daemon not running
+May 13 22:15 : avahi: Client Disconnected, will reconnect shortly
+May 13 22:15 : avahi: Could not reconnect: Daemon not running
+May 14 00:02 : avahi: Client Disconnected, will reconnect shortly
+May 14 00:02 : avahi: Could not reconnect: Daemon not running
+May 14 21:10 : avahi: Client Disconnected, will reconnect shortly
+May 14 21:10 : avahi: Could not reconnect: Daemon not running
+May 15 17:54 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 15 17:54 : player_thread: played "Rock/Metal/Rammstein_Discography/Rammstein_-_Mutter-DE-2001-NER_INT/02-rammstein-links_2_3_4-ner.mp3"
+May 15 17:58 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 15 17:58 : player_thread: played "Rock/Metal/Rammstein_Discography/Rammstein_-_Rosenrot-DE-2005-MOD/11_rammstein_-_ein_lied.mp3"
+ALSA lib pcm_dmix.c:1018:(snd_pcm_dmix_open) unable to open slave
+May 15 19:31 : output: Failed to open "default detected output" [alsa]: Failed to open ALSA device "default": Device or resource busy
+May 15 19:31 : player_thread: problems opening audio device while playing "Oldies/Michael Jackson - Discography.2009.320.KBPS-KTY/[2001] Invincible/Michael Jackson - 15 - Whatever Happens.mp3"
+May 15 19:36 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 15 19:37 : player_thread: played "Oldies/Michael Jackson - Discography.2009.320.KBPS-KTY/[2001] Invincible/Michael Jackson - 15 - Whatever Happens.mp3"
+May 15 19:38 : avahi: Client Disconnected, will reconnect shortly
+May 15 19:38 : avahi: Could not reconnect: Daemon not running
+May 15 20:48 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 15 20:48 : player_thread: played "Oldies/Michael Jackson - Discography.2009.320.KBPS-KTY/[1979] Off The Wall/Michael Jackson - 03 - Workin' Day And Night.mp3"
+May 15 20:59 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 15 20:59 : player_thread: played "Classical Music Top 100/022. Giulio Caccini - Ave Maria.mp3"
+May 15 21:10 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 15 21:10 : player_thread: played "Classical Music Top 100/Ludovico Einaudi - 8 album mp3 (1996-2004) by rossogar/Ludovico Einaudi - 8 album mp3 (1996-2004) by rossogar/ludovico einaudi - una mattina (2004)/Una Mattina -08 come un fiore.mp3"
+May 15 21:21 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 15 21:21 : player_thread: played "Classical Music Top 100/Ludovico Einaudi - 8 album mp3 (1996-2004) by rossogar/Ludovico Einaudi - 8 album mp3 (1996-2004) by rossogar/ludovico einaudi - una mattina (2004)/Una Mattina -08 come un fiore.mp3"
+May 15 21:30 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 15 21:30 : player_thread: played "Classical Music Top 100/022. Giulio Caccini - Ave Maria.mp3"
+May 15 21:38 : update: added Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT/CD 02/13_Satie - Gymnopedie No1.mp3
+May 15 21:38 : update: added Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT/CD 02/06_Liszt - Liebestraume.mp3
+May 15 21:38 : update: added Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT/CD 02/14_Beethoven - Moonlight sonata - Adagio.mp3
+May 15 21:38 : update: added Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT/CD 02/15_Mozart - Piano Concerto No21 - Andante - Elvira Madigan.mp3
+May 15 21:38 : update: added Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT/CD 02/12_Vivaldi - The four seasons - Largo.mp3
+May 15 21:38 : update: added Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT/CD 02/05_Dvorak - Serenade for string - Moderato.mp3
+May 15 21:38 : update: added Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT/CD 02/02_Grieg - Holberg suite- Sarabande.mp3
+May 15 21:38 : update: added Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT/CD 02/03_Sibelius - Valse triste.mp3
+May 15 21:38 : update: added Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT/CD 02/08_Chopin - Etude in E major.mp3
+May 15 21:38 : update: added Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT/CD 02/01_Debussy - Prelude to the Afternoon of a Faun.mp3
+May 15 21:38 : update: added Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT/CD 02/10_Debussy - Arabesque.mp3
+May 15 21:38 : update: added Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT/CD 02/09_Borodin - String quartet No2 - Nocturne.mp3
+May 15 21:38 : update: added Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT/CD 02/04_Bach - Concerto in F minor - Largo.mp3
+May 15 21:38 : update: added Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT/CD 02/11_Ravel - Pavane for Dead Princess.mp3
+May 15 21:38 : update: added Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT/CD 02/07_Bach-Gounod - Ave Maria.mp3
+May 15 21:38 : update: added Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT/CD 01/04_Tchaikovsky - String quartet No1 - Andante.mp3
+May 15 21:38 : update: added Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT/CD 01/12_Bach - Fugue in C minor.mp3
+May 15 21:38 : update: added Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT/CD 01/02_Mozart - Eine Kleine Natchtmusik - Andante.mp3
+May 15 21:38 : update: added Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT/CD 01/06_Janacek - Idyll for strings - Adagio.mp3
+May 15 21:38 : update: added Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT/CD 01/01_Pachelbel - Canon.mp3
+May 15 21:38 : update: added Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT/CD 01/05_Debussy - Clair de Lune.mp3
+May 15 21:38 : update: added Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT/CD 01/11_Handel - Largo from Xerxes.mp3
+May 15 21:38 : update: added Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT/CD 01/09_Bach - Air on a G string.mp3
+May 15 21:38 : update: added Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT/CD 01/07_Albinoni - Adagio in G minor.mp3
+May 15 21:38 : update: added Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT/CD 01/13_Holst - The planets - Venus.mp3
+May 15 21:38 : update: added Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT/CD 01/15_Barber - Adagio for strings.mp3
+May 15 21:38 : update: added Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT/CD 01/10_Williams - Greensleeves.mp3
+May 15 21:38 : update: added Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT/CD 01/14_Bach - Goldberg variations - Aria.mp3
+May 15 21:38 : update: added Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT/CD 01/08_Debussy - The girl with the Flaxen hair.mp3
+May 15 21:38 : update: added Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT/CD 01/03_Beethoven - Fur Elise.mp3
+May 15 21:45 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 15 21:45 : player_thread: played "Club/DUMARS House 3.mp3"
+May 15 21:51 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 15 21:51 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/23 . Booka Shade vs Plastic Operator - Night Falls Won't Back Down (A-Side Remix).mp3"
+May 15 21:55 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 15 21:55 : player_thread: played "Club/Depeche Mode - Enjoy The Silence (Remix by Mike Shinoda from Linkin Park) [www.mp3atomic.tk].mp3"
+May 15 22:01 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 15 22:01 : player_thread: played "Club/Vibe/Javi Mula - Come On (Original Mix).mp3"
+May 15 22:04 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 15 22:04 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/94 . Paul Van Dyk & Jessica Sutta - White Lies (Radio Edit).mp3"
+May 15 22:10 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 15 22:10 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/56 . Mono - Make A Difference (Original Mix).mp3"
+May 15 22:14 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 15 22:14 : player_thread: played "Club/Vibe/VA_-_Vibe_FM_25_Iulie_Top_20-2009-KTY/06_deepcentral_-_russian_girl_(summer_mix)-kty.mp3"
+May 15 22:18 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 15 22:18 : player_thread: played "Club/103 - Armand Van Helden - My My My-Galaxy.MP3"
+May 15 22:21 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 15 22:21 : player_thread: played "Club/VA_-_Vibe_FM_2009_Top_100-(Advance)-2010-KTY/062_dj_layla_ft._angelica_-_single_lady_(_radio_edit_)-kty.mp3"
+May 15 22:25 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 15 22:25 : player_thread: played "Club/VA_-_Vibe_FM_2009_Top_100-(Advance)-2010-KTY/017_edward_maya_feat._vika_jigulina_-_stereo_love_(original_mix)-kty.mp3"
+May 15 22:32 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 15 22:32 : player_thread: played "Club/Vibe/Dario Zack feat Starchild - My Baby (Extended version).mp3"
+May 15 22:39 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 15 22:39 : player_thread: played "Club/Top100 ViBE FM [ 2008 ] - RoT/10. DJ Groover Vs. Shakedown - At night 2008.mp3"
+May 15 22:48 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 15 22:48 : player_thread: played "Club/Vibe/Ben Preston - Elizabeth (Original Mix).mp3"
+May 15 22:51 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 15 22:51 : player_thread: played "Club/Vibe/Geo Da Silva vs Dj Jungle - Far Away 2009 (Cj Stone Ministry Of Sound Remix).mp3"
+May 15 22:59 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 15 22:59 : player_thread: played "Club/Top100 ViBE FM [ 2008 ] - RoT/37. Eddie Thoneick - I wanna freak u [Original MiX].mp3"
+May 15 23:08 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 15 23:08 : player_thread: played "Club/Simon & Shaker - Freshness (Original Mix) www.flor.cc.mp3"
+May 15 23:12 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 15 23:12 : player_thread: played "Club/Vibe/17.JayC feat. Nathan Thomas - Multiply (Deepside Deejays Mix).mp3"
+May 15 23:18 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 15 23:18 : player_thread: played "Club/Gorillaz - Dirty Harry Jon Carter Remix.mp3"
+May 15 23:26 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 15 23:26 : player_thread: played "Club/VA_-_Vibe_FM_2009_Top_100-(Advance)-2010-KTY/044_treitl_hammond_-_give_me_the_vibes_(original_mix)-kty.mp3"
+May 15 23:29 : player_thread: played "Club/Enur - Calabria 2006.mp3"
+May 15 23:33 : player_thread: played "Club/Vibe/AlexUnder Base Feat. Frissco - Privacy.mp3"
+May 16 00:29 : avahi: Client Disconnected, will reconnect shortly
+May 16 00:29 : avahi: Could not reconnect: Daemon not running
+May 16 17:28 : avahi: Client Disconnected, will reconnect shortly
+May 16 17:28 : avahi: Could not reconnect: Daemon not running
+May 16 20:15 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 16 20:15 : player_thread: played "Club/04Sasha & Junkie Xl-Beauty Never Fades[Original Mix].mp3"
+May 16 20:22 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 16 20:23 : player_thread: played "Club/Vibe/Peak Time Killerz - Want You Back (Patrk La Funk Remixi).mp3"
+May 16 20:28 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 16 20:29 : player_thread: played "Club/Vibe/Dada  Obernik &  Harris Stereo flo (Club remix).mp3"
+May 16 20:37 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 16 20:37 : player_thread: played "Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT/CD 01/01_Pachelbel - Canon.mp3"
+May 16 20:45 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 16 20:45 : player_thread: played "Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT/CD 02/05_Dvorak - Serenade for string - Moderato.mp3"
+May 16 20:52 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 16 20:52 : player_thread: played "Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT/CD 01/10_Williams - Greensleeves.mp3"
+May 16 21:00 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 16 21:00 : player_thread: played "Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT/CD 01/13_Holst - The planets - Venus.mp3"
+May 16 21:06 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 16 21:06 : player_thread: played "Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT/CD 01/06_Janacek - Idyll for strings - Adagio.mp3"
+May 16 21:10 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 16 21:10 : player_thread: played "Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT/CD 02/07_Bach-Gounod - Ave Maria.mp3"
+May 16 21:14 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 16 21:14 : player_thread: played "Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT/CD 02/10_Debussy - Arabesque.mp3"
+May 16 21:21 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 16 21:21 : player_thread: played "Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT/CD 02/09_Borodin - String quartet No2 - Nocturne.mp3"
+May 16 21:24 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 16 21:24 : player_thread: played "Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT/CD 02/12_Vivaldi - The four seasons - Largo.mp3"
+May 16 21:29 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 16 21:29 : player_thread: played "Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT/CD 01/02_Mozart - Eine Kleine Natchtmusik - Andante.mp3"
+May 16 21:32 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 16 21:32 : player_thread: played "Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT/CD 01/12_Bach - Fugue in C minor.mp3"
+May 16 21:37 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 16 21:37 : player_thread: played "Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT/CD 01/05_Debussy - Clair de Lune.mp3"
+May 16 21:40 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 16 21:40 : player_thread: played "Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT/CD 02/02_Grieg - Holberg suite- Sarabande.mp3"
+May 16 21:42 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 16 21:42 : player_thread: played "Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT/CD 01/08_Debussy - The girl with the Flaxen hair.mp3"
+May 16 21:48 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 16 21:48 : player_thread: played "Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT/CD 02/06_Liszt - Liebestraume.mp3"
+May 16 21:58 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 16 21:58 : player_thread: played "Club/VA_-_Vibe_FM_2009_Top_100-(Advance)-2010-KTY/083_jayc_ft._nathan_thomas_-_multiply_(deepside_deejays_mix)-kty.mp3"
+May 16 22:01 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 16 22:01 : player_thread: played "Club/VA_-_Vibe_FM_2009_Top_100-(Advance)-2010-KTY/091_aisa_si_dj_yaang_-_without_you_(radio_edit_)-kty.mp3"
+May 16 22:06 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 16 22:06 : player_thread: played "Club/102-coldcut_ft._annette_peacock_-_just_for_the_kick_(album_version).mp3"
+May 16 22:11 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 16 22:11 : player_thread: played "Club/Top100 ViBE FM [ 2008 ] - RoT/02. Inna - Hot (Play & Win Club Version).mp3"
+May 16 22:17 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 16 22:17 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/80 . Silecer - Drown In Me (Cicada Remix).mp3"
+May 16 22:21 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 16 22:21 : player_thread: played "Club/Vibe/VA_-_Vibe_FM_25_Iulie_Top_20-2009-KTY/09_pitbull_-_i_know_you_want_me_(calle_ocho)_(original_mix)-kty.mp3"
+May 16 22:27 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 16 22:28 : player_thread: played "Club/Dj Tiesto - In my memory.mp3"
+May 16 22:31 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 16 22:31 : player_thread: played "Club/2005 - Forever Faithless The Greatest Hits/14 - I Want More.mp3"
+May 16 22:35 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 16 22:35 : player_thread: played "Club/Kate Ryan - Ur (my love).mp3"
+May 16 22:41 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 16 22:41 : player_thread: played "Club/Kate Ryan - Libertine (extended mix).mp3"
+May 16 22:47 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 16 22:47 : player_thread: played "Club/12.Slam - This World.mp3"
+May 16 22:56 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 16 22:56 : player_thread: played "Club/Simon & Shaker - Freshness (Original Mix) www.flor.cc.mp3"
+May 16 23:06 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 16 23:06 : player_thread: played "Club/!!!!!!!!!!!!!/Narcotic Thrust - When the dawn breaks (original dub).mp3"
+May 16 23:13 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 16 23:13 : player_thread: played "Club/paris_avenue_-_i_want_you_(stellar_project_extended_mix).mp3"
+May 16 23:19 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 16 23:19 : player_thread: played "Club/Vibe/Dario Zack feat Starchild - My Baby (Extended version).mp3"
+May 16 23:22 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 16 23:22 : player_thread: played "Club/Boogie Pimps - Sunny.mp3"
+May 16 23:26 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 16 23:26 : player_thread: played "Club/Vibe/Dream City feat. Vanotek - Loving You (Radio Edit).mp3"
+May 17 00:57 : avahi: Client Disconnected, will reconnect shortly
+May 17 00:57 : avahi: Could not reconnect: Daemon not running
+May 17 17:36 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 17 17:36 : player_thread: played "Club/-=Elektro Bass 2007=-/Moguai - RobotSoul www.xmp3.biz.mp3"
+May 17 17:42 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 17 17:42 : player_thread: played "Club/Dj Adrian Eftimie - Essenza by %5Bwww.muzicastar.tk%5D.mp3"
+May 17 17:48 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 17 17:49 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/55 . Art Of Tones - Praise (Liorca Remix).mp3"
+May 17 17:53 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 17 17:53 : player_thread: played "Club/VA_-_Vibe_FM_2009_Top_100-(Advance)-2010-KTY/013_llp_and_john_puzzle_feat._chriss-t_-_i_miss_you_(original_mix)-kty.mp3"
+May 17 17:58 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 17 17:58 : player_thread: played "Club/Top100 ViBE FM [ 2008 ] - RoT/89. V-Sag & Alexandra Mckay - Feather [Original MiX].mp3"
+May 17 18:02 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 17 18:02 : player_thread: played "Club/Vibe/06.Sirens - Club La La (Original Mix).mp3"
+May 17 18:05 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 17 18:05 : player_thread: played "Club/Vibe/VA_-_Vibe_FM_25_Iulie_Top_20-2009-KTY/02_vibers_feat.tara_mcdonald_-_revolution_(radio_edit)-kty.mp3"
+May 17 18:10 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 17 18:10 : player_thread: played "Club/DJ Adrian Eftimie - Better days  by %5BwWw.MuzicaStar.Tk%5D.mp3"
+May 17 18:14 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 17 18:14 : player_thread: played "Club/VA_-_Vibe_FM_2009_Top_100-(Advance)-2010-KTY/012_moriss_-_havana_lover_(extended_mix)-kty.mp3"
+May 17 18:21 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 17 18:21 : player_thread: played "Club/05KURTIS MANTRONIK PRESENTS CHAMONIX-HOW DID YOU KNOW.mp3"
+May 17 18:24 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 17 18:24 : player_thread: played "Club/2005 - Forever Faithless The Greatest Hits/03 - God Is A Dj.mp3"
+May 17 18:28 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 17 18:28 : player_thread: played "Club/Vibe/7.Cosmic Gate feat. Emma Hewitt - Not Enough Time (Original Mix).mp3"
+May 17 18:35 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 17 18:35 : player_thread: played "Club/Top100 ViBE FM [ 2008 ] - RoT/30. Jean Claude Ades & Vincent Thomas - Shingaling [Original MiX].mp3"
+May 17 18:42 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 17 18:42 : player_thread: played "Club/Top100 ViBE FM [ 2008 ] - RoT/16. Dobenbeck & Joanna - Please don't go [Chris Reece ReMiX].mp3"
+May 17 18:48 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 17 18:48 : player_thread: played "Club/Vibe/Outwork - Fiesta Electronica (Original Mix).mp3"
+May 17 18:54 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 17 18:54 : player_thread: played "Club/sunlounger - white sands (white).mp3"
+May 17 19:02 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 17 19:02 : player_thread: played "Club/DELAY - HIDEWAY '06 - VYNIL PETE GOODING MIX.MP3"
+May 17 19:09 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 17 19:09 : player_thread: played "Club/Top100 ViBE FM [ 2008 ] - RoT/22.Laurent Wolf - No Stress (Original Club Mix).mp3"
+May 17 19:12 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 17 19:12 : player_thread: played "Club/VA_-_Vibe_FM_2009_Top_100-(Advance)-2010-KTY/099_celia_-_silence_(radio_edit)-kty.mp3"
+May 17 19:16 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 17 19:16 : player_thread: played "Club/VA_-_Vibe_FM_2009_Top_100-(Advance)-2010-KTY/081_nadia_ali_-_fine_print_(original_mix)-kty.mp3"
+May 17 19:21 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 17 19:21 : player_thread: played "Club/15. NEW ORDER - Waiting For The Sirens' Call.mp3"
+May 17 19:24 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 17 19:24 : player_thread: played "Club/Gnarls Barkley - Crazy.mp3"
+May 17 19:33 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 17 19:33 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/98 . Big World - Morning Light (Roman Salzger Remix).mp3"
+May 17 19:38 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 17 19:38 : player_thread: played "Club/VA_-_Vibe_FM_2009_Top_100-(Advance)-2010-KTY/100_r.i.o_-_after_the_love_(original_mix)-kty.mp3"
+May 17 19:46 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 17 19:46 : player_thread: played "Club/Chris Lake - Changes [DJ Moon Sound Dirty South ReMiX] [ WwW.OnlyMusic.Ro ].mp3"
+May 17 19:54 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 17 19:54 : player_thread: played "Club/SONO - 2000 GUNS.mp3"
+May 17 20:40 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 17 20:40 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/14 . Chaim - Carolin (Original Mix).mp3"
+May 17 20:43 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 17 20:43 : player_thread: played "Club/VA_-_Vibe_FM_2009_Top_100-(Advance)-2010-KTY/024_john_puzzle_-_all_about_you-kty.mp3"
+May 17 20:49 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 17 20:49 : player_thread: played "Club/Vibe/Superlounge - Cuba (The Fix Edit).mp3"
+May 17 20:53 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 17 20:53 : player_thread: played "Club/Darude - Sandstorm.mp3"
+May 17 20:59 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 17 20:59 : player_thread: played "Club/United Nations - Out of touch.mp3"
+May 17 21:04 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 17 21:04 : player_thread: played "Club/Vibe/01.Inna - Love (Play & Win Club Version).mp3"
+May 17 21:12 : avahi: Client Disconnected, will reconnect shortly
+May 17 21:12 : avahi: Could not reconnect: Daemon not running
+May 18 00:14 : avahi: Client Disconnected, will reconnect shortly
+May 18 00:14 : avahi: Could not reconnect: Daemon not running
+May 18 19:29 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 18 19:29 : player_thread: played "Club/DJ VIBE - CELEDA -  THE UNDERGROUND.MP3"
+May 18 19:33 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 18 19:33 : player_thread: played "Club/202_axwell_feat._steve_edwards_-_watch_the_sunrise.mp3"
+May 18 19:41 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 18 19:41 : player_thread: played "Club/DUMARS House 3.mp3"
+May 18 19:46 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 18 19:46 : player_thread: played "Club/02-madonna-hung_up_(album_version)-imt.mp3"
+May 18 20:35 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 18 20:35 : player_thread: played "Club/2012/Marco Bayley - Caliente (Original Mix).mp3"
+May 18 20:46 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 18 20:46 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/37 . Penn & Jabato - El Sur (Original Mix).mp3"
+May 18 20:52 : player_thread: played "Club/Timo Maas (Feat. Mc chickaboo) - Shifter (Azido Da Bass Mix).mp3"
+May 18 20:55 : player_thread: played "Club/VA_-_Vibe_FM_2009_Top_100-(Advance)-2010-KTY/050_dj_alexunder_base_and_frissco_-_privacy_(donyandthekid)-kty.mp3"
+May 18 20:58 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 18 20:58 : player_thread: played "Club/Top100 ViBE FM [ 2008 ] - RoT/06. David DeeJay feat. Dony - Nasty Dream (Vibe FM Exclussive Radio Edit).mp3"
+May 18 21:01 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 18 21:01 : player_thread: played "Club/DJ Adrian Eftimie - Desire [Radio Version] • [ WwW.OnlyMusic.Ro ].mp3"
+May 18 21:08 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 18 21:08 : player_thread: played "Club/Dj Raven - Mario.mp3"
+May 18 21:12 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 18 21:12 : player_thread: played "Club/Vibe/10.Dj Andi feat. Stella - Freedom (Radio Edit).mp3"
+May 18 21:17 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 18 21:17 : player_thread: played "Club/1. LE DUC DE Z - Obssesion.mp3"
+May 18 21:27 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 18 21:27 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/63 . John Creamer & Stephane K. feat. Rosko - Thirsty.mp3"
+May 18 21:31 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 18 21:31 : player_thread: played "Club/Vibe/VA_-_Vibe_FM_25_Iulie_Top_20-2009-KTY/14_vali_barbulescu_feat._damon_-_inside_of_you_(original_mix)-kty.mp3"
+May 18 21:39 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 18 21:39 : player_thread: played "Club/SONO - 2000 GUNS.mp3"
+May 18 21:43 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 18 21:43 : player_thread: played "Club/Vibe/Seven & The Kid - I'm Fallen (Club Mix By The Kid & Dony).mp3"
+May 18 21:50 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 18 21:50 : player_thread: played "Club/Gaudino Saxy - Destination.mp3"
+May 18 21:53 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 18 21:53 : player_thread: played "Club/Vibe/Cristi Stanciu Feat Doria - Come To Me (Dj Andi Remix).mp3"
+May 18 21:57 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 18 21:57 : player_thread: played "Club/Vibe/20.Bob Taylor feat. Alessia - Deja Vu (Radio Edit).mp3"
+May 18 22:15 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 18 22:15 : player_thread: played "Club/2012/Marco Bayley - Caliente (Original Mix).mp3"
+May 18 22:22 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 18 22:22 : player_thread: played "Club/06-fallen angels-city life.mp3"
+May 18 22:41 : update: added Club/2012/Umek - Before Violence.mp3
+May 18 22:48 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 18 22:48 : player_thread: played "Club/2012/Umek - Before Violence.mp3"
+May 18 22:52 : update: added Club/2012/Oxia - Domino.mp3
+May 18 23:06 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 18 23:06 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/71 . Maskio - Human Jungle.mp3"
+May 18 23:10 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 18 23:10 : player_thread: played "Club/2005 - Forever Faithless The Greatest Hits/04 - Don't Leave.mp3"
+May 18 23:18 : player_thread: played "Club/A-Studio - S.O.S.(Vox Mix)(The Krypta Collection 2004).Mp3"
+May 18 23:22 : player_thread: played "Club/VA_-_Vibe_FM_2009_Top_100-(Advance)-2010-KTY/031_yarabi_-_el_sila_(rmx_by_dj_rynno_and_cristi_tiu_-_radio_vers)-kty.mp3"
+May 18 23:28 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 18 23:28 : player_thread: played "Club/6th Element - Sunny And Funny - Summer Mix.mp3"
+May 18 23:41 : player_thread: played "Club/2012/Oxia - Domino.mp3"
+May 18 23:48 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 18 23:48 : player_thread: played "Club/Top100 ViBE FM [ 2008 ] - RoT/08. Yanou - Children of the sun [R.I.O. ReMiX].mp3"
+May 18 23:52 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 18 23:52 : player_thread: played "Club/Sonique - Alive.mp3"
+May 18 23:55 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 18 23:55 : player_thread: played "Club/VA_-_Vibe_FM_2009_Top_100-(Advance)-2010-KTY/001_ela_rose_feat._dj_david_-_i_can_feel_(radio_version)-kty.mp3"
+May 19 00:01 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 19 00:01 : player_thread: played "Club/Dj Adrian Eftimie - Essenza by %5Bwww.muzicastar.tk%5D.mp3"
+May 19 00:08 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 19 00:08 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/62 . Camille Jones vs. Fedde Le Grand - The Creeps.mp3"
+May 19 00:17 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 19 00:17 : player_thread: played "Club/!!!!!!!!!!!!!/01. Armin van Buuren - Love You More.mp3"
+May 19 00:24 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 19 00:24 : player_thread: played "Club/VA_-_Vibe_FM_2009_Top_100-(Advance)-2010-KTY/096_john_ocallaghan_feat_sarah_howells_-_find_yourself_(original_mix)-kty.mp3"
+May 19 00:31 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 19 00:31 : player_thread: played "Club/Dj Tomcraft - Into the light (vinyl ext vers).mp3"
+May 19 00:34 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 19 00:35 : player_thread: played "Club/-=Elektro Bass 2007=-/Sebastien Leger - Hit Girl www.xmp3.biz.mp3"
+May 19 01:26 : avahi: Client Disconnected, will reconnect shortly
+May 19 01:26 : avahi: Could not reconnect: Daemon not running
+May 19 08:34 : avahi: Client Disconnected, will reconnect shortly
+May 19 08:34 : avahi: Could not reconnect: Daemon not running
+May 19 08:50 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 19 08:50 : player_thread: played "Club/!!!!!!!!!!!!!/108_bjorn_mandry_and_thomas_gold_feat_nicole_tyler_-_should_be.mp3"
+May 19 08:58 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 19 08:58 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/41 . Laura Kidd - Automatic (Martijn Ten Velden Remix).mp3"
+May 19 09:00 : avahi: Client Disconnected, will reconnect shortly
+May 19 09:00 : avahi: Could not reconnect: Daemon not running
+May 30 23:40 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 30 23:40 : player_thread: played "Club/Top100 ViBE FM [ 2008 ] - RoT/47. Chromeo - Needy girl [Lifelike ReMiX].mp3"
+May 30 23:45 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 30 23:45 : player_thread: played "Club/D'Luxe - White Horse (ElectroMix).mp3"
+May 30 23:51 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 30 23:51 : player_thread: played "Club/top 20 radio deea [14aprilie2007]/Sander van Doorn - Grasshopper.mp3"
+May 30 23:58 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 30 23:58 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/96 . CRW - I Feel Love (Aaron McClelland Remix).mp3"
+May 31 00:04 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 00:04 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/89 . Rocky Miller - Heart Of Mine (Vocal Mix).mp3"
+May 31 00:11 : avahi: Client Disconnected, will reconnect shortly
+May 31 00:11 : avahi: Could not reconnect: Daemon not running
+May 31 01:15 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 01:16 : player_thread: played "Club/2012/Marco Bayley - Caliente (Original Mix).mp3"
+May 31 01:23 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 01:23 : player_thread: played "Club/Gaudino Saxy - Destination.mp3"
+May 31 01:28 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 01:28 : player_thread: played "Club/VA_-_Vibe_FM_2009_Top_100-(Advance)-2010-KTY/030_residence_deejays_and_frissco_-_sexy_love_(original_mix)-kty.mp3"
+May 31 01:34 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 01:34 : player_thread: played "Club/Vibe/x-press 2 ft david byrne-lazy (mowgli goes deep mix).mp3"
+May 31 01:40 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 01:40 : player_thread: played "Club/-=Elektro Bass 2007=-/Antoine Clamaran - Take Off (Dave Spoon Remix) www.xmp3.biz.mp3"
+May 31 01:47 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 01:47 : player_thread: played "Club/01-tom_neville-never_lose_your_grip.mp3"
+May 31 02:23 : avahi: Client Disconnected, will reconnect shortly
+May 31 02:23 : avahi: Could not reconnect: Daemon not running
+May 31 12:59 : avahi: Client Disconnected, will reconnect shortly
+May 31 12:59 : avahi: Could not reconnect: Daemon not running
+May 31 14:08 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 14:08 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/80 . Silecer - Drown In Me (Cicada Remix).mp3"
+May 31 14:11 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 14:11 : player_thread: played "Club/VA_-_Vibe_FM_2009_Top_100-(Advance)-2010-KTY/055_n-tone_rosso_bruno_feat._misha_-_crystal_wood-kty.mp3"
+May 31 14:18 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 14:19 : player_thread: played "Club/Top100 ViBE FM [ 2008 ] - RoT/68. Chris Lake feat. Nastala - Start Again (Original Mix).mp3"
+May 31 14:23 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 14:23 : player_thread: played "Club/Vibe/VA-Ministry_Of_Sound_Chillout_Classics-3CD-2007-WRE/101-jakatta-american_dream_(afterlife_remix).mp3"
+May 31 14:27 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 14:27 : player_thread: played "Club/Everything But The Girl - Missing.mp3"
+May 31 17:18 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 17:18 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/91 . Iio - Rebel (Original Mix).mp3"
+May 31 17:28 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 17:28 : player_thread: played "Club/2012/Marco Bayley - Caliente (Original Mix).mp3"
+May 31 17:36 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 17:36 : player_thread: played "Club/Armin Van Buuren & Herman Brood - Saturday night [Club MiX] [ WwW.OnlyMusic.Ro ].mp3"
+May 31 17:40 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 17:41 : player_thread: played "Club/!!!!!!!!!!!!!/09.Vega I-Blue sea.mp3"
+May 31 17:46 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 17:46 : player_thread: played "Club/Vibe/08.Deea Wise - My Love (The Kid & Dony Club Mix).mp3"
+May 31 17:53 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 17:53 : player_thread: played "Club/Top100 ViBE FM [ 2008 ] - RoT/69. E.O.S. - I Feel High (Moving Elements Review Mix).mp3"
+May 31 17:58 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 17:59 : player_thread: played "Club/Top100 ViBE FM [ 2008 ] - RoT/15. Juan Magan & Marcos Rodriguez - Bora Bora [Original MiX].mp3"
+May 31 18:11 : player_thread: played "Club/2012/Oxia - Domino.mp3"
+May 31 18:18 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 18:18 : player_thread: played "Club/Iio - Is it love [DJ Moon Sound ReMiX] [ WwW.OnlyMusic.Ro ].mp3"
+May 31 18:28 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 18:28 : player_thread: played "Club/John Creamer & Stephane K & Susanna - Storm [Extended].mp3"
+May 31 18:32 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 18:32 : player_thread: played "Club/Vibe/09.AMF - She's Not Over You (Original Mix).mp3"
+May 31 18:38 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 18:38 : player_thread: played "Club/Vibe/VA_-_Vibe_FM_25_Iulie_Top_20-2009-KTY/15_n-tone_and_rosso_bruno_feat._misha_-_crystal_wood_(hy2rogen_and_fr3cky_electro_remix)-kty.mp3"
+May 31 18:42 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 18:42 : player_thread: played "Club/Sonique - Alive.mp3"
+May 31 18:50 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 18:50 : player_thread: played "Club/!!!!!!!!!!!!!/Faithless - Insomnia (Rene Amesz & Peter Gelderblom's 2006 Remix ).mp3"
+May 31 18:57 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 18:57 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/39 . Akabu - I`m Not Afraid of The Future (Jimpster Remix).mp3"
+May 31 19:03 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 19:03 : player_thread: played "Club/Vibe/15.Dj Rynno feat. Sylvia - Deep (Original Mix).mp3"
+May 31 19:07 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 19:07 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/93 . ATB & Heather Nova - Renegade (Airplay Mix).mp3"
+May 31 19:13 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 19:13 : player_thread: played "Club/DJ Tiesto - Touch Me.mp3"
+May 31 19:24 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 19:24 : player_thread: played "Club/Gaudino & Supacupa - Singin la la nari (club mix).mp3"
+May 31 19:30 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 19:30 : player_thread: played "Club/Kate Ryan - Libertine (extended mix).mp3"
+May 31 19:37 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 19:37 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/44 . Argy - Malena.mp3"
+May 31 19:44 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 19:44 : player_thread: played "Club/Top100 ViBE FM [ 2008 ] - RoT/83.Luis Lopez Feat Celia - You'll Be Mine (Extended Mix).mp3"
+May 31 19:48 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 19:48 : player_thread: played "Club/103 - Armand Van Helden - My My My-Galaxy.MP3"
+May 31 19:54 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 19:54 : player_thread: played "Club/15. NEW ORDER - Waiting For The Sirens' Call.mp3"
+May 31 19:59 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 19:59 : player_thread: played "Club/05-horny_united-good_times_(miller_vs_raw_shape_rmx)-bf.mp3"
+May 31 20:03 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 20:03 : player_thread: played "Club/VA_-_Vibe_FM_2009_Top_100-(Advance)-2010-KTY/023_will_the_people_-_knocking_(sandy_rivera_mix)-kty.mp3"
+May 31 20:10 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 20:10 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/36 . Above & Beyond Presents Tranquility Base-Oceanic (Super8 & Tab Remix).mp3"
+May 31 20:13 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 20:13 : player_thread: played "Club/12. Alse pres. Frost - Wait For Me.mp3"
+May 31 20:20 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 20:20 : player_thread: played "Club/Deja-Vu - I can't Stop (Main Mix).mp3"
+May 31 20:29 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 20:29 : player_thread: played "Club/Vibe/10.Jay Ko - Crazy (Andeeno Damassy & Lucian Barbulescu Remix).mp3"
+May 31 20:36 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 20:36 : player_thread: played "Club/11. BRIAN TAPPERT - The Organ Track.mp3"
+May 31 20:44 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 20:44 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/57 . Oliver Giacomotto - Gail In The O (John Acquaviva & Damon Jee Remix).mp3"
+May 31 20:52 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 20:52 : player_thread: played "Club/01-new_order-jetstream_(jacques_lu_continuous_dub).mp3"
+May 31 20:55 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 20:55 : player_thread: played "Club/PARIS AVENUE FT ROBIN ONE - I WANT YOU .MP3"
+May 31 21:00 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 21:00 : player_thread: played "Club/Top100 ViBE FM [ 2008 ] - RoT/64. ATB - Justify [Short Club MiX].mp3"
+May 31 21:04 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 21:04 : player_thread: played "Club/Vibe/10.Dj Andi feat. Stella - Freedom (Radio Edit).mp3"
+May 31 21:11 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 21:11 : player_thread: played "Club/criss source - hug's & kisses.mp3"
+May 31 21:17 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 21:17 : player_thread: played "Club/VA_-_Vibe_FM_2009_Top_100-(Advance)-2010-KTY/085_darius_and_finlay_-_do_it_all_night_(michael_mind_remix)-kty.mp3"
+May 31 21:20 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 21:20 : player_thread: played "Club/2005 - Forever Faithless The Greatest Hits/02 - Mass Destruction.mp3"
+May 31 21:24 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 21:24 : player_thread: played "Club/Vibe/Inna - Love (Dj Andi Remix).mp3"
+May 31 21:30 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 21:31 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/23 . Booka Shade vs Plastic Operator - Night Falls Won't Back Down (A-Side Remix).mp3"
+May 31 21:36 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 21:36 : player_thread: played "Club/Love Inc. - You're a superstar (club mix).mp3"
+May 31 21:43 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 21:43 : player_thread: played "Club/DJ Tiesto - Lethal Industry.mp3"
+May 31 21:47 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 21:47 : player_thread: played "Club/Vibe/Play & Win - Only.mp3"
+May 31 21:53 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 21:53 : player_thread: played "Club/Hack - Everywhere.mp3"
+May 31 22:02 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 22:02 : player_thread: played "Club/Top100 ViBE FM [ 2008 ] - RoT/31. Nadia Ali - Crash & burn [Ned Shepard & Sultan ReMiX].mp3"
+May 31 22:09 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 22:09 : player_thread: played "Club/!!!!!!!!!!!!!/Jakatta - So lonely (original_-_radio_edit).mp3"
+May 31 22:12 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 22:12 : player_thread: played "Club/VA_-_Vibe_FM_2009_Top_100-(Advance)-2010-KTY/080_paul_van_dyk_feat_johnny_mcdaid_-_home_(original_mix)-kty.mp3"
+May 31 22:17 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 22:17 : player_thread: played "Club/07-marcus levin-2 take me away.mp3"
+May 31 22:21 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 22:21 : player_thread: played "Club/Tiesto-Elements_Of_Life-CD-2007-TGX/05-tiesto-driving_to_heaven-tgx.mp3"
+May 31 22:27 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 22:27 : player_thread: played "Club/Tiesto-Elements_Of_Life-CD-2007-TGX/03-tiesto_feat_julie_thompson-do_you_feel_me-tgx.mp3"
+May 31 22:31 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 22:31 : player_thread: played "Club/Vibe/Dream City feat. Vanotek - Loving You (Radio Edit).mp3"
+May 31 22:37 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 22:37 : player_thread: played "Club/!!!!!!!!!!!!!/108_bjorn_mandry_and_thomas_gold_feat_nicole_tyler_-_should_be.mp3"
+May 31 22:42 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 22:42 : player_thread: played "Club/6. DAVE McCULLEN - Electric Girl.mp3"
+May 31 22:47 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 22:47 : player_thread: played "Club/Vibe/VA_-_Vibe_FM_25_Iulie_Top_20-2009-KTY/11_sunfun_feat._adaggio_-_so_untrue_(original_mix)-kty.mp3"
+May 31 22:51 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 22:51 : player_thread: played "Club/08_atb_-_ecstasy.mp3"
+May 31 22:59 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 22:59 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/83 . Dennis Ferrer feat. Mia Tuttavilla - Touch the sky (Original Mix).mp3"
+May 31 23:05 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 23:06 : player_thread: played "Club/paris_avenue_-_i_want_you_(stellar_project_extended_mix).mp3"
+May 31 23:12 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 23:12 : player_thread: played "Club/Top100 ViBE FM [ 2008 ] - RoT/80. Tom Novy feat. Abigail Bailey - Runaway (Original Mix).mp3"
+May 31 23:16 : avahi: Client Disconnected, will reconnect shortly
+May 31 23:16 : avahi: Could not reconnect: Daemon not running
+May 31 23:39 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+May 31 23:39 : player_thread: played "Club/Top100 ViBE FM [ 2008 ] - RoT/62. Nadia Ali - Crash & burn [Ned Shepard & Sultan ReMiX].mp3"
+Jun 01 01:43 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 01 01:43 : player_thread: played "Club/VA_-_Vibe_FM_2009_Top_100-(Advance)-2010-KTY/048_eddy_wata_-_my_dream_(original_mix)-kty.mp3"
+Jun 01 01:52 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 01 01:52 : player_thread: played "Club/01-new_order-jetstream_(jacques_lu_continuous_dub).mp3"
+Jun 01 01:56 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 01 01:56 : player_thread: played "Club/07-marcus levin-2 take me away.mp3"
+Jun 01 02:03 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 01 02:03 : player_thread: played "Club/VA_-_Vibe_FM_2009_Top_100-(Advance)-2010-KTY/079_menthol_feat._3shift_-_dont_let_me_fall(_original_mix_)-kty.mp3"
+Jun 01 02:10 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 01 02:10 : player_thread: played "Club/Top100 ViBE FM [ 2008 ] - RoT/83.Luis Lopez Feat Celia - You'll Be Mine (Extended Mix).mp3"
+Jun 01 02:15 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 01 02:15 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/59 . Freemasons feat. Bailey Tzuke - Uninvited (Radio Edit Remix).mp3"
+Jun 01 02:22 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 01 02:22 : player_thread: played "Club/-=Elektro Bass 2007=-/Me Go (Walking Away) (Joachim Garraud & avid Guetta Fk Me I m Famous Remix) Ericke - The Beat Is Rockin  www.xmp3.biz.mp3"
+Jun 01 02:29 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 01 02:29 : player_thread: played "Club/Top100 ViBE FM [ 2008 ] - RoT/16. Dobenbeck & Joanna - Please don't go [Chris Reece ReMiX].mp3"
+Jun 01 02:38 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 01 02:38 : player_thread: played "Club/-=Elektro Bass 2007=-/Moguai - RobotSoul www.xmp3.biz.mp3"
+Jun 01 02:45 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 01 02:45 : player_thread: played "Club/Top100 ViBE FM [ 2008 ] - RoT/48-DJ Andi feat. Stella - colours of the rainbow [ original extended mix ].mp3"
+Jun 01 02:48 : avahi: Client Disconnected, will reconnect shortly
+Jun 01 02:48 : avahi: Could not reconnect: Daemon not running
+Jun 01 11:07 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 01 11:07 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/23 . Booka Shade vs Plastic Operator - Night Falls Won't Back Down (A-Side Remix).mp3"
+Jun 01 11:14 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 01 11:14 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/53 . Dennis Ferrer - Transitions (Original Mix).mp3"
+Jun 01 11:20 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 01 11:20 : player_thread: played "Club/-=Elektro Bass 2007=-/Mason - Exceeder www.xmp3.biz.mp3"
+Jun 01 11:23 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 01 11:24 : player_thread: played "Club/Vibe/Kristine - Se Thelo (Radio Edit).mp3"
+Jun 01 11:31 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 01 11:31 : player_thread: played "Club/Armin Van Buuren -Shivers.mp3"
+Jun 01 11:40 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 01 11:40 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/4 . Faithless - Music Matters (Pete Heller Remix).mp3"
+Jun 01 11:48 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 01 11:48 : player_thread: played "Club/Top100 ViBE FM [ 2008 ] - RoT/78. Chicanos - Suki Suki (Dj Andi Remix).mp3"
+Jun 01 11:52 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 01 11:52 : player_thread: played "Club/Vibe/14.N-Tone & Rosso Bruno feat. Misha - Crystal Wood (Hy2RoGeN & Fr3cky Electro Remix).mp3"
+Jun 01 11:56 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 01 11:56 : player_thread: played "Club/Sonique - Sky.mp3"
+Jun 01 11:56 : avahi: Client Disconnected, will reconnect shortly
+Jun 01 11:56 : avahi: Could not reconnect: Daemon not running
+Jun 01 17:39 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 01 17:39 : player_thread: played "Club/John Creamer & Stephane K feat Nadia Ali & Rosko - Something To Lose.mp3"
+Jun 01 17:46 : player_thread: played "Club/Top100 ViBE FM [ 2008 ] - RoT/46. Chicane vs. Natasha Bedingfield - Bruised Water (Mischa Daniëls Club Mix).mp3"
+Jun 01 17:54 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 01 17:54 : player_thread: played "Club/202_axwell_feat._steve_edwards_-_watch_the_sunrise.mp3"
+Jun 01 17:59 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 01 18:00 : player_thread: played "Club/-=Elektro Bass 2007=-/Marcus Layton - So Sick Of Me (Club Mix) www.xmp3.biz.mp3"
+Jun 01 18:05 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 01 18:05 : player_thread: played "Club/timo maas - shifter.mp3"
+Jun 01 18:09 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 01 18:09 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/93 . ATB & Heather Nova - Renegade (Airplay Mix).mp3"
+Jun 01 19:12 : avahi: Client Disconnected, will reconnect shortly
+Jun 01 19:12 : avahi: Could not reconnect: Daemon not running
+Jun 01 22:18 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 01 22:18 : player_thread: played "Club/Vibe/Markus Gardeweg feat. Michael Feiner - Let There Be Love (Pytter Deejay Re-edit)-dpk.mp3"
+Jun 01 22:24 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 01 22:24 : player_thread: played "Club/Dj Adrian Eftimie - Essenza by %5Bwww.muzicastar.tk%5D.mp3"
+Jun 01 22:28 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 01 22:28 : player_thread: played "Club/Andain - Beautiful Things (Gabriel And Dresden Radio Edit).Mp3"
+Jun 01 22:35 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 01 22:35 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/45 . Tiesto - Carpe Noctum.mp3"
+Jun 02 01:59 : avahi: Client Disconnected, will reconnect shortly
+Jun 02 01:59 : avahi: Could not reconnect: Daemon not running
+Jun 02 11:51 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 02 11:51 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/58 . Laurice ft. Terry Hall - Things (Audiofly Mix).mp3"
+Jun 02 11:57 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 02 11:57 : player_thread: played "Club/12.Slam - This World.mp3"
+Jun 02 12:03 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 02 12:03 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/17 . Hybrid - Finished Symphony (Deadmau5 Remix).mp3"
+Jun 02 12:06 : avahi: Client Disconnected, will reconnect shortly
+Jun 02 12:06 : avahi: Could not reconnect: Daemon not running
+Jun 02 12:12 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 02 12:12 : player_thread: played "Club/SONO - 2000 GUNS.mp3"
+Jun 02 12:16 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 02 12:16 : player_thread: played "Club/Vibe/04.Dream City feat. Vanotek - Loving You (Radio Edit).mp3"
+Jun 02 12:19 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 02 12:19 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/27 . Dj Project - Doua Anotimpuri.mp3"
+Jun 02 12:24 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 02 12:24 : player_thread: played "Club/VA_-_Vibe_FM_2009_Top_100-(Advance)-2010-KTY/059_yves_larock_feat._steve_edwards_-_listen_to_the_voice_inside_(muzzaik_remix)-kty.mp3"
+Jun 02 12:51 : avahi: Client Disconnected, will reconnect shortly
+Jun 02 12:51 : avahi: Could not reconnect: Daemon not running
+Jun 02 13:23 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 02 13:23 : player_thread: played "Club/Top100 ViBE FM [ 2008 ] - RoT/51. House Of Glass - Stone Fox Chase (Original Mix).mp3"
+Jun 02 13:27 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 02 13:27 : player_thread: played "Club/211 - Steve Angello & Dave Armstrong - Groove in U-ko.mp3"
+Jun 02 13:34 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 02 13:34 : player_thread: played "Club/Vibe/Javi Mula - Come On (Original Mix).mp3"
+Jun 02 13:42 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 02 13:42 : player_thread: played "Club/Deep Dish - Say Hello Club Mix [www.mp3atomic.net].mp3"
+Jun 02 13:47 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 02 13:47 : player_thread: played "Club/VA_-_Vibe_FM_2009_Top_100-(Advance)-2010-KTY/067_madonna_-_celebration_(benny_benassi_remix)-kty.mp3"
+Jun 02 13:53 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 02 13:53 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/95 . David Guetta - Baby When The Light (Original Extended Mix).mp3"
+Jun 02 14:00 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 02 14:00 : player_thread: played "Club/top 20 radio deea [14aprilie2007]/Sander van Doorn - Grasshopper.mp3"
+Jun 02 14:46 : avahi: Client Disconnected, will reconnect shortly
+Jun 02 14:46 : avahi: Could not reconnect: Daemon not running
+Jun 02 15:02 : avahi: Client Disconnected, will reconnect shortly
+Jun 02 15:02 : avahi: Could not reconnect: Daemon not running
+Jun 02 15:18 : avahi: Client Disconnected, will reconnect shortly
+Jun 02 15:18 : avahi: Could not reconnect: Daemon not running
+Jun 02 15:46 : avahi: Client Disconnected, will reconnect shortly
+Jun 02 15:46 : avahi: Could not reconnect: Daemon not running
+Jun 03 03:18 : avahi: Client Disconnected, will reconnect shortly
+Jun 03 03:18 : avahi: Could not reconnect: Daemon not running
+Jun 03 13:11 : avahi: Client Disconnected, will reconnect shortly
+Jun 03 13:11 : avahi: Could not reconnect: Daemon not running
+Jun 03 14:09 : avahi: Client Disconnected, will reconnect shortly
+Jun 03 14:09 : avahi: Could not reconnect: Daemon not running
+Jun 03 14:53 : avahi: Client Disconnected, will reconnect shortly
+Jun 03 14:53 : avahi: Could not reconnect: Daemon not running
+Jun 03 21:48 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 03 21:48 : player_thread: played "Club/VA_-_Vibe_FM_2009_Top_100-(Advance)-2010-KTY/009_nick_kamarera_and_deepside_deejays_-_beautiful_days_(original_extended_mix)-kty.mp3"
+Jun 03 21:54 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 03 21:54 : player_thread: played "Club/2005 - Forever Faithless The Greatest Hits/14 - I Want More.mp3"
+Jun 03 21:58 : avahi: Client Disconnected, will reconnect shortly
+Jun 03 21:58 : avahi: Could not reconnect: Daemon not running
+Jun 04 03:07 : avahi: Client Disconnected, will reconnect shortly
+Jun 04 03:07 : avahi: Could not reconnect: Daemon not running
+Jun 04 11:15 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 11:15 : player_thread: played "Club/-=Elektro Bass 2007=-/Sebastien Leger - Hit Girl www.xmp3.biz.mp3"
+Jun 04 11:19 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 11:19 : player_thread: played "Club/Vibe/11.Vali Barbulescu feat. Damon - Inside Of You (Original Mix).mp3"
+Jun 04 11:22 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 11:22 : player_thread: played "Club/DJ Optick feat. Activ - Surrender (Liberty Parade 2005).mp3"
+Jun 04 11:29 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 11:29 : player_thread: played "Club/Top100 ViBE FM [ 2008 ] - RoT/18. Mighty Dub Katz - Just another groove [Tocadisco ReMiX].mp3"
+Jun 04 11:33 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 11:33 : player_thread: played "Club/Vibe/04.Dream City feat. Vanotek - Loving You (Radio Edit).mp3"
+Jun 04 11:37 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 11:37 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/24 . Insound & Dj Optick feat. Dana - Burning Me (Original Mix).mp3"
+Jun 04 11:41 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 11:41 : player_thread: played "Club/!!!!!!!!!!!!!/13 Zombie Nation - Kernkraft 400.mp3"
+Jun 04 11:46 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 11:46 : player_thread: played "Club/107-the_drill-the_drill_tom_novys_space_terrace_mix-mst.mp3"
+Jun 04 11:52 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 11:52 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/80 . Silecer - Drown In Me (Cicada Remix).mp3"
+Jun 04 11:57 : player_thread: played "Club/[TSK CLUB] - LYDIA RHODES - AWAY (JOHN CREAMER & STEPHANE K MIX)ttcnbpxv.mp3"
+Jun 04 12:01 : player_thread: played "Club/VA_-_Vibe_FM_2009_Top_100-(Advance)-2010-KTY/050_dj_alexunder_base_and_frissco_-_privacy_(donyandthekid)-kty.mp3"
+Jun 04 12:08 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 12:08 : player_thread: played "Club/Top100 ViBE FM [ 2008 ] - RoT/17. Jerry Ropero & Cozi - The storm [Inpetto Vocal ReMiX].mp3"
+Jun 04 12:14 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 12:14 : player_thread: played "Club/Top100 ViBE FM [ 2008 ] - RoT/05. R.I.O. - Shine on [Original MiX].mp3"
+Jun 04 12:18 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 12:18 : player_thread: played "Club/VA_-_Vibe_FM_2009_Top_100-(Advance)-2010-KTY/004_radio_killer_-_voila_(radio_edit)-kty.mp3"
+Jun 04 12:25 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 12:25 : player_thread: played "Club/Top100 ViBE FM [ 2008 ] - RoT/80. Tom Novy feat. Abigail Bailey - Runaway (Original Mix).mp3"
+Jun 04 12:29 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 12:29 : player_thread: played "Club/2012/Casablanca By Low Deep T.MP3"
+Jun 04 12:34 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 12:34 : player_thread: played "Club/RAW JAWS - THROW'M UP (EXT MIX).mp3"
+Jun 04 12:38 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 12:38 : player_thread: played "Club/VA_-_Vibe_FM_2009_Top_100-(Advance)-2010-KTY/055_n-tone_rosso_bruno_feat._misha_-_crystal_wood-kty.mp3"
+Jun 04 12:47 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 12:47 : player_thread: played "Club/dr._kucho-nosferatu.mp3"
+Jun 04 12:54 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 12:54 : player_thread: played "Club/-=Elektro Bass 2007=-/DJ Falk - House Of God (luetzenkirchen remix) www.xmp3.biz.mp3"
+Jun 04 13:00 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 13:00 : player_thread: played "Club/-=Elektro Bass 2007=-/Santos - Camels (Trick & Kubic Remix) www.xmp3.biz.mp3"
+Jun 04 13:08 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 13:08 : player_thread: played "Club/VA_-_Vibe_FM_2009_Top_100-(Advance)-2010-KTY/011_nadia_ali_-_love_story_(the_starkillers_remix)-kty.mp3"
+Jun 04 15:29 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 15:29 : player_thread: played "Club/DJ_TIE_6.mp3"
+Jun 04 15:36 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 15:36 : player_thread: played "Club/VA_-_Vibe_FM_2009_Top_100-(Advance)-2010-KTY/087_tydi_-_foolish_(denzal_park_vocal_remix)-kty.mp3"
+Jun 04 15:43 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 15:43 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/17 . Hybrid - Finished Symphony (Deadmau5 Remix).mp3"
+Jun 04 15:46 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 15:46 : player_thread: played "Club/Top100 ViBE FM [ 2008 ] - RoT/35. Yves Larock & Jaba - By your side [Radio Edit].mp3"
+Jun 04 15:52 : player_thread: played "Club/Vibe/10.Jay Ko - Crazy (Andeeno Damassy & Lucian Barbulescu Remix).mp3"
+Jun 04 15:55 : player_thread: played "Club/Vibe/03.Dario Zack feat. StarChild - Funky World (Original Mix).mp3"
+Jun 04 16:03 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 16:03 : player_thread: played "Club/Azzido Da Bass - We hate to rock.mp3"
+Jun 04 16:10 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 16:10 : player_thread: played "Club/!!!!!!!!!!!!!/Fedde Le Grand - Put Your Hands Up For Detroit.mp3"
+Jun 04 16:13 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 16:14 : player_thread: played "Club/Vibe/VA_-_Vibe_FM_25_Iulie_Top_20-2009-KTY/18_liviu_hodor_and_tara_-_happy_for_you_(original_mix)-kty.mp3"
+Jun 04 16:21 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 16:21 : player_thread: played "Club/Armin Van Buuren -Shivers.mp3"
+Jun 04 16:26 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 16:26 : player_thread: played "Club/Dj Tiesto - Close to You (Feat. Jan Johnston) ten28.mp3"
+Jun 04 16:35 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 16:35 : player_thread: played "Club/Chicane - Love on the run (original mix).mp3"
+Jun 04 16:38 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 16:38 : player_thread: played "Club/DJ Tiesto - Dream World.mp3"
+Jun 04 16:41 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 16:41 : player_thread: played "Club/VA_-_Vibe_FM_2009_Top_100-(Advance)-2010-KTY/001_ela_rose_feat._dj_david_-_i_can_feel_(radio_version)-kty.mp3"
+Jun 04 16:48 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 16:48 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/43 . Giuseppe Ottaviani - Through Your Eyes.mp3"
+Jun 04 16:52 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 16:52 : player_thread: played "Club/SHAPESHIFTERS - BACK TO BASICS .MP3"
+Jun 04 17:00 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 17:01 : player_thread: played "Club/01.DJ TIESTO - Urban Train (Original Mix).mp3"
+Jun 04 17:07 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 17:07 : player_thread: played "Club/Vibe/Armin van Buuren feat. Jennifer Rene - Fine Without You (Original Mix).mp3"
+Jun 04 17:14 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 17:14 : player_thread: played "Club/01_precious_(sashas_spooky_mix_edit)-fwyh.mp3"
+Jun 04 17:22 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 17:22 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/69 . Minimalistix - Struggle For Pleasure (Dave Lambert & Elektrokid Widescreen Remix).mp3"
+Jun 04 17:29 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 17:29 : player_thread: played "Club/DJ Tiësto - Lethal Industry [Original Mix].mp3"
+Jun 04 17:34 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 17:34 : player_thread: played "Club/VA_-_Vibe_FM_2009_Top_100-(Advance)-2010-KTY/027_dario_zack_feat._starchild_-_funky_world_(extended_mix)-kty.mp3"
+Jun 04 17:42 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 17:42 : player_thread: played "Club/Top100 ViBE FM [ 2008 ] - RoT/61. Last Vegas - Sexy girl [Malibu Breeze ReMiX].mp3"
+Jun 04 17:50 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 17:50 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/67 . Lustral - Because Of You (Noel Sanger Remix).mp3"
+Jun 04 17:57 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 17:58 : player_thread: played "Club/Top100 ViBE FM [ 2008 ] - RoT/79.Enur & Natasja - Calabria (Warren Clarke ReMiX).mp3"
+Jun 04 18:05 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 18:05 : player_thread: played "Club/VA_-_Vibe_FM_2009_Top_100-(Advance)-2010-KTY/079_menthol_feat._3shift_-_dont_let_me_fall(_original_mix_)-kty.mp3"
+Jun 04 18:09 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 18:09 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/100 . Syke 'n' Sugarstarr - Danz (Devotion) (Radio Mix).mp3"
+Jun 04 18:12 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 18:12 : player_thread: played "Club/09_atb_-_marrakech.mp3"
+Jun 04 18:16 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 18:16 : player_thread: played "Club/Top100 ViBE FM [ 2008 ] - RoT/95.Daft Punk - Teachers (Laidback Luke Re-Work 2008).mp3"
+Jun 04 18:23 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 18:23 : player_thread: played "Club/Top100 ViBE FM [ 2008 ] - RoT/08. Yanou - Children of the sun [R.I.O. ReMiX].mp3"
+Jun 04 18:27 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 18:27 : player_thread: played "Club/Vibe/14.Darius & Finaly - Do It All Night (Original Extended Mix).mp3"
+Jun 04 18:33 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 18:33 : player_thread: played "Club/Dj tina - Fuck u.mp3"
+Jun 04 18:37 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 18:37 : player_thread: played "Club/Vibe/5.Velvet - Chemistry (Original Extended Mix).mp3"
+Jun 04 18:43 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 18:43 : player_thread: played "Club/105-strangelove-blind_mix_(daniel_miller_and_rico_conning_1987)-ube.mp3"
+Jun 04 18:49 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 18:50 : player_thread: played "Club/VA_-_Vibe_FM_2009_Top_100-(Advance)-2010-KTY/093_booty_luv_-_say_it_(warren_clarke_vocal_mix)-kty.mp3"
+Jun 04 18:56 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 18:57 : player_thread: played "Club/VA_-_Vibe_FM_2009_Top_100-(Advance)-2010-KTY/005_christian_malloni_-_agua_ardiente_(original_mix)-kty.mp3"
+Jun 04 18:59 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 18:59 : player_thread: played "Club/sunblock_-_ill_be_ready_(radio_version)-cmp.mp3"
+Jun 04 19:06 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 19:06 : player_thread: played "Club/Top100 ViBE FM [ 2008 ] - RoT/38. Activ & DJ Optick - Be free [Original Extended MiX].mp3"
+Jun 04 19:13 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 19:13 : player_thread: played "Club/United Nations - Out of touch.mp3"
+Jun 04 19:16 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 19:16 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/60 . Spencer & Hill - Back In Love (Dave Armstrong Remix).mp3"
+Jun 04 19:22 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 19:22 : player_thread: played "Club/Top100 ViBE FM [ 2008 ] - RoT/43. Fentura - Live It (Original Mix).mp3"
+Jun 04 19:25 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 19:25 : player_thread: played "Club/Black eyed peas - Pump it.mp3"
+Jun 04 19:30 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 19:30 : player_thread: played "Club/VA_-_Vibe_FM_2009_Top_100-(Advance)-2010-KTY/074_narcotic_sound_-_suena_(main_mix)-kty.mp3"
+Jun 04 19:34 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 19:34 : player_thread: played "Club/Vibe/15.Vibers & Tara McDonald - Revolution (Imnul Liberty Parade 2009).mp3"
+Jun 04 19:41 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 19:41 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/21 . Michael Gray feat. Steve Edwards - Somewhere Beyond (TV Rock Vocal Mix).mp3"
+Jun 04 19:45 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 19:45 : player_thread: played "Club/VA_-_Vibe_FM_2009_Top_100-(Advance)-2010-KTY/046_dream_city_feat._vanotek_-_loving_you_(radio_edit)-kty.mp3"
+Jun 04 19:50 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 19:50 : player_thread: played "Club/Vibe/Claudia Cream feat Fatman Scoop - Just a little bit (Deepside Deejays Remix).MP3"
+Jun 04 19:55 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 04 19:56 : player_thread: played "Club/VA_-_Vibe_FM_2009_Top_100-(Advance)-2010-KTY/059_yves_larock_feat._steve_edwards_-_listen_to_the_voice_inside_(muzzaik_remix)-kty.mp3"
+Jun 04 20:16 : avahi: Client Disconnected, will reconnect shortly
+Jun 04 20:16 : avahi: Could not reconnect: Daemon not running
+Jun 05 00:52 : avahi: Client Disconnected, will reconnect shortly
+Jun 05 00:52 : avahi: Could not reconnect: Daemon not running
+Jun 05 17:21 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 05 17:22 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/87 . Andy Moor vs Orkidea - Yearzero (Andy Moor`s First Light Mix).mp3"
+Jun 05 17:29 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 05 17:29 : player_thread: played "Club/Vibe/VA_-_Vibe_FM_25_Iulie_Top_20-2009-KTY/07_tom_boxer_feat._mike_diamondz_-_dancing_(hy2rogen_and_fr3cky_vs._liviu_hodor)-kty.mp3"
+Jun 05 17:32 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 05 17:32 : player_thread: played "Club/Narcotic - Trust - When the down breakes.mp3"
+Jun 05 17:38 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 05 17:38 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/91 . Iio - Rebel (Original Mix).mp3"
+Jun 05 17:45 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 05 17:45 : player_thread: played "Club/Top100 ViBE FM [ 2008 ] - RoT/14. Gianluca Motta & Molly - Not alone [Deadmau5 ReMiX].mp3"
+Jun 05 17:49 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 05 17:49 : player_thread: played "Club/!!!!!!!!!!!!!/119-akon_ft._eminem-smack_that.mp3"
+Jun 05 17:55 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 05 17:55 : player_thread: played "Club/Top100 ViBE FM [ 2008 ] - RoT/70. Stereo Palma - Dreaming (D.O.N. Tekk Remix).mp3"
+Jun 05 17:59 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 05 17:59 : player_thread: played "Club/Vibe/Dj Project - Miracle love.mp3"
+Jun 05 18:24 : avahi: Client Disconnected, will reconnect shortly
+Jun 05 18:24 : avahi: Could not reconnect: Daemon not running
+Jun 05 19:39 : avahi: Client Disconnected, will reconnect shortly
+Jun 05 19:39 : avahi: Could not reconnect: Daemon not running
+Jun 05 21:23 : avahi: Client Disconnected, will reconnect shortly
+Jun 05 21:23 : avahi: Could not reconnect: Daemon not running
+Jun 06 01:22 : avahi: Client Disconnected, will reconnect shortly
+Jun 06 01:22 : avahi: Could not reconnect: Daemon not running
+Jun 06 18:10 : avahi: Client Disconnected, will reconnect shortly
+Jun 06 18:10 : avahi: Could not reconnect: Daemon not running
+Jun 06 19:41 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 06 19:41 : player_thread: played "Club/202_axwell_feat._steve_edwards_-_watch_the_sunrise.mp3"
+Jun 06 19:50 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 06 19:50 : player_thread: played "Club/-=Elektro Bass 2007=-/Antoine Clamaran - Take Off (Dave Spoon Remix) www.xmp3.biz.mp3"
+Jun 06 19:53 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 06 19:53 : player_thread: played "Club/2005 - Forever Faithless The Greatest Hits/12 - Tarantula.mp3"
+Jun 06 21:12 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 06 21:12 : player_thread: played "Club/Top100 ViBE FM [ 2008 ] - RoT/100.Spoon Harris and obernik - Batitude [club mix].mp3"
+Jun 06 21:19 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 06 21:19 : player_thread: played "Club/Top100 ViBE FM [ 2008 ] - RoT/69. E.O.S. - I Feel High (Moving Elements Review Mix).mp3"
+Jun 06 21:24 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 06 21:24 : player_thread: played "Club/Dj Vibe - Get Up (Extended Mix).mp3"
+Jun 06 21:31 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 06 21:31 : player_thread: played "Club/01-moby-lift_me_up_(mylo_mix)-uf.mp3"
+Jun 06 21:38 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 06 21:38 : player_thread: played "Club/Top100 ViBE FM [ 2008 ] - RoT/13.Alex Gaudino feat Shena - Watch out (extended_mix).mp3"
+Jun 06 21:41 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 06 21:41 : player_thread: played "Club/01-bob_sinclar_ft_gary_pine-love_generation_radio_edit-swe.mp3"
+Jun 06 21:47 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 06 21:47 : player_thread: played "Club/11. BRIAN TAPPERT - The Organ Track.mp3"
+Jun 06 21:50 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 06 21:51 : player_thread: played "Club/Vibe/12.Deepcentral - Russian Girl (Summer Mix).mp3"
+Jun 06 21:58 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 06 21:58 : player_thread: played "Club/VA_-_Vibe_FM_2009_Top_100-(Advance)-2010-KTY/044_treitl_hammond_-_give_me_the_vibes_(original_mix)-kty.mp3"
+Jun 06 22:03 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 06 22:04 : player_thread: played "Club/-=Elektro Bass 2007=-/Ross - (I Like To) Push It (DJ Antoine Vs. Mad Mark Big Room www.xmp3.biz.mp3"
+Jun 06 22:10 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 06 22:10 : player_thread: played "Club/!!!!!!!!!!!!!/Fedde Le Grand - Put Your Hands Up For Detroit.mp3"
+Jun 06 22:20 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 06 22:20 : player_thread: played "Club/92 . Tracey Thorn - Grand Canyon (King Unique Vocal Mix).mp3"
+Jun 06 22:24 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 06 22:24 : player_thread: played "Club/Vibe/VA_-_Vibe_FM_25_Iulie_Top_20-2009-KTY/19_paul_van_dyk_feat._johnny_mcdaid_-_home_(kaskade_remix)-kty.mp3"
+Jun 06 22:31 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 06 22:31 : player_thread: played "Club/VA_-_Vibe_FM_2009_Top_100-(Advance)-2010-KTY/071_antoine_clamaran_-_gold_(_original_mix_)-kty.mp3"
+Jun 07 01:04 : avahi: Client Disconnected, will reconnect shortly
+Jun 07 01:04 : avahi: Could not reconnect: Daemon not running
+Jun 07 17:38 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 07 17:38 : player_thread: played "Club/Dj Tomcraft - Into the light (vinyl ext vers).mp3"
+Jun 07 17:42 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 07 17:42 : player_thread: played "Club/Vibe/Deepside Deejays - Hold You (Radio Edit).mp3"
+Jun 07 17:50 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 07 17:50 : player_thread: played "Club/Top100 ViBE FM [ 2008 ] - RoT/81.Emilio Fernandez - Let It Go (Vocal Mix).mp3"
+Jun 07 17:57 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 07 17:57 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/51 . Lange vs Gareth Emery - Another You Another Me (Gavyn Mytchel Remix).mp3"
+Jun 07 18:00 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 07 18:00 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/26 . Paul van Dyk Feat. Rea Garvey - Let Go (UK Radio Edit).mp3"
+Jun 07 18:06 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 07 18:06 : player_thread: played "Club/Moonbootica - Pretty little angel (clubmix).mp3"
+Jun 07 18:14 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 07 18:14 : player_thread: played "Club/01-new_order_feat_ana_matronic-jetstream__jacques_lu_cont_remix-usf.mp3"
+Jun 07 18:17 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 07 18:17 : player_thread: played "Club/sunblock_-_ill_be_ready_(radio_version)-cmp.mp3"
+Jun 07 18:24 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 07 18:24 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/71 . Maskio - Human Jungle.mp3"
+Jun 07 18:31 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 07 18:31 : player_thread: played "Club/Top100 ViBE FM [ 2008 ] - RoT/100.Spoon Harris and obernik - Batitude [club mix].mp3"
+Jun 07 18:35 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 07 18:35 : player_thread: played "Club/Top100 ViBE FM [ 2008 ] - RoT/63. ATB - Justify [Short Club MiX].mp3"
+Jun 07 18:43 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 07 18:43 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/25 . Jon Flores - Feel My Blues (Original Mix).mp3"
+Jun 07 18:46 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 07 18:46 : player_thread: played "Club/Top100 ViBE FM [ 2008 ] - RoT/99.Phelipe - I Wanna Be I (Set Rip ).mp3"
+Jun 07 18:53 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 07 18:54 : player_thread: played "Club/Vibe/4.Lee Cabrera - Shake It (Nick Kamarera Remix).mp3"
+Jun 07 19:01 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 07 19:01 : player_thread: played "Club/Tiesto-Elements_Of_Life-CD-2007-TGX/01-tiesto-ten_seconds_before_sunrise-tgx.mp3"
+Jun 07 19:08 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 07 19:08 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/43 . Giuseppe Ottaviani - Through Your Eyes.mp3"
+Jun 07 19:16 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 07 19:16 : player_thread: played "Club/VA_-_Vibe_FM_2009_Top_100-(Advance)-2010-KTY/036_lee_cabrera_-_shake_it_(nick_kamarera_remix)-kty.mp3"
+Jun 07 19:24 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 07 19:24 : player_thread: played "Club/criss source - hug's & kisses.mp3"
+Jun 07 19:30 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 07 19:30 : player_thread: played "Club/Vibe/02.Velvet - Chemistry (Original Extended Mix).mp3"
+Jun 07 19:36 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 07 19:37 : player_thread: played "Club/Top.100.Of.2007.-.Radio.Deea.-.CLER/75 . Bob Sinclar feat. Gary Nesta Pine - Give A Lil Love (Bob Sinclar vs Harlem Hustlers Whistle Club Mix).mp3"
+Jun 07 21:36 : avahi: Client Disconnected, will reconnect shortly
+Jun 07 21:36 : avahi: Could not reconnect: Daemon not running
+Jun 07 23:48 : update: added Club/2012/Mario Da Ragnio & Sin Plomo - It's You (MIX).mp3
+Jun 08 00:06 : update: added Club/2012/Avicii feat. Salem Al Fakir - Silhouettes (New Vocal Mix) (Vegito Edit).mp3
+Jun 08 00:06 : update: added Club/2012/Avicii  -Levels .mp3
+Jun 08 00:06 : update: added Club/2012/Antoine Clamaran Feat. Soraya - Live Your Dreams (Albert Neve Main Mix).mp3
+Jun 08 00:06 : update: added Club/2012/Low Deep T - Music (Original mix).mp3
+Jun 08 00:06 : update: added Club/2012/Jack Holiday and Mike Candys - Children.mp3
+Jun 08 00:06 : update: added Club/2012/Azealia Banks 212.mp3
+Jun 08 00:59 : update: added Club/2012/Sebastian Ingrosso and Alesso - Calling (Original Instrumental Mix) (LRTV).mp3
+Jun 08 00:59 : update: added Club/2012/Where Have You Been (Hardwell Club Mix).mp3
+Jun 08 00:59 : update: added Club/2012/Stroke 69 - Beautiful smile (Radio Edit).mp3
+Jun 08 00:59 : update: added Club/2012/David Guetta - Titanium ft. Sia.mp3
+Jun 08 00:59 : update: added Club/2012/Todd Terry & Gypsymen - Babarabatiri (Copyright Remix).mp3
+Jun 08 00:59 : update: added Club/2012/Michael Parsberg - Mad World (feat. Safri Duo  Isam B).mp3
+Jun 08 00:59 : update: added Club/2012/Chris Isaac - Wicked game (Trentemoller dub vibe mix).mp3
+Jun 08 00:59 : update: added Club/2012/Chuckie - What Happens In Vegas (feat. Gregor Salto).mp3
+Jun 08 00:59 : update: added Club/2012/Radio Killer - Is It Love Out There (Radio Edit).mp3
+Jun 08 00:59 : update: added Club/2012/William Naraine - If I Could Fall (Vincenzo Callea Remix).mp3
+Jun 08 02:21 : avahi: Client Disconnected, will reconnect shortly
+Jun 08 02:21 : avahi: Could not reconnect: Daemon not running
+Jun 08 17:34 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 08 17:34 : player_thread: played "Club/2012/Avicii  -Levels .mp3"
+Jun 08 18:06 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 08 18:06 : player_thread: played "Club/2012/Avicii  -Levels .mp3"
+Jun 08 18:12 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 08 18:13 : player_thread: played "Club/2012/William Naraine - If I Could Fall (Vincenzo Callea Remix).mp3"
+Jun 08 18:19 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 08 18:20 : player_thread: played "Club/2012/Avicii  -Levels .mp3"
+Jun 08 18:22 : avahi: Client Disconnected, will reconnect shortly
+Jun 08 18:22 : avahi: Could not reconnect: Daemon not running
+Jun 09 00:17 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 09 00:17 : player_thread: played "Club/2012/Mario Da Ragnio & Sin Plomo - It's You (MIX).mp3"
+Jun 09 00:23 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 09 00:23 : player_thread: played "Club/2012/Avicii feat. Salem Al Fakir - Silhouettes (New Vocal Mix) (Vegito Edit).mp3"
+Jun 09 00:30 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 09 00:30 : player_thread: played "Club/2012/Todd Terry & Gypsymen - Babarabatiri (Copyright Remix).mp3"
+Jun 09 00:34 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 09 00:34 : player_thread: played "Club/2012/Casablanca By Low Deep T.MP3"
+Jun 09 00:39 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 09 00:39 : player_thread: played "Club/2012/Avicii  -Levels .mp3"
+Jun 09 00:46 : player_thread: played "Club/2012/Low Deep T - Music (Original mix).mp3"
+Jun 09 00:59 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 09 00:59 : player_thread: played "Club/2012/Mario Da Ragnio & Sin Plomo - It's You (MIX).mp3"
+Jun 09 01:06 : avahi: Client Disconnected, will reconnect shortly
+Jun 09 01:06 : avahi: Could not reconnect: Daemon not running
+Jun 09 10:13 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 09 10:13 : player_thread: played "Club/2012/Mario Da Ragnio & Sin Plomo - It's You (MIX).mp3"
+Jun 09 10:17 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 09 10:17 : player_thread: played "Club/2012/Avicii  -Levels .mp3"
+Jun 09 10:24 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 09 10:24 : player_thread: played "Club/2012/Todd Terry & Gypsymen - Babarabatiri (Copyright Remix).mp3"
+Jun 09 10:27 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 09 10:27 : player_thread: played "Club/2012/Radio Killer - Is It Love Out There (Radio Edit).mp3"
+Jun 09 10:33 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 09 10:33 : player_thread: played "Club/2012/William Naraine - If I Could Fall (Vincenzo Callea Remix).mp3"
+Jun 09 10:40 : player_thread: played "Club/2012/Where Have You Been (Hardwell Club Mix).mp3"
+Jun 09 10:47 : player_thread: played "Club/2012/Oxia - Domino.mp3"
+Jun 09 10:52 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 09 10:52 : player_thread: played "Club/2012/Stroke 69 - Beautiful smile (Radio Edit).mp3"
+Jun 09 10:58 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 09 10:58 : player_thread: played "Club/2012/Umek - Before Violence.mp3"
+Jun 09 11:05 : player_thread: played "Club/2012/Low Deep T - Music (Original mix).mp3"
+Jun 09 11:09 : player_thread: played "Club/2012/David Guetta - Titanium ft. Sia.mp3"
+Jun 09 11:12 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 09 11:12 : player_thread: played "Club/2012/Azealia Banks 212.mp3"
+Jun 09 11:17 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 09 11:17 : player_thread: played "Club/2012/Chris Isaac - Wicked game (Trentemoller dub vibe mix).mp3"
+Jun 09 11:34 : avahi: Client Disconnected, will reconnect shortly
+Jun 09 11:34 : avahi: Could not reconnect: Daemon not running
+Jun 09 19:55 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 09 19:55 : player_thread: played "Club/2012/Sebastian Ingrosso and Alesso - Calling (Original Instrumental Mix) (LRTV).mp3"
+Jun 09 20:01 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 09 20:01 : player_thread: played "Club/2012/Umek - Before Violence.mp3"
+Jun 09 20:05 : crossfade: audio_buffer_size too small for computed MixRamp overlap
+Jun 09 20:06 : player_thread: played "Club/2012/Avicii  -Levels .mp3"
+Jun 09 20:10 : avahi: Client Disconnected, will reconnect shortly
+Jun 09 20:10 : avahi: Could not reconnect: Daemon not running

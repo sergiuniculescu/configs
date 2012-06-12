@@ -346,7 +346,7 @@ mtime: 1334068003
 song_end
 end: Bass Test
 directory: Classical Music Top 100
-mtime: 1334071832
+mtime: 1337107107
 begin: Classical Music Top 100
 directory: 01
 mtime: 1334068014
@@ -1712,6 +1712,139 @@ song_end
 end: Classical Music Top 100/Ludovico Einaudi - 8 album mp3 (1996-2004) by rossogar/Ludovico Einaudi - 8 album mp3 (1996-2004) by rossogar/ludovico einaudi-fuori dal mondo (1998)
 end: Classical Music Top 100/Ludovico Einaudi - 8 album mp3 (1996-2004) by rossogar/Ludovico Einaudi - 8 album mp3 (1996-2004) by rossogar
 end: Classical Music Top 100/Ludovico Einaudi - 8 album mp3 (1996-2004) by rossogar
+directory: VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT
+mtime: 1337106639
+begin: Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT
+directory: CD 01
+mtime: 1337106639
+begin: Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT/CD 01
+song_begin: 01_Pachelbel - Canon.mp3
+Time: 322
+mtime: 1337106800
+song_end
+song_begin: 02_Mozart - Eine Kleine Natchtmusik - Andante.mp3
+Time: 352
+mtime: 1337106799
+song_end
+song_begin: 03_Beethoven - Fur Elise.mp3
+Time: 183
+mtime: 1337106805
+song_end
+song_begin: 04_Tchaikovsky - String quartet No1 - Andante.mp3
+Time: 402
+mtime: 1337106816
+song_end
+song_begin: 05_Debussy - Clair de Lune.mp3
+Time: 291
+mtime: 1337106966
+song_end
+song_begin: 06_Janacek - Idyll for strings - Adagio.mp3
+Time: 341
+mtime: 1337106981
+song_end
+song_begin: 07_Albinoni - Adagio in G minor.mp3
+Time: 511
+mtime: 1337106982
+song_end
+song_begin: 08_Debussy - The girl with the Flaxen hair.mp3
+Time: 138
+mtime: 1337106859
+song_end
+song_begin: 09_Bach - Air on a G string.mp3
+Time: 312
+mtime: 1337106872
+song_end
+song_begin: 10_Williams - Greensleeves.mp3
+Time: 273
+mtime: 1337106880
+song_end
+song_begin: 11_Handel - Largo from Xerxes.mp3
+Time: 260
+mtime: 1337106886
+song_end
+song_begin: 12_Bach - Fugue in C minor.mp3
+Time: 174
+mtime: 1337106892
+song_end
+song_begin: 13_Holst - The planets - Venus.mp3
+Time: 485
+mtime: 1337106931
+song_end
+song_begin: 14_Bach - Goldberg variations - Aria.mp3
+Time: 302
+mtime: 1337106940
+song_end
+song_begin: 15_Barber - Adagio for strings.mp3
+Time: 422
+mtime: 1337106952
+song_end
+end: Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT/CD 01
+directory: CD 02
+mtime: 1337106639
+begin: Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT/CD 02
+song_begin: 01_Debussy - Prelude to the Afternoon of a Faun.mp3
+Time: 600
+mtime: 1337106956
+song_end
+song_begin: 02_Grieg - Holberg suite- Sarabande.mp3
+Time: 170
+mtime: 1337106713
+song_end
+song_begin: 03_Sibelius - Valse triste.mp3
+Time: 264
+mtime: 1337106721
+song_end
+song_begin: 04_Bach - Concerto in F minor - Largo.mp3
+Time: 184
+mtime: 1337106721
+song_end
+song_begin: 05_Dvorak - Serenade for string - Moderato.mp3
+Time: 471
+mtime: 1337106719
+song_end
+song_begin: 06_Liszt - Liebestraume.mp3
+Time: 367
+Title: Liebestraume - Liszt
+mtime: 1337106730
+song_end
+song_begin: 07_Bach-Gounod - Ave Maria.mp3
+Time: 271
+mtime: 1337106787
+song_end
+song_begin: 08_Chopin - Etude in E major.mp3
+Time: 244
+mtime: 1337106745
+song_end
+song_begin: 09_Borodin - String quartet No2 - Nocturne.mp3
+Time: 464
+mtime: 1337106797
+song_end
+song_begin: 10_Debussy - Arabesque.mp3
+Time: 205
+mtime: 1337106769
+song_end
+song_begin: 11_Ravel - Pavane for Dead Princess.mp3
+Time: 403
+mtime: 1337106844
+song_end
+song_begin: 12_Vivaldi - The four seasons - Largo.mp3
+Time: 146
+mtime: 1337106902
+song_end
+song_begin: 13_Satie - Gymnopedie No1.mp3
+Time: 184
+mtime: 1337106923
+song_end
+song_begin: 14_Beethoven - Moonlight sonata - Adagio.mp3
+Time: 396
+mtime: 1337106928
+song_end
+song_begin: 15_Mozart - Piano Concerto No21 - Andante - Elvira Madigan.mp3
+Time: 352
+mtime: 1337106971
+song_end
+end: Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT/CD 02
+end: Classical Music Top 100/VA.The.Most.Relaxing.Classical Music.In.The.Universe.iNT
 song_begin: Orfeo Ed Euridice - Che Farò Senza Euridice_.mp3
 Time: 239
 Artist: VA
@@ -3179,15 +3312,136 @@ mtime: 1334068599
 song_end
 end: Club/2005 - Forever Faithless The Greatest Hits
 directory: 2012
-mtime: 1336314435
+mtime: 1339104621
 begin: Club/2012
+song_begin: Antoine Clamaran Feat. Soraya - Live Your Dreams (Albert Neve Main Mix).mp3
+Time: 421
+mtime: 1339102562
+song_end
+song_begin: Avicii  -Levels .mp3
+Time: 270
+Title: Avic ii - Levels
+mtime: 1339102751
+song_end
+song_begin: Avicii feat. Salem Al Fakir - Silhouettes (New Vocal Mix) (Vegito Edit).mp3
+Time: 401
+Artist: Avicii feat. Salem Al Fakir
+AlbumArtist: Avicii feat. Salem Al Fakir
+Title: Silhouettes (New Vocal Mix) (Vegito Edit)
+Date: 2012
+mtime: 1339102911
+song_end
 song_begin: Casablanca By Low Deep T.MP3
 Time: 267
 mtime: 1334507165
 song_end
+song_begin: Chris Isaac - Wicked game (Trentemoller dub vibe mix).mp3
+Time: 294
+mtime: 1339103948
+song_end
+song_begin: Chuckie - What Happens In Vegas (feat. Gregor Salto).mp3
+Time: 343
+mtime: 1339104621
+song_end
+song_begin: Jack Holiday and Mike Candys - Children.mp3
+Time: 186
+mtime: 1339102444
+song_end
+song_begin: Low Deep T - Music (Original mix).mp3
+Time: 432
+AlbumArtist: www.mypromosound.com
+Track: www.myp
+Genre: Other
+Composer: www.mypromosound.com
+Disc: www.mypromosound.com
+mtime: 1339102657
+song_end
 song_begin: Marco Bayley - Caliente (Original Mix).mp3
 Time: 488
 mtime: 1336314192
+song_end
+song_begin: Michael Parsberg - Mad World (feat. Safri Duo  Isam B).mp3
+Time: 198
+mtime: 1339104082
+song_end
+song_begin: Oxia - Domino.mp3
+Time: 427
+mtime: 1337370739
+song_end
+song_begin: Stroke 69 - Beautiful smile (Radio Edit).mp3
+Time: 336
+mtime: 1339104041
+song_end
+song_begin: Todd Terry & Gypsymen - Babarabatiri (Copyright Remix).mp3
+Time: 401
+mtime: 1339103846
+song_end
+song_begin: William Naraine - If I Could Fall (Vincenzo Callea Remix).mp3
+Time: 368
+Title: William Naraine - If I Could Fall (Vincenzo Callea Remix) www.musicdjsmp3.com
+Genre: Other
+mtime: 1339103776
+song_end
+song_begin: David Guetta - Titanium ft. Sia.mp3
+Time: 245
+Title: David Guetta - Titanium ft. Sia
+Track: 1
+Date: 2012
+mtime: 1339104518
+song_end
+song_begin: Umek - Before Violence.mp3
+Time: 331
+Artist: Umek
+AlbumArtist: Global Underground
+Title: Before Violence
+Album: Global Underground 38 Black Rock Desert Compiled & Mixed By Carl Cox
+Track: 11/17
+Date: 2010-00-00
+Genre: House
+Disc: 2/4
+mtime: 1337370017
+song_end
+song_begin: Where Have You Been (Hardwell Club Mix).mp3
+Time: 394
+Artist: Rihanna
+Title: Where Have You Been (Hardwell Club Mix)
+Album: INCEbeats.com
+Date: 2012
+Genre: House
+mtime: 1339104421
+song_end
+song_begin: Azealia Banks 212.mp3
+Time: 206
+Artist: Azealia Banks
+AlbumArtist: Ohheydoctor.com
+Title: 212
+Album: Ohheydoctor.com
+Composer: Ohheydoctor.com
+mtime: 1339103143
+song_end
+song_begin: Mario Da Ragnio & Sin Plomo - It's You (MIX).mp3
+Time: 471
+AlbumArtist: www.RadioFLy.ws
+Album: www.RadioFLy.ws
+Composer: www.RadioFLy.ws
+mtime: 1339102023
+song_end
+song_begin: Radio Killer - Is It Love Out There (Radio Edit).mp3
+Time: 186
+Artist: www.addictedtomusic.info
+AlbumArtist: www.addictedtomusic.info
+Album: www.addictedtomusic.info
+mtime: 1339103341
+song_end
+song_begin: Sebastian Ingrosso and Alesso - Calling (Original Instrumental Mix) (LRTV).mp3
+Time: 342
+Artist: Sebastian Ingrosso & Alesso
+Title: Calling (Original Instrumental Mix)
+Album: www.larumba.tv
+Track: 83/100
+Date: 2011
+Genre: House
+mtime: 1339104321
 song_end
 end: Club/2012
 directory: Dj_Adrian_Eftimie-Live_at_Pasha_(Galati)-LINE-14-10-2006-ADiE
@@ -38386,14 +38640,14 @@ Date: 2008
 Genre: Lo-Fi
 mtime: 1334068209
 song_end
-playlist_begin: 100_va_-_erotic_lounge_finest_pleasure-cd1-2008-drum.m3u
-mtime: 1334068199
+playlist_begin: 200_va_-_erotic_lounge_finest_pleasure-cd2-2008-drum.m3u
+mtime: 1334068205
 playlist_end
 playlist_begin: 000_va_-_erotic_lounge_finest_pleasure-(2cd)-2008-drum.m3u
 mtime: 1334068199
 playlist_end
-playlist_begin: 200_va_-_erotic_lounge_finest_pleasure-cd2-2008-drum.m3u
-mtime: 1334068205
+playlist_begin: 100_va_-_erotic_lounge_finest_pleasure-cd1-2008-drum.m3u
+mtime: 1334068199
 playlist_end
 end: Relaxing/Erotic_Lounge_Series-iNT/VA-Erotic_Lounge_7-Finest_Pleasure-(2CD)-2008-DRUM
 end: Relaxing/Erotic_Lounge_Series-iNT
@@ -56695,10 +56949,10 @@ Date: 2006
 Genre: Industrial
 mtime: 1335005677
 song_end
-playlist_begin: 200-rammstein-voelkerball-live_in_nimes-cd2-2006-d2h.m3u
+playlist_begin: 000-rammstein-voelkerball-live_in_nimes-2cd-ltd.ed.-2006-d2h.m3u
 mtime: 1335005495
 playlist_end
-playlist_begin: 000-rammstein-voelkerball-live_in_nimes-2cd-ltd.ed.-2006-d2h.m3u
+playlist_begin: 200-rammstein-voelkerball-live_in_nimes-cd2-2006-d2h.m3u
 mtime: 1335005495
 playlist_end
 end: Rock/Metal/Rammstein_Discography/Rammstein_-_Voelkerball-Live_In_Nimes-2CD-Ltd.Ed.-2006-D2H

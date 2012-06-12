@@ -19,27 +19,12 @@ lavdopts=threads=2
 channels = 6
 
 # # never use font config
-# nofontconfig = 1
-
-# # add black borders so the movies have the same aspect ratio of the monitor
-# # for wide screen monitors
-# vf-add=expand=::::1:16/9:16
-# # for non wide screen traditional monitors
-vf-add=expand=::::1:4/3:16
+nofontconfig = 1
 
 # # cache size
 cache=16384
 cache-min=30
 cache-seek-min=50
-
-
-#Use these parameters to adjust the font size.
-##subfont-osd-scale adjusts the menu font on a scale of 0-100.
-##If the menu font seems too small to you try adjusting the value to 6.
-##subfont-text-scale adjusts the subtitle font on a scale of 0-100
-##See the mplayer man file for further parameters.
-subfont-osd-scale=3
-subfont-text-scale=2
 
 #Use this parameter to stretch the horizontal width of the picture
 ##in pixels.
@@ -61,11 +46,9 @@ subfont-text-scale=2
 #hor_pos=3
 #vert_pos=0
 
-
-
 # # increase volume
 softvol=1
-softvol-max=600
+softvol-max=200
 
 
 # #profile for up-mixing two channels audio to six channels
@@ -81,6 +64,7 @@ softvol-max=600
 #  # Disable screensaver.
 #  heartbeat-cmd="xscreensaver-command -deactivate &" # stop xscreensaver
 #  stop-xscreensaver="yes" # stop gnome-screensaver
+#  stop-xscreensaver=1
 
 
 # Write your default config options here!
@@ -92,4 +76,23 @@ softvol-max=600
 # #
 # # hue[=hue:saturation]
 # # default:0.0:1.0
-vf=hue=0.0:1.0,eq2=1.0:1.3:0.2:2.0:0.0:1.0:1.0:1.0
+vf=hue=0.0:1.0,eq2=1.0:1.3:0.2:1.7:0.0:1.0:1.0:1.0
+
+
+#Use these parameters to adjust the font size.
+##subfont-osd-scale adjusts the menu font on a scale of 0-100.
+##If the menu font seems too small to you try adjusting the value to 6.
+##subfont-text-scale adjusts the subtitle font on a scale of 0-100
+##See the mplayer man file for further parameters.
+subfont-osd-scale=3
+subfont-text-scale=2
+
+#ass=1
+#ass-font-scale=1.5
+#ass-use-margins=1
+
+# # add black borders so the movies have the same aspect ratio of the monitor
+# # for wide screen monitors
+# vf-add=expand=::::1:16/9:16
+# # for non wide screen traditional monitors
+vf-add=expand=::::1:4/3:16

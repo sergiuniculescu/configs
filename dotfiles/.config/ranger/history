@@ -1,21 +1,8 @@
-mkdir .config
-mkdir .bin
-mkdir Downloads
-mkdir Pictures
-mkdir Screenshots
-mkdir 
-find inch
-
-rename .Xresources
-mkdir .fonts
-mkdir .vim
-mkdir syntax
 mkdir y
 mkdir bkp
 mkdir tmp
 rename backup
 rename .vimrc2
-open_with zathura
 open_with feh
 rename Box
 open_with vlc
@@ -24,7 +11,40 @@ delete seriously?
 rename msvcr80.dll.bkp
 rename msvcr80.dll
 search mscms
-open_with 
-delete seriously? 
-delete seriously? y
 rename Marco Bayley - Caliente (Original Mix).mp3
+search lzo
+delete seriously? 
+open_with sxiv
+open_with sxiw
+open_with mirage
+touch 
+open_with zathura
+rename National_Georgaphic
+open_with 
+rename 01.jpg
+rename 02.jpg
+rename 03.jpg
+rename 04.jpg
+rename 05.jpg
+rename 06.jpg
+rename 07.jpg
+rename 08.jpg
+rename 09.jpg
+rename 10.jpg
+010.jpg
+
+rename 010.jpg
+rename 011.jpg
+rename 012.jpg
+rename 013.jpg
+rename 014.jpg
+rename 015.jpg
+rename 016.jpg
+rename 017.jpg
+rename 018.jpg
+rename 019.jpg
+rename 020.jpg
+rename National_Geographic
+delete seriously? y
+delete
+rename Photoshop.desktop
