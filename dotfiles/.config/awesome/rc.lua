@@ -316,6 +316,7 @@ client.add_signal("unfocus", function(c) c.border_color = beautiful.border_norma
 exec("xsetroot -cursor_name left_ptr", true)
 -- }}}
 
+
 -- {{{ Run programm once
 local function processwalker()
    local function yieldprocess()

@@ -7,6 +7,7 @@ require("freedesktop.menu")
 require("volume")
 require("mpd")
 require("calendar2")
+require("weather")
 
 --beautiful.init("/home/sergiu/.config/awesome/theme.lua")
 beautiful.init("/home/sergiu/.config/awesome/theme2.lua")
@@ -76,6 +77,40 @@ mytaglist.buttons = awful.util.table.join(
 mytextclock = awful.widget.textclock({ align = "right" })
 -- Calendar widget to attach to the textclock
 calendar2.addCalendarToWidget(mytextclock)
+
+
+--/// weather widget (require weather-utils) ///
+--weatherwidget = widget({ type = "textbox" })
+--weatherwidget.text = awful.util.pread(
+  -- "weather -i LRBS --headers=Temperature --quiet -m | awk '{print $2, $3}'"
+   --)
+--weathertimer = timer(
+    -- { timeout = 900 } -- Update every 15 minutes. 
+-- )
+--weathertimer:add_signal(
+ -- "timeout", function() 
+ -- weatherwidget.text = awful.util.pread(
+  --  "weather -i LRBS --headers=Temperature --quiet -m | awk '{print $2, $3}' &"
+   -- )
+ -- end)
+
+-- weathertimer:start() -- Start the timer
+  -- weatherwidget:add_signal(
+  -- "mouse::enter", function() 
+   -- weather = naughty.notify(
+   -- {title="Weather",text=awful.util.pread("weather -i LRBS -m")})
+  -- end)
+--weatherwidget:add_signal(
+ -- "mouse::leave", function() 
+  -- naughty.destroy(weather) 
+  -- end)
+  -- I added some spacing because on my computer it is right next to my clock.
+-- awful.widget.layout.margins[weatherwidget] = { right = 5 } 
+
+
+--/// Weather widget ///
+forecast = widget({ type = "textbox", name = "weather" })
+weather.register(forecast)
 
 
 --/// CPU widget ///
@@ -161,51 +196,51 @@ mpdicon = widget({ type = "imagebox" })
 mpc = mpd:new()
 -- Build mpd widget
 function widget_mpd(widget, icon)
-	local status = mpc:send('status')
-	local state = status.state
-	local current = mpc:send('currentsong')
-	local artist, title, elapsed, totaltime
-	local running = true
-	
-	-- Icon table
-	---local icon_dir = awful.util.getdir("config").."/icons2/"
-	local icons = {
-		play = icon_dir.."/play.png",
-		pause = icon_dir.."/pause.png",
-		stop = icon_dir.."/stop.png",
-		none = icon_dir.."/empty.png",
-		unknow = icon_dir.."/half.png"
-	}
-	
-	-- Get the state and define the icon widget
-	if state == "stop" then icon.image = image(icons.stop)
-	elseif state == "pause"	then icon.image = image(icons.pause)
-	elseif state == "play"	then icon.image = image(icons.play)
-	elseif state == nil		then icon.image = image(icons.none)
-								 local running = false
-	else icon.image = image(icons.unknow)
-	end
+        local status = mpc:send('status')
+        local state = status.state
+        local current = mpc:send('currentsong')
+        local artist, title, elapsed, totaltime
+        local running = true
+        
+        -- Icon table
+        ---local icon_dir = awful.util.getdir("config").."/icons2/"
+        local icons = {
+        	play = icon_dir.."/play.png",
+        	pause = icon_dir.."/pause.png",
+        	stop = icon_dir.."/stop.png",
+        	none = icon_dir.."/empty.png",
+        	unknow = icon_dir.."/half.png"
+        }
+        
+        -- Get the state and define the icon widget
+        if state == "stop" then icon.image = image(icons.stop)
+        elseif state == "pause"	then icon.image = image(icons.pause)
+        elseif state == "play"	then icon.image = image(icons.play)
+        elseif state == nil		then icon.image = image(icons.none)
+        							 local running = false
+        else icon.image = image(icons.unknow)
+        end
 
-	-- Get title and artist	
-	if running then
-		
-		-- get artist
-		artist = escape_xml(current.artist)
-		if artist == nil then artist = "[n/a]" end
-		
-		-- get title
-		title = escape_xml(current.title)
-		if title == nil then 
-			title = string.gsub(escape_xml(current.file), ".*/", "")
-			if title == nil then title = "[n/a]" end
-		end
-	
-		-- Put the text in the widget
-		widget.text = string.format("%s%s%s - %s", blue1_col, title, null_col, artist)
-	
-	else
-		widget.text = ' MPD is closed '
-	end
+        -- Get title and artist	
+        if running then
+        	
+        	-- get artist
+        	artist = escape_xml(current.artist)
+        	if artist == nil then artist = "[n/a]" end
+        	
+        	-- get title
+        	title = escape_xml(current.title)
+        	if title == nil then 
+        		title = string.gsub(escape_xml(current.file), ".*/", "")
+        		if title == nil then title = "[n/a]" end
+        	end
+        
+        	-- Put the text in the widget
+        	widget.text = string.format("%s%s%s - %s", blue1_col, title, null_col, artist)
+        
+        else
+        	widget.text = ' MPD is closed '
+        end
 
 end
 -- Start mpd widget
@@ -233,7 +268,7 @@ for s = 1, screen.count() do
     mylayoutbox[s]:buttons(awful.util.table.join(
         awful.button({ }, 1, function () awful.layout.inc(layouts, 1) end),
         awful.button({ }, 3, function () awful.layout.inc(layouts, -1) end)
-	))
+        ))
     --// Taglist //
     mytaglist[s] = awful.widget.taglist(s, awful.widget.taglist.label.all, mytaglist.buttons)
     --// I Wibox 
@@ -242,24 +277,26 @@ for s = 1, screen.count() do
     mywibox[s].widgets = {
         {
             mylauncher, 
-	    mytaglist[s], 
-	    mpdicon, mpdwidget,
+            mytaglist[s], 
+            mpdicon, mpdwidget,
             layout = awful.widget.layout.horizontal.leftright
         },
         mylayoutbox[s], sep,
-	mytextclock, sep,
+        mytextclock, sep,
 --        datewidget, sep,
-	systray, sep,
+--        weatherwidget, sep,
+        forecast, sep,
+        systray, sep,
         volumetext, volicon, sep,   
 --        batwidget, baticon, sep,
-	memwidget, memicon, sep,
+        memwidget, memicon, sep,
         cpuperc, cpuicon, sep, 
         netwidget, ----neticon,
         layout = awful.widget.layout.horizontal.rightleft
     }
---	mywibox[s].border_width = "1"
---	mywibox[s].border_color = "#3d5454"
---	mywibox[s].width = "1364"
+--      mywibox[s].border_width = "1"
+--      mywibox[s].border_color = "#3d5454"
+--      mywibox[s].width = "1364"
     --//
 
 end
