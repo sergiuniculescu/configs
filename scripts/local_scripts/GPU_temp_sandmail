@@ -1,0 +1,20 @@
+#!/bin/bash
+
+
+#variabile
+
+temp_placa=$(aticonfig --odgt > /tmp/ati.txt; tail -1 /tmp/ati.txt |awk '{print $(NF-1)}') #fixed
+temp_alerta=74.99
+temp_critica=80.01
+
+#script
+
+if [ $(echo "$temp_placa >  $temp_alerta" | bc) -eq 1 ] ; then
+        if [ $(echo "$temp_placa < $temp_critica" | bc) -eq 1 ]; then
+                              echo "Temperatura a atins $temp_placa° C!" | sendEmail -f adresa1 -s smtp.rdslink.ro -t adresa2 -u Alertă -m "Temperatura a atins $temp_placa° C!" "Alerta temperatura"
+        else
+                echo "Temperatura a atins $temp_placa° C! PC-ul se va inchide!" | sendEmail -f adresa1 -s smtp.rdslink.ro -t adresa2 -u Alertă critică,sistemul se va închide -m "Temperatura a atins $temp_placa° C!" "Alerta temperatura"
+       sleep 10 ;
+       echo "passwd" | sudo -S reboot
+        fi
+fi
