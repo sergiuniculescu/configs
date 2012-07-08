@@ -50,6 +50,31 @@ function new()
 
 	end
 
+	for i, program in ipairs(utils.parse_dir('/home/sergiu/.local/share/applications/')) do
+
+		-- check whether to include in the menu
+		if program.show and program.Name and program.cmdline then
+			local target_category = nil
+			if program.categories then
+				for _, category in ipairs(program.categories) do
+					if programs[category] then
+						target_category = category
+						break
+					end
+				end
+			end
+			if not target_category then
+				target_category = 'Other'
+			end
+			if target_category then
+				table.insert(programs[target_category], { program.Name, program.cmdline })
+				--table.insert(programs[target_category], { program.Name, program.cmdline, nil})
+			end
+		end
+
+	end
+
+
 	local menu = {
 		{ "Accessories", programs["Utility"], },
 		{ "Development", programs["Development"], },

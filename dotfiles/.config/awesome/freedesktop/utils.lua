@@ -10,7 +10,7 @@ module("freedesktop.utils")
 home = os.getenv("HOME")
 terminal = 'urxvtc'
 
-icon_theme = "gnome"
+icon_theme = "faenza"
 
 all_icon_sizes = { 
 --    'scalable',

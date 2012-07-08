@@ -50,7 +50,7 @@ alias gitc="git commit -av ; git push -u origin master"
 
 
 # alias system clean:
-alias clean='yaourt -Rnc $(pacman -Qqdt) && sudo pacman -Sc && sudo pacman-optimize'
+alias clean='sudo pacman -Sc && sudo pacman-optimize'
 alias bb="sudo bleachbit --clean system.cache system.localizations system.trash system.tmp"
 alias cc="sudo cacheclean -p 2"
 
