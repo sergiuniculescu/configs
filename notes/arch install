@@ -2098,11 +2098,38 @@ cat /proc/cpuinfo   # CPU
 udevadm monitor  #pentru a vedea procesul montarii automate
 
 
+### systemd ###
+pacman -S systemd systemd-sysvcompat systemd-arch-units
+
+vim /etc/hostname
+sergiu-desktop
+
+vim /etc/vconsole.conf
+KEYMAP=us
+FONT=lat9w-16
+FONT_MAP=8859-1_to_uni
+
+vim/etc/locale.conf
+LANG=en_US.UTF-8
+LC_ALL=
+LC_COLLATE=C
+
+/etc/timezone
+Europe/Bucharest
 
 
+systemctl enable kdm/gdm/slim/lxdm.service
+systemctl enable cronie.service
+systemctl enable dbus.service
+systemctl enable wicd.service
+systemctl enable dhcpcd@.service
 
 
+systemd-analyze
+systemd-analyze blame
+systemd-analyze plot > plot.svg
 
+systemctl enable systemd-readahead-collect.service systemd-readahead-replay.service
 
 
 
