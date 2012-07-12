@@ -25,7 +25,7 @@ terminal = "urxvtc"
 -- terminal2 = "xterm"
 cli_editor = "vim"
 gui_editor = "medit"
-browser = "firefox"
+browser = "chromium"
 gui_fm = "pcmanfm"
 cli_fm = terminal .. " -g 100x50 -e ranger"
 instant_messenger = terminal .. ' -title "Finch" -e finch'
@@ -129,7 +129,8 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, altkey }, "f", function () exec(gui_fm) end),
     awful.key({ modkey, altkey }, "n", function () exec("nitrogen --sort=alpha") end),
     awful.key({ modkey, altkey }, "a", function () exec(terminal .. " -e alsamixer", false) end),
-    awful.key({ }, "XF86PowerOff", function () exec("sudo poweroff", false) end),
+    awful.key({ }, "XF86PowerOff", function () exec("systemctl poweroff", false) end),
+    -- awful.key({ }, "XF86PowerOff", function () exec("sudo poweroff", false) end),
     -- awful.key({ }, "XF86PowerOff", function () exec("sudo pm-hibernate", false) end),
     awful.key({ }, "Print", function () awful.util.spawn("scrot -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'") end),
 
@@ -262,7 +263,7 @@ awful.rules.rules = {
                         size_hints_honor = true }, },
    -- { rule = { class = 'URxvt' },
      --   properties = { size_hints_honor = false, tag = tags [1][1] }, },
-    { rule = { class = "Firefox" },
+    { rule = { class = "Chromium" },
         properties = { tag = tags[1][2] }, },
     { rule = { class = "Pidgin" },
         properties = { tag = tags[1][3] }, },

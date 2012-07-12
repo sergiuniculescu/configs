@@ -111,6 +111,28 @@ c1:2345:respawn:/sbin/agetty -8 -s 38400 tty1 linux
 devine:
 c1:2345:respawn:/sbin/agetty -a USERNAME -8 -s 38400 tty1 linux
 
+
+# Autologin in systemd #
+
+cp /usr/lib/systemd/system/getty@.service /etc/systemd/system/autologin@.service
+ln -s /etc/systemd/system/autologin@.service /etc/systemd/system/getty.target.wants/getty@tty1.service
+
+vim /etc/systemd/system/autologin@.service
+____________________________________________
+[Service]
+...
+ExecStart=-/sbin/agetty -a USERNAME %I 38400
+...
+[Install]
+Alias=getty.target.wants/getty@tty1.service
+
+Restart=no
+____________________________________________
+
+systemctl daemon-reload
+systemctl start getty@tty1.service
+
+
 ______________________________________________________________________
 
 ### INSTALL GNOME 3 ###
@@ -1422,6 +1444,8 @@ LD_PRELOAD=/usr/lib/libv4l/v4l1compat.so skype
 sau
 LD_PRELOAD=/usr/lib/libv4l/v4l2convert.so skype
 
+pentru 64bit
+LD_PRELOAD=/usr/lib32/libv4l/v4l1compat.so skype
 
 ### Blowfish encryption ###
 yaourt -S bcrypt
@@ -2130,6 +2154,18 @@ systemd-analyze blame
 systemd-analyze plot > plot.svg
 
 systemctl enable systemd-readahead-collect.service systemd-readahead-replay.service
+
+
+### e4rat ###
+pacman -S e4rat
+
+vim /boot/grub/menu.lst
+kernel /vmlinuz0linux root=/dev/disk/by-label/ARCH init=/sbin/e4rat-collect ro
+
+reboot
+
+vim /boot/grub/menu.lst
+kernel /vmlinuz0linux root=/dev/disk/by-label/ARCH init=/sbin/e4rat-preload ro
 
 
 
