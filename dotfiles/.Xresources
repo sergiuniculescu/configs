@@ -28,7 +28,7 @@ URxvt.perl-ext-common:  default,matcher,url-select,vtwheel,keyboard-select,clipb
 
 ! Clickable URLs:
 URxvt.keysym.M-u:    perl:url-select:select_next
-URxvt.urlLauncher:   /usr/bin/firefox
+URxvt.urlLauncher:   /usr/bin/chromium
 URxvt.underlineURLs: true
 URxvt.matcher.button:   1
 URxvt.keysym.C-Delete:  perl:matcher:last
