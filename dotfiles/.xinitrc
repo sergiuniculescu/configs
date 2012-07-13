@@ -1,5 +1,5 @@
 #
-#!/bin/sh
+#!/bin/zsh
 #
 # ~/.xinitrc
 #
