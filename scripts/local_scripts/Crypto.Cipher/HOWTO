@@ -1,0 +1,46 @@
+What actually Crypper is?
+
+Crypper is a small (and useless) utility for those of you who want to encode/decode text based on a passphrase.
+It's actually made of 2 scripts, one encoding and one decoding. The passphrase file stores the passphrase you are using to encode/decode.
+
+
+Why should I use Crypper?
+
+Just for fun. Or maybe you want to send a codified message to your friend.
+Or let's say you have a list of porn sites you want to visit but you can't save the links in plain text. :P
+In either cases, Crypper is fun.
+
+
+How to use the scripts.
+
+First you have to choose a passphrase. The passphrase must be 16, 24 or 32 characters long!
+Basically all you have to do is to edit the file passphrase and enter one of your own.
+The default passphrase is 1234567887654321.
+
+
+Why is the passphrase so important?
+The hash is generated and then decoded using the passphrase set up in the file.
+For a different passphrase, the same text has another hash. It's basically how decoding works.
+It's like the little game in your childhood when you set up with your friends your "secret language":
+
+Ex:
+1=a, 2=b, 3=c, etc. 
+
+You could also rotate the alphabet making your "secret language" look like this:
+1=z, 2=y, 3=x, etc.
+
+The above numeric coding is how the passphrase, encoding and decoding works. Well, not just like that, but theoretically.
+You encode your string using a secret passphrase. Everyone who knows your secret passphrase could also decode the encoded string.
+Let's move on.
+
+How to encode?
+
+In a terminal open encode.py. You will be prompted to enter the text you want to encode. 
+After you've finised entering it, press enter key, then strike Ctrl+D to generate the hash.
+You can send the hash to your friend, store it somewhere, etc.
+
+
+How to decode?
+
+In a terminal open decode.py. You will be prompted to enter the hash. 
+Press enter after pasting the hash and you will see the decoded text.
