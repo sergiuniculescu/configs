@@ -25,7 +25,7 @@ terminal = "urxvtc"
 -- terminal2 = "xterm"
 cli_editor = "vim"
 gui_editor = "medit"
-browser = "chromium"
+browser = "firefox"
 gui_fm = "pcmanfm"
 cli_fm = terminal .. " -g 100x50 -e ranger"
 instant_messenger = terminal .. ' -title "Finch" -e finch'
@@ -263,7 +263,7 @@ awful.rules.rules = {
                         size_hints_honor = true }, },
    -- { rule = { class = 'URxvt' },
      --   properties = { size_hints_honor = false, tag = tags [1][1] }, },
-    { rule = { class = "Chromium" },
+    { rule = { class = "Firefox" },
         properties = { tag = tags[1][2] }, },
     { rule = { class = "Pidgin" },
         properties = { tag = tags[1][3] }, },

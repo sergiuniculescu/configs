@@ -791,7 +791,7 @@ pacman -Syy
 
 # DOWNGRADE #
 pacman -Suu
-sau download ‘downgrade’ din AUR
+sau download ���downgrade��� din AUR
 
 # Pachete instalate din AUR #
 pacman -Qm
@@ -824,6 +824,9 @@ whoneeds nume_pachet  # whoneeds se afla in pkgtools
 
 # Pentru a downloada un pachet fara sa fie instalat #
 pacman -Sw nume_pachet
+
+# Pentru a vedea pachetele cu probleme, corupte, incomplete #
+pacman -Qk
 
 # Cautare fisiere .pacnew #
 pacman -S vim
@@ -1092,10 +1095,10 @@ if ${use_color} ; then
 
 	if [[ ${EUID} == 0 ]] ; then
 #PS1='\[\033[01;31m\]\h\[\033[01;34m\] \W \$\[\033[00m\] '
-		PS1='\[\033[0;37m\]┌─[ \[\033[0m\033[01;31m\]\u\[\033[0m\] \[\033[0m\033[0;36m\]\[@\]\[\033[0m\] \[\033[01;31m\]\h\[\033[0m\033[0;37m\] ] - [ \[\033[0m\033[01;34m\]\w\[\033[0;37m\] ]\n\[\033[0;37m\]└─[\[\033[0m\033[01;31m\]\$\[\033[0m\033[0;37m\]]>\[\033[0m\] '
+		PS1='\[\033[0;37m\]������[ \[\033[0m\033[01;31m\]\u\[\033[0m\] \[\033[0m\033[0;36m\]\[@\]\[\033[0m\] \[\033[01;31m\]\h\[\033[0m\033[0;37m\] ] - [ \[\033[0m\033[01;34m\]\w\[\033[0;37m\] ]\n\[\033[0;37m\]������[\[\033[0m\033[01;31m\]\$\[\033[0m\033[0;37m\]]>\[\033[0m\] '
 	else
 #PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\] '
-		PS1='\[\033[0;37m\]┌─[ \[\033[0m\033[01;32m\]\u\[\033[0m\] \[\033[0m\033[0;36m\]\[@\]\[\033[0m\] \[\033[01;32m\]\h\[\033[0m\033[0;37m\] ] - [ \[\033[0m\033[01;34m\]\w\[\033[0;37m\] ]\n\[\033[0;37m\]└─[\[\033[0m\033[01;33m\]\$\[\033[0m\033[0;37m\]]>\[\033[0m\] '
+		PS1='\[\033[0;37m\]������[ \[\033[0m\033[01;32m\]\u\[\033[0m\] \[\033[0m\033[0;36m\]\[@\]\[\033[0m\] \[\033[01;32m\]\h\[\033[0m\033[0;37m\] ] - [ \[\033[0m\033[01;34m\]\w\[\033[0;37m\] ]\n\[\033[0;37m\]������[\[\033[0m\033[01;33m\]\$\[\033[0m\033[0;37m\]]>\[\033[0m\] '
 	fi
 
 	alias ls='ls --color=auto'
@@ -1574,7 +1577,7 @@ cryptsetup -c aes-xts-plain -s 512 luksFormat /dev/sda3 /path/to/mykeyfile
 cryptsetup -c aes-xts-plain -s 512 luksFormat /dev/sda4 /path/to/mykeyfile
 
 - Adding Additional Passphrases or Keyfiles to a LUKS Encrypted Partition 
-Once an encrytped partition has been created, the initial key is associated at slot 0. Additional keys will occupy slots 1–7:
+Once an encrytped partition has been created, the initial key is associated at slot 0. Additional keys will occupy slots 1���7:
 cryptsetup luksAddKey /dev/sda3 /path/to/mykeyfile2
 
 4.2 Storing the Key File on External Storage on a FAT formatted USB Drive
@@ -1633,11 +1636,11 @@ ________________________________________________________________________________
 
 # mc #
 pacman -S mc
-Skin-urile pentru mc se găsesc în /usr/share/mc/skins
-Automat mc pornește cu skin-ul implicit, cel definit in “default.ini”
+Skin-urile pentru mc se g��sesc ��n /usr/share/mc/skins
+Automat mc porne��te cu skin-ul implicit, cel definit in ���default.ini���
 mc -S nume_tema  #Pentru a incerca alt skin
-Pentru a seta mc să pornească automat cu tema preferată:
-cp -rf /usr/share/mc/skins ~/.mc/skins  # acesta va fi răsfoit inainte sa caute in /usr/share/mc/skins. 
+Pentru a seta mc s�� porneasc�� automat cu tema preferat��:
+cp -rf /usr/share/mc/skins ~/.mc/skins  # acesta va fi r��sfoit inainte sa caute in /usr/share/mc/skins. 
 cp -rf /usr/share/mc/skins /root/.mc/skins  #pentru a schimba si tema de root	
 
 sau
@@ -1736,10 +1739,10 @@ fbi ~/Pictures/*.jpg
 pacman -S fbida
 fbgs -c -a fisier.pdf   # -c afiseaza documentul in culori, -a autozoom
 
-Toate opțiunile fbi sunt valabile și pentru fbgs. 
-Cu +/- mărim/micșorăm dimensiunea paginii, cu săgețile sus/jos derulăm pagina curentă, 
-Page Up/Page Down derulează paginile documentului pdf, 
-q închidem.
+Toate op��iunile fbi sunt valabile ��i pentru fbgs. 
+Cu +/- m��rim/mic��or��m dimensiunea paginii, cu s��ge��ile sus/jos derul��m pagina curent��, 
+Page Up/Page Down deruleaz�� paginile documentului pdf, 
+q ��nchidem.
 
 # Screenshot in TTY #
 pacman -S fbgrab
@@ -1753,21 +1756,21 @@ pacman -S re-alpine
 pacman -S moc
 
 mocp	  # pornire moc;
-p / Space # pauză/repornire;
-q         # trimite playerul în background(fundal) lăsând consola liberă pentru comenzi;
-o         # redă URL (de exemplu un post de radio online);
-Q         # închide moc;
-s         # stop/oprește redarea;
-l (L mic) # schimbă aspectul pe una sau două coloane (layout);
-Shift+t   # schimbare temă;
-<         # micșorare volum;
->         # creștere volum;
-l         # schimbă între fereastră cu unu sau două panouri;
-mocp -p   # pornește redarea unui playlist.
+p / Space # pauz��/repornire;
+q         # trimite playerul ��n background(fundal) l��s��nd consola liber�� pentru comenzi;
+o         # red�� URL (de exemplu un post de radio online);
+Q         # ��nchide moc;
+s         # stop/opre��te redarea;
+l (L mic) # schimb�� aspectul pe una sau dou�� coloane (layout);
+Shift+t   # schimbare tem��;
+<         # mic��orare volum;
+>         # cre��tere volum;
+l         # schimb�� ��ntre fereastr�� cu unu sau dou�� panouri;
+mocp -p   # porne��te redarea unui playlist.
 
 # theme pentru moc #
 cp /usr/share/doc/moc/config.example  ~/.moc/config
-#XTermTheme	= transparent-background  # decomentam aceasta linie și înlocuim tema transparent-background, sau ce temă e trecută, cu tema dorită.
+#XTermTheme	= transparent-background  # decomentam aceasta linie ��i ��nlocuim tema transparent-background, sau ce tem�� e trecut��, cu tema dorit��.
 # Layout1 = "playlist:50%,50%,50%,50%"    # decomentam aceasta linie pentru a avea o singura coloana in moc
 
 mocp http://stream.profm.ro:8012/profm.mp3  # pentru a asculta un post radio
@@ -1781,7 +1784,7 @@ mplayer -zoom -x 800 -y 600 video.avi  # pentru a viziona la o anumita dimensiun
 pacman -S vlc
 
 cvlc http://link.com/
-cvlc  home/user/Music/Videoclipuri/fișierul_dorit
+cvlc  home/user/Music/Videoclipuri/fi��ierul_dorit
 
 
 # Scris CD/DVD-uri #
@@ -1848,43 +1851,43 @@ pacman -S transmission-cli
 # Vim #
 Shortcuts:
 
-i	→ Insert mode. Type ESC to return to Normal mode.
-v	→ Visual mode
-/	→ Search forward. n - repeat forward, N - repeat backward
-?	→ Search backward. n - repeat forward, N - repeat backward
-:set ignorecase → case insensitive
-:set smartcase  → use case if any caps used
-x	→ Delete the char under the cursor
-dd	→ Delete (and copy) current line
-yy	→ copy current line, easier but equivalent to ddP
-p	→ Paste
-P	→ paste before, remember p is paste after current position.
-u	→ undo
-<C-r>	→ redo
-:wq	→ Save and Quit (:w save, :q quit)
-:q!	→ quit without saving, also :qa! to even if there are some modified hidden buffers.
+i	��� Insert mode. Type ESC to return to Normal mode.
+v	��� Visual mode
+/	��� Search forward. n - repeat forward, N - repeat backward
+?	��� Search backward. n - repeat forward, N - repeat backward
+:set ignorecase ��� case insensitive
+:set smartcase  ��� use case if any caps used
+x	��� Delete the char under the cursor
+dd	��� Delete (and copy) current line
+yy	��� copy current line, easier but equivalent to ddP
+p	��� Paste
+P	��� paste before, remember p is paste after current position.
+u	��� undo
+<C-r>	��� redo
+:wq	��� Save and Quit (:w save, :q quit)
+:q!	��� quit without saving, also :qa! to even if there are some modified hidden buffers.
 
 
-:e <path/to/file> → open
-:w	→ save
-:saveas <path/to/file> → save to <path/to/file>
-:x, ZZ or :wq → save and quit (:x only save if necessary)
-.	→ (dot) will repeat the last command 
-2dd	→ will delete 2 lines
-3p	→ will paste the text 3 times
-gg	→ shortcut for 1G, go to the start of the file
-G	→ Go to last line
-w	→ go to the start of the following word,
-e	→ go to the end of this word.
+:e <path/to/file> ��� open
+:w	��� save
+:saveas <path/to/file> ��� save to <path/to/file>
+:x, ZZ or :wq ��� save and quit (:x only save if necessary)
+.	��� (dot) will repeat the last command 
+2dd	��� will delete 2 lines
+3p	��� will paste the text 3 times
+gg	��� shortcut for 1G, go to the start of the file
+G	��� Go to last line
+w	��� go to the start of the following word,
+e	��� go to the end of this word.
 
-For example : 0y$
-0	→ go to the beginning of this line
-y	→ yank from here
-$	→ up to the end of this line
+For example��: 0y$
+0	��� go to the beginning of this line
+y	��� yank from here
+$	��� up to the end of this line
 
-ye	→ yank from here to the end of the word
-t,	→ go just before the character ,
-dt"	→ remove everything until the "
+ye	��� yank from here to the end of the word
+t,	��� go just before the character ,
+dt"	��� remove everything until the "
 
 
 ____________________________________________________________              
@@ -2167,6 +2170,33 @@ reboot
 vim /boot/grub/menu.lst
 kernel /vmlinuz0linux root=/dev/disk/by-label/ARCH init=/sbin/e4rat-preload ro
 
+
+### zsh ###
+pacman -S zsh
+
+# Making Zsh your default shell
+chsh -s $(which zsh)  # executat ca user normal
+
+
+### chroot ###
+mkdir /mnt/arch
+mount /dev/sda3 /mnt/arch
+
+cd /mnt/arch
+mount -t proc proc proc/
+mount -t sysfs sys sys/
+mount -o bind /dev dev/
+mount -t devpts pts dev/pts/
+mount /dev/sda1 boot/
+cp -L /etc/resolv.conf etc/resolv.conf
+chroot . /bin/bash
+
+# Exiting chroot
+exit
+umount {proc,sys,dev,boot...}
+cd ..
+umount arch/
+umount -f /mnt
 
 
 
