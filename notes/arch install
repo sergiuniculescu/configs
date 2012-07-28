@@ -2199,4 +2199,15 @@ umount arch/
 umount -f /mnt
 
 
+### Install GRUB2 ###
+pacman -S grub-bios
+
+modprobe dm-mod
+grub-install --target=i386-pc --recheck --debug /dev/sda
+mkdir -p /boot/grub/locale
+cp /usr/share/locale/en\@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo
+
+grub-mkconfig -o /boot/grub/grub.cfg
+
+
 
