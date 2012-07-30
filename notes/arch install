@@ -1,7 +1,25 @@
-### INSTALL ARCH ###
-/arch/setup
+### Arch new install ###
 
-### CONFIGURE NETWORK ###
+# create partitions
+cfdisk  
+
+# format partitions
+mkfs -t ext2 /dev/sda1
+mkswap /dev/sda2
+mkfs -t ext4 /dev/sda3
+mkfs -t ext4 /dev/sda4
+
+# mount the partitions
+mount /dev/sda3 /mnt
+mkdir /mnt/{boot,home}
+mount /dev/sda1 /mnt/boot
+mount /dev/sda4 /mnt/home
+swapon /dev/sda2
+
+# connect to the internet 
+
+# ETH0 #
+dhcpcd eth0
 
 # DSL #
 <Alt+F2> - login as root
@@ -10,7 +28,6 @@ pppoe-start   #  pornesti conexiunea
 pppoe-status  #  verifici daca merge
 Ca sa nu faci pasii astia la fiecare bootare editezi "/etc/rc.conf" si adaugi la sectiunea DAEMONS "adsl"
 <Alt+F1> - return to install menu
-
 
 # WIRELESS #  (exemplu cu wlan0 si ESSID "linksys")
 <Alt+F3> - login as root
@@ -46,10 +63,56 @@ iwconfig wlan0 channel auto  # If you get an timeout error due to a waiting for 
 ping -c 3 www.google.com  # pentru a verifica
 <Alt+F1> - return
 
+# install the base system 
+nano /etc/pacman.d/mirrorlist # edit fastest mirror
 
-# /etc/locale.gen #
+pacstrap /mnt base base-devel systemd systemd-sysvcompat systemd-arch-units sudo
+
+# install GRUB
+pacstrap /mnt grub-bios
+
+# configure system
+genfstab -p /mnt >> /mnt/etc/fstab
+
+arch-chroot /mnt
+
+nano /etc/hostname
+sergiu-desktop
+
+ln -s /usr/share/zoneinfo/Europe/Bucharest /etc/localtime
+
+vim /etc/locale.conf
+LANG=en_US.UTF-8
+LC_ALL=
+LC_COLLATE=C
+
+vim /etc/vconsole.conf
+KEYMAP=us
+FONT=lat9w-16
+FONT_MAP=8859-1_to_uni
+
+# Uncomment the selected locale in /etc/locale.gen
 en_US ISO-8859-1
 en_US.UTF-8
+
+locale-gen  # generate locale
+
+#Configure /etc/mkinitcpio.conf
+mkinitcpio -p linux
+
+# Configure the bootloader
+modprobe dm-mod
+grub-install --target=i386-pc --recheck --debug /dev/sda
+mkdir -p /boot/grub/locale
+cp /usr/share/locale/en\@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo
+grub-mkconfig -o /boot/grub/grub.cfg
+
+passwd  # to set a root password
+
+If you are still in the chroot environment type exit or press Ctrl+D in order to exit.
+umount /mnt/{boot,home,}
+
+reboot
 
 _______________________
 
