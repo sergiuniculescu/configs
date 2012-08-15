@@ -125,7 +125,7 @@ class CustomApplications(Applications):
 		if f.video:
 			if f.video:
 				c.flags += 'd'
-			return self.either(c, 'smplayer', 'mplayer', 'vlc', 'totem')
+			return self.either(c, 'smplayer', 'vlc', 'mplayer', 'totem')
 
 		if f.audio:
 			if f.audio:

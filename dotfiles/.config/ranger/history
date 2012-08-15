@@ -1,26 +1,7 @@
-mkdir y
-mkdir bkp
-mkdir tmp
-rename backup
-rename .vimrc2
-open_with feh
-rename Box
-open_with vlc
-open_with mplayer
-delete seriously?  
-rename msvcr80.dll.bkp
-rename msvcr80.dll
-search mscms
-rename Marco Bayley - Caliente (Original Mix).mp3
-search lzo
-delete seriously? 
-open_with sxiv
 open_with sxiw
 open_with mirage
-touch 
 open_with zathura
 rename National_Georgaphic
-open_with 
 rename 01.jpg
 rename 02.jpg
 rename 03.jpg
@@ -32,7 +13,6 @@ rename 08.jpg
 rename 09.jpg
 rename 10.jpg
 010.jpg
-
 rename 010.jpg
 rename 011.jpg
 rename 012.jpg
@@ -45,6 +25,26 @@ rename 018.jpg
 rename 019.jpg
 rename 020.jpg
 rename National_Geographic
-delete seriously? y
 delete
 rename Photoshop.desktop
+open_with wine
+rename weather.lua
+open_with vlc
+open_with aunpack
+ 
+rename .loki
+open_with mplayer
+open_with smplayer
+open_with ncmpcpp
+mkdir Limbo
+touch 
+
+mkdir Crypto.Chipper
+rename Crypto.Cipher
+delete seriously? 
+rename jispowoso2.zsh-theme
+rename jispwoso2.zsh-theme
+rename xiong-chiamiov-custom.zsh-theme
+open_with vim
+delete seriously? y
+open_with 

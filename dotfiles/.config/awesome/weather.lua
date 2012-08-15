@@ -11,7 +11,7 @@ module('weather')
 
 function update(widget, data_points)
   -- Grab google weather data
-  url = "http://www.google.com/ig/api?weather=Buzău"
+  url = "http://www.google.com/ig/api?weather=Buzau"
   local data = http.request(url)
 
   -- Only snag current conditions

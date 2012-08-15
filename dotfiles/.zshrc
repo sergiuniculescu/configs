@@ -5,8 +5,16 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-#ZSH_THEME="robbyrussell"
-ZSH_THEME="xiong-chiamiov"
+ZSH_THEME="xiong-chiamiov-custom"
+#ZSH_THEME="xiong-chiamiov"
+#ZSH_THEME="cypher"
+#ZSH_THEME="imajes"
+#ZSH_THEME="jispwoso2"
+#ZSH_THEME="obraun"
+#ZSH_THEME="suvash"
+#ZSH_THEME="rkj"
+#ZSH_THEME="pygmalion"
+
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -30,7 +38,7 @@ ZSH_THEME="xiong-chiamiov"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git archlinux custom)
+plugins=(archlinux custom)
 
 source $ZSH/oh-my-zsh.sh
 

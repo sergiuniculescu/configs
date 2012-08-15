@@ -2,6 +2,9 @@
 # ~/.bashrc
 #
 
+# language
+export LANG=en_US.UTF-8
+
 
 # default editor
 export EDITOR=vim
@@ -10,8 +13,9 @@ export VISUAL=vim
 
 # completion:
 set show-all-if-ambiguous on
-complete -cf sudo
-complete -cf man
+set show-all-if-unmodified on
+#complete -cf sudo
+#complete -cf man
 
 
 # find packages commands:
@@ -104,18 +108,26 @@ dirsize ()
 archey3
 
 # start X:
-##################
-if [[ -z $DISPLAY && ! -e /tmp/.X11-unix/X0 ]] && (( EUID )); then
-  while true; do
-    read -p 'Start X? (y/n): '
-    case $REPLY in
-      [Yy]) exec startx ;;
-      [Nn]) break ;;
-      *) printf '%s\n' 'Answer y or n.' ;;
-    esac
-  done
-fi
+###################
+## with a prompt ##
+
+#if [[ -z $DISPLAY && ! -e /tmp/.X11-unix/X0 ]] && (( EUID )); then
+#  while true; do
+#    read -p 'Start X? (y/n): '
+#    case $REPLY in
+#      [Yy]) exec startx ;;
+#      [Nn]) break ;;
+#      *) printf '%s\n' 'Answer y or n.' ;;
+#    esac
+#  done
+#fi
 #################
+
+## autostart ##
+if [[ -z $DISPLAY ]] && ! [[ -e /tmp/.X11-unix/X0 ]] && (( EUID )); then
+      exec startx
+fi
+###############
 
 
 # scripturi locale:

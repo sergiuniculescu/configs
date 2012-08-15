@@ -2188,6 +2188,10 @@ cat /proc/cpuinfo   # CPU
 udevadm monitor  #pentru a vedea procesul montarii automate
 
 
+# Shared libraries #
+ldd /bin/bash
+
+
 ### systemd ###
 pacman -S systemd systemd-sysvcompat systemd-arch-units
 
