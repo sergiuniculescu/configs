@@ -29,7 +29,6 @@ delete
 rename Photoshop.desktop
 open_with wine
 rename weather.lua
-open_with vlc
 open_with aunpack
  
 rename .loki
@@ -46,5 +45,6 @@ rename jispowoso2.zsh-theme
 rename jispwoso2.zsh-theme
 rename xiong-chiamiov-custom.zsh-theme
 open_with vim
-delete seriously? y
 open_with 
+open_with vlc
+delete seriously? y

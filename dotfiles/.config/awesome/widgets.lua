@@ -7,7 +7,8 @@ require("freedesktop.menu")
 require("volume")
 require("mpd")
 require("calendar2")
-require("weather")
+--require("weather")
+--require("perceptive")
 
 --beautiful.init("/home/sergiu/.config/awesome/theme.lua")
 beautiful.init("/home/sergiu/.config/awesome/theme2.lua")
@@ -79,6 +80,10 @@ mytextclock = awful.widget.textclock({ align = "right" })
 calendar2.addCalendarToWidget(mytextclock)
 
 
+--/// weather widget on text clock ///
+--perceptive.register(mytextclock, 'Buzau Romania')
+
+
 --/// weather widget (require weather-utils) ///
 --weatherwidget = widget({ type = "textbox" })
 --weatherwidget.text = awful.util.pread(
@@ -109,8 +114,8 @@ calendar2.addCalendarToWidget(mytextclock)
 
 
 --/// Weather widget ///
-forecast = widget({ type = "textbox", name = "weather" })
-weather.register(forecast)
+--forecast = widget({ type = "textbox", name = "weather" })
+--weather.register(forecast)
 
 
 --/// CPU widget ///
@@ -285,7 +290,7 @@ for s = 1, screen.count() do
         mytextclock, sep,
 --        datewidget, sep,
 --        weatherwidget, sep,
-        forecast, sep,
+--        forecast, sep,
         systray, sep,
         volumetext, volicon, sep,   
 --        batwidget, baticon, sep,

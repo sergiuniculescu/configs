@@ -25,7 +25,7 @@ terminal = "urxvtc"
 -- terminal2 = "xterm"
 cli_editor = "vim"
 gui_editor = "medit"
-browser = "firefox"
+browser = "chromium"
 gui_fm = "pcmanfm"
 cli_fm = terminal .. " -g 100x50 -e ranger"
 instant_messenger = terminal .. ' -title "Finch" -e finch'
@@ -108,10 +108,10 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,         }, "o",     awful.client.urgent.jumpto),
 
     -- Program shortcuts
-    awful.key({ modkey, altkey }, "t", function () exec("tv-maxe", false) end),
-    awful.key({ modkey, }, "t", function () exec(tvmaxe, false) end),
+    awful.key({ modkey, }, "t", function () exec("tv-maxe", false) end),
+--    awful.key({ modkey, }, "t", function () exec(tvmaxe, false) end),
     awful.key({ modkey, }, "x", function () exec(terminal) end),
-    awful.key({ modkey  }, "z", function () awful.util.spawn("dmenu_run") end),
+    awful.key({ modkey, }, "z", function () awful.util.spawn("dmenu_run") end),
     awful.key({ modkey, }, "w", function () exec(browser) end),
     awful.key({ modkey, }, "f", function () exec(cli_fm) end),
     awful.key({ modkey, }, "v", function () exec(media_player) end),
@@ -263,7 +263,7 @@ awful.rules.rules = {
                         size_hints_honor = true }, },
    -- { rule = { class = 'URxvt' },
      --   properties = { size_hints_honor = false, tag = tags [1][1] }, },
-    { rule = { class = "Firefox" },
+    { rule = { class = "Chromium" },
         properties = { tag = tags[1][2] }, },
     { rule = { class = "Pidgin" },
         properties = { tag = tags[1][3] }, },
