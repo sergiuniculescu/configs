@@ -4,7 +4,7 @@ require("awful.rules")
 require("awful.autofocus")
 require("awful.startup_notification")
 require("beautiful")
-require("vicious")
+vicious = require("vicious")
 require("freedesktop.utils")
 require("freedesktop.menu")
 require("widgets")
@@ -356,7 +356,7 @@ end
 ---run_once("dropboxd")
 -- Use the second argument, if the programm you wanna start, 
 -- differs from the what you want to search.
-run_once("redshiftgui")
 run_once("urxvtd")
 run_once("dropboxd")
+run_once("devmon")
 -- }}}

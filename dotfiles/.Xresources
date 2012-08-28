@@ -23,7 +23,7 @@ URxvt.font: xft:Terminus:bold:pixelsize=14
 
 
 ! Perl extensions:
-URxvt.perl-ext-common:  default,matcher,url-select,vtwheel,keyboard-select,clipboard
+URxvt.perl-ext-common:  default,matcher,url-select,vtwheel,keyboard-select
 
 
 ! Clickable URLs:
