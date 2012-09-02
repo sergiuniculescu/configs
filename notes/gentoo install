@@ -1,0 +1,62 @@
+######################
+### Gentoo install ###
+######################
+
+# connect to the internet
+/sbin/ifconfig
+net-setup eth0
+ifconfig
+ping -c3 www.gentoo.org
+
+# create partitions
+cfdisk  
+
+# format partitions
+mkfs -t ext2 /dev/sda1
+mkswap /dev/sda2
+mkfs -t ext4 /dev/sda3
+mkfs -t ext4 /dev/sda4
+
+# mount the partitions
+mount /dev/sda3 /mnt/gentoo
+mkdir /mnt/gentoo/{boot,home}
+mount /dev/sda1 /mnt/gentoo/boot
+mount /dev/sda4 /mnt/gentoo/home
+swapon /dev/sda2
+
+# Installing a Stage Tarball
+date # check your date/time
+
+# Downloading the Stage Tarball
+cd /mnt/gentoo
+links http://www.gentoo.org/main/en/mirrors.xml
+
+# Unpacking the Stage Tarball
+tar xvjpf stage3-*.tar.bz2
+
+# Installing Portage
+cd /mnt/gentoo
+links http://www.gentoo.org/main/en/mirrors.xml  # download portage-latest.tar.bz2
+tar xvjf /mnt/gentoo/portage-latest.tar.bz2 -C /mnt/gentoo/usr
+
+### Installing the Gentoo Base System ###
+mirrorselect -i -o >> /mnt/gentoo/etc/portage/make.conf
+mirrorselect -i -r -o >> /mnt/gentoo/etc/portage/make.conf
+cp -L /etc/resolv.conf /mnt/gentoo/etc/
+
+# Mounting the necessary Filesystems
+
+Code Listing 1.4: Mounting /proc and /dev
+mount -t proc none /mnt/gentoo/proc
+mount --rbind /sys /mnt/gentoo/sys
+mount --rbind /dev /mnt/gentoo/dev
+
+# Entering the new Environment
+chroot /mnt/gentoo /bin/bash
+env-update
+>> Regenerating /etc/ld.so.cache...
+source /etc/profile
+export PS1="(chroot) $PS1"
+
+# Configuring Portage
+emerge --sync
