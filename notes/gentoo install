@@ -36,17 +36,24 @@ tar xvjpf stage3-*.tar.bz2
 
 # Installing Portage
 cd /mnt/gentoo
-links http://www.gentoo.org/main/en/mirrors.xml  # download portage-latest.tar.bz2
+links http://www.gentoo.org/main/en/mirrors.xml  # open the snapshots/ directory and download portage-latest.tar.bz2
 tar xvjf /mnt/gentoo/portage-latest.tar.bz2 -C /mnt/gentoo/usr
+
+# Configure portage
+nano -w /mnt/gentoo/etc/portage/make.conf
+_________________________________________
+CFLAGS="-march=native -O2 -pipe"
+CXXFLAGS="${CFLAGS}"
+MAKEOPTS="-J3"
+_________________________________________
 
 ### Installing the Gentoo Base System ###
 mirrorselect -i -o >> /mnt/gentoo/etc/portage/make.conf
 mirrorselect -i -r -o >> /mnt/gentoo/etc/portage/make.conf
+
 cp -L /etc/resolv.conf /mnt/gentoo/etc/
 
 # Mounting the necessary Filesystems
-
-Code Listing 1.4: Mounting /proc and /dev
 mount -t proc none /mnt/gentoo/proc
 mount --rbind /sys /mnt/gentoo/sys
 mount --rbind /dev /mnt/gentoo/dev
@@ -60,3 +67,34 @@ export PS1="(chroot) $PS1"
 
 # Configuring Portage
 emerge --sync
+emerge --oneshot portage
+
+# Choosing the Right Profile
+eselect profile list
+eselect profile set 3
+eselect profile list
+
+# Configuring the USE variable
+less /usr/portage/profiles/use.desc  # Viewing available USE flags
+nano -w /etc/portage/make.conf
+USE="-qt4 -kde alsa"  # add this to make.conf
+
+
+### Configuring the Kernel ###
+
+# Timezone
+cp /usr/share/zoneinfo/Europe/Brussels /etc/localtime
+echo "Europe/Brussels" > /etc/timezone
+
+# Installing the Sources
+emerge gentoo-sources   # emerge ck-sources pentru linux-ck
+ls -l /usr/src/linux    # pentru a verifica
+
+emerge pciutils  # pentru a avea lspci
+lsmod  # pentru a vedea ce module s-au mai incarcat si a ajuta la configurarea manuala
+
+# Default: Manual Configuration
+cd /usr/src/linux
+make menuconfig
+make && make modules_install
+
