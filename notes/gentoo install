@@ -44,7 +44,7 @@ nano -w /mnt/gentoo/etc/portage/make.conf
 _________________________________________
 CFLAGS="-march=native -O2 -pipe"
 CXXFLAGS="${CFLAGS}"
-MAKEOPTS="-J3"
+MAKEOPTS="-j3"
 _________________________________________
 
 ### Installing the Gentoo Base System ###
@@ -75,16 +75,28 @@ eselect profile set 3
 eselect profile list
 
 # Configuring the USE variable
-less /usr/portage/profiles/use.desc  # Viewing available USE flags
+less /usr/portage/profiles/use.desc  # Viewing available global USE flags
+less /usr/portage/profiles/use.local.desc  # Viewing available local USE flags
 nano -w /etc/portage/make.conf
-USE="-qt4 -kde alsa"  # add this to make.conf
+USE="-qt4 -kde"  # add this to make.conf
+______
+emerge --info  # view the final USE setting as seen by Portage
+emerge --update --deep --newuse world  # adapting the entire system to new USE flags
+emerge -p --depclean  # list packages with the old flags
+emerge --depclean   # remove the conditional dependencies that were emerged on your "old" system but that have been obsoleted by the new USE flags
+revdep-rebuild   # rebuild the applications that are dynamically linked against shared objects provided by possibly removed packages 
+		 #revdep-rebuild is part of the gentoolkit package
+emerge --pretend --verbose nume_pachet  # Viewing the used USE flags for a specific package
+equery --nocolor uses =nume_pachet-1.6.3 -a  # Alternative viewing the used USE flags for a specific package 
+					     # equery is part of the gentoolkit package
+______
 
 
 ### Configuring the Kernel ###
 
 # Timezone
-cp /usr/share/zoneinfo/Europe/Brussels /etc/localtime
-echo "Europe/Brussels" > /etc/timezone
+cp /usr/share/zoneinfo/Europe/Bucharest /etc/localtime
+echo "Europe/Bucharest" > /etc/timezone
 
 # Installing the Sources
 emerge gentoo-sources   # emerge ck-sources pentru linux-ck
@@ -96,5 +108,173 @@ lsmod  # pentru a vedea ce module s-au mai incarcat si a ajuta la configurarea m
 # Default: Manual Configuration
 cd /usr/src/linux
 make menuconfig
+__________
+Processor type and features --->
+    [*] Symmetric multi-processing support
+  Processor family --->
+
+    
+Device Drivers --->
+  Generic Driver Options --->
+    [*] Maintain a devtmpfs filesystem to mount at /dev
+
+File systems --->
+(Select one or more of the following options as needed by your system)
+  <*> Second extended fs support
+  <*> Ext3 journalling file system support
+  <*> The Extended 4 (ext4) filesystem
+  <*> Reiserfs support
+  <*> JFS filesystem support
+  <*> XFS filesystem support
+  ...
+  Pseudo Filesystems --->
+    [*] /proc file system support
+    [*] Virtual memory file system support (former shm fs)
+
+Device Drivers --->
+  Network device support --->
+  [*] HID Devices  --->
+    <*>   USB Human Interface Device (full HID) support
+__________
+
 make && make modules_install
+cp arch/x86/boot/bzImage /boot/kernel-2.6.34-gentoo-r1
+
+
+# Using genkernel
+emerge genkernel
+genkernel all
+genkernel --menuconfig all  # manually configure
+ls /boot/kernel* /boot/initramfs*
+
+# Building an Initramfs
+emerge genkernel
+genkernel --install initramfs
+ls /boot/initramfs*
+
+# Kernel Modules
+find /lib/modules/<kernel version>/ -type f -iname '*.o' -or -iname '*.ko' | less  # Viewing all available modules
+nano -w /etc/conf.d/modules   # edit specific modules
+
+
+### Configuring the System ###
+
+# Creating /etc/fstab
+nano -w /etc/fstab
+__________
+
+/dev/sda1   /boot        ext2    defaults,noatime     1 2
+/dev/sda2   none         swap    sw                   0 0
+/dev/sda3   /            ext4    noatime              0 1
+/dev/sda4   /home        ext4    noatime              0 1
+/dev/cdrom  /mnt/cdrom   auto    noauto,user          0 0
+__________
+
+# Configure network
+nano -w /etc/conf.d/hostname
+
+nano -w /etc/conf.d/net
+____
+config_eth0="dhcp"
+____
+
+nano -w /etc/hosts
+___________
+127.0.0.1       localhost.localdomain   localhost sergiu-vbox
+::1             localhost.localdomain   localhost
+___________
+
+# Automatically Start Networking at Boot
+cd /etc/init.d
+ln -s net.lo net.eth0
+rc-update add net.eth0 default
+
+# Root Password
+passwd
+
+# System Information
+nano -w /etc/rc.conf
+nano -w /etc/conf.d/keymaps
+nano -w /etc/conf.d/hwclock
+nano -w /etc/locale.gen
+locale-gen
+nano -w /etc/env.d/02locale
+_______
+LANG="en_US.UTF-8"
+LC_COLLATE="C"
+_______
+
+env-update && source /etc/profile
+
+
+### Installing Necessary System Tools ###
+
+# System Logger
+emerge syslog-ng
+emerge logrotate
+rc-update add syslog-ng default
+
+# Cron Daemon
+emerge vixie-cron
+rc-update add vixie-cron default
+
+# File Indexing
+emerge mlocate
+
+# Remote Access
+rc-update add sshd default
+
+# Networking Tools
+emerge dhcpcd
+
+
+### Configuring the Bootloader ###
+
+# Install grub
+emerge grub
+nano -w /boot/grub/grub.conf
+
+grep -v rootfs /proc/mounts > /etc/mtab
+grub-install --no-floppy /dev/sda
+
+# Rebooting the System
+exit
+cdimage ~# cd
+cdimage ~# umount -l /mnt/gentoo/dev{/shm,/pts,}
+cdimage ~# umount -l /mnt/gentoo{/boot,/proc,}
+cdimage ~# reboot
+
+### Finalizing your Gentoo Installation ###
+
+# Add user
+useradd -m -g users -G audio,lp,optical,storage,video,wheel,games,power,scanner -s /bin/bash sergiu
+passwd sergiu  #seteaza parola
+
+# Removing tarballs
+rm /stage3-*.tar.bz2*
+rm /portage-latest.tar.bz2*
+
+# SUDO
+emerge sudo
+#To add a user as a sudo user (a "sudoer")
+EDITOR=nano visudo
+%wheel	ALL=(ALL) ALL  #uncomment linia asta
+
+
+### Installing Xorg ###
+vim /etc/portage/make.conf
+__________________
+INPUT_DEVICES="evdev synaptics"  # (For mouse, keyboard, and Synaptics touchpad support)
+
+VIDEO_CARDS="nouveau"  # (For nVidia cards)
+
+VIDEO_CARDS="radeon"   # (For AMD/ATI cards)
+__________
+
+echo "x11-base/xorg-server udev" >> /etc/portage/package.use
+emerge -pv xorg-drivers  # Displaying all the driver options available
+env-update
+source /etc/profile
+
+emerge consolekit
 
