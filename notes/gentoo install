@@ -278,3 +278,29 @@ source /etc/profile
 
 emerge consolekit
 
+# Dbus #
+/etc/init.d/dbus start
+rc-update add dbus  # to start D-Bus at boot time
+
+### Installing Awesome ###
+emerge awesome vicious mpd luafilesystem luasocket 
+emerge ranger ncmpcpp mpc dmenu
+emerge rxvt-unicode urxvt-perls
+emerge finch weechat medit
+
+_____________________________________________________________________________________________
+
+### emerge ###
+emerge --sync   # Updating the Portage Tree
+emerge --search nume_pachet  # (-s) Searching for nume_pachet named packages 
+emerge --searchdesc nume_pachet  # Searching for nume_pachet-related packages
+emerge --ask nume_pachet    # (-a)
+emerge --pretend nume_pachet   # (-p)
+emerge --fetchonly nume_pachet  # download the sources without installing 
+emerge -pv nume_pachet  # Checking the existence of a USE flag
+emerge --unmerge nume_pachet  # remove nume_pachet
+emerge --depclean nume_pachet # remove nume_pachet with all dependencies
+emerge --update --deep --with-bdeps=y --newuse --ask world  # full system update
+emerge --update --deep --with-bdeps=y --newuse --ask world && emerge --depclean && revdep-rebuild  # Removing orphaned dependencies
+
+
