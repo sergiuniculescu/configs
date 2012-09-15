@@ -180,8 +180,8 @@ ____
 
 nano -w /etc/hosts
 ___________
-127.0.0.1       localhost.localdomain   localhost sergiu-vbox
-::1             localhost.localdomain   localhost
+127.0.0.1       localhost.gentoo   localhost sergiu-vbox
+::1             localhost.gentoo   localhost
 ___________
 
 # Automatically Start Networking at Boot
@@ -247,7 +247,7 @@ cdimage ~# reboot
 ### Finalizing your Gentoo Installation ###
 
 # Add user
-useradd -m -g users -G audio,lp,optical,storage,video,wheel,games,power,scanner -s /bin/bash sergiu
+useradd -m -g users -G audio,lp,video,wheel,cdrom,usb -s /bin/bash sergiu
 passwd sergiu  #seteaza parola
 
 # Removing tarballs
@@ -282,13 +282,23 @@ emerge consolekit
 /etc/init.d/dbus start
 rc-update add dbus  # to start D-Bus at boot time
 
+
+### systemd ###
+ln -sf /proc/self/mounts /etc/mtab
+
+
+
+
 ### Installing Awesome ###
 emerge awesome vicious mpd luafilesystem luasocket 
 emerge ranger ncmpcpp mpc dmenu
 emerge rxvt-unicode urxvt-perls
 emerge finch weechat medit
+emerge zukitwo lxappearance faenza-icon-theme
 
-_____________________________________________________________________________________________
+emerge screenfetch  # archey like
+
+____________________________________________________________________________________________g
 
 ### emerge ###
 emerge --sync   # Updating the Portage Tree
@@ -302,5 +312,23 @@ emerge --unmerge nume_pachet  # remove nume_pachet
 emerge --depclean nume_pachet # remove nume_pachet with all dependencies
 emerge --update --deep --with-bdeps=y --newuse --ask world  # full system update
 emerge --update --deep --with-bdeps=y --newuse --ask world && emerge --depclean && revdep-rebuild  # Removing orphaned dependencies
+
+
+### USE flags ###
+
+# for a single package
+vim /etc/portage/package.use
+__________________
+x11-terms/rxvt-unicode xft 256-color afterimage blink pixbuf
+__________________
+
+# for system wide
+vim /etc/portage/make.conf
+
+
+### systemd ###
+ln -sf /proc/self/mounts /etc/mtab
+vim /etc/portage/make.conf # add systemd flag
+emerge --ask --changed-use --deep world  # update the new changes
 
 

@@ -1894,7 +1894,7 @@ pacman -S weechat
 /set irc.server.freenode.realname "Sergiu Niculescu"
 /set irc.server.freenode.autoconnect on
 /set irc.server.freenode.command "/msg NickServ identify xxxxxx"
-/set irc.server.freenode.autojoin "#archlinux,#archlinux.ro,#linuxfans-ro,#fedora-ro"
+/set irc.server.freenode.autojoin "#archlinux,#archlinux.ro,#linuxfans-ro,#gentoo-ro"
     
     
 Bindigs:    
