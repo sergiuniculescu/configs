@@ -1,0 +1,111 @@
+######################
+### Fedora install ###
+######################
+
+
+### yum ###
+
+yum check-update 	# verifica pachetele care trebuie updatate
+yum update		# update toate pachetele si dependintele lor
+
+yum search nume_pachet	# cauta un anume pachet, pot fi mai multe pachete trecute
+
+yum info nume_pachet	# afiseaza detalii despre un anume pachet
+
+yum list nume_pache    	# afiseaza informatii despre un anumit pachet, instalat sau nu
+yum list nume_pachet\* 	# afiseaza informatii despre toate pachetele care incep cu un nume
+yum list all		# afiseaza toate pachetele disponibile 
+yum list installed "*nume_pachet*"  # afiseaza pachetele instalate care contine un nume
+yum list available	# afiseaza pachetele disponibile in functie de repo-urile instalate
+yum repolist		# afiseaza repo-urile instalate
+yum gruplist		# afiseaza
+
+yum install nume_pachet\* # instaleaza toate pachetele care incep cu un nume
+
+yum provides "*/nume_pachet" # afiseaza fisierele care le detine un pachet
+
+yum -v grouplist kde\*  # listeaza toate pachetele ce tin de KDE
+
+yum groupinstall "KDE Software Compilation" # instaleaza toate pachetele ce tin de KDE
+yum groupinstall kde-desktop
+yum install @kde-desktop  # @ pentru a instala un grup
+
+yum remove nume_pachet
+
+yum groupremove "KDE Software Compilation"
+yum groupremove kde-desktop
+yum remove @kde-desktop
+
+
+# Creating a Yum Repository #
+
+Install the createrepo package:
+yum install createrepo
+
+Copy all of the packages into one directory, such as /mnt/local_repo/.
+Run the createrepo --database command on that directory:
+
+createrepo --database /mnt/local_repo/
+
+
+# change the hostname #
+sudo vim /etc/sysconfig/network
+
+
+### tv-maxe ###
+
+su -c 'yum install libstdc++.so.5 nano wget make gstreamer-python'
+wget http://sopcast-player.googlecode.com/files/sp-auth-3.2.6.tar.gz
+tar -zxvf sp-auth-3.2.6.tar.gz
+rm sp-auth-3.2.6.tar.gz
+cd sp-auth/
+su -c 'make install'
+cd
+rm -r sp-auth
+wget http://tv-maxe.googlecode.com/files/tv-maxe-0.08.tar.gz
+tar -zxvf tv-maxe-0.08.tar.gz
+rm tv-maxe-0.08.tar.gz
+mv tv-maxe-0.08 .tv-maxe
+cd .tv-maxe
+python tvmaxe.py
+
+# Iconita in aplications/sound&video #
+
+vim tvmaxe.sh
+____________
+#!/bin/bash
+cd /home/$USER/.tv-maxe && python tvmaxe.py &
+____________
+
+chmod +x tvmaxe.sh
+cd /usr/share/applications/
+sudo vim tv-maxe.desktop
+_______________
+[Desktop Entry]
+Name=TV-Maxe
+GenericName=TV-Maxe
+Comment=tv-internet
+Exec=/home/$USER/.tv-maxe/tvmaxe.sh
+Icon=/home/$USER/.tv-maxe/tvmaxe.png
+Terminal=false
+Type=Application
+Categories=AudioVideo;Player;
+_______________
+
+
+### REPOS ###
+
+# Third Party Repositories #
+sudo rpm -ivh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm
+sudo rpm -ivh http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm
+
+# Adobe Flash Plugin #
+sudo rpm -ivh http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm
+sudo rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-adobe-linux
+sudo yum install flash-plugin
+
+
+# crontab #
+* /01 * * * DISPLAY=:0 GSETTINGS_BACKEND=dconf gsettings set org.gnome.desktop.background picture-uri file://"$(find ~/Pictures/National_Geographic -type f | shuf -n1)"
+
+

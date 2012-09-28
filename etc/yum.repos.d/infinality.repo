@@ -1,0 +1,11 @@
+[infinality]
+name=Infinality
+baseurl=http://www.infinality.net/fedora/linux/$releasever/$basearch/
+enabled=1
+gpgcheck=0
+
+[infinality-noarch]
+name=Infinality - noarch
+baseurl=http://www.infinality.net/fedora/linux/$releasever/noarch/
+enabled=1
+gpgcheck=0

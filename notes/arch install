@@ -1,4 +1,6 @@
+########################
 ### Arch new install ###
+########################
 
 # create partitions
 cfdisk  
