@@ -52,6 +52,51 @@ createrepo --database /mnt/local_repo/
 sudo vim /etc/sysconfig/network
 
 
+### REPOS ###
+
+# Third Party Repositories #
+sudo rpm -ivh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm
+sudo rpm -ivh http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm
+
+# Adobe Flash Plugin #
+sudo rpm -ivh http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm
+sudo rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-adobe-linux
+sudo yum install flash-plugin
+
+# Russian Fedora #
+sudo rpm -ivh http://mirror.yandex.ru/fedora/russianfedora/russianfedora/free/fedora/releases/17/Everything/x86_64/os/russianfedora-free-release-17-1.R.noarch.rpm
+
+# Google - Chrome #
+/etc/yum.repos.d/google-chrome.repo:
+[google-chrome]
+name=google-chrome
+baseurl=http://dl.google.com/linux/chrome/rpm/stable/x86_64/
+gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
+enabled=1
+gpgcheck=1
+
+# Medit #
+/etc/yum.repos.d/rpm-sphere.repo:
+[rpm-sphere]
+name=RPM Sphere
+baseurl=http://download.opensuse.org/repositories/home:/zhonghuaren/Fedora_17/
+gpgkey=http://download.opensuse.org/repositories/home:/zhonghuaren/Fedora_17/repodata/repomd.xml.key
+enabled=1
+gpgcheck=1
+
+## Install nVidia proprietary drivers ###
+(necesita RPMFusion Repositories)
+yum install akmod-nvidia xorg-x11-drv-nvidia-libs
+
+# Backup old initramfs nouveau image #
+mv /boot/initramfs-$(uname -r).img /boot/initramfs-$(uname -r)-nouveau.img
+ 
+# Create new initramfs image #
+dracut /boot/initramfs-$(uname -r).img $(uname -r)
+
+reboot
+
+
 ### tv-maxe ###
 
 su -c 'yum install libstdc++.so.5 nano wget make gstreamer-python'
@@ -93,24 +138,16 @@ Categories=AudioVideo;Player;
 _______________
 
 
-### REPOS ###
-
-# Third Party Repositories #
-sudo rpm -ivh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm
-sudo rpm -ivh http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm
-
-# Adobe Flash Plugin #
-sudo rpm -ivh http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm
-sudo rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-adobe-linux
-sudo yum install flash-plugin
+### Improving Fedora 17 Font Rendering ###
+sudo rpm -Uvh http://www.infinality.net/fedora/linux/infinality-repo-1.0-1.noarch.rpm 
+sudo yum -y install freetype-infinality fontconfig-infinality libXft-infinality 
 
 
-# crontab #
+# Change GNOME3 desktop crontab #
 */10 * * * * DISPLAY=:0 GSETTINGS_BACKEND=dconf gsettings set org.gnome.desktop.background picture-uri file://"$(find ~/Pictures/National_Geographic -type f | shuf -n1)"
 
 
 ### Settings for Yahoo US users ###
-
 Type : IMAP
 Incoming Mail Server : imap.mail.yahoo.com
 port : 993

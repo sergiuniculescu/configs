@@ -1,0 +1,22 @@
+[russianfedora-free-updates]
+name=Russian Fedora for Fedora $releasever - Free - Updates
+#baseurl=http://mirror.yandex.ru/fedora/russianfedora/russianfedora/free/fedora/updates/$releasever/$basearch
+mirrorlist=http://mirrors.rfremix.ru/mirrorlist?repo=free-fedora-updates-released-$releasever&arch=$basearch
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-russianfedora-free-fedora
+
+[russianfedora-free-updates-debuginfo]
+name=Russian Fedora for Fedora $releasever - Free - Updates Debug
+baseurl=http://mirror.yandex.ru/fedora/russianfedora/russianfedora/free/fedora/updates/$releasever/$basearch/debug
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-russianfedora-free-fedora
+
+[russianfedora-free-updates-source]
+name=Russian Fedora for Fedora $releasever - Free - Updates Source
+baseurl=http://mirror.yandex.ru/fedora/russianfedora/russianfedora/free/fedora/updates/$releasever/SRPMS
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-russianfedora-free-fedora
+
