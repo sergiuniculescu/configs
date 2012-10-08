@@ -97,6 +97,11 @@ dracut /boot/initramfs-$(uname -r).img $(uname -r)
 reboot
 
 
+### Improving Fedora 17 Font Rendering ###
+sudo rpm -Uvh http://www.infinality.net/fedora/linux/infinality-repo-1.0-1.noarch.rpm 
+sudo yum -y install freetype-infinality fontconfig-infinality libXft-infinality 
+
+
 ### tv-maxe ###
 
 su -c 'yum install libstdc++.so.5 nano wget make gstreamer-python'
@@ -136,11 +141,6 @@ Terminal=false
 Type=Application
 Categories=AudioVideo;Player;
 _______________
-
-
-### Improving Fedora 17 Font Rendering ###
-sudo rpm -Uvh http://www.infinality.net/fedora/linux/infinality-repo-1.0-1.noarch.rpm 
-sudo yum -y install freetype-infinality fontconfig-infinality libXft-infinality 
 
 
 # Change GNOME3 desktop crontab #
