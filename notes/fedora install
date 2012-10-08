@@ -109,3 +109,14 @@ sudo yum install flash-plugin
 */10 * * * * DISPLAY=:0 GSETTINGS_BACKEND=dconf gsettings set org.gnome.desktop.background picture-uri file://"$(find ~/Pictures/National_Geographic -type f | shuf -n1)"
 
 
+### Settings for Yahoo US users ###
+
+Type : IMAP
+Incoming Mail Server : imap.mail.yahoo.com
+port : 993
+SSL : yes
+Outgoing Mail Server : smtp.mail.yahoo.com
+port : 465
+SSL : yes
+
+

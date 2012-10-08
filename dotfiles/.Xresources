@@ -79,6 +79,10 @@ URxvt*geometry:           84x24
 URxvt*cursorBlink: false
 URxvt*cursorUnderline: false
 
+! Home & End keybind
+URxvt*keysym.Home: \033[1~
+URxvt*keysym.End: \033[4~
+
 
 !-------------------------------
 ! Colour Scheme Zenburn (custom)
