@@ -58,6 +58,7 @@ sudo vim /etc/sysconfig/network
 sudo rpm -ivh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm
 sudo rpm -ivh http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm
 
+
 # Adobe Flash Plugin #
 sudo rpm -ivh http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm
 sudo rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-adobe-linux
@@ -142,6 +143,15 @@ Type=Application
 Categories=AudioVideo;Player;
 _______________
 
+
+### Codecs ###
+
+sudo yum install gstreamer gstreamer-plugins-good gstreamer-plugins-bad gstreamer-plugins-ugly
+sudo yum install ffmpeg ffmpeg-libs
+
+### Nautilus Extensions ###
+
+yum install nautilus-actions nautilus-image-converter nautilus-open-terminal nautilus-search-tool nautilus-sendto raw-thumbnailer 
 
 # Change GNOME3 desktop crontab #
 */10 * * * * DISPLAY=:0 GSETTINGS_BACKEND=dconf gsettings set org.gnome.desktop.background picture-uri file://"$(find ~/Pictures/National_Geographic -type f | shuf -n1)"
