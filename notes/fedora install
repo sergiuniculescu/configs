@@ -38,7 +38,6 @@ yum remove @kde-desktop
 
 
 # Creating a Yum Repository #
-
 Install the createrepo package:
 yum install createrepo
 
@@ -104,7 +103,6 @@ sudo yum -y install freetype-infinality fontconfig-infinality libXft-infinality
 
 
 ### tv-maxe ###
-
 su -c 'yum install libstdc++.so.5 nano wget make gstreamer-python'
 wget http://sopcast-player.googlecode.com/files/sp-auth-3.2.6.tar.gz
 tar -zxvf sp-auth-3.2.6.tar.gz
@@ -145,16 +143,25 @@ _______________
 
 
 ### Codecs ###
+sudo yum install gstreamer gstreamer-plugins-good gstreamer-plugins-bad gstreamer-plugins-ugly ffmpeg ffmpeg-libs
 
-sudo yum install gstreamer gstreamer-plugins-good gstreamer-plugins-bad gstreamer-plugins-ugly
-sudo yum install ffmpeg ffmpeg-libs
 
 ### Nautilus Extensions ###
-
 yum install nautilus-actions nautilus-image-converter nautilus-open-terminal nautilus-search-tool nautilus-sendto raw-thumbnailer 
 
 # Change GNOME3 desktop crontab #
 */10 * * * * DISPLAY=:0 GSETTINGS_BACKEND=dconf gsettings set org.gnome.desktop.background picture-uri file://"$(find ~/Pictures/National_Geographic -type f | shuf -n1)"
+
+
+### GConf Error ###
+GConf Error: Configuration server couldn't be contacted: D-BUS error: The GConf daemon is currently shutting down
+
+sudo killall gconfd-2
+
+
+### /etc/yum.conf ###
+clean_requirements_on_remove=1  # remove a package with all dependencies
+
 
 
 ### Settings for Yahoo US users ###
