@@ -46,6 +46,22 @@ Run the createrepo --database command on that directory:
 
 createrepo --database /mnt/local_repo/
 
+### yum-utils ###
+
+# yum-updateonboot #
+sudo yum install yum-updateonboot
+sudo systemctl enable yum-updateonboot.service
+
+# package-cleanup #
+package-cleanup --orphans
+package-cleanup --leaves
+package-cleanup --dupes
+package-cleanup --problems
+package-cleanup --oldkernel
+
+# yum-complete-transaction #
+sudo yum-complete-transaction
+sudo yum-complete-transaction --cleanup-only
 
 # change the hostname #
 sudo vim /etc/sysconfig/network
@@ -163,6 +179,24 @@ sudo killall gconfd-2
 clean_requirements_on_remove=1  # remove a package with all dependencies
 
 
+### PulseAudio ###
+sudo yum install paman paprefs pavucontrol pavumeter pulseaudio-equalizer gnome-media-apps pulseaudio-module-jack
+
+sudo vim /etc/pulse/daemon.conf
+_______________________________
+enable-remixing = yes
+enable-lfe-remixing = yes
+default-sample-format = s32le
+default-sample-rate = 48000
+default-sample-channels = 6
+default-fragments = 8
+default-fragment-size-msec = 5
+________________________________
+
+pulseaudio -k  # restart pulseaudio
+
+
+
 
 ### Settings for Yahoo US users ###
 Type : IMAP
@@ -174,3 +208,12 @@ port : 465
 SSL : yes
 
 
+### Awesome WM ###
+sudo wget -nd -P /etc/yum.repos.d http://repos.fedorapeople.org/repos/thm/awesome/fedora-awesome.repo
+sudo yum install awesome
+rxvt-unicode
+sudo yum install mpd luafilesystem luasocket ranger ncmpcpp mpc dmenu rxvt-unicode-256color finch weechat medit zukitwo lxappearance faenza-icon-theme
+
+# testing #
+Xephyr :1 -ac -br -noreset -screen 1152x720 & 
+DISPLAY=:1.0 awesome -c ~/.config/awesome/rc.lua
