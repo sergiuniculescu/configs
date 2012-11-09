@@ -36,6 +36,18 @@ yum groupremove "KDE Software Compilation"
 yum groupremove kde-desktop
 yum remove @kde-desktop
 
+# skip updating packages #
+yum -x nume_pachet update
+yum --exclude=nume_pachet update
+
+sudo vim /etc/yum.conf  # permanent
+_______
+[main]
+exclude=nume_pachet1* nume_pachet2*
+_______
+
+yum --disableexcludes=all update  # disable exclude to check for an update
+
 
 # Creating a Yum Repository #
 Install the createrepo package:
@@ -80,7 +92,9 @@ sudo rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-adobe-linux
 sudo yum install flash-plugin
 
 # Russian Fedora #
-sudo rpm -ivh http://mirror.yandex.ru/fedora/russianfedora/russianfedora/free/fedora/releases/17/Everything/x86_64/os/russianfedora-free-release-17-1.R.noarch.rpm
+sudo rpm -ivh http://mirror.yandex.ru/fedora/russianfedora/russianfedora/free/fedora/russianfedora-free-release-stable.noarch.rpm
+sudo rpm -ivh http://mirror.yandex.ru/fedora/russianfedora/russianfedora/nonfree/fedora/russianfedora-nonfree-release-stable.noarch.rpm
+
 
 # Google - Chrome #
 /etc/yum.repos.d/google-chrome.repo:
@@ -100,15 +114,15 @@ gpgkey=http://download.opensuse.org/repositories/home:/zhonghuaren/Fedora_17/rep
 enabled=1
 gpgcheck=1
 
+
 ## Install nVidia proprietary drivers ###
 (necesita RPMFusion Repositories)
+
 yum install akmod-nvidia xorg-x11-drv-nvidia-libs
 
-# Backup old initramfs nouveau image #
-mv /boot/initramfs-$(uname -r).img /boot/initramfs-$(uname -r)-nouveau.img
- 
-# Create new initramfs image #
-dracut /boot/initramfs-$(uname -r).img $(uname -r)
+mv /boot/initramfs-$(uname -r).img /boot/initramfs-$(uname -r)-nouveau.img   # Backup old initramfs nouveau image
+
+dracut /boot/initramfs-$(uname -r).img $(uname -r)  # Create new initramfs image
 
 reboot
 
@@ -163,10 +177,31 @@ sudo yum install gstreamer gstreamer-plugins-good gstreamer-plugins-bad gstreame
 
 
 ### Nautilus Extensions ###
-yum install nautilus-actions nautilus-image-converter nautilus-open-terminal nautilus-search-tool nautilus-sendto raw-thumbnailer 
+yum install nautilus-actions nautilus-image-converter nautilus-open-terminal nautilus-search-tool nautilus-sendto raw-thumbnailer gnome-gmail
+
 
 # Change GNOME3 desktop crontab #
 */10 * * * * DISPLAY=:0 GSETTINGS_BACKEND=dconf gsettings set org.gnome.desktop.background picture-uri file://"$(find ~/Pictures/National_Geographic -type f | shuf -n1)"
+
+
+# Change XFCE desktop crontab #
+*/10 * * * * DISPLAY=:0.0 xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/image-path -s "$(find ~/Pictures/National_Geographic -type f -iregex '.*.(bmp|gif|jpg|png)$' | sort -R | head -1)"
+
+
+# Use a transparent background for XFCE desktop icon titles #
+vim .gtkrc-2.0
+______________________________
+style "xfdesktop-icon-view" {
+XfdesktopIconView::label-alpha = 10
+base[NORMAL] = "#000000"
+base[SELECTED] = "#71B9FF"
+base[ACTIVE] = "#71FFAD"
+fg[NORMAL] = "#ffffff"
+fg[SELECTED] = "#71B9FF"
+fg[ACTIVE] = "#71FFAD" }
+widget_class "*XfdesktopIconView*" style "xfdesktop-icon-view"
+_______________________________
+
 
 
 ### GConf Error ###
@@ -196,6 +231,57 @@ ________________________________
 pulseaudio -k  # restart pulseaudio
 
 
+### Enable touchpad click ###
+
+sudo vim /usr/share/X11/xorg.conf.d/50-synaptics.conf
+_____________________
+Section "InputClass"
+        Identifier "touchpad catchall"
+        Driver "synaptics"
+        MatchIsTouchpad "on"
+        MatchDevicePath "/dev/input/event*"
+        Option "TapButton1" "1"
+        Option "TapButton2" "2"
+        Option "TapButton3" "3"
+        Option "VertTwoFingerScroll" "on"
+        Option "HorizTwoFingerScroll" "on"
+EndSection
+_____________________
+
+
+### Enable autologin ###
+
+sudo vim /etc/gdm/custom.conf
+_________
+[daemon]
+AutomaticLoginEnable=true
+AutomaticLogin=USERNAME
+_________
+
+
+### Change swappiness value ###
+
+sudo vim /etc/sysctl.conf
+__________________
+# Memory/Swap Use 
+vm.swappiness = 20
+__________________
+
+sudo sysctl -p  # reload sysctl.conf without restart
+cat /proc/sys/vm/swappiness  # display swappiness value
+
+
+### Boot Optimization ###
+sudo yum update
+sudo /etc/cron.daily/prelink
+sudo yum install systemd-analyze
+
+sudo vim /etc/default/grub
+libahci.ignore_sss=1 raid=noautodetect  # add this to kernel boot
+
+cd /lib/systemd/system
+for i in fedora*storage* plymouth-*.* mdmonitor*.*; do sudo systemctl mask $i;done
+
 
 
 ### Settings for Yahoo US users ###
@@ -217,3 +303,5 @@ sudo yum install mpd luafilesystem luasocket ranger ncmpcpp mpc dmenu rxvt-unico
 # testing #
 Xephyr :1 -ac -br -noreset -screen 1152x720 & 
 DISPLAY=:1.0 awesome -c ~/.config/awesome/rc.lua
+
+
