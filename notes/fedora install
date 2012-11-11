@@ -284,6 +284,19 @@ for i in fedora*storage* plymouth-*.* mdmonitor*.*; do sudo systemctl mask $i;do
 
 
 
+### Automatically run a command at Boot Time ###
+
+sudo vim /etc/rc.d/rc.local
+____________
+#! /bin/bash
+comanda
+___________
+sudo chmod +x /etc/rc.d/rc.local
+sudo systemctl restart rc-local.service
+
+
+________________________________________________________________________________________________________________________________________________________
+
 ### Settings for Yahoo US users ###
 Type : IMAP
 Incoming Mail Server : imap.mail.yahoo.com
