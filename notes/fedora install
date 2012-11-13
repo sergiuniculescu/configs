@@ -318,3 +318,17 @@ Xephyr :1 -ac -br -noreset -screen 1152x720 &
 DISPLAY=:1.0 awesome -c ~/.config/awesome/rc.lua
 
 
+### Copy files from multiple directories into one directory ###
+find ~/Pictures/Stunning_National_Geographic_WallPapers -name "*.jpg" -exec cp -i {} ~/Pictures/all \;
+
+
+### Wine OpenGL is not using Direct Rendering ###
+sudo yum install xorg-x11-drv-nvidia-libs.i686
+
+
+### Start rxvt-unicode full screen ###
+urxvt256c -geometry 1920x1080
+
+
+
+
