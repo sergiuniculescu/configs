@@ -281,7 +281,7 @@ libahci.ignore_sss=1 raid=noautodetect  # add this to kernel boot
 
 cd /lib/systemd/system
 for i in fedora*storage* plymouth-*.* mdmonitor*.*; do sudo systemctl mask $i;done
-for i in abrt*.service auditd.service avahi-daemon.* dev-hugepages.mount dev-mqueue.mount fedora-configure.service fedora-loadmodules.service fedora-readonly.service irqbalance.service mcelog.service rsyslog.service sendmail.service sm-client.service sys-kernel-config.mount sys-kernel-debug.mount ip6tables.service iptables.service bluetooth.*; do sudo systemctl mask $i; done
+for i in abrt*.service auditd.service avahi-daemon.* dev-hugepages.mount dev-mqueue.mount fedora-configure.service fedora-loadmodules.service fedora-readonly.service irqbalance.service mcelog.service rsyslog.service sendmail.service sm-client.service sys-kernel-config.mount sys-kernel-debug.mount sshd.service ip6tables.service iptables.service bluetooth.*; do sudo systemctl mask $i; done
 
 
 ### Automatically run a command at Boot Time ###
@@ -320,6 +320,11 @@ DISPLAY=:1.0 awesome -c ~/.config/awesome/rc.lua
 
 ### Copy files from multiple directories into one directory ###
 find ~/Pictures/Stunning_National_Geographic_WallPapers -name "*.jpg" -exec cp -i {} ~/Pictures/all \;
+
+
+### Find Out Linux Distribution Name and Version ###
+cat /etc/*-release
+
 
 
 ### List symbolic links from a directory ###
