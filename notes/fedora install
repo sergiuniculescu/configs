@@ -85,6 +85,10 @@ sudo vim /etc/sysconfig/network
 sudo rpm -ivh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm
 sudo rpm -ivh http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm
 
+# Third Party Repositories F18 #
+sudo rpm -ivh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-branched.noarch.rpm
+sudo rpm -ivh http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-branched.noarch.rpm
+
 
 # Adobe Flash Plugin #
 sudo rpm -ivh http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm
@@ -104,6 +108,16 @@ baseurl=http://dl.google.com/linux/chrome/rpm/stable/x86_64/
 gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
 enabled=1
 gpgcheck=1
+
+
+# Dropbox #
+/etc/yum.repos.d/dropbox.repo
+[Dropbox]
+name=Dropbox Repository
+baseurl=http://linux.dropbox.com/fedora/$releasever/
+gpgkey=http://linux.dropbox.com/fedora/rpm-public-key.asc
+enabled=1
+
 
 # Medit #
 /etc/yum.repos.d/rpm-sphere.repo:
@@ -337,6 +351,12 @@ sudo yum install xorg-x11-drv-nvidia-libs.i686
 
 ### Start rxvt-unicode full screen ###
 urxvt256c -geometry 1920x1080
+
+
+### QEMU ###
+qemu-img create -f qcow2 winxp.img 8G
+qemu-system-x86_64 -m 1024 -hda winxp.img -cdrom winxpsp2.iso -boot d
+
 
 
 
