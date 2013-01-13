@@ -1,0 +1,25 @@
+######################
+### Ubuntu install ###
+######################
+
+### PPA'S ###
+ppa:xorg-edgers/ppa
+ppa:tsvetko.tsvetkov/unity
+
+ppa:libreoffice/ppa
+ppa:webupd8team/themes  # Faenza
+ppa:otto-kesselgulasch/gimp
+ppa:webupd8team/java  # Java 8
+ppa:tualatrix/ppa  # ubuntu-tweak
+ppa:pidgin-developers/ppa
+ppa:scopes-packagers/ppa  # lens/scopes
+ppa:venerix/blug  # tv-maxe
+
+
+### Unity ###
+setsid unity  # like log-out log-in
+
+
+### Others ###
+sudo dmidecode -t 16   # find out the maximum RAM capacity and the number of RAM slots available
+sudo dmidecode -t memory  # complete memory information
