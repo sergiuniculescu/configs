@@ -6,15 +6,16 @@
 ppa:xorg-edgers/ppa
 ppa:tsvetko.tsvetkov/unity
 
+ppa:tualatrix/ppa  # ubuntu-tweak
 ppa:libreoffice/ppa
 ppa:webupd8team/themes  # Faenza
-ppa:otto-kesselgulasch/gimp
-ppa:webupd8team/java  # Java 8
-ppa:tualatrix/ppa  # ubuntu-tweak
 ppa:pidgin-developers/ppa
 ppa:scopes-packagers/ppa  # lens/scopes
 ppa:venerix/blug  # tv-maxe
-
+ppa:atareao/atareao  # my-weather-indicator
+ppa:otto-kesselgulasch/gimp
+ppa:webupd8team/java  # Java 8
+ppa:firefishy/amd64-microcode-precise 
 
 ### Unity ###
 setsid unity  # like log-out log-in
@@ -23,3 +24,23 @@ setsid unity  # like log-out log-in
 ### Others ###
 sudo dmidecode -t 16   # find out the maximum RAM capacity and the number of RAM slots available
 sudo dmidecode -t memory  # complete memory information
+
+
+### Duplicate ppa's ###
+grep -r ^ /etc/apt/sources.list /etc/apt/sources.list.d/*
+sudo rm /var/lib/apt/lists/* -vf
+sudo apt-get update
+
+
+### Install nVidia driver ###
+Select recovery kernel (second one usually in the boot loader screen)
+Scroll down and select root Drop to root shell prompt
+mount -o remount,rw /
+mount /home
+Change to home directory where the nvidia driver is downloaded
+sh ./NVIDIA-Linux-x86_64-310.19.run
+cd
+sync
+unmount /home
+mount -o remount,ro /
+reboot
