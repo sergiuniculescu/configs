@@ -16,6 +16,8 @@ ppa:atareao/atareao  # my-weather-indicator
 ppa:otto-kesselgulasch/gimp
 ppa:webupd8team/java  # Java 8
 ppa:firefishy/amd64-microcode-precise 
+ppa:pi-rho/security  # aircrack-ng, reaver
+
 
 ### Unity ###
 setsid unity  # like log-out log-in
