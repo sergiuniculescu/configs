@@ -1,0 +1,94 @@
+######################
+### Ubuntu install ###
+######################
+
+### PPA'S ###
+ppa:xorg-edgers/ppa
+ppa:tsvetko.tsvetkov/unity
+
+ppa:tualatrix/ppa  # ubuntu-tweak
+ppa:libreoffice/ppa
+ppa:webupd8team/themes  # Faenza
+ppa:pidgin-developers/ppa
+ppa:scopes-packagers/ppa  # lens/scopes
+ppa:venerix/blug  # tv-maxe
+ppa:atareao/atareao  # my-weather-indicator
+ppa:otto-kesselgulasch/gimp
+ppa:webupd8team/java  # Java 8
+ppa:firefishy/amd64-microcode-precise 
+ppa:pi-rho/security  # aircrack-ng, reaver
+ppa:nilarimogard/webupd8  # newer apps
+ppa:team-xbmc/ppa  # xbmc 12.0
+
+### Unity ###
+setsid unity  # like log-out log-in
+
+# New Ubuntu logo #
+wget https://launchpad.net/ubuntu/raring/+source/unity/6.12.0daily13.01.18-0ubuntu1/+files/unity_6.12.0daily13.01.18.orig.tar.gz  # download end extract
+sudo cp /usr/share/unity/5/launcher_bfb.png{,.bkp}
+cp unity-6.12.0daily13.01.18/resources/launcher_bfb.png /usr/share/unity/5
+
+### Show Hidden Startup Apps ###
+sudo sed -i "s/NoDisplay=true/NoDisplay=false/g" /etc/xdg/autostart/*.desktop
+
+### Preload ###
+sudo apt-get install preload
+
+### Change swappiness value ###
+sudo vim /etc/sysctl.conf
+__________________
+# Memory/Swap Use 
+vm.swappiness = 20
+__________________
+
+sudo sysctl -p  # reload sysctl.conf without restart
+cat /proc/sys/vm/swappiness  # display swappiness value
+
+
+### Duplicate ppa's ###
+grep -r ^ /etc/apt/sources.list /etc/apt/sources.list.d/*
+sudo rm /var/lib/apt/lists/* -vf
+sudo apt-get update
+
+### Pulseaudio 5.1 ###
+sudo vim /etc/pulse/daemon.conf
+_______________________________
+enable-remixing = yes
+enable-lfe-remixing = yes
+default-sample-format = s32le
+default-sample-rate = 48000
+default-sample-channels = 6
+default-fragments = 8
+default-fragment-size-msec = 5
+________________________________
+
+pulseaudio -k  # restart pulseaudio
+
+### Install nVidia driver ###
+Select recovery kernel (second one usually in the boot loader screen)
+Scroll down and select root Drop to root shell prompt
+mount -o remount,rw /
+mount /home
+Change to home directory where the nvidia driver is downloaded
+sh ./NVIDIA-Linux-x86_64-310.19.run
+cd
+sync
+unmount /home
+mount -o remount,ro /
+reboot
+
+### Others ###
+sudo dmidecode -t 16   # find out the maximum RAM capacity and the number of RAM slots available
+sudo dmidecode -t memory  # complete memory information
+
+mtr google.com  # better than traceroute and has ping combined
+
+curl ifconfig.me # get your external IP address
+
+cp filename{,.bkp}  # short and elegant way to copy or backup a single file before you edit it
+
+history | awk '{a[$2]++}END{for(i in a){print a[i] " " i}}' | sort -rn | head  # list of commands you use most often
+
+nmap -Pn 86.107.198.160 -p 21,22,2150 # ping and scan a port on an ip address
+nmap -Pn 86.107.198.160 -p 21-2150  # scand a range of ports
+

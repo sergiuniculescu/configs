@@ -1,0 +1,362 @@
+######################
+### Fedora install ###
+######################
+
+### yum ###
+
+yum check-update 	# verifica pachetele care trebuie updatate
+yum update		# update toate pachetele si dependintele lor
+
+yum search nume_pachet	# cauta un anume pachet, pot fi mai multe pachete trecute
+
+yum info nume_pachet	# afiseaza detalii despre un anume pachet
+
+yum list nume_pache    	# afiseaza informatii despre un anumit pachet, instalat sau nu
+yum list nume_pachet\* 	# afiseaza informatii despre toate pachetele care incep cu un nume
+yum list all		# afiseaza toate pachetele disponibile 
+yum list installed "*nume_pachet*"  # afiseaza pachetele instalate care contine un nume
+yum list available	# afiseaza pachetele disponibile in functie de repo-urile instalate
+yum repolist		# afiseaza repo-urile instalate
+yum gruplist		# afiseaza
+
+yum install nume_pachet\* # instaleaza toate pachetele care incep cu un nume
+
+yum provides "*/nume_pachet" # afiseaza fisierele care le detine un pachet
+
+yum -v grouplist kde\*  # listeaza toate pachetele ce tin de KDE
+
+yum groupinstall "KDE Software Compilation" # instaleaza toate pachetele ce tin de KDE
+yum groupinstall kde-desktop
+yum install @kde-desktop  # @ pentru a instala un grup
+
+yum remove nume_pachet
+
+yum groupremove "KDE Software Compilation"
+yum groupremove kde-desktop
+yum remove @kde-desktop
+
+# skip updating packages #
+yum -x nume_pachet update
+yum --exclude=nume_pachet update
+
+sudo vim /etc/yum.conf  # permanent
+_______
+[main]
+exclude=nume_pachet1* nume_pachet2*
+_______
+
+yum --disableexcludes=all update  # disable exclude to check for an update
+
+
+# Creating a Yum Repository #
+Install the createrepo package:
+yum install createrepo
+
+Copy all of the packages into one directory, such as /mnt/local_repo/.
+Run the createrepo --database command on that directory:
+
+createrepo --database /mnt/local_repo/
+
+### yum-utils ###
+
+# yum-updateonboot #
+sudo yum install yum-updateonboot
+sudo systemctl enable yum-updateonboot.service
+
+# package-cleanup #
+package-cleanup --orphans
+package-cleanup --leaves
+package-cleanup --dupes
+package-cleanup --problems
+package-cleanup --oldkernel
+
+# yum-complete-transaction #
+sudo yum-complete-transaction
+sudo yum-complete-transaction --cleanup-only
+
+# change the hostname #
+sudo vim /etc/sysconfig/network
+
+
+### REPOS ###
+
+# Third Party Repositories #
+sudo rpm -ivh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm
+sudo rpm -ivh http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm
+
+# Third Party Repositories F18 #
+sudo rpm -ivh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-branched.noarch.rpm
+sudo rpm -ivh http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-branched.noarch.rpm
+
+
+# Adobe Flash Plugin #
+sudo rpm -ivh http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm
+sudo rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-adobe-linux
+sudo yum install flash-plugin
+
+# Russian Fedora #
+sudo rpm -ivh http://mirror.yandex.ru/fedora/russianfedora/russianfedora/free/fedora/russianfedora-free-release-stable.noarch.rpm
+sudo rpm -ivh http://mirror.yandex.ru/fedora/russianfedora/russianfedora/nonfree/fedora/russianfedora-nonfree-release-stable.noarch.rpm
+
+
+# Google - Chrome #
+/etc/yum.repos.d/google-chrome.repo:
+[google-chrome]
+name=google-chrome
+baseurl=http://dl.google.com/linux/chrome/rpm/stable/x86_64/
+gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
+enabled=1
+gpgcheck=1
+
+
+# Dropbox #
+/etc/yum.repos.d/dropbox.repo
+[Dropbox]
+name=Dropbox Repository
+baseurl=http://linux.dropbox.com/fedora/$releasever/
+gpgkey=http://linux.dropbox.com/fedora/rpm-public-key.asc
+enabled=1
+
+
+# Medit #
+/etc/yum.repos.d/rpm-sphere.repo:
+[rpm-sphere]
+name=RPM Sphere
+baseurl=http://download.opensuse.org/repositories/home:/zhonghuaren/Fedora_17/
+gpgkey=http://download.opensuse.org/repositories/home:/zhonghuaren/Fedora_17/repodata/repomd.xml.key
+enabled=1
+gpgcheck=1
+
+
+## Install nVidia proprietary drivers ###
+(necesita RPMFusion Repositories)
+
+yum install akmod-nvidia xorg-x11-drv-nvidia-libs
+
+mv /boot/initramfs-$(uname -r).img /boot/initramfs-$(uname -r)-nouveau.img   # Backup old initramfs nouveau image
+
+dracut /boot/initramfs-$(uname -r).img $(uname -r)  # Create new initramfs image
+
+reboot
+
+
+### Improving Fedora 17 Font Rendering ###
+sudo rpm -Uvh http://www.infinality.net/fedora/linux/infinality-repo-1.0-1.noarch.rpm 
+sudo yum -y install freetype-infinality fontconfig-infinality libXft-infinality 
+
+
+### tv-maxe ###
+su -c 'yum install libstdc++.so.5 nano wget make gstreamer-python'
+wget http://sopcast-player.googlecode.com/files/sp-auth-3.2.6.tar.gz
+tar -zxvf sp-auth-3.2.6.tar.gz
+rm sp-auth-3.2.6.tar.gz
+cd sp-auth/
+su -c 'make install'
+cd
+rm -r sp-auth
+wget http://tv-maxe.googlecode.com/files/tv-maxe-0.08.tar.gz
+tar -zxvf tv-maxe-0.08.tar.gz
+rm tv-maxe-0.08.tar.gz
+mv tv-maxe-0.08 .tv-maxe
+cd .tv-maxe
+python tvmaxe.py
+
+# Iconita in aplications/sound&video #
+
+vim tvmaxe.sh
+____________
+#!/bin/bash
+cd /home/$USER/.tv-maxe && python tvmaxe.py &
+____________
+
+chmod +x tvmaxe.sh
+cd /usr/share/applications/
+sudo vim tv-maxe.desktop
+_______________
+[Desktop Entry]
+Name=TV-Maxe
+GenericName=TV-Maxe
+Comment=tv-internet
+Exec=/home/$USER/.tv-maxe/tvmaxe.sh
+Icon=/home/$USER/.tv-maxe/tvmaxe.png
+Terminal=false
+Type=Application
+Categories=AudioVideo;Player;
+_______________
+
+
+### Codecs ###
+sudo yum install gstreamer gstreamer-plugins-good gstreamer-plugins-bad gstreamer-plugins-ugly ffmpeg ffmpeg-libs
+
+
+### Nautilus Extensions ###
+yum install nautilus-actions nautilus-image-converter nautilus-open-terminal nautilus-search-tool nautilus-sendto raw-thumbnailer gnome-gmail
+
+
+# Change GNOME3 desktop crontab #
+*/10 * * * * DISPLAY=:0 GSETTINGS_BACKEND=dconf gsettings set org.gnome.desktop.background picture-uri file://"$(find ~/Pictures/National_Geographic -type f | shuf -n1)"
+
+
+# Change XFCE desktop crontab #
+*/10 * * * * DISPLAY=:0.0 xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/image-path -s "$(find ~/Pictures/National_Geographic -type f -iregex '.*.(bmp|gif|jpg|png)$' | sort -R | head -1)"
+
+
+# Use a transparent background for XFCE desktop icon titles #
+vim .gtkrc-2.0
+______________________________
+style "xfdesktop-icon-view" {
+XfdesktopIconView::label-alpha = 10
+base[NORMAL] = "#000000"
+base[SELECTED] = "#71B9FF"
+base[ACTIVE] = "#71FFAD"
+fg[NORMAL] = "#ffffff"
+fg[SELECTED] = "#71B9FF"
+fg[ACTIVE] = "#71FFAD" }
+widget_class "*XfdesktopIconView*" style "xfdesktop-icon-view"
+_______________________________
+
+
+
+### GConf Error ###
+GConf Error: Configuration server couldn't be contacted: D-BUS error: The GConf daemon is currently shutting down
+
+sudo killall gconfd-2
+
+
+### /etc/yum.conf ###
+clean_requirements_on_remove=1  # remove a package with all dependencies
+
+
+### PulseAudio ###
+sudo yum install paman paprefs pavucontrol pavumeter pulseaudio-equalizer gnome-media-apps pulseaudio-module-jack
+
+sudo vim /etc/pulse/daemon.conf
+_______________________________
+enable-remixing = yes
+enable-lfe-remixing = yes
+default-sample-format = s32le
+default-sample-rate = 48000
+default-sample-channels = 6
+default-fragments = 8
+default-fragment-size-msec = 5
+________________________________
+
+pulseaudio -k  # restart pulseaudio
+
+
+### Enable touchpad click ###
+
+sudo vim /usr/share/X11/xorg.conf.d/50-synaptics.conf
+_____________________
+Section "InputClass"
+        Identifier "touchpad catchall"
+        Driver "synaptics"
+        MatchIsTouchpad "on"
+        MatchDevicePath "/dev/input/event*"
+        Option "TapButton1" "1"
+        Option "TapButton2" "2"
+        Option "TapButton3" "3"
+        Option "VertTwoFingerScroll" "on"
+        Option "HorizTwoFingerScroll" "on"
+EndSection
+_____________________
+
+
+### Enable autologin ###
+
+sudo vim /etc/gdm/custom.conf
+_________
+[daemon]
+AutomaticLoginEnable=true
+AutomaticLogin=USERNAME
+_________
+
+
+### Change swappiness value ###
+
+sudo vim /etc/sysctl.conf
+__________________
+# Memory/Swap Use 
+vm.swappiness = 20
+__________________
+
+sudo sysctl -p  # reload sysctl.conf without restart
+cat /proc/sys/vm/swappiness  # display swappiness value
+
+
+### Boot Optimization ###
+sudo yum update
+sudo /etc/cron.daily/prelink
+sudo yum install systemd-analyze
+
+sudo vim /etc/default/grub
+libahci.ignore_sss=1 raid=noautodetect  # add this to kernel boot
+
+cd /lib/systemd/system
+for i in fedora*storage* plymouth-*.* mdmonitor*.*; do sudo systemctl mask $i;done
+for i in abrt*.service auditd.service avahi-daemon.* dev-hugepages.mount dev-mqueue.mount fedora-configure.service fedora-loadmodules.service fedora-readonly.service irqbalance.service mcelog.service rsyslog.service sendmail.service sm-client.service sys-kernel-config.mount sys-kernel-debug.mount sshd.service ip6tables.service iptables.service bluetooth.*; do sudo systemctl mask $i; done
+
+
+### Automatically run a command at Boot Time ###
+
+sudo vim /etc/rc.d/rc.local
+____________
+#! /bin/bash
+comanda
+___________
+sudo chmod +x /etc/rc.d/rc.local
+sudo systemctl restart rc-local.service
+
+
+________________________________________________________________________________________________________________________________________________________
+
+### Settings for Yahoo US users ###
+Type : IMAP
+Incoming Mail Server : imap.mail.yahoo.com
+port : 993
+SSL : yes
+Outgoing Mail Server : smtp.mail.yahoo.com
+port : 465
+SSL : yes
+
+
+### Awesome WM ###
+sudo wget -nd -P /etc/yum.repos.d http://repos.fedorapeople.org/repos/thm/awesome/fedora-awesome.repo
+sudo yum install awesome
+rxvt-unicode
+sudo yum install mpd luafilesystem luasocket ranger ncmpcpp mpc dmenu rxvt-unicode-256color finch weechat medit zukitwo lxappearance faenza-icon-theme
+
+# testing #
+Xephyr :1 -ac -br -noreset -screen 1152x720 & 
+DISPLAY=:1.0 awesome -c ~/.config/awesome/rc.lua
+
+
+### Copy files from multiple directories into one directory ###
+find ~/Pictures/Stunning_National_Geographic_WallPapers -name "*.jpg" -exec cp -i {} ~/Pictures/all \;
+
+
+### Find Out Linux Distribution Name and Version ###
+cat /etc/*-release
+
+
+
+### List symbolic links from a directory ###
+find . -type l -exec ls -l {} \; 
+
+
+### Wine OpenGL is not using Direct Rendering ###
+sudo yum install xorg-x11-drv-nvidia-libs.i686
+
+
+### Start rxvt-unicode full screen ###
+urxvt256c -geometry 1920x1080
+
+
+### QEMU ###
+qemu-img create -f qcow2 winxp.img 8G
+qemu-system-x86_64 -m 1024 -hda winxp.img -cdrom winxpsp2.iso -boot d
+
+
+
+
+
