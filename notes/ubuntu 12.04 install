@@ -19,6 +19,8 @@ ppa:firefishy/amd64-microcode-precise
 ppa:pi-rho/security  # aircrack-ng, reaver
 ppa:nilarimogard/webupd8  # newer apps
 ppa:team-xbmc/ppa  # xbmc 12.0
+ppa:bitcoin/bitcoin  # Bitcoin wallet
+
 
 ### Unity ###
 setsid unity  # like log-out log-in
@@ -33,6 +35,10 @@ sudo sed -i "s/NoDisplay=true/NoDisplay=false/g" /etc/xdg/autostart/*.desktop
 
 ### Preload ###
 sudo apt-get install preload
+
+### apport ###
+sudo apt-get purge apport  # remove automatically generate crash reports for debugging
+
 
 ### Change swappiness value ###
 sudo vim /etc/sysctl.conf
