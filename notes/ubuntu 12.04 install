@@ -94,6 +94,8 @@ echo -e 'APT::Install-Recommends "0";\nAPT::Install-Suggests "0";' | sudo tee /e
 sudo apt-get update
 sudo apt-get install package
 
+apt-get --no-install-recommends install package  # Temporary Solution
+
 
 ### Others ###
 sudo dmidecode -t 16   # find out the maximum RAM capacity and the number of RAM slots available
