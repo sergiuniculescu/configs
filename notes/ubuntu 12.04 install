@@ -20,7 +20,8 @@ ppa:pi-rho/security  # aircrack-ng, reaver
 ppa:nilarimogard/webupd8  # newer apps
 ppa:team-xbmc/ppa  # xbmc 12.0
 ppa:bitcoin/bitcoin  # Bitcoin wallet
-
+ppa:atareao/sunflower  # sunflower-fm
+ppa:noobslab/icons  # myhumanity icons
 
 ### Unity ###
 setsid unity  # like log-out log-in
@@ -82,6 +83,17 @@ sync
 unmount /home
 mount -o remount,ro /
 reboot
+
+
+# Show the List of Installed Packages #
+dpkg --get-selections # list of all the currently installed packages
+
+
+# Tell apt-get not to install "Suggested" and “recommends” packages #
+echo -e 'APT::Install-Recommends "0";\nAPT::Install-Suggests "0";' | sudo tee /etc/apt/apt.conf
+sudo apt-get update
+sudo apt-get install package
+
 
 ### Others ###
 sudo dmidecode -t 16   # find out the maximum RAM capacity and the number of RAM slots available
