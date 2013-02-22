@@ -23,8 +23,44 @@ ppa:bitcoin/bitcoin  # Bitcoin wallet
 ppa:atareao/sunflower  # sunflower-fm
 ppa:noobslab/icons  # myhumanity icons
 
+# Google-chrome #
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
+sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+
+# GetDeb Apps #
+wget -q -O - http://archive.getdeb.net/getdeb-archive.key | sudo apt-key add -
+sudo sh -c 'echo "deb http://archive.getdeb.net/ubuntu precise-getdeb apps" >> /etc/apt/sources.list.d/getdeb.list'
+
+# GetDeb Games #
+wget -q -O - http://archive.getdeb.net/getdeb-archive.key | sudo apt-key add -
+sudo sh -c 'echo "deb http://archive.getdeb.net/ubuntu quantal-getdeb games" >> /etc/apt/sources.list.d/getdeb.list'
+
+
+### Package Management ###
+
+# Show the List of Installed Packages #
+dpkg --get-selections # list of all the currently installed packages
+
+# List version of a package #
+apt-cache policy package
+
+# Tell apt-get not to install "Suggested" and “recommends” packages #
+echo -e 'APT::Install-Recommends "0";\nAPT::Install-Suggests "0";' | sudo tee /etc/apt/apt.conf
+sudo apt-get update
+sudo apt-get install package
+
+apt-get --no-install-recommends install package  # Temporary Solution
+
+
 ### Unity ###
 setsid unity  # like log-out log-in
+
+
+### Latest kernel ###
+http://kernel.ubuntu.com/~kernel-ppa/mainline  # download linux-headers_amd64, linux-headers_all, linux-image_amd64, linux-image-extra_amd64
+sudo dpkg -i linux-*.deb
+sudo update-grub
+
 
 # New Ubuntu logo #
 wget https://launchpad.net/ubuntu/raring/+source/unity/6.12.0daily13.01.18-0ubuntu1/+files/unity_6.12.0daily13.01.18.orig.tar.gz  # download end extract
@@ -83,18 +119,6 @@ sync
 unmount /home
 mount -o remount,ro /
 reboot
-
-
-# Show the List of Installed Packages #
-dpkg --get-selections # list of all the currently installed packages
-
-
-# Tell apt-get not to install "Suggested" and “recommends” packages #
-echo -e 'APT::Install-Recommends "0";\nAPT::Install-Suggests "0";' | sudo tee /etc/apt/apt.conf
-sudo apt-get update
-sudo apt-get install package
-
-apt-get --no-install-recommends install package  # Temporary Solution
 
 
 ### Others ###
