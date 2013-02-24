@@ -6,7 +6,7 @@
 ppa:xorg-edgers/ppa
 ppa:tsvetko.tsvetkov/unity
 
-ppa:tualatrix/ppa  # ubuntu-tweak
+ppa:tualatrix/next # ubuntu-tweak
 ppa:libreoffice/ppa
 ppa:webupd8team/themes  # Faenza
 ppa:pidgin-developers/ppa
