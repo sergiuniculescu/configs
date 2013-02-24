@@ -11,7 +11,7 @@ ppa:libreoffice/ppa
 ppa:webupd8team/themes  # Faenza
 ppa:pidgin-developers/ppa
 ppa:scopes-packagers/ppa  # lens/scopes
-ppa:venerix/blug  # tv-maxe
+ppa:venerix/pkg # tv-maxe
 ppa:atareao/atareao  # my-weather-indicator
 ppa:otto-kesselgulasch/gimp
 ppa:webupd8team/java  # Java 8
@@ -60,6 +60,9 @@ setsid unity  # like log-out log-in
 http://kernel.ubuntu.com/~kernel-ppa/mainline  # download linux-headers_amd64, linux-headers_all, linux-image_amd64, linux-image-extra_amd64
 sudo dpkg -i linux-*.deb
 sudo update-grub
+
+# See the schedueler kernel #
+cat /sys/block/sda/queue/scheduler
 
 
 # New Ubuntu logo #
