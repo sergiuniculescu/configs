@@ -1,0 +1,37 @@
+#!/bin/bash
+
+sh NVIDIA-Linux-x86_64-313.18-no-compat32.run --extract-only
+cp unfuck-3.7.7.patch NVIDIA-Linux-x86_64-313.18-no-compat32
+cd NVIDIA-Linux-x86_64-313.18-no-compat32
+cat unfuck-3.7.7.patch | patch -p0
+cd kernel
+make SYSSRC=/lib/modules/`uname -r`/build module
+cp nvidia.ko /lib/modules/`uname -r`/kernel/drivers/video
+depmod -a
+cd ..
+install -D -m755 "nvidia_drv.so" "/usr/lib/xorg/modules/drivers/nvidia_drv.so"
+install -D -m755 "libglx.so.313.18" "/usr/lib/xorg/modules/extensions/libglx.so.313.18"
+install -D -m755 "libGL.so.313.18" "/usr/lib/libGL.so.313.18"
+install -D -m755 "libnvidia-glcore.so.313.18" "/usr/lib/libnvidia-glcore.so.313.18"
+install -D -m755 "libvdpau_nvidia.so.313.18" "/usr/lib/vdpau/libvdpau_nvidia.so.313.18"
+install -D -m755 "tls/libnvidia-tls.so.313.18" "/usr/lib/libnvidia-tls.so.313.18"
+install -D -m755 "libnvidia-cfg.so.313.18" "/usr/lib/libnvidia-cfg.so.313.18"
+install -D -m755 "libnvidia-ml.so.313.18" "/usr/lib/libnvidia-ml.so.313.18"
+install -D -m755 "libcuda.so.313.18" "/usr/lib/libcuda.so.313.18"
+install -D -m755 "libnvcuvid.so.313.18" "/usr/lib/libnvcuvid.so.313.18"
+install -D -m755 nvidia-xconfig "/usr/bin/nvidia-xconfig"
+install -D -m644 nvidia-xconfig.1.gz "/usr/share/man/man1/nvidia-xconfig.1.gz"
+install -D -m755 nvidia-settings "/usr/bin/nvidia-settings"
+install -D -m644 nvidia-settings.1.gz "/usr/share/man/man1/nvidia-settings.1.gz"
+install -D -m644 nvidia-settings.desktop "/usr/share/applications/nvidia-settings.desktop"
+install -D -m644 nvidia-settings.png "/usr/share/pixmaps/nvidia-settings.png"
+sed -e 's:__UTILS_PATH__:/usr/bin:' -e 's:__PIXMAP_PATH__:/usr/share/pixmaps:' -i "/usr/share/applications/nvidia-settings.desktop"
+install -D -m755 nvidia-bug-report.sh "/usr/bin/nvidia-bug-report.sh"
+install -D -m755 nvidia-smi "/usr/bin/nvidia-smi"
+install -D -m644 nvidia-smi.1.gz "/usr/share/man/man1/nvidia-smi.1.gz"
+install -D -m644 LICENSE "/usr/share/licenses/nvidia/LICENSE"
+ln -s nvidia "/usr/share/licenses/nvidia-utils"
+install -D -m644 README.txt "/usr/share/doc/nvidia/README"
+install -D -m644 NVIDIA_Changelog "/usr/share/doc/nvidia/NVIDIA_Changelog"
+ln -s nvidia "/usr/share/doc/nvidia-utils"
+echo -e "blacklist nouveau" | sudo tee /etc/modprobe.d/nouveau-blacklist.conf

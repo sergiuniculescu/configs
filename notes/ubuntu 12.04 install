@@ -56,6 +56,9 @@ apt-get --no-install-recommends install package  # Temporary Solution
 ### Unity ###
 setsid unity  # like log-out log-in
 
+# Unity support test #
+/usr/lib/nux/unity_support_test -p
+
 
 ### Latest kernel ###
 http://kernel.ubuntu.com/~kernel-ppa/mainline  # download linux-headers_amd64, linux-headers_all, linux-image_amd64, linux-image-extra_amd64
