@@ -23,7 +23,6 @@ ppa:bitcoin/bitcoin  # Bitcoin wallet
 ppa:atareao/sunflower  # sunflower-fm
 ppa:noobslab/icons  # myhumanity icons
 ppa:gwendal-lebihan-dev/cinnamon-stable # cinnamon DE
-ppa:diesch/testing  # unsettings - unity tweak
 ppa:freyja-dev/unity-tweak-tool-daily  # unity tweak
 
 # Google-chrome #
