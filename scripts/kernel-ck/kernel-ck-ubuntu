@@ -25,8 +25,8 @@
 # 3.7
 #versão do kernel a ser compilado
 kernel=3.7
-#patch de atualização
-patchkernel=3.7.9
+#path de atualização
+patchkernel=3.7.10
 #patch BFQ
 bfq=3.7.0-v6
 vbfq=v6
@@ -292,9 +292,12 @@ echo -e "\033[1m-----------------------------\033[7m Configuring the kernel \033
 #### criado por Stivekx #############
 #config_file=$(locate /boot/config-* | sort -r | head -1)
 
-echo "[+] downloading an optimized config file from http://liquorix.net ...    "
-_exec wget "http://liquorix.net/sources/$kernel/config.$arqt"
-_exec cp config.$arqt .config
+#echo "[+] downloading an optimized config file from http://liquorix.net ...    "
+#_exec wget "http://liquorix.net/sources/$kernel/config.$arqt"
+#_exec cp config.$arqt .config
+
+echo "[+] using ubuntu config"
+_exec cp $HOME/.config_ubuntu .config
 
 #tmp fix for bug #663474
 #http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=663474
@@ -312,11 +315,11 @@ fi
 #thanks StefanescuCristian: https://github.com/chilicuil/learn/commit/c2d44556101f997d70eac4c5536ea241363ee63c#commitcomment-2390064
 echo "[+] making sure BFS and BFQ are enabled in config"
 sed "/CONFIG_SCHED_CFS=y/d" .config > tmp
-mv tmp .config
+mv -f tmp .config
 sed "s/# CONFIG_SCHED_BFS is not set/CONFIG_SCHED_BFS=y/g" .config > tmp
-mv tmp .config
+mv -f tmp .config
 sed "s/# CONFIG_IOSCHED_BFQ is not set/CONFIG_IOSCHED_BFQ=y/g" .config > tmp
-mv tmp .config
+mv -f tmp .config
 
 #echo "[+] optimizying even more, using streamline_config.pl ...    "
 #chmod +x ./scripts/kconfig/streamline_config.pl && ./scripts/kconfig/streamline_config.pl > config_strip
@@ -325,7 +328,7 @@ mv tmp .config
 
 #echo "[+] running menuconfig ...    "
 #make menuconfig
-_exec echo
+#_exec echo
 
 echo -e "\033[1m-----------------------------\033[7m Compiling the kernel \033[0m\033[1m------------------------------\033[0m"
 

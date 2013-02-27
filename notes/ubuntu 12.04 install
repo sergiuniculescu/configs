@@ -22,7 +22,9 @@ ppa:team-xbmc/ppa  # xbmc 12.0
 ppa:bitcoin/bitcoin  # Bitcoin wallet
 ppa:atareao/sunflower  # sunflower-fm
 ppa:noobslab/icons  # myhumanity icons
-ppa:gwendal-lebihan-dev/cinnamon-stable  
+ppa:gwendal-lebihan-dev/cinnamon-stable # cinnamon DE
+ppa:diesch/testing  # unsettings - unity tweak
+ppa:freyja-dev/unity-tweak-tool-daily  # unity tweak
 
 # Google-chrome #
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
