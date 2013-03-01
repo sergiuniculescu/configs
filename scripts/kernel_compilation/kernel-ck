@@ -1,0 +1,287 @@
+#!/bin/bash
+
+#####################################
+# 3.7
+#kernel
+kernel=3.7
+#kernel patch
+patchkernel=3.7.10
+#patch BFQ
+bfq=3.7.0-v6
+vbfq=v6
+#patch ck
+patchck=3.7-ck1
+#sufix
+ckk=ck1
+#arch
+arqt=$(dpkg --print-architecture)
+#####################################
+
+####################################################################################################################################
+############################################# DO NOT EDIT BELOW UNLESS YOU KNOW WHAT YOU'RE DOING ##################################
+####################################################################################################################################
+
+# people should use a partition with the exec option set, the /tmp partitions usually have noexec
+tmp_path="$HOME/.tmp/kernel-ck-$patchkernel" 
+curr_path=$PWD
+#CPU architeture: amd64 or i386
+#CL=CONCURRENCY_LEVEL of CPU
+CL=$(grep -c processor /proc/cpuinfo)
+
+trap cleanup SIGINT SIGTERM #trap ctrl-c
+
+function header()
+{
+    clear
+    echo -e "\033[1m-------------------------------\033[7m $0 $patchkernel \033[0m\033[1m------------------------------\033[0m"
+    echo -e "\033[1m  -ck hacking:\033[0m        http://http://ck.kolivas.org/patches/"
+    echo -e "\033[1m  BFQ disk scheduling:\033[0m     http://algo.ing.unimo.it/people/paolo/disk_sched/sources.php"
+    echo
+    echo -e "\033[1m  Patches:\033[0m         -bfq, -ck"
+    echo
+    echo -e "\033[1m----------------\033[7m Current Configuration: edit the script to change them \033[0m\033[1m--------------\033[0m"
+    echo "  build path:         $tmp_path"
+    echo "  kernel:             $patchkernel"
+    echo "  -bfq patchset:      $bfq"
+    echo "  -ck patchset:       $patchck"
+    echo "  -ubuntu patchset:   v$patchkernel"
+    echo "  sufix:              $ckk"
+    echo "  arch:               $arqt"
+    echo -e "\033[1m-------------------------------------------------------------------------------------\033[0m"
+    echo
+}
+
+_exec()
+{
+    status=$?
+    if [ $status != 0 ]; then
+        exit $status
+    fi
+    echo "[+] $@"
+    $@
+}
+
+function _rotate ()
+{
+    pid=$1
+    animation_state=1
+
+    while [ "`ps -p $pid -o comm=`" ]; do
+        # rotating star
+        echo -e -n "\b\b\b"
+        case $animation_state in
+            1)
+                echo -n "["
+                echo -n -e "\033[1m|\033[0m"
+                echo -n "]"
+                animation_state=2
+                ;;
+            2)
+                echo -n "["
+                echo -n -e "\033[1m/\033[0m"
+                echo -n "]"
+                animation_state=3
+                ;;
+            3)
+                echo -n "["
+                echo -n -e "\033[1m-\033[0m"
+                echo -n "]"
+                animation_state=4
+                ;;
+            4)
+                echo -n "["
+                echo -n -e "\033[1m"
+                echo -n "\\"
+                echo -n -e "\033[0m"
+                echo -n "]"
+                animation_state=1
+                ;;
+        esac
+        sleep 1
+    done
+}
+
+function test_root()
+{
+    mkdir -p "$tmp_path"
+
+    if [ ! "$LOGNAME" == "root" ]; then
+        echo "[+] detecting user $LOGNAME (non-root)"
+        echo "[+] checking if sudo is available ... "
+        sudotest=`type sudo &>/dev/null ; echo $?`
+
+        if [ "$sudotest" == 0 ]; then
+            sudo -K
+            if [ -e "$tmp_path/sudo.test" ]; then
+                rm -f "$tmp_path/sudo.test"
+            fi
+            while [ -z "$sudopwd" ]; do
+                echo -n "   - enter sudo-password: "
+                stty -echo
+                read sudopwd
+                stty echo
+
+                # password check
+                echo "$sudopwd" | sudo -S touch "$tmp_path/sudo.test" |& tee /tmp/sudo.output
+                InSudoers=$(grep -i "sudoers" /tmp/sudo.output)
+                if [ -n "$InSudoers" ]; then
+                    rm /tmp/sudo.output
+                    exit
+                fi
+
+                if [ ! -e "$tmp_path/sudo.test" ]; then
+                    sudopwd=""
+                fi
+            done
+
+            SUDO="/usr/bin/sudo -S"
+
+            rm -f "$tmp_path/sudo.test"
+            echo
+        else
+            echo "You're not root and sudo isn't available. Please run this script as root!"
+            exit
+        fi
+    fi
+}
+
+function cleanup ()
+{
+    stty echo
+    echo
+    echo "[+] deleting files at $tmp_path ... "
+    #echo "$sudopwd" | $SUDO rm -v $tmp_path/patch*
+    #echo "$sudopwd" | $SUDO rm -v $tmp_path/*.patch
+    echo "$sudopwd" | _exec $SUDO rm -rf $tmp_path/linux-$patchkernel-$ckk
+
+    #echo "$sudopwd" | $SUDO mount -o remount /tmp
+    #rm -rf $tmp_path 2>/dev/null
+    if [ -z $1 ]; then
+        exit
+    fi
+}
+
+function _waitfor ()
+{
+    sleep 1s
+
+    running=$(pidof $1); running=$?
+    if [ "$running" == "1" ]; then
+        echo -e "\b\b\b\b\b done"
+    else
+        _rotate $(pidof $1)
+        echo -e "\b\b\b\b\b done"
+    fi
+}
+
+header
+test_root
+
+echo -e "\033[1m--------------------------------\033[7m Fixing dependencies \033[0m\033[1m--------------------------------\033[0m"
+
+########Fixing dependencies########################################################
+echo "$sudopwd" | _exec $SUDO apt-get update
+echo "$sudopwd" | _exec $SUDO apt-get install kernel-package gcc-4.6 libncurses5 libncurses5-dev build-essential patch fakeroot -y
+_exec echo
+####################################################################################################
+
+echo -e "\033[1m--------------------------------\033[7m Downloading archives \033[0m\033[1m-------------------------------\033[0m"
+echo "[+] downloading the main tree for the vanilla kernel ...    "
+_exec cd $tmp_path
+_exec wget -N http://www.kernel.org/pub/linux/kernel/v3.x/linux-$kernel.tar.bz2
+
+echo "[+] downloading the mainstream patches for the vanilla kernel ...    "
+_exec wget -N http://www.kernel.org/pub/linux/kernel/v3.x/patch-$patchkernel.bz2
+
+echo "[+] downloading the -ck patches for the vanilla kernel ...    "
+_exec wget -N http://ck.kolivas.org/patches/3.0/$kernel/$patchck/patch-$patchck.bz2
+
+echo "[+] downloading the bfq patches for the vanilla kernel ...    "
+_exec wget -N http://algo.ing.unimo.it/people/paolo/disk_sched/patches/$bfq/0001-block-cgroups-kconfig-build-bits-for-BFQ-$vbfq-$kernel.patch
+_exec wget -N http://algo.ing.unimo.it/people/paolo/disk_sched/patches/$bfq/0002-block-introduce-the-BFQ-$vbfq-I-O-sched-for-$kernel.patch
+
+#ubuntu patch
+#echo "[+] downloading the ubuntu patches for the vanilla kernel ...    "
+#_exec wget -N http://kernel.ubuntu.com/~kernel-ppa/mainline/v$patchkernel-raring/0001-base-packaging.patch
+#_exec wget -N http://kernel.ubuntu.com/~kernel-ppa/mainline/v$patchkernel-raring/0002-debian-changelog.patch
+#_exec wget -N http://kernel.ubuntu.com/~kernel-ppa/mainline/v$patchkernel-raring/0003-default-configs.patch
+
+echo -e "\033[1m-----------------------------\033[7m Applying the patches \033[0m\033[1m------------------------------\033[0m"
+echo "[+] uncomprensing the kernel to $tmp_path/linux-$kernel/ ...    "
+if [ ! -d /$tmp_path/linux-$kernel/ ]; then
+    _exec tar -jxpf $tmp_path/linux-$kernel.tar.bz2 & _waitfor tar
+fi
+
+echo "[+] uncomprensing the patches ...    "
+_exec bunzip2 patch-$patchkernel.bz2 patch-$patchck.bz2 > /dev/null 2>&1
+
+echo "[+] moving to $tmp_path/linux-$patchkernel-$ckk"
+_exec rm -rf linux-$patchkernel-$ckk
+_exec cp -r linux-$kernel linux-$patchkernel-$ckk
+_exec cd linux-$patchkernel-$ckk
+_exec echo
+
+echo "[+] applying patches ...    "
+_exec patch -p1 < ../patch-$patchkernel
+_exec patch -p1 < ../patch-$patchck
+_exec patch -p1 < ../0001-block-cgroups-kconfig-build-bits-for-BFQ-$vbfq-$kernel.patch
+_exec patch -p1 < ../0002-block-introduce-the-BFQ-$vbfq-I-O-sched-for-$kernel.patch
+#_exec patch -p1 < ../0001-base-packaging.patch
+#_exec patch -p1 < ../0002-debian-changelog.patch
+#_exec patch -p1 < ../0003-default-configs.patch
+_exec echo
+
+echo -e "\033[1m-----------------------------\033[7m Configuring the kernel \033[0m\033[1m------------------------------\033[0m"
+#### Configuring the kernel #############
+#config_file=$(locate /boot/config-* | sort -r | head -1)
+
+#echo "[+] downloading an optimized config file from http://liquorix.net ...    "
+#_exec wget "http://liquorix.net/sources/$kernel/config.$arqt"
+#_exec cp config.$arqt .config
+
+#tmp fix for bug #663474
+#http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=663474
+if [ $arqt == "i386" ]; then
+    sed "/CONFIG_LGUEST_GUEST/d" .config > tmp
+    mv tmp .config
+elif [ $arqt == "amd64" ]; then
+    if [ ! -d ./arch/amd64  ]; then
+        cd arch
+        ln -s x86 amd64
+        cd -
+    fi
+fi
+
+echo "[+] making sure BFS and BFQ are enabled in config"
+sed "/CONFIG_SCHED_CFS=y/d" .config > tmp
+mv -f tmp .config
+sed "s/# CONFIG_SCHED_BFS is not set/CONFIG_SCHED_BFS=y/g" .config > tmp
+mv -f tmp .config
+sed "s/# CONFIG_IOSCHED_BFQ is not set/CONFIG_IOSCHED_BFQ=y/g" .config > tmp
+mv -f tmp .config
+
+#echo "[+] optimizying even more, using streamline_config.pl ...    "
+#chmod +x ./scripts/kconfig/streamline_config.pl && ./scripts/kconfig/streamline_config.pl > config_strip
+##make localmodconfig
+#mv config_strip .config
+
+#echo "[+] running menuconfig ...    "
+#make menuconfig
+_exec echo
+
+echo -e "\033[1m-----------------------------\033[7m Compiling the kernel \033[0m\033[1m------------------------------\033[0m"
+
+echo "[+] running make-kpkg ...    "
+CONCURRENCY_LEVEL=$CL
+echo | _exec fakeroot make-kpkg --initrd kernel_image kernel_headers modules_image
+_exec echo
+
+echo -e "\033[1m-------------------------------------\033[7m DONE \033[0m\033[1m----------------------------------\033[0m"
+echo "[+] copying the debs files ..."
+_exec cp -v ../linux-*.deb $curr_path
+echo "[+] you may want to install the generated packages and reboot your system, run: $ sudo dpkg -i linux-*.deb"
+echo "[+] have fun ^_^!"
+
+#echo "$sudopwd" | $SUDO dpkg -i ../*.deb
+
+cleanup 1
