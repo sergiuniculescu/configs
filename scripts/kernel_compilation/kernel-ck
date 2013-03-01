@@ -44,7 +44,7 @@ function header()
     echo "  kernel:             $patchkernel"
     echo "  -bfq patchset:      $bfq"
     echo "  -ck patchset:       $patchck"
-    echo "  -ubuntu patchset:   v$patchkernel"
+    echo "  -kernel patchset:   v$patchkernel"
     echo "  sufix:              $ckk"
     echo "  arch:               $arqt"
     echo -e "\033[1m-------------------------------------------------------------------------------------\033[0m"
