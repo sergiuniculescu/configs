@@ -75,25 +75,43 @@ wget https://launchpad.net/ubuntu/raring/+source/unity/6.12.0daily13.01.18-0ubun
 sudo cp /usr/share/unity/5/launcher_bfb.png{,.bkp}
 cp unity-6.12.0daily13.01.18/resources/launcher_bfb.png /usr/share/unity/5
 
-### Show Hidden Startup Apps ###
+
+### Tips To Speed Up Ubuntu ###
+
+# Show Hidden Startup Apps #
 sudo sed -i "s/NoDisplay=true/NoDisplay=false/g" /etc/xdg/autostart/*.desktop
 
-### Preload ###
+# Preload #
 sudo apt-get install preload
 
-### apport ###
+# apport #
 sudo apt-get purge apport  # remove automatically generate crash reports for debugging
 
-
-### Change swappiness value ###
+# Change swappiness value #
 sudo vim /etc/sysctl.conf
 __________________
 # Memory/Swap Use 
-vm.swappiness = 20
+vm.swappiness = 10
 __________________
 
 sudo sysctl -p  # reload sysctl.conf without restart
 cat /proc/sys/vm/swappiness  # display swappiness value
+
+# Disable Hibernation/Sleep Functions #
+sudo vim /etc/initramfs-tools/conf.d/resume
+RESUME=UUID=****  # Comment (add # at the beginning) this line
+
+# Use all CPU Cores For System Startup #
+sudo vim /etc/init.d/rc
+CONCURRENCY=makefile  # replace none with makefile
+
+# Use TMPFS To Reduce Disk I/O #
+sudo vim /etc/fstab
+- At the end of the file, add these two lines:
+_____________________
+# Move /tmp to RAM
+tmpfs	/tmp	tmpfs	defaults,noexec,nosuid	0	0
+_____________________
 
 
 ### Duplicate ppa's ###

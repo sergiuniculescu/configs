@@ -181,7 +181,7 @@ echo -e "\033[1m--------------------------------\033[7m Fixing dependencies \033
 
 ########Fixing dependencies########################################################
 echo "$sudopwd" | _exec $SUDO apt-get update
-echo "$sudopwd" | _exec $SUDO apt-get install kernel-package gcc-4.6 libncurses5 libncurses5-dev build-essential patch fakeroot -y
+echo "$sudopwd" | _exec $SUDO apt-get install kernel-package gcc-4.4 libncurses5 libncurses5-dev build-essential patch fakeroot -y
 _exec echo
 ####################################################################################################
 
@@ -231,7 +231,7 @@ _exec patch -p1 < ../0002-block-introduce-the-BFQ-$vbfq-I-O-sched-for-$kernel.pa
 #_exec patch -p1 < ../0003-default-configs.patch
 _exec echo
 
-echo -e "\033[1m-----------------------------\033[7m Configuring the kernel \033[0m\033[1m------------------------------\033[0m"
+#echo -e "\033[1m-----------------------------\033[7m Configuring the kernel \033[0m\033[1m------------------------------\033[0m"
 #### Configuring the kernel #############
 #config_file=$(locate /boot/config-* | sort -r | head -1)
 
@@ -241,24 +241,24 @@ echo -e "\033[1m-----------------------------\033[7m Configuring the kernel \033
 
 #tmp fix for bug #663474
 #http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=663474
-if [ $arqt == "i386" ]; then
-    sed "/CONFIG_LGUEST_GUEST/d" .config > tmp
-    mv tmp .config
-elif [ $arqt == "amd64" ]; then
-    if [ ! -d ./arch/amd64  ]; then
-        cd arch
-        ln -s x86 amd64
-        cd -
-    fi
-fi
+#if [ $arqt == "i386" ]; then
+#    sed "/CONFIG_LGUEST_GUEST/d" .config > tmp
+#    mv tmp .config
+#elif [ $arqt == "amd64" ]; then
+#    if [ ! -d ./arch/amd64  ]; then
+#        cd arch
+#        ln -s x86 amd64
+#        cd -
+#    fi
+#fi
 
-echo "[+] making sure BFS and BFQ are enabled in config"
-sed "/CONFIG_SCHED_CFS=y/d" .config > tmp
-mv -f tmp .config
-sed "s/# CONFIG_SCHED_BFS is not set/CONFIG_SCHED_BFS=y/g" .config > tmp
-mv -f tmp .config
-sed "s/# CONFIG_IOSCHED_BFQ is not set/CONFIG_IOSCHED_BFQ=y/g" .config > tmp
-mv -f tmp .config
+#echo "[+] making sure BFS and BFQ are enabled in config"
+#sed "/CONFIG_SCHED_CFS=y/d" .config > tmp
+#mv -f tmp .config
+#sed "s/# CONFIG_SCHED_BFS is not set/CONFIG_SCHED_BFS=y/g" .config > tmp
+#mv -f tmp .config
+#sed "s/# CONFIG_IOSCHED_BFQ is not set/CONFIG_IOSCHED_BFQ=y/g" .config > tmp
+#mv -f tmp .config
 
 #echo "[+] optimizying even more, using streamline_config.pl ...    "
 #chmod +x ./scripts/kconfig/streamline_config.pl && ./scripts/kconfig/streamline_config.pl > config_strip
@@ -267,7 +267,7 @@ mv -f tmp .config
 
 #echo "[+] running menuconfig ...    "
 #make menuconfig
-_exec echo
+#_exec echo
 
 echo -e "\033[1m-----------------------------\033[7m Compiling the kernel \033[0m\033[1m------------------------------\033[0m"
 
