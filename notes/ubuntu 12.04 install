@@ -162,3 +162,19 @@ history | awk '{a[$2]++}END{for(i in a){print a[i] " " i}}' | sort -rn | head  #
 nmap -Pn 86.107.198.160 -p 21,22,2150 # ping and scan a port on an ip address
 nmap -Pn 86.107.198.160 -p 21-2150  # scand a range of ports
 
+
+### Burn a CD from tty ###
+genisoimage -r -J -o cd_image.iso /directory  # Creating an ISO image
+sudo apt-get install wodim
+wodim --devices  # see where the CDROM/DVDROM is located
+wodim dev=/dev/cdrw -v -data cd_image.iso
+wodim dev=/dev/cdrw -v -audio [wav files...]
+wodim -vv dev=/dev/cdrw blank=all  # Blanking a CD/RW
+
+### Burn a DVD from tty ###
+sudo apt-get install dvd+rw-tools
+growisofs -Z /dev/dvdrw -R -J /some/files 
+growisofs -speed=2 -dvd-compat -Z /dev/dvdrw=dvd_image.iso  # -dvd-compat closes the disk in write-once context
+growisofs -M /dev/dvdwriter additionaldata  # Add additional sessions
+dvd+rw-format -blank /dev/cdrw  # Blanking DVD+RW discs
+
