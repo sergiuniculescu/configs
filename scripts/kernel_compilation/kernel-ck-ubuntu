@@ -320,6 +320,21 @@ sed "s/# CONFIG_SCHED_BFS is not set/CONFIG_SCHED_BFS=y/g" .config > tmp
 mv -f tmp .config
 sed "s/# CONFIG_IOSCHED_BFQ is not set/CONFIG_IOSCHED_BFQ=y/g" .config > tmp
 mv -f tmp .config
+#We make sure that BFQ is trully enabled
+sed "s/CONFIG_DEFAULT_CFQ=y/# CONFIG_DEFAULT_CFQ is not set/g" .config > tmp
+mv -f tmp .config
+sed "s/CONFIG_DEFAULT_DEADLINE=y/# CONFIG_DEFAULT_DEADLINE is not set/g" .config > tmp
+mv -f tmp .config
+sed "s/CONFIG_DEFAULT_NOOP=y/# CONFIG_DEFAULT_NOOP is not set/g" .config > tmp
+mv -f tmp .config
+sed "s/CONFIG_DEFAULT_IOSCHED="cfq"/CONFIG_DEFAULT_IOSCHED="bfq"/g" .config > tmp
+mv -f tmp .config
+sed "s/CONFIG_DEFAULT_IOSCHED="deadline"/CONFIG_DEFAULT_IOSCHED="bfq"/g" .config > tmp
+mv -f tmp .config
+sed "s/CONFIG_DEFAULT_IOSCHED="noop"/CONFIG_DEFAULT_IOSCHED="bfq"/g" .config > tmp
+mv -f tmp .config
+sed "s/# CONFIG_DEFAULT_BFQ is not set/CONFIG_DEFAULT_BFQ=y/g" .config > tmp
+mv -f tmp .config
 
 #echo "[+] optimizying even more, using streamline_config.pl ...    "
 #chmod +x ./scripts/kconfig/streamline_config.pl && ./scripts/kconfig/streamline_config.pl > config_strip
@@ -328,7 +343,7 @@ mv -f tmp .config
 
 #echo "[+] running menuconfig ...    "
 #make menuconfig
-#_exec echo
+_exec echo
 
 echo -e "\033[1m-----------------------------\033[7m Compiling the kernel \033[0m\033[1m------------------------------\033[0m"
 

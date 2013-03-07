@@ -3,14 +3,14 @@
 #####################################
 # 3.7
 #kernel
-kernel=3.7
+kernel=3.8
 #kernel patch
-patchkernel=3.7.10
+patchkernel=3.8.2
 #patch BFQ
-bfq=3.7.0-v6
+bfq=3.8.0-v6
 vbfq=v6
 #patch ck
-patchck=3.7-ck1
+patchck=3.8-ck1
 #sufix
 ckk=ck1
 #arch
@@ -200,11 +200,6 @@ echo "[+] downloading the bfq patches for the vanilla kernel ...    "
 _exec wget -N http://algo.ing.unimo.it/people/paolo/disk_sched/patches/$bfq/0001-block-cgroups-kconfig-build-bits-for-BFQ-$vbfq-$kernel.patch
 _exec wget -N http://algo.ing.unimo.it/people/paolo/disk_sched/patches/$bfq/0002-block-introduce-the-BFQ-$vbfq-I-O-sched-for-$kernel.patch
 
-#ubuntu patch
-#echo "[+] downloading the ubuntu patches for the vanilla kernel ...    "
-#_exec wget -N http://kernel.ubuntu.com/~kernel-ppa/mainline/v$patchkernel-raring/0001-base-packaging.patch
-#_exec wget -N http://kernel.ubuntu.com/~kernel-ppa/mainline/v$patchkernel-raring/0002-debian-changelog.patch
-#_exec wget -N http://kernel.ubuntu.com/~kernel-ppa/mainline/v$patchkernel-raring/0003-default-configs.patch
 
 echo -e "\033[1m-----------------------------\033[7m Applying the patches \033[0m\033[1m------------------------------\033[0m"
 echo "[+] uncomprensing the kernel to $tmp_path/linux-$kernel/ ...    "
@@ -226,48 +221,55 @@ _exec patch -p1 < ../patch-$patchkernel
 _exec patch -p1 < ../patch-$patchck
 _exec patch -p1 < ../0001-block-cgroups-kconfig-build-bits-for-BFQ-$vbfq-$kernel.patch
 _exec patch -p1 < ../0002-block-introduce-the-BFQ-$vbfq-I-O-sched-for-$kernel.patch
-#_exec patch -p1 < ../0001-base-packaging.patch
-#_exec patch -p1 < ../0002-debian-changelog.patch
-#_exec patch -p1 < ../0003-default-configs.patch
 _exec echo
 
-#echo -e "\033[1m-----------------------------\033[7m Configuring the kernel \033[0m\033[1m------------------------------\033[0m"
-#### Configuring the kernel #############
-#config_file=$(locate /boot/config-* | sort -r | head -1)
 
-#echo "[+] downloading an optimized config file from http://liquorix.net ...    "
+echo "[+] downloading an optimized config file from http://liquorix.net ...    "
 #_exec wget "http://liquorix.net/sources/$kernel/config.$arqt"
-#_exec cp config.$arqt .config
+#TODO 04-03-2013 21:19 >> check when liquorix update config for 3.8, using 3.7 config in the meantime
+_exec wget "http://liquorix.net/sources/3.7/config.$arqt"
+_exec cp config.$arqt .config
 
-#tmp fix for bug #663474
-#http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=663474
-#if [ $arqt == "i386" ]; then
-#    sed "/CONFIG_LGUEST_GUEST/d" .config > tmp
-#    mv tmp .config
-#elif [ $arqt == "amd64" ]; then
-#    if [ ! -d ./arch/amd64  ]; then
-#        cd arch
-#        ln -s x86 amd64
-#        cd -
-#    fi
-#fi
+#echo "[+] generating .config ...    "
+#make localmodconfig
 
-#echo "[+] making sure BFS and BFQ are enabled in config"
-#sed "/CONFIG_SCHED_CFS=y/d" .config > tmp
-#mv -f tmp .config
-#sed "s/# CONFIG_SCHED_BFS is not set/CONFIG_SCHED_BFS=y/g" .config > tmp
-#mv -f tmp .config
-#sed "s/# CONFIG_IOSCHED_BFQ is not set/CONFIG_IOSCHED_BFQ=y/g" .config > tmp
-#mv -f tmp .config
+if [ $arqt == "i386" ]; then
+    sed "/CONFIG_LGUEST_GUEST/d" .config > tmp
+    mv tmp .config
+elif [ $arqt == "amd64" ]; then
+    if [ ! -d ./arch/amd64  ]; then
+        cd arch
+        ln -s x86 amd64
+        cd -
+    fi
+fi
 
-#echo "[+] optimizying even more, using streamline_config.pl ...    "
-#chmod +x ./scripts/kconfig/streamline_config.pl && ./scripts/kconfig/streamline_config.pl > config_strip
-##make localmodconfig
-#mv config_strip .config
+echo "[+] making sure BFS and BFQ are enabled in config"
+sed "/CONFIG_SCHED_CFS=y/d" .config > tmp
+mv -f tmp .config
+sed "s/# CONFIG_SCHED_BFS is not set/CONFIG_SCHED_BFS=y/g" .config > tmp
+mv -f tmp .config
+sed "s/# CONFIG_IOSCHED_BFQ is not set/CONFIG_IOSCHED_BFQ=y/g" .config > tmp
+mv -f tmp .config
+#We make sure that BFQ is trully enabled
+sed "s/CONFIG_DEFAULT_CFQ=y/# CONFIG_DEFAULT_CFQ is not set/g" .config > tmp
+mv -f tmp .config
+sed "s/CONFIG_DEFAULT_DEADLINE=y/# CONFIG_DEFAULT_DEADLINE is not set/g" .config > tmp
+mv -f tmp .config
+sed "s/CONFIG_DEFAULT_NOOP=y/# CONFIG_DEFAULT_NOOP is not set/g" .config > tmp
+mv -f tmp .config
+sed "s/CONFIG_DEFAULT_IOSCHED="cfq"/CONFIG_DEFAULT_IOSCHED="bfq"/g" .config > tmp
+mv -f tmp .config
+sed "s/CONFIG_DEFAULT_IOSCHED="deadline"/CONFIG_DEFAULT_IOSCHED="bfq"/g" .config > tmp
+mv -f tmp .config
+sed "s/CONFIG_DEFAULT_IOSCHED="noop"/CONFIG_DEFAULT_IOSCHED="bfq"/g" .config > tmp
+mv -f tmp .config
+sed "s/# CONFIG_DEFAULT_BFQ is not set/CONFIG_DEFAULT_BFQ=y/g" .config > tmp
+mv -f tmp .config
 
 #echo "[+] running menuconfig ...    "
 #make menuconfig
-#_exec echo
+_exec echo
 
 echo -e "\033[1m-----------------------------\033[7m Compiling the kernel \033[0m\033[1m------------------------------\033[0m"
 
