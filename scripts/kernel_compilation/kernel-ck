@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #####################################
-# 3.7
+# 3.8
 #kernel
 kernel=3.8
 #kernel patch
@@ -25,8 +25,9 @@ arqt=$(dpkg --print-architecture)
 tmp_path="$HOME/.tmp/kernel-ck-$patchkernel" 
 curr_path=$PWD
 #CPU architeture: amd64 or i386
-#CL=CONCURRENCY_LEVEL of CPU
-CL=$(grep -c processor /proc/cpuinfo)
+#We can set CL to the number of processors + X, where X is 1 by default.
+X=1
+CL=$(echo $(($(grep -c processor /proc/cpuinfo)+$X)))
 
 trap cleanup SIGINT SIGTERM #trap ctrl-c
 
@@ -47,6 +48,7 @@ function header()
     echo "  -kernel patchset:   v$patchkernel"
     echo "  sufix:              $ckk"
     echo "  arch:               $arqt"
+    echo "  concurrency level:  $CL"
     echo -e "\033[1m-------------------------------------------------------------------------------------\033[0m"
     echo
 }
@@ -122,6 +124,7 @@ function test_root()
                 stty echo
 
                 # password check
+		mkdir -p "$tmp_path"
                 echo "$sudopwd" | sudo -S touch "$tmp_path/sudo.test" |& tee /tmp/sudo.output
                 InSudoers=$(grep -i "sudoers" /tmp/sudo.output)
                 if [ -n "$InSudoers" ]; then
@@ -188,10 +191,10 @@ _exec echo
 echo -e "\033[1m--------------------------------\033[7m Downloading archives \033[0m\033[1m-------------------------------\033[0m"
 echo "[+] downloading the main tree for the vanilla kernel ...    "
 _exec cd $tmp_path
-_exec wget -N http://www.kernel.org/pub/linux/kernel/v3.x/linux-$kernel.tar.bz2
+_exec wget --no-check-certificate -N http://www.kernel.org/pub/linux/kernel/v3.x/linux-$kernel.tar.bz2
 
 echo "[+] downloading the mainstream patches for the vanilla kernel ...    "
-_exec wget -N http://www.kernel.org/pub/linux/kernel/v3.x/patch-$patchkernel.bz2
+_exec wget --no-check-certificate -N http://www.kernel.org/pub/linux/kernel/v3.x/patch-$patchkernel.bz2
 
 echo "[+] downloading the -ck patches for the vanilla kernel ...    "
 _exec wget -N http://ck.kolivas.org/patches/3.0/$kernel/$patchck/patch-$patchck.bz2
@@ -223,7 +226,7 @@ _exec patch -p1 < ../0001-block-cgroups-kconfig-build-bits-for-BFQ-$vbfq-$kernel
 _exec patch -p1 < ../0002-block-introduce-the-BFQ-$vbfq-I-O-sched-for-$kernel.patch
 _exec echo
 
-
+echo -e "\033[1m-----------------------------\033[7m Configuring the kernel \033[0m\033[1m------------------------------\033[0m"
 echo "[+] downloading an optimized config file from http://liquorix.net ...    "
 #_exec wget "http://liquorix.net/sources/$kernel/config.$arqt"
 #TODO 04-03-2013 21:19 >> check when liquorix update config for 3.8, using 3.7 config in the meantime

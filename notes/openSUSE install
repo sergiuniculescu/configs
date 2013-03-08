@@ -1,0 +1,14 @@
+########################
+### openSUSE install ###
+########################
+
+### Repos ###
+
+# Google Chrome #
+zypper ar http://dl.google.com/linux/chrome/rpm/stable/x86_64 Google-Chrome
+wget https://dl-ssl.google.com/linux/linux_signing_key.pub
+sudo rpm --import linux_signing_key.pub
+
+
+### Installing VirtualBox guest additions ###
+sudo zypper install gcc make automake autoconf kernel-source

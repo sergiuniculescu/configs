@@ -1,26 +1,5 @@
 #!/bin/bash
 
-# script taken and edited from the ubuntu-br.org forums (see below): https://github.com/chilicuil/learn/blob/master/sh/kernel-ck-ubuntu
-# $ time bash kernel-ck-ubuntu
-#
-# CHANGES
-# - eyecandy (rotate function and printing the process)
-# - test_root
-# - use liquorix's config files as base
-# - make .debs packages instead installing directly to the system
-####################################################################################################################################
-
-####################################################################################################################################
-# script PARA USUARIOS DO UBUNTU 11.10 e 12.04 baixa e compila kernel tudo automaticamente CRIADO PELOS USUÁRIOS DO FORUM UBUNTU BR:
-# http://ubuntuforum-br.org/index.php/topic,95318.0.html
-# http://ubuntuforum-br.org/index.php/topic,29799.3960.html
-#
-# Pagina do projeto:
-# http://sourceforge.net/projects/scriptkernel/
-# totalmente GPL-3
-#
-####################################################################################################################################
-
 #####################################
 # 3.7
 #versão do kernel a ser compilado
@@ -38,38 +17,6 @@ ckk=ck1
 arqt=$(dpkg --print-architecture)
 #####################################
 
-#####################################
-# 3.6
-#versão do kernel a ser compilado
-#kernel=3.6
-#path de atualização
-#patchkernel=3.6.5
-#patch BFQ
-#bfq=3.6.0-v5
-#patch ck
-#patchck=3.6-ck1
-#sufixo
-#ckk=ck1
-#arch
-#arqt=$(dpkg --print-architecture)
-#####################################
-
-#####################################
-# 3.4
-#versão do kernel a ser compilado
-#kernel=3.4
-#path de atualização
-#patchkernel=3.4.5
-#patch BFQ
-#bfq=3.4.0-v3r4
-#patch ck
-#patchck=3.4-ck3
-#sufixo
-#ckk=ck3
-#arch
-#arqt=$(dpkg --print-architecture)
-#####################################
-
 
 ####################################################################################################################################
 ##############################################DO NOT EDIT BELOW UNLESS YOU KNOW WHAT YOU'RE DOING###################################
@@ -78,9 +25,9 @@ arqt=$(dpkg --print-architecture)
 # people should use a partition with the exec option set, the /tmp partitions usually have noexec
 tmp_path="$HOME/.tmp/kernel-ck-ubuntu-$patchkernel" 
 curr_path=$PWD
-#arquitetura: amd64 ou i386 # criado por Stivekx - forum ubuntu-br #######
-#CL=CONCURRENCY_LEVEL do processador # criado por Stivekx  ############
-CL=$(grep -c processor /proc/cpuinfo)
+#We can set CL to the number of processors + X, where X is 1 by default.
+X=1
+CL=$(echo $(($(grep -c processor /proc/cpuinfo)+$X)))
 
 trap cleanup SIGINT SIGTERM #trap ctrl-c
 
@@ -104,6 +51,7 @@ function header()
     echo "  -ubuntu patchset:   v$patchkernel"
     echo "  sufix:              $ckk"
     echo "  arch:               $arqt"
+    echo "  concurrency level:  $CL"
     echo -e "\033[1m-------------------------------------------------------------------------------------\033[0m"
     echo
 }
@@ -179,6 +127,7 @@ function test_root()
                 stty echo
 
                 # password check
+		mkdir -p "$tmp_path"
                 echo "$sudopwd" | sudo -S touch "$tmp_path/sudo.test" |& tee /tmp/sudo.output
                 InSudoers=$(grep -i "sudoers" /tmp/sudo.output)
                 if [ -n "$InSudoers" ]; then
@@ -292,9 +241,6 @@ echo -e "\033[1m-----------------------------\033[7m Configuring the kernel \033
 #### criado por Stivekx #############
 #config_file=$(locate /boot/config-* | sort -r | head -1)
 
-#echo "[+] downloading an optimized config file from http://liquorix.net ...    "
-#_exec wget "http://liquorix.net/sources/$kernel/config.$arqt"
-#_exec cp config.$arqt .config
 
 echo "[+] using ubuntu config"
 _exec cp $HOME/.config_ubuntu .config
@@ -336,10 +282,6 @@ mv -f tmp .config
 sed "s/# CONFIG_DEFAULT_BFQ is not set/CONFIG_DEFAULT_BFQ=y/g" .config > tmp
 mv -f tmp .config
 
-#echo "[+] optimizying even more, using streamline_config.pl ...    "
-#chmod +x ./scripts/kconfig/streamline_config.pl && ./scripts/kconfig/streamline_config.pl > config_strip
-##make localmodconfig
-#mv config_strip .config
 
 #echo "[+] running menuconfig ...    "
 #make menuconfig

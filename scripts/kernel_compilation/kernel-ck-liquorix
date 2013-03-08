@@ -40,55 +40,6 @@ ckk=ck1
 arqt=$(dpkg --print-architecture)
 #####################################
 
-#####################################
-# 3.7
-#versão do kernel a ser compilado
-#kernel=3.7
-#patch de atualização
-#patchkernel=3.7.6
-#patch BFQ
-#bfq=3.7.0-v5r1
-#vbfq=v5r1
-#patch ck
-#patchck=3.7-ck1
-#sufixo
-#ckk=ck1
-#arch
-#arqt=$(dpkg --print-architecture)
-#####################################
-
-#####################################
-# 3.6
-#versão do kernel a ser compilado
-#kernel=3.6
-#path de atualização
-#patchkernel=3.6.5
-#patch BFQ
-#bfq=3.6.0-v5
-#patch ck
-#patchck=3.6-ck1
-#sufixo
-#ckk=ck1
-#arch
-#arqt=$(dpkg --print-architecture)
-#####################################
-
-#####################################
-# 3.4
-#versão do kernel a ser compilado
-#kernel=3.4
-#path de atualização
-#patchkernel=3.4.5
-#patch BFQ
-#bfq=3.4.0-v3r4
-#patch ck
-#patchck=3.4-ck3
-#sufixo
-#ckk=ck3
-#arch
-#arqt=$(dpkg --print-architecture)
-#####################################
-
 
 ####################################################################################################################################
 ##############################################DO NOT EDIT BELOW UNLESS YOU KNOW WHAT YOU'RE DOING###################################
@@ -201,7 +152,7 @@ function test_root()
                 stty echo
 
                 # password check
-                mkdir -p "$tmp_path"
+		mkdir -p "$tmp_path"
                 echo "$sudopwd" | sudo -S touch "$tmp_path/sudo.test" |& tee /tmp/sudo.output
                 InSudoers=$(grep -i "sudoers" /tmp/sudo.output)
                 if [ -n "$InSudoers" ]; then
