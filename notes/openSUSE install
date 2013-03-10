@@ -28,7 +28,9 @@ wget http://www.sopcast.com/download/libstdcpp5.tgz
 tar -zxvf libstdcpp5.tgz
 rm libstdcpp5.tgz
 cd libstdcpp5.tgz
-sudo cp libstdc++.so.5* /usr/lib/
+sudo cp libstdc++.so.5.0.1 /usr/lib/
+cd /usr/lib/
+sudo ln -s libstdc++.so.5.0.1 libstdc++.so.5
 wget http://tv-maxe.googlecode.com/files/tv-maxe-0.08.tar.gz
 tar -zxvf tv-maxe-0.08.tar.gz
 rm tv-maxe-0.08.tar.gz
