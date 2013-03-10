@@ -9,6 +9,52 @@ zypper ar http://dl.google.com/linux/chrome/rpm/stable/x86_64 Google-Chrome
 wget https://dl-ssl.google.com/linux/linux_signing_key.pub
 sudo rpm --import linux_signing_key.pub
 
+### Skype ###
+su -c 'zypper install libpulse0-32bit alsa-plugins-pulse-32bit'
+su -c 'zypper in skype-<version>.rpm'
+
 
 ### Installing VirtualBox guest additions ###
 sudo zypper install gcc make automake autoconf kernel-source
+
+### TV-MAXE ###
+sudo zypper install python-imaging
+wget http://sopcast-player.googlecode.com/files/sp-auth-3.2.6.tar.gz
+tar -zxvf sp-auth-3.2.6.tar.gz
+rm sp-auth-3.2.6.tar.gz
+cd sp-auth/
+sudo cp sp-sc-auth /usr/bin/
+wget http://www.sopcast.com/download/libstdcpp5.tgz
+tar -zxvf libstdcpp5.tgz
+rm libstdcpp5.tgz
+cd libstdcpp5.tgz
+sudo cp libstdc++.so.5* /usr/lib/
+wget http://tv-maxe.googlecode.com/files/tv-maxe-0.08.tar.gz
+tar -zxvf tv-maxe-0.08.tar.gz
+rm tv-maxe-0.08.tar.gz
+mv tv-maxe-0.08 ~/.tv-maxe
+cd .tv-maxe
+python tvmaxe.py
+
+# Iconita in aplications/sound&video #
+
+vim ~/.tv-maxe/tvmaxe.sh
+____________
+#!/bin/bash
+cd /home/$USER/.tv-maxe && python tvmaxe.py &
+____________
+
+chmod +x tvmaxe.sh
+cd /usr/share/applications/
+sudo vim tv-maxe.desktop
+_______________
+[Desktop Entry]
+Name=TV-Maxe
+GenericName=TV-Maxe
+Comment=tv-internet
+Exec=/home/$USER/.tv-maxe/tvmaxe.sh
+Icon=/home/$USER/.tv-maxe/tvmaxe.png
+Terminal=false
+Type=Application
+Categories=AudioVideo;Player;
+_______________
