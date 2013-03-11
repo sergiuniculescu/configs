@@ -68,6 +68,7 @@ sudo update-grub
 
 # See the schedueler kernel #
 cat /sys/block/sda/queue/scheduler
+zgrep IOSCHED /proc/config.gz
 
 
 # New Ubuntu logo #
