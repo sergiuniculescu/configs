@@ -185,6 +185,6 @@ _exec echo
 echo -e "\033[1m-----------------------------\033[7m Creating a shortcut in the openSUSE menu \033[0m\033[1m------------------------------\033[0m"
 echo -e '[Desktop Entry]\nName=TV-Maxe\nGenericName=TV-Maxe\nComment=tv-internet\nExec=/opt/tv-maxe/tvmaxe.sh\nIcon=/opt/tv-maxe/tvmaxe.png\nTerminal=false\nType=Application\nCategories=AudioVideo;Player;' | sudo tee /usr/share/applications/tv-maxe.desktop
 
-echo "[+] have fun with TV_MAXE on openSUSE ^_^!"
+echo "[+] have fun with TV-MAXE on openSUSE ^_^!"
 
 cleanup 1
