@@ -1,5 +1,5 @@
 ########################
-### openSUSE install ###
+#### openSUSE install ####
 ########################
 
 ### Repos ###
@@ -9,13 +9,35 @@ zypper ar http://dl.google.com/linux/chrome/rpm/stable/x86_64 Google-Chrome
 wget https://dl-ssl.google.com/linux/linux_signing_key.pub
 sudo rpm --import linux_signing_key.pub
 
-### Skype ###
+# Skype #
 su -c 'zypper install libpulse0-32bit alsa-plugins-pulse-32bit'
 su -c 'zypper in skype-<version>.rpm'
+
+# Kernel #
+zypper ar http://download.opensuse.org/repositories/Kernel:/openSUSE-12.3/standard Kernel:openSUSE-12.3
+zypper in --from Kernel:openSUSE-12.3 kernel-desktop
+
+zypper ar http://download.opensuse.org/repositories/Kernel:/stable/standard Kernel_stable
+zypper in --from Kernel_stable kernel-desktop
+
+# Archiving #
+zypper ar http://download.opensuse.org/repositories/Archiving/openSUSE_12.3/ Archiving
+
+# Utilities #
+zypper ar http://download.opensuse.org/repositories/utilities/openSUSE_12.3/ utilities
+
+# security #
+http://download.opensuse.org/repositories/security/openSUSE_12.3 security
+
+
+### zypper ###
+sudo zypper in --repo home:-miska-:virtio kernel-desktop-devel  # install from a specific repo
+sudo zypper in --repo home:-miska-:virtio --oldpackage kernel-desktop-devel # if the package it's older than current pakage
 
 
 ### Installing VirtualBox guest additions ###
 sudo zypper install gcc make automake autoconf kernel-source
+
 
 ### TV-MAXE ###
 sudo zypper install python-imaging
