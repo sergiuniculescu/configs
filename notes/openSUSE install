@@ -29,10 +29,16 @@ zypper ar http://download.opensuse.org/repositories/utilities/openSUSE_12.3/ uti
 # security #
 http://download.opensuse.org/repositories/security/openSUSE_12.3 security
 
+### Codecs ###
+zypper install libxine2-codecs ffmpeg lame gstreamer-0_10-plugins-bad gstreamer-0_10-plugins-ugly gstreamer-0_10-plugins-ugly-orig-addon gstreamer-0_10-plugins-ffmpeg
+
 
 ### zypper ###
 sudo zypper in --repo home:-miska-:virtio kernel-desktop-devel  # install from a specific repo
 sudo zypper in --repo home:-miska-:virtio --oldpackage kernel-desktop-devel # if the package it's older than current pakage
+
+zypper search -s 'kernel*'
+zypper search -si 'kernel*'  # display only installed package
 
 
 ### Installing VirtualBox guest additions ###
@@ -82,3 +88,19 @@ Terminal=false
 Type=Application
 Categories=AudioVideo;Player;
 _______________
+
+
+### XFCE ###
+
+# Use a transparent background for desktop icon titles #
+vim ~/.gtkrc-2.0
+_____________
+style "xfdesktop-icon-view" {
+XfdesktopIconView::label-alpha = 10
+base[NORMAL] = "#000000"
+base[SELECTED] = "#71B9FF"
+base[ACTIVE] = "#71FFAD"
+fg[NORMAL] = "#ffffff"
+fg[SELECTED] = "#71B9FF"
+fg[ACTIVE] = "#71FFAD" }
+widget_class "*XfdesktopIconView*" style "xfdesktop-icon-view"
