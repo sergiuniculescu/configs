@@ -160,7 +160,7 @@ echo "[+] downloading libstdcpp5 ...    "
 _exec wget --no-check-certificate -N wget http://www.sopcast.com/download/libstdcpp5.tgz
 
 echo "[+] downloading tv-maxe ...    "
-_exec wget --no-check-certificate -N wget http://tv-maxe.googlecode.com/files/tv-maxe-0.08.tar.gz
+_exec wget --no-check-certificate -N wget http://tv-maxe.googlecode.com/files/tv-maxe-0.09.tar.gz
 
 echo -e "\033[1m-----------------------------\033[7m Applying dependencies \033[0m\033[1m------------------------------\033[0m"
 echo "[+] uncomprensing the sp-auth to tmp_path/ ...    "
@@ -168,14 +168,14 @@ _exec tar -xzvf sp-auth-3.2.6.tar.gz & _waitfor tar
 echo "[+] uncomprensing the libstdcpp5 to tmp_path/ ...    "
 _exec tar -xzvf libstdcpp5.tgz & _waitfor tar
 echo "[+] uncomprensing the tv-maxe to tmp_path/ ...    "
-_exec tar -xzvf tv-maxe-0.08.tar.gz & _waitfor tar
+_exec tar -xzvf tv-maxe-0.09.tar.gz & _waitfor tar
 _exec echo 
 
 echo "[+] applying dependencies ...    "
 echo "$sudopwd" | _exec $SUDO cp sp-auth/sp-sc-auth /usr/bin/
 echo "$sudopwd" | _exec $SUDO cp usr/lib/libstdc++.so.5.0.1 /usr/lib/
 echo "$sudopwd" | _exec $SUDO ln -s /usr/lib/libstdc++.so.5.0.1 /usr/lib/libstdc++.so.5
-echo "$sudopwd" | _exec $SUDO mv tv-maxe-0.08 /opt/tv-maxe
+echo "$sudopwd" | _exec $SUDO mv tv-maxe-0.09 /opt/tv-maxe
 _exec echo 
 
 echo -e '#!/bin/bash\ncd /opt/tv-maxe && python tvmaxe.py &' | tee /opt/tv-maxe/tvmaxe.sh

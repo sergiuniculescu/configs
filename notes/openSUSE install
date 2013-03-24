@@ -16,7 +16,6 @@ su -c 'zypper in skype-<version>.rpm'
 # Kernel #
 zypper ar http://download.opensuse.org/repositories/Kernel:/openSUSE-12.3/standard Kernel:openSUSE-12.3
 zypper in --from Kernel:openSUSE-12.3 kernel-desktop
-
 zypper ar http://download.opensuse.org/repositories/Kernel:/stable/standard Kernel_stable
 zypper in --from Kernel_stable kernel-desktop
 
@@ -104,3 +103,19 @@ fg[NORMAL] = "#ffffff"
 fg[SELECTED] = "#71B9FF"
 fg[ACTIVE] = "#71FFAD" }
 widget_class "*XfdesktopIconView*" style "xfdesktop-icon-view"
+______________
+
+
+# screen-saver problem #
+su -c 'xset s off'
+
+# Display the video card #
+su -c 'hwinfo --gfxcard | grep -i -e model -e driver'
+
+
+### Boot time speed up ###
+systemd-analyze blame | head -n 10
+rpm -qf /lib/mkinitrd/scripts/setup-* | sort -u
+sudo vim /etc/sysconfig/keyboard   # KBD_NUMLOCK="yes"
+
+
