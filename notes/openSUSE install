@@ -136,3 +136,4 @@ sudo systemctl disable systemd-readahead-collect systemd-readahead-replay
 alias cmplayer='mplayer -subcp cp1250 -ao pulse -channels 6 -vo vdpau -vc ffh264vdpau threads=2 -cache 8192 -xy 320'
 
 
+
