@@ -1,6 +1,6 @@
-########################
+##########################
 #### openSUSE install ####
-########################
+##########################
 
 ### Repos ###
 
@@ -16,8 +16,12 @@ su -c 'zypper in skype-<version>.rpm'
 # Kernel #
 zypper ar http://download.opensuse.org/repositories/Kernel:/openSUSE-12.3/standard Kernel:openSUSE-12.3
 zypper in --from Kernel:openSUSE-12.3 kernel-desktop
-zypper ar http://download.opensuse.org/repositories/Kernel:/stable/standard Kernel_stable
+zypper ar http://download.opensuse.org/repositories/Kernel:/stable/standard Kernel:stable
 zypper in --from Kernel_stable kernel-desktop
+
+# KDE #
+zypper ar -f http://download.opensuse.org/repositories/KDE:/Release:/410/openSUSE_12.3/KDE:Release:410.repo
+zypper ar -f http://download.opensuse.org/repositories/KDE:/Extra/KDE_Release_410_openSUSE_12.3/KDE:Extra.repo
 
 # Archiving #
 zypper ar http://download.opensuse.org/repositories/Archiving/openSUSE_12.3/ Archiving
@@ -26,10 +30,14 @@ zypper ar http://download.opensuse.org/repositories/Archiving/openSUSE_12.3/ Arc
 zypper ar http://download.opensuse.org/repositories/utilities/openSUSE_12.3/ utilities
 
 # security #
-http://download.opensuse.org/repositories/security/openSUSE_12.3 security
+zypper ar http://download.opensuse.org/repositories/security/openSUSE_12.3 security
+
+# Dolphin-dropbox #
+zypper ar http://download.opensuse.org/repositories/home:/lnt-sysadmin:/tools/openSUSE_12.3/ home:lnt-sysadmin:tools
+
 
 ### Codecs ###
-zypper install libxine2-codecs ffmpeg lame gstreamer-0_10-plugins-bad gstreamer-0_10-plugins-ugly gstreamer-0_10-plugins-ugly-orig-addon gstreamer-0_10-plugins-ffmpeg
+zypper install ffmpeg lame gstreamer-0_10-plugins-bad gstreamer-0_10-plugins-ugly gstreamer-0_10-plugins-ugly-orig-addon gstreamer-0_10-plugins-ffmpeg gstreamer-0_10-plugins-bad-orig-addon gstreamer-plugins-bad-orig-addon 
 
 
 ### zypper ###
@@ -117,5 +125,14 @@ su -c 'hwinfo --gfxcard | grep -i -e model -e driver'
 systemd-analyze blame | head -n 10
 rpm -qf /lib/mkinitrd/scripts/setup-* | sort -u
 sudo vim /etc/sysconfig/keyboard   # KBD_NUMLOCK="yes"
+
+sudo systemctl disable systemd-readahead-collect systemd-readahead-replay
+
+
+
+### Others ###
+
+# Console movie player #
+alias cmplayer='mplayer -subcp cp1250 -ao pulse -channels 6 -vo vdpau -vc ffh264vdpau threads=2 -cache 8192 -xy 320'
 
 
