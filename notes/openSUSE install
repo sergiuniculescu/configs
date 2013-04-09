@@ -6,8 +6,6 @@
 
 # Google Chrome #
 zypper ar http://dl.google.com/linux/chrome/rpm/stable/x86_64 Google-Chrome
-wget https://dl-ssl.google.com/linux/linux_signing_key.pub
-sudo rpm --import linux_signing_key.pub
 
 # Skype #
 su -c 'zypper install libpulse0-32bit alsa-plugins-pulse-32bit'
@@ -22,6 +20,7 @@ zypper in --from Kernel_stable kernel-desktop
 # KDE #
 zypper ar -f http://download.opensuse.org/repositories/KDE:/Release:/410/openSUSE_12.3/KDE:Release:410.repo
 zypper ar -f http://download.opensuse.org/repositories/KDE:/Extra/KDE_Release_410_openSUSE_12.3/KDE:Extra.repo
+zypper ar -f http://download.opensuse.org/repositories/KDE:/Qt/openSUSE_12.3/ KDE:Qt
 
 # Archiving #
 zypper ar http://download.opensuse.org/repositories/Archiving/openSUSE_12.3/ Archiving
@@ -29,8 +28,11 @@ zypper ar http://download.opensuse.org/repositories/Archiving/openSUSE_12.3/ Arc
 # Utilities #
 zypper ar http://download.opensuse.org/repositories/utilities/openSUSE_12.3/ utilities
 
-# security #
+# Security #
 zypper ar http://download.opensuse.org/repositories/security/openSUSE_12.3 security
+
+# Graphics #
+http://download.opensuse.org/repositories/graphics/openSUSE_12.3/ graphics
 
 # Dolphin-dropbox #
 zypper ar http://download.opensuse.org/repositories/home:/lnt-sysadmin:/tools/openSUSE_12.3/ home:lnt-sysadmin:tools
@@ -41,11 +43,15 @@ zypper install ffmpeg lame gstreamer-0_10-plugins-bad gstreamer-0_10-plugins-ugl
 
 
 ### zypper ###
+
+# Installing #
 sudo zypper in --repo home:-miska-:virtio kernel-desktop-devel  # install from a specific repo
 sudo zypper in --repo home:-miska-:virtio --oldpackage kernel-desktop-devel # if the package it's older than current pakage
 
+# Search #
 zypper search -s 'kernel*'
 zypper search -si 'kernel*'  # display only installed package
+
 
 
 ### Installing VirtualBox guest additions ###
