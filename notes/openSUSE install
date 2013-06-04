@@ -12,9 +12,9 @@ su -c 'zypper install libpulse0-32bit alsa-plugins-pulse-32bit'
 su -c 'zypper in skype-<version>.rpm'
 
 # Kernel #
-zypper ar http://download.opensuse.org/repositories/Kernel:/openSUSE-12.3/standard Kernel:openSUSE-12.3
+zypper ar http://download.opensuse.org/repositories/Kernel:/openSUSE-12.3/standard/Kernel:openSUSE-12.3.repo
 zypper in --from Kernel:openSUSE-12.3 kernel-desktop
-zypper ar http://download.opensuse.org/repositories/Kernel:/stable/standard Kernel:stable
+zypper ar http://download.opensuse.org/repositories/Kernel:/stable/standard/Kernel:stable.repo
 zypper in --from Kernel_stable kernel-desktop
 
 # KDE #
@@ -36,6 +36,12 @@ http://download.opensuse.org/repositories/graphics/openSUSE_12.3/ graphics
 
 # Dolphin-dropbox #
 zypper ar http://download.opensuse.org/repositories/home:/lnt-sysadmin:/tools/openSUSE_12.3/ home:lnt-sysadmin:tools
+
+# oxygen-transparent #
+http://download.opensuse.org/repositories/home:/buschmann23:/KDE4/openSUSE_12.3/home:buschmann23:KDE4.repo
+
+# oxygen-ionized-icon-theme #
+http://download.opensuse.org/repositories/home:/D_E:/oxygen-ionized/openSUSE_12.3/home:D_E:oxygen-ionized.repo
 
 
 ### Codecs ###
@@ -103,6 +109,20 @@ Categories=AudioVideo;Player;
 _______________
 
 
+### PulseAudio ###
+sudo vim /etc/pulse/daemon.conf
+_______________________________
+enable-remixing = yes
+enable-lfe-remixing = yes
+default-sample-format = s32le
+default-sample-rate = 48000
+default-sample-channels = 6
+default-fragments = 8
+default-fragment-size-msec = 5
+________________________________
+
+pulseaudio -k  # restart pulseaudio
+
 ### XFCE ###
 
 # Use a transparent background for desktop icon titles #
@@ -135,6 +155,17 @@ sudo vim /etc/sysconfig/keyboard   # KBD_NUMLOCK="yes"
 sudo systemctl disable systemd-readahead-collect systemd-readahead-replay
 
 
+### Change swappiness value ###
+
+sudo vim /etc/sysctl.conf
+__________________
+# Memory/Swap Use 
+vm.swappiness = 20
+__________________
+
+sudo sysctl -p  # reload sysctl.conf without restart
+cat /proc/sys/vm/swappiness  # display swappiness value
+
 
 ### Others ###
 
@@ -142,4 +173,11 @@ sudo systemctl disable systemd-readahead-collect systemd-readahead-replay
 alias cmplayer='mplayer -subcp cp1250 -ao pulse -channels 6 -vo vdpau -vc ffh264vdpau threads=2 -cache 8192 -xy 320'
 
 
-
+# Bitmessage #
+Test that you have python, OpenSSL and git installed:
+python --version 
+openssl version 
+git --version
+git clone https://github.com/Bitmessage/PyBitmessage   # clone the git repository
+cd PyBitmessage   # Change to the PyBitmessage directory
+python bitmessagemain.py   # Start PyBitmessage

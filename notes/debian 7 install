@@ -1,0 +1,99 @@
+########################
+### Debian 7 install ###
+########################
+
+### Fonts config ###
+vim ~/.fonts.conf
+__________________________________________
+<?xml version='1.0'?>
+<!DOCTYPE fontconfig SYSTEM 'fonts.dtd'>
+<fontconfig>
+ <match target="font">
+  <edit mode="assign" name="rgba">
+   <const>rgb</const>
+  </edit>
+ </match>
+ <match target="font">
+  <edit mode="assign" name="hinting">
+   <bool>true</bool>
+  </edit>
+ </match>
+ <match target="font">
+  <edit mode="assign" name="hintstyle">
+   <const>hintslight</const>
+  </edit>
+ </match>
+ <match target="font">
+  <edit mode="assign" name="antialias">
+   <bool>true</bool>
+  </edit>
+ </match>
+  <match target="font">
+    <edit mode="assign" name="lcdfilter">
+      <const>lcddefault</const>
+    </edit>
+  </match>
+</fontconfig>
+__________________________________________
+
+
+### Configure apt-get / aptitude ###
+vim /etc/apt/apt.conf
+__________________________________
+// Apt-get configuration
+APT {
+   AutoRemove {
+      RecommendsImportant "true";
+      SuggestsImportant "false";
+   };
+
+   Install-Recommends "false";
+   Clean-Installed "true";
+
+   Get {
+      AutomaticRemove "true";
+      Purge "true";
+   };
+};
+
+// Aptitude configuration
+Aptitude {
+   Autoclean-After-Update "true";
+   Delete-Unused "true";
+   Purge-Unused "true";﻿
+________________________
+
+
+### nVidia install ####
+aptitude update
+aptitude -r install linux-headers-$(uname -r|sed 's,[^-]*-[^-]*-,,') nvidia-kernel-dkms
+mkdir /etc/X11/xorg.conf.d
+echo -e 'Section "Device"\n\tIdentifier "My GPU"\n\tDriver "nvidia"\nEndSection' > /etc/X11/xorg.conf.d/20-nvidia.conf
+
+
+### Skype install ###
+dpkg --add-architecture i386
+apt-get update
+wget -O skype-install.deb http://www.skype.com/go/getskype-linux-deb
+dpkg -i skype-install.deb
+apt-get -f install
+apt-get install libpulse0:i386
+
+
+### Enable bash auto completion  ###
+vim /etc/bash.bashrc  # uncomment enable bash completion in interactive shells
+
+
+### Missing Chrome icon ###
+sudo ln -s /opt/google/chrome/google-chrome.desktop /usr/share/applications/google-chrome.desktop
+
+
+### Manage eth0 with Network Manager ###
+vim /etc/NetworkManager/NetworkManager.conf   # managed=true
+/etc/init.d/network-manager restart
+
+
+
+
+
+
