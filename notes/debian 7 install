@@ -93,7 +93,29 @@ vim /etc/NetworkManager/NetworkManager.conf   # managed=true
 /etc/init.d/network-manager restart
 
 
+### Nautilus problem ###
+vim /usr/share/applications/nautilus.desktop  # StartupNotify=false
 
+
+### Awesome WM ###
+aptitude install awesome awesome-extra
+aptitude install lua-socket luakit
+aptitude install rxvt-unicode
+aptitude install mpd ncmpcpp mpc
+aptitude install lxappearance dmenu
+
+
+### Change GNOME3 desktop crontab ###
+*/10 * * * * DISPLAY=:0 GSETTINGS_BACKEND=dconf gsettings set org.gnome.desktop.background picture-uri file://"$(find ~/Pictures/National_Geographic -type f | shuf -n1)"
+
+
+### PulseAudio ###
+vim /etc/pulse/daemon.conf
+_______________________________
+enable-remixing = yes
+enable-lfe-remixing = yes
+default-sample-channels = 6
+_______________________________
 
 
 
