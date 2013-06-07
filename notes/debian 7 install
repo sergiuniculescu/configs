@@ -117,5 +117,13 @@ enable-lfe-remixing = yes
 default-sample-channels = 6
 _______________________________
 
+vim /etc/pulse/default.pa   # load-module module-udev-detect tsched=0
+
+pulseaudio -k
+
+
+### Change icon themes in Qt Apps ###
+aptitude install gconf-editor
+gconf-editor  # desktop > gnome > interface > icon_theme
 
 
