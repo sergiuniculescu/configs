@@ -1,0 +1,35 @@
+#########################
+### LinuxMint install ###
+#########################
+
+
+### Kernel compile ###
+patch -p1 < ../AUFS3/aufs3-3.8-20130427.patch
+
+apply ./aufs3-kbuild.patch to your kernel source files.
+- apply ./aufs3-base.patch too.
+- apply ./aufs3-proc_map.patch 
+- apply ./aufs3-standalone.patch 
+cp -rf ../aufs3/{Documentation,fs,include/linux/aufs_type.h,include/uapi/linux/aufs_type.h} .
+
+
+sudo aptitude install kernel-package gcc-4.7 libncurses5 libncurses5-dev fakeroot build-essential 
+
+cp /boot/config-`uname -r` ./.config
+zcat /proc/config.gz > ./.config
+
+make menuconfig  # load .config -> exit -> Save
+
+make-kpkg clean
+
+fakeroot make-kpkg --initrd --append-to-version=-sergiu kernel_image kernel_headers modules_image
+
+sudo aptitude install tuxonice-userui
+
+sudo ln -s /usr/lib/tuxonice-userui/tuxoniceui /usr/local/sbin/tuxoniceui_text
+
+
+### Auto Shutdown the System ###
+
+sudo shutdown -h +m
+sudo shutdown -h hh:mm
