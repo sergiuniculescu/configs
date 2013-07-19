@@ -127,3 +127,10 @@ aptitude install gconf-editor
 gconf-editor  # desktop > gnome > interface > icon_theme
 
 
+### Installing Guest Additions on Debian ###
+aptitude install build-essential module-assistant
+m-a prepare
+sh /media/cdrom/VBoxLinuxAdditions.run
+
+
+
