@@ -62,8 +62,41 @@ yum install chromium
 
 ### Others ###
 yum install bash-completion
+yum install nautilus-open-terminal
 
 
+### Remove Old Kernels ###
+# Package-cleanup set count as how many old kernels you want left #
+package-cleanup --oldkernels --count=2
 
+# Make Amount of Installed Kernels Permanent #
+vim /etc/yum.conf # and set installonly_limit:
+installonly_limit=2
+
+
+### Install Skype ###
+yum install alsa-lib.i686 fontconfig.i686 freetype.i686 glib2.i686 libSM.i686 libXScrnSaver.i686 libXi.i686 libXrandr.i686 libXrender.i686 libXv.i686 libstdc++.i686 pulseaudio-libs.i686 qt.i686 qt-x11.i686 zlib.i686
+
+wget http://download.skype.com/linux/skype_static-4.0.0.8.tar.bz2
+mkdir /opt/skype
+tar xvf skype_static* -C /opt/skype --strip-components=1
+
+cd /usr/lib
+ln -s libtiff.so.3 /usr/lib/libtiff.so.4
+
+ln -s /opt/skype/skype.desktop /usr/share/applications/skype.desktop
+ln -s /opt/skype/icons/SkypeBlue_48x48.png /usr/share/icons/skype.png
+ln -s /opt/skype/icons/SkypeBlue_48x48.png /usr/share/pixmaps/skype.png
+ 
+touch /usr/bin/skype
+chmod 755 /usr/bin/skype
+	
+vim /usr/bin/skype
+_______________
+#!/bin/sh
+export SKYPE_HOME="/opt/skype"
+ 
+$SKYPE_HOME/skype --resources=$SKYPE_HOME $*
+________________
 
 
