@@ -79,7 +79,7 @@ sergiu		ALL=(ALL)	ALL
 
 ### Repos ###
 rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/x86-64/epel-release-6-8.noarch.rpm
-
+rpm -Uvh http://download1.rpmfusion.org/free/el/updates/6/i386/rpmfusion-free-release-6-0.1.noarch.rpm http://download1.rpmfusion.org/nonfree/el/updates/6/i386/rpmfusion-nonfree-release-6-0.1.noarch.rpm’
 
 ### Install vbox additions ###
 yum install gcc kernel-devel kernel-headers dkms make bzip2
