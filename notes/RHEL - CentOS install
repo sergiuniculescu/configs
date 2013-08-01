@@ -1,0 +1,69 @@
+###########################
+### RHEL/CentOS install ###
+###########################
+
+### yum ###
+
+yum check-update 	# verifica pachetele care trebuie updatate
+yum update		# update toate pachetele si dependintele lor
+
+yum search nume_pachet	# cauta un anume pachet, pot fi mai multe pachete trecute
+
+yum info nume_pachet	# afiseaza detalii despre un anume pachet
+
+yum list nume_pache    	# afiseaza informatii despre un anumit pachet, instalat sau nu
+yum list nume_pachet\* 	# afiseaza informatii despre toate pachetele care incep cu un nume
+yum list all		# afiseaza toate pachetele disponibile 
+yum list installed "*nume_pachet*"  # afiseaza pachetele instalate care contine un nume
+yum list available	# afiseaza pachetele disponibile in functie de repo-urile instalate
+yum repolist		# afiseaza repo-urile instalate
+yum gruplist		# afiseaza
+
+yum install nume_pachet\* # instaleaza toate pachetele care incep cu un nume
+
+yum provides "*/nume_pachet" # afiseaza fisierele care le detine un pachet
+
+yum -v grouplist kde\*  # listeaza toate pachetele ce tin de KDE
+
+yum groupinstall "KDE Software Compilation" # instaleaza toate pachetele ce tin de KDE
+yum groupinstall kde-desktop
+yum install @kde-desktop  # @ pentru a instala un grup
+
+yum remove nume_pachet
+
+yum groupremove "KDE Software Compilation"
+yum groupremove kde-desktop
+yum remove @kde-desktop
+
+
+
+### Add an user to SUDOERS ###
+su -
+visudo
+sergiu		ALL=(ALL)	ALL
+
+
+### Repos ###
+rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/x86-64/epel-release-6-8.noarch.rpm
+
+
+### Install vbox additions ###
+yum install gcc kernel-devel kernel-headers dkms make bzip2
+KERN_DIR=/usr/src/kernels/`uname -r`
+export KERN_DIR
+cd /media/VirtualBoxGuestAdditions
+./VBoxLinuxAdditions.run
+
+### Install Chromium ###
+cd /etc/yum.repos.d
+wget http://people.centos.org/hughesjr/chromium/6/chromium-el6.repo
+yum install chromium
+
+
+### Others ###
+yum install bash-completion
+
+
+
+
+
