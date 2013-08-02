@@ -121,6 +121,8 @@ yum install chromium
 yum install bash-completion
 yum install nautilus-open-terminal
 yum install flash-plugin
+yum install gnome-utils
+yum install file-roller
 
 
 ### Remove Old Kernels ###
@@ -165,6 +167,14 @@ vim /etc/sysconfig/network
 
 ### Dropbox ###
 vim /etc/sysconfig/dropbox  # DROPBOX_USERS="sergiu"
+
+
+### Install LibreOffice 4.1.0 ###
+wget http://download.documentfoundation.org/libreoffice/stable/4.1.0/rpm/x86_64/LibreOffice_4.0.4_Linux_x86-64_rpm.tar.gz
+tar -xvf LibreOffice_4.1.0*
+cd LibreOffice_4.0.4*
+sudo yum install libpng-compat
+yum localinstall RPMS/*.rpm RPMS/desktop-integration/libreoffice4.1-freedesktop-menus-4.1.0*.noarch.rpm
 
 
 ### Install vbox additions ###
