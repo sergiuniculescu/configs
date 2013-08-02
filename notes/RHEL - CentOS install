@@ -84,28 +84,31 @@ rpm -Uvh http://download1.rpmfusion.org/free/el/updates/6/x86_64/rpmfusion-free-
 
 rpm -Uvh http://pkgs.repoforge.org/rpmforge-release/rpmforge-release-0.5.3-1.el6.rf.x86_64.rpm
 
+# nVidia driver #
 rpm -Uvh http://elrepo.org/elrepo-release-6-5.el6.elrepo.noarch.rpm
 http://elrepo.org/linux/extras/el6/x86_64/RPMS/   # extras
 http://elrepo.org/linux/testing/el6/x86_64/RPMS/  # testing
+sudo yum install kmod-nvidia
+sudo yum install nvidia-x11-drv
+
+# Last kernel & lts kernel #
 http://elrepo.org/linux/kernel/el6/x86_64/RPMS/   # kernel
+sudo yum --enablerepo=elrepo-kernel install kernel-lt
+sudo yum --enablerepo=elrepo-kernel install kernel-ml
 
 
-### Install nVidia drivers ###
+### Install nVidia drivers manually ###
 yum groupinstall "Development Tools"
 yum install kernel-devel kernel-headers dkms
 lspci | grep VGA
 http://www.nvidia.com/Download/index.aspx  # download nVidia driver
 vim /etc/modprobe.d/blacklist.conf   # blacklist nouveau
-mv /boot/initramfs-$(uname -r).img /boot/initramfs-$(uname -r).img.bak   
+mv /boot/initramfs-$(uname -r).img /boot/initramfs-$(uname -r).img.bak
 dracut -v /boot/initramfs-$(uname -r).img $(uname -r)
 /sbin/init 3
 chmod +x NVIDIA-Linux-x86-319.32.run
 ./NVIDIA-Linux-x86-319.32.run
 
-# nVidia driver using repo #
-sudo yum --enablerepo elrepo-testing install kmod-nvidia
-sudo yum --disablerepo=\* --enablerepo=elrepo install kmod-nvidia
-sudo yum --disablerepo=\* --enablerepo=elrepo-testing install nvidia-x11-drv
 
 
 ### Install Chromium ###
