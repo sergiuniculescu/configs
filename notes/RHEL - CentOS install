@@ -173,7 +173,6 @@ vim /etc/sysconfig/dropbox  # DROPBOX_USERS="sergiu"
 wget http://download.documentfoundation.org/libreoffice/stable/4.1.0/rpm/x86_64/LibreOffice_4.1.0_Linux_x86-64_rpm.tar.gz
 tar -xvf LibreOffice_4.1.0*
 cd LibreOffice_4.0.4*
-sudo yum install libpng-compat
 yum localinstall RPMS/*.rpm RPMS/desktop-integration/libreoffice4.1-freedesktop-menus-4.1.0*.noarch.rpm
 
 
