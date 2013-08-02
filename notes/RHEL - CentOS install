@@ -184,3 +184,16 @@ cd /media/VirtualBoxGuestAdditions
 ./VBoxLinuxAdditions.run
 
 
+### SElinux re-labelling ###
+touch /.autorelabel
+sudo reboot
+
+### Remove boot splash screen ###
+vim /etc/grub.conf  # remove ‘rhgb’ and ‘quiet’
+
+
+### Remove Desktop icons ###
+yum install gconf-editor
+apps > nautilus > desktop
+
+
