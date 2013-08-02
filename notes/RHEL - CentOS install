@@ -84,12 +84,29 @@ rpm -Uvh http://download1.rpmfusion.org/free/el/updates/6/x86_64/rpmfusion-free-
 
 rpm -Uvh http://pkgs.repoforge.org/rpmforge-release/rpmforge-release-0.5.3-1.el6.rf.x86_64.rpm
 
-### Install vbox additions ###
-yum install gcc kernel-devel kernel-headers dkms make bzip2
-KERN_DIR=/usr/src/kernels/`uname -r`
-export KERN_DIR
-cd /media/VirtualBoxGuestAdditions
-./VBoxLinuxAdditions.run
+rpm -Uvh http://elrepo.org/elrepo-release-6-5.el6.elrepo.noarch.rpm
+http://elrepo.org/linux/extras/el6/x86_64/RPMS/   # extras
+http://elrepo.org/linux/testing/el6/x86_64/RPMS/  # testing
+http://elrepo.org/linux/kernel/el6/x86_64/RPMS/   # kernel
+
+
+### Install nVidia drivers ###
+yum groupinstall "Development Tools"
+yum install kernel-devel kernel-headers dkms
+lspci | grep VGA
+http://www.nvidia.com/Download/index.aspx  # download nVidia driver
+vim /etc/modprobe.d/blacklist.conf   # blacklist nouveau
+mv /boot/initramfs-$(uname -r).img /boot/initramfs-$(uname -r).img.bak   
+dracut -v /boot/initramfs-$(uname -r).img $(uname -r)
+/sbin/init 3
+chmod +x NVIDIA-Linux-x86-319.32.run
+./NVIDIA-Linux-x86-319.32.run
+
+# nVidia driver using repo #
+sudo yum --enablerepo elrepo-testing install kmod-nvidia
+sudo yum --disablerepo=\* --enablerepo=elrepo install kmod-nvidia
+sudo yum --disablerepo=\* --enablerepo=elrepo-testing install nvidia-x11-drv
+
 
 ### Install Chromium ###
 cd /etc/yum.repos.d
@@ -100,6 +117,7 @@ yum install chromium
 ### Others ###
 yum install bash-completion
 yum install nautilus-open-terminal
+yum install flash-plugin
 
 
 ### Remove Old Kernels ###
@@ -144,3 +162,13 @@ vim /etc/sysconfig/network
 
 ### Dropbox ###
 vim /etc/sysconfig/dropbox  # DROPBOX_USERS="sergiu"
+
+
+### Install vbox additions ###
+yum install gcc kernel-devel kernel-headers dkms make bzip2
+KERN_DIR=/usr/src/kernels/`uname -r`
+export KERN_DIR
+cd /media/VirtualBoxGuestAdditions
+./VBoxLinuxAdditions.run
+
+
