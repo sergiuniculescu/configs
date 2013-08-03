@@ -4,7 +4,6 @@
 
 ### yum ###
 
-yum check-update 	# verifica pachetele care trebuie updatate
 yum update		# update toate pachetele si dependintele lor
 
 yum search nume_pachet	# cauta un anume pachet, pot fi mai multe pachete trecute
@@ -34,6 +33,19 @@ yum remove nume_pachet
 yum groupremove "KDE Software Compilation"
 yum groupremove kde-desktop
 yum remove @kde-desktop
+
+
+### skip updating packages ###
+yum -x nume_pachet update
+yum --exclude=nume_pachet update
+
+sudo vim /etc/yum.conf  # permanent
+_______
+[main]
+exclude=nume_pachet1* nume_pachet2*
+_______
+yum --disableexcludes=all update  # disable exclude to check for an update
+
 
 
 ### Fonts config ###
@@ -82,7 +94,11 @@ rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.r
 
 rpm -Uvh http://download1.rpmfusion.org/free/el/updates/6/x86_64/rpmfusion-free-release-6-0.1.noarch.rpm http://download1.rpmfusion.org/nonfree/el/updates/6/x86_64/rpmfusion-nonfree-release-6-0.1.noarch.rpm
 
+# Multimedia #
 rpm -Uvh http://pkgs.repoforge.org/rpmforge-release/rpmforge-release-0.5.3-1.el6.rf.x86_64.rpm
+
+rpm -Uvh http://li.nux.ro/download/nux/dextop/el6/x86_64/nux-dextop-release-0-2.el6.nux.noarch.rpm
+sudo yum --enablerepo=nux-dextop-testing install xbmc
 
 # nVidia driver #
 rpm -Uvh http://elrepo.org/elrepo-release-6-5.el6.elrepo.noarch.rpm
@@ -196,4 +212,12 @@ vim /etc/grub.conf  # remove ‘rhgb’ and ‘quiet’
 yum install gconf-editor
 apps > nautilus > desktop
 
+
+### Multimedia support ###
+sudo yum install gstreamer gstreamer-plugins-base gstreamer-plugins-good gstreamer-plugins-bad-free
+sudo yum install gstreamer-plugins-bad gstreamer-plugins-ugly gstreamer-ffmpeg
+
+
+### Save alsamixer settings ###
+sudo alsactl store
 
