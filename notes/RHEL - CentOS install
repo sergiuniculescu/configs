@@ -14,6 +14,7 @@ yum list nume_pache    	# afiseaza informatii despre un anumit pachet, instalat 
 yum list nume_pachet\* 	# afiseaza informatii despre toate pachetele care incep cu un nume
 yum list all		# afiseaza toate pachetele disponibile 
 yum list installed "*nume_pachet*"  # afiseaza pachetele instalate care contine un nume
+yum list installed | grep reponame  # afiseaza pachetele instalate dintr-un repo
 yum list available	# afiseaza pachetele disponibile in functie de repo-urile instalate
 yum repolist		# afiseaza repo-urile instalate
 yum gruplist		# afiseaza
