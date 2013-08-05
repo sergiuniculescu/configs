@@ -83,6 +83,7 @@ __________________________________________
 __________________________________________
 
 
+
 ### Add an user to SUDOERS ###
 su -
 visudo
@@ -183,6 +184,8 @@ vim /etc/sysconfig/network
 
 ### Dropbox ###
 vim /etc/sysconfig/dropbox  # DROPBOX_USERS="sergiu"
+echo '-b /usr/libexec/dropbox/' > /etc/prelink.conf.d/dropbox.conf
+yum --enablerepo rpmforge reinstall dropbox
 
 
 ### Install LibreOffice 4.1.0 ###
@@ -220,4 +223,6 @@ sudo yum install gstreamer-plugins-bad gstreamer-plugins-ugly gstreamer-ffmpeg
 
 ### Save alsamixer settings ###
 sudo alsactl store
+ls -Z /etc/asound.*  # to see SElinux label
+
 
