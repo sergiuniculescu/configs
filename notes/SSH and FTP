@@ -4,20 +4,29 @@
 
 vim /etc/ssh/sshd_config
 
+
 Port xxxxx
 ListenAddress 192.168.x.x
 ListenAddress xxx.xx.x.x
 
+# Only Use SSH Protocol 2
 Protocol 2
+
+# Limit Users' SSH Access
 AllowUsers root sergiu
 
+# Configure Idle Log Out Timeout Interval
 ClientAliveInterval 300
 ClientAliveCountMax 0
 
+# Disable .rhosts Files
 IgnoreRhosts yes
-HostbasedAuthentication no
-PermitEmptyPasswords no
 
+# Disable Host-Based Authentication
+HostbasedAuthentication no
+
+# Enable a Warning Banner
+Banner /etc/issue
 
 vim /etc/issue
 ----------------------------------------------------------------------------------------------
@@ -36,3 +45,23 @@ or monitoring of the content of privileged communications, or work product, rela
 or services by attorneys, psychotherapists, or clergy, and their assistants. Such communications and work
 product are private and confidential. See User Agreement for details.
 ----------------------------------------------------------------------------------------------
+
+# Disable Empty Passwords
+PermitEmptyPasswords no
+
+#  Turn on privilege separation
+UsePrivilegeSeparation yes
+
+# Prevent the use of insecure home directory and key file permissions
+StrictModes yes
+
+# Turn on  reverse name checking
+VerifyReverseMapping yes
+
+# Do you need port forwarding?
+AllowTcpForwarding no
+X11Forwarding no
+
+#  Specifies whether password authentication is allowed.  The default is yes.
+PasswordAuthentication no
+
