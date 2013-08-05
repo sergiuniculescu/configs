@@ -94,8 +94,6 @@ sergiu		ALL=(ALL)	ALL
 ### Repos ###
 rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
 
-rpm -Uvh http://download1.rpmfusion.org/free/el/updates/6/x86_64/rpmfusion-free-release-6-0.1.noarch.rpm http://download1.rpmfusion.org/nonfree/el/updates/6/x86_64/rpmfusion-nonfree-release-6-0.1.noarch.rpm
-
 # Multimedia #
 rpm -Uvh http://pkgs.repoforge.org/rpmforge-release/rpmforge-release-0.5.3-1.el6.rf.x86_64.rpm
 
@@ -113,6 +111,9 @@ sudo yum install nvidia-x11-drv
 http://elrepo.org/linux/kernel/el6/x86_64/RPMS/   # kernel
 sudo yum --enablerepo=elrepo-kernel install kernel-lt
 sudo yum --enablerepo=elrepo-kernel install kernel-ml
+
+# Others (not needed if nux-dextop is installed)
+rpm -Uvh http://download1.rpmfusion.org/free/el/updates/6/x86_64/rpmfusion-free-release-6-0.1.noarch.rpm http://download1.rpmfusion.org/nonfree/el/updates/6/x86_64/rpmfusion-nonfree-release-6-0.1.noarch.rpm
 
 
 ### Install nVidia drivers manually ###
