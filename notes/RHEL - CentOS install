@@ -5,11 +5,8 @@
 ### yum ###
 
 yum update		# update toate pachetele si dependintele lor
-
 yum search nume_pachet	# cauta un anume pachet, pot fi mai multe pachete trecute
-
 yum info nume_pachet	# afiseaza detalii despre un anume pachet
-
 yum list nume_pache    	# afiseaza informatii despre un anumit pachet, instalat sau nu
 yum list nume_pachet\* 	# afiseaza informatii despre toate pachetele care incep cu un nume
 yum list all		# afiseaza toate pachetele disponibile 
@@ -18,22 +15,19 @@ yum list installed | grep reponame  # afiseaza pachetele instalate dintr-un repo
 yum list available	# afiseaza pachetele disponibile in functie de repo-urile instalate
 yum repolist		# afiseaza repo-urile instalate
 yum gruplist		# afiseaza
-
 yum install nume_pachet\* # instaleaza toate pachetele care incep cu un nume
-
+yum downgrade nume_pachet
 yum provides "*/nume_pachet" # afiseaza fisierele care le detine un pachet
-
 yum -v grouplist kde\*  # listeaza toate pachetele ce tin de KDE
-
 yum groupinstall "KDE Software Compilation" # instaleaza toate pachetele ce tin de KDE
 yum groupinstall kde-desktop
 yum install @kde-desktop  # @ pentru a instala un grup
-
 yum remove nume_pachet
-
 yum groupremove "KDE Software Compilation"
 yum groupremove kde-desktop
 yum remove @kde-desktop
+yum history list
+yum history list nume_pachet
 
 
 ### skip updating packages ###
@@ -153,7 +147,7 @@ vim /etc/yum.conf # and set installonly_limit:
 installonly_limit=2
 
 
-### Install Skype ###
+### Install Skype manually ###
 yum install alsa-lib.i686 fontconfig.i686 freetype.i686 glib2.i686 libSM.i686 libXScrnSaver.i686 libXi.i686 libXrandr.i686 libXrender.i686 libXv.i686 libstdc++.i686 pulseaudio-libs.i686 qt.i686 qt-x11.i686 zlib.i686
 
 wget http://download.skype.com/linux/skype_static-4.0.0.8.tar.bz2
@@ -177,6 +171,7 @@ export SKYPE_HOME="/opt/skype"
  
 $SKYPE_HOME/skype --resources=$SKYPE_HOME $*
 ________________
+
 
 ### Change the hostname ###
 hostname   # to check your hostname
