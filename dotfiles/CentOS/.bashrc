@@ -141,7 +141,7 @@ function load_prompt () {
     if  [[ $parent_process == script* ]]; then
         PROMPT_COMMAND=""
         PS1="\t - \# - \u@\H { \w }\$ "
-    elif [[ $parent_process == emacs* || $parent_process == xemacs* ]]; then
+    elif [[ $parent_process == vim* || $parent_process == emacs* ]]; then
         PROMPT_COMMAND=""
         PS1="\u@\h { \w }\$ "
     else
