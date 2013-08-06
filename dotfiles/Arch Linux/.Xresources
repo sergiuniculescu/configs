@@ -1,0 +1,238 @@
+!-----------------------------------------------------------------------------
+! Xft settings
+!-----------------------------------------------------------------------------
+
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.rgba:       rgb
+Xft.hinting:    true
+Xft.hintstyle:  hintslight
+
+!----------------------------------------------------------------------------
+! urxvt
+!----------------------------------------------------------------------------
+
+! Transparent background:
+URxvt.transparent: true
+! URxvt.shading: 0 to 99 darkens, 101 to 200 lightens
+URxvt.shading: 30
+
+
+! Fonts:
+URxvt.font: xft:Terminus:bold:pixelsize=14
+
+
+! Perl extensions:
+URxvt.perl-ext-common:  default,matcher,url-select,vtwheel,keyboard-select
+
+
+! Clickable URLs:
+URxvt.keysym.M-u:    perl:url-select:select_next
+URxvt.urlLauncher:   /usr/bin/chromium
+URxvt.underlineURLs: true
+URxvt.matcher.button:   1
+URxvt.keysym.C-Delete:  perl:matcher:last
+URxvt.keysym.M-Delete:  perl:matcher:list
+!Alt+U - Enter selection mode. The last URL on your screen will be selected. You can repeat Alt+U to select the next upward URL.
+!K - Select next upward URL
+!J - Select next downward URL
+!Return - Open selected URL in browser and quit selection mode
+!O - Open selected URL in browser without quitting selection mode
+!Y - Copy (yank) selected URL and quit selection mode
+!Esc - Cancel URL selection mode 
+
+
+! Keyboard select (Alt+Escape):
+URxvt.keysym.M-Escape:  perl:keyboard-select:activate
+URxvt.keysym.M-s:       perl:keyboard-select:search
+
+
+! Copy - Paste
+!URxvt.keysym.C-c: perl:clipboard:copy
+!URxvt.keysym.C-v: perl:clipboard:paste
+!URxvt.keysym.C-C-v: perl:clipboard:paste_escaped
+
+
+! Tabs
+!Uxvt.perl-ext-common:  default,tabbed
+!URxvt.tabbed.tabbar-fg: 2
+!URxvt.tabbed.tabbar-bg: 0
+!URxvt.tabbed.tab-fg:    3
+!URxvt.tabbed.tab-bg:    0
+!URxvt.matcher.button:   1
+
+
+! Scrollbar style - rxvt (default), plain (most compact), next, or xterm:
+URxvt*scrollstyle:        plain
+URxvt*scrollBar:          false
+URxvt*scrollBar_right:    true
+URxvt*transpscrollbar:    true
+URxvt*scrollBar_floating: true
+URxvt*saveLines:          1000000
+URxvt*scrollTtyOutput:    false
+URxvt*scrollWithBuffer:   true
+URxvt*scrollTtyKeypress:  true
+URxvt*geometry:           84x24
+
+
+! Cursor:
+URxvt*cursorBlink: false
+URxvt*cursorUnderline: false
+
+! Home & End keybind
+URxvt*keysym.Home: \033[1~
+URxvt*keysym.End: \033[4~
+
+
+!-------------------------------
+! Colour Scheme Zenburn (custom)
+!-------------------------------
+
+!BLK Cursor
+URxvt.color0      : #1E2320
+URxvt.color8      : #709080
+!
+!!RED Tag
+URxvt.color1      : #705050
+URxvt.color9      : #dca3a3
+!
+!!GRN SpecialKey
+URxvt.color2      : #60b48a
+URxvt.color10     : #c3bf9f
+!
+!!YEL Keyword
+URxvt.color3      : #dfaf8f
+URxvt.color11     : #f0dfaf
+!
+!!BLU Number
+!URxvt.color4      : #506070
+URxvt.color4      : #1793D1
+URxvt.color12     : #94bff3
+!
+!!MAG Precondit
+URxvt.color5      : #dc8cc3
+URxvt.color13     : #ec93d3
+!
+!!CYN Float
+URxvt.color6      : #8cd0d3
+URxvt.color14     : #93e0e3
+!
+!!WHT Search
+URxvt.color7      : #dcdccc
+URxvt.color15     : #ffffff
+!
+!!TXT Normal, Normal, Cursor
+!URxvt.background  : #1f1f1f
+URxvt.background  : #000000
+URxvt.foreground  : #dcdccc
+URxvt.cursorColor : #8faf9f
+!
+!!HLT Include, StatusLine, ErrorMsg
+URxvt.colorBD     : #ffcfaf
+URxvt.colorUL     : #ccdc90
+URxvt.colorIT     : #80d4aa
+
+
+!--------------------------
+! Custom:
+!--------------------------
+! Background
+!URxvt.background: #000000
+!URxvt.foreground: #CCCCCC
+! Cursor
+!URxvt.cursorColor:  #736F6E
+!URxvt.pointerColor: #1793D1
+! Black
+!URxvt.color0: 	#000000
+!URxvt.color8: 	#555555
+! Red
+!URxvt.color1: 	#BB0000
+!URxvt.color9: 	#FF0F0F
+! Green
+!URxvt.color2: 	#00AA00
+!URxvt.color10:	#00FF00
+! Yellow
+!URxvt.color3: 	#FF8000
+!URxvt.color11:	#FFFF00
+! Blue
+!URxvt.color4: 	#3333FF
+!URxvt.color12:	#1793D1
+! Magenta
+!URxvt.color5: 	#AA00AA
+!URxvt.color13:	#CC00CC
+! Cyan
+!URxvt.color6: 	#00AAAA
+!URxvt.color14:	#0FFFFF
+! White
+!URxvt.color7: 	#CCCCCC
+!URxvt.color15:	#FFFFFF
+
+
+
+!----------------------------------------------------------------------------
+! xterm
+!----------------------------------------------------------------------------
+
+xterm*geometry:          80x25
+xterm*faceName: xft:Terminus:bold:pixelsize=14:antialias=true
+xterm*dynamicColors:     true
+xterm*utf8:              2
+xterm*eightBitInput:     false
+xterm*saveLines:         512
+xterm*scrollTtyKeypress: true
+xterm*scrollTtyOutput:   false
+xterm*scrollBar:         true
+xterm*rightScrollBar:    true
+xterm*loginShell:        true
+xterm*jumpScroll:        true
+xterm*multiScroll:       true
+xterm*toolBar:           false
+
+! Zenburn colors:
+xterm*background:  #1f1f1f
+xterm*foreground:  #dcdccc
+xterm*color0:      #1E2320
+xterm*color1:      #705050
+xterm*color2:      #60b48a
+xterm*color3:      #dfaf8f
+xterm*color4:      #506070
+xterm*color5:      #dc8cc3
+xterm*color6:      #8cd0d3
+xterm*color7:      #dcdccc
+xterm*color8:      #709080
+xterm*color9:      #dca3a3
+xterm*color10:     #c3bf9f
+xterm*color11:     #f0dfaf
+xterm*color12:     #94bff3
+xterm*color13:     #ec93d3
+xterm*color14:     #93e0e3
+xterm*color15:     #ffffff
+
+
+! Default Colour Scheme:
+!xterm*background: #000000
+!xterm*foreground: #AAAAAA
+!black
+!XTerm*color0:   #000000
+!XTerm*color8: 	#555555
+!red
+!XTerm*color1: 	#AA0000
+!XTerm*color9: 	#FF5555
+!green
+!XTerm*color2: 	#00AA00
+!XTerm*color10: 	#55FF55
+!brown/yellow
+!XTerm*color3: 	#AA5500
+!XTerm*color11: 	#FFFF55
+!blue
+!XTerm*color4: 	#0000AA
+!XTerm*color12: 	#5555FF
+!magenta
+!XTerm*color5: 	#AA00AA
+!XTerm*color13: 	#FF55FF
+!cyan
+!XTerm*color6: 	#00AAAA
+!XTerm*color14: 	#55FFFF
+!white
+!XTerm*color7: 	#AAAAAA
+!XTerm*color15: 	#FFFFFF
