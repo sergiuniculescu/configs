@@ -1,0 +1,82 @@
+# .bashrc
+
+# User specific aliases and functions
+
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+##############
+### Prompt ###
+##############
+
+### Colors ###
+# Regular #
+export black="\[\033[0;38;5;0m\]"
+export red="\[\033[0;38;5;1m\]"
+export orange="\[\033[0;38;5;130m\]"
+export green="\[\033[0;38;5;2m\]"
+export yellow="\[\033[0;38;5;3m\]"
+export blue="\[\033[0;38;5;4m\]"
+export bblue="\[\033[0;38;5;12m\]"
+export magenta="\[\033[0;38;5;55m\]"
+export cyan="\[\033[0;38;5;6m\]"
+export white="\[\033[0;38;5;7m\]"
+export coldblue="\[\033[0;38;5;33m\]"
+export smoothblue="\[\033[0;38;5;111m\]"
+export iceblue="\[\033[0;38;5;45m\]"
+export turqoise="\[\033[0;38;5;50m\]"
+export smoothgreen="\[\033[0;38;5;42m\]"
+# Bold #
+export bblack="\[\033[1;38;5;0m\]"
+export bred="\[\033[1;38;5;1m\]"
+export borange="\[\033[1;38;5;130m\]"
+export bgreen="\[\033[1;38;5;2m\]"
+export byellow="\[\033[1;38;5;3m\]"
+export bblue="\[\033[1;38;5;4m\]"
+export bbblue="\[\033[1;38;5;12m\]"
+export bmagenta="\[\033[1;38;5;55m\]"
+export bcyan="\[\033[1;38;5;6m\]"
+export bwhite="\[\033[1;38;5;7m\]"
+export bcoldblue="\[\033[1;38;5;33m\]"
+export bsmoothblue="\[\033[1;38;5;111m\]"
+export biceblue="\[\033[1;38;5;45m\]"
+export bturqoise="\[\033[1;38;5;50m\]"
+export bsmoothgreen="\[\033[1;38;5;42m\]"
+
+function pre_prompt {
+        newPWD="${PWD}"
+        user="sergiu"
+        host=$(echo -n $HOSTNAME | sed -e "s/[\.].*//")
+        datenow=$(date "+%a, %d %b %y")
+        let promptsize=$(echo -n "┌(${PWD})($user@$host ddd., DD mmm YY)┐" \
+                | wc -c | tr -d " ")
+        let fillsize=${COLUMNS}-${promptsize}
+        fill=""
+        while [ "$fillsize" -gt "0" ] 
+            do 
+                fill="${fill}─"
+                    let fillsize=${fillsize}-1
+                    done
+                    if [ "$fillsize" -lt "0" ]
+                        then
+                            let cutt=3-${fillsize}
+            newPWD="...$(echo -n $PWD | sed -e "s/\(^.\{$cutt\}\)\(.*\)/\2/")"
+                fi
+
+}
+
+PROMPT_COMMAND=pre_prompt
+
+case "$TERM" in
+xterm)
+## Original ##    PS1="$bblue┌─($orange\u@\h \$(date \"+%a, %d %b %y\")$bblue)─\${fill}─($orange\$newPWD\
+# $bblue)─┐\n$bblue└─($orange\$(date \"+%H:%M\") \$$bblue)─>$white "
+    PS1="$red┌─($bred\u $red@$bred CentOS release 6.4 $red- $byellow\$(date \"+%a, %d %b %y\")$red)─($bcyan\$newPWD\
+$red)─┐\n$red└─($byellow\$(date \"+%H:%M\")$bred \$$red)─>$white "
+esac
