@@ -46,15 +46,20 @@ alias yu='sudo yum update'
 ####################
 
 # Make multiple shells share the same history file
-HISTSIZE=5000
-HISTFILESIZE=5000
-shopt -s histappend
+HISTSIZE=50000
+HISTFILESIZE=50000
 export PROMPT_COMMAND="history -a ; ${PROMPT_COMMAND:-:}"
-export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}erasedups
-export HISTCONTROL=ignoreboth
+
+# don't put duplicate lines in the history. See bash(1) for more options
+# don't overwrite GNU Midnight Commander's setting of `ignorespace'.
+HISTCONTROL=$HISTCONTROL${HISTCONTROL+:}ignoredups
 export HISTIGNORE='&:clear:ls:cd:[bf]g:exit:[ t\]*'
+# ... or force ignoredups and ignorespace
+HISTCONTROL=ignoreboth
 
 ## some shopt options ##
+# append to the history file, don't overwrite it
+shopt -s histappend
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
@@ -63,7 +68,6 @@ shopt -s cdspell
 #include dotfiles in wildcard expansion, and match case-insensitively
 shopt -s dotglob
 shopt -s nocaseglob
-
 
 
 ##############
