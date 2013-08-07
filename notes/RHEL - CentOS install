@@ -28,6 +28,34 @@ yum groupremove kde-desktop
 yum remove @kde-desktop
 yum history list
 yum history list nume_pachet
+yum repolist all  # list all repositories set up on your system
+
+### YUM & RPM tips ###
+
+#Query packages not from CentOS #
+rpm -qa --qf '%{NAME} %{VENDOR}\n' | grep -v CentOS
+
+# Reset File Permissions #
+rpm --setperms <packagename>
+
+# View the Changelog of a package #
+rpm -q --changelog <packagename> | less
+
+# quickly list documentation relating to a package #
+rpm -qd <packagename>
+
+# Query Package Install Order and Dates #
+rpm -qa --last > ~/RPMS_by_Install_Date
+
+# Query Available Packages from a Repo #
+yum --disablerepo "*" --enablerepo "rpmforge" list available 
+
+# Enable or Disable a Repo from the Command Line #
+yum-config-manager --enable c6-media
+yum-config-manager --disable c6-media
+
+# Show all installed GPG keys #
+rpm -q gpg-pubkey --qf '%{name}-%{version}-%{release} --> %{summary}\n'
 
 
 ### skip updating packages ###
@@ -221,5 +249,6 @@ sudo yum install gstreamer-plugins-bad gstreamer-plugins-ugly gstreamer-ffmpeg
 ### Save alsamixer settings ###
 sudo alsactl store
 ls -Z /etc/asound.*  # to see SElinux label
+
 
 
