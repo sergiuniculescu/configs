@@ -1,7 +1,8 @@
 #########################
-###### SSH and FTP ######
+###### SSH and VNC ######
 #########################
 
+### SSH ###
 vim /etc/ssh/sshd_config
 
 
@@ -13,7 +14,7 @@ ListenAddress xxx.xx.x.x
 Protocol 2
 
 # Limit Users' SSH Access
-AllowUsers root sergiu
+AllowUsers sergiu
 
 # Configure Idle Log Out Timeout Interval
 ClientAliveInterval 300
@@ -55,13 +56,22 @@ UsePrivilegeSeparation yes
 # Prevent the use of insecure home directory and key file permissions
 StrictModes yes
 
-# Turn on  reverse name checking
-VerifyReverseMapping yes
-
-# Do you need port forwarding?
-AllowTcpForwarding no
-X11Forwarding no
+# Port forwarding
+AllowTcpForwarding yes
+X11Forwarding yes
+PermitTunnel yes
 
 #  Specifies whether password authentication is allowed.  The default is yes.
 PasswordAuthentication no
 
+
+### VNC ###
+vim /etc/sysconfig/vncservers
+_____________________________
+VNCSERVERS="1:sergiu"
+VNCSERVERARGS[1]="-localhost"
+______________________________
+
+service vncserver restart
+
+Open port 5901

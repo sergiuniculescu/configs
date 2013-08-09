@@ -251,4 +251,19 @@ sudo alsactl store
 ls -Z /etc/asound.*  # to see SElinux label
 
 
+### Wake-on-lan ###
+echo '/usr/sbin/ethtool -s eth0 wol g' >> /etc/rc.d/rc.local
+or
+vim /etc/sysconfig/network-scripts/ifcfg-eth0
+_____________________
+DEVICE=eth0
+TYPE=EThernet 
+ONBOOT=yes
+ETHTOOL_OPTS="wol g"
+______________________
+chkconfig network on
 
+Wake up the computer from internet
+This involves enabling port forwarding of UDP port 9 to the destination computer in the router's administration webpage. 
+To fully benefit from WOL you should configure a dynamic DNS service.
+Just make sure to use your dynamic DNS provided address and the destination computer's MAC.
