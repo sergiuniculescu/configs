@@ -69,7 +69,7 @@ PasswordAuthentication no
 vim /etc/sysconfig/vncservers
 _____________________________
 VNCSERVERS="1:sergiu"
-VNCSERVERARGS[1]="-localhost"
+VNCSERVERARGS[1]="-geometry 1920x1080 -localhost"
 ______________________________
 
 service vncserver restart

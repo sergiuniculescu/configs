@@ -2,7 +2,9 @@
 ### RHEL/CentOS install ###
 ###########################
 
+###########
 ### yum ###
+###########
 
 yum update		# update toate pachetele si dependintele lor
 yum search nume_pachet	# cauta un anume pachet, pot fi mai multe pachete trecute
@@ -30,7 +32,42 @@ yum history list
 yum history list nume_pachet
 yum repolist all  # list all repositories set up on your system
 
+
+################
+### yum.conf ###
+################
+
+### skip updating packages ###
+yum -x nume_pachet update
+yum --exclude=nume_pachet update
+
+sudo vim /etc/yum.conf  # permanent
+_______
+[main]
+exclude=nume_pachet1* nume_pachet2*
+_______
+yum --disableexcludes=all update  # disable exclude to check for an update
+
+
+### Remove Old Kernels ###
+# Package-cleanup set count as how many old kernels you want left #
+package-cleanup --oldkernels --count=2
+
+# Make Amount of Installed Kernels Permanent #
+vim /etc/yum.conf # and set installonly_limit:
+installonly_limit=2
+
+### Removing dependencies###
+sudo vim /etc/yum.conf
+______________________________
+[main]
+clean_requirements_on_remove=1
+______________________________
+
+
+######################
 ### YUM & RPM tips ###
+######################
 
 #Query packages not from CentOS #
 rpm -qa --qf '%{NAME} %{VENDOR}\n' | grep -v CentOS
@@ -58,16 +95,12 @@ yum-config-manager --disable c6-media
 rpm -q gpg-pubkey --qf '%{name}-%{version}-%{release} --> %{summary}\n'
 
 
-### skip updating packages ###
-yum -x nume_pachet update
-yum --exclude=nume_pachet update
-
-sudo vim /etc/yum.conf  # permanent
-_______
-[main]
-exclude=nume_pachet1* nume_pachet2*
-_______
-yum --disableexcludes=all update  # disable exclude to check for an update
+### package-cleanup ###
+package-cleanup --orphans
+package-cleanup --leaves
+package-cleanup --dupes
+package-cleanup --problems
+package-cleanup --oldkernel
 
 
 
@@ -106,14 +139,15 @@ __________________________________________
 __________________________________________
 
 
-
 ### Add an user to SUDOERS ###
 su -
 visudo
 sergiu		ALL=(ALL)	ALL
 
 
+#############
 ### Repos ###
+#############
 rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
 
 # Multimedia #
@@ -164,15 +198,6 @@ yum install nautilus-open-terminal
 yum install flash-plugin
 yum install gnome-utils
 yum install file-roller
-
-
-### Remove Old Kernels ###
-# Package-cleanup set count as how many old kernels you want left #
-package-cleanup --oldkernels --count=2
-
-# Make Amount of Installed Kernels Permanent #
-vim /etc/yum.conf # and set installonly_limit:
-installonly_limit=2
 
 
 ### Install Skype manually ###
@@ -250,6 +275,19 @@ sudo yum install gstreamer-plugins-bad gstreamer-plugins-ugly gstreamer-ffmpeg
 sudo alsactl store
 ls -Z /etc/asound.*  # to see SElinux label
 
+sudo vim /etc/pulse/daemon.conf
+_______________________________
+enable-remixing = yes
+enable-lfe-remixing = yes
+default-sample-format = s32le
+default-sample-rate = 48000
+default-sample-channels = 6
+default-fragments = 8
+default-fragment-size-msec = 5
+________________________________
+
+pulseaudio -k  # restart pulseaudio
+
 
 ### Wake-on-lan ###
 echo '/usr/sbin/ethtool -s eth0 wol g' >> /etc/rc.d/rc.local
@@ -267,3 +305,19 @@ Wake up the computer from internet
 This involves enabling port forwarding of UDP port 9 to the destination computer in the router's administration webpage. 
 To fully benefit from WOL you should configure a dynamic DNS service.
 Just make sure to use your dynamic DNS provided address and the destination computer's MAC.
+
+
+### Wine fonts ###
+rpm --nodeps -e wine-tahoma-fonts.noarch
+wget http://files.polosatus.ru/winefontssmoothing_en.sh
+bash winefontssmoothing_en.sh
+
+
+### dd ###
+# format a USB #
+dd if=/dev/zero of=/dev/sdX
+# see the progress of dd #
+ps -A | grep dd
+sudo kill -USR1 {nr of PID}
+
+
