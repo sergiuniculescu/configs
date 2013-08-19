@@ -198,6 +198,7 @@ yum install nautilus-open-terminal
 yum install flash-plugin
 yum install gnome-utils
 yum install file-roller
+yum install ntfsprogs
 
 
 ### Install Skype manually ###
@@ -320,4 +321,9 @@ dd if=/dev/zero of=/dev/sdX
 ps -A | grep dd
 sudo kill -USR1 {nr of PID}
 
+
+### rsync ###
+rsync -a --progress rsync://ftp.astral.ro/distros/centos/6.4/os/x86_64/ /opt/mirror/centos
+
+system-config-kickstart  #  A graphical interface for making kickstart files
 
