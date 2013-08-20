@@ -322,6 +322,17 @@ ps -A | grep dd
 sudo kill -USR1 {nr of PID}
 
 
+### Password Protect Single-User Mode ###
+grub-md5-crypt
+vim /etc/grub.conf
+________________________________________________
+default=0
+timeout=5
+password --md5 $1$TNUb/1$TwroGJn4eCd4xsYeGiBYq.
+________________________________________________
+
+
+
 ### rsync ###
 rsync -a --progress rsync://ftp.astral.ro/distros/centos/6.4/os/x86_64/ /opt/mirror/centos
 
