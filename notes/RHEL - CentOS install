@@ -315,9 +315,9 @@ _______________________
 vim /etc/fstab
 ____________________________________________________________________
 /dev/sda1	/boot	ext4	defaults,nosuid,noexec,nodev	1 2
-/dev/sda2	swap	swap	defaults						0 0
-/dev/sda3	/		ext4	defaults						1 1
-/dev/sda4	/home	ext4	defaults,nosuid,nodev			1 2
+/dev/sda2	swap	swap	defaults			0 0
+/dev/sda3	/		ext4	defaults		1 1
+/dev/sda4	/home	ext4	defaults,nosuid,nodev		1 2
 ____________________________________________________________________
 
 # Keep /boot as read-only #
