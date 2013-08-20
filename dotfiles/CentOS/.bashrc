@@ -146,7 +146,7 @@ screen)
 $coldblue)─┐\n$coldblue└─($byellow\$(date \"+%H:%M\")$bwhite \$$coldblue)─>$white "
     ;;    
     *)
-    PS1="┌─(\u@\h \$(date \"+%a, %d %b %y\"))─\${fill}─(\$newPWD\
+    PS1="┌─(\u@\h \$(date \"+%a, %d %b %y\"))─(\$newPWD\
 )─┐\n└─(\$(date \"+%H:%M\") \$)─> "
     ;;
 esac

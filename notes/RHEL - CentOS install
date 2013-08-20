@@ -320,23 +320,53 @@ ____________________________________________________________________
 /dev/sda4	/home	ext4	defaults,nosuid,nodev		1 2
 ____________________________________________________________________
 
+# Keep /boot as read-only #
+# Note that you need to reset the change to read-write if you need to upgrade the kernel in future
+/dev/sda1	/boot	ext4	defaults,nosuid,noexec,nodev,ro	1 2
 
-### Don't allow any nut to kill the server ###
-perl -npe 's/ca::ctrlaltdel:\/sbin\/shutdown/#ca::ctrlaltdel:\/sbin\/shutdown/' -i /etc/inittab
+
+### Disable Control -Alt -Delete keys on the console mode ###
+vim /etc/init/control-alt-delete.conf
+______________________________
+# start on control-alt-delete
+# exec /sbin/shutdown -r now "Control -Alt -Delete pressed"
+______________________________
 
 
 ### Disable USB mass storage ###
 echo "Disabling USB Mass Storage"
 echo "blacklist usb-storage" > /etc/modprobe.d/blacklist-usbstorage
 
-
-### Restricting Root that no one other than root should be allowed in root's home directory ###
-echo "tty1" > /etc/securetty
-chmod 700 /root
+### Disable USB stick to detect ###
+vim /etc/modprobe.d/no-usb
+_____________________________
+install usb-storage /bin/true
+_____________________________
 
 
 ### Update your system to use sha512 instead of md5 for password protection ###
 authconfig --passalgo=sha512 --update
+
+
+### Sysctl Security ###
+vim /etc/sysctl.conf
+_______________________________________________
+net.ipv4.conf.all.send_redirects = 0
+net.ipv4.conf.all.accept_source_route = 0
+net.ipv4.conf.all.accept_redirects = 0
+net.ipv4.conf.all.secure_redirects = 0
+net.ipv4.conf.all.rp_filter = 1
+net.ipv4.conf.all.log_martians = 1
+net.ipv4.conf.default.accept_redirects = 0
+net.ipv4.conf.default.secure_redirects = 0
+net.ipv4.conf.default.send_redirects = 0
+net.ipv4.icmp_echo_ignore_broadcasts = 1
+net.ipv4.icmp_ignore_bogus_error_responses = 1
+net.ipv4.tcp_max_syn_backlog = 1280
+net.ipv4.tcp_timestamps = 0
+________________________________________________
+
+sysctl -p
 
 
 
