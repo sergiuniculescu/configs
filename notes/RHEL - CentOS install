@@ -297,13 +297,13 @@ pulseaudio -k  # restart pulseaudio
 
 
 ### Password Protect Grub and Single-User Mode ###
-grub-md5-crypt
+grub-crypt
 vim /etc/grub.conf
-________________________________________________
+______________________________________________
 default=0
 timeout=5
-password --md5 $1$TNUb/1$TwroGJn4eCd4xsYeGiBYq.
-________________________________________________
+password --encrypted $6$w1lrwrXOMm5ueR4M$.....
+______________________________________________
 
 vim /etc/sysconfig/init
 _______________________
@@ -315,9 +315,9 @@ _______________________
 vim /etc/fstab
 ____________________________________________________________________
 /dev/sda1	/boot	ext4	defaults,nosuid,noexec,nodev	1 2
-/dev/sda2	swap	swap	defaults			0 0
-/dev/sda3	/	ext4	defaults			1 1
-/dev/sda4	/home	ext4	defaults,nosuid,nodev		1 2
+/dev/sda2	swap	swap	defaults						0 0
+/dev/sda3	/		ext4	defaults						1 1
+/dev/sda4	/home	ext4	defaults,nosuid,nodev			1 2
 ____________________________________________________________________
 
 # Keep /boot as read-only #
@@ -351,6 +351,7 @@ authconfig --passalgo=sha512 --update
 ### Sysctl Security ###
 vim /etc/sysctl.conf
 _______________________________________________
+# Security options #
 net.ipv4.conf.all.send_redirects = 0
 net.ipv4.conf.all.accept_source_route = 0
 net.ipv4.conf.all.accept_redirects = 0
@@ -364,7 +365,10 @@ net.ipv4.icmp_echo_ignore_broadcasts = 1
 net.ipv4.icmp_ignore_bogus_error_responses = 1
 net.ipv4.tcp_max_syn_backlog = 1280
 net.ipv4.tcp_timestamps = 0
-________________________________________________
+
+# Memory/Swap Use 
+vm.swappiness = 10
+_______________________________________________
 
 sysctl -p
 
