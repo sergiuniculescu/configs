@@ -290,6 +290,60 @@ ________________________________
 pulseaudio -k  # restart pulseaudio
 
 
+
+#########################
+### CentOS Protection ###
+#########################
+
+
+### Password Protect Grub and Single-User Mode ###
+grub-md5-crypt
+vim /etc/grub.conf
+________________________________________________
+default=0
+timeout=5
+password --md5 $1$TNUb/1$TwroGJn4eCd4xsYeGiBYq.
+________________________________________________
+
+vim /etc/sysconfig/init
+_______________________
+SINGLE=/sbin/sulogin
+_______________________
+
+
+### Modifying fstab ###
+vim /etc/fstab
+____________________________________________________________________
+/dev/sda1	/boot	ext4	defaults,nosuid,noexec,nodev	1 2
+/dev/sda2	swap	swap	defaults			0 0
+/dev/sda3	/	ext4	defaults			1 1
+/dev/sda4	/home	ext4	defaults,nosuid,nodev		1 2
+____________________________________________________________________
+
+
+### Don't allow any nut to kill the server ###
+perl -npe 's/ca::ctrlaltdel:\/sbin\/shutdown/#ca::ctrlaltdel:\/sbin\/shutdown/' -i /etc/inittab
+
+
+### Disable USB mass storage ###
+echo "Disabling USB Mass Storage"
+echo "blacklist usb-storage" > /etc/modprobe.d/blacklist-usbstorage
+
+
+### Restricting Root that no one other than root should be allowed in root's home directory ###
+echo "tty1" > /etc/securetty
+chmod 700 /root
+
+
+### Update your system to use sha512 instead of md5 for password protection ###
+authconfig --passalgo=sha512 --update
+
+
+
+##############
+### Others ###
+##############
+
 ### Wake-on-lan ###
 echo '/usr/sbin/ethtool -s eth0 wol g' >> /etc/rc.d/rc.local
 or
@@ -320,21 +374,6 @@ dd if=/dev/zero of=/dev/sdX
 # see the progress of dd #
 ps -A | grep dd
 sudo kill -USR1 {nr of PID}
-
-
-### Password Protect Single-User Mode ###
-grub-md5-crypt
-vim /etc/grub.conf
-________________________________________________
-default=0
-timeout=5
-password --md5 $1$TNUb/1$TwroGJn4eCd4xsYeGiBYq.
-________________________________________________
-
-vim /etc/sysconfig/init
-_______________________
-SINGLE=/sbin/sulogin
-_______________________
 
 
 
