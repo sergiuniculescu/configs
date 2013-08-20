@@ -331,6 +331,11 @@ timeout=5
 password --md5 $1$TNUb/1$TwroGJn4eCd4xsYeGiBYq.
 ________________________________________________
 
+vim /etc/sysconfig/init
+_______________________
+SINGLE=/sbin/sulogin
+_______________________
+
 
 
 ### rsync ###
