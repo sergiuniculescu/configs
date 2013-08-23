@@ -178,6 +178,7 @@ rpm -Uvh http://download1.rpmfusion.org/free/el/updates/6/x86_64/rpmfusion-free-
 cd /etc/yum.repos.d
 wget http://people.centos.org/hughesjr/chromium/6/chromium-el6.repo
 yum install chromium
+sudo setsebool -P mmap_low_allowed 1
 
 
 ### Others ###
