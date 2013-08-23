@@ -254,10 +254,6 @@ cd /media/VirtualBoxGuestAdditions
 ./VBoxLinuxAdditions.run
 
 
-### SElinux re-labelling ###
-touch /.autorelabel
-sudo reboot
-
 ### Remove boot splash screen ###
 vim /etc/grub.conf  # remove ‘rhgb’ and ‘quiet’
 
@@ -295,6 +291,21 @@ pulseaudio -k  # restart pulseaudio
 ### CentOS Protection ###
 #########################
 
+
+### SElinux ###
+
+# You can view current status of SELinux mode from the command line using these:
+system-config-selinux
+getenforce
+sestatus
+
+# If it is disabled, enable SELinux using the following command.
+setenforce enforcing  # changes do not persist through a system reboot
+To make changes persistent through a system reboot, edit the 'SELINUX=' line in  /etc/selinux/config for either 'enforcing', 'permissive', or 'disabled'. For example: 'SELINUX=permissive'
+
+# SElinux re-labelling #
+touch /.autorelabel
+sudo reboot
 
 ### Password Protect Grub and Single-User Mode ###
 grub-crypt
@@ -371,6 +382,30 @@ vm.swappiness = 10
 _______________________________________________
 
 sysctl -p
+
+
+### Services configuration ###
+
+chkconfig --list				# list all known services
+chkconfig --list | grep 3:on	# list running services
+chkconfig [service] on/off		# turn on / off service
+netstat -tulpn					# list service and their open ports
+
+
+chkconfig atd off
+chkconfig blk-availability off
+chkconfig mdmonitor off
+chkconfig lvm2-monitor off
+sudo chkconfig iscsi off
+sudo chkconfig iscsid off
+chkconfig nfslock off
+chkconfig rpcbind off
+chkconfig rpcgssd off
+chkconfig rpcidmapd off
+chkconfig livesys off
+chkconfig livesys-late off
+chkconfig pcscd off
+chkconfig openct off
 
 
 
