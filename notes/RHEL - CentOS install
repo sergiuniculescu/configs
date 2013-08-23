@@ -386,10 +386,10 @@ sysctl -p
 
 ### Services configuration ###
 
-chkconfig --list				# list all known services
+chkconfig --list		# list all known services
 chkconfig --list | grep 3:on	# list running services
-chkconfig [service] on/off		# turn on / off service
-netstat -tulpn					# list service and their open ports
+chkconfig [service] on/off	# turn on / off service
+netstat -tulpn			# list service and their open ports
 
 
 chkconfig atd off
