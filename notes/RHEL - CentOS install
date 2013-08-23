@@ -144,6 +144,8 @@ su -
 visudo
 sergiu		ALL=(ALL)	ALL
 
+Or add the user to wheel group and enable wheel from visudo
+
 
 #############
 ### Repos ###
@@ -172,20 +174,6 @@ sudo yum --enablerepo=elrepo-kernel install kernel-ml
 rpm -Uvh http://download1.rpmfusion.org/free/el/updates/6/x86_64/rpmfusion-free-release-6-0.1.noarch.rpm http://download1.rpmfusion.org/nonfree/el/updates/6/x86_64/rpmfusion-nonfree-release-6-0.1.noarch.rpm
 
 
-### Install nVidia drivers manually ###
-yum groupinstall "Development Tools"
-yum install kernel-devel kernel-headers dkms
-lspci | grep VGA
-http://www.nvidia.com/Download/index.aspx  # download nVidia driver
-vim /etc/modprobe.d/blacklist.conf   # blacklist nouveau
-mv /boot/initramfs-$(uname -r).img /boot/initramfs-$(uname -r).img.bak
-dracut -v /boot/initramfs-$(uname -r).img $(uname -r)
-/sbin/init 3
-chmod +x NVIDIA-Linux-x86-319.32.run
-./NVIDIA-Linux-x86-319.32.run
-
-
-
 ### Install Chromium ###
 cd /etc/yum.repos.d
 wget http://people.centos.org/hughesjr/chromium/6/chromium-el6.repo
@@ -199,32 +187,6 @@ yum install flash-plugin
 yum install gnome-utils
 yum install file-roller
 yum install ntfsprogs
-
-
-### Install Skype manually ###
-yum install alsa-lib.i686 fontconfig.i686 freetype.i686 glib2.i686 libSM.i686 libXScrnSaver.i686 libXi.i686 libXrandr.i686 libXrender.i686 libXv.i686 libstdc++.i686 pulseaudio-libs.i686 qt.i686 qt-x11.i686 zlib.i686
-
-wget http://download.skype.com/linux/skype_static-4.0.0.8.tar.bz2
-mkdir /opt/skype
-tar xvf skype_static* -C /opt/skype --strip-components=1
-
-cd /usr/lib
-ln -s libtiff.so.3 /usr/lib/libtiff.so.4
-
-ln -s /opt/skype/skype.desktop /usr/share/applications/skype.desktop
-ln -s /opt/skype/icons/SkypeBlue_48x48.png /usr/share/icons/skype.png
-ln -s /opt/skype/icons/SkypeBlue_48x48.png /usr/share/pixmaps/skype.png
- 
-touch /usr/bin/skype
-chmod 755 /usr/bin/skype
-	
-vim /usr/bin/skype
-_______________
-#!/bin/sh
-export SKYPE_HOME="/opt/skype"
- 
-$SKYPE_HOME/skype --resources=$SKYPE_HOME $*
-________________
 
 
 ### Change the hostname ###
@@ -287,25 +249,36 @@ pulseaudio -k  # restart pulseaudio
 
 
 
-#########################
-### CentOS Protection ###
-#########################
-
+####################################
+### CentOS Protection & Security ###
+####################################
 
 ### SElinux ###
+Two important documentations about Selinux can be found here:
+http://docs.redhat.com/docs/en-US/Red_Hat_Enterprise_Linux/6/html/Security-Enhanced_Linux/index.html
+http://docs.redhat.com/docs/en-US/Red_Hat_Enterprise_Linux/6/html/Managing_Confined_Services/index.html
 
 # You can view current status of SELinux mode from the command line using these:
 system-config-selinux
-getenforce
+getenforce  # if you get back a 1 selinux is turned on if you get back a 0 its turned off
 sestatus
 
 # If it is disabled, enable SELinux using the following command.
 setenforce enforcing  # changes do not persist through a system reboot
 To make changes persistent through a system reboot, edit the 'SELINUX=' line in  /etc/selinux/config for either 'enforcing', 'permissive', or 'disabled'. For example: 'SELINUX=permissive'
 
+
+# SElinux logs (/var/log/audit/audit.log) #
+yum install setroubleshoot
+setroubleshootd
+sealert -a /var/log/audit/audit.log  # if you only have a console available and no X-Window System
+sealert -b  # if you have gui
+
+
 # SElinux re-labelling #
 touch /.autorelabel
 sudo reboot
+
 
 ### Password Protect Grub and Single-User Mode ###
 grub-crypt
@@ -353,10 +326,6 @@ vim /etc/modprobe.d/no-usb
 _____________________________
 install usb-storage /bin/true
 _____________________________
-
-
-### Update your system to use sha512 instead of md5 for password protection ###
-authconfig --passalgo=sha512 --update
 
 
 ### Sysctl Security ###
@@ -444,6 +413,44 @@ dd if=/dev/zero of=/dev/sdX
 ps -A | grep dd
 sudo kill -USR1 {nr of PID}
 
+
+### Install Skype manually ###
+yum install alsa-lib.i686 fontconfig.i686 freetype.i686 glib2.i686 libSM.i686 libXScrnSaver.i686 libXi.i686 libXrandr.i686 libXrender.i686 libXv.i686 libstdc++.i686 pulseaudio-libs.i686 qt.i686 qt-x11.i686 zlib.i686
+
+wget http://download.skype.com/linux/skype_static-4.0.0.8.tar.bz2
+mkdir /opt/skype
+tar xvf skype_static* -C /opt/skype --strip-components=1
+
+cd /usr/lib
+ln -s libtiff.so.3 /usr/lib/libtiff.so.4
+
+ln -s /opt/skype/skype.desktop /usr/share/applications/skype.desktop
+ln -s /opt/skype/icons/SkypeBlue_48x48.png /usr/share/icons/skype.png
+ln -s /opt/skype/icons/SkypeBlue_48x48.png /usr/share/pixmaps/skype.png
+ 
+touch /usr/bin/skype
+chmod 755 /usr/bin/skype
+	
+vim /usr/bin/skype
+_______________
+#!/bin/sh
+export SKYPE_HOME="/opt/skype"
+ 
+$SKYPE_HOME/skype --resources=$SKYPE_HOME $*
+________________
+
+
+### Install nVidia drivers manually ###
+yum groupinstall "Development Tools"
+yum install kernel-devel kernel-headers dkms
+lspci | grep VGA
+http://www.nvidia.com/Download/index.aspx  # download nVidia driver
+vim /etc/modprobe.d/blacklist.conf   # blacklist nouveau
+mv /boot/initramfs-$(uname -r).img /boot/initramfs-$(uname -r).img.bak
+dracut -v /boot/initramfs-$(uname -r).img $(uname -r)
+/sbin/init 3
+chmod +x NVIDIA-Linux-x86-319.32.run
+./NVIDIA-Linux-x86-319.32.run
 
 
 ### rsync ###
