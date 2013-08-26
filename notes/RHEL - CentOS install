@@ -170,8 +170,8 @@ http://elrepo.org/linux/kernel/el6/x86_64/RPMS/   # kernel
 sudo yum --enablerepo=elrepo-kernel install kernel-lt
 sudo yum --enablerepo=elrepo-kernel install kernel-ml
 
-# Others (not needed if nux-dextop is installed)
-rpm -Uvh http://download1.rpmfusion.org/free/el/updates/6/x86_64/rpmfusion-free-release-6-0.1.noarch.rpm http://download1.rpmfusion.org/nonfree/el/updates/6/x86_64/rpmfusion-nonfree-release-6-0.1.noarch.rpm
+# Others #
+rpm -Uvh http://download1.rpmfusion.org/free/el/updates/6/x86_64/rpmfusion-free-release-6-0.1.noarch.rpm http://download1.rpmfusion.org/nonfree/el/updates/6/x86_64/rpmfusion-nonfree-release-6-0.1.noarch.rpm	# (not needed if nux-dextop is installed) 
 
 
 ### Install Chromium ###
@@ -185,9 +185,17 @@ sudo setsebool -P mmap_low_allowed 1
 yum install bash-completion
 yum install nautilus-open-terminal
 yum install flash-plugin
+yum install gconf-editor
 yum install gnome-utils
 yum install file-roller
 yum install ntfsprogs
+
+### Apps ###
+yum install terminator
+yum install --enablerepo nux-dextop-testing python-keybinder
+yum install pidgin pidgin-plugin-pack skype
+yum install geany filezilla transmission mc
+yum install radiotray tv-maxe xbmc clementine
 
 
 ### Change the hostname ###
@@ -286,7 +294,7 @@ grub-crypt
 vim /etc/grub.conf
 ______________________________________________
 default=0
-timeout=5
+timeout=2
 password --encrypted $6$w1lrwrXOMm5ueR4M$.....
 ______________________________________________
 
@@ -301,7 +309,7 @@ vim /etc/fstab
 ____________________________________________________________________
 /dev/sda1	/boot	ext4	defaults,nosuid,noexec,nodev	1 2
 /dev/sda2	swap	swap	defaults			0 0
-/dev/sda3	/		ext4	defaults		1 1
+/dev/sda3	/	ext4	defaults			1 1
 /dev/sda4	/home	ext4	defaults,nosuid,nodev		1 2
 ____________________________________________________________________
 
@@ -348,7 +356,8 @@ net.ipv4.tcp_max_syn_backlog = 1280
 net.ipv4.tcp_timestamps = 0
 
 # Memory/Swap Use 
-vm.swappiness = 10
+vm.swappiness=1
+vm.vfs_cache_pressure=50
 _______________________________________________
 
 sysctl -p
@@ -413,6 +422,10 @@ dd if=/dev/zero of=/dev/sdX
 # see the progress of dd #
 ps -A | grep dd
 sudo kill -USR1 {nr of PID}
+
+
+### mc ###
+gnome-terminal --geometry=239x68 -e "mc -S featured.ini"
 
 
 ### Install Skype manually ###
