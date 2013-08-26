@@ -369,36 +369,36 @@ vim /etc/sysctl.conf
 _______________________________________________
 ### ipv4 Security options ###
 
-# Enable TCP SYN Cookie Protection
+# Enable TCP SYN Cookie Protection #
 # A "SYN Attack" is a denial of service attack that consumes all the resources on a machine. Any server that is connected to a network is potentially subject to this attack.
 net.ipv4.tcp_syncookies = 1
 
-# Disable IP Source Routing
+# Disable IP Source Routing #
 # Source Routing is used to specify a path or route through the network from source to destination. 
 # This feature can be used by network people for diagnosing problems. 
 # However, if an intruder was able to send a source routed packet into the network, then he could intercept the replies and your server might not know that it's not communicating with a trusted server. 
 net.ipv4.conf.all.accept_source_route = 0
 
-# Disable ICMP Redirect Acceptance
+# Disable ICMP Redirect Acceptance #
 # ICMP redirects are used by routers to tell the server that there is a better path to other networks than the one chosen by the server. 
 # However, an intruder could potentially use ICMP redirect packets to alter the hosts's routing table by causing traffic to use a path you didn't intend. 
 net.ipv4.conf.all.accept_redirects = 0
 
-# Enable IP Spoofing Protection
+# Enable IP Spoofing Protection #
 # IP spoofing is a technique where an intruder sends out packets which claim to be from another host by manipulating the source address. 
 # IP spoofing is very often used for denial of service attacks.
 net.ipv4.conf.all.rp_filter = 1
 
-# Enable Ignoring to ICMP Requests
+# Enable Ignoring to ICMP Requests #
 net.ipv4.icmp_echo_ignore_all = 1
 
-# Enable Ignoring Broadcasts Request
+# Enable Ignoring Broadcasts Request #
 net.ipv4.icmp_echo_ignore_broadcasts = 1
 
-# Enable Bad Error Message Protection
+# Enable Bad Error Message Protection #
 net.ipv4.icmp_ignore_bogus_error_responses = 1
 
-# Enable Logging of Spoofed Packets, Source Routed Packets, Redirect Packets
+# Enable Logging of Spoofed Packets, Source Routed Packets, Redirect Packets #
 net.ipv4.conf.all.log_martians = 1
 
 # Others ipv4 security options #
