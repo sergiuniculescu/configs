@@ -264,6 +264,7 @@ pulseaudio -k  # restart pulseaudio
 ####################################
 # Securing and Hardening Red Hat Linux Production Systems
 http://www.puschitz.com/SecuringLinux.shtml
+https://access.redhat.com/site/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Security_Guide/index.html
 
 ### SElinux ###
 Two important documentations about Selinux can be found here:
