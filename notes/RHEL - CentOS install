@@ -2,6 +2,9 @@
 ### RHEL/CentOS install ###
 ###########################
 
+### Link for netinstall ##
+http://ftp.astral.ro/distros/centos/6.4/os/x86_64/
+
 ###########
 ### yum ###
 ###########
@@ -288,11 +291,16 @@ sudo reboot
 
 
 ### Password Protect Grub and Single-User Mode ###
+# It is highly important to protect your bootloader. 
+# There is a magic kernel parameter called init=/bin/sh. This makes any user/login restrictions totally useless.
+
 grub-crypt
 vim /etc/grub.conf
 ______________________________________________
 default=0
 timeout=2
+splashimage=(hd0,0)/grub/splash.xpm.gz
+hiddenmenu
 password --encrypted $6$w1lrwrXOMm5ueR4M$.....
 ______________________________________________
 
@@ -303,17 +311,36 @@ _______________________
 
 
 ### Modifying fstab ###
+
 vim /etc/fstab
 ____________________________________________________________________
 /dev/sda1	/boot	ext4	defaults,nosuid,noexec,nodev	1 2
 /dev/sda2	swap	swap	defaults			0 0
 /dev/sda3	/	ext4	defaults			1 1
 /dev/sda4	/home	ext4	defaults,nosuid,nodev		1 2
+
+# Others partitions 
+		/tmp	ext4	defaults,nosuid,noexec,nodev	1 2
+		/var/tmp ext4	defaults,nosuid,noexec,nodev	1 2
+		/var	ext4	defaults,nosuid			1 2
+		/var/www ext4	defaults,nosuid,nodev		1 2
+/dev/shm	tmpfs		defaults			0 0
+devpts		/dev/pts devpts	gid=5,mode=620			0 0
+sysfs		/sys	sysfs	defaults			0 0
+proc		/proc	proc	defaults			0 0
+
 ____________________________________________________________________
+# Note that some packages (building nvidia-dkms for example) may require exec on /var
 
 # Keep /boot as read-only #
 # Note that you need to reset the change to read-write if you need to upgrade the kernel in future
 /dev/sda1	/boot	ext4	defaults,nosuid,noexec,nodev,ro	1 2
+
+
+### Umask restrictions  ###
+# Set a umask of 077 for maximum security, which makes new files not readable by users other than the owner.
+perl -npe 's/umask\s+0\d2/umask 077/g' -i /etc/bashrc
+perl -npe 's/umask\s+0\d2/umask 077/g' -i /etc/csh.cshrc
 
 
 ### Disable Control -Alt -Delete keys on the console mode ###
