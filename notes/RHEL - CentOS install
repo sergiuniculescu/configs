@@ -191,8 +191,6 @@ yum install file-roller
 yum install ntfsprogs
 
 ### Apps ###
-yum install terminator
-yum install --enablerepo nux-dextop-testing python-keybinder
 yum install pidgin pidgin-plugin-pack skype
 yum install geany filezilla transmission mc
 yum install radiotray tv-maxe xbmc clementine
