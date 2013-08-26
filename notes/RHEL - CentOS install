@@ -369,10 +369,6 @@ vim /etc/sysctl.conf
 _______________________________________________
 ### ipv4 Security options ###
 
-# Enable TCP SYN Cookie Protection #
-# A "SYN Attack" is a denial of service attack that consumes all the resources on a machine. Any server that is connected to a network is potentially subject to this attack.
-net.ipv4.tcp_syncookies = 1
-
 # Disable IP Source Routing #
 # Source Routing is used to specify a path or route through the network from source to destination. 
 # This feature can be used by network people for diagnosing problems. 
@@ -426,20 +422,20 @@ chkconfig --list		# list all known services
 chkconfig --list | grep 3:on	# list running services
 chkconfig [service] on/off	# turn on / off service
 
-chkconfig atd off
-chkconfig blk-availability off
-chkconfig mdmonitor off
-chkconfig lvm2-monitor off
+sudo chkconfig atd off
+sudo chkconfig blk-availability off
+sudo chkconfig mdmonitor off
+sudo chkconfig lvm2-monitor off
 sudo chkconfig iscsi off
 sudo chkconfig iscsid off
-chkconfig nfslock off
-chkconfig rpcbind off
-chkconfig rpcgssd off
-chkconfig rpcidmapd off
-chkconfig livesys off
-chkconfig livesys-late off
-chkconfig pcscd off
-chkconfig openct off
+sudo chkconfig nfslock off
+sudo chkconfig rpcbind off
+sudo chkconfig rpcgssd off
+sudo chkconfig rpcidmapd off
+sudo chkconfig livesys off
+sudo chkconfig livesys-late off
+sudo chkconfig pcscd off
+sudo chkconfig openct off
 
 
 
@@ -481,6 +477,14 @@ sudo kill -USR1 {nr of PID}
 
 ### mc ###
 gnome-terminal --geometry=239x68 -e "mc -S featured.ini"
+
+
+### GIT HUB ###
+ssh-keygen -t rsa -C "contact.sergiuniculescu@gmail.com"
+vim ~/.ssh/id_rsa.pub  # copy key and paste it to github.com
+
+git config --global user.name "Sergiu Niculescu"
+git config --global user.email contact.sergiuniculescu@gmail.com
 
 
 ### Install Skype manually ###
