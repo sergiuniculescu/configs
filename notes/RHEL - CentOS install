@@ -551,43 +551,15 @@ git config --global user.name "Sergiu Niculescu"
 git config --global user.email contact.sergiuniculescu@gmail.com
 
 
-### Install Skype manually ###
-yum install alsa-lib.i686 fontconfig.i686 freetype.i686 glib2.i686 libSM.i686 libXScrnSaver.i686 libXi.i686 libXrandr.i686 libXrender.i686 libXv.i686 libstdc++.i686 pulseaudio-libs.i686 qt.i686 qt-x11.i686 zlib.i686
-
-wget http://download.skype.com/linux/skype_static-4.0.0.8.tar.bz2
-mkdir /opt/skype
-tar xvf skype_static* -C /opt/skype --strip-components=1
-
-cd /usr/lib
-ln -s libtiff.so.3 /usr/lib/libtiff.so.4
-
-ln -s /opt/skype/skype.desktop /usr/share/applications/skype.desktop
-ln -s /opt/skype/icons/SkypeBlue_48x48.png /usr/share/icons/skype.png
-ln -s /opt/skype/icons/SkypeBlue_48x48.png /usr/share/pixmaps/skype.png
- 
-touch /usr/bin/skype
-chmod 755 /usr/bin/skype
-	
-vim /usr/bin/skype
-_______________
-#!/bin/sh
-export SKYPE_HOME="/opt/skype"
- 
-$SKYPE_HOME/skype --resources=$SKYPE_HOME $*
-________________
-
-
-### Install nVidia drivers manually ###
-yum groupinstall "Development Tools"
-yum install kernel-devel kernel-headers dkms
-lspci | grep VGA
-http://www.nvidia.com/Download/index.aspx  # download nVidia driver
-vim /etc/modprobe.d/blacklist.conf   # blacklist nouveau
-mv /boot/initramfs-$(uname -r).img /boot/initramfs-$(uname -r).img.bak
-dracut -v /boot/initramfs-$(uname -r).img $(uname -r)
-/sbin/init 3
-chmod +x NVIDIA-Linux-x86-319.32.run
-./NVIDIA-Linux-x86-319.32.run
+### Kernel compile ###
+yum install gcc ncurses ncurses-devel
+yum update
+wget http://www.kernel.org/pub/linux/kernel/v3.0/linux-3...
+tar -jxvf linux-3*
+cd linux-3*
+make menuconfig
+make
+make modules_install install
 
 
 ### rsync ###
