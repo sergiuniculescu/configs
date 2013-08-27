@@ -34,7 +34,7 @@ yum remove @kde-desktop
 yum history list
 yum history list nume_pachet
 yum repolist all  # list all repositories set up on your system
-
+yum --exclude=packagename\* ...
 
 ################
 ### yum.conf ###
