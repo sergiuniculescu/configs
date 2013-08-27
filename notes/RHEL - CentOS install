@@ -365,7 +365,15 @@ install usb-storage /bin/true
 _____________________________
 
 
-### Sysctl Security ###
+########################
+### Network Security ###
+########################
+
+## Wireless has to go ###
+for i in $(find /lib/modules/`uname -r`/kernel/drivers/net/wireless -name "*.ko" -type f) ; do echo blacklist $i >> /etc/modprobe.d/blacklist-wireless ; done
+
+
+### Sysctl ###
 vim /etc/sysctl.conf
 _______________________________________________
 ### ipv4 Security options ###
@@ -413,6 +421,10 @@ vm.vfs_cache_pressure = 50
 _______________________________________________
 
 sysctl -p
+
+
+### IPTables ###
+
 
 
 ### Detecting Listening Network Ports ###
