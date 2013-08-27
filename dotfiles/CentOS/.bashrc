@@ -38,7 +38,7 @@ alias yi='sudo yum install'
 alias yr='sudo yum remove'
 alias yrr='sudo yum remove --remove-leaves'
 alias ys='yum search'
-alias ysa='yum search all'
+alias ysa='sudo yum search all'
 alias yca='sudo yum clean all'
 alias yu='sudo yum update'
 
