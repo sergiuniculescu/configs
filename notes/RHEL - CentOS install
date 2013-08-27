@@ -177,6 +177,13 @@ sudo yum --enablerepo=elrepo-kernel install kernel-ml
 rpm -Uvh http://download1.rpmfusion.org/free/el/updates/6/x86_64/rpmfusion-free-release-6-0.1.noarch.rpm http://download1.rpmfusion.org/nonfree/el/updates/6/x86_64/rpmfusion-nonfree-release-6-0.1.noarch.rpm	# (not needed if nux-dextop is installed) 
 
 
+### Install Google Chrome ###
+wget http://chrome.richardlloyd.org.uk/install_chrome.sh
+chmod u+x install_chrome.sh
+./install_chrome.sh
+sudo grep chrome /var/log/audit/audit.log | audit2allow -M mypol
+sudo semodule -i mypol.pp
+
 ### Install Chromium ###
 cd /etc/yum.repos.d
 wget http://people.centos.org/hughesjr/chromium/6/chromium-el6.repo
