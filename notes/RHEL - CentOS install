@@ -368,6 +368,13 @@ install usb-storage /bin/true
 _____________________________
 
 
+### Secure the /etc/services file to prevent unauthorized editing ###
+# This prevents the file from being renamed, deleted or having links made to it.
+chown root.root /etc/services
+chmod 0644 /etc/services
+chattr +i /etc/services
+
+
 ########################
 ### Network Security ###
 ########################
@@ -460,6 +467,7 @@ ____________________________________________________________________________
 -A RH-Firewall-1-INPUT -j DROP
 COMMIT
 ______________________________________________________________________________
+
 
 
 ### Detecting Listening Network Ports ###
