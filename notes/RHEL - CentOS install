@@ -472,6 +472,7 @@ chkconfig [service] on/off	# turn on / off service
 
 sudo chkconfig atd off
 sudo chkconfig blk-availability off
+sudo chkconfig bluetooth off
 sudo chkconfig mdmonitor off
 sudo chkconfig lvm2-monitor off
 sudo chkconfig iscsi off
@@ -484,7 +485,7 @@ sudo chkconfig livesys off
 sudo chkconfig livesys-late off
 sudo chkconfig pcscd off
 sudo chkconfig openct off
-
+sudo chkconfig postfix off
 
 
 ##############
