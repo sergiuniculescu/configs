@@ -463,17 +463,12 @@ net.ipv4.icmp_echo_ignore_all = 1
 
 # Enable Ignoring Broadcasts Request #
 net.ipv4.icmp_echo_ignore_broadcasts = 1
-net.ipv4.icmp_ignore_bogus_error_messages = 1     *************
 
 # Enable Bad Error Message Protection #
 net.ipv4.icmp_ignore_bogus_error_responses = 1
 
 # Enable Logging of Spoofed Packets, Source Routed Packets, Redirect Packets #
 net.ipv4.conf.all.log_martians = 1
-
-# Turn on execshield			****************
-kernel.exec-shield = 1
-kernel.randomize_va_space = 1
 
 # Others ipv4 security options #
 net.ipv4.conf.all.send_redirects = 0
@@ -526,20 +521,6 @@ ____________________________________________________________________________
 -A RH-Firewall-1-INPUT -j DROP
 COMMIT
 ______________________________________________________________________________
-
-
-### Disable IPv6 Networking ###
-vim /etc/modprobe.conf
-_______________________
-install ipv6 /bin/true
-_______________________
-
-vim /etc/sysconfig/network
-___________________
-NETWORKING_IPV6=no
-IPV6INIT=no
-___________________
-
 
 
 ### Detecting Listening Network Ports ###
