@@ -60,12 +60,60 @@ package-cleanup --oldkernels --count=2
 vim /etc/yum.conf # and set installonly_limit:
 installonly_limit=2
 
-### Removing dependencies###
+### Removing dependencies ###
 sudo vim /etc/yum.conf
 ______________________________
 [main]
 clean_requirements_on_remove=1
 ______________________________
+
+
+###########
+### RPM ###
+###########
+
+rpm -ivh package-2.7.9-5.el6.2.i686.rpm  # Install an RPM Package
+-i : install a package
+-v : verbose for a nicer display
+-h: print hash marks as the package archive is unpacked
+
+rpm -qpR package-5.2.2-1.noarch.rpm   # check dependencies of RPM Package before Installing
+-q : Query a package
+-p : List capabilities this package provides.
+-R: List capabilities on which this package depends..
+
+rpm -ivh --nodeps package-5.2.2-1.noarch.rpm  # Install a RPM Package Without Dependencies
+–nodeps (Do not check dependencies)
+
+rpm -q package   # check an Installed RPM Package
+rpm -ql package  # List all files of an installed RPM package
+
+rpm -qa --last  # List Recently Installed RPM Packages
+rpm -qa		# List All Installed RPM Packages
+
+rpm -Uvh package-3.5.0-2.el6.centos.i686.rpm  # Upgrade a RPM Package
+
+rpm -evv package  # Remove a RPM Package
+rpm -ev --nodeps package  # Remove an RPM Package Without Dependencies
+-e (erase)
+
+rpm -qi package  # Query a Information of Installed RPM Package
+-qi (query info)
+
+rpm -qf /usr/bin/package  # Query a file that belongs which RPM Package
+-qf (query file)
+
+rpm -qip package-1.3.3-1.noarch.rpm  # Information of RPM Package Before Installing
+-qip (query info package)
+
+rpm -qdf /usr/bin/vmstat  # Query documentation of Installed RPM Package
+-qdf (query document file)
+
+rpm -Vp package-1.3.3-1.noarch.rpm  # Verify a RPM Package
+-Vp (verify package)
+rpm -Va  # Verify all RPM Packages
+
+rpm -qa gpg-pubkey*  # List all Imported RPM GPG keys
 
 
 ######################
@@ -190,6 +238,9 @@ wget http://people.centos.org/hughesjr/chromium/6/chromium-el6.repo
 yum install chromium
 sudo setsebool -P mmap_low_allowed 1
 
+### Install lastest Firefox ###
+rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
+yum --enablerepo=remi install firefox
 
 ### Others ###
 yum install bash-completion
@@ -302,7 +353,7 @@ sudo reboot
 
 ### Password Protect Grub and Single-User Mode ###
 # It is highly important to protect your bootloader. 
-# There is a magic kernel parameter called init=/bin/sh. This makes any user/login restrictions totally useless.
+# There is a magic kernel parameter called init=/bin/sh. This makes any user/login restrictions totally useless. Then mount -o remount,rw /
 
 grub-crypt
 vim /etc/grub.conf
@@ -386,10 +437,6 @@ chattr +i /etc/services
 ### Network Security ###
 ########################
 
-## Wireless has to go ###
-for i in $(find /lib/modules/`uname -r`/kernel/drivers/net/wireless -name "*.ko" -type f) ; do echo blacklist $i >> /etc/modprobe.d/blacklist-wireless ; done
-
-
 ### Sysctl ###
 vim /etc/sysctl.conf
 _______________________________________________
@@ -416,12 +463,17 @@ net.ipv4.icmp_echo_ignore_all = 1
 
 # Enable Ignoring Broadcasts Request #
 net.ipv4.icmp_echo_ignore_broadcasts = 1
+net.ipv4.icmp_ignore_bogus_error_messages = 1     *************
 
 # Enable Bad Error Message Protection #
 net.ipv4.icmp_ignore_bogus_error_responses = 1
 
 # Enable Logging of Spoofed Packets, Source Routed Packets, Redirect Packets #
 net.ipv4.conf.all.log_martians = 1
+
+# Turn on execshield			****************
+kernel.exec-shield = 1
+kernel.randomize_va_space = 1
 
 # Others ipv4 security options #
 net.ipv4.conf.all.send_redirects = 0
@@ -474,6 +526,19 @@ ____________________________________________________________________________
 -A RH-Firewall-1-INPUT -j DROP
 COMMIT
 ______________________________________________________________________________
+
+
+### Disable IPv6 Networking ###
+vim /etc/modprobe.conf
+_______________________
+install ipv6 /bin/true
+_______________________
+
+vim /etc/sysconfig/network
+___________________
+NETWORKING_IPV6=no
+IPV6INIT=no
+___________________
 
 
 
@@ -557,9 +622,48 @@ yum update
 wget http://www.kernel.org/pub/linux/kernel/v3.0/linux-3...
 tar -jxvf linux-3*
 cd linux-3*
-make menuconfig
+make menuconfig   # allows you to select the already running kernel’s configuration file (resides in /boot/), and accepts the defaults for all options that were introduced between the old and the new version of the kernel
+make oldconfig    # automatically finds the configuration file in /boot/ and asks you questions for all the new configuration options
 make
 make modules_install install
+
+
+### Find commands ###
+find /home -iname name	# Files Using Name and Ignoring Case
+find / -type d -name directory_name  # Find Directories Using Name
+find / -perm /u=r  # Find all Read Only files
+find / -perm /a=x  # Find all Executable files
+find . -type f -perm 0777 -print  # Find all the files whose permissions are 777
+find / -type f -perm 0777 -print -exec chmod 644 {} \;  # Find all 777 permission files and use chmod command to set permissions to 644
+find / -type d -perm 777 -print -exec chmod 755 {} \;   # Find Directories with 777 Permissions and Chmod to 755
+find . -type f -name "tecmint.txt" -exec rm -f {} \;    # To find a single file called tecmint.txt and remove it
+find . -type f -name "*.mp3" -exec rm -f {} \;		# Find and remove Multiple File with extension ".mp3"
+find /tmp -type f -empty	# To file all empty files under certain path
+find /tmp -type d -empty	# To file all empty directories under certain path
+find /tmp -type f -name ".*"	# File all Hidden Files
+
+
+### Netstat commands ###
+netstat -a | more	# Listing all the LISTENING Ports of TCP and UDP connections
+netstat -at		# Listing only TCP (Transmission Control Protocol) port connections
+netstat -au		# Listing only UDP (User Datagram Protocol ) port connections
+netstat -l		# Listing all active listening ports connections
+netstat -lt		# Listing all active listening TCP ports 
+netstat -lu		# Listing all active listening UDP ports
+netstat -lx		# Listing all active UNIX listening ports
+netstat -s		# Showing Statistics by Protocol
+netstat -r		# Display Kernel IP routing table
+
+
+### Change the MAC address of Network Interface ###
+ifconfig eth0 hw ether AA:BB:CC:DD:EE:FF
+
+### Mount an ISO Image ###
+mount -t iso9660 -o loop /home/tecmint/Fedora-18-i386-DVD.iso /mnt/iso/
+sudo umount /mnt/iso
+
+### Mount a partition with read-write permission ###
+mount -o remount,rw /
 
 
 ### rsync ###

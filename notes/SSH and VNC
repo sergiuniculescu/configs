@@ -65,6 +65,15 @@ PermitTunnel yes
 PasswordAuthentication no
 
 
+### SSH Passwordless Login Using SSH Keygen ###
+ssh-keygen -t rsa  # Create Authentication SSH-Kegen Keys
+ssh sergiu@192.168.x.xx mkdir -p .ssh  # Create .ssh Directory on target
+cat .ssh/id_rsa.pub | ssh sergiu@192.168.x.xx 'cat >> .ssh/authorized_keys'  # Upload Generated Public Keys to target
+ssh sergiu@192.168.x.xx "chmod 700 .ssh; chmod 640 .ssh/authorized_keys"    # Set Permissions on target
+ssh sergiu@192.168.x.xx   # Login without password
+
+
+
 ### VNC ###
 vim /etc/sysconfig/vncservers
 _____________________________
