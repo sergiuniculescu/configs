@@ -407,14 +407,12 @@ perl -npe 's/umask\s+0\d2/umask 077/g' -i /etc/csh.cshrc
 
 
 ### Narrowing rights ###
-chmod 700 /root
-chmod 700 /var/log/audit
-chmod 740 /etc/rc.d/init.d/iptables
-chmod 740 /sbin/iptables
-chmod -R 700 /etc/skel
-chmod 600 /etc/rsyslog.conf
-chmod 640 /etc/security/access.conf
-chmod 600 /etc/sysctl.conf
+chmod 700 /root   			# before 0550 dr-xr-x---
+chmod 700 /var/log/audit		# before 0750 drwxr-x---
+chmod 740 /etc/rc.d/init.d/iptables	# before 0755 -rwxr-xr-x
+chmod -R 700 /etc/skel			# before 0755 drwxr-xr-x
+chmod 640 /etc/security/access.conf	# before 0644 -rw-r--r--
+chmod 600 /etc/sysctl.conf		# before 0644 -rw-r--r--
 
 
 ### Disable Control -Alt -Delete keys on the console mode ###
@@ -434,13 +432,6 @@ vim /etc/modprobe.d/no-usb
 _____________________________
 install usb-storage /bin/true
 _____________________________
-
-
-### Secure the /etc/services file to prevent unauthorized editing ###
-# This prevents the file from being renamed, deleted or having links made to it.
-chown root.root /etc/services
-chmod 0644 /etc/services
-chattr +i /etc/services
 
 
 ########################
