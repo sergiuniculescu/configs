@@ -154,7 +154,6 @@ package-cleanup --problems
 package-cleanup --oldkernel
 
 
-
 ### Fonts config ###
 vim ~/.fonts.conf
 __________________________________________
@@ -407,6 +406,17 @@ perl -npe 's/umask\s+0\d2/umask 077/g' -i /etc/bashrc
 perl -npe 's/umask\s+0\d2/umask 077/g' -i /etc/csh.cshrc
 
 
+### Narrowing rights ###
+chmod 700 /root
+chmod 700 /var/log/audit
+chmod 740 /etc/rc.d/init.d/iptables
+chmod 740 /sbin/iptables
+chmod -R 700 /etc/skel
+chmod 600 /etc/rsyslog.conf
+chmod 640 /etc/security/access.conf
+chmod 600 /etc/sysctl.conf
+
+
 ### Disable Control -Alt -Delete keys on the console mode ###
 vim /etc/init/control-alt-delete.conf
 ______________________________
@@ -531,22 +541,8 @@ chkconfig --list		# list all known services
 chkconfig --list | grep 3:on	# list running services
 chkconfig [service] on/off	# turn on / off service
 
-sudo chkconfig atd off
-sudo chkconfig blk-availability off
-sudo chkconfig bluetooth off
-sudo chkconfig mdmonitor off
-sudo chkconfig lvm2-monitor off
-sudo chkconfig iscsi off
-sudo chkconfig iscsid off
-sudo chkconfig nfslock off
-sudo chkconfig rpcbind off
-sudo chkconfig rpcgssd off
-sudo chkconfig rpcidmapd off
-sudo chkconfig livesys off
-sudo chkconfig livesys-late off
-sudo chkconfig pcscd off
-sudo chkconfig openct off
-sudo chkconfig postfix off
+
+for i in atd blk-availability bluetooth mdmonitor lvm2-monitor iscsi iscsid nfslock rpcbind rpcgssd rpcidmapd livesys livesys-late pcscd openct postfix; do service $i stop; chkconfig $i off; done
 
 
 ##############
@@ -622,6 +618,10 @@ find . -type f -name "*.mp3" -exec rm -f {} \;		# Find and remove Multiple File 
 find /tmp -type f -empty	# To file all empty files under certain path
 find /tmp -type d -empty	# To file all empty directories under certain path
 find /tmp -type f -name ".*"	# File all Hidden Files
+find / \( -perm -4000 -o -perm -2000 \) -print	 # Identify unwanted SUID and SGID Binaries
+find / -path -prune -o -type f -perm +6000 -ls   # Identify unwanted SUID and SGID Binaries
+find /dir -xdev -type d \( -perm -0002 -a ! -perm -1000 \) -print   # Identify world writable files
+find /dir -xdev \( -nouser -o -nogroup \) -print   # Identify orphaned files and folders
 
 
 ### Netstat commands ###
@@ -645,6 +645,12 @@ sudo umount /mnt/iso
 
 ### Mount a partition with read-write permission ###
 mount -o remount,rw /
+
+### Clone the boot partition ###
+sudo dd if=/dev/sdb1 of=/dev/sdc1 bs=4096 conv=notrunc,noerror
+dd if=/dev/sdb of=mbr.img bs=512 count=1
+dd if=mbr.img of=/dev/sdc bs=446 count=1  # If you only want to restore the boot loader
+dd if=mbr.img of=/dev/sdc bs=1 skip=446 count=64  # To restore only the partition table
 
 
 ### rsync ###
