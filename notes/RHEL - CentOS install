@@ -400,27 +400,23 @@ ____________________________________________________________________
 /dev/sda1	/boot	ext4	defaults,nosuid,noexec,nodev,ro	1 2
 
 
-### Umask restrictions  ###
-# Set a umask of 077 for maximum security, which makes new files not readable by users other than the owner.
-perl -npe 's/umask\s+0\d2/umask 077/g' -i /etc/bashrc
-perl -npe 's/umask\s+0\d2/umask 077/g' -i /etc/csh.cshrc
-
-
-### Narrowing rights ###
-chmod 700 /root   			# before 0550 dr-xr-x---
-chmod 700 /var/log/audit		# before 0750 drwxr-x---
-chmod 740 /etc/rc.d/init.d/iptables	# before 0755 -rwxr-xr-x
-chmod -R 700 /etc/skel			# before 0755 drwxr-xr-x
-chmod 640 /etc/security/access.conf	# before 0644 -rw-r--r--
-chmod 600 /etc/sysctl.conf		# before 0644 -rw-r--r--
-
-
 ### Disable Control -Alt -Delete keys on the console mode ###
 vim /etc/init/control-alt-delete.conf
 ______________________________
 # start on control-alt-delete
 # exec /sbin/shutdown -r now "Control -Alt -Delete pressed"
 ______________________________
+
+
+### Umask restrictions  ###
+# Set a umask of 077 for maximum security, which makes new files not readable by users other than the owner.
+perl -npe 's/umask\s+0\d2/umask 077/g' -i /etc/bashrc
+perl -npe 's/umask\s+0\d2/umask 077/g' -i /etc/csh.cshrc
+
+
+### Find users with empty passwords ###
+awk -F: '($2 == "") {print}' /etc/shadow    # Shouldn't see anything amiss here
+awk -F: '($3 == "0") {print}' /etc/passwd   # Only the root user has uid 0. No other user should ever have uid 0
 
 
 ### Disable USB mass storage ###
@@ -432,6 +428,16 @@ vim /etc/modprobe.d/no-usb
 _____________________________
 install usb-storage /bin/true
 _____________________________
+
+
+### Narrowing rights ###
+chmod 700 /root   			# before 0550 dr-xr-x---
+chmod 700 /var/log/audit		# before 0750 drwxr-x---
+chmod 740 /etc/rc.d/init.d/iptables	# before 0755 -rwxr-xr-x
+chmod -R 700 /etc/skel			# before 0755 drwxr-xr-x
+chmod 640 /etc/security/access.conf	# before 0644 -rw-r--r--
+chmod 600 /etc/sysctl.conf		# before 0644 -rw-r--r--
+
 
 
 ########################
@@ -448,6 +454,7 @@ _______________________________________________
 # This feature can be used by network people for diagnosing problems. 
 # However, if an intruder was able to send a source routed packet into the network, then he could intercept the replies and your server might not know that it's not communicating with a trusted server. 
 net.ipv4.conf.all.accept_source_route = 0
+net.ipv4.conf.default.accept_source_route = 0    ************
 
 # Disable ICMP Redirect Acceptance #
 # ICMP redirects are used by routers to tell the server that there is a better path to other networks than the one chosen by the server. 
@@ -458,6 +465,7 @@ net.ipv4.conf.all.accept_redirects = 0
 # IP spoofing is a technique where an intruder sends out packets which claim to be from another host by manipulating the source address. 
 # IP spoofing is very often used for denial of service attacks.
 net.ipv4.conf.all.rp_filter = 1
+net.ipv4.conf.default.rp_filter = 1   ****************
 
 # Enable Ignoring to ICMP Requests #
 net.ipv4.icmp_echo_ignore_all = 1
@@ -470,6 +478,12 @@ net.ipv4.icmp_ignore_bogus_error_responses = 1
 
 # Enable Logging of Spoofed Packets, Source Routed Packets, Redirect Packets #
 net.ipv4.conf.all.log_martians = 1
+
+# This help a little wtih SYN flood attacks. This suppliments a good firewall ruleset #
+net.ipv4.tcp_syncookies = 1    *********************
+
+# This is a server, not a router. Disable packet forwarding #
+net.ipv4.ip_forward = 0    *******************
 
 # Others ipv4 security options #
 net.ipv4.conf.all.send_redirects = 0
@@ -533,7 +547,7 @@ chkconfig --list | grep 3:on	# list running services
 chkconfig [service] on/off	# turn on / off service
 
 
-for i in atd blk-availability bluetooth mdmonitor lvm2-monitor iscsi iscsid nfslock rpcbind rpcgssd rpcidmapd livesys livesys-late pcscd openct postfix; do service $i stop; chkconfig $i off; done
+for i in atd blk-availability bluetooth mdmonitor lvm2-monitor iscsi iscsid nfslock rpcbind rpcgssd rpcidmapd livesys livesys-late pcscd openct postfix fcoe; do service $i stop; chkconfig $i off; done
 
 
 ##############
@@ -558,8 +572,13 @@ To fully benefit from WOL you should configure a dynamic DNS service.
 Just make sure to use your dynamic DNS provided address and the destination computer's MAC.
 
 
-### Wine fonts ###
-rpm --nodeps -e wine-tahoma-fonts.noarch
+### Wine & wine fonts ###
+rpm -ev --nodeps wine-tahoma-fonts.noarch
+
+sudo setsebool -P wine_mmap_zero_ignore 1
+sudo grep wine-preloader /var/log/audit/audit.log | audit2allow -M mypol
+sudo semodule -i mypol.pp
+
 wget http://files.polosatus.ru/winefontssmoothing_en.sh
 bash winefontssmoothing_en.sh
 
@@ -648,4 +667,8 @@ dd if=mbr.img of=/dev/sdc bs=1 skip=446 count=64  # To restore only the partitio
 rsync -a --progress rsync://ftp.astral.ro/distros/centos/6.4/os/x86_64/ /opt/mirror/centos
 
 system-config-kickstart  #  A graphical interface for making kickstart files
+
+
+### de completat in .bashrc ###
+alias myip="echo "IP local: " `ip addr|grep global|sed 's/\// /'|awk '{print $2}'`;echo "IP extern: " `wget -qO - http://ipecho.net/plain;echo`"
 

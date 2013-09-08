@@ -1,0 +1,108 @@
+background no
+use_xft yes
+xftfont 123:size=8
+xftalpha 0.1
+update_interval 1
+total_run_times 0
+own_window yes
+own_window_type normal
+own_window_argb_visual yes
+own_window_argb_value 255
+own_window_transparent yes
+#own_window_colour navy
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+ 
+maximum_width 300
+minimum_size 200
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders yes
+default_color lightgray
+default_shade_color red
+default_outline_color lawngreen
+alignment top_right
+gap_x 24
+gap_y 10
+ 
+no_buffers yes
+uppercase no
+cpu_avg_samples 1
+net_avg_samples 1
+override_utf8_locale yes
+use_spacer none
+
+
+###########
+# HDDTEMP #
+###########
+hddtemp_host 127.0.0.1
+hddtemp_port 7634
+
+
+
+TEXT
+${alignc 50}${font Open Sans:size=20}${color yellow}CentOS${color deepskyblue} 6.4$font$color
+${alignc 30}${font Open Sans:size=10}${color white}${uid_name 500}@CentOS release 6.4 (final)
+ 
+${font Open Sans:Bold:size=10}${color lawngreen}SYSTEM${hr 2}$color${font}
+$sysname $kernel $alignr $machine
+Uptime $alignr $uptime_short
+
+# SYS
+#${font Open Sans:Bold:size=10}${color lawngreen}SYSTEM${hr 2}$color${font}
+MB Temperature $alignr ${color lawngreen} ${hwmon 1 temp 1}°C$color
+FAN Speed $alignr ${color lawngreen} ${hwmon 1 fan 1}rpm$color
+VCore $alignr ${color lawngreen} ${hwmon 1 vol 0}V$color
+Entropy $alignr ${color lawngreen} ${entropy_avail}/${entropy_poolsize}$color
+ 
+# CPU
+${font Open Sans:Bold:size=10}${color lawngreen}CPU${hr 2}$color${font}
+${font Open Sans:bold:size=8.5}4x Intel(R) Core(TM)2 Quad CPU Q9400$font $alignr ${freq_g cpu0} GHz
+ 
+${font}Core 0 ${color lawngreen} ${hwmon 0 temp 2}°C${color} @ ${cpu cpu1} % $alignc ${color lawngreen} ${cpubar cpu1} ${color}
+${font}Core 1 ${color lawngreen} ${hwmon 0 temp 3}°C${color} @ ${cpu cpu2} % $alignc ${color lawngreen} ${cpubar cpu2} ${color}
+${font}Core 2 ${color lawngreen} ${hwmon 0 temp 4}°C${color} @ ${cpu cpu3} % $alignc ${color lawngreen} ${cpubar cpu3} ${color}
+${font}Core 3 ${color lawngreen} ${hwmon 0 temp 5}°C${color} @ ${cpu cpu4} % $alignc ${color lawngreen} ${cpubar cpu4} ${color}
+ 
+# TOP
+${font Open Sans:Bold:size=10}${color lawngreen}TOP${hr 2}$color${font}
+${font Open Sans:bold:size=8.5}PROCESS $alignr CPU USAGE$font
+ 
+${top name 1} ${alignr} ${color lawngreen} ${top cpu 1} %$color
+${top name 2} ${alignr} ${color lawngreen} ${top cpu 2} %$color
+${top name 3} ${alignr} ${color lawngreen} ${top cpu 3} %$color
+ 
+# MEMORY
+${font Open Sans:Bold:size=10}${color lawngreen}MEMORY${hr 2}$color${font}
+${font Open Sans:bold:size=8.5}RAM$font
+
+Used $alignr${color lawngreen}$memperc% $color($mem / $memmax)
+$alignc ${color lawngreen}$membar$color
+Cache $alignr ${color lawngreen} ${cached}$color
+Buffers $alignr ${color lawngreen} ${buffers}$color
+
+# NETWORK
+${font Open Sans:Bold:size=10}${color lawngreen}NETWORK${hr 2}$color
+${font Open Sans:bold:size=8.5}IP ${font} ${alignr} ${color lawngreen} ${execi 3600 wget -O - http://ip.tupeux.com | tail}$font$color
+${font Open Sans:bold:size=8.5}LAN IP ${font} $alignr ${color lawngreen} ${addr eth1}$color
+ 
+${font Open Sans:bold:size=8.5}Wired$font
+down $alignr ${color lawngreen} ${downspeedf eth1} kb/s$color
+up $alignr ${color lawngreen} ${upspeedf eth1} kb/s$color
+down total ${color lawngreen} ${totaldown eth1} $color$alignr up total ${color lawngreen}${totalup eth1}$color
+${color #ffffff}${downspeedgraph eth1 32,150 ff0000 0000ec} ${upspeedgraph eth1 32,150 0000ff ec0000}
+ 
+# HDD
+${font Open Sans:Bold:size=10}${color lawngreen}DISKS${hr 2}$color${font}
+${font Open Sans:bold:size=8.5}Temperature$font
+${execi 5 hddtemp /dev/sda | cut -c 1-29} $alignr ${color lawngreen}${execi 5 hddtemp /dev/sda | cut -c 32-35}$color
+
+${font Open Sans:bold:size=8.5}Free Space$font
+/ $alignc ${color lawngreen} ${fs_used /} / ${fs_size /}$color $alignc ${color lawngreen} ${fs_bar /home}$color
+/home $alignc ${color lawngreen} ${fs_used /home} / ${fs_size /home}$color $alignc ${color lawngreen} ${fs_bar /home}$color
+
+${font Open Sans:bold:size=8.5}IO$font
+/dev/sda $alignr read: ${color lawngreen}${diskio_read /dev/sda}$color write: ${color lawngreen}${diskio_write /dev/sda}$color
+${diskiograph /dev/sda 25}
