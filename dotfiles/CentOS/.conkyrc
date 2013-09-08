@@ -99,10 +99,13 @@ ${font Open Sans:Bold:size=10}${color lawngreen}DISKS${hr 2}$color${font}
 ${font Open Sans:bold:size=8.5}Temperature$font
 ${execi 5 hddtemp /dev/sda | cut -c 1-29} $alignr ${color lawngreen}${execi 5 hddtemp /dev/sda | cut -c 32-35}$color
 
-${font Open Sans:bold:size=8.5}Free Space$font
-/ $alignc ${color lawngreen} ${fs_used /} / ${fs_size /}$color $alignc ${color lawngreen} ${fs_bar /home}$color
-/home $alignc ${color lawngreen} ${fs_used /home} / ${fs_size /home}$color $alignc ${color lawngreen} ${fs_bar /home}$color
+${font Open Sans:bold:size=8.5}Space$font
+/ $alignr ${color lawngreen} ${fs_free /} / ${color lawngreen} ${fs_used /} / ${fs_size /}$color 
+$alignc ${color lawngreen} ${fs_bar /home}$color
+/home $alignr ${color lawngreen} ${fs_free /home} / ${color lawngreen}${fs_used /home} / ${fs_size /home}$color 
+$alignc ${color lawngreen} ${fs_bar /home}$color
 
-${font Open Sans:bold:size=8.5}IO$font
+${font Open Sans:bold:size=8.5}I/O$font
 /dev/sda $alignr read: ${color lawngreen}${diskio_read /dev/sda}$color write: ${color lawngreen}${diskio_write /dev/sda}$color
 ${diskiograph /dev/sda 25}
+
