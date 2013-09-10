@@ -46,8 +46,8 @@ cpu_avg_samples 2
 net_avg_samples 2
 no_buffers yes 
 double_buffer yes
-override_utf8_locale yes
-max_specials 2000       # a little high, but keeps me from having to worry about it
+#override_utf8_locale yes
+#max_specials 2000       # a little high, but keeps me from having to worry about it
 #text_buffer_size 2048  # might be needed to prevent crashes
 #max_user_text 65000    # probably never needed, but here if crashes start occuring 
 
@@ -392,3 +392,8 @@ $swapperc% $alignr ${color0} ${swapbar 10, 220}$color
 ${font Open Sans:bold:size=8.5}I/O$font
 /dev/sda $alignr read: ${color lawngreen}${diskio_read /dev/sda}$color write: ${color lawngreen}${diskio_write /dev/sda}$color
 ${diskiograph /dev/sda 25}
+
+# Displays DVD and USB drive info when plugged in
+${font Open Sans:bold:size=8.5}FILESYSTEM INFO$font
+${if_empty ${execp df -H | grep 'sr0' | cut -c46-66}}${color8}CD/DVD${alignr}Empty${color}${else}${color0}${execp df -H | grep 'sr0' | cut -c46-66}${color}${alignr}${execp df -H | awk '/sr0/ {print $3, "/", $2}'}${endif}
+${if_existing  /dev/sdb1}${color0}${execp df -H | grep 'sdb' | cut -c44-52}${color}${alignr}${execp df -H | awk '/sdb1/ {print $3, "/", $2}'}${else}${color0}USB Port 1${alignr}Empty${color}${endif}
