@@ -3,7 +3,7 @@
 ##############################
 use_xft yes
 xftalpha 0.1
-xftfont 123:size=8
+xftfont Liberation Sans:size=10
 default_color FFFFFF 
 draw_shades true
 draw_outline no
@@ -16,7 +16,7 @@ override_utf8_locale yes
 ### overall appearance of conky window ###
 ##########################################
 own_window yes
-own_window_type override
+own_window_type normal
 own_window_transparent no
 own_window_hints undecorated,above,sticky,skip_taskbar,skip_pager
 draw_shades no
@@ -26,16 +26,17 @@ draw_graph_borders yes
 own_window_argb_visual yes
 own_window_argb_value 100
 #own_window_colour navy
-use_spacer none
+use_spacer right
+
 
 ########################################
 ### overall position of conky window ###
 ########################################
 alignment top_right
-gap_x 350
+gap_x 760
 gap_y 10
-minimum_size 200
-maximum_width 300
+minimum_size 350
+maximum_width 350
 
 ##################################  
 ### conky performance settings ###
@@ -74,25 +75,25 @@ hddtemp_port 7634
 
 
 TEXT
-${alignc 50}${font Open Sans:size=20}${color yellow}CentOS${color deepskyblue} 6.4$font$color
-${alignc 30}${font Open Sans:size=10}${color white}${uid_name 500}@CentOS release 6.4 (final)
+${alignc 50}${font Liberation Sans:size=20}${color yellow}CentOS${color deepskyblue} 6.4$font$color
+${alignc 30}${font Liberation Sans:size=12}${color white}${uid_name 500}@CentOS release 6.4 (final)${font}
  
-${font Open Sans:Bold:size=10}${color lawngreen}SYSTEM${hr 2}$color${font}
+${font Liberation Sans:Bold}${color0}SYSTEM${hr 2}$color${font}
 $sysname $kernel $alignr $machine
 Uptime: $alignr $uptime_short
 #${color white}${time %a %d %b %k:%M}
 
 # SYS
-#${font Open Sans:Bold:size=10}${color lawngreen}SYSTEM${hr 2}$color${font}
+#${font Liberation Sans:Bold}${color0}SYSTEM${hr 2}$color${font}
 MB Temperature: $alignr ${color lawngreen} ${hwmon 1 temp 1}°C$color
 FAN Speed: $alignr ${color lawngreen} ${hwmon 1 fan 1}rpm$color
 VCore: $alignr ${color lawngreen} ${hwmon 1 vol 0}V$color
 Entropy: $alignr ${color lawngreen} ${entropy_avail}/${entropy_poolsize}$color
- 
+
 # CPU
-${font Open Sans:Bold:size=10}${color0}CPU${hr 2}$color${font}
-${font Open Sans:bold:size=8.5}4x Intel(R) Core(TM)2 Quad CPU Q9400$font $alignr ${freq_g cpu0} GHz${font}
-Core 0: ${color0} Temp ${hwmon 0 temp 2}°C${color} @ ${cpu cpu0}% ${goto 152}${color9}||||||||||||||||||||||||||||||||||||||||||||||||||${goto 152}\
+${font Liberation Sans:Bold}${color0}CPU${hr 2}$color${font}
+${font Liberation Sans:bold}4x Intel(R) Core(TM)2 Quad CPU Q9400$font $alignr ${freq_g cpu0} GHz${font}
+Core 0: ${color0} Temp ${hwmon 0 temp 2}°C${color} @ ${cpu cpu0}% ${goto 210}${color9}||||||||||||||||||||||||||||||||||||||||||||||||||${goto 210}\
 ${if_match ${cpu cpu0} >    0}${color1}|\
 ${if_match ${cpu cpu0} >    2}${color1}|\
 ${if_match ${cpu cpu0} >    4}${color1}|\
@@ -145,7 +146,7 @@ ${if_match ${cpu cpu0} >   96}${color8}|\
 ${if_match ${cpu cpu0} >   98}${color8}|\
 ${if_match ${cpu cpu0} == 100}${color8}|\
 ${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${color}
-Core 1: ${color0} Temp ${hwmon 0 temp 3}°C${color} @ ${cpu cpu1}% ${goto 152}${color9}||||||||||||||||||||||||||||||||||||||||||||||||||${goto 152}\
+Core 1: ${color0} Temp ${hwmon 0 temp 3}°C${color} @ ${cpu cpu1}% ${goto 210}${color9}||||||||||||||||||||||||||||||||||||||||||||||||||${goto 210}\
 ${if_match ${cpu cpu1} >    0}${color1}|\
 ${if_match ${cpu cpu1} >    2}${color1}|\
 ${if_match ${cpu cpu1} >    4}${color1}|\
@@ -198,7 +199,7 @@ ${if_match ${cpu cpu1} >   96}${color8}|\
 ${if_match ${cpu cpu1} >   98}${color8}|\
 ${if_match ${cpu cpu1} == 100}${color8}|\
 ${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${color}
-Core 2: ${color0} Temp ${hwmon 0 temp 4}°C${color} @ ${cpu cpu2}% ${goto 152}${color9}||||||||||||||||||||||||||||||||||||||||||||||||||${goto 152}\
+Core 2: ${color0} Temp ${hwmon 0 temp 4}°C${color} @ ${cpu cpu2}% ${goto 210}${color9}||||||||||||||||||||||||||||||||||||||||||||||||||${goto 210}\
 ${if_match ${cpu cpu2} >    0}${color1}|\
 ${if_match ${cpu cpu2} >    2}${color1}|\
 ${if_match ${cpu cpu2} >    4}${color1}|\
@@ -251,7 +252,7 @@ ${if_match ${cpu cpu2} >   96}${color8}|\
 ${if_match ${cpu cpu2} >   98}${color8}|\
 ${if_match ${cpu cpu2} == 100}${color8}|\
 ${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${color}
-Core 3: ${color0} Temp ${hwmon 0 temp 5}°C${color} @ ${cpu cpu3}% ${goto 152}${color9}||||||||||||||||||||||||||||||||||||||||||||||||||${goto 152}\
+Core 3: ${color0} Temp ${hwmon 0 temp 5}°C${color} @ ${cpu cpu3}% ${goto 210}${color9}||||||||||||||||||||||||||||||||||||||||||||||||||${goto 210}\
 ${if_match ${cpu cpu3} >    0}${color1}|\
 ${if_match ${cpu cpu3} >    2}${color1}|\
 ${if_match ${cpu cpu3} >    4}${color1}|\
@@ -306,19 +307,19 @@ ${if_match ${cpu cpu3} == 100}${color8}|\
 ${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${color}
  
 # TOP
-${font Open Sans:Bold:size=10}${color lawngreen}TOP${hr 2}$color${font}
-${font Open Sans:bold:size=8.5}PROCESS${font} 
+${font Liberation Sans:Bold}${color lawngreen}TOP${hr 2}$color${font}
+${font Liberation Sans:bold}PROCESS${font} 
 ${color white}Total: ${color white}$processes ${color white}/ Running: ${color white}$running_processes
-$alignr PID    CPU      MEM   $font
-${top name 1} ${alignr} ${color lawngreen}${top pid 1} ${top cpu 1}% ${top mem 1}%$color
-${top name 2} ${alignr} ${color lawngreen}${top pid 2} ${top cpu 2}% ${top mem 1}%$color
-${top name 3} ${alignr} ${color lawngreen}${top pid 3} ${top cpu 3}% ${top mem 1}%$color
+$alignr PID     CPU     MEM $font
+${top name 1} ${alignr} ${color0}${top pid 1} ${top cpu 1}% ${top mem 1}%$color
+${top name 2} ${alignr} ${color0}${top pid 2} ${top cpu 2}% ${top mem 1}%$color
+${top name 3} ${alignr} ${color0}${top pid 3} ${top cpu 3}% ${top mem 1}%$color
 
 # MEMORY
-${font Open Sans:Bold:size=10}${color0}MEMORY${hr 2}$color${font}
-${font Open Sans:bold:size=8.5}RAM$font
+${font Liberation Sans:Bold}${color0}MEMORY${hr 2}$color${font}
+${font Liberation Sans:bold}RAM$font
 $alignr${color0}$color Used: $mem / Total: $memmax
-Memory used: $memperc% ${goto 152}${color9}||||||||||||||||||||||||||||||||||||||||||||||||||${goto 152}\
+Memory used: $memperc% ${goto 210}${color9}||||||||||||||||||||||||||||||||||||||||||||||||||${goto 210}\
 ${if_match ${memperc} >    0}${color1}|\
 ${if_match ${memperc} >    2}${color1}|\
 ${if_match ${memperc} >    4}${color1}|\
@@ -373,27 +374,3 @@ ${if_match ${memperc} == 100}${color8}|\
 ${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${color}
 Cache: $alignr ${color0} ${cached}$color
 Buffers: $alignr ${color0} ${buffers}$color
-
-# HDD
-${font Open Sans:Bold:size=10}${color0}DISKS${hr 2}$color${font}
-${font Open Sans:bold:size=8.5}TEMPERATURE $font
-${execi 5 hddtemp /dev/sda | cut -c 1-29} $alignr ${color0}${execi 5 hddtemp /dev/sda | cut -c 32-35}$color
-
-${font Open Sans:bold:size=8.5}USED SPACE $font
-${font Open Sans:bold:size=8.5}root${font} ($fs_type) $alignr Used:${color0} ${fs_free /}$color / Free:${color0} ${fs_used /}$color / Total:${color0} ${fs_size /}$color
-$alignr ${color0} ${fs_bar 10, 220 /}$color
-
-${font Open Sans:bold:size=8.5}home${font} ($fs_type) $alignr Used:${color0} ${fs_free /home}$color / Free:${color0} ${fs_used /home}$color / Total:${color0} ${fs_size /home}$color
-$alignr ${color0} ${fs_bar 10, 220 /home}$color
-
-${font Open Sans:bold:size=8.5}swap${font} $alignr Used:${color0} $swap$color / Free:${color0}$swapfree$color / Total:${color0} $swapmax$color
-$swapperc% $alignr ${color0} ${swapbar 10, 220}$color
-
-${font Open Sans:bold:size=8.5}I/O$font
-/dev/sda $alignr read: ${color lawngreen}${diskio_read /dev/sda}$color write: ${color lawngreen}${diskio_write /dev/sda}$color
-${diskiograph /dev/sda 25}
-
-# Displays DVD and USB drive info when plugged in
-${font Open Sans:bold:size=8.5}FILESYSTEM INFO$font
-${if_empty ${execp df -H | grep 'sr0' | cut -c46-66}}${color8}CD/DVD${alignr}Empty${color}${else}${color0}${execp df -H | grep 'sr0' | cut -c46-66}${color}${alignr}${execp df -H | awk '/sr0/ {print $3, "/", $2}'}${endif}
-${if_existing  /dev/sdb1}${color0}${execp df -H | grep 'sdb' | cut -c44-52}${color}${alignr}${execp df -H | awk '/sdb1/ {print $3, "/", $2}'}${else}${color0}USB Port 1${alignr}Empty${color}${endif}

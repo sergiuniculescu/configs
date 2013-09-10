@@ -8,5 +8,6 @@ else
 sleep 10
 conky &
 conky -c ~/.conkyrc2 &
+conky -c ~/.conkyrc3 &
 exit
 fi
