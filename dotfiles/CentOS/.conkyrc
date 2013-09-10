@@ -49,8 +49,8 @@ no_buffers yes
 double_buffer yes
 #override_utf8_locale yes
 #max_specials 2000       # a little high, but keeps me from having to worry about it
-#text_buffer_size 2048  # might be needed to prevent crashes
-#max_user_text 65000    # probably never needed, but here if crashes start occuring 
+text_buffer_size 2048  # might be needed to prevent crashes
+max_user_text 65000    # probably never needed, but here if crashes start occuring 
 
 ##############
 ### colors ###
@@ -66,11 +66,6 @@ color8 red
 color9 darkslategray
 color0 lawngreen #highlighed text (main sections)
 
-###########
-# HDDTEMP #
-###########
-hddtemp_host 127.0.0.1
-hddtemp_port 7634
 
 
 

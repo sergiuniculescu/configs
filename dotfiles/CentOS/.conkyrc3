@@ -66,6 +66,14 @@ color8 red
 color9 darkslategray
 color0 lawngreen #highlighed text (main sections)
 
+###########
+# HDDTEMP #
+###########
+hddtemp_host 127.0.0.1
+hddtemp_port 7634
+
+
+
 TEXT
 ${alignc 50}${font Liberation Sans:size=20}${color yellow}CentOS${color deepskyblue} 6.4$font$color
 ${alignc 30}${font Liberation Sans:size=12}${color white}${uid_name 500}@CentOS release 6.4 (final)${font}
@@ -77,13 +85,13 @@ ${execi 5 hddtemp /dev/sda | cut -c 1-29} $alignr ${color0}${execi 5 hddtemp /de
 
 ${font Liberation Sans:bold}USED SPACE $font
 ${font Liberation Sans:bold}root${font} ($fs_type) $alignr Used:${color0} ${fs_free /}$color / Free:${color0} ${fs_used /}$color / Total:${color0} ${fs_size /}$color
-$alignr ${color0} ${fs_bar 10, 220 /}$color
+$alignr ${color0} ${fs_bar 10, 270 /}$color
 
 ${font Liberation Sans:bold}home${font} ($fs_type) $alignr Used:${color0} ${fs_free /home}$color / Free:${color0} ${fs_used /home}$color / Total:${color0} ${fs_size /home}$color
-$alignr ${color0} ${fs_bar 10, 220 /home}$color
+$alignr ${color0} ${fs_bar 10, 270 /home}$color
 
 ${font Liberation Sans:bold}swap${font} $alignr Used:${color0} $swap$color / Free:${color0}$swapfree$color / Total:${color0} $swapmax$color
-$swapperc% $alignr ${color0} ${swapbar 10, 220}$color
+$swapperc% $alignr ${color0} ${swapbar 10, 270}$color
 
 ${font Liberation Sans:bold}I/O$font
 /dev/sda $alignr read: ${color lawngreen}${diskio_read /dev/sda}$color write: ${color lawngreen}${diskio_write /dev/sda}$color
