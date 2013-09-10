@@ -6,6 +6,7 @@ then
 exec killall conky
 else
 sleep 10
-conky
+conky &
+conky -c .conkyrc2 &
 exit
 fi

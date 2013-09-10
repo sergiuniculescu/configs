@@ -1,38 +1,69 @@
-background no
+##############################
+### default text apperance ###
+##############################
 use_xft yes
-xftfont 123:size=8
 xftalpha 0.1
-update_interval 1
-total_run_times 0
+xftfont 123:size=8
+default_color FFFFFF 
+draw_shades true
+draw_outline no
+default_color lightgray
+default_shade_color red
+uppercase no
+override_utf8_locale yes
+
+##########################################
+### overall appearance of conky window ###
+##########################################
 own_window yes
-own_window_type normal
-own_window_argb_visual yes
-own_window_argb_value 255
-own_window_transparent yes
-#own_window_colour navy
-own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
-double_buffer yes
- 
-maximum_width 300
-minimum_size 200
+own_window_type override
+own_window_transparent no
+own_window_hints undecorated,above,sticky,skip_taskbar,skip_pager
 draw_shades no
 draw_outline no
 draw_borders no
 draw_graph_borders yes
-default_color lightgray
-default_shade_color red
-default_outline_color lawngreen
-alignment top_right
-gap_x 24
-gap_y 10
- 
-no_buffers yes
-uppercase no
-cpu_avg_samples 1
-net_avg_samples 1
-override_utf8_locale yes
+own_window_argb_visual yes
+own_window_argb_value 100
+#own_window_colour navy
 use_spacer none
 
+########################################
+### overall position of conky window ###
+########################################
+alignment top_right
+gap_x 350
+gap_y 10
+minimum_size 200
+maximum_width 300
+
+##################################  
+### conky performance settings ###
+##################################
+update_interval 3
+total_run_times 0
+cpu_avg_samples 2
+net_avg_samples 2
+no_buffers yes 
+double_buffer yes
+override_utf8_locale yes
+max_specials 2000       # a little high, but keeps me from having to worry about it
+#text_buffer_size 2048  # might be needed to prevent crashes
+#max_user_text 65000    # probably never needed, but here if crashes start occuring 
+
+##############
+### colors ###
+############## 
+color1 lightgreen #color 1 - 8 is for gradual color change bars
+color2 green
+color3 greenyellow
+color4 yellow
+color5 gold
+color6 orange
+color7 orangered
+color8 red
+color9 darkslategray
+color0 lawngreen #highlighed text (main sections)
 
 ###########
 # HDDTEMP #
@@ -48,64 +79,316 @@ ${alignc 30}${font Open Sans:size=10}${color white}${uid_name 500}@CentOS releas
  
 ${font Open Sans:Bold:size=10}${color lawngreen}SYSTEM${hr 2}$color${font}
 $sysname $kernel $alignr $machine
-Uptime $alignr $uptime_short
+Uptime: $alignr $uptime_short
+#${color white}${time %a %d %b %k:%M}
 
 # SYS
 #${font Open Sans:Bold:size=10}${color lawngreen}SYSTEM${hr 2}$color${font}
-MB Temperature $alignr ${color lawngreen} ${hwmon 1 temp 1}°C$color
-FAN Speed $alignr ${color lawngreen} ${hwmon 1 fan 1}rpm$color
-VCore $alignr ${color lawngreen} ${hwmon 1 vol 0}V$color
-Entropy $alignr ${color lawngreen} ${entropy_avail}/${entropy_poolsize}$color
+MB Temperature: $alignr ${color lawngreen} ${hwmon 1 temp 1}°C$color
+FAN Speed: $alignr ${color lawngreen} ${hwmon 1 fan 1}rpm$color
+VCore: $alignr ${color lawngreen} ${hwmon 1 vol 0}V$color
+Entropy: $alignr ${color lawngreen} ${entropy_avail}/${entropy_poolsize}$color
  
 # CPU
-${font Open Sans:Bold:size=10}${color lawngreen}CPU${hr 2}$color${font}
-${font Open Sans:bold:size=8.5}4x Intel(R) Core(TM)2 Quad CPU Q9400$font $alignr ${freq_g cpu0} GHz
- 
-${font}Core 0 ${color lawngreen} ${hwmon 0 temp 2}°C${color} @ ${cpu cpu1} % $alignc ${color lawngreen} ${cpubar cpu1} ${color}
-${font}Core 1 ${color lawngreen} ${hwmon 0 temp 3}°C${color} @ ${cpu cpu2} % $alignc ${color lawngreen} ${cpubar cpu2} ${color}
-${font}Core 2 ${color lawngreen} ${hwmon 0 temp 4}°C${color} @ ${cpu cpu3} % $alignc ${color lawngreen} ${cpubar cpu3} ${color}
-${font}Core 3 ${color lawngreen} ${hwmon 0 temp 5}°C${color} @ ${cpu cpu4} % $alignc ${color lawngreen} ${cpubar cpu4} ${color}
+${font Open Sans:Bold:size=10}${color0}CPU${hr 2}$color${font}
+${font Open Sans:bold:size=8.5}4x Intel(R) Core(TM)2 Quad CPU Q9400$font $alignr ${freq_g cpu0} GHz${font}
+Core 0: ${color0} Temp ${hwmon 0 temp 2}°C${color} @ ${cpu cpu0}% ${goto 152}${color9}||||||||||||||||||||||||||||||||||||||||||||||||||${goto 152}\
+${if_match ${cpu cpu0} >    0}${color1}|\
+${if_match ${cpu cpu0} >    2}${color1}|\
+${if_match ${cpu cpu0} >    4}${color1}|\
+${if_match ${cpu cpu0} >    6}${color1}|\
+${if_match ${cpu cpu0} >    8}${color1}|\
+${if_match ${cpu cpu0} >   10}${color1}|\
+${if_match ${cpu cpu0} >   12}${color2}|\
+${if_match ${cpu cpu0} >   14}${color2}|\
+${if_match ${cpu cpu0} >   16}${color2}|\
+${if_match ${cpu cpu0} >   18}${color2}|\
+${if_match ${cpu cpu0} >   20}${color2}|\
+${if_match ${cpu cpu0} >   22}${color2}|\
+${if_match ${cpu cpu0} >   24}${color3}|\
+${if_match ${cpu cpu0} >   26}${color3}|\
+${if_match ${cpu cpu0} >   28}${color3}|\
+${if_match ${cpu cpu0} >   30}${color3}|\
+${if_match ${cpu cpu0} >   32}${color3}|\
+${if_match ${cpu cpu0} >   34}${color3}|\
+${if_match ${cpu cpu0} >   36}${color4}|\
+${if_match ${cpu cpu0} >   38}${color4}|\
+${if_match ${cpu cpu0} >   40}${color4}|\
+${if_match ${cpu cpu0} >   42}${color4}|\
+${if_match ${cpu cpu0} >   44}${color4}|\
+${if_match ${cpu cpu0} >   46}${color4}|\
+${if_match ${cpu cpu0} >   48}${color5}|\
+${if_match ${cpu cpu0} >   50}${color5}|\
+${if_match ${cpu cpu0} >   52}${color5}|\
+${if_match ${cpu cpu0} >   54}${color5}|\
+${if_match ${cpu cpu0} >   56}${color5}|\
+${if_match ${cpu cpu0} >   58}${color5}|\
+${if_match ${cpu cpu0} >   60}${color6}|\
+${if_match ${cpu cpu0} >   62}${color6}|\
+${if_match ${cpu cpu0} >   64}${color6}|\
+${if_match ${cpu cpu0} >   66}${color6}|\
+${if_match ${cpu cpu0} >   68}${color6}|\
+${if_match ${cpu cpu0} >   70}${color6}|\
+${if_match ${cpu cpu0} >   72}${color7}|\
+${if_match ${cpu cpu0} >   74}${color7}|\
+${if_match ${cpu cpu0} >   76}${color7}|\
+${if_match ${cpu cpu0} >   78}${color7}|\
+${if_match ${cpu cpu0} >   80}${color7}|\
+${if_match ${cpu cpu0} >   82}${color7}|\
+${if_match ${cpu cpu0} >   84}${color7}|\
+${if_match ${cpu cpu0} >   86}${color8}|\
+${if_match ${cpu cpu0} >   88}${color8}|\
+${if_match ${cpu cpu0} >   90}${color8}|\
+${if_match ${cpu cpu0} >   92}${color8}|\
+${if_match ${cpu cpu0} >   94}${color8}|\
+${if_match ${cpu cpu0} >   96}${color8}|\
+${if_match ${cpu cpu0} >   98}${color8}|\
+${if_match ${cpu cpu0} == 100}${color8}|\
+${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${color}
+Core 1: ${color0} Temp ${hwmon 0 temp 3}°C${color} @ ${cpu cpu1}% ${goto 152}${color9}||||||||||||||||||||||||||||||||||||||||||||||||||${goto 152}\
+${if_match ${cpu cpu1} >    0}${color1}|\
+${if_match ${cpu cpu1} >    2}${color1}|\
+${if_match ${cpu cpu1} >    4}${color1}|\
+${if_match ${cpu cpu1} >    6}${color1}|\
+${if_match ${cpu cpu1} >    8}${color1}|\
+${if_match ${cpu cpu1} >   10}${color1}|\
+${if_match ${cpu cpu1} >   12}${color2}|\
+${if_match ${cpu cpu1} >   14}${color2}|\
+${if_match ${cpu cpu1} >   16}${color2}|\
+${if_match ${cpu cpu1} >   18}${color2}|\
+${if_match ${cpu cpu1} >   20}${color2}|\
+${if_match ${cpu cpu1} >   22}${color2}|\
+${if_match ${cpu cpu1} >   24}${color3}|\
+${if_match ${cpu cpu1} >   26}${color3}|\
+${if_match ${cpu cpu1} >   28}${color3}|\
+${if_match ${cpu cpu1} >   30}${color3}|\
+${if_match ${cpu cpu1} >   32}${color3}|\
+${if_match ${cpu cpu1} >   34}${color3}|\
+${if_match ${cpu cpu1} >   36}${color4}|\
+${if_match ${cpu cpu1} >   38}${color4}|\
+${if_match ${cpu cpu1} >   40}${color4}|\
+${if_match ${cpu cpu1} >   42}${color4}|\
+${if_match ${cpu cpu1} >   44}${color4}|\
+${if_match ${cpu cpu1} >   46}${color4}|\
+${if_match ${cpu cpu1} >   48}${color5}|\
+${if_match ${cpu cpu1} >   50}${color5}|\
+${if_match ${cpu cpu1} >   52}${color5}|\
+${if_match ${cpu cpu1} >   54}${color5}|\
+${if_match ${cpu cpu1} >   56}${color5}|\
+${if_match ${cpu cpu1} >   58}${color5}|\
+${if_match ${cpu cpu1} >   60}${color6}|\
+${if_match ${cpu cpu1} >   62}${color6}|\
+${if_match ${cpu cpu1} >   64}${color6}|\
+${if_match ${cpu cpu1} >   66}${color6}|\
+${if_match ${cpu cpu1} >   68}${color6}|\
+${if_match ${cpu cpu1} >   70}${color6}|\
+${if_match ${cpu cpu1} >   72}${color7}|\
+${if_match ${cpu cpu1} >   74}${color7}|\
+${if_match ${cpu cpu1} >   76}${color7}|\
+${if_match ${cpu cpu1} >   78}${color7}|\
+${if_match ${cpu cpu1} >   80}${color7}|\
+${if_match ${cpu cpu1} >   82}${color7}|\
+${if_match ${cpu cpu1} >   84}${color7}|\
+${if_match ${cpu cpu1} >   86}${color8}|\
+${if_match ${cpu cpu1} >   88}${color8}|\
+${if_match ${cpu cpu1} >   90}${color8}|\
+${if_match ${cpu cpu1} >   92}${color8}|\
+${if_match ${cpu cpu1} >   94}${color8}|\
+${if_match ${cpu cpu1} >   96}${color8}|\
+${if_match ${cpu cpu1} >   98}${color8}|\
+${if_match ${cpu cpu1} == 100}${color8}|\
+${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${color}
+Core 2: ${color0} Temp ${hwmon 0 temp 4}°C${color} @ ${cpu cpu2}% ${goto 152}${color9}||||||||||||||||||||||||||||||||||||||||||||||||||${goto 152}\
+${if_match ${cpu cpu2} >    0}${color1}|\
+${if_match ${cpu cpu2} >    2}${color1}|\
+${if_match ${cpu cpu2} >    4}${color1}|\
+${if_match ${cpu cpu2} >    6}${color1}|\
+${if_match ${cpu cpu2} >    8}${color1}|\
+${if_match ${cpu cpu2} >   10}${color1}|\
+${if_match ${cpu cpu2} >   12}${color2}|\
+${if_match ${cpu cpu2} >   14}${color2}|\
+${if_match ${cpu cpu2} >   16}${color2}|\
+${if_match ${cpu cpu2} >   18}${color2}|\
+${if_match ${cpu cpu2} >   20}${color2}|\
+${if_match ${cpu cpu2} >   22}${color2}|\
+${if_match ${cpu cpu2} >   24}${color3}|\
+${if_match ${cpu cpu2} >   26}${color3}|\
+${if_match ${cpu cpu2} >   28}${color3}|\
+${if_match ${cpu cpu2} >   30}${color3}|\
+${if_match ${cpu cpu2} >   32}${color3}|\
+${if_match ${cpu cpu2} >   34}${color3}|\
+${if_match ${cpu cpu2} >   36}${color4}|\
+${if_match ${cpu cpu2} >   38}${color4}|\
+${if_match ${cpu cpu2} >   40}${color4}|\
+${if_match ${cpu cpu2} >   42}${color4}|\
+${if_match ${cpu cpu2} >   44}${color4}|\
+${if_match ${cpu cpu2} >   46}${color4}|\
+${if_match ${cpu cpu2} >   48}${color5}|\
+${if_match ${cpu cpu2} >   50}${color5}|\
+${if_match ${cpu cpu2} >   52}${color5}|\
+${if_match ${cpu cpu2} >   54}${color5}|\
+${if_match ${cpu cpu2} >   56}${color5}|\
+${if_match ${cpu cpu2} >   58}${color5}|\
+${if_match ${cpu cpu2} >   60}${color6}|\
+${if_match ${cpu cpu2} >   62}${color6}|\
+${if_match ${cpu cpu2} >   64}${color6}|\
+${if_match ${cpu cpu2} >   66}${color6}|\
+${if_match ${cpu cpu2} >   68}${color6}|\
+${if_match ${cpu cpu2} >   70}${color6}|\
+${if_match ${cpu cpu2} >   72}${color7}|\
+${if_match ${cpu cpu2} >   74}${color7}|\
+${if_match ${cpu cpu2} >   76}${color7}|\
+${if_match ${cpu cpu2} >   78}${color7}|\
+${if_match ${cpu cpu2} >   80}${color7}|\
+${if_match ${cpu cpu2} >   82}${color7}|\
+${if_match ${cpu cpu2} >   84}${color7}|\
+${if_match ${cpu cpu2} >   86}${color8}|\
+${if_match ${cpu cpu2} >   88}${color8}|\
+${if_match ${cpu cpu2} >   90}${color8}|\
+${if_match ${cpu cpu2} >   92}${color8}|\
+${if_match ${cpu cpu2} >   94}${color8}|\
+${if_match ${cpu cpu2} >   96}${color8}|\
+${if_match ${cpu cpu2} >   98}${color8}|\
+${if_match ${cpu cpu2} == 100}${color8}|\
+${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${color}
+Core 3: ${color0} Temp ${hwmon 0 temp 5}°C${color} @ ${cpu cpu3}% ${goto 152}${color9}||||||||||||||||||||||||||||||||||||||||||||||||||${goto 152}\
+${if_match ${cpu cpu3} >    0}${color1}|\
+${if_match ${cpu cpu3} >    2}${color1}|\
+${if_match ${cpu cpu3} >    4}${color1}|\
+${if_match ${cpu cpu3} >    6}${color1}|\
+${if_match ${cpu cpu3} >    8}${color1}|\
+${if_match ${cpu cpu3} >   10}${color1}|\
+${if_match ${cpu cpu3} >   12}${color2}|\
+${if_match ${cpu cpu3} >   14}${color2}|\
+${if_match ${cpu cpu3} >   16}${color2}|\
+${if_match ${cpu cpu3} >   18}${color2}|\
+${if_match ${cpu cpu3} >   20}${color2}|\
+${if_match ${cpu cpu3} >   22}${color2}|\
+${if_match ${cpu cpu3} >   24}${color3}|\
+${if_match ${cpu cpu3} >   26}${color3}|\
+${if_match ${cpu cpu3} >   28}${color3}|\
+${if_match ${cpu cpu3} >   30}${color3}|\
+${if_match ${cpu cpu3} >   32}${color3}|\
+${if_match ${cpu cpu3} >   34}${color3}|\
+${if_match ${cpu cpu3} >   36}${color4}|\
+${if_match ${cpu cpu3} >   38}${color4}|\
+${if_match ${cpu cpu3} >   40}${color4}|\
+${if_match ${cpu cpu3} >   42}${color4}|\
+${if_match ${cpu cpu3} >   44}${color4}|\
+${if_match ${cpu cpu3} >   46}${color4}|\
+${if_match ${cpu cpu3} >   48}${color5}|\
+${if_match ${cpu cpu3} >   50}${color5}|\
+${if_match ${cpu cpu3} >   52}${color5}|\
+${if_match ${cpu cpu3} >   54}${color5}|\
+${if_match ${cpu cpu3} >   56}${color5}|\
+${if_match ${cpu cpu3} >   58}${color5}|\
+${if_match ${cpu cpu3} >   60}${color6}|\
+${if_match ${cpu cpu3} >   62}${color6}|\
+${if_match ${cpu cpu3} >   64}${color6}|\
+${if_match ${cpu cpu3} >   66}${color6}|\
+${if_match ${cpu cpu3} >   68}${color6}|\
+${if_match ${cpu cpu3} >   70}${color6}|\
+${if_match ${cpu cpu3} >   72}${color7}|\
+${if_match ${cpu cpu3} >   74}${color7}|\
+${if_match ${cpu cpu3} >   76}${color7}|\
+${if_match ${cpu cpu3} >   78}${color7}|\
+${if_match ${cpu cpu3} >   80}${color7}|\
+${if_match ${cpu cpu3} >   82}${color7}|\
+${if_match ${cpu cpu3} >   84}${color7}|\
+${if_match ${cpu cpu3} >   86}${color8}|\
+${if_match ${cpu cpu3} >   88}${color8}|\
+${if_match ${cpu cpu3} >   90}${color8}|\
+${if_match ${cpu cpu3} >   92}${color8}|\
+${if_match ${cpu cpu3} >   94}${color8}|\
+${if_match ${cpu cpu3} >   96}${color8}|\
+${if_match ${cpu cpu3} >   98}${color8}|\
+${if_match ${cpu cpu3} == 100}${color8}|\
+${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${color}
  
 # TOP
 ${font Open Sans:Bold:size=10}${color lawngreen}TOP${hr 2}$color${font}
-${font Open Sans:bold:size=8.5}PROCESS $alignr CPU USAGE$font
- 
-${top name 1} ${alignr} ${color lawngreen} ${top cpu 1} %$color
-${top name 2} ${alignr} ${color lawngreen} ${top cpu 2} %$color
-${top name 3} ${alignr} ${color lawngreen} ${top cpu 3} %$color
- 
+${font Open Sans:bold:size=8.5}PROCESS${font} 
+${color white}Total: ${color white}$processes ${color white}/ Running: ${color white}$running_processes
+$alignr PID    CPU      MEM   $font
+${top name 1} ${alignr} ${color lawngreen}${top pid 1} ${top cpu 1}% ${top mem 1}%$color
+${top name 2} ${alignr} ${color lawngreen}${top pid 2} ${top cpu 2}% ${top mem 1}%$color
+${top name 3} ${alignr} ${color lawngreen}${top pid 3} ${top cpu 3}% ${top mem 1}%$color
+
 # MEMORY
-${font Open Sans:Bold:size=10}${color lawngreen}MEMORY${hr 2}$color${font}
+${font Open Sans:Bold:size=10}${color0}MEMORY${hr 2}$color${font}
 ${font Open Sans:bold:size=8.5}RAM$font
+$alignr${color0}$color Used: $mem / Total: $memmax
+Memory used: $memperc% ${goto 152}${color9}||||||||||||||||||||||||||||||||||||||||||||||||||${goto 152}\
+${if_match ${memperc} >    0}${color1}|\
+${if_match ${memperc} >    2}${color1}|\
+${if_match ${memperc} >    4}${color1}|\
+${if_match ${memperc} >    6}${color1}|\
+${if_match ${memperc} >    8}${color1}|\
+${if_match ${memperc} >   10}${color1}|\
+${if_match ${memperc} >   12}${color2}|\
+${if_match ${memperc} >   14}${color2}|\
+${if_match ${memperc} >   16}${color2}|\
+${if_match ${memperc} >   18}${color2}|\
+${if_match ${memperc} >   20}${color2}|\
+${if_match ${memperc} >   22}${color2}|\
+${if_match ${memperc} >   24}${color3}|\
+${if_match ${memperc} >   26}${color3}|\
+${if_match ${memperc} >   28}${color3}|\
+${if_match ${memperc} >   30}${color3}|\
+${if_match ${memperc} >   32}${color3}|\
+${if_match ${memperc} >   34}${color3}|\
+${if_match ${memperc} >   36}${color4}|\
+${if_match ${memperc} >   38}${color4}|\
+${if_match ${memperc} >   40}${color4}|\
+${if_match ${memperc} >   42}${color4}|\
+${if_match ${memperc} >   44}${color4}|\
+${if_match ${memperc} >   46}${color4}|\
+${if_match ${memperc} >   48}${color5}|\
+${if_match ${memperc} >   50}${color5}|\
+${if_match ${memperc} >   52}${color5}|\
+${if_match ${memperc} >   54}${color5}|\
+${if_match ${memperc} >   56}${color5}|\
+${if_match ${memperc} >   58}${color5}|\
+${if_match ${memperc} >   60}${color6}|\
+${if_match ${memperc} >   62}${color6}|\
+${if_match ${memperc} >   64}${color6}|\
+${if_match ${memperc} >   66}${color6}|\
+${if_match ${memperc} >   68}${color6}|\
+${if_match ${memperc} >   70}${color6}|\
+${if_match ${memperc} >   72}${color7}|\
+${if_match ${memperc} >   74}${color7}|\
+${if_match ${memperc} >   76}${color7}|\
+${if_match ${memperc} >   78}${color7}|\
+${if_match ${memperc} >   80}${color7}|\
+${if_match ${memperc} >   82}${color7}|\
+${if_match ${memperc} >   84}${color7}|\
+${if_match ${memperc} >   86}${color8}|\
+${if_match ${memperc} >   88}${color8}|\
+${if_match ${memperc} >   90}${color8}|\
+${if_match ${memperc} >   92}${color8}|\
+${if_match ${memperc} >   94}${color8}|\
+${if_match ${memperc} >   96}${color8}|\
+${if_match ${memperc} >   98}${color8}|\
+${if_match ${memperc} == 100}${color8}|\
+${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${color}
+Cache: $alignr ${color0} ${cached}$color
+Buffers: $alignr ${color0} ${buffers}$color
 
-Used $alignr${color lawngreen}$memperc% $color($mem / $memmax)
-$alignc ${color lawngreen}$membar$color
-Cache $alignr ${color lawngreen} ${cached}$color
-Buffers $alignr ${color lawngreen} ${buffers}$color
-
-# NETWORK
-${font Open Sans:Bold:size=10}${color lawngreen}NETWORK${hr 2}$color
-${font Open Sans:bold:size=8.5}IP ${font} ${alignr} ${color lawngreen} ${execi 3600 wget -O - http://ip.tupeux.com | tail}$font$color
-${font Open Sans:bold:size=8.5}LAN IP ${font} $alignr ${color lawngreen} ${addr eth1}$color
- 
-${font Open Sans:bold:size=8.5}Wired$font
-down $alignr ${color lawngreen} ${downspeedf eth1} kb/s$color
-up $alignr ${color lawngreen} ${upspeedf eth1} kb/s$color
-down total ${color lawngreen} ${totaldown eth1} $color$alignr up total ${color lawngreen}${totalup eth1}$color
-${color #ffffff}${downspeedgraph eth1 32,150 ff0000 0000ec} ${upspeedgraph eth1 32,150 0000ff ec0000}
- 
 # HDD
-${font Open Sans:Bold:size=10}${color lawngreen}DISKS${hr 2}$color${font}
-${font Open Sans:bold:size=8.5}Temperature$font
-${execi 5 hddtemp /dev/sda | cut -c 1-29} $alignr ${color lawngreen}${execi 5 hddtemp /dev/sda | cut -c 32-35}$color
+${font Open Sans:Bold:size=10}${color0}DISKS${hr 2}$color${font}
+${font Open Sans:bold:size=8.5}TEMPERATURE $font
+${execi 5 hddtemp /dev/sda | cut -c 1-29} $alignr ${color0}${execi 5 hddtemp /dev/sda | cut -c 32-35}$color
 
-${font Open Sans:bold:size=8.5}Space$font
-/ $alignr ${color lawngreen} ${fs_free /} / ${color lawngreen} ${fs_used /} / ${fs_size /}$color 
-$alignc ${color lawngreen} ${fs_bar /home}$color
-/home $alignr ${color lawngreen} ${fs_free /home} / ${color lawngreen}${fs_used /home} / ${fs_size /home}$color 
-$alignc ${color lawngreen} ${fs_bar /home}$color
+${font Open Sans:bold:size=8.5}USED SPACE $font
+${font Open Sans:bold:size=8.5}root${font} ($fs_type) $alignr Used:${color0} ${fs_free /}$color / Free:${color0} ${fs_used /}$color / Total:${color0} ${fs_size /}$color
+$alignr ${color0} ${fs_bar 10, 220 /}$color
+
+${font Open Sans:bold:size=8.5}home${font} ($fs_type) $alignr Used:${color0} ${fs_free /home}$color / Free:${color0} ${fs_used /home}$color / Total:${color0} ${fs_size /home}$color
+$alignr ${color0} ${fs_bar 10, 220 /home}$color
+
+${font Open Sans:bold:size=8.5}swap${font} $alignr Used:${color0} $swap$color / Free:${color0}$swapfree$color / Total:${color0} $swapmax$color
+$swapperc% $alignr ${color0} ${swapbar 10, 220}$color
 
 ${font Open Sans:bold:size=8.5}I/O$font
 /dev/sda $alignr read: ${color lawngreen}${diskio_read /dev/sda}$color write: ${color lawngreen}${diskio_write /dev/sda}$color
 ${diskiograph /dev/sda 25}
-

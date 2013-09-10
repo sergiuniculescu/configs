@@ -255,6 +255,11 @@ yum install pidgin pidgin-plugin-pack skype
 yum install geany filezilla transmission mc
 yum install radiotray tv-maxe xbmc clementine
 
+### xscrennsaver ###
+yum remove gnome-screensaver
+yum install xscreensaver
+xscreensaver -nosplash  # open Startup Applications and add Xscreensaver to startup
+
 
 ### Change the hostname ###
 hostname   # to check your hostname
@@ -268,11 +273,11 @@ echo '-b /usr/libexec/dropbox/' > /etc/prelink.conf.d/dropbox.conf
 yum --enablerepo rpmforge reinstall dropbox
 
 
-### Install LibreOffice 4.1.0 ###
-wget http://download.documentfoundation.org/libreoffice/stable/4.1.0/rpm/x86_64/LibreOffice_4.1.0_Linux_x86-64_rpm.tar.gz
-tar -xvf LibreOffice_4.1.0*
-cd LibreOffice_4.1.0*
-yum localinstall RPMS/*.rpm RPMS/desktop-integration/libreoffice4.1-freedesktop-menus-4.1.0*.noarch.rpm
+### Install LibreOffice 4.1.1 ###
+wget http://download.documentfoundation.org/libreoffice/stable/4.1.0/rpm/x86_64/LibreOffice_4.1.1_Linux_x86-64_rpm.tar.gz
+tar -xvf LibreOffice_4.1.1*
+cd LibreOffice_4.1.1*
+yum localinstall RPMS/*.rpm RPMS/desktop-integration/libreoffice4.1-freedesktop-menus-4.1.1*.noarch.rpm
 
 
 ### Install vbox additions ###
@@ -667,8 +672,4 @@ dd if=mbr.img of=/dev/sdc bs=1 skip=446 count=64  # To restore only the partitio
 rsync -a --progress rsync://ftp.astral.ro/distros/centos/6.4/os/x86_64/ /opt/mirror/centos
 
 system-config-kickstart  #  A graphical interface for making kickstart files
-
-
-### de completat in .bashrc ###
-alias myip="echo "IP local: " `ip addr|grep global|sed 's/\// /'|awk '{print $2}'`;echo "IP extern: " `wget -qO - http://ipecho.net/plain;echo`"
 
