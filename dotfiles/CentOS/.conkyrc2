@@ -72,17 +72,17 @@ ${alignc 50}${font Liberation Sans:size=20}${color yellow}CentOS${color deepskyb
 ${alignc 30}${font Liberation Sans:size=12}${color white}${uid_name 500}@CentOS release 6.4 (final)${font}
 
 # NETWORK
-${font Open Sans:Bold:size=10}${color0}NETWORK${hr 2}$color
-${font Open Sans:bold:size=8.5}IP ${font} ${alignr} ${color0} ${execi 3600 wget -O - http://ip.tupeux.com | tail}$font$color
-${font Open Sans:bold:size=8.5}LAN IP ${font} $alignr ${color0} ${addr eth1}$color
+${font Liberation Sans:Bold}${color0}NETWORK${hr 2}$color
+${font Liberation Sans:bold}IP ${font} ${alignr} ${color0} ${execi 3600 wget -O - http://ip.tupeux.com | tail}$font$color
+${font Liberation Sans:bold}LAN IP ${font} $alignr ${color0} ${addr eth1}$color
  
-${font Open Sans:bold:size=8.5}Wired$font
-down $alignr${color0}${downspeedf eth1} kb/s$color
-up $alignr${color0}${upspeedf eth1} kb/s$color
-down total ${color0}${totaldown eth1} $color$alignr up total ${color0}${totalup eth1}$color
+${font Liberation Sans:bold}Wired$font
+Down $alignr${color0}${downspeedf eth1} kb/s$color
+Up $alignr${color0}${upspeedf eth1} kb/s$color
+Down total ${color0}${totaldown eth1} $color$alignr Up total ${color0}${totalup eth1}$color
 ${color #ffffff}${downspeedgraph eth1 36,171 ff0000 0000ec} ${upspeedgraph eth1 36,171 0000ff ec0000}
 
-${font Open Sans:bold:size=8.5}ACTIVE CONNECTIONS${font}
+${font Liberation Sans:bold}ACTIVE CONNECTIONS${font}
 ${color slate grey}Inbound: ${color lightgrey}${tcp_portmon 1 32767 count}  ${color slate grey}Outbound: ${color lightgrey}${tcp_portmon 32768 61000 count} ${alignr}${color #0077ff}Total: ${color lightgrey}${tcp_portmon 1 65535 count}
 
 ${color0}Inbound Connection ${alignr} Local Service/Port${color lightgrey}${if_empty ${tcp_portmon 1 32767 rhost 0}}${else}
