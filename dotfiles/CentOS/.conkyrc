@@ -85,7 +85,6 @@ ${font Liberation Sans:Bold}Core 1: ${font}${color0}${hwmon 0 temp 3}°C${color}
 ${font Liberation Sans:Bold}Core 2: ${font}${color0}${hwmon 0 temp 4}°C${color} @ ${cpu cpu2}% $alignc ${color0}${cpubar cpu2 10}${color}
 ${font Liberation Sans:Bold}Core 3: ${font}${color0}${hwmon 0 temp 5}°C${color} @ ${cpu cpu3}% $alignc ${color0}${cpubar cpu3 10}${color}
 
- 
 # TOP
 ${font Liberation Sans:Bold}${color lawngreen}TOP${hr 2}$color${font}
 ${font Liberation Sans:bold}PROCESS${font} 
