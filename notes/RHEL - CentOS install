@@ -673,3 +673,15 @@ rsync -a --progress rsync://ftp.astral.ro/distros/centos/6.4/os/x86_64/ /opt/mir
 
 system-config-kickstart  #  A graphical interface for making kickstart files
 
+
+#############
+### Games ###
+#############
+
+### UrbanTerror ###
+yum install SDL
+tar -xjvf UrbanTerror42.tar.gz
+cd UrbanTerror42
+chmod u+x UrTUpdater_Ded.x86_64 Quake3-UrT.x86_64
+./UrTUpdater_Ded.x86_64
+./Quake3-UrT.x86_64 

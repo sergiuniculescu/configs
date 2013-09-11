@@ -4,13 +4,11 @@
 use_xft yes
 xftalpha 0.1
 xftfont Liberation Sans:size=10
-default_color FFFFFF 
-draw_shades true
+draw_shades no
 draw_outline no
-default_color lightgray
-default_shade_color red
+default_color white
+default_shade_color lightgray
 uppercase no
-override_utf8_locale yes
 
 ##########################################
 ### overall appearance of conky window ###
@@ -19,22 +17,19 @@ own_window yes
 own_window_type normal
 own_window_transparent no
 own_window_hints undecorated,above,sticky,skip_taskbar,skip_pager
-draw_shades no
-draw_outline no
-draw_borders no
+draw_borders yes
 draw_graph_borders yes
 own_window_argb_visual yes
 own_window_argb_value 100
 #own_window_colour navy
 use_spacer right
 
-
 ########################################
 ### overall position of conky window ###
 ########################################
 alignment top_right
-gap_x 390
-gap_y 10
+gap_x 740
+gap_y 113
 minimum_size 350
 maximum_width 350
 
@@ -47,7 +42,7 @@ cpu_avg_samples 2
 net_avg_samples 2
 no_buffers yes 
 double_buffer yes
-#override_utf8_locale yes
+override_utf8_locale yes
 #max_specials 2000       # a little high, but keeps me from having to worry about it
 #text_buffer_size 2048  # might be needed to prevent crashes
 #max_user_text 65000    # probably never needed, but here if crashes start occuring 
@@ -75,9 +70,6 @@ hddtemp_port 7634
 
 
 TEXT
-${alignc 50}${font Liberation Sans:size=20}${color yellow}CentOS${color deepskyblue} 6.4$font$color
-${alignc 30}${font Liberation Sans:size=12}${color white}${uid_name 500}@CentOS release 6.4 (final)${font}
- 
 # HDD
 ${font Liberation Sans:Bold}${color0}DISKS${hr 2}$color${font}
 ${font Liberation Sans:bold}TEMPERATURE $font
@@ -94,8 +86,8 @@ ${font Liberation Sans:bold}swap${font} $alignr Used:${color0} $swap$color / Fre
 $swapperc% $alignr ${color0} ${swapbar 10, 270}$color
 
 ${font Liberation Sans:bold}I/O$font
-/dev/sda $alignr read: ${color lawngreen}${diskio_read /dev/sda}$color write: ${color lawngreen}${diskio_write /dev/sda}$color
-${diskiograph /dev/sda 36,350 0000ff 7cfc00}
+/dev/sda $alignr read: ${color0}${diskio_read /dev/sda}$color write: ${color0}${diskio_write /dev/sda}$color
+${diskiograph /dev/sda 36,350 32cd32 7cfc00}
 
 # Displays DVD and USB drive info when plugged in
 ${font Liberation Sans:bold}FILESYSTEM INFO$font
