@@ -3,26 +3,25 @@
 ########################
 
 # create partitions
-cfdisk  
+cgdisk /dev/sda
+# BIOS Boot Partition (ef02)
+# SWAP (8200)
 
 # format partitions
-mkfs -t ext2 /dev/sda1
-mkswap /dev/sda2
-mkfs -t ext4 /dev/sda3
-mkfs -t ext4 /dev/sda4
+mkfs.ext4 /dev/sda1
+mkfs.ext4 /dev/sda2
+mkswap /dev/sda3
+mkfs.ext4 /dev/sda4
 
 # mount the partitions
-mount /dev/sda3 /mnt
+mount /dev/sda2 /mnt
 mkdir /mnt/{boot,home}
 mount /dev/sda1 /mnt/boot
 mount /dev/sda4 /mnt/home
-swapon /dev/sda2
+swapon /dev/sda3
+
 
 # connect to the internet 
-
-# ETH0 #
-dhcpcd eth0
-
 # DSL #
 <Alt+F2> - login as root
 pppoe-setup   #  completezi user name-ul, parola, la DNS server scrii "server" (fara ghilimele) restul setarilor le lasi default, confirmi setarile tastand y. La FIREWALLING eu aleg 0 (NONE, fara firewall), cred ca ultima data cand am ales 1 (STANDALONE, cu firewall) am avut ceva probleme, poti incerca si 1.
@@ -65,55 +64,57 @@ iwconfig wlan0 channel auto  # If you get an timeout error due to a waiting for 
 ping -c 3 www.google.com  # pentru a verifica
 <Alt+F1> - return
 
-# install the base system 
+
+### install the base system ###
+
 nano /etc/pacman.d/mirrorlist # edit fastest mirror
+# Alt+6 to copy a Server line.
+#C trl+U to paste it at the top of the list.
 
-pacstrap /mnt base base-devel systemd systemd-sysvcompat systemd-arch-units sudo
+pacstrap -i /mnt base
 
-# install GRUB
-pacstrap /mnt grub-bios
+# Generate an fstab
+genfstab -U -p /mnt >> /mnt/etc/fstab
+nano /mnt/etc/fstab
 
-# configure system
-genfstab -p /mnt >> /mnt/etc/fstab
+# Chroot and configure the base system
+arch-chroot /mnt /bin/bash
 
-arch-chroot /mnt
+# Locale
+nano /etc/locale.gen
+____________________
+en_US.UTF-8 UTF-8
+ro_RO.UTF-8 UTF-8
+____________________
+locale-gen
+echo LANG=en_US.UTF-8 > /etc/locale.conf
+export LANG=en_US.UTF-8
 
-nano /etc/hostname
-sergiu-desktop
-
+# Time zone
 ln -s /usr/share/zoneinfo/Europe/Bucharest /etc/localtime
 
-vim /etc/locale.conf
-LANG=en_US.UTF-8
-LC_ALL=
-LC_COLLATE=C
+# Hardware clock
+hwclock --systohc --utc
 
-vim /etc/vconsole.conf
-KEYMAP=us
-FONT=lat9w-16
-FONT_MAP=8859-1_to_uni
+# Hostname
+echo archlinux > /etc/hostname
 
-# Uncomment the selected locale in /etc/locale.gen
-en_US ISO-8859-1
-en_US.UTF-8
+# Configure the network
+systemctl enable dhcpcd.service
 
-locale-gen  # generate locale
+# Set the root password
+passwd
 
-#Configure /etc/mkinitcpio.conf
-mkinitcpio -p linux
-
-# Configure the bootloader
+# Install and configure a bootloader
+pacman -S grub
 modprobe dm-mod
 grub-install --target=i386-pc --recheck --debug /dev/sda
-mkdir -p /boot/grub/locale
-cp /usr/share/locale/en\@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo
+grub-install --recheck /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 
-passwd  # to set a root password
-
-If you are still in the chroot environment type exit or press Ctrl+D in order to exit.
+# Unmount the partitions and reboot
+exit
 umount /mnt/{boot,home,}
-
 reboot
 
 _______________________

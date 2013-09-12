@@ -29,7 +29,7 @@ use_spacer none
 ########################################
 alignment top_right
 gap_x 740
-gap_y 113
+gap_y 131
 minimum_size 350
 maximum_width 350
 

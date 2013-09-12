@@ -67,4 +67,5 @@ ${image $HOME/.centos_logo.png -p 414,5 -s 232x64}
 
 
 
-${alignc 25}${font Liberation Sans:Bold:size=12}${color white}${uid_name 500}@CentOS release 6.4 (final)${font}
+${alignc 25}${font Liberation Sans:Bold:size=12}${color 73d216}${uid_name 500}$color${color 0077ff} @ ${color}${color 922178}CentOS${color}${color eea623} release 6.4 (final)${color}${font}
+${alignc 15}${font Liberation Sans:Bold}${time %a %d %b / %k:%M}${font}

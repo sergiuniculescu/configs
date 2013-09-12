@@ -29,7 +29,7 @@ use_spacer none
 ########################################
 alignment top_right
 gap_x 380
-gap_y 113
+gap_y 131
 minimum_size 350
 maximum_width 350
 
@@ -66,12 +66,12 @@ color0 lawngreen #highlighed text (main sections)
 
 TEXT
 ${font Liberation Sans:Bold}${color0}SYSTEM${hr 2}$color${font}
-$sysname $kernel $alignr $machine
-Uptime: $alignr $uptime_short
-#${color white}${time %a %d %b %k:%M}
+$sysname $kernel $alignr ${color0}$machine$color
+Uptime: $alignr ${color0}$uptime_short$color
+Load average: $alignr ${color0}${loadavg}$color
+${loadgraph 73d216 922178}
 
 # SYS
-#${font Liberation Sans:Bold}${color0}SYSTEM${hr 2}$color${font}
 MB Temperature: $alignr ${color0} ${hwmon 1 temp 1}°C$color
 FAN Speed: $alignr ${color0} ${hwmon 1 fan 1}rpm$color
 VCore: $alignr ${color0} ${hwmon 1 vol 0}V$color
