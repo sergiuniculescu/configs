@@ -89,10 +89,10 @@ ${font Liberation Sans:Bold}Core 3: ${font}${color0}${hwmon 0 temp 5}°C${color}
 ${font Liberation Sans:Bold}${color lawngreen}TOP${hr 2}$color${font}
 ${font Liberation Sans:bold}PROCESS${font} 
 ${color white}Total: ${color white}$processes ${color white}/ Running: ${color white}$running_processes
-$alignr PID      CPU      MEM   $font
+$alignr PID     CPU      MEM   $font
 ${top name 1} ${alignr} ${color0}${top pid 1}  ${top cpu 1}%   ${top_mem mem_res 1}$color
 ${top name 2} ${alignr} ${color0}${top pid 2}  ${top cpu 2}%   ${top_mem mem_res 2}$color
-${top name 3} ${alignr} ${color0}${top pid 3}  ${top cpu 3}%  ${top_mem mem_res 3}$color
+${top name 3} ${alignr} ${color0}${top pid 3}  ${top cpu 3}%   ${top_mem mem_res 3}$color
 
 # MEMORY
 ${font Liberation Sans:Bold}${color0}MEMORY${hr 2}$color${font}
