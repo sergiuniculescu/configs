@@ -77,6 +77,15 @@ ${color #ffffff}${downspeedgraph eth1 36,172 ff0000 0000ec} ${upspeedgraph eth1 
 ${font Liberation Sans:bold}ACTIVE CONNECTIONS${font}
 ${color slate grey}Inbound: ${color lightgrey}${tcp_portmon 1 32767 count}  ${color slate grey}Outbound: ${color lightgrey}${tcp_portmon 32768 61000 count} ${alignr}${color #0077ff}Total: ${color lightgrey}${tcp_portmon 1 65535 count}
 
+${color0}Outbound Connection ${alignr} Local Service/Port${color lightgrey}${if_empty ${tcp_portmon 32768 61000 rhost 0}}${else}
+${tcp_portmon 32768 61000 rhost 0} ${alignr} ${tcp_portmon 32768 61000 rservice 0}${endif}${if_empty ${tcp_portmon 32768 61000 rhost 1}}${else}
+${tcp_portmon 32768 61000 rhost 1} ${alignr} ${tcp_portmon 32768 61000 rservice 1}${endif}${if_empty ${tcp_portmon 32768 61000 rhost 2}}${else}
+${tcp_portmon 32768 61000 rhost 2} ${alignr} ${tcp_portmon 32768 61000 rservice 2}${endif}${if_empty ${tcp_portmon 32768 61000 rhost 3}}${else}
+${tcp_portmon 32768 61000 rhost 3} ${alignr} ${tcp_portmon 32768 61000 rservice 3}${endif}${if_empty ${tcp_portmon 32768 61000 rhost 4}}${else}
+${tcp_portmon 32768 61000 rhost 4} ${alignr} ${tcp_portmon 32768 61000 rservice 4}${endif}${if_empty ${tcp_portmon 32768 61000 rhost 5}}${else}
+${tcp_portmon 32768 61000 rhost 5} ${alignr} ${tcp_portmon 32768 61000 rservice 5}${endif}${if_empty ${tcp_portmon 32768 61000 rhost 6}}${else}
+${tcp_portmon 32768 61000 rhost 6} ${alignr} ${tcp_portmon 32768 61000 rservice 6}${endif}
+
 ${color0}Inbound Connection ${alignr} Local Service/Port${color lightgrey}${if_empty ${tcp_portmon 1 32767 rhost 0}}${else}
 ${tcp_portmon 1 32767 rhost 0} ${alignr} ${tcp_portmon 1 32767 lservice 0}${endif}${if_empty ${tcp_portmon 1 32767 rhost 1}}${else}
 ${tcp_portmon 1 32767 rhost 1} ${alignr} ${tcp_portmon 1 32767 lservice 1}${endif}${if_empty ${tcp_portmon 1 32767 rhost 2}}${else}
@@ -86,11 +95,3 @@ ${tcp_portmon 1 32767 rhost 4} ${alignr} ${tcp_portmon 1 32767 lservice 4}${endi
 ${tcp_portmon 1 32767 rhost 5} ${alignr} ${tcp_portmon 1 32767 lservice 5}${endif}${if_empty ${tcp_portmon 1 32767 rhost 6}}${else}
 ${tcp_portmon 1 32767 rhost 6} ${alignr} ${tcp_portmon 1 32767 lservice 6}${endif}
 
-${color0}Outbound Connection ${alignr} Local Service/Port${color lightgrey}${if_empty ${tcp_portmon 32768 61000 rhost 0}}${else}
-${tcp_portmon 32768 61000 rhost 0} ${alignr} ${tcp_portmon 32768 61000 rservice 0}${endif}${if_empty ${tcp_portmon 32768 61000 rhost 1}}${else}
-${tcp_portmon 32768 61000 rhost 1} ${alignr} ${tcp_portmon 32768 61000 rservice 1}${endif}${if_empty ${tcp_portmon 32768 61000 rhost 2}}${else}
-${tcp_portmon 32768 61000 rhost 2} ${alignr} ${tcp_portmon 32768 61000 rservice 2}${endif}${if_empty ${tcp_portmon 32768 61000 rhost 3}}${else}
-${tcp_portmon 32768 61000 rhost 3} ${alignr} ${tcp_portmon 32768 61000 rservice 3}${endif}${if_empty ${tcp_portmon 32768 61000 rhost 4}}${else}
-${tcp_portmon 32768 61000 rhost 4} ${alignr} ${tcp_portmon 32768 61000 rservice 4}${endif}${if_empty ${tcp_portmon 32768 61000 rhost 5}}${else}
-${tcp_portmon 32768 61000 rhost 5} ${alignr} ${tcp_portmon 32768 61000 rservice 5}${endif}${if_empty ${tcp_portmon 32768 61000 rhost 6}}${else}
-${tcp_portmon 32768 61000 rhost 6} ${alignr} ${tcp_portmon 32768 61000 rservice 6}${endif}
