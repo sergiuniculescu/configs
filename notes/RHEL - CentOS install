@@ -319,6 +319,11 @@ ________________________________
 
 pulseaudio -k  # restart pulseaudio
 
+### Disable window move with alt + left mouse button ###
+# conf-editor
+# /apps/metacity/general
+# "mouse_button_modifier" option change <Alt> to <Super>
+
 
 
 ####################################
@@ -679,7 +684,6 @@ system-config-kickstart  #  A graphical interface for making kickstart files
 #############
 
 ### UrbanTerror ###
-yum install SDL
 tar -xjvf UrbanTerror42.tar.gz
 cd UrbanTerror42
 chmod u+x UrTUpdater_Ded.x86_64 Quake3-UrT.x86_64

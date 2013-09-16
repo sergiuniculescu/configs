@@ -3,7 +3,7 @@
 ########################
 
 # create partitions
-cgdisk /dev/sda
+cfdisk /dev/sda
 # BIOS Boot Partition (ef02)
 # SWAP (8200)
 
@@ -107,9 +107,7 @@ passwd
 
 # Install and configure a bootloader
 pacman -S grub
-modprobe dm-mod
 grub-install --target=i386-pc --recheck --debug /dev/sda
-grub-install --recheck /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 
 # Unmount the partitions and reboot
@@ -121,10 +119,9 @@ _______________________
 
 ### useradd ###
 useradd -m -g users -G audio,lp,optical,storage,video,wheel,games,power,scanner -s /bin/bash sergiu
-
 passwd sergiu  #seteaza parola
-
 userdel -r sergiu  #sterge userul
+usermod -aG [additional_groups] sergiu  # to later add the user to other groups
 
 #To add a user as a sudo user (a "sudoer")
 EDITOR=nano visudo
