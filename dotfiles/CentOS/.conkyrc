@@ -72,9 +72,10 @@ Load average: $alignr ${color0}${loadavg}$color
 ${loadgraph 73d216 922178}
 
 # SYS
-MB Temperature: $alignr ${color0} ${hwmon 1 temp 1}°C$color
+MB Thermistor: $alignr ${color0} ${hwmon 1 temp 1}°C$color
+MB Thermal Diode: $alignr ${color0} ${hwmon 1 temp 2}°C$color
 FAN Speed: $alignr ${color0} ${hwmon 1 fan 1}rpm$color
-VCore: $alignr ${color0} ${hwmon 1 vol 0}V$color
+VCore: $alignr ${color0} ${hwmon 1 vol 0}V$color$alignr ${color0} ${hwmon 1 vol 1}V$color$alignr ${color0} ${hwmon 1 vol 2}V$color$alignr ${color0} ${hwmon 1 vol 3}V$color
 Entropy: $alignr ${color0} ${entropy_avail}/${entropy_poolsize}$color
 
 # CPU
