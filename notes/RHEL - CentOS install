@@ -189,6 +189,7 @@ __________________________________________
 __________________________________________
 
 
+
 ### Add an user to SUDOERS ###
 su -
 visudo
@@ -206,7 +207,9 @@ rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.r
 rpm -Uvh http://pkgs.repoforge.org/rpmforge-release/rpmforge-release-0.5.3-1.el6.rf.x86_64.rpm
 
 rpm -Uvh http://li.nux.ro/download/nux/dextop/el6/x86_64/nux-dextop-release-0-2.el6.nux.noarch.rpm
+sudo wget http://li.nux.ro/download/nux/misc/nux-misc.repo -P /etc/yum.repos.d/
 sudo yum --enablerepo=nux-dextop-testing install xbmc
+
 
 # nVidia driver #
 rpm -Uvh http://elrepo.org/elrepo-release-6-5.el6.elrepo.noarch.rpm
@@ -548,6 +551,25 @@ COMMIT
 ______________________________________________________________________________
 
 
+### Disabling the IPv6 module ###
+echo "install ipv6 /bin/true" > /etc/modprobe.d/disable-ipv6.conf
+chkconfig ip6tables off
+
+vim /etc/sysconfig/network
+__________________
+NETWORKING_IPV6=no
+__________________
+
+vim /etc/sysconfig/network-scripts/ifcfg-ethX
+________________
+IPV6INIT=no
+IPV6_AUTOCONF=no
+________________
+
+chkconfig ip6tables off
+reboot
+
+
 ### Detecting Listening Network Ports ###
 netstat -tulpn
 
@@ -689,3 +711,4 @@ cd UrbanTerror42
 chmod u+x UrTUpdater_Ded.x86_64 Quake3-UrT.x86_64
 ./UrTUpdater_Ded.x86_64
 ./Quake3-UrT.x86_64 
+

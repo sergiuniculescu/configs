@@ -75,7 +75,9 @@ ${loadgraph 73d216 922178}
 MB Thermistor: $alignr ${color0} ${hwmon 1 temp 1}°C$color
 MB Thermal Diode: $alignr ${color0} ${hwmon 1 temp 2}°C$color
 FAN Speed: $alignr ${color0} ${hwmon 1 fan 1}rpm$color
-VCore: $alignr ${color0} ${hwmon 1 vol 0}V$color$alignr ${color0} ${hwmon 1 vol 1}V$color$alignr ${color0} ${hwmon 1 vol 2}V$color$alignr ${color0} ${hwmon 1 vol 3}V$color
+Voltage Values: $alignr ${color0} ${hwmon 1 vol 0}V$color$alignr ${color0} ${hwmon 1 vol 1}V$color$alignr ${color0} ${hwmon 1 vol 2}V$color
+$alignr ${color0} ${hwmon 1 vol 3}V$color$alignr ${color0} ${hwmon 1 vol 4}V$color$alignr ${color0} ${hwmon 1 vol 5}V$color
+$alignr ${color0} ${hwmon 1 vol 6}V$color$alignr ${color0} ${hwmon 1 vol 7}V$color$alignr ${color0} ${hwmon 1 vol 8}V$color
 Entropy: $alignr ${color0} ${entropy_avail}/${entropy_poolsize}$color
 
 # CPU
