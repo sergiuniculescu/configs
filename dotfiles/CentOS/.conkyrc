@@ -69,7 +69,7 @@ ${font Liberation Sans:Bold}${color0}SYSTEM${hr 2}$color${font}
 $sysname $kernel $alignr ${color0}$machine$color
 Uptime: $alignr ${color0}$uptime_short$color
 Load average: $alignr ${color0}${loadavg}$color
-${loadgraph 36,382 73d216 922178}
+${loadgraph 50,382 73d216 922178}
 
 # SYS
 MB Thermistor: $alignr ${color0} ${hwmon 1 temp 1}°C$color

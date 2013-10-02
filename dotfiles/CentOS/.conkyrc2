@@ -72,7 +72,7 @@ ${font Liberation Sans:bold}Wired$font
 Down $alignr${color0}${downspeedf eth1} kb/s$color
 Up $alignr${color0}${upspeedf eth1} kb/s$color
 Down total ${color0}${totaldown eth1} $color$alignr Up total ${color0}${totalup eth1}$color
-${color #ffffff}${downspeedgraph eth1 36,189 ff0000 0000ec} ${upspeedgraph eth1 36,189 0000ff ec0000}
+${color #ffffff}${downspeedgraph eth1 50,189 ff0000 0000ec} ${upspeedgraph eth1 50,189 0000ff ec0000}
 
 ${font Liberation Sans:bold}ACTIVE CONNECTIONS${font}
 ${color slate grey}Inbound: ${color lightgrey}${tcp_portmon 1 32767 count}  ${color slate grey}Outbound: ${color lightgrey}${tcp_portmon 32768 61000 count} ${alignr}${color #0077ff}Total: ${color lightgrey}${tcp_portmon 1 65535 count}
