@@ -467,7 +467,7 @@ _______________________________________________
 # This feature can be used by network people for diagnosing problems. 
 # However, if an intruder was able to send a source routed packet into the network, then he could intercept the replies and your server might not know that it's not communicating with a trusted server. 
 net.ipv4.conf.all.accept_source_route = 0
-net.ipv4.conf.default.accept_source_route = 0    ************
+net.ipv4.conf.default.accept_source_route = 0
 
 # Disable ICMP Redirect Acceptance #
 # ICMP redirects are used by routers to tell the server that there is a better path to other networks than the one chosen by the server. 
@@ -478,7 +478,7 @@ net.ipv4.conf.all.accept_redirects = 0
 # IP spoofing is a technique where an intruder sends out packets which claim to be from another host by manipulating the source address. 
 # IP spoofing is very often used for denial of service attacks.
 net.ipv4.conf.all.rp_filter = 1
-net.ipv4.conf.default.rp_filter = 1   ****************
+net.ipv4.conf.default.rp_filter = 1
 
 # Enable Ignoring to ICMP Requests #
 net.ipv4.icmp_echo_ignore_all = 1
@@ -493,10 +493,10 @@ net.ipv4.icmp_ignore_bogus_error_responses = 1
 net.ipv4.conf.all.log_martians = 1
 
 # This help a little wtih SYN flood attacks. This suppliments a good firewall ruleset #
-net.ipv4.tcp_syncookies = 1    *********************
+net.ipv4.tcp_syncookies = 1
 
 # This is a server, not a router. Disable packet forwarding #
-net.ipv4.ip_forward = 0    *******************
+net.ipv4.ip_forward = 0
 
 # Others ipv4 security options #
 net.ipv4.conf.all.send_redirects = 0
@@ -506,6 +506,10 @@ net.ipv4.conf.default.secure_redirects = 0
 net.ipv4.conf.default.send_redirects = 0
 net.ipv4.tcp_max_syn_backlog = 1280
 net.ipv4.tcp_timestamps = 0
+
+### ipv6 Security options ###
+net.ipv6.conf.all.disable_ipv6 = 1
+
 
 ### Memory/Swap Use ###
 vm.swappiness = 1
@@ -551,24 +555,6 @@ COMMIT
 ______________________________________________________________________________
 
 
-### Disabling the IPv6 module ###
-echo "install ipv6 /bin/true" > /etc/modprobe.d/disable-ipv6.conf
-chkconfig ip6tables off
-
-vim /etc/sysconfig/network
-__________________
-NETWORKING_IPV6=no
-__________________
-
-vim /etc/sysconfig/network-scripts/ifcfg-ethX
-________________
-IPV6INIT=no
-IPV6_AUTOCONF=no
-________________
-
-chkconfig ip6tables off
-reboot
-
 
 ### Detecting Listening Network Ports ###
 netstat -tulpn
@@ -579,7 +565,7 @@ chkconfig --list | grep 3:on	# list running services
 chkconfig [service] on/off	# turn on / off service
 
 
-for i in atd blk-availability bluetooth mdmonitor lvm2-monitor iscsi iscsid nfslock rpcbind rpcgssd rpcidmapd livesys livesys-late pcscd openct postfix fcoe; do service $i stop; chkconfig $i off; done
+for i in atd blk-availability bluetooth mdmonitor lvm2-monitor iscsi iscsid nfslock rpcbind rpcgssd rpcidmapd livesys livesys-late pcscd openct postfix fcoe ip6tables; do service $i stop; chkconfig $i off; done
 
 
 ##############
@@ -613,6 +599,9 @@ sudo semodule -i mypol.pp
 
 wget http://files.polosatus.ru/winefontssmoothing_en.sh
 bash winefontssmoothing_en.sh
+
+# Wine bottles #
+env WINEPREFIX=~/.wine/CounterStrike wine CounterStrike1.6.exe
 
 
 ### dd ###
@@ -699,6 +688,7 @@ dd if=mbr.img of=/dev/sdc bs=1 skip=446 count=64  # To restore only the partitio
 rsync -a --progress rsync://ftp.astral.ro/distros/centos/6.4/os/x86_64/ /opt/mirror/centos
 
 system-config-kickstart  #  A graphical interface for making kickstart files
+
 
 
 #############

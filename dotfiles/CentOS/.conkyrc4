@@ -30,8 +30,8 @@ use_spacer none
 alignment top_right
 gap_x 20
 gap_y 10
-minimum_size 1070
-maximum_width 1070
+minimum_size 1560
+maximum_width 1560
 
 ##################################  
 ### conky performance settings ###
@@ -62,7 +62,7 @@ color9 darkslategray
 color0 lawngreen #highlighed text (main sections)
 
 TEXT
-${image $HOME/.centos_logo.png -p 414,5 -s 232x64}
+${image $HOME/.centos_logo.png -p 660,5 -s 232x64}
 
 
 

@@ -28,10 +28,10 @@ use_spacer none
 ### overall position of conky window ###
 ########################################
 alignment top_right
-gap_x 740
+gap_x 1198
 gap_y 131
-minimum_size 350
-maximum_width 350
+minimum_size 382
+maximum_width 382
 
 ##################################  
 ### conky performance settings ###
@@ -90,7 +90,7 @@ $alignc$swapperc% $alignr ${color0} ${swapbar 10, 270}$color
 
 ${font Liberation Sans:bold}I/O$font
 /dev/sda $alignr read: ${color0}${diskio_read /dev/sda}$color write: ${color0}${diskio_write /dev/sda}$color
-${diskiograph /dev/sda 36,350 32cd32 7cfc00}
+${diskiograph /dev/sda 36,382 32cd32 7cfc00}
 
 # Displays DVD and USB drive info when plugged in
 ${font Liberation Sans:bold}FILESYSTEM INFO$font

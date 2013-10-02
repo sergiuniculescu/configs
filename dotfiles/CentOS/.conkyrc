@@ -28,10 +28,10 @@ use_spacer none
 ### overall position of conky window ###
 ########################################
 alignment top_right
-gap_x 380
+gap_x 805
 gap_y 131
-minimum_size 350
-maximum_width 350
+minimum_size 382
+maximum_width 382
 
 ##################################  
 ### conky performance settings ###
@@ -69,7 +69,7 @@ ${font Liberation Sans:Bold}${color0}SYSTEM${hr 2}$color${font}
 $sysname $kernel $alignr ${color0}$machine$color
 Uptime: $alignr ${color0}$uptime_short$color
 Load average: $alignr ${color0}${loadavg}$color
-${loadgraph 73d216 922178}
+${loadgraph 36,382 73d216 922178}
 
 # SYS
 MB Thermistor: $alignr ${color0} ${hwmon 1 temp 1}°C$color
@@ -79,28 +79,3 @@ Voltage Values: $alignr ${color0} ${hwmon 1 vol 0}V$color$alignr ${color0} ${hwm
 $alignr ${color0} ${hwmon 1 vol 3}V$color$alignr ${color0} ${hwmon 1 vol 4}V$color$alignr ${color0} ${hwmon 1 vol 5}V$color
 $alignr ${color0} ${hwmon 1 vol 6}V$color$alignr ${color0} ${hwmon 1 vol 7}V$color$alignr ${color0} ${hwmon 1 vol 8}V$color
 Entropy: $alignr ${color0} ${entropy_avail}/${entropy_poolsize}$color
-
-# CPU
-${font Liberation Sans:Bold}${color0}CPU${hr 2}$color${font}
-${font Liberation Sans:bold}4x Intel(R) Core(TM)2 Quad CPU Q9400$font $alignr ${freq_g cpu0} GHz${font}
-${font Liberation Sans:Bold}Core 0: ${font}${color0}${hwmon 0 temp 2}°C${color} @ ${cpu cpu0}% $alignc ${color0}${cpubar cpu0 10}${color}
-${font Liberation Sans:Bold}Core 1: ${font}${color0}${hwmon 0 temp 3}°C${color} @ ${cpu cpu1}% $alignc ${color0}${cpubar cpu1 10}${color}
-${font Liberation Sans:Bold}Core 2: ${font}${color0}${hwmon 0 temp 4}°C${color} @ ${cpu cpu2}% $alignc ${color0}${cpubar cpu2 10}${color}
-${font Liberation Sans:Bold}Core 3: ${font}${color0}${hwmon 0 temp 5}°C${color} @ ${cpu cpu3}% $alignc ${color0}${cpubar cpu3 10}${color}
-
-# TOP
-${font Liberation Sans:Bold}${color lawngreen}TOP${hr 2}$color${font}
-${font Liberation Sans:bold}PROCESS${font} 
-${color white}Total: ${color white}$processes ${color white}/ Running: ${color white}$running_processes
-$alignr PID     CPU      MEM   $font
-${top name 1} ${alignr} ${color0}${top pid 1}  ${top cpu 1}%   ${top_mem mem_res 1}$color
-${top name 2} ${alignr} ${color0}${top pid 2}  ${top cpu 2}%   ${top_mem mem_res 2}$color
-${top name 3} ${alignr} ${color0}${top pid 3}  ${top cpu 3}%   ${top_mem mem_res 3}$color
-
-# MEMORY
-${font Liberation Sans:Bold}${color0}MEMORY${hr 2}$color${font}
-${font Liberation Sans:bold}RAM$font
-$alignr${color0}$color Used: ${color0}$mem${color} / Total: ${color0}$memmax${color}
-Memory used: $memperc% ${color0}${membar 10}$color
-Cache: $alignr${color0}${cached}$color
-Buffers: $alignr${color0}${buffers}$color
