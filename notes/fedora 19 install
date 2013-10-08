@@ -156,7 +156,7 @@ package-cleanup --oldkernel
 ### Repos ###
 #############
 
-# rpm-sphere #
+### rpm-sphere ###
 sudo vim /etc/yum.repos.d/rpm-sphere.repo
 _________________________________________
 [rpm-sphere]
@@ -167,10 +167,17 @@ enabled=1
 gpgcheck=1
 _________________________________________
 
-# rpmfusion #
+
+### rpmfusion ###
 su -c 'yum localinstall --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm'
 
-# steam #
+# Install nVidia driver #
+yum install akmod-nvidia
+yum install vdpauinfo libva-vdpau-driver libva-utils  # to enable video acceleration support
+yum remove xorg-x11-drv-nvidia\* nvidia-settings nvidia-xconfig  # to uninstall nVidia Driver Packages
+
+
+### steam ###
 sudo vim /etc/yum.repos.d/steam.repo
 ____________________________________
 [steam]
@@ -180,4 +187,9 @@ enabled=1
 skip_if_unavailable=1
 gpgcheck=0
 ____________________________________
+
+
+
+### VirtualBox Linux Guest Additions ###
+sudo yum install gcc kernel-devel dkms
 
