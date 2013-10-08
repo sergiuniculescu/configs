@@ -94,7 +94,11 @@ ${diskiograph /dev/sda 50,382 32cd32 7cfc00}
 
 # Displays DVD and USB drive info when plugged in
 ${font Liberation Sans:bold}FILESYSTEM INFO$font
+<<<<<<< HEAD
 ${if_empty ${execp df -H | grep 'sr0'}}${color8}CD/DVD${alignr}Empty${color}${else}${color0}${execp df -H | grep 'sr0' |awk '{print $6}' | sed 's/.*\///g'}${color}${alignr}${execp df -H | awk '/sr0/ {print $3, "/", $2}'}${endif}
+=======
+${if_empty ${execp df -H | grep 'sr0'}${color8}CD/DVD${alignr}Empty${color}${else}${color0}${execp df -H | grep 'sr0' |awk '{print $6}' | sed 's/.*\///g'}${color}${alignr}${execp df -H | awk '/sr0/ {print $3, "/", $2}'}${endif}
+>>>>>>> ab943b838c8c737229891f144ee348dbc8aa3b5b
 ${if_existing  /dev/sdb1}${color0}${execp df -H | grep 'sdb' | cut -c44-52}${color}${alignr}${execp df -H | awk '/sdb1/ {print $3, "/", $2}'}${else}${color8}USB Port 1${alignr}Empty${color}${endif}
 ${if_existing  /dev/sdc1}${color0}${execp df -H | grep 'sdc' | cut -c44-52}${color}${alignr}${execp df -H | awk '/sdc1/ {print $3, "/", $2}'}${else}${color8}USB Port 2${alignr}Empty${color}${endif}
 ${if_existing  /dev/sdd1}${color0}${execp df -H | grep 'sdd' | cut -c44-52}${color}${alignr}${execp df -H | awk '/sdc1/ {print $3, "/", $2}'}${else}${color8}USB Port 3${alignr}Empty${color}${endif}
