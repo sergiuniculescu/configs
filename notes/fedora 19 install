@@ -203,11 +203,6 @@ sudo yum -y install flash-plugin
 sudo yum -y localinstall https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
 
 
-
-
-
-
-
 ### System speed-up ###
 
 cd /lib/systemd/system
