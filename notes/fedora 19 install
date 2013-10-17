@@ -178,18 +178,37 @@ yum remove xorg-x11-drv-nvidia\* nvidia-settings nvidia-xconfig  # to uninstall 
 
 
 ### steam ###
-sudo vim /etc/yum.repos.d/steam.repo
-____________________________________
-[steam]
-name=Steam RPM packages (and dependencies) for Fedora
-baseurl=http://spot.fedorapeople.org/steam/fedora-$releasever/
-enabled=1
-skip_if_unavailable=1
-gpgcheck=0
-____________________________________
-
+cd /etc/yum.repos.d/
+sudo wget http://spot.fedorapeople.org/steam/steam.repo
+sudo yum install steam 
 
 
 ### VirtualBox Linux Guest Additions ###
 sudo yum install gcc kernel-devel dkms
 
+
+### Multimedia Codecs ###
+sudo yum -y install gstreamer-plugins-bad gstreamer-plugins-bad-free-extras gstreamer-plugins-bad-nonfree gstreamer-plugins-ugly gstreamer-ffmpeg
+
+# If you want to play DVDs #
+sudo yum -y install libdvdread libdvdnav lsdvd libdvdcss
+
+
+### Flash support ###
+sudo yum -y localinstall http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm
+sudo yum -y install flash-plugin
+
+
+### Google Chrome ###
+sudo yum -y localinstall https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
+
+
+
+
+
+
+
+### System speed-up ###
+
+cd /lib/systemd/system
+for i in fedora*storage* plymouth-*.* lvm2-monitor.* mdmonitor*.* atd auditd avahi-daemon bluetooth fcoe ip6tables irda iscsi iscsid kdump livesys livesys-late lldpad mdmonitor sendmail sm-client rngd spice-vdagentd; do sudo systemctl mask $i;done

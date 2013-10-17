@@ -1,0 +1,27 @@
+##########################
+### CrunchBang install ###
+##########################
+
+
+### nVidia install ####
+sudo apt-get install nvidia-glx
+sudo cp /etc/X11/xorg.conf{,.bkp}
+sudo apt-get install nvidia-xconfig nvidia-settings
+sudo nvidia-xconfig
+sudo reboot
+
+# For custom kernel #
+sudo apt-get install module-assistant nvidia-kernel-common
+sudo m-a auto-install nvidia-kernel-source
+sudo apt-get install nvidia-glx
+sudo cp /etc/X11/xorg.conf{,.bkp}
+sudo apt-get install nvidia-xconfig nvidia-settings
+sudo nvidia-xconfig
+sudo reboot
+
+
+
+
+
+
+

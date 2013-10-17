@@ -276,11 +276,11 @@ echo '-b /usr/libexec/dropbox/' > /etc/prelink.conf.d/dropbox.conf
 yum --enablerepo rpmforge reinstall dropbox
 
 
-### Install LibreOffice 4.1.1 ###
-wget http://download.documentfoundation.org/libreoffice/stable/4.1.0/rpm/x86_64/LibreOffice_4.1.1_Linux_x86-64_rpm.tar.gz
-tar -xvf LibreOffice_4.1.1*
-cd LibreOffice_4.1.1*
-yum localinstall RPMS/*.rpm RPMS/desktop-integration/libreoffice4.1-freedesktop-menus-4.1.1*.noarch.rpm
+### Install LibreOffice 4.1.2 ###
+wget http://download.documentfoundation.org/libreoffice/stable/4.1.2/rpm/x86_64/LibreOffice_4.1.2_Linux_x86-64_rpm.tar.gz
+tar -xvf LibreOffice_4.1.2*
+cd LibreOffice_4.1.2*
+yum localinstall RPMS/*.rpm RPMS/desktop-integration/libreoffice4.1-freedesktop-menus-4.1.2*.noarch.rpm
 
 
 ### Install vbox additions ###

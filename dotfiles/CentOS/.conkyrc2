@@ -16,7 +16,7 @@ uppercase no
 own_window yes
 own_window_type normal
 own_window_transparent no
-own_window_hints undecorated,above,sticky,skip_taskbar,skip_pager
+own_window_hints undecorated,sticky,skip_taskbar,skip_pager
 draw_borders yes
 draw_graph_borders yes
 own_window_argb_visual yes
@@ -29,7 +29,7 @@ use_spacer none
 ########################################
 alignment top_right
 gap_x 20
-gap_y 131
+gap_y 320
 minimum_size 382
 maximum_width 382
 
@@ -66,13 +66,13 @@ TEXT
 # NETWORK
 ${font Liberation Sans:Bold}${color0}NETWORK${hr 2}$color
 ${font Liberation Sans:bold}IP ${font} ${alignr} ${color0} ${execi 3600 wget -O - http://ip.tupeux.com | tail}$font$color
-${font Liberation Sans:bold}LAN IP ${font} $alignr ${color0} ${addr eth1}$color
+${font Liberation Sans:bold}LAN IP ${font} $alignr ${color0} ${addr eth0}$color
  
 ${font Liberation Sans:bold}Wired$font
-Down $alignr${color0}${downspeedf eth1} kb/s$color
-Up $alignr${color0}${upspeedf eth1} kb/s$color
-Down total ${color0}${totaldown eth1} $color$alignr Up total ${color0}${totalup eth1}$color
-${color #ffffff}${downspeedgraph eth1 50,189 ff0000 0000ec} ${upspeedgraph eth1 50,189 0000ff ec0000}
+Down $alignr${color0}${downspeedf eth0} kb/s$color
+Up $alignr${color0}${upspeedf eth0} kb/s$color
+Down total ${color0}${totaldown eth0} $color$alignr Up total ${color0}${totalup eth0}$color
+${color #ffffff}${downspeedgraph eth0 50,189 ff0000 0000ec} ${upspeedgraph eth0 50,189 0000ff ec0000}
 
 ${font Liberation Sans:bold}ACTIVE CONNECTIONS${font}
 ${color slate grey}Inbound: ${color lightgrey}${tcp_portmon 1 32767 count}  ${color slate grey}Outbound: ${color lightgrey}${tcp_portmon 32768 61000 count} ${alignr}${color #0077ff}Total: ${color lightgrey}${tcp_portmon 1 65535 count}
