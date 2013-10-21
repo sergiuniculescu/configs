@@ -6,17 +6,17 @@
 ### yum ###
 ###########
 
-yum update		# update toate pachetele si dependintele lor
-yum search nume_pachet	# cauta un anume pachet, pot fi mai multe pachete trecute
-yum info nume_pachet	# afiseaza detalii despre un anume pachet
-yum list nume_pache    	# afiseaza informatii despre un anumit pachet, instalat sau nu
-yum list nume_pachet\* 	# afiseaza informatii despre toate pachetele care incep cu un nume
-yum list all		# afiseaza toate pachetele disponibile 
+yum update                # update toate pachetele si dependintele lor
+yum search nume_pachet        # cauta un anume pachet, pot fi mai multe pachete trecute
+yum info nume_pachet        # afiseaza detalii despre un anume pachet
+yum list nume_pache            # afiseaza informatii despre un anumit pachet, instalat sau nu
+yum list nume_pachet\*         # afiseaza informatii despre toate pachetele care incep cu un nume
+yum list all                # afiseaza toate pachetele disponibile 
 yum list installed "*nume_pachet*"  # afiseaza pachetele instalate care contine un nume
 yum list installed | grep reponame  # afiseaza pachetele instalate dintr-un repo
-yum list available	# afiseaza pachetele disponibile in functie de repo-urile instalate
-yum repolist		# afiseaza repo-urile instalate
-yum gruplist		# afiseaza
+yum list available        # afiseaza pachetele disponibile in functie de repo-urile instalate
+yum repolist                # afiseaza repo-urile instalate
+yum gruplist                # afiseaza
 yum install nume_pachet\* # instaleaza toate pachetele care incep cu un nume
 yum downgrade nume_pachet
 yum provides "*/nume_pachet" # afiseaza fisierele care le detine un pachet
@@ -86,7 +86,7 @@ rpm -q package   # check an Installed RPM Package
 rpm -ql package  # List all files of an installed RPM package
 
 rpm -qa --last  # List Recently Installed RPM Packages
-rpm -qa		# List All Installed RPM Packages
+rpm -qa                # List All Installed RPM Packages
 
 rpm -Uvh package-3.5.0-2.el6.centos.i686.rpm  # Upgrade a RPM Package
 
@@ -178,32 +178,17 @@ yum remove xorg-x11-drv-nvidia\* nvidia-settings nvidia-xconfig  # to uninstall 
 
 
 ### steam ###
-cd /etc/yum.repos.d/
-sudo wget http://spot.fedorapeople.org/steam/steam.repo
-sudo yum install steam 
+sudo vim /etc/yum.repos.d/steam.repo
+____________________________________
+[steam]
+name=Steam RPM packages (and dependencies) for Fedora
+baseurl=http://spot.fedorapeople.org/steam/fedora-$releasever/
+enabled=1
+skip_if_unavailable=1
+gpgcheck=0
+____________________________________
+
 
 
 ### VirtualBox Linux Guest Additions ###
 sudo yum install gcc kernel-devel dkms
-
-
-### Multimedia Codecs ###
-sudo yum -y install gstreamer-plugins-bad gstreamer-plugins-bad-free-extras gstreamer-plugins-bad-nonfree gstreamer-plugins-ugly gstreamer-ffmpeg
-
-# If you want to play DVDs #
-sudo yum -y install libdvdread libdvdnav lsdvd libdvdcss
-
-
-### Flash support ###
-sudo yum -y localinstall http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm
-sudo yum -y install flash-plugin
-
-
-### Google Chrome ###
-sudo yum -y localinstall https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
-
-
-### System speed-up ###
-
-cd /lib/systemd/system
-for i in fedora*storage* plymouth-*.* lvm2-monitor.* mdmonitor*.* atd auditd avahi-daemon bluetooth fcoe ip6tables irda iscsi iscsid kdump livesys livesys-late lldpad mdmonitor sendmail sm-client rngd spice-vdagentd; do sudo systemctl mask $i;done
