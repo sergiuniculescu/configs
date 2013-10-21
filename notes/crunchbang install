@@ -122,8 +122,10 @@ apt-get install libpulse0:i386
 sudo grub-mkpasswd-pbkdf2
 sudo vim /etc/grub.d/00_header
 ____________________________________________________
+cat << EOF
 set superusers="sergiu"
 password_pbkdf2 sergiu grub.pbkdf2.sha512.10000.hash
+EOF
 ____________________________________________________
 
 sudo update-grub
