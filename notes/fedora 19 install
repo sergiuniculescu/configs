@@ -11,7 +11,7 @@ yum search nume_pachet        # cauta un anume pachet, pot fi mai multe pachete 
 yum info nume_pachet        # afiseaza detalii despre un anume pachet
 yum list nume_pache            # afiseaza informatii despre un anumit pachet, instalat sau nu
 yum list nume_pachet\*         # afiseaza informatii despre toate pachetele care incep cu un nume
-yum list all                # afiseaza toate pachetele disponibile 
+yum list all                # afiseaza toate pachetele disponibile
 yum list installed "*nume_pachet*"  # afiseaza pachetele instalate care contine un nume
 yum list installed | grep reponame  # afiseaza pachetele instalate dintr-un repo
 yum list available        # afiseaza pachetele disponibile in functie de repo-urile instalate
@@ -133,7 +133,7 @@ rpm -qd <packagename>
 rpm -qa --last > ~/RPMS_by_Install_Date
 
 # Query Available Packages from a Repo #
-yum --disablerepo "*" --enablerepo "rpmforge" list available 
+yum --disablerepo "*" --enablerepo "rpmforge" list available
 
 # Enable or Disable a Repo from the Command Line #
 yum-config-manager --enable c6-media
