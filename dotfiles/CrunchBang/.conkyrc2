@@ -1,0 +1,97 @@
+##############################
+### default text apperance ###
+##############################
+use_xft yes
+xftalpha 0.1
+xftfont Liberation Sans:size=10
+draw_shades no
+draw_outline no
+default_color white
+default_shade_color lightgray
+uppercase no
+
+##########################################
+### overall appearance of conky window ###
+##########################################
+own_window yes
+own_window_type desktop
+own_window_transparent yes
+own_window_hints undecorated,sticky,skip_taskbar,skip_pager
+draw_borders no
+draw_graph_borders yes
+own_window_argb_visual yes
+own_window_argb_value 255
+#own_window_colour navy
+use_spacer none
+
+########################################
+### overall position of conky window ###
+########################################
+alignment top_right
+gap_x 20
+gap_y 220
+minimum_size 382
+maximum_width 382
+
+##################################  
+### conky performance settings ###
+##################################
+update_interval 3
+total_run_times 0
+cpu_avg_samples 2
+net_avg_samples 2
+no_buffers yes 
+double_buffer yes
+override_utf8_locale yes
+#max_specials 2000       # a little high, but keeps me from having to worry about it
+#text_buffer_size 2048  # might be needed to prevent crashes
+#max_user_text 65000    # probably never needed, but here if crashes start occuring 
+
+##############
+### colors ###
+############## 
+color1 lightgreen #color 1 - 8 is for gradual color change bars
+color2 green
+color3 greenyellow
+color4 yellow
+color5 gold
+color6 orange
+color7 orangered
+color8 red
+color9 darkslategray
+color0 lawngreen #highlighed text (main sections)
+
+
+TEXT
+# NETWORK
+${font Liberation Sans:Bold}${color0}NETWORK${hr 2}$color
+${font Liberation Sans:bold}IP ${font} ${alignr} ${color0} ${execi 3600 wget -O - http://ip.tupeux.com | tail}$font$color
+${font Liberation Sans:bold}LAN IP ${font} $alignr ${color0} ${addr eth0}$color
+ 
+${font Liberation Sans:bold}Wired$font
+Down $alignr${color0}${downspeedf eth0} kb/s$color
+Up $alignr${color0}${upspeedf eth0} kb/s$color
+Down total ${color0}${totaldown eth0} $color$alignr Up total ${color0}${totalup eth0}$color
+${color #ffffff}${downspeedgraph eth0 50,189 ff0000 0000ec} ${upspeedgraph eth0 50,189 0000ff ec0000}
+
+${font Liberation Sans:bold}ACTIVE CONNECTIONS${font}
+${color slate grey}Inbound: ${color lightgrey}${tcp_portmon 1 32767 count}  ${color slate grey}Outbound: ${color lightgrey}${tcp_portmon 32768 61000 count} ${alignr}${color #0077ff}Total: ${color lightgrey}${tcp_portmon 1 65535 count}
+
+${color0}Outbound Connection ${alignr} Local Service/Port${color lightgrey}${if_empty ${tcp_portmon 32768 61000 rhost 0}}${else}
+${tcp_portmon 32768 61000 rhost 0} ${alignr} ${tcp_portmon 32768 61000 rservice 0}${endif}${if_empty ${tcp_portmon 32768 61000 rhost 1}}${else}
+${tcp_portmon 32768 61000 rhost 1} ${alignr} ${tcp_portmon 32768 61000 rservice 1}${endif}${if_empty ${tcp_portmon 32768 61000 rhost 2}}${else}
+${tcp_portmon 32768 61000 rhost 2} ${alignr} ${tcp_portmon 32768 61000 rservice 2}${endif}${if_empty ${tcp_portmon 32768 61000 rhost 3}}${else}
+${tcp_portmon 32768 61000 rhost 3} ${alignr} ${tcp_portmon 32768 61000 rservice 3}${endif}${if_empty ${tcp_portmon 32768 61000 rhost 4}}${else}
+${tcp_portmon 32768 61000 rhost 4} ${alignr} ${tcp_portmon 32768 61000 rservice 4}${endif}${if_empty ${tcp_portmon 32768 61000 rhost 5}}${else}
+${tcp_portmon 32768 61000 rhost 5} ${alignr} ${tcp_portmon 32768 61000 rservice 5}${endif}${if_empty ${tcp_portmon 32768 61000 rhost 6}}${else}
+${tcp_portmon 32768 61000 rhost 6} ${alignr} ${tcp_portmon 32768 61000 rservice 6}${endif}
+
+${color0}Inbound Connection ${alignr} Local Service/Port${color lightgrey}${if_empty ${tcp_portmon 1 32767 rhost 0}}${else}
+${tcp_portmon 1 32767 rhost 0} ${alignr} ${tcp_portmon 1 32767 lservice 0}${endif}${if_empty ${tcp_portmon 1 32767 rhost 1}}${else}
+${tcp_portmon 1 32767 rhost 1} ${alignr} ${tcp_portmon 1 32767 lservice 1}${endif}${if_empty ${tcp_portmon 1 32767 rhost 2}}${else}
+${tcp_portmon 1 32767 rhost 2} ${alignr} ${tcp_portmon 1 32767 lservice 2}${endif}${if_empty ${tcp_portmon 1 32767 rhost 3}}${else}
+${tcp_portmon 1 32767 rhost 3} ${alignr} ${tcp_portmon 1 32767 lservice 3}${endif}${if_empty ${tcp_portmon 1 32767 rhost 4}}${else}
+${tcp_portmon 1 32767 rhost 4} ${alignr} ${tcp_portmon 1 32767 lservice 4}${endif}${if_empty ${tcp_portmon 1 32767 rhost 5}}${else}
+${tcp_portmon 1 32767 rhost 5} ${alignr} ${tcp_portmon 1 32767 lservice 5}${endif}${if_empty ${tcp_portmon 1 32767 rhost 6}}${else}
+${tcp_portmon 1 32767 rhost 6} ${alignr} ${tcp_portmon 1 32767 lservice 6}${endif}
+

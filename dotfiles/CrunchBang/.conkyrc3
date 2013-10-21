@@ -1,0 +1,101 @@
+##############################
+### default text apperance ###
+##############################
+use_xft yes
+xftalpha 0.1
+xftfont Liberation Sans:size=10
+draw_shades no
+draw_outline no
+default_color white
+default_shade_color lightgray
+uppercase no
+
+##########################################
+### overall appearance of conky window ###
+##########################################
+own_window yes
+own_window_type desktop
+own_window_transparent yes
+own_window_hints undecorated,sticky,skip_taskbar,skip_pager
+draw_borders no
+draw_graph_borders yes
+own_window_argb_visual yes
+own_window_argb_value 255
+#own_window_colour navy
+use_spacer none
+
+########################################
+### overall position of conky window ###
+########################################
+alignment top_right
+gap_x 1198
+gap_y 220
+minimum_size 382
+maximum_width 382
+
+##################################  
+### conky performance settings ###
+##################################
+update_interval 3
+total_run_times 0
+cpu_avg_samples 2
+net_avg_samples 2
+no_buffers yes 
+double_buffer yes
+override_utf8_locale yes
+#max_specials 2000       # a little high, but keeps me from having to worry about it
+#text_buffer_size 2048  # might be needed to prevent crashes
+#max_user_text 65000    # probably never needed, but here if crashes start occuring 
+
+##############
+### colors ###
+############## 
+color1 lightgreen #color 1 - 8 is for gradual color change bars
+color2 green
+color3 greenyellow
+color4 yellow
+color5 gold
+color6 orange
+color7 orangered
+color8 red
+color9 darkslategray
+color0 lawngreen #highlighed text (main sections)
+
+###########
+# HDDTEMP #
+###########
+hddtemp_host 127.0.0.1
+hddtemp_port 7634
+
+
+
+TEXT
+# HDD
+${font Liberation Sans:Bold}${color0}DISKS${hr 2}$color${font}
+${font Liberation Sans:bold}TEMPERATURE $font
+${execi 5 hddtemp /dev/sda | cut -c 1-29} $alignr ${color0}${execi 5 hddtemp /dev/sda | cut -c 32-35}$color
+
+${font Liberation Sans:bold}USED SPACE $font
+${font Liberation Sans:bold}boot${font} ($fs_type) $alignr Used:${color0} ${fs_used /boot}$color / Free:${color0} ${fs_free /boot}$color / Total:${color0} ${fs_size /boot}$color
+$alignc${fs_used_perc /boot}% $alignr ${color0} ${fs_bar 10, 270 /boot}$color
+
+${font Liberation Sans:bold}root${font} ($fs_type) $alignr Used:${color0} ${fs_used /}$color / Free:${color0} ${fs_free /}$color / Total:${color0} ${fs_size /}$color
+$alignc${fs_used_perc /}% $alignr ${color0} ${fs_bar 10, 270 /}$color
+
+${font Liberation Sans:bold}home${font} ($fs_type) $alignr Used:${color0} ${fs_used /home}$color / Free:${color0} ${fs_free /home}$color / Total:${color0} ${fs_size /home}$color
+$alignc${fs_used_perc /home}% $alignr ${color0} ${fs_bar 10, 270 /home}$color
+
+${font Liberation Sans:bold}swap${font} (swap) $alignr Used:${color0} $swap$color / Free:${color0}$swapfree$color / Total:${color0} $swapmax$color
+$alignc$swapperc% $alignr ${color0} ${swapbar 10, 270}$color
+
+${font Liberation Sans:bold}I/O$font
+/dev/sda $alignr read: ${color0}${diskio_read /dev/sda}$color write: ${color0}${diskio_write /dev/sda}$color
+${diskiograph /dev/sda 50,382 32cd32 7cfc00}
+
+# Displays DVD and USB drive info when plugged in
+${font Liberation Sans:bold}FILESYSTEM INFO$font
+
+${if_empty ${execp df -H | grep 'sr0'}}${color8}CD/DVD${alignr}Empty${color}${else}${color0}${execp df -H | grep 'sr0' |awk '{print $6}' | sed 's/.*\///g'}${color}${alignr}${execp df -H | awk '/sr0/ {print $3, "/", $2}'}${endif}
+${if_existing  /dev/sdb1}${color0}${execp df -H | grep 'sdb' | cut -c44-52}${color}${alignr}${execp df -H | awk '/sdb1/ {print $3, "/", $2}'}${else}${color8}USB Port 1${alignr}Empty${color}${endif}
+${if_existing  /dev/sdc1}${color0}${execp df -H | grep 'sdc' | cut -c44-52}${color}${alignr}${execp df -H | awk '/sdc1/ {print $3, "/", $2}'}${else}${color8}USB Port 2${alignr}Empty${color}${endif}
+${if_existing  /dev/sdd1}${color0}${execp df -H | grep 'sdd' | cut -c44-52}${color}${alignr}${execp df -H | awk '/sdc1/ {print $3, "/", $2}'}${else}${color8}USB Port 3${alignr}Empty${color}${endif}

@@ -1,0 +1,91 @@
+##############################
+### default text apperance ###
+##############################
+use_xft yes
+xftalpha 0.1
+xftfont Liberation Sans:size=10
+draw_shades no
+draw_outline no
+default_color white
+default_shade_color lightgray
+uppercase no
+
+##########################################
+### overall appearance of conky window ###
+##########################################
+own_window yes
+own_window_type desktop
+own_window_transparent yes
+own_window_hints undecorated,sticky,skip_taskbar,skip_pager
+draw_borders no
+draw_graph_borders yes
+own_window_argb_visual yes
+own_window_argb_value 255
+#own_window_colour navy
+use_spacer none
+
+########################################
+### overall position of conky window ###
+########################################
+alignment top_right
+gap_x 412
+gap_y 220
+minimum_size 382
+maximum_width 382
+
+##################################  
+### conky performance settings ###
+##################################
+update_interval 3
+total_run_times 0
+cpu_avg_samples 2
+net_avg_samples 2
+no_buffers yes 
+double_buffer yes
+override_utf8_locale yes
+#max_specials 2000       # a little high, but keeps me from having to worry about it
+#text_buffer_size 2048  # might be needed to prevent crashes
+#max_user_text 65000    # probably never needed, but here if crashes start occuring 
+
+##############
+### colors ###
+############## 
+color1 lightgreen #color 1 - 8 is for gradual color change bars
+color2 green
+color3 greenyellow
+color4 yellow
+color5 gold
+color6 orange
+color7 orangered
+color8 red
+color9 darkslategray
+color0 lawngreen #highlighed text (main sections)
+
+
+
+
+TEXT
+# CPU
+${font Liberation Sans:Bold}${color0}CPU${hr 2}$color${font}
+${font Liberation Sans:bold}4x Intel(R) Core(TM)2 Quad CPU Q9400$font $alignr ${freq_g cpu0} GHz${font}
+${font Liberation Sans:Bold}Core 0: ${font}${color0}${hwmon 0 temp 2}°C${color} @ ${cpu cpu0}% $alignc ${color0}${cpubar cpu0 10}${color}
+${font Liberation Sans:Bold}Core 1: ${font}${color0}${hwmon 0 temp 3}°C${color} @ ${cpu cpu1}% $alignc ${color0}${cpubar cpu1 10}${color}
+${font Liberation Sans:Bold}Core 2: ${font}${color0}${hwmon 0 temp 4}°C${color} @ ${cpu cpu2}% $alignc ${color0}${cpubar cpu2 10}${color}
+${font Liberation Sans:Bold}Core 3: ${font}${color0}${hwmon 0 temp 5}°C${color} @ ${cpu cpu3}% $alignc ${color0}${cpubar cpu3 10}${color}
+
+# TOP
+${font Liberation Sans:Bold}${color lawngreen}TOP${hr 2}$color${font}
+${font Liberation Sans:bold}PROCESS${font} 
+${color white}Total: ${color white}$processes ${color white}/ Running: ${color white}$running_processes
+$alignr PID     CPU      MEM   $font
+${top name 1} ${alignr} ${color0}${top pid 1}  ${top cpu 1}%   ${top_mem mem_res 1}$color
+${top name 2} ${alignr} ${color0}${top pid 2}  ${top cpu 2}%   ${top_mem mem_res 2}$color
+${top name 3} ${alignr} ${color0}${top pid 3}  ${top cpu 3}%   ${top_mem mem_res 3}$color
+
+# MEMORY
+${font Liberation Sans:Bold}${color0}MEMORY${hr 2}$color${font}
+${font Liberation Sans:bold}RAM$font
+$alignr${color0}$color Used: ${color0}$mem${color} / Total: ${color0}$memmax${color}
+Memory used: $memperc% ${color0}${membar 10}$color
+Cache: $alignr${color0}${cached}$color
+Buffers: $alignr${color0}${buffers}$color
