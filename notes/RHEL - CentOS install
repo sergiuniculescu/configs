@@ -210,7 +210,6 @@ rpm -Uvh http://li.nux.ro/download/nux/dextop/el6/x86_64/nux-dextop-release-0-2.
 sudo wget http://li.nux.ro/download/nux/misc/nux-misc.repo -P /etc/yum.repos.d/
 sudo yum --enablerepo=nux-dextop-testing install xbmc
 
-
 # nVidia driver #
 rpm -Uvh http://elrepo.org/elrepo-release-6-5.el6.elrepo.noarch.rpm
 http://elrepo.org/linux/extras/el6/x86_64/RPMS/   # extras
@@ -220,8 +219,9 @@ sudo yum install nvidia-x11-drv
 
 # Last kernel & lts kernel #
 http://elrepo.org/linux/kernel/el6/x86_64/RPMS/   # kernel
-sudo yum --enablerepo=elrepo-kernel install kernel-lt
-sudo yum --enablerepo=elrepo-kernel install kernel-ml
+sudo yum remove kernel-headers kernel-firmware
+sudo yum --enablerepo=elrepo-kernel install kernel-ml kernel-ml-devel kernel-ml-headers kernel-ml-firmware  # for last kernel
+sudo yum --enablerepo=elrepo-kernel install kernel-lt kernel-lt-devel kernel-lt-headers kernel-lt-firmware  # for lts kernel
 
 # Others #
 rpm -Uvh http://download1.rpmfusion.org/free/el/updates/6/x86_64/rpmfusion-free-release-6-0.1.noarch.rpm http://download1.rpmfusion.org/nonfree/el/updates/6/x86_64/rpmfusion-nonfree-release-6-0.1.noarch.rpm	# (not needed if nux-dextop is installed) 

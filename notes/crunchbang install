@@ -132,6 +132,17 @@ ____________________________________________________
 sudo update-grub
 
 
+### Prevent a fork bomb by limiting user process ###
+sudo vim /etc/security/limits.conf
+vivek hard nproc 300
+@student hard nproc 50
+@faculty soft nproc 100
+@pusers hard nproc 200
+
+
+### Services configuration ###
+sudo apt-get install chkconfig
+
 
 ########################
 ### Network Security ###
@@ -200,7 +211,8 @@ sysctl -p
 
 
 ### IPTables ###
-sudo vim /etc/sysconfig/iptables
+sudo apt-get install iptables-persistent
+sudo vim /etc/iptables/rules.v4
 ____________________________________________________________________________
 #Drop anything we aren't explicitly allowing. All outbound traffic is okay
 *filter
@@ -235,4 +247,13 @@ COMMIT
 ______________________________________________________________________________
 
 
+### Benchmark ###
+./linpack_11.1.0/benchmarks/linpack/xlinpack_xeon64
+___________________________________________________
+Input data or print help ? Type [data]/help : data
+Number of equations to solve (problem size): 18900
+Leading dimension of array: 18900
+Number of trials to run: 3
+Data alignment value (in Kbytes): 24
+__________________________________________________
 
