@@ -153,3 +153,9 @@ Leading dimension of array: 18900
 Number of trials to run: 3
 Data alignment value (in Kbytes): 24
 __________________________________________________
+
+
+### Change default editor ###
+sudo update-alternatives --config editor
+
+
