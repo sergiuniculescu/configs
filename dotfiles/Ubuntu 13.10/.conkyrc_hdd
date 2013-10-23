@@ -14,13 +14,13 @@ uppercase no
 ### overall appearance of conky window ###
 ##########################################
 own_window yes
-own_window_type normal
-own_window_transparent no
-own_window_hints undecorated,sticky,skip_taskbar,skip_pager
-draw_borders yes
+own_window_type panel
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+draw_borders no
 draw_graph_borders yes
 own_window_argb_visual yes
-own_window_argb_value 100
+own_window_argb_value 255
 #own_window_colour navy
 use_spacer none
 
@@ -29,7 +29,7 @@ use_spacer none
 ########################################
 alignment top_right
 gap_x 1198
-gap_y 320
+gap_y 220
 minimum_size 382
 maximum_width 382
 
@@ -73,7 +73,7 @@ TEXT
 # HDD
 ${font Liberation Sans:Bold}${color0}DISKS${hr 2}$color${font}
 ${font Liberation Sans:bold}TEMPERATURE $font
-${execi 5 hddtemp /dev/sda | cut -c 1-29} $alignr ${color0}${execi 5 hddtemp /dev/sda | cut -c 32-35}$color
+dev/sda: WDC WD1600JB-00REA0 $alignr${hddtemp /dev/sda}°C$color
 
 ${font Liberation Sans:bold}USED SPACE $font
 ${font Liberation Sans:bold}boot${font} ($fs_type) $alignr Used:${color0} ${fs_used /boot}$color / Free:${color0} ${fs_free /boot}$color / Total:${color0} ${fs_size /boot}$color

@@ -14,13 +14,13 @@ uppercase no
 ### overall appearance of conky window ###
 ##########################################
 own_window yes
-own_window_type normal
-own_window_transparent no
-own_window_hints undecorated,sticky,skip_taskbar,skip_pager
-draw_borders yes
+own_window_type panel
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+draw_borders no
 draw_graph_borders yes
 own_window_argb_visual yes
-own_window_argb_value 100
+own_window_argb_value 255
 #own_window_colour navy
 use_spacer none
 
@@ -29,7 +29,7 @@ use_spacer none
 ########################################
 alignment top_right
 gap_x 412
-gap_y 320
+gap_y 220
 minimum_size 382
 maximum_width 382
 
@@ -67,11 +67,11 @@ color0 lawngreen #highlighed text (main sections)
 TEXT
 # CPU
 ${font Liberation Sans:Bold}${color0}CPU${hr 2}$color${font}
-${font Liberation Sans:bold}4x Intel(R) Core(TM)2 Quad CPU Q9400$font $alignr ${freq_g cpu0} GHz${font}
-${font Liberation Sans:Bold}Core 0: ${font}${color0}${hwmon 0 temp 2}°C${color} @ ${cpu cpu0}% $alignc ${color0}${cpubar cpu0 10}${color}
-${font Liberation Sans:Bold}Core 1: ${font}${color0}${hwmon 0 temp 3}°C${color} @ ${cpu cpu1}% $alignc ${color0}${cpubar cpu1 10}${color}
-${font Liberation Sans:Bold}Core 2: ${font}${color0}${hwmon 0 temp 4}°C${color} @ ${cpu cpu2}% $alignc ${color0}${cpubar cpu2 10}${color}
-${font Liberation Sans:Bold}Core 3: ${font}${color0}${hwmon 0 temp 5}°C${color} @ ${cpu cpu3}% $alignc ${color0}${cpubar cpu3 10}${color}
+${font Liberation Sans:bold}${execi 3600 cat /proc/cpuinfo | grep "model name" | sed -e 's/.*\: //g' -e 's/ CPU*//g' | head -n1}$font
+Core 0: ${font}${color0}${hwmon 0 temp 2}°C${color} @ ${cpu cpu0}% $alignc ${color0}${cpubar cpu0 10}${color}
+Core 1: ${font}${color0}${hwmon 0 temp 3}°C${color} @ ${cpu cpu1}% $alignc ${color0}${cpubar cpu1 10}${color}
+Core 2: ${font}${color0}${hwmon 0 temp 4}°C${color} @ ${cpu cpu2}% $alignc ${color0}${cpubar cpu2 10}${color}
+Core 3: ${font}${color0}${hwmon 0 temp 5}°C${color} @ ${cpu cpu3}% $alignc ${color0}${cpubar cpu3 10}${color}
 
 # TOP
 ${font Liberation Sans:Bold}${color lawngreen}TOP${hr 2}$color${font}

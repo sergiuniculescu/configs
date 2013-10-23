@@ -14,13 +14,13 @@ uppercase no
 ### overall appearance of conky window ###
 ##########################################
 own_window yes
-own_window_type normal
-own_window_transparent no
-own_window_hints undecorated,sticky,skip_taskbar,skip_pager
-draw_borders yes
+own_window_type panel
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+draw_borders no
 draw_graph_borders yes
 own_window_argb_visual yes
-own_window_argb_value 100
+own_window_argb_value 255
 #own_window_colour navy
 use_spacer none
 
@@ -29,7 +29,7 @@ use_spacer none
 ########################################
 alignment top_right
 gap_x 805
-gap_y 320
+gap_y 220
 minimum_size 382
 maximum_width 382
 
@@ -66,16 +66,24 @@ color0 lawngreen #highlighed text (main sections)
 
 TEXT
 ${font Liberation Sans:Bold}${color0}SYSTEM${hr 2}$color${font}
+$alignc${font Liberation Sans:Bold}${time %a %d %b / %k:%M}${font}
+
 $sysname $kernel $alignr ${color0}$machine$color
 Uptime: $alignr ${color0}$uptime_short$color
 Load average: $alignr ${color0}${loadavg}$color
 ${loadgraph 50,382 73d216 922178}
 
 # SYS
+Entropy: $alignr ${color0} ${entropy_avail}/${entropy_poolsize}$color
 MB Thermistor: $alignr ${color0} ${hwmon 1 temp 1}°C$color
 MB Thermal Diode: $alignr ${color0} ${hwmon 1 temp 2}°C$color
 FAN Speed: $alignr ${color0} ${hwmon 1 fan 1}rpm$color
 Voltage Values: $alignr ${color0} ${hwmon 1 vol 0}V$color$alignr ${color0} ${hwmon 1 vol 1}V$color$alignr ${color0} ${hwmon 1 vol 2}V$color
 $alignr ${color0} ${hwmon 1 vol 3}V$color$alignr ${color0} ${hwmon 1 vol 4}V$color$alignr ${color0} ${hwmon 1 vol 5}V$color
 $alignr ${color0} ${hwmon 1 vol 6}V$color$alignr ${color0} ${hwmon 1 vol 7}V$color$alignr ${color0} ${hwmon 1 vol 8}V$color
-Entropy: $alignr ${color0} ${entropy_avail}/${entropy_poolsize}$color
+
+${font Liberation Sans:Bold}${color0}GPU${hr 2}$color${font}
+${font Liberation Sans:bold}${execi 3600 lspci | grep VGA | sed -e 's/.*: //g' -e 's/ .rev.*//g'}${font}
+Temperature:$alignr${color0}${nvidia temp}°C$color
+GPU frequency:$alignr${color0}${nvidia gpufreq}MHz$color
+Memory frequency:$alignr${color0}${nvidia memfreq}MHz$color

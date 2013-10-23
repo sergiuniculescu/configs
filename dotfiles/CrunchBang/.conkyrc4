@@ -67,7 +67,7 @@ color0 lawngreen #highlighed text (main sections)
 TEXT
 # CPU
 ${font Liberation Sans:Bold}${color0}CPU${hr 2}$color${font}
-${font Liberation Sans:bold}4x Intel(R) Core(TM)2 Quad CPU Q9400$font $alignr ${freq_g cpu0} GHz${font}
+${font Liberation Sans:bold}${execi 3600 cat /proc/cpuinfo | grep "model name" | sed -e 's/.*\: //g' -e 's/ CPU.*//g' | head -n1}$font $alignr ${freq_g cpu0} GHz${font}
 ${font Liberation Sans:Bold}Core 0: ${font}${color0}${hwmon 0 temp 2}°C${color} @ ${cpu cpu0}% $alignc ${color0}${cpubar cpu0 10}${color}
 ${font Liberation Sans:Bold}Core 1: ${font}${color0}${hwmon 0 temp 3}°C${color} @ ${cpu cpu1}% $alignc ${color0}${cpubar cpu1 10}${color}
 ${font Liberation Sans:Bold}Core 2: ${font}${color0}${hwmon 0 temp 4}°C${color} @ ${cpu cpu2}% $alignc ${color0}${cpubar cpu2 10}${color}

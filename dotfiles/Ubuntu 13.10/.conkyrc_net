@@ -14,13 +14,13 @@ uppercase no
 ### overall appearance of conky window ###
 ##########################################
 own_window yes
-own_window_type normal
-own_window_transparent no
-own_window_hints undecorated,sticky,skip_taskbar,skip_pager
-draw_borders yes
+own_window_type panel
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+draw_borders no
 draw_graph_borders yes
 own_window_argb_visual yes
-own_window_argb_value 100
+own_window_argb_value 255
 #own_window_colour navy
 use_spacer none
 
@@ -29,8 +29,8 @@ use_spacer none
 ########################################
 alignment top_right
 gap_x 20
-gap_y 320
-minimum_size 382
+gap_y 220
+minimum_size 1382
 maximum_width 382
 
 ##################################  

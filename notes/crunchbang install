@@ -247,13 +247,5 @@ COMMIT
 ______________________________________________________________________________
 
 
-### Benchmark ###
-./linpack_11.1.0/benchmarks/linpack/xlinpack_xeon64
-___________________________________________________
-Input data or print help ? Type [data]/help : data
-Number of equations to solve (problem size): 18900
-Leading dimension of array: 18900
-Number of trials to run: 3
-Data alignment value (in Kbytes): 24
-__________________________________________________
+
 

@@ -3,31 +3,12 @@
 ############################
 
 ### PPA'S ###
-ppa:xorg-edgers/ppa
-ppa:tsvetko.tsvetkov/unity
-
 ppa:tualatrix/next # ubuntu-tweak
-ppa:libreoffice/ppa
-ppa:webupd8team/themes  # Faenza
-ppa:pidgin-developers/ppa
-ppa:scopes-packagers/ppa  # lens/scopes
 ppa:venerix/pkg # tv-maxe
 ppa:atareao/atareao  # my-weather-indicator
-ppa:otto-kesselgulasch/gimp
-ppa:webupd8team/java  # Java 8
-ppa:firefishy/amd64-microcode-precise 
 ppa:pi-rho/security  # aircrack-ng, reaver
-ppa:nilarimogard/webupd8  # newer apps
-ppa:team-xbmc/ppa  # xbmc 12.0
+ppa:team-xbmc/ppa  # xbmc 13.0
 ppa:bitcoin/bitcoin  # Bitcoin wallet
-ppa:atareao/sunflower  # sunflower-fm
-ppa:noobslab/icons  # myhumanity icons
-ppa:gwendal-lebihan-dev/cinnamon-stable # cinnamon DE
-ppa:freyja-dev/unity-tweak-tool-daily  # unity tweak
-
-# Google-chrome #
-wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
-sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
 
 # GetDeb Apps #
 wget -q -O - http://archive.getdeb.net/getdeb-archive.key | sudo apt-key add -
@@ -61,58 +42,38 @@ setsid unity  # like log-out log-in
 /usr/lib/nux/unity_support_test -p
 
 
+#####################
 ### Latest kernel ###
-http://kernel.ubuntu.com/~kernel-ppa/mainline  # download linux-headers_amd64, linux-headers_all, linux-image_amd64, linux-image-extra_amd64
-sudo dpkg -i linux-*.deb
-sudo update-grub
+#####################
+sudo apt-get install python-bs4 python-apt
+cd /tmp; rm -rf medigeek-kmp*; wget --no-check-certificate https://github.com/medigeek/kmp-downloader/tarball/master -O kmpd.tar.gz; tar xzf kmpd.tar.gz; cd medigeek-*; python kmpd.py
 
 # See the schedueler kernel #
 cat /sys/block/sda/queue/scheduler
 zgrep IOSCHED /proc/config.gz
 
 
-# New Ubuntu logo #
-wget https://launchpad.net/ubuntu/raring/+source/unity/6.12.0daily13.01.18-0ubuntu1/+files/unity_6.12.0daily13.01.18.orig.tar.gz  # download end extract
-sudo cp /usr/share/unity/5/launcher_bfb.png{,.bkp}
-cp unity-6.12.0daily13.01.18/resources/launcher_bfb.png /usr/share/unity/5
-
-
+###############################
 ### Tips To Speed Up Ubuntu ###
+###############################
 
 # Show Hidden Startup Apps #
 sudo sed -i "s/NoDisplay=true/NoDisplay=false/g" /etc/xdg/autostart/*.desktop
 
-# Preload #
-sudo apt-get install preload
-
 # apport #
 sudo apt-get purge apport  # remove automatically generate crash reports for debugging
 
-# Change swappiness value #
-sudo vim /etc/sysctl.conf
-__________________
-# Memory/Swap Use 
-vm.swappiness = 10
-__________________
+# Entrophy #
+sudo apt-get install rng-tools
+sudo vim /etc/default/rng-tools
+_________________________________
+#HRNGDEVICE=/dev/hwrng
+#HRNGDEVICE=/dev/null
+HRNGDEVICE=/dev/urandom
 
-sudo sysctl -p  # reload sysctl.conf without restart
-cat /proc/sys/vm/swappiness  # display swappiness value
-
-# Disable Hibernation/Sleep Functions #
-sudo vim /etc/initramfs-tools/conf.d/resume
-RESUME=UUID=****  # Comment (add # at the beginning) this line
-
-# Use all CPU Cores For System Startup #
-sudo vim /etc/init.d/rc
-CONCURRENCY=makefile  # replace none with makefile
-
-# Use TMPFS To Reduce Disk I/O #
-sudo vim /etc/fstab
-- At the end of the file, add these two lines:
-_____________________
-# Move /tmp to RAM
-tmpfs	/tmp	tmpfs	defaults,noexec,nosuid	0	0
-_____________________
+#RNGDOPTIONS="--hrng=tpm --fill-watermark=90% --feed-interval=1"
+RNGDOPTIONS="-s 1024"
+_________________________________
 
 
 ### Duplicate ppa's ###
@@ -120,17 +81,15 @@ grep -r ^ /etc/apt/sources.list /etc/apt/sources.list.d/*
 sudo rm /var/lib/apt/lists/* -vf
 sudo apt-get update
 
+
+
 ### Pulseaudio 5.1 ###
 sudo vim /etc/pulse/daemon.conf
 _______________________________
 enable-remixing = yes
 enable-lfe-remixing = yes
-default-sample-format = s32le
-default-sample-rate = 48000
 default-sample-channels = 6
-default-fragments = 8
-default-fragment-size-msec = 5
-________________________________
+_______________________________
 
 pulseaudio -k  # restart pulseaudio
 
@@ -146,7 +105,6 @@ sync
 unmount /home
 mount -o remount,ro /
 reboot
-
 
 ### Others ###
 sudo dmidecode -t 16   # find out the maximum RAM capacity and the number of RAM slots available
@@ -172,6 +130,7 @@ wodim dev=/dev/cdrw -v -data cd_image.iso
 wodim dev=/dev/cdrw -v -audio [wav files...]
 wodim -vv dev=/dev/cdrw blank=all  # Blanking a CD/RW
 
+
 ### Burn a DVD from tty ###
 sudo apt-get install dvd+rw-tools
 growisofs -Z /dev/dvdrw -R -J /some/files 
@@ -179,5 +138,18 @@ growisofs -speed=2 -dvd-compat -Z /dev/dvdrw=dvd_image.iso  # -dvd-compat closes
 growisofs -M /dev/dvdwriter additionaldata  # Add additional sessions
 dvd+rw-format -blank /dev/cdrw  # Blanking DVD+RW discs
 
+
 ### hddtemp ###
 sudo chmod +s /usr/sbin/hddtemp
+sudo vim /etc/default/hddtemp
+
+
+### Benchmark ###
+./linpack_11.1.0/benchmarks/linpack/xlinpack_xeon64
+___________________________________________________
+Input data or print help ? Type [data]/help : data
+Number of equations to solve (problem size): 18900
+Leading dimension of array: 18900
+Number of trials to run: 3
+Data alignment value (in Kbytes): 24
+__________________________________________________
