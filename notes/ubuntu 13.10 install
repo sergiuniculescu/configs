@@ -76,6 +76,153 @@ RNGDOPTIONS="-s 1024"
 _________________________________
 
 
+
+####################################
+### Ubuntu Protection & Security ###
+####################################
+
+### Password Protect Grub2 ###
+sudo grub-mkpasswd-pbkdf2
+sudo vim /etc/grub.d/00_header
+____________________________________________________
+# Password Protect
+cat << EOF
+set superusers="sergiu"
+password_pbkdf2 sergiu grub.pbkdf2.sha512.10000.hash
+EOF
+____________________________________________________
+
+sudo update-grub
+
+
+### Prevent a fork bomb by limiting user process ###
+sudo vim /etc/security/limits.conf
+vivek hard nproc 300
+@student hard nproc 50
+@faculty soft nproc 100
+@pusers hard nproc 200
+
+
+### Secure shared memory ###
+sudo vim /etc/fstab
+tmpfs     /dev/shm     tmpfs     defaults,noexec,nosuid     0     0
+
+
+########################
+### Network Security ###
+########################
+
+### Sysctl ###
+vim /etc/sysctl.conf
+_______________________________________________
+### ipv4 Security options ###
+
+# Disable IP Source Routing #
+# Source Routing is used to specify a path or route through the network from source to destination. 
+# This feature can be used by network people for diagnosing problems. 
+# However, if an intruder was able to send a source routed packet into the network, then he could intercept the replies and your server might not know that it's not communicating with a trusted server. 
+net.ipv4.conf.all.accept_source_route = 0
+net.ipv4.conf.default.accept_source_route = 0
+
+# Disable ICMP Redirect Acceptance #
+# ICMP redirects are used by routers to tell the server that there is a better path to other networks than the one chosen by the server. 
+# However, an intruder could potentially use ICMP redirect packets to alter the hosts's routing table by causing traffic to use a path you didn't intend. 
+net.ipv4.conf.all.accept_redirects = 0
+
+# Enable IP Spoofing Protection #
+# IP spoofing is a technique where an intruder sends out packets which claim to be from another host by manipulating the source address. 
+# IP spoofing is very often used for denial of service attacks.
+net.ipv4.conf.all.rp_filter = 1
+net.ipv4.conf.default.rp_filter = 1
+
+# Enable Ignoring to ICMP Requests #
+net.ipv4.icmp_echo_ignore_all = 1
+
+# Enable Ignoring Broadcasts Request #
+net.ipv4.icmp_echo_ignore_broadcasts = 1
+
+# Enable Bad Error Message Protection #
+net.ipv4.icmp_ignore_bogus_error_responses = 1
+
+# Enable Logging of Spoofed Packets, Source Routed Packets, Redirect Packets #
+net.ipv4.conf.all.log_martians = 1
+
+# This help a little wtih SYN flood attacks. This suppliments a good firewall ruleset #
+net.ipv4.tcp_syncookies = 1
+
+# This is a server, not a router. Disable packet forwarding #
+net.ipv4.ip_forward = 0
+
+# Others ipv4 security options #
+net.ipv4.conf.all.send_redirects = 0
+net.ipv4.conf.all.secure_redirects = 0
+net.ipv4.conf.default.accept_redirects = 0
+net.ipv4.conf.default.secure_redirects = 0
+net.ipv4.conf.default.send_redirects = 0
+net.ipv4.tcp_max_syn_backlog = 1280
+net.ipv4.tcp_timestamps = 0
+
+### ipv6 Security options ###
+net.ipv6.conf.all.disable_ipv6 = 1
+
+
+### Memory/Swap Use ###
+vm.swappiness = 1
+vm.vfs_cache_pressure = 50
+_______________________________________________
+
+sysctl -p
+
+
+### IPTables ###
+sudo apt-get install iptables-persistent
+sudo vim /etc/iptables/rules.v4
+____________________________________________________________________________
+#Drop anything we aren't explicitly allowing. All outbound traffic is okay
+*filter
+:INPUT DROP [0:0]
+:FORWARD DROP [0:0]
+:OUTPUT ACCEPT [0:0]
+:RH-Firewall-1-INPUT - [0:0]
+-A INPUT -j RH-Firewall-1-INPUT
+-A FORWARD -j RH-Firewall-1-INPUT
+-A RH-Firewall-1-INPUT -i lo -j ACCEPT
+-A RH-Firewall-1-INPUT -p icmp --icmp-type echo-reply -j ACCEPT
+-A RH-Firewall-1-INPUT -p icmp --icmp-type destination-unreachable -j ACCEPT
+-A RH-Firewall-1-INPUT -p icmp --icmp-type time-exceeded -j ACCEPT
+# Accept Pings
+-A RH-Firewall-1-INPUT -p icmp --icmp-type echo-request -j ACCEPT
+# Log anything on eth0 claiming it's from a local or non-routable network
+# If you're using one of these local networks, remove it from the list below
+-A INPUT -i eth0 -s 10.0.0.0/8 -j LOG --log-prefix "IP DROP SPOOF A: "
+-A INPUT -i eth0 -s 172.16.0.0/12 -j LOG --log-prefix "IP DROP SPOOF B: "
+-A INPUT -i eth0 -s 192.168.0.0/16 -j LOG --log-prefix "IP DROP SPOOF C: "
+-A INPUT -i eth0 -s 224.0.0.0/4 -j LOG --log-prefix "IP DROP MULTICAST D: "
+-A INPUT -i eth0 -s 240.0.0.0/5 -j LOG --log-prefix "IP DROP SPOOF E: "
+-A INPUT -i eth0 -d 127.0.0.0/8 -j LOG --log-prefix "IP DROP LOOPBACK: "
+# Accept any established connections
+-A RH-Firewall-1-INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+# Accept ssh traffic. Restrict this to known ips if possible.
+#-A RH-Firewall-1-INPUT -m state --state NEW -m tcp -p tcp --dport 22 -j ACCEPT
+#Log and drop everything else
+-A RH-Firewall-1-INPUT -j LOG
+-A RH-Firewall-1-INPUT -j DROP
+COMMIT
+______________________________________________________________________________
+
+
+### Prevent IP Spoofing ###
+sudo vim /etc/host.conf
+________________
+order bind,hosts
+nospoof on
+________________
+
+
+
+
+
+
 ### Duplicate ppa's ###
 grep -r ^ /etc/apt/sources.list /etc/apt/sources.list.d/*
 sudo rm /var/lib/apt/lists/* -vf

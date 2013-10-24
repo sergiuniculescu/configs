@@ -146,13 +146,13 @@ alias mv='mv -i'
 # Git Commands
 alias gitc="git commit -av ; git push -u origin master"
 
-# YUM #
+# apt-get #
 alias ai='sudo apt-get install'
 alias ar='sudo apt-get purge'
 alias as='sudo apt-cache search'
 alias ap='sudo apt-cache policy'
-alias ac='sudo apt-get autoclean & sudo apt-get autoremove'
-alias au='sudo apt-get update & sudo apt-get upgrade'
+alias ac='sudo apt-get autoclean && sudo apt-get autoremove'
+alias au='sudo apt-get update && sudo apt-get upgrade'
 
 ##############
 ### Prompt ###
