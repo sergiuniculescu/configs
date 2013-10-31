@@ -93,6 +93,13 @@ echo greeter-show-remote-login=false | sudo tee -a /etc/lightdm/lightdm.conf.d/5
 sudo apt-get autoremove unity-lens-music unity-lens-photos unity-lens-video
 gsettings set com.canonical.Unity.Lenses disabled-scopes "['more_suggestions-amazon.scope', 'more_suggestions-u1ms.scope', 'more_suggestions-populartracks.scope', 'music-musicstore.scope', 'more_suggestions-ebay.scope', 'more_suggestions-ubuntushop.scope', 'more_suggestions-skimlinks.scope']"
 
+# Set the schedueler kernel #
+cat /sys/block/sda/queue/scheduler
+sudo vim /etc/default/grub
+______________________________________________________
+GRUB_CMDLINE_LINUX_DEFAULT="elevator=cfq quiet splash"
+______________________________________________________
+
 
 ####################################
 ### Ubuntu Protection & Security ###
@@ -109,15 +116,15 @@ password_pbkdf2 sergiu grub.pbkdf2.sha512.10000.hash
 EOF
 ____________________________________________________
 
+# protect the Windows entry #
+sudo vim /etc/grub.d/30_os-prober
+#find this line:
+menuentry '$(echo "${LONGNAME} $onstr" | grub_quote)' --class windows --class os \
+# On that line, add --users, so it ends like this:
+menuentry '$(echo "${LONGNAME} $onstr" | grub_quote)' --class windows --class os --users \
+# Be careful on not removing the ending slash \
+
 sudo update-grub
-
-
-### Prevent a fork bomb by limiting user process ###
-sudo vim /etc/security/limits.conf
-vivek hard nproc 300
-@student hard nproc 50
-@faculty soft nproc 100
-@pusers hard nproc 200
 
 
 ### Secure shared memory ###
@@ -125,7 +132,7 @@ sudo vim /etc/fstab
 tmpfs     /dev/shm     tmpfs     defaults,noexec,nosuid     0     0
 
 
-### prevent running a forkbomb ###
+### Prevent a fork bomb by limiting user process ###
 sudo vim /etc/security/limits.conf
 ____________________________
 # End of file
@@ -301,5 +308,21 @@ __________________________________________________
 
 ### Change default editor ###
 sudo update-alternatives --config editor
+
+
+### GIT HUB ###
+ssh-keygen -t rsa -C "contact.sergiuniculescu@gmail.com"
+vim ~/.ssh/id_rsa.pub  # copy key and paste it to github.com
+
+git config --global user.name "Sergiu Niculescu"
+git config --global user.email contact.sergiuniculescu@gmail.com
+
+
+### Format an USB Stick ###
+df
+sudo umount /dev/sdX
+# mkfs.bfs, mkfs.ext2, mkfs.ext3, mkfs.ext4, mkfs.minix, mkfs.msdos, mkfs.vfat, mkfs.xfs, mkfs.xiafs
+# -n = the name of stick (max 11 character)
+sudo mkfs.vfat -n 'Nume_stick' -I /dev/sdX
 
 
