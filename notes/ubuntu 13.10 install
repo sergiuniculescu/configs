@@ -316,6 +316,8 @@ vim ~/.ssh/id_rsa.pub  # copy key and paste it to github.com
 
 git config --global user.name "Sergiu Niculescu"
 git config --global user.email contact.sergiuniculescu@gmail.com
+# If it ask for username and password
+git remote set-url origin git@github.com:sergiuniculescu/configs.git
 
 
 ### Format an USB Stick ###
