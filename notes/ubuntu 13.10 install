@@ -327,4 +327,9 @@ sudo umount /dev/sdX
 # -n = the name of stick (max 11 character)
 sudo mkfs.vfat -n 'Nume_stick' -I /dev/sdX
 
+### Mount an ISO Image ###
+mount -t iso9660 -o loop /home/tecmint/Fedora-18-i386-DVD.iso /mnt/iso/
+sudo umount /mnt/iso
 
+### Mount a partition with read-write permission ###
+mount -o remount,rw /
