@@ -53,6 +53,24 @@ _______________________________
 pulseaudio -k  # restart pulseaudio
 
 
+### Suspend problem ###
+sudo vim /etc/pm/sleep.d/wakenet.sh
+___________
+#!/bin/bash
+case "$1" in
+thaw|resume)
+nmcli nm sleep false
+;;
+*)
+;;
+esac
+exit $?
+___________
+
+sudo chmod +x /etc/pm/sleep.d/wakenet.sh
+
+
+
 ###############################
 ### Tips To Speed Up Ubuntu ###
 ###############################
@@ -333,3 +351,4 @@ sudo umount /mnt/iso
 
 ### Mount a partition with read-write permission ###
 mount -o remount,rw /
+
